@@ -141,8 +141,13 @@ def run(max_sessions: int | None = None):
         if pairs:
             rp = [p for p in pairs if p["region"] == region]
             if rp:
-                region_profiles[region]["cka_mean"] = float(np.mean([p["cka_linear"] for p in rp]))
-                region_profiles[region]["proc_mean"] = float(np.mean([p["procrustes_distance"] for p in rp]))
+                cka_vals_r = [p["cka_linear"] for p in rp]
+                proc_vals_r = [p["procrustes_distance"] for p in rp]
+                region_profiles[region]["cka_mean"] = float(np.mean(cka_vals_r))
+                region_profiles[region]["proc_mean"] = float(np.mean(proc_vals_r))
+                region_profiles[region]["cka_std"] = float(np.std(cka_vals_r, ddof=1)) if len(cka_vals_r) > 1 else 0.0
+                region_profiles[region]["proc_std"] = float(np.std(proc_vals_r, ddof=1)) if len(proc_vals_r) > 1 else 0.0
+                region_profiles[region]["n_pairs"] = len(rp)
 
     prediction_test = {}
     regions_with_both = [

@@ -26,10 +26,10 @@ from scipy.stats import spearmanr
 
 logger = logging.getLogger(__name__)
 
-RESULTS_DIR = Path(__file__).parent.parent / "artifacts" / "exp64"
+RESULTS_DIR = Path(__file__).parent.parent / "results" / "exp64"
 
-EXP57_RESULTS = Path(__file__).parent.parent / "artifacts" / "modal_results" / "exp57_results.json"
-EXP47B_RESULTS = Path(__file__).parent.parent / "artifacts" / "exp47b" / "exp47b_20260622_002103.json"
+EXP57_RESULTS = Path(__file__).parent.parent / "results" / "exp57" / "exp57_20260621_210317.json"
+EXP47B_RESULTS = Path(__file__).parent.parent / "results" / "exp47b" / "silencing_validation_real.json"
 
 # Allen CCF hierarchy: Steinmetz sub-region -> Zatka-Haas silencing group
 REGION_TO_GROUP = {
