@@ -1,10 +1,12 @@
 # Causal Geometric Structure in Neural Populations
 
-Resolving the linear-nonlinear divide in neural analysis tools. Different similarity metrics (CKA, Procrustes) give opposite answers about which brain regions are "similar" --- we show dimensionality explains why, and use causal interventions (interchange intervention analysis) to determine which tool to trust.
+This project explores applying differential geometry and mechanistic interpretability methods to biological neural data (Neuropixels recordings from mouse visual decision-making). The core question: can tools developed for understanding artificial neural networks --- causal abstraction, interchange interventions, subspace decomposition --- tell us something useful about real brains?
+
+We find that standard similarity metrics (CKA, Procrustes) give opposite answers about which brain regions are "similar" ($\rho = -0.85$), and that dimensionality explains the disagreement. Borrowing interchange intervention analysis from mechanistic interpretability, a structured VAE recovers 3.4x stronger causal signal than linear methods --- but IIA turns out to be vacuous for nonlinear methods (Sutter et al. 2025), so external validation (optogenetic ground truth, engagement controls) is essential. The honest takeaway: dimensionality predicts where linear methods fail, but you can't trust the metric alone.
 
 ## Slides
 
-**[Slides](docs/slides/causal_geometric_structure_slides_v5.pdf)** ([LaTeX source](docs/slides/causal_geometric_structure_slides_v5.tex)) --- 78 slides in 3 parts: core results (geometric dissociation, causal interventions, learned subspaces), stress-testing (validity checks, IIA vacuity, external validation), and deeper analysis (potent/null decomposition, activation patching, choice information flow).
+**[Slides](docs/slides/causal_geometric_structure_slides_v5.pdf)** ([LaTeX source](docs/slides/causal_geometric_structure_slides_v5.tex)) --- 94 pages across 4 parts: core results (geometric dissociation, causal interventions, learned subspaces), stress-testing (validity checks, IIA vacuity, external validation, engagement separation), deeper analysis (potent/null decomposition, activation patching, choice information flow), and additional testing (per-variable subspaces, optogenetic ground truth, Grassmannian dissimilarity, encoder specialization).
 
 To compile:
 ```bash
