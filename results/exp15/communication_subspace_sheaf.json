@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-06-21T04:34:01.296687",
+  "n_sessions": 5,
+  "comm_rank": 3,
+  "sessions": [
+    {
+      "session_idx": 0,
+      "mouse": "Cori",
+      "n_regions": 8,
+      "n_comm_subspaces": 0,
+      "h1_real": null,
+      "h1_shuffle_mean": null,
+      "h1_shuffle_std": null,
+      "meaningful": false,
+      "comm_subspace_stats": {}
+    },
+    {
+      "session_idx": 1,
+      "mouse": "Cori",
+      "n_regions": 5,
+      "n_comm_subspaces": 0,
+      "h1_real": null,
+      "h1_shuffle_mean": null,
+      "h1_shuffle_std": null,
+      "meaningful": false,
+      "comm_subspace_stats": {}
+    },
+    {
+      "session_idx": 2,
+      "mouse": "Cori",
+      "n_regions": 10,
+      "n_comm_subspaces": 1,
+      "h1_real": null,
+      "h1_shuffle_mean": null,
+      "h1_shuffle_std": null,
+      "meaningful": false,
+      "comm_subspace_stats": {
+        "VISam\u2192VISp": {
+          "explained_var": 0.01252331331408818,
+          "rank": 3
+        }
+      }
+    },
+    {
+      "session_idx": 3,
+      "mouse": "Forssmann",
+      "n_regions": 11,
+      "n_comm_subspaces": 0,
+      "h1_real": null,
+      "h1_shuffle_mean": null,
+      "h1_shuffle_std": null,
+      "meaningful": false,
+      "comm_subspace_stats": {}
+    },
+    {
+      "session_idx": 4,
+      "mouse": "Forssmann",
+      "n_regions": 10,
+      "n_comm_subspaces": 0,
+      "h1_real": null,
+      "h1_shuffle_mean": null,
+      "h1_shuffle_std": null,
+      "meaningful": false,
+      "comm_subspace_stats": {}
+    }
+  ]
+}

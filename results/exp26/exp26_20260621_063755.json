@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-06-21T06:37:51.504585",
+  "n_regions": 73,
+  "n_pairs": 1316,
+  "raw_correlation": {
+    "spearman_rho": -0.8498667789134406,
+    "p_value": 0.0,
+    "n": 1316
+  },
+  "denoised_correlation": {
+    "spearman_rho": -0.8886986886761326,
+    "p_value": 0.0,
+    "n": 1316
+  },
+  "cka_shift": {
+    "mean_raw": 0.1842136697668151,
+    "mean_denoised": 0.16417398315887496,
+    "mean_increase": -0.020039686607940144,
+    "interpretation": "Positive increase means denoising raised CKA (correcting finite-sampling underestimation). If the anti-correlation survives, it is not a sampling artifact."
+  }
+}

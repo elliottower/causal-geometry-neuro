@@ -1,0 +1,422 @@
+{
+  "timestamp": "2026-06-21T04:32:59.228084",
+  "n_regions": 24,
+  "n_pairs": 29,
+  "region_profiles": {
+    "ACA": {
+      "trajectory_procrustes": {
+        "mean": 0.3024067685159162,
+        "std": 0.08190738800691501,
+        "cv": 0.27085170219199006,
+        "n": 3
+      },
+      "umap_procrustes": {
+        "mean": 0.933444792572784,
+        "std": 0.056059147667556014,
+        "cv": 0.06005620055262656,
+        "n": 3
+      },
+      "wasserstein_h1": {
+        "mean": 1.6402382706355534,
+        "std": 0.3488853720326615,
+        "cv": 0.2127040798148654,
+        "n": 3
+      }
+    },
+    "DG": {
+      "direction_cosine": {
+        "mean": 0.0034979955699160625,
+        "std": 0.0,
+        "cv": 0.0,
+        "n": 1
+      },
+      "grassmannian": {
+        "mean": 2.96233222246536,
+        "std": 0.0,
+        "cv": 0.0,
+        "n": 1
+      },
+      "trajectory_procrustes": {
+        "mean": 0.37031797156377966,
+        "std": 0.08058222505280123,
+        "cv": 0.21760279338461055,
+        "n": 6
+      },
+      "umap_procrustes": {
+        "mean": 0.8490906187194606,
+        "std": 0.0733242907926992,
+        "cv": 0.0863562606583521,
+        "n": 6
+      },
+      "wasserstein_h1": {
+        "mean": 2.1373006700862973,
+        "std": 0.6231974792341539,
+        "cv": 0.29158156732762885,
+        "n": 6
+      }
+    },
+    "MOs": {
+      "trajectory_procrustes": {
+        "mean": 0.4674401838953291,
+        "std": 0.18800590196312006,
+        "cv": 0.40220312339518294,
+        "n": 3
+      },
+      "umap_procrustes": {
+        "mean": 0.9765188612758262,
+        "std": 0.016724952371261627,
+        "cv": 0.017127116571420242,
+        "n": 3
+      },
+      "wasserstein_h1": {
+        "mean": 1.3408193441847613,
+        "std": 0.5286008430487479,
+        "cv": 0.39423718440618505,
+        "n": 3
+      }
+    },
+    "SUB": {
+      "trajectory_procrustes": {
+        "mean": 0.3546383893980472,
+        "std": 0.15974731606468612,
+        "cv": 0.45045127893750175,
+        "n": 3
+      },
+      "umap_procrustes": {
+        "mean": 0.8866669145327668,
+        "std": 0.018171463595184553,
+        "cv": 0.020494126145171536,
+        "n": 3
+      },
+      "wasserstein_h1": {
+        "mean": 2.501415354849403,
+        "std": 0.3942787090953856,
+        "cv": 0.15762224707344658,
+        "n": 3
+      }
+    },
+    "VISp": {
+      "trajectory_procrustes": {
+        "mean": 0.17578430420412947,
+        "std": 0.031133718483902496,
+        "cv": 0.17711318780628146,
+        "n": 3
+      },
+      "umap_procrustes": {
+        "mean": 0.9575032296020711,
+        "std": 0.03392413574101083,
+        "cv": 0.03542978727613208,
+        "n": 3
+      },
+      "wasserstein_h1": {
+        "mean": 2.686098945345704,
+        "std": 0.4121437143711748,
+        "cv": 0.15343579025088053,
+        "n": 3
+      }
+    },
+    "root": {
+      "trajectory_procrustes": {
+        "mean": 0.23224850371559244,
+        "std": 0.014658563312604638,
+        "cv": 0.06311585684338904,
+        "n": 3
+      },
+      "umap_procrustes": {
+        "mean": 0.8658766051427591,
+        "std": 0.10961696360005861,
+        "cv": 0.12659651842884218,
+        "n": 3
+      },
+      "wasserstein_h1": {
+        "mean": 2.7765694526775846,
+        "std": 0.49902315966897615,
+        "cv": 0.17972651798345732,
+        "n": 3
+      }
+    },
+    "CA1": {
+      "trajectory_procrustes": {
+        "mean": 0.3886284110194442,
+        "std": 0.12441154869496814,
+        "cv": 0.32012983396816935,
+        "n": 6
+      },
+      "umap_procrustes": {
+        "mean": 0.9466116170958316,
+        "std": 0.018905909732379884,
+        "cv": 0.019972192809531004,
+        "n": 6
+      },
+      "wasserstein_h1": {
+        "mean": 1.808761578175757,
+        "std": 0.6190300211745846,
+        "cv": 0.34223970071219284,
+        "n": 6
+      }
+    }
+  },
+  "pairs": [
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.41406278379541284,
+      "umap_procrustes": 0.8541774052260357,
+      "wasserstein_h1": 2.1306097829259714,
+      "region": "ACA",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.27327952873219763,
+      "umap_procrustes": 0.9742839045282097,
+      "wasserstein_h1": 1.4423107325911073,
+      "region": "ACA",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.21987799302013805,
+      "umap_procrustes": 0.9718730679641066,
+      "wasserstein_h1": 1.3477942963895815,
+      "region": "ACA",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": 0.0034979955699160625,
+      "grassmannian": 2.96233222246536,
+      "trajectory_procrustes": 0.37558798272823685,
+      "umap_procrustes": 0.7776735302630329,
+      "wasserstein_h1": 1.3229123438026102,
+      "region": "DG",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.4360512116429482,
+      "umap_procrustes": 0.7478968346318862,
+      "wasserstein_h1": 3.0133782856052247,
+      "region": "DG",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.3766306493321629,
+      "umap_procrustes": 0.8868147677382101,
+      "wasserstein_h1": 1.818820136527332,
+      "region": "DG",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.4725317301442466,
+      "umap_procrustes": 0.8148176776580343,
+      "wasserstein_h1": 2.936249946756543,
+      "region": "DG",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.3438357533076662,
+      "umap_procrustes": 0.9362086876280817,
+      "wasserstein_h1": 1.7862441840371104,
+      "region": "DG",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.21727050222741698,
+      "umap_procrustes": 0.9311322143975186,
+      "wasserstein_h1": 1.9461991237889622,
+      "region": "DG",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.3473752186991245,
+      "umap_procrustes": 0.9875724759095132,
+      "wasserstein_h1": 1.9380057026814563,
+      "region": "MOs",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.732917627149017,
+      "umap_procrustes": 0.952882684826434,
+      "wasserstein_h1": 1.4316547422479189,
+      "region": "MOs",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.32202770583784585,
+      "umap_procrustes": 0.9891014230915316,
+      "wasserstein_h1": 0.6527975876249085,
+      "region": "MOs",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.1359155372461212,
+      "umap_procrustes": 0.9038099301209821,
+      "wasserstein_h1": 2.6126432893450664,
+      "region": "SUB",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.5129798414509442,
+      "umap_procrustes": 0.8615155727167719,
+      "wasserstein_h1": 2.918987197416021,
+      "region": "SUB",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.41501978949707613,
+      "umap_procrustes": 0.8946752407605467,
+      "wasserstein_h1": 1.972615577787121,
+      "region": "SUB",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.19876408981435384,
+      "umap_procrustes": 0.9095273435137723,
+      "wasserstein_h1": 3.2051788151094547,
+      "region": "VISp",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.13176888711525772,
+      "umap_procrustes": 0.9815701928570385,
+      "wasserstein_h1": 2.656147182084317,
+      "region": "VISp",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.19681993568277678,
+      "umap_procrustes": 0.9814121524354028,
+      "wasserstein_h1": 2.196970838843341,
+      "region": "VISp",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.226145411235731,
+      "umap_procrustes": 0.9425380159987446,
+      "wasserstein_h1": 2.4392771486400653,
+      "region": "root",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.2524573928215136,
+      "umap_procrustes": 0.7108579006423588,
+      "wasserstein_h1": 2.4083621823762393,
+      "region": "root",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.21814270708953276,
+      "umap_procrustes": 0.944233898787174,
+      "wasserstein_h1": 3.482069027016449,
+      "region": "root",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.2543606286923612,
+      "umap_procrustes": 0.9562896757828381,
+      "wasserstein_h1": 2.6484651602999314,
+      "region": "CA1",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.3451783070192756,
+      "umap_procrustes": 0.9517025222929413,
+      "wasserstein_h1": 2.0830056129559162,
+      "region": "CA1",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.27580219657123045,
+      "umap_procrustes": 0.9066163100914604,
+      "wasserstein_h1": 1.97174504516784,
+      "region": "CA1",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.41646234352383815,
+      "umap_procrustes": 0.9635164116399734,
+      "wasserstein_h1": 0.6578944322067364,
+      "region": "CA1",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.4083124311734284,
+      "umap_procrustes": 0.9580179988419424,
+      "wasserstein_h1": 2.0284593828840656,
+      "region": "CA1",
+      "same_mouse": false
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.631654559136531,
+      "umap_procrustes": 0.9435267839258339,
+      "wasserstein_h1": 1.4629998355400513,
+      "region": "CA1",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.31326109366396737,
+      "umap_procrustes": 0.9384963432185927,
+      "wasserstein_h1": 2.867213331070812,
+      "region": "POST",
+      "same_mouse": true
+    },
+    {
+      "direction_cosine": null,
+      "grassmannian": null,
+      "trajectory_procrustes": 0.3962741901872021,
+      "umap_procrustes": 0.9100004701647355,
+      "wasserstein_h1": 1.5649429833518458,
+      "region": "VISa",
+      "same_mouse": true
+    }
+  ]
+}

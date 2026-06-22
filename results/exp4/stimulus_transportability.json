@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-21T05:42:01.951306",
+  "k": 5,
+  "areas": [
+    "VISp",
+    "VISl",
+    "VISal"
+  ],
+  "n_sessions": 0,
+  "summary": {},
+  "distances": {
+    "within_region_within_animal": [],
+    "within_region_cross_animal": [],
+    "cross_region_within_animal": [],
+    "cross_region_cross_animal": []
+  }
+}

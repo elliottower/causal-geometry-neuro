@@ -1,0 +1,20 @@
+{"ts": "2026-06-21T04:58:19.401705", "experiment": "exp6", "event": "started", "module": "experiments.exp6_gauge_correction", "max_sessions": 5}
+{"ts": "2026-06-21T04:58:31.837217", "experiment": "exp6", "event": "run_failed", "error": "404 Client Error: Not Found for url: https://visual-behavior-neuropixels-data.s3.us-west-2.amazonaws.com/visual-behavior-neuropixels/manifest.json", "traceback": "Traceback (most recent call last):\n  File \"/root/modal_run.py\", line 139, in run_experiment\n    results = mod.run(**kwargs)\n              ^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp6_gauge_correction.py\", line 35, in run\n    sessions_meta = list_sessions(min_units=MIN_UNITS, area=TARGET_AREA)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/repo/data/allen.py\", line 48, in list_sessions\n    cache = get_cache()\n            ^^^^^^^^^^^\n  File \"/root/repo/data/allen.py\", line 39, in get_cache\n    resp.raise_for_status()\n  File \"/usr/local/lib/python3.11/site-packages/requests/models.py\", line 1167, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://visual-behavior-neuropixels-data.s3.us-west-2.amazonaws.com/visual-behavior-neuropixels/manifest.json\n"}
+{"ts": "2026-06-21T05:02:22.599748", "experiment": "exp6", "event": "started", "module": "experiments.exp6_gauge_correction", "max_sessions": 5}
+{"ts": "2026-06-21T05:02:44.664446", "experiment": "exp6", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T05:02:47.175726", "experiment": "exp6", "event": "saved_volume", "path": "/results/exp6/exp6_20260621_050245.json"}
+{"ts": "2026-06-21T05:02:48.855090", "experiment": "exp6", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:02:50.681813", "experiment": "exp6", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:02:51.801708", "experiment": "exp6", "event": "done"}
+{"ts": "2026-06-21T05:16:18.128949", "experiment": "exp6", "event": "started", "module": "experiments.exp6_gauge_correction", "max_sessions": 5}
+{"ts": "2026-06-21T05:23:40.551290", "experiment": "exp6", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T05:23:48.533556", "experiment": "exp6", "event": "saved_volume", "path": "/results/exp6/exp6_20260621_052344.json"}
+{"ts": "2026-06-21T05:23:53.185731", "experiment": "exp6", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:23:57.729463", "experiment": "exp6", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:24:01.701413", "experiment": "exp6", "event": "done"}
+{"ts": "2026-06-21T05:34:02.962195", "experiment": "exp6", "event": "started", "module": "experiments.exp6_gauge_correction", "max_sessions": 5}
+{"ts": "2026-06-21T05:41:49.978458", "experiment": "exp6", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T05:41:58.005461", "experiment": "exp6", "event": "saved_volume", "path": "/results/exp6/exp6_20260621_054154.json"}
+{"ts": "2026-06-21T05:42:02.508859", "experiment": "exp6", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:42:07.005321", "experiment": "exp6", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:42:11.177789", "experiment": "exp6", "event": "done"}

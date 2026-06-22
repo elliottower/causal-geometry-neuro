@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-06-21T03:08:18.582963",
+  "k": 4,
+  "time_points": [
+    "pre_stim",
+    "early_delib",
+    "late_delib",
+    "post_choice",
+    "iti"
+  ],
+  "n_total_measurements": 0,
+  "region_summary": {},
+  "within_region_holonomy_distance": {
+    "mean": null,
+    "std": null,
+    "n": 0
+  },
+  "cross_region_holonomy_distance": {
+    "mean": null,
+    "std": null,
+    "n": 0
+  },
+  "prediction": "within_region < cross_region (mechanism stability within region)",
+  "all_holonomies": []
+}

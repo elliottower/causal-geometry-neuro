@@ -1,0 +1,12 @@
+{"ts": "2026-06-21T04:49:21.800876", "experiment": "exp17", "event": "started", "module": "experiments.exp17_neural_factor_bank", "max_sessions": 5}
+{"ts": "2026-06-21T04:49:59.520452", "experiment": "exp17", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T04:50:02.004859", "experiment": "exp17", "event": "saved_volume", "path": "/results/exp17/exp17_20260621_045000.json"}
+{"ts": "2026-06-21T04:50:03.693602", "experiment": "exp17", "event": "copied_artifacts"}
+{"ts": "2026-06-21T04:50:05.499173", "experiment": "exp17", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T04:50:06.738291", "experiment": "exp17", "event": "done"}
+{"ts": "2026-06-21T05:28:57.200956", "experiment": "exp17", "event": "started", "module": "experiments.exp17_neural_factor_bank", "max_sessions": null}
+{"ts": "2026-06-21T05:29:27.386034", "experiment": "exp17", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T05:29:29.891694", "experiment": "exp17", "event": "saved_volume", "path": "/results/exp17/exp17_20260621_052928.json"}
+{"ts": "2026-06-21T05:29:31.547516", "experiment": "exp17", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:29:33.290983", "experiment": "exp17", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:29:34.493846", "experiment": "exp17", "event": "done"}

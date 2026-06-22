@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T06:22:10.275909", "experiment": "exp26", "event": "started", "module": "experiments.exp26_cka_denoising", "max_sessions": null}
+{"ts": "2026-06-21T06:37:51.522961", "experiment": "exp26", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T06:37:59.646698", "experiment": "exp26", "event": "saved_volume", "path": "/results/exp26/exp26_20260621_063755.json"}
+{"ts": "2026-06-21T06:38:04.537637", "experiment": "exp26", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:38:09.253012", "experiment": "exp26", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:38:13.166327", "experiment": "exp26", "event": "done"}

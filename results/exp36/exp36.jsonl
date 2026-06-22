@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T07:22:31.782639", "experiment": "exp36", "event": "started", "module": "experiments.exp36_wasserstein_distance", "max_sessions": null}
+{"ts": "2026-06-21T07:36:43.647232", "experiment": "exp36", "event": "run_complete", "n_keys": 5}
+{"ts": "2026-06-21T07:36:52.148247", "experiment": "exp36", "event": "saved_volume", "path": "/results/exp36/exp36_20260621_073647.json"}
+{"ts": "2026-06-21T07:36:56.672750", "experiment": "exp36", "event": "copied_artifacts"}
+{"ts": "2026-06-21T07:37:08.388066", "experiment": "exp36", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T07:37:12.321405", "experiment": "exp36", "event": "done"}

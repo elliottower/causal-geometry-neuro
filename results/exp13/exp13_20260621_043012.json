@@ -1,0 +1,240 @@
+{
+  "timestamp": "2026-06-21T04:30:12.187959",
+  "n_regions": 24,
+  "n_pairs": 29,
+  "n_time_bins": 5,
+  "pairs": [
+    {
+      "region": "ACA",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.20529135879661925
+    },
+    {
+      "region": "ACA",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.28920539291486497
+    },
+    {
+      "region": "ACA",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.17638797125667763
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": 2.943883046483726,
+      "trajectory_distance": 0.4305953520561233
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.8061867540211184
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.5387679605669654
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.41180712805582803
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.3776068284729833
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.16505751346926875
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.6012338657849102
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.47162139562420674
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.3567674663227738
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.27090972892176823
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.5234742768380225
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.539157049852917
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.2615057040925275
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.40609256079545597
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.5229719574850603
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.6983185938687673
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.37348037825027475
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.4902734974837004
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.48664291542064486
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.2742882597524186
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.5403105430394938
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.28628406173820004
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.6800605614088592
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.694308584441556
+    },
+    {
+      "region": "POST",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.5978010983948987
+    },
+    {
+      "region": "VISa",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "trajectory_distance": 0.4525997808649534
+    }
+  ]
+}

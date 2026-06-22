@@ -1,0 +1,16 @@
+\beamer@sectionintoc {1}{1. Does population shape matter?}{6}{0}{1}
+\beamer@sectionintoc {2}{2. Linear vs.\ nonlinear disagreement}{11}{0}{2}
+\beamer@sectionintoc {3}{3. Causal interventions (IIA)}{17}{0}{3}
+\beamer@sectionintoc {4}{4. Learned subspaces are more accurate}{29}{0}{4}
+\beamer@sectionintoc {5}{5. Validity checks}{45}{0}{5}
+\beamer@sectionintoc {6}{6. The IIA vacuity problem}{52}{0}{6}
+\beamer@sectionintoc {7}{7. External validation}{57}{0}{7}
+\beamer@sectionintoc {8}{8. Engagement separation}{62}{0}{8}
+\beamer@sectionintoc {9}{9. The neural manifold framework}{66}{0}{9}
+\beamer@sectionintoc {10}{10. Activation patching}{70}{0}{10}
+\beamer@sectionintoc {11}{11. Choice information flow}{73}{0}{11}
+\beamer@sectionintoc {12}{12. Per-variable causal subspaces}{79}{0}{12}
+\beamer@sectionintoc {13}{13. Optogenetic ground truth: linear vs nonlinear}{81}{0}{13}
+\beamer@sectionintoc {14}{14. Grassmannian dissimilarity}{83}{0}{14}
+\beamer@sectionintoc {15}{15. Encoder specialization}{85}{0}{15}
+\beamer@sectionintoc {16}{Conclusions}{88}{0}{16}

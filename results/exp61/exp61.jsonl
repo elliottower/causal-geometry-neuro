@@ -1,0 +1,8 @@
+{"ts": "2026-06-22T00:22:25.804593", "experiment": "exp61", "event": "started", "module": "experiments.exp61_engagement_subspace", "max_sessions": null}
+{"ts": "2026-06-22T00:22:47.790796", "experiment": "exp61", "event": "run_failed", "error": "too many indices for array: array is 1-dimensional, but 2 were indexed", "traceback": "Traceback (most recent call last):\n  File \"/root/modal_run.py\", line 229, in run_experiment\n    results = mod.run(**kwargs)\n              ^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp61_engagement_subspace.py\", line 324, in run\n    engagement_labels_full = _get_engagement_labels(sess)\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp61_engagement_subspace.py\", line 115, in _get_engagement_labels\n    labels[easy & (rt > RT_DISENGAGE_THRESHOLD)] = 0\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nIndexError: too many indices for array: array is 1-dimensional, but 2 were indexed\n"}
+{"ts": "2026-06-22T00:31:40.534454", "experiment": "exp61", "event": "started", "module": "experiments.exp61_engagement_subspace", "max_sessions": null}
+{"ts": "2026-06-22T00:52:55.798801", "experiment": "exp61", "event": "run_complete", "n_keys": 11}
+{"ts": "2026-06-22T00:53:03.037043", "experiment": "exp61", "event": "saved_volume", "path": "/results/exp61/exp61_20260622_005259.json"}
+{"ts": "2026-06-22T00:53:10.201179", "experiment": "exp61", "event": "copied_artifacts"}
+{"ts": "2026-06-22T00:53:14.033563", "experiment": "exp61", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T00:53:17.762876", "experiment": "exp61", "event": "done"}

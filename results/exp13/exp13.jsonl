@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T05:28:56.825230", "experiment": "exp13", "event": "started", "module": "experiments.exp13_static_vs_dynamic", "max_sessions": null}
+{"ts": "2026-06-21T05:29:36.753500", "experiment": "exp13", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T05:29:39.355173", "experiment": "exp13", "event": "saved_volume", "path": "/results/exp13/exp13_20260621_052937.json"}
+{"ts": "2026-06-21T05:29:41.350302", "experiment": "exp13", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:29:42.935913", "experiment": "exp13", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:29:44.038376", "experiment": "exp13", "event": "done"}

@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T06:46:23.445652", "experiment": "exp31", "event": "started", "module": "experiments.exp31_causal_representation_learning", "max_sessions": null}
+{"ts": "2026-06-21T09:03:18.316708", "experiment": "exp31", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T09:03:21.703675", "experiment": "exp31", "event": "saved_volume", "path": "/results/exp31/exp31_20260621_090319.json"}
+{"ts": "2026-06-21T09:03:24.091556", "experiment": "exp31", "event": "copied_artifacts"}
+{"ts": "2026-06-21T09:03:27.107676", "experiment": "exp31", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T09:03:28.615817", "experiment": "exp31", "event": "done"}

@@ -1,0 +1,137 @@
+{
+  "timestamp": "2026-06-21T03:18:14.514562",
+  "k": 5,
+  "sessions": [
+    {
+      "session_idx": 0,
+      "mouse": "Cori",
+      "n_regions": 8,
+      "regions": [
+        "ACA",
+        "CA3",
+        "DG",
+        "LS",
+        "MOs",
+        "SUB",
+        "VISp",
+        "root"
+      ],
+      "full_circuit": {
+        "h0": 0,
+        "h1": 240
+      },
+      "frontal_motor": {
+        "h0": 0,
+        "h1": 0,
+        "regions": [
+          "ACA",
+          "MOs"
+        ]
+      }
+    },
+    {
+      "session_idx": 1,
+      "mouse": "Cori",
+      "n_regions": 5,
+      "regions": [
+        "CA1",
+        "POST",
+        "VISl",
+        "VISpm",
+        "root"
+      ],
+      "full_circuit": {
+        "h0": 0,
+        "h1": 75
+      },
+      "frontal_motor": {
+        "h0": 0,
+        "h1": 0,
+        "regions": []
+      }
+    },
+    {
+      "session_idx": 2,
+      "mouse": "Cori",
+      "n_regions": 9,
+      "regions": [
+        "CA1",
+        "DG",
+        "MG",
+        "MRN",
+        "NB",
+        "POST",
+        "SPF",
+        "VISam",
+        "VISp"
+      ],
+      "full_circuit": {
+        "h0": 0,
+        "h1": 315
+      },
+      "frontal_motor": {
+        "h0": 0,
+        "h1": 0,
+        "regions": []
+      }
+    },
+    {
+      "session_idx": 3,
+      "mouse": "Forssmann",
+      "n_regions": 11,
+      "regions": [
+        "ACA",
+        "CA1",
+        "DG",
+        "LGd",
+        "LSr",
+        "MOs",
+        "SUB",
+        "TH",
+        "VISa",
+        "VISp",
+        "VPL"
+      ],
+      "full_circuit": {
+        "h0": 0,
+        "h1": 495
+      },
+      "frontal_motor": {
+        "h0": 0,
+        "h1": 0,
+        "regions": [
+          "ACA",
+          "MOs"
+        ]
+      }
+    },
+    {
+      "session_idx": 4,
+      "mouse": "Forssmann",
+      "n_regions": 9,
+      "regions": [
+        "ACA",
+        "CA1",
+        "DG",
+        "MOs",
+        "OLF",
+        "ORB",
+        "SUB",
+        "VISa",
+        "root"
+      ],
+      "full_circuit": {
+        "h0": 0,
+        "h1": 315
+      },
+      "frontal_motor": {
+        "h0": 0,
+        "h1": 0,
+        "regions": [
+          "ACA",
+          "MOs"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{"ts": "2026-06-22T00:22:25.425855", "experiment": "exp60", "event": "started", "module": "experiments.exp60_cross_task_grassmannian", "max_sessions": null}
+{"ts": "2026-06-22T01:06:17.568302", "experiment": "exp60", "event": "run_complete", "n_keys": 10}
+{"ts": "2026-06-22T01:06:24.816420", "experiment": "exp60", "event": "saved_volume", "path": "/results/exp60/exp60_20260622_010621.json"}
+{"ts": "2026-06-22T01:06:32.205510", "experiment": "exp60", "event": "copied_artifacts"}
+{"ts": "2026-06-22T01:06:36.354604", "experiment": "exp60", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T01:06:40.151723", "experiment": "exp60", "event": "done"}

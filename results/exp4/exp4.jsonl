@@ -1,0 +1,20 @@
+{"ts": "2026-06-21T04:58:19.322595", "experiment": "exp4", "event": "started", "module": "experiments.exp4_stimulus_transportability", "max_sessions": 5}
+{"ts": "2026-06-21T04:58:33.518950", "experiment": "exp4", "event": "run_failed", "error": "404 Client Error: Not Found for url: https://visual-behavior-neuropixels-data.s3.us-west-2.amazonaws.com/visual-behavior-neuropixels/manifest.json", "traceback": "Traceback (most recent call last):\n  File \"/root/modal_run.py\", line 139, in run_experiment\n    results = mod.run(**kwargs)\n              ^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp4_stimulus_transportability.py\", line 43, in run\n    sessions_meta = list_sessions(min_units=MIN_UNITS, area=area)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/repo/data/allen.py\", line 48, in list_sessions\n    cache = get_cache()\n            ^^^^^^^^^^^\n  File \"/root/repo/data/allen.py\", line 39, in get_cache\n    resp.raise_for_status()\n  File \"/usr/local/lib/python3.11/site-packages/requests/models.py\", line 1167, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://visual-behavior-neuropixels-data.s3.us-west-2.amazonaws.com/visual-behavior-neuropixels/manifest.json\n"}
+{"ts": "2026-06-21T05:02:22.338496", "experiment": "exp4", "event": "started", "module": "experiments.exp4_stimulus_transportability", "max_sessions": 5}
+{"ts": "2026-06-21T05:03:05.933927", "experiment": "exp4", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T05:03:18.663735", "experiment": "exp4", "event": "saved_volume", "path": "/results/exp4/exp4_20260621_050317.json"}
+{"ts": "2026-06-21T05:03:21.952397", "experiment": "exp4", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:03:24.252238", "experiment": "exp4", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:03:26.760317", "experiment": "exp4", "event": "done"}
+{"ts": "2026-06-21T05:16:18.045947", "experiment": "exp4", "event": "started", "module": "experiments.exp4_stimulus_transportability", "max_sessions": 5}
+{"ts": "2026-06-21T05:24:33.094842", "experiment": "exp4", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T05:24:40.995980", "experiment": "exp4", "event": "saved_volume", "path": "/results/exp4/exp4_20260621_052437.json"}
+{"ts": "2026-06-21T05:24:45.583735", "experiment": "exp4", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:24:50.332080", "experiment": "exp4", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:24:54.364365", "experiment": "exp4", "event": "done"}
+{"ts": "2026-06-21T05:34:02.857371", "experiment": "exp4", "event": "started", "module": "experiments.exp4_stimulus_transportability", "max_sessions": 5}
+{"ts": "2026-06-21T05:42:01.951854", "experiment": "exp4", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T05:42:09.796618", "experiment": "exp4", "event": "saved_volume", "path": "/results/exp4/exp4_20260621_054205.json"}
+{"ts": "2026-06-21T05:42:14.459979", "experiment": "exp4", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:42:19.011522", "experiment": "exp4", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:42:22.907172", "experiment": "exp4", "event": "done"}

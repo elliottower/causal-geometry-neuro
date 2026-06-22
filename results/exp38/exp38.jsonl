@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T07:22:32.465197", "experiment": "exp38", "event": "started", "module": "experiments.exp38_parallel_transport", "max_sessions": null}
+{"ts": "2026-06-21T07:23:10.184641", "experiment": "exp38", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T07:23:12.330607", "experiment": "exp38", "event": "saved_volume", "path": "/results/exp38/exp38_20260621_072311.json"}
+{"ts": "2026-06-21T07:23:14.197096", "experiment": "exp38", "event": "copied_artifacts"}
+{"ts": "2026-06-21T07:23:15.966251", "experiment": "exp38", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T07:23:17.228818", "experiment": "exp38", "event": "done"}

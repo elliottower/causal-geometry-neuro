@@ -1,0 +1,268 @@
+{
+  "timestamp": "2026-06-21T07:07:20.133760",
+  "n_sessions": 39,
+  "n_qualifying": 3,
+  "regions": [
+    "root",
+    "CA1",
+    "MOs",
+    "DG"
+  ],
+  "region_alphas": {
+    "root": 0.8483800637416886,
+    "CA1": 21.73111770553088,
+    "MOs": 64.62672483787092,
+    "DG": 33.86802928383262
+  },
+  "pc": {
+    "n_sessions_run": 3,
+    "aggregated": {
+      "consensus_edges": [
+        {
+          "source": "DG",
+          "target": "root",
+          "count": 8,
+          "frequency": 2.6666666666666665
+        },
+        {
+          "source": "MOs",
+          "target": "root",
+          "count": 5,
+          "frequency": 1.6666666666666667
+        },
+        {
+          "source": "CA1",
+          "target": "root",
+          "count": 3,
+          "frequency": 1.0
+        },
+        {
+          "source": "DG",
+          "target": "CA1",
+          "count": 3,
+          "frequency": 1.0
+        },
+        {
+          "source": "root",
+          "target": "DG",
+          "count": 2,
+          "frequency": 0.6666666666666666
+        },
+        {
+          "source": "root",
+          "target": "CA1",
+          "count": 2,
+          "frequency": 0.6666666666666666
+        },
+        {
+          "source": "DG",
+          "target": "MOs",
+          "count": 2,
+          "frequency": 0.6666666666666666
+        }
+      ],
+      "causal_order": [
+        "DG",
+        "MOs",
+        "CA1",
+        "root"
+      ],
+      "in_degree": {
+        "root": 16,
+        "DG": 2,
+        "CA1": 5,
+        "MOs": 2
+      },
+      "out_degree": {
+        "CA1": 3,
+        "MOs": 5,
+        "DG": 13,
+        "root": 4
+      }
+    }
+  },
+  "lingam": {
+    "n_sessions_run": 3,
+    "aggregated": {
+      "consensus_edges": [
+        {
+          "source": "root",
+          "target": "DG",
+          "count": 7,
+          "frequency": 2.3333333333333335
+        },
+        {
+          "source": "DG",
+          "target": "root",
+          "count": 6,
+          "frequency": 2.0
+        },
+        {
+          "source": "root",
+          "target": "CA1",
+          "count": 5,
+          "frequency": 1.6666666666666667
+        },
+        {
+          "source": "CA1",
+          "target": "DG",
+          "count": 5,
+          "frequency": 1.6666666666666667
+        },
+        {
+          "source": "MOs",
+          "target": "root",
+          "count": 4,
+          "frequency": 1.3333333333333333
+        },
+        {
+          "source": "root",
+          "target": "MOs",
+          "count": 4,
+          "frequency": 1.3333333333333333
+        },
+        {
+          "source": "DG",
+          "target": "CA1",
+          "count": 3,
+          "frequency": 1.0
+        },
+        {
+          "source": "CA1",
+          "target": "root",
+          "count": 2,
+          "frequency": 0.6666666666666666
+        },
+        {
+          "source": "DG",
+          "target": "MOs",
+          "count": 2,
+          "frequency": 0.6666666666666666
+        },
+        {
+          "source": "MOs",
+          "target": "DG",
+          "count": 2,
+          "frequency": 0.6666666666666666
+        }
+      ],
+      "causal_order": [
+        "root",
+        "MOs",
+        "CA1",
+        "DG"
+      ],
+      "in_degree": {
+        "root": 12,
+        "CA1": 8,
+        "DG": 14,
+        "MOs": 6
+      },
+      "out_degree": {
+        "MOs": 6,
+        "DG": 11,
+        "root": 16,
+        "CA1": 7
+      }
+    }
+  },
+  "cdnod": {
+    "edges": [
+      [
+        "CA1_pc0",
+        "root_pc0",
+        "directed"
+      ],
+      [
+        "CA1_pc1",
+        "root_pc0",
+        "directed"
+      ],
+      [
+        "MOs_pc1",
+        "root_pc1",
+        "directed"
+      ],
+      [
+        "DG_pc0",
+        "root_pc1",
+        "directed"
+      ],
+      [
+        "DG_pc1",
+        "root_pc1",
+        "directed"
+      ],
+      [
+        "root_pc2",
+        "DG_pc1",
+        "undirected"
+      ],
+      [
+        "MOs_pc1",
+        "CA1_pc0",
+        "directed"
+      ],
+      [
+        "DG_pc1",
+        "CA1_pc0",
+        "directed"
+      ],
+      [
+        "DG_pc0",
+        "CA1_pc1",
+        "directed"
+      ],
+      [
+        "DG_pc1",
+        "CA1_pc1",
+        "directed"
+      ],
+      [
+        "DG_pc0",
+        "CA1_pc2",
+        "directed"
+      ],
+      [
+        "DG_pc1",
+        "CA1_pc2",
+        "directed"
+      ],
+      [
+        "DG_pc1",
+        "MOs_pc0",
+        "directed"
+      ],
+      [
+        "DG_pc2",
+        "MOs_pc0",
+        "directed"
+      ],
+      [
+        "DG_pc0",
+        "MOs_pc1",
+        "directed"
+      ],
+      [
+        "DG_pc2",
+        "MOs_pc1",
+        "directed"
+      ]
+    ],
+    "n_edges": 16,
+    "changing_modules": []
+  },
+  "prediction_tests": {
+    "alpha_vs_pc_causal_position": {
+      "rho": -0.7999999999999999,
+      "p": 0.20000000000000007,
+      "n": 4,
+      "interpretation": "Negative rho means low-dim (high-alpha) regions appear earlier in the causal order \u2014 they are upstream causes."
+    },
+    "alpha_vs_lingam_causal_position": {
+      "rho": 0.39999999999999997,
+      "p": 0.6,
+      "n": 4
+    }
+  }
+}

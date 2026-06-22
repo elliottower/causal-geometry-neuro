@@ -1,0 +1,14 @@
+{"ts": "2026-06-21T06:07:08.470856", "experiment": "exp24", "event": "started", "module": "experiments.exp24_robustness_controls", "max_sessions": 5}
+{"ts": "2026-06-21T06:08:36.424827", "experiment": "exp24", "event": "run_failed", "error": "Incompatible dimensions", "traceback": "Traceback (most recent call last):\n  File \"/root/modal_run.py\", line 148, in run_experiment\n    results = mod.run(**kwargs)\n              ^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp24_robustness_controls.py\", line 226, in run\n    partial_corr_both = _partial_correlation(\n                        ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp24_robustness_controls.py\", line 67, in _partial_correlation\n    rx = x - z @ lstsq(z, x, rcond=None)[0]\n                 ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<__array_function__ internals>\", line 180, in lstsq\n  File \"/usr/local/lib/python3.11/site-packages/numpy/linalg/linalg.py\", line 2271, in lstsq\n    raise LinAlgError('Incompatible dimensions')\nnumpy.linalg.LinAlgError: Incompatible dimensions\n"}
+{"ts": "2026-06-21T06:08:54.490702", "experiment": "exp24", "event": "started", "module": "experiments.exp24_robustness_controls", "max_sessions": 5}
+{"ts": "2026-06-21T06:09:59.112871", "experiment": "exp24", "event": "run_complete", "n_keys": 8}
+{"ts": "2026-06-21T06:10:00.427902", "experiment": "exp24", "event": "saved_volume", "path": "/results/exp24/exp24_20260621_060959.json"}
+{"ts": "2026-06-21T06:10:01.450056", "experiment": "exp24", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:10:02.459188", "experiment": "exp24", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:10:03.190583", "experiment": "exp24", "event": "done"}
+{"ts": "2026-06-21T06:11:23.186081", "experiment": "exp24", "event": "started", "module": "experiments.exp24_robustness_controls", "max_sessions": null}
+{"ts": "2026-06-21T06:30:15.546237", "experiment": "exp24", "event": "run_complete", "n_keys": 8}
+{"ts": "2026-06-21T06:30:23.635755", "experiment": "exp24", "event": "saved_volume", "path": "/results/exp24/exp24_20260621_063019.json"}
+{"ts": "2026-06-21T06:30:28.503465", "experiment": "exp24", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:30:33.150345", "experiment": "exp24", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:30:37.181627", "experiment": "exp24", "event": "done"}

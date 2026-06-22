@@ -1,0 +1,30 @@
+{"ts": "2026-06-21T06:22:10.626428", "experiment": "exp27", "event": "started", "module": "experiments.exp27_tucker_decomposition", "max_sessions": null}
+{"ts": "2026-06-21T06:23:22.426493", "experiment": "exp27", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T06:23:25.423941", "experiment": "exp27", "event": "saved_volume", "path": "/results/exp27/exp27_20260621_062323.json"}
+{"ts": "2026-06-21T06:23:27.239735", "experiment": "exp27", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:23:29.360343", "experiment": "exp27", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:23:30.691168", "experiment": "exp27", "event": "done"}
+{"ts": "2026-06-21T06:25:03.845134", "experiment": "exp27", "event": "started", "module": "experiments.exp27_tucker_decomposition", "max_sessions": 5}
+{"ts": "2026-06-21T06:25:39.146167", "experiment": "exp27", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T06:25:41.143949", "experiment": "exp27", "event": "saved_volume", "path": "/results/exp27/exp27_20260621_062540.json"}
+{"ts": "2026-06-21T06:25:42.722367", "experiment": "exp27", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:25:44.170514", "experiment": "exp27", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:25:45.631204", "experiment": "exp27", "event": "done"}
+{"ts": "2026-06-21T06:26:06.902472", "experiment": "exp27", "event": "started", "module": "experiments.exp27_tucker_decomposition", "max_sessions": 5}
+{"ts": "2026-06-21T06:26:43.303370", "experiment": "exp27", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T06:26:45.579262", "experiment": "exp27", "event": "saved_volume", "path": "/results/exp27/exp27_20260621_062644.json"}
+{"ts": "2026-06-21T06:26:47.820836", "experiment": "exp27", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:26:49.506281", "experiment": "exp27", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:26:50.650350", "experiment": "exp27", "event": "done"}
+{"ts": "2026-06-21T06:27:23.795030", "experiment": "exp27", "event": "started", "module": "experiments.exp27_tucker_decomposition", "max_sessions": 5}
+{"ts": "2026-06-21T06:28:01.148488", "experiment": "exp27", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T06:28:02.741251", "experiment": "exp27", "event": "saved_volume", "path": "/results/exp27/exp27_20260621_062801.json"}
+{"ts": "2026-06-21T06:28:03.760757", "experiment": "exp27", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:28:04.761754", "experiment": "exp27", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:28:05.335179", "experiment": "exp27", "event": "done"}
+{"ts": "2026-06-21T06:46:39.069785", "experiment": "exp27", "event": "started", "module": "experiments.exp27_tucker_decomposition", "max_sessions": null}
+{"ts": "2026-06-21T06:49:00.743385", "experiment": "exp27", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T06:49:03.105877", "experiment": "exp27", "event": "saved_volume", "path": "/results/exp27/exp27_20260621_064901.json"}
+{"ts": "2026-06-21T06:49:04.753717", "experiment": "exp27", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:49:06.145819", "experiment": "exp27", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:49:07.557666", "experiment": "exp27", "event": "done"}

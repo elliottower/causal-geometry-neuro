@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-06-21T17:23:09.473334",
+  "mechval_criterion": "E1 Intervention Reach / Multi-Method",
+  "mechval_threshold": "cross-method rank correlation >= 0.7",
+  "n_matched_regions": 73,
+  "matched_regions": [
+    "ACA",
+    "ACB",
+    "APN",
+    "AUD",
+    "BLA",
+    "BMA",
+    "CA",
+    "CA1",
+    "CA2",
+    "CA3",
+    "CL",
+    "COA",
+    "CP",
+    "DG",
+    "DP",
+    "EP",
+    "EPd",
+    "GPe",
+    "IC",
+    "ILA",
+    "LD",
+    "LGd",
+    "LH",
+    "LP",
+    "LS",
+    "LSc",
+    "LSr",
+    "MB",
+    "MD",
+    "MEA",
+    "MG",
+    "MOp",
+    "MOs",
+    "MRN",
+    "MS",
+    "NB",
+    "OLF",
+    "ORB",
+    "ORBm",
+    "OT",
+    "PAG",
+    "PIR",
+    "PL",
+    "PO",
+    "POL",
+    "POST",
+    "PT",
+    "RN",
+    "RSP",
+    "RT",
+    "SCig",
+    "SCm",
+    "SCs",
+    "SCsg",
+    "SI",
+    "SNr",
+    "SPF",
+    "SSp",
+    "SSs",
+    "SUB",
+    "TH",
+    "TT",
+    "VAL",
+    "VISa",
+    "VISam",
+    "VISl",
+    "VISp",
+    "VISpm",
+    "VISrl",
+    "VPL",
+    "VPM",
+    "ZI",
+    "root"
+  ],
+  "mean_cross_method_rho": 0.7815325927679261,
+  "intervention_reach_pass": true,
+  "cross_method_correlations": {
+    "projection_swap_vs_noise_injection": {
+      "rho": 0.851628431725093,
+      "p": 1.328667819627873e-21
+    },
+    "projection_swap_vs_mean_shift": {
+      "rho": 0.9206785122120222,
+      "p": 1.001444829291058e-30
+    },
+    "projection_swap_vs_subspace_zeroing": {
+      "rho": 0.7265308033155033,
+      "p": 3.4537676857203953e-13
+    },
+    "noise_injection_vs_mean_shift": {
+      "rho": 0.8485764756250218,
+      "p": 2.590595423747371e-21
+    },
+    "noise_injection_vs_subspace_zeroing": {
+      "rho": 0.6415105985590231,
+      "p": 9.649436826614863e-10
+    },
+    "mean_shift_vs_subspace_zeroing": {
+      "rho": 0.7002707351708924,
+      "p": 5.380340544251904e-12
+    }
+  },
+  "per_method": {
+    "projection_swap": {
+      "n_regions": 73,
+      "mean_iia": 0.18330876571076535
+    },
+    "noise_injection": {
+      "n_regions": 73,
+      "mean_iia": 0.17836633081032421
+    },
+    "mean_shift": {
+      "n_regions": 73,
+      "mean_iia": 0.1508803058305458
+    },
+    "subspace_zeroing": {
+      "n_regions": 73,
+      "mean_iia": 0.19522556958193832
+    }
+  }
+}

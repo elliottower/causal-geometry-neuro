@@ -1,0 +1,44 @@
+\frametitle{Not explained by confounds}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{tikzpicture}
+\begin{axis}[
+  width=6.5cm, height=5.5cm,
+  xbar,
+  bar width=10pt,
+  xlabel={Spearman $\rho$ with IIA},
+  xlabel style={font=\small},
+  tick label style={font=\tiny},
+  symbolic y coords={trial count,firing rate,neuron count},
+  ytick=data,
+  xmin=-0.6, xmax=0.6,
+  nodes near coords,
+  nodes near coords style={font=\tiny},
+]
+  \addplot[fill=neutral!40] coordinates {(-0.21,trial count)};
+  \addplot[fill=neutral!40] coordinates {(0.21,firing rate)};
+  \addplot[fill=partial] coordinates {(-0.48,neuron count)};
+
+  % Danger zone
+  \draw[fail,thick,dashed] (axis cs:0.5,{rel axis cs:0,0}) -- (axis cs:0.5,{rel axis cs:0,1});
+  \draw[fail,thick,dashed] (axis cs:-0.5,{rel axis cs:0,0}) -- (axis cs:-0.5,{rel axis cs:0,1});
+\end{axis}
+\end{tikzpicture}
+{\small Dashed lines = $|\rho| > 0.5$ danger zone}
+\end{column}
+\begin{column}{0.48\textwidth}
+\textbf{No strong confound detected}
+
+\vspace{0.8em}
+\begin{itemize}
+  \item Neuron count: $\rho = -0.48$ {\small (close but below threshold)}
+  \item Firing rate: $\rho = 0.21$ {\small (not significant)}
+  \item Trial count: $\rho = -0.21$ {\small (not significant)}
+  \item Within-mouse: effect holds per mouse
+  \item Temporal shuffle: IIA $\approx$ shuffle {\small (needs full data)}
+\end{itemize}
+
+\vspace{0.5em}
+{\small \textcolor{pass}{\textbf{Pass:}} exp51 confound control}
+\end{column}
+\end{columns}

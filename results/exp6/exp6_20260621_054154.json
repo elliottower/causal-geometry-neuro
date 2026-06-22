@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-06-21T05:41:49.977154",
+  "area": "VISp",
+  "k": 5,
+  "n_sessions": 0,
+  "n_mice": 0,
+  "within_animal": {
+    "raw": {
+      "mean": null,
+      "std": null,
+      "n": 0
+    },
+    "gauge_normalized": {
+      "mean": null,
+      "std": null,
+      "n": 0
+    },
+    "variance_reduction": null,
+    "prediction_threshold": 0.3
+  },
+  "cross_animal": {
+    "raw": {
+      "mean": null,
+      "std": null,
+      "n": 0
+    },
+    "gauge_normalized": {
+      "mean": null,
+      "std": null,
+      "n": 0
+    }
+  }
+}

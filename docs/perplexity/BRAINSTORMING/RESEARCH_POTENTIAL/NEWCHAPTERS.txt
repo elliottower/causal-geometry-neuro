@@ -1,0 +1,152 @@
+### 1. Where Models Agree
+
+| Finding | Claude Opus 4.7 Thinking | GPT-5.5 Thinking | Gemini 3.1 Pro Thinking | Evidence |
+|---------|-----------|-----------|-----------|----------|
+| MechVal can be repurposed beyond MI into biology/drug discovery as a “validity ledger” for mechanistic claims | ✓ | ✓ | ✓ | Your framework is explicitly a tiered validity system for mechanistic claims (applicable beyond transformers).[1] |
+| Lila Sciences is aligned with “autonomous science / self-driving labs,” where a validity layer is strategically valuable | ✓ | ✓ | ✓ | Lila presents itself as an operating system for autonomous science across hypothesis→experiment→learn loops.[2][3][4] |
+| Best “challenge-style” ecosystem for causal/biomed is single-cell perturbation benchmarks/competitions | ✓ | ✓ | ✓ | Open Problems single-cell ecosystem + perturbation tasks provide standardized evaluation.[5][6][7] |
+| Gene regulatory network inference with perturbations is a natural MechVal + causal-inference target | ✓ | ✓ | ✓ | CausalBench is explicitly for evaluating causal network inference using perturbational single-cell data.[8][9][10] |
+| A Jensen-style framing emphasizes explicit causal queries, identifiability, and relational structure over fancy metrics | ✓ | ✓ | ✓ | Jensen’s focus is causal modeling of interacting systems; relational causal discovery (RCD) line is central.[11][12][13] |
+
+### 2. Where Models Disagree
+
+| Topic | Claude Opus 4.7 Thinking | GPT-5.5 Thinking | Gemini 3.1 Pro Thinking | Why They Differ |
+|-------|-----------|-----------|-----------|-----------------|
+| Best immediate wedge into biotech (job/impact) | Lila-first: sell MechVal as validity calculus for autonomous labs | Benchmark-first: Open Problems/CausalBench → publish + demo → then pitch Lila | Lila pitch, but via “automated epistemology engine” narrative | They weight “direct industry pitch” vs “prove on public benchmarks first” differently.[2][5] |
+| Where “state of the art causal inference” emphasis should go | Latent-variable + probabilistic programming + identifiability; make tiers probabilistic | Transportability/invariance + falsification + evaluation harnesses | Relational causal discovery + latent causal discovery combined with geometry | Different priors: Claude emphasizes uncertainty/PP; GPT emphasizes generalization; Gemini emphasizes relational structure from Jensen lineage.[14][15][13] |
+| How hard to lean into geometry for bio | Use it, but keep it subordinate to validity calculus | De-emphasize geometry; sell “validity infrastructure” | Use geometry as a competitive advantage for high-d systems | Different product instinct: platform/tool vs method novelty. |
+
+### 3. Unique Discoveries
+
+| Model | Unique Finding | Why It Matters |
+|-------|----------------|----------------|
+| Claude Opus 4.7 Thinking | ARPA-H IGoR is basically “grant-shaped MechVal + autonomous science stack” | That solicitation explicitly asks for mechanistic disease models + AI orchestration + standardized protocols—your MechVal framing slots in cleanly.[16] |
+| GPT-5.5 Thinking | “MechVal-TDC” style add-on: mechanistic validity cards for Therapeutics Data Commons / TDC-2 tasks | Turns your framework into a benchmark layer on existing drug ML leaderboards, which is very publishable + sponsor-friendly.[17][18] |
+| Gemini 3.1 Pro Thinking | Strong “Jensen move”: stop treating bio/neuro as iid; use relational causal discovery as the formal backbone | This is a crisp intellectual differentiator that matches Jensen’s published agenda and gives your work a recognizable causal-discovery identity.[13][14] |
+
+### 4. Comprehensive Analysis
+
+You can absolutely turn “mechanistic validity” into a general-purpose engine for science, not just an interpretability philosophy piece. All three models converged on the same core reframing: MechVal is a validity ledger for mechanistic claims, and that ledger is useful anywhere you have expensive experiments, noisy measurements, and people overclaiming “mechanism” from correlations. In other words, MechVal is not tied to transformers; it’s tied to the epistemic structure of mechanism claims (construct → measurement → intervention → scope), which is exactly what your paper formalizes. Once you say it that way, drug discovery becomes an obvious target: the entire industry is “claim mechanisms from messy evidence, then pay billions if you’re wrong.” The models also agree that Lila Sciences is structurally aligned: they publicly describe an autonomous-science loop that generates hypotheses, designs experiments, runs them, and learns. Any loop like that has a missing component: deciding which claims are “ready” versus “still correlational,” and choosing the next experiment to upgrade the evidential tier. That’s basically MechVal as an algorithmic planning objective.[1][2][4]
+
+The cleanest way to make this real (and credible to both grants and jobs) is to ground it in public benchmark ecosystems that already contain interventions. That’s why all three models independently pointed at single-cell perturbation platforms. Open Problems in Single-Cell Analysis has become a community benchmarking and competition hub with public perturbation tasks. CausalBench is even more directly your lane: it exists specifically to evaluate causal network inference using large-scale perturbational single-cell data. This matters because it bypasses the “observational ceiling” problem you’ve been wrestling with in neuroscience: in perturb-seq style datasets, the intervention is real (gene knockdown/knockout), so you can operationalize MechVal criteria like intervention reach, specificity, mediation, transfer, and dose-response in a way that’s impossible in pure recordings. And it also gives you something funders love: an evaluation harness.[5][7][8][9]
+
+Where the models diverge is mostly strategy and emphasis. Claude Opus 4.7 pushes a Lila-first pitch: autonomous labs need a validity calculus now, so sell MechVal as the missing decision layer and make the tiers probabilistic/uncertainty-aware. GPT-5.5 pushes “prove it on public benchmarks first,” especially Open Problems perturbation prediction and therapeutic benchmarks, then walk into Lila with a demo and a story. Gemini 3.1 leans hardest into your Jensen heritage: treat biology/neuroscience as relational causal systems, and use relational causal discovery ideas to formalize entity types and relations rather than treating everything as iid. These are compatible: you can do the benchmark demo as the proof artifact, but frame the intellectual core in Jensen language (causal query, identifiability assumptions, relational schema), and then pitch the whole thing as “validity-aware autonomous science” to Lila/Boston biotech.[6][14][15]
+
+On the grants side, the strongest near-term fit surfaced by Claude is ARPA-H’s IGoR program: it explicitly calls for mechanistic disease models encoding causal biological relationships and an AI orchestration layer that identifies knowledge gaps and designs optimal experiments. That is almost literally MechVal plus an experiment-selection agent. The practical catch is: you typically need a team with wet-lab/robotics/protocol capability to be competitive, but you can be the “validity + causal modeling + evaluation” lead inside such a team. In parallel, GPT-5.5’s “MechVal-TDC” idea is a smart productizable angle: Therapeutics Data Commons (and TDC-2) is already an ecosystem of tasks/benchmarks in drug ML. Adding a validity layer (“mechanistic validity cards”) turns your work into a plug-in evaluation standard rather than a one-off paper.[16][17][18]
+
+What would David Jensen tell you? Based on his stated agenda—causal inference for large interacting systems and methods for constructing causal models rather than just predictive models—he’d push you to be ruthless about formalization: define unit of analysis, treatment/intervention, outcome, population, and the identification assumptions before you touch geometry. He’d likely also push you toward settings where identifiability is provable or at least testable (held-out interventions, domain shifts, relational constraints), which is exactly why perturbation single-cell benchmarks (CausalBench/Open Problems) and intervention-scored challenges (DREAM-style) are so strategically valuable.[8][11][12][19][5]
+
+Recommendations: If you want the fastest path to something fundable and job-relevant in Boston biotech, build one tight demo in perturbation biology: a MechVal-style audit layer on top of a perturbation benchmark (CausalBench or Open Problems perturbation prediction) that outputs (a) an explicit causal claim object, (b) which validity criteria it satisfies/fails, and (c) the next best experiment to upgrade the claim. Then pitch that as “validity-aware autonomous discovery” to Lila (Cambridge), and separately as a grantable infrastructure component to ARPA-H IGoR–shaped teams.[2][5][8][16]
+
+Sources
+[1] main.tex https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/52682738/35a19803-d516-4bd8-9e10-7aaf4764f962/main.tex?AWSAccessKeyId=ASIA2F3EMEYE7NHRS4FS&Signature=%2FrH2AszL22BOCqzb%2Fumn4Os70MM%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJHMEUCIQC7vEENP3VY9vbWrhdP%2BZwkd8IP3zvHgvfSwcIMiKEWCAIgc5nzkwyJ%2BK0mN6CBql8YDfdaHYtOzF%2BBHTzt6Yzl6Q4q%2FAQI5%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDMEHPATdOiyEOlQwoirQBGALR5%2FNKUh%2FrE6A%2BPYJz2gR8HK5tFXgrm5O9ZRwVWYdNHeoPhCEGOYkzgo3SrKpM8Oa8r58jNEWyzTZN1ILYCBtKca2KhNOwxBRi8hofHDmsSl9tnpiGWf%2FQx66klECJFyCYkCSo2PIMYVirWntc3w4ZAgXxabrS1De5rrI5gvCuxmo9%2Fthx%2FqCBTE2jdoX7XbLl0lBprzBD7fiwL3kZi0z6VnH0RPNWVWMPwVTzkZy9QwSp%2BkeesBP6KFiuViReb8WOzvk9yc8ZVe4jhsvNhNzvfNpTYXrk9tfPEewIdjvuOtYr4mKI0PYuWh%2BaWFSwEe2OrglQEHhcwaS4mFC4P8Q0qTPozevMg8hVot%2BpN45Ff8B221wT140VsPxhFqN%2BsnfBWiJQO6F2xrSYsukL6wDHr77CdU2QGKdVSOK35Vh0pjzxPKU9Yn5QbkEQEKurhJlfjinN57PKN9p%2BrOzboiWW6TNNneLIJoZD59l8%2F4yUU4%2Fr6ClFBY8T%2FApe5v6X2Vo7CoOMcIxXj1%2BQUj4QnW%2FjCc%2F8MAhIz7FubzQb2bz0%2BOhEkUAyNkukdAicYAE%2BaP%2FvDxdRA3djx5NqwDQ1TyeosjUm07m3J1qj2SwqgSg4N6PV0ZknHrL1703x5xn5N4UhGlq3OUV%2FvVFU8XDEC0XU%2B9g5pmWKomo0Awdhl7K%2B08SRmHvhD0QLpT3BV23eZkOHlKvW2eOgyUm06DvX2FuNRVTyeLiGnfQTmAtUNRQTcY1OtCAeXu4RSCyksTaVY1KhHNumbeTNTdYcIZcV%2BIw3vjd0QY6mAERYLnAsnIQqu2bWUWUcZ%2BR4VHDWpSmbDmQsAieIo0%2BuKJzStGpOWB3SMSks%2BaUZjmael7of3xK3nAWD%2BdAIEf9Uiq4MMQfcK7F0pmKex7sb8Oxk9t8AjkUZ51Lmy434bLlz915AkuUKtX%2F069oiDJKrwKh4D6Z4QaLzTK%2FCmW%2BQTmND4FNL3QYUDv9V1FNvcDYFbd%2FI6JujA%3D%3D&Expires=1782024753
+[2] LILA | Scientific Superintelligence https://www.lila.ai
+[3] Biotech - Lila Sciences https://www.lila.ai/industries/biotech
+[4] About https://www.lila.ai/about
+[5] Open Problems – Single-Cell Perturbations https://www.kaggle.com/competitions/open-problems-single-cell-perturbations/data
+[6] A benchmark for prediction of transcriptomic responses to ... https://neurips.cc/virtual/2024/poster/97655
+[7] Cracking single-cell complexity with collective intelligence https://engineering.yale.edu/news-and-events/news/open-problems-cracking-single-cell-complexity-collective-intelligence
+[8] CausalBench: A Large-scale Benchmark for Network Inference from ... https://axi.lims.ac.uk/paper/2210.17283
+[9] causalbench/README.md at master · causalbench/causalbench https://github.com/causalbench/causalbench/blob/master/README.md
+[10] [PDF] A large-scale benchmark for network inference from single ... https://www.semanticscholar.org/paper/A-large-scale-benchmark-for-network-inference-from-Chevalley-Roohani/b43e97cba1389b70ae218b1608117524f15ef7e8
+[11] David Jensen | Computational Social Science Institute https://www.cssi.umass.edu/people/david-jensen
+[12] People – Knowledge Discovery Lab - UMass Amherst https://groups.cs.umass.edu/kdl/people/
+[13] A Sound and Complete Algorithm for Learning Causal ... https://arxiv.org/abs/1309.6843
+[14] Causal Discovery for Relational Domains: Representation, Reasoning, and Learning https://scholarworks.umass.edu/items/14f7c9a6-3a9a-4381-aa34-366c35dbd21b
+[15] [PDF] Bayesian Structural Causal Inference with Probabilistic Programming https://scholarworks.umass.edu/server/api/core/bitstreams/123e389e-d6a6-4fbb-969d-0af8cf7f85f2/content
+[16] IGoR https://arpa-h.gov/explore-funding/programs/igor
+[17] TDC-2: Multimodal Foundation for Therapeutics https://zitniklab.hms.harvard.edu/2024/06/23/TDC2/
+[18] TDC-2: Multimodal Foundation for Therapeutic Science https://www.biorxiv.org/content/10.1101/2024.06.12.598655v2
+[19] Inferring causal molecular networks: empirical assessment through a community-based effort. https://www.repository.cam.ac.uk/items/d6d1bc96-bf80-418e-b176-534ef197b1ea
+[20] Pioneering Scientific Superintelligence https://www.lila.best
+[21] Lila Sciences https://www.flagshippioneering.com/companies/lila-sciences
+[22] Flagship's Lila Sciences lands $235M to expand AI- ... https://www.fiercebiotech.com/biotech/flagships-lila-sciences-lands-235m-expand-ai-powered-autonomous-research-labs
+[23] Open Problems in Single-Cell Analysis https://www.linkedin.com/company/open-problems
+[24] Nature Biotechnology | Malte Lücken | 10 comments https://www.linkedin.com/posts/malte-l%C3%BCcken-b8b21049_defining-and-benchmarking-open-problems-in-activity-7346088127129686016-0Mtv
+[25] Open Problems – Single-Cell Perturbations | Kaggle https://www.kaggle.com/competitions/open-problems-single-cell-perturbations/data/
+[26] Scientific 'superintelligence' firm Lila launches with $200m https://pharmaphorum.com/news/scientific-superintelligence-firm-lila-launches-200m
+[27] Autonomous 'self-driving' laboratories: a review of ... https://pubmed.ncbi.nlm.nih.gov/40852582/
+[28] What is missing in autonomous discovery: open challenges for the ... https://pubs.rsc.org/en/content/articlehtml/2023/dd/d3dd00143a
+[29] DREAM5 - Gene Network Inference https://zenodo.org/records/17854236
+[30] Methodological and regulatory considerations for causal AI ... https://www.nature.com/articles/s41746-026-02477-w
+[31] Causal inference in drug discovery and development https://pubmed.ncbi.nlm.nih.gov/37591410/
+[32] Pathway Guide https://pathwaycommons.github.io/guide/case_studies/2016-04-hill/
+[33] Technical AI Safety (2026) | Granted AI https://grantedai.com/grants/technical-ai-safety-coefficient-giving-open-philanthropy-d38c0dec
+[34] 2025 week 50 update - by AISafety.com - AI Safety Funding https://aisafetyfunding.substack.com/p/ai-safety-funding-2025-week-50-update
+[35] Anthropic Fellows Program for AI safety research https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/
+[36] Summer of Open AI Research — EleutherAI https://www.eleuther.ai/soar
+[37] Publications – David Jensen https://groups.cs.umass.edu/jensen/publications/
+[38] CSSI Research Seminar: David Jensen http://cssi.umass.edu/index.php/events/fri-02242023-1230/cssi-research-seminar-david-jensen
+[39] Therapeutics Data Commons: Machine Learning ... https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/4c56ff4ce4aaf9573aa5dff913df997a-Abstract-round1.html
+[40] Therapeutics Data Commons - TDC https://tdcommons.ai
+[41] Recursion Completes Supercomputer for AI Drug Discovery https://www.genengnews.com/topics/artificial-intelligence/recursion-completes-supercomputer-for-ai-drug-discovery/
+[42] RxRx3-core https://polarishub.io/datasets/recursion/rxrx3-core
+[43] #ai #data #foundationmodel | Recursion https://www.linkedin.com/posts/recursion-pharmaceuticals_ai-data-foundationmodel-activity-7262223207762472960-mPlU
+[44] Published as a conference paper at ICLR 2024 https://openreview.net/pdf?id=FhQSGhBlqv
+[45] Score-Based Causal Discovery of Latent Variable Causal ... https://proceedings.mlr.press/v235/ng24a.html
+[46] Published as a conference paper at ICLR 2025 https://openreview.net/pdf?id=Bp0HBaMNRl
+[47] Our Investment in Lila Sciences https://www.generalcatalyst.com/stories/our-investment-in-lila-sciences
+[48] Causal Temporal Diffusion Networks for Mechanistic... - Rishik ... https://www.youtube.com/watch?v=YdZWijZsqLo
+[49] Grant Resources for Scientific Research https://chanzuckerberg.com/science/science-funding/
+[50] Open Science Grants https://chanzuckerberg.com/science/programs-resources/open-science/grants/
+[51] ASAP (Aligning Science Against Parkinson's) funding ... https://www.parkinsons.org.uk/research/asap-aligning-science-against-parkinsons-funding-initiative
+[52] Funding - ASAP CRN https://www.asapcrn.org/funding/
+[53] When thinking about causal inference, mechanistic or process ... https://statmodeling.stat.columbia.edu/2025/09/19/when-thinking-about-causal-inference-mechanistic-or-process-models-are-important-i-think-that-the-association-of-causal-with-black-box-models-leads-to-lots-of-problems/
+[54] Lila Sciences https://www.thepharmaletter.com/ones-to-watch/lila-sciences
+[55] Explainable AI methods for drug discovery: A survey of ... https://www.sciencedirect.com/science/article/pii/S1574013726000511
+[56] David Jensen – Professor - UMass Amherst https://groups.cs.umass.edu/jensen/
+[57] Lila Sciences raises $235M for AI-powered drug discovery https://www.linkedin.com/posts/shannon-j-taylor-a96935173_flagships-lila-lands-235m-to-expand-ai-powered-activity-7373677609626546176-B3pG
+[58] Causal AI: Current State-of-the-Art & Future Directions - Medium https://medium.com/@alexglee/causal-ai-current-state-of-the-art-future-directions-c17ad57ff879
+[59] [PDF] A Sound and Complete Algorithm for Learning Causal Models from ... https://groups.cs.umass.edu/jensen/wp-content/uploads/sites/17/2022/03/maier-et-al-uai2013.pdf
+[60] The CausalBench challenge: A machine learning contest for gene... https://openreview.net/forum?id=3HXpGDZgii
+[61] AI-Powered Labs: Lila Sciences Transform Drug Discovery https://www.youtube.com/watch?v=Sm2lbPktf0Y
+[62] openchallenges: Sage Challenge Portal https://openchallenges.io
+[63] Lila Sciences Achieves Unicorn Status with $235M Funding for AI ... https://trial.medpath.com/news/lila-sciences-achieves-unicorn-status-with-235m-funding-for-ai-driven-drug-discovery-platform
+[64] Causal Discovery in Observational Medical Research https://medinform.jmir.org/2026/1/e82499
+[65] Lila Sciences raises $235M for AI and robotics in drug discovery https://www.linkedin.com/posts/heinc_ai-superintelligence-activity-7376163487842078720-lSdc
+[66] NeurIPS 2025 Workshops https://neurips.cc/virtual/2025/events/workshop
+[67] Jensen, David https://www.cics.umass.edu/faculty/directory/jensen_david
+[68] Methodological and regulatory considerations for causal AI in drug development https://pmc.ncbi.nlm.nih.gov/articles/PMC13065995/
+[69] AI for Drug Discovery Open Innovation Forum - Boston University https://www.bu.edu/hic/ai-for-drug-discovery-open-innovation-forum/
+[70] Lila Wants to Create 'Scientific Superintelligence' https://www.youtube.com/watch?v=aaR1bJWR6PA
+[71] AI in Drug Discovery Xchange 2026 | Boston Event https://hub-xchange.com/xchanges/ai-drug-discovery-xchange-boston-2026
+[72] A Causal Inference and Deep Learning Approach for Drug Discovery https://pmc.ncbi.nlm.nih.gov/articles/PMC12472719/
+[73] Team | LILA | Scientific Superintelligence https://www.lila.ai/team
+[74] A machine learning contest for gene network inference ... - ar5iv https://ar5iv.labs.arxiv.org/html/2308.15395
+[75] Read more https://arxiv.org/pdf/2509.25651.pdf
+[76] Talks at the Network Science Institute | David Jensen https://www.networkscienceinstitute.org/talks/david-jensen
+[77] Toward self-driving laboratory 2.0 for chemistry and materials ... https://pubs.rsc.org/en/content/articlehtml/2026/mh/d5mh01984b
+[78] Causal Relational Learning https://homes.cs.washington.edu/~suciu/babak-sigmod-2020-pdfa.pdf
+[79] AI Safety Research Fund (2026) - Grants https://grantedai.com/grants/ai-safety-research-fund-ai-safety-research-fund-arm-fund-80a19cbc
+[80] Published as a conference paper at ICLR 2025 https://openreview.net/pdf?id=9nUBh4V6SA
+[81] NeurIPS 2026 Call For Competitions https://neurips.cc/Conferences/2026/CallForCompetitions
+[82] Can AI Agents Automate Scientific Discovery? https://www.genengnews.com/topics/artificial-intelligence/can-ai-agents-automate-scientific-discovery/
+[83] The CausalBench challenge: A machine learning contest ... https://arxiv.org/abs/2308.15395
+[84] ‘There are hundreds of Nobel prizes that we could win in theory.' This startup is trying to build an AI Einstein. https://www.bostonglobe.com/2025/10/23/business/lila-sciences-ai-robotics-cambridge/
+[85] Leveraging Relational Representations for Causal Discovery https://scholarworks.umass.edu/open_access_dissertations/659/
+[86] Learning the Structure of Causal Models with Relational ... https://auai.org/uai2015/proceedings/papers/86.pdf
+[87] GitHub - causalbench/causalbench-starter: Starter repository for submissions to the CausalBench challenge for gene-gene graph inference from genetic perturbation experiments. https://github.com/causalbench/causalbench-starter
+[88] Learning Causal Models of Relational Domains https://groups.cs.umass.edu/jensen/wp-content/uploads/sites/17/2022/03/maier-et-al-aaai2010.pdf
+[89] CausalBench: A Comprehensive Benchmark for Evaluating Causal... https://openreview.net/forum?id=kbmGbm2L1P
+[90] CZI awards $4.5 million for neurodegenerative research https://philanthropynewsdigest.org/news/czi-awards-4.5-million-for-neurodegenerative-research
+[91] Aligning Science Across Parkinson's (ASAP) launches a https://www.globenewswire.com/fr/news-release/2025/03/05/3037503/0/en/Aligning-Science-Across-Parkinson-s-ASAP-launches-a-second-funding-opportunity-to-accelerate-novel-tool-development-to-advance-Parkinson-s-disease-research.html?utmm_tource=chatgpt.com
+[92] ARPA-H awards AI-driven project to repurpose approved ... https://arpa-h.gov/news-and-events/arpa-h-awards-ai-driven-project-repurpose-approved-medications
+[93] Collaborative Science Awards https://chanzuckerberg.com/rfa/collaborative-science-awards/
+[94] ARPA-H project to accelerate the discovery and development of new ... https://jclinic.mit.edu/arpa-h-project-to-accelerate-the-discovery-and-development-of-new-antibiotics-using-generative-ai/
+[95] Introducing the 2026 Next Generation Research Grant ... https://www.americanbrainfoundation.org/2026-next-generation-research-grant-recipients/
+[96] ASAP Q1 2026 At-A-Glance - Aligning Science Across Parkinson's https://parkinsonsroadmap.org/newsroom/asap-q1-2026-at-a-glance/
+[97] Open Funding Opportunities https://arpa-h.gov/explore-funding/open-funding-opportunities
+[98] Aligning Science Across Parkinson’s 2025 CRN Funding Opportunity Webinar - Scientific Track https://www.youtube.com/watch?v=r6cwSzHjRj0
+[99] ARPA-H to Provide Every Cure up to $76 Million for AI- ... https://globalgenes.org/raredaily/arpa-h-to-provide-every-cure-up-to-76-million-for-ai-drive-drug-repurposing/
+[100] Inferring Gene Networks: Dream or Nightmare?: Part 1: Challenges 1 and 3 https://onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.2008.04099.x
+[101] [PDF] When Does Gene Regulatory Network Inference Break? A ... - arXiv https://arxiv.org/pdf/2605.04930.pdf
+[102] tdc (Therapeutics Commons) https://huggingface.co/tdc
+[103] GRACE: Unveiling Gene Regulatory Networks With Causal ... https://pubmed.ncbi.nlm.nih.gov/38896510/
+[104] ANALYSIS https://static1.squarespace.com/static/5c264953620b850c9fb03732/t/5fcd8d18cded405bb8f17561/1748444021649/naturemethods_costello.pdf
+[105] Interpretable AI for inference of causal molecular relationships from omics data - PubMed https://pubmed.ncbi.nlm.nih.gov/39951525/?fc=20231107203827&ff=20250320205234&v=2.18.0.post9+e462414
+[106] How Phenomic Foundation Models Are Empowering the Brightfield ... https://www.recursion.com/news/how-phenomic-foundation-models-are-empowering-the-brightfield-comeback
+[107] arcinstitute/Stack-DrugPBMC-Example · Datasets at Hugging Face https://huggingface.co/datasets/arcinstitute/Stack-DrugPBMC-Example
+[108] Open Problems – Single-Cell Perturbations | Kaggle | Jonah Cool https://www.linkedin.com/posts/jonah-cool-7a26308_open-problems-single-cell-perturbations-activity-7107782991753482240-ZZhh
+[109] Recursion's Phenom-Beta aims to upend phenomics research https://www.drugdiscoverytrends.com/recursion-phenom-beta-phenomics/
+[110] Kaggle's Post https://www.linkedin.com/posts/kaggle_the-open-problems-single-cell-perturbations-activity-7141511808040726529-iXeo
+[111] GitHub - scapeML/scape: Single-cell Analysis of Perturbational Effects using Machine Learning https://github.com/scapeML/scape

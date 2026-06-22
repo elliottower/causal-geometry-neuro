@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-06-21T06:28:01.145429",
+  "n_regions": 24,
+  "n_pairs": 29,
+  "region_profiles": {
+    "ACA": {
+      "n_sessions": 3,
+      "tucker_r2_mean": 0.007836138461199163,
+      "alpha_mean": 6.646845558086049
+    },
+    "CA3": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.026916550867450484,
+      "alpha_mean": 1.3515941005025518
+    },
+    "DG": {
+      "n_sessions": 4,
+      "tucker_r2_mean": -0.00781572410100237,
+      "alpha_mean": 17.83927709106744
+    },
+    "LS": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.027236869745947967,
+      "alpha_mean": 1.0720086101846364
+    },
+    "MOs": {
+      "n_sessions": 3,
+      "tucker_r2_mean": 0.0725185724721088,
+      "alpha_mean": 33.81009320158987
+    },
+    "SUB": {
+      "n_sessions": 3,
+      "tucker_r2_mean": -0.014572699416839289,
+      "alpha_mean": 1.3288604692544561
+    },
+    "VISp": {
+      "n_sessions": 3,
+      "tucker_r2_mean": -0.00010062323370685355,
+      "alpha_mean": 4.677792279984627
+    },
+    "root": {
+      "n_sessions": 3,
+      "tucker_r2_mean": 0.005138935989711602,
+      "alpha_mean": 2.476576252662315
+    },
+    "CA1": {
+      "n_sessions": 4,
+      "tucker_r2_mean": 0.0026220449362582554,
+      "alpha_mean": 3.8700176764170435
+    },
+    "POST": {
+      "n_sessions": 2,
+      "tucker_r2_mean": 0.0017322492350285157,
+      "alpha_mean": 1.5357987228322867
+    },
+    "VISl": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.020600259342684835,
+      "alpha_mean": 0.8545630492066708
+    },
+    "VISpm": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.021294539251162092,
+      "alpha_mean": 0.6805743691219568
+    },
+    "MG": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.06657239045120233,
+      "alpha_mean": 0.7393224928435118
+    },
+    "MRN": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.17227154494516417,
+      "alpha_mean": 3.0900650198597446
+    },
+    "NB": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.011131700506125775,
+      "alpha_mean": 2.7769943756635893
+    },
+    "SPF": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.136207116318807,
+      "alpha_mean": 6.120779055041809
+    },
+    "VISam": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.035619898601190636,
+      "alpha_mean": 1.073827707989669
+    },
+    "LGd": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.017598695113830276,
+      "alpha_mean": 0.8942060000914109
+    },
+    "LSr": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.012422659084534882,
+      "alpha_mean": 0.557855743698717
+    },
+    "TH": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.013148284730593263,
+      "alpha_mean": 0.7676359605470745
+    },
+    "VISa": {
+      "n_sessions": 2,
+      "tucker_r2_mean": 0.019312217769651474,
+      "alpha_mean": 1.2446283931007605
+    },
+    "VPL": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.042076162465892075,
+      "alpha_mean": 1.5635123696136217
+    },
+    "OLF": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.004470364175416797,
+      "alpha_mean": 1.0373347197139966
+    },
+    "ORB": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.10408953396832943,
+      "alpha_mean": 55.18998989193372
+    }
+  },
+  "tucker_vs_cka": {
+    "cka_vs_neuron_factors": {
+      "rho": -0.11625615763546797,
+      "p": 0.5481316894711741
+    },
+    "cka_vs_time_factors": {
+      "rho": 0.0004926108374384235,
+      "p": 0.9979764910054804
+    },
+    "cka_vs_core": {
+      "rho": -0.07487684729064037,
+      "p": 0.6994743748605193
+    }
+  },
+  "r2_vs_alpha": {
+    "rho": 0.3947826086956522,
+    "p_value": 0.05624113516523863,
+    "interpretation": "Positive rho means steep-spectrum (low-dim) regions are better captured by Tucker \u2014 consistent with Tucker as a linear method that favors low-dimensional structure."
+  },
+  "pairs_summary": {
+    "neuron_sim_mean": 0.07950485811375847,
+    "time_sim_mean": 0.17808807841016663,
+    "trial_sim_mean": 0.12326632055331233
+  }
+}

@@ -1,0 +1,18 @@
+{"ts": "2026-06-21T06:52:18.639984", "experiment": "exp32", "event": "started", "module": "experiments.exp32_causal_discovery_interregion", "max_sessions": null}
+{"ts": "2026-06-21T06:52:50.725531", "experiment": "exp32", "event": "run_complete", "n_keys": 13}
+{"ts": "2026-06-21T06:52:53.700038", "experiment": "exp32", "event": "saved_volume", "path": "/results/exp32/exp32_20260621_065252.json"}
+{"ts": "2026-06-21T06:52:55.524054", "experiment": "exp32", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:52:57.162588", "experiment": "exp32", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:52:58.669802", "experiment": "exp32", "event": "done"}
+{"ts": "2026-06-21T06:56:28.719751", "experiment": "exp32", "event": "started", "module": "experiments.exp32_causal_discovery_interregion", "max_sessions": null}
+{"ts": "2026-06-21T06:57:12.641617", "experiment": "exp32", "event": "run_complete", "n_keys": 13}
+{"ts": "2026-06-21T06:57:15.511269", "experiment": "exp32", "event": "saved_volume", "path": "/results/exp32/exp32_20260621_065714.json"}
+{"ts": "2026-06-21T06:57:17.561888", "experiment": "exp32", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:57:19.686378", "experiment": "exp32", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:57:20.990694", "experiment": "exp32", "event": "done"}
+{"ts": "2026-06-21T14:49:24.232136", "experiment": "exp32", "event": "started", "module": "experiments.exp32_causal_discovery_interregion", "max_sessions": null}
+{"ts": "2026-06-21T14:49:59.706270", "experiment": "exp32", "event": "run_complete", "n_keys": 13}
+{"ts": "2026-06-21T14:50:02.058097", "experiment": "exp32", "event": "saved_volume", "path": "/results/exp32/exp32_20260621_145000.json"}
+{"ts": "2026-06-21T14:50:04.147008", "experiment": "exp32", "event": "copied_artifacts"}
+{"ts": "2026-06-21T14:50:05.623246", "experiment": "exp32", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T14:50:06.649052", "experiment": "exp32", "event": "done"}

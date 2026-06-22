@@ -1,0 +1,1015 @@
+{
+  "timestamp": "2026-06-21T07:23:25.550350",
+  "n_sessions": 39,
+  "n_regions": 73,
+  "region_results": {
+    "ACA": {
+      "power_law_alpha": 13.451252027644427,
+      "n_sessions": 11,
+      "mean_pca_lda_angle_deg": 16.33508869565651,
+      "n_pca_lda": 11,
+      "conceptor_mean_shared_dims": 4.909090909090909,
+      "conceptor_mean_private_dims": 0.09090909090909091,
+      "conceptor_mean_overlap": 0.9410314528220686,
+      "n_conceptor": 11,
+      "mean_cross_condition_angle_deg": 40.465610352716006,
+      "n_cross_condition": 11
+    },
+    "CA3": {
+      "power_law_alpha": 9.64708796144409,
+      "n_sessions": 8,
+      "mean_pca_lda_angle_deg": 16.31850217792099,
+      "n_pca_lda": 8,
+      "conceptor_mean_shared_dims": 4.875,
+      "conceptor_mean_private_dims": 0.125,
+      "conceptor_mean_overlap": 0.9378205628334424,
+      "n_conceptor": 8,
+      "mean_cross_condition_angle_deg": 40.97753324955365,
+      "n_cross_condition": 8
+    },
+    "DG": {
+      "power_law_alpha": 24.456553881694894,
+      "n_sessions": 16,
+      "mean_pca_lda_angle_deg": 17.01579672853059,
+      "n_pca_lda": 16,
+      "conceptor_mean_shared_dims": 4.6875,
+      "conceptor_mean_private_dims": 0.3125,
+      "conceptor_mean_overlap": 0.9380855479275968,
+      "n_conceptor": 16,
+      "mean_cross_condition_angle_deg": 39.809691022263735,
+      "n_cross_condition": 16
+    },
+    "LS": {
+      "power_law_alpha": 1.3584925930819642,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 16.12216031858897,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 4.666666666666667,
+      "conceptor_mean_private_dims": 0.3333333333333333,
+      "conceptor_mean_overlap": 0.9189370546924321,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 55.67719324897456,
+      "n_cross_condition": 3
+    },
+    "MOs": {
+      "power_law_alpha": 19.328741573699205,
+      "n_sessions": 17,
+      "mean_pca_lda_angle_deg": 16.573795242165538,
+      "n_pca_lda": 17,
+      "conceptor_mean_shared_dims": 4.9411764705882355,
+      "conceptor_mean_private_dims": 0.058823529411764705,
+      "conceptor_mean_overlap": 0.9495625578942255,
+      "n_conceptor": 17,
+      "mean_cross_condition_angle_deg": 47.774998016243124,
+      "n_cross_condition": 17
+    },
+    "SUB": {
+      "power_law_alpha": 1.9143607599731014,
+      "n_sessions": 9,
+      "mean_pca_lda_angle_deg": 16.249811149572146,
+      "n_pca_lda": 9,
+      "conceptor_mean_shared_dims": 4.666666666666667,
+      "conceptor_mean_private_dims": 0.3333333333333333,
+      "conceptor_mean_overlap": 0.8988248781717453,
+      "n_conceptor": 9,
+      "mean_cross_condition_angle_deg": 46.966845558616676,
+      "n_cross_condition": 9
+    },
+    "VISp": {
+      "power_law_alpha": 8.430971277774733,
+      "n_sessions": 12,
+      "mean_pca_lda_angle_deg": 15.687501636081274,
+      "n_pca_lda": 12,
+      "conceptor_mean_shared_dims": 4.916666666666667,
+      "conceptor_mean_private_dims": 0.08333333333333333,
+      "conceptor_mean_overlap": 0.93887149557426,
+      "n_conceptor": 12,
+      "mean_cross_condition_angle_deg": 46.89153626380098,
+      "n_cross_condition": 12
+    },
+    "root": {
+      "power_law_alpha": 84.29959766338904,
+      "n_sessions": 26,
+      "mean_pca_lda_angle_deg": 16.845076419303517,
+      "n_pca_lda": 26,
+      "conceptor_mean_shared_dims": 4.923076923076923,
+      "conceptor_mean_private_dims": 0.07692307692307693,
+      "conceptor_mean_overlap": 0.9546357868189373,
+      "n_conceptor": 26,
+      "mean_cross_condition_angle_deg": 42.029073379304386,
+      "n_cross_condition": 26
+    },
+    "CA1": {
+      "power_law_alpha": 17.62417341864879,
+      "n_sessions": 20,
+      "mean_pca_lda_angle_deg": 16.520966116319826,
+      "n_pca_lda": 20,
+      "conceptor_mean_shared_dims": 4.9,
+      "conceptor_mean_private_dims": 0.1,
+      "conceptor_mean_overlap": 0.9349897751967114,
+      "n_conceptor": 20,
+      "mean_cross_condition_angle_deg": 42.18798897607551,
+      "n_cross_condition": 20
+    },
+    "POST": {
+      "power_law_alpha": 25.338229823985692,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 17.468239532349543,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9562752807836086,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 43.544815654961205,
+      "n_cross_condition": 4
+    },
+    "VISl": {
+      "power_law_alpha": 1.3199328575089178,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 14.941043920184162,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 4.666666666666667,
+      "conceptor_mean_private_dims": 0.3333333333333333,
+      "conceptor_mean_overlap": 0.923151570048271,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 47.596861855736655,
+      "n_cross_condition": 3
+    },
+    "VISpm": {
+      "power_law_alpha": 1.769457807491277,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 16.841246040981655,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9275503537466535,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 49.24706518848592,
+      "n_cross_condition": 4
+    },
+    "MG": {
+      "power_law_alpha": 0.7747579675628294,
+      "n_sessions": 2,
+      "mean_pca_lda_angle_deg": 14.736447245064092,
+      "n_pca_lda": 2,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9079734801526416,
+      "n_conceptor": 2,
+      "mean_cross_condition_angle_deg": 59.548869804627536,
+      "n_cross_condition": 2
+    },
+    "MRN": {
+      "power_law_alpha": 5.592189639712994,
+      "n_sessions": 11,
+      "mean_pca_lda_angle_deg": 16.446080151804573,
+      "n_pca_lda": 11,
+      "conceptor_mean_shared_dims": 4.909090909090909,
+      "conceptor_mean_private_dims": 0.09090909090909091,
+      "conceptor_mean_overlap": 0.9360834839208955,
+      "n_conceptor": 11,
+      "mean_cross_condition_angle_deg": 42.178062437670924,
+      "n_cross_condition": 11
+    },
+    "NB": {
+      "power_law_alpha": 2.7769943756635893,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 16.62138693842295,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9216001000900989,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 35.893786602119356,
+      "n_cross_condition": 1
+    },
+    "SPF": {
+      "power_law_alpha": 9.307598375221797,
+      "n_sessions": 2,
+      "mean_pca_lda_angle_deg": 16.58561259560883,
+      "n_pca_lda": 2,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9587826871944414,
+      "n_conceptor": 2,
+      "mean_cross_condition_angle_deg": 31.734877235998603,
+      "n_cross_condition": 2
+    },
+    "VISam": {
+      "power_law_alpha": 6.23774835684517,
+      "n_sessions": 11,
+      "mean_pca_lda_angle_deg": 15.8016222620953,
+      "n_pca_lda": 11,
+      "conceptor_mean_shared_dims": 4.909090909090909,
+      "conceptor_mean_private_dims": 0.09090909090909091,
+      "conceptor_mean_overlap": 0.9375390956721955,
+      "n_conceptor": 11,
+      "mean_cross_condition_angle_deg": 46.791820500269004,
+      "n_cross_condition": 11
+    },
+    "LGd": {
+      "power_law_alpha": 3.4948598647154454,
+      "n_sessions": 9,
+      "mean_pca_lda_angle_deg": 16.94458685879192,
+      "n_pca_lda": 9,
+      "conceptor_mean_shared_dims": 4.888888888888889,
+      "conceptor_mean_private_dims": 0.1111111111111111,
+      "conceptor_mean_overlap": 0.9274649934050534,
+      "n_conceptor": 9,
+      "mean_cross_condition_angle_deg": 48.14605234552769,
+      "n_cross_condition": 9
+    },
+    "LSr": {
+      "power_law_alpha": 12.398311644459005,
+      "n_sessions": 2,
+      "mean_pca_lda_angle_deg": 16.64987155267263,
+      "n_pca_lda": 2,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9310080803467338,
+      "n_conceptor": 2,
+      "mean_cross_condition_angle_deg": 42.37172627566235,
+      "n_cross_condition": 2
+    },
+    "TH": {
+      "power_law_alpha": 7.668775456724045,
+      "n_sessions": 8,
+      "mean_pca_lda_angle_deg": 16.066642758339896,
+      "n_pca_lda": 8,
+      "conceptor_mean_shared_dims": 4.75,
+      "conceptor_mean_private_dims": 0.25,
+      "conceptor_mean_overlap": 0.9389274861871046,
+      "n_conceptor": 8,
+      "mean_cross_condition_angle_deg": 47.92220133598654,
+      "n_cross_condition": 8
+    },
+    "VISa": {
+      "power_law_alpha": 2.206590920889144,
+      "n_sessions": 5,
+      "mean_pca_lda_angle_deg": 17.790459322083375,
+      "n_pca_lda": 5,
+      "conceptor_mean_shared_dims": 4.6,
+      "conceptor_mean_private_dims": 0.4,
+      "conceptor_mean_overlap": 0.9004672901269719,
+      "n_conceptor": 5,
+      "mean_cross_condition_angle_deg": 40.42411612686363,
+      "n_cross_condition": 5
+    },
+    "VPL": {
+      "power_law_alpha": 1.6805176098085306,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 16.600495438309174,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 4.75,
+      "conceptor_mean_private_dims": 0.25,
+      "conceptor_mean_overlap": 0.9358910966090124,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 48.101015174373636,
+      "n_cross_condition": 4
+    },
+    "OLF": {
+      "power_law_alpha": 1.0603526781028343,
+      "n_sessions": 2,
+      "mean_pca_lda_angle_deg": 16.40473539574056,
+      "n_pca_lda": 2,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9378842886352551,
+      "n_conceptor": 2,
+      "mean_cross_condition_angle_deg": 49.01565975491781,
+      "n_cross_condition": 2
+    },
+    "ORB": {
+      "power_law_alpha": 11.860530879095968,
+      "n_sessions": 5,
+      "mean_pca_lda_angle_deg": 15.673236925557058,
+      "n_pca_lda": 5,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.944534394667609,
+      "n_conceptor": 5,
+      "mean_cross_condition_angle_deg": 46.654354318631206,
+      "n_cross_condition": 5
+    },
+    "PL": {
+      "power_law_alpha": 62.64148841834658,
+      "n_sessions": 10,
+      "mean_pca_lda_angle_deg": 17.129325041206943,
+      "n_pca_lda": 10,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9564139269772504,
+      "n_conceptor": 10,
+      "mean_cross_condition_angle_deg": 43.27619056677939,
+      "n_cross_condition": 10
+    },
+    "AUD": {
+      "power_law_alpha": 0.7067552126572578,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.906896022871805,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9313421272308917,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 53.06032260099706,
+      "n_cross_condition": 1
+    },
+    "SSp": {
+      "power_law_alpha": 19.54192006368781,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 17.238380650362767,
+      "n_pca_lda": 5,
+      "conceptor_mean_shared_dims": 4.6,
+      "conceptor_mean_private_dims": 0.4,
+      "conceptor_mean_overlap": 0.9149839898350294,
+      "n_conceptor": 5,
+      "mean_cross_condition_angle_deg": 48.181266646626554,
+      "n_cross_condition": 5
+    },
+    "CP": {
+      "power_law_alpha": 9.732991998880665,
+      "n_sessions": 5,
+      "mean_pca_lda_angle_deg": 15.662999228813941,
+      "n_pca_lda": 5,
+      "conceptor_mean_shared_dims": 4.8,
+      "conceptor_mean_private_dims": 0.2,
+      "conceptor_mean_overlap": 0.9111324981296386,
+      "n_conceptor": 5,
+      "mean_cross_condition_angle_deg": 49.88959804409966,
+      "n_cross_condition": 5
+    },
+    "EPd": {
+      "power_law_alpha": 16.33332292765154,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.91719326081352,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 4.0,
+      "conceptor_mean_private_dims": 1.0,
+      "conceptor_mean_overlap": 0.8402233683871252,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 30.614190543027775,
+      "n_cross_condition": 1
+    },
+    "LD": {
+      "power_law_alpha": 3.166011492212842,
+      "n_sessions": 6,
+      "mean_pca_lda_angle_deg": 16.15132132791618,
+      "n_pca_lda": 6,
+      "conceptor_mean_shared_dims": 4.666666666666667,
+      "conceptor_mean_private_dims": 0.3333333333333333,
+      "conceptor_mean_overlap": 0.9244334426473437,
+      "n_conceptor": 6,
+      "mean_cross_condition_angle_deg": 45.60853056859424,
+      "n_cross_condition": 6
+    },
+    "PIR": {
+      "power_law_alpha": 1.9193763274974733,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 15.930645178370247,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9264399686916278,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 44.98011427014769,
+      "n_cross_condition": 1
+    },
+    "ILA": {
+      "power_law_alpha": 1.1245612823907407,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 15.897113552113646,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9752561216356467,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 55.5165340778523,
+      "n_cross_condition": 3
+    },
+    "LP": {
+      "power_law_alpha": 9.703570273171096,
+      "n_sessions": 10,
+      "mean_pca_lda_angle_deg": 16.52654765857055,
+      "n_pca_lda": 10,
+      "conceptor_mean_shared_dims": 4.7,
+      "conceptor_mean_private_dims": 0.3,
+      "conceptor_mean_overlap": 0.9132106311486515,
+      "n_conceptor": 10,
+      "mean_cross_condition_angle_deg": 51.616495895049205,
+      "n_cross_condition": 10
+    },
+    "PO": {
+      "power_law_alpha": 2.562574799913161,
+      "n_sessions": 5,
+      "mean_pca_lda_angle_deg": 15.655818979970272,
+      "n_pca_lda": 5,
+      "conceptor_mean_shared_dims": 4.8,
+      "conceptor_mean_private_dims": 0.2,
+      "conceptor_mean_overlap": 0.899628054420468,
+      "n_conceptor": 5,
+      "mean_cross_condition_angle_deg": 56.17908442920468,
+      "n_cross_condition": 5
+    },
+    "TT": {
+      "power_law_alpha": 6.176917616999117,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 17.651244337953067,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9595405217064837,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 33.48244239910963,
+      "n_cross_condition": 4
+    },
+    "ORBm": {
+      "power_law_alpha": 1.43464699693683,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 16.58351401960655,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9072644279701917,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 41.452309923200524,
+      "n_cross_condition": 1
+    },
+    "GPe": {
+      "power_law_alpha": 1.5830225826112116,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 15.68580927457461,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 4.666666666666667,
+      "conceptor_mean_private_dims": 0.3333333333333333,
+      "conceptor_mean_overlap": 0.9164420751596117,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 45.108814437092896,
+      "n_cross_condition": 3
+    },
+    "MB": {
+      "power_law_alpha": 8.224615704747626,
+      "n_sessions": 6,
+      "mean_pca_lda_angle_deg": 15.979646820475253,
+      "n_pca_lda": 6,
+      "conceptor_mean_shared_dims": 4.833333333333333,
+      "conceptor_mean_private_dims": 0.16666666666666666,
+      "conceptor_mean_overlap": 0.9341125735850478,
+      "n_conceptor": 6,
+      "mean_cross_condition_angle_deg": 44.83471641913109,
+      "n_cross_condition": 6
+    },
+    "POL": {
+      "power_law_alpha": 17.67805170861561,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 17.31708648455593,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 4.666666666666667,
+      "conceptor_mean_private_dims": 0.3333333333333333,
+      "conceptor_mean_overlap": 0.9293072062148758,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 44.54260253585892,
+      "n_cross_condition": 3
+    },
+    "SCm": {
+      "power_law_alpha": 8.477772618680929,
+      "n_sessions": 7,
+      "mean_pca_lda_angle_deg": 16.80336493796906,
+      "n_pca_lda": 7,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9720567680948154,
+      "n_conceptor": 7,
+      "mean_cross_condition_angle_deg": 41.50514427203224,
+      "n_cross_condition": 7
+    },
+    "SCsg": {
+      "power_law_alpha": 26.10855898160544,
+      "n_sessions": 6,
+      "mean_pca_lda_angle_deg": 16.30538244669538,
+      "n_pca_lda": 6,
+      "conceptor_mean_shared_dims": 4.833333333333333,
+      "conceptor_mean_private_dims": 0.16666666666666666,
+      "conceptor_mean_overlap": 0.9373821223647433,
+      "n_conceptor": 6,
+      "mean_cross_condition_angle_deg": 31.394838600223405,
+      "n_cross_condition": 6
+    },
+    "VISrl": {
+      "power_law_alpha": 1.0261517332019712,
+      "n_sessions": 2,
+      "mean_pca_lda_angle_deg": 17.799627238855003,
+      "n_pca_lda": 2,
+      "conceptor_mean_shared_dims": 4.5,
+      "conceptor_mean_private_dims": 0.5,
+      "conceptor_mean_overlap": 0.9028823569284304,
+      "n_conceptor": 2,
+      "mean_cross_condition_angle_deg": 52.654037415164375,
+      "n_cross_condition": 2
+    },
+    "LSc": {
+      "power_law_alpha": 2.230121913582271,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.14761008222023,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 4.0,
+      "conceptor_mean_private_dims": 1.0,
+      "conceptor_mean_overlap": 0.8744883220257762,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 51.399667482361856,
+      "n_cross_condition": 1
+    },
+    "MOp": {
+      "power_law_alpha": 1.0388756075047705,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 15.217935723918046,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 4.666666666666667,
+      "conceptor_mean_private_dims": 0.3333333333333333,
+      "conceptor_mean_overlap": 0.917145769040164,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 51.65837999605674,
+      "n_cross_condition": 3
+    },
+    "PT": {
+      "power_law_alpha": 3.019158752211245,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.868780459532154,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9446429148706974,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 42.45297149972018,
+      "n_cross_condition": 1
+    },
+    "LH": {
+      "power_law_alpha": 6.56322093127161,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.197758961872285,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9783151965356854,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 25.06648831431822,
+      "n_cross_condition": 1
+    },
+    "MD": {
+      "power_law_alpha": 0.912063838941843,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 16.05866355036899,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 4.666666666666667,
+      "conceptor_mean_private_dims": 0.3333333333333333,
+      "conceptor_mean_overlap": 0.9375054959665446,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 53.77708968899848,
+      "n_cross_condition": 3
+    },
+    "MS": {
+      "power_law_alpha": 5.027771474640493,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.335533540585125,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9764972683469783,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 43.483043873865746,
+      "n_cross_condition": 1
+    },
+    "RN": {
+      "power_law_alpha": 2.2897744530897124,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 15.229907527948127,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9536601929716836,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 45.51580233223494,
+      "n_cross_condition": 1
+    },
+    "SCs": {
+      "power_law_alpha": 4.00171768002708,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 16.825722879967195,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 4.75,
+      "conceptor_mean_private_dims": 0.25,
+      "conceptor_mean_overlap": 0.9446003714933263,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 39.36833591677346,
+      "n_cross_condition": 4
+    },
+    "ZI": {
+      "power_law_alpha": 6.123464182253721,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 17.069898818036307,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 4.75,
+      "conceptor_mean_private_dims": 0.25,
+      "conceptor_mean_overlap": 0.9439192575883382,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 39.05202251476446,
+      "n_cross_condition": 4
+    },
+    "PAG": {
+      "power_law_alpha": 10.694169401305262,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 16.573774990283855,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9651573535856417,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 40.354040294891625,
+      "n_cross_condition": 3
+    },
+    "RSP": {
+      "power_law_alpha": 7.4693427258286045,
+      "n_sessions": 9,
+      "mean_pca_lda_angle_deg": 16.59476395460169,
+      "n_pca_lda": 9,
+      "conceptor_mean_shared_dims": 4.777777777777778,
+      "conceptor_mean_private_dims": 0.2222222222222222,
+      "conceptor_mean_overlap": 0.9280231572089406,
+      "n_conceptor": 9,
+      "mean_cross_condition_angle_deg": 50.71375726723742,
+      "n_cross_condition": 9
+    },
+    "BLA": {
+      "power_law_alpha": 1.3040026552703354,
+      "n_sessions": 2,
+      "mean_pca_lda_angle_deg": 17.680649269859934,
+      "n_pca_lda": 2,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9453504364697352,
+      "n_conceptor": 2,
+      "mean_cross_condition_angle_deg": 46.34176849944547,
+      "n_cross_condition": 2
+    },
+    "VPM": {
+      "power_law_alpha": 2.489276802372039,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 16.385776316119866,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 4.75,
+      "conceptor_mean_private_dims": 0.25,
+      "conceptor_mean_overlap": 0.9218720199286514,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 50.358379357300784,
+      "n_cross_condition": 4
+    },
+    "SSs": {
+      "power_law_alpha": 1.409039613386177,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 16.435955302349317,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9631551460916065,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 48.187480156451464,
+      "n_cross_condition": 1
+    },
+    "MEA": {
+      "power_law_alpha": 3.015372112824218,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 16.617460535860094,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9800745150547561,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 53.554903493354274,
+      "n_cross_condition": 1
+    },
+    "RT": {
+      "power_law_alpha": 11.499722084514628,
+      "n_sessions": 2,
+      "mean_pca_lda_angle_deg": 14.852174195240401,
+      "n_pca_lda": 2,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.959505036102304,
+      "n_conceptor": 2,
+      "mean_cross_condition_angle_deg": 47.042448722220655,
+      "n_cross_condition": 2
+    },
+    "ACB": {
+      "power_law_alpha": 2.0076974626573567,
+      "n_sessions": 3,
+      "mean_pca_lda_angle_deg": 15.800246998394963,
+      "n_pca_lda": 3,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9573325609635787,
+      "n_conceptor": 3,
+      "mean_cross_condition_angle_deg": 47.91617218566568,
+      "n_cross_condition": 3
+    },
+    "OT": {
+      "power_law_alpha": 103.12560978616595,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 18.000000622529278,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9961129659235534,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 37.284496028844565,
+      "n_cross_condition": 1
+    },
+    "SI": {
+      "power_law_alpha": 44.37195011819051,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 16.098339083216512,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.944820432990993,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 40.260881969702424,
+      "n_cross_condition": 1
+    },
+    "SNr": {
+      "power_law_alpha": 8.036113457156926,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 17.155326587504018,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9565501974580222,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 40.73468224924526,
+      "n_cross_condition": 4
+    },
+    "APN": {
+      "power_law_alpha": 1.8617734413218823,
+      "n_sessions": 2,
+      "mean_pca_lda_angle_deg": 14.238387107566044,
+      "n_pca_lda": 2,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.961736566945603,
+      "n_conceptor": 2,
+      "mean_cross_condition_angle_deg": 44.33441335940852,
+      "n_cross_condition": 2
+    },
+    "VAL": {
+      "power_law_alpha": 1.4827535051729457,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 15.520186377889083,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.8915069135975198,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 60.9172518280161,
+      "n_cross_condition": 1
+    },
+    "IC": {
+      "power_law_alpha": 3.432645349669124,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.052866077275695,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9835132402064669,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 42.858515953391574,
+      "n_cross_condition": 1
+    },
+    "CA2": {
+      "power_law_alpha": 1.067127914356581,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 15.347322997031286,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.930572711668568,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 57.296429696019544,
+      "n_cross_condition": 1
+    },
+    "SCig": {
+      "power_law_alpha": 1.1274115845811583,
+      "n_sessions": 4,
+      "mean_pca_lda_angle_deg": 14.919739113651906,
+      "n_pca_lda": 4,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9371887801449336,
+      "n_conceptor": 4,
+      "mean_cross_condition_angle_deg": 52.22934475876353,
+      "n_cross_condition": 4
+    },
+    "DP": {
+      "power_law_alpha": 25.985119526508477,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.36268151708143,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9638584348229203,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 38.884253710159655,
+      "n_cross_condition": 1
+    },
+    "CL": {
+      "power_law_alpha": 16.179496531192765,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.67187435311105,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 4.0,
+      "conceptor_mean_private_dims": 1.0,
+      "conceptor_mean_overlap": 0.8474922185747966,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 46.45591597705682,
+      "n_cross_condition": 1
+    },
+    "EP": {
+      "power_law_alpha": 1.3596078692160052,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 15.280951089110495,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.932987366385424,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 64.83510576217377,
+      "n_cross_condition": 1
+    },
+    "BMA": {
+      "power_law_alpha": 1.1115329793376552,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 15.583898224083326,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9320725329608663,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 59.81333026572597,
+      "n_cross_condition": 1
+    },
+    "COA": {
+      "power_law_alpha": 0.6162557539821089,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 16.921418095581508,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 4.0,
+      "conceptor_mean_private_dims": 1.0,
+      "conceptor_mean_overlap": 0.8645581263990065,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 57.296533525848766,
+      "n_cross_condition": 1
+    },
+    "CA": {
+      "power_law_alpha": 0.8887542319555799,
+      "n_sessions": 1,
+      "mean_pca_lda_angle_deg": 17.33177704210637,
+      "n_pca_lda": 1,
+      "conceptor_mean_shared_dims": 5.0,
+      "conceptor_mean_private_dims": 0.0,
+      "conceptor_mean_overlap": 0.9441049851212876,
+      "n_conceptor": 1,
+      "mean_cross_condition_angle_deg": 52.99246678480331,
+      "n_cross_condition": 1
+    }
+  },
+  "prediction_tests": {
+    "alpha_vs_pca_lda_angle": {
+      "rho": 0.2881031716648155,
+      "p": 0.013446468825702601,
+      "ci_lo": 0.04773550366560353,
+      "ci_hi": 0.512922070242718,
+      "n": 73,
+      "bootstrap_se": 0.11984122528683942,
+      "permutation_p": 0.013972055888223553,
+      "interpretation": "Negative rho = high-dim (low-alpha) regions have LARGER PCA-LDA angles. This is the biological analog of the ~88 deg attribution-causal orthogonality finding in the transformer factorization paper."
+    },
+    "alpha_vs_evidence_not_choice": {
+      "rho": 0.031840838142036934,
+      "p": 0.7891453857863713,
+      "ci_lo": -0.22372776952805123,
+      "ci_hi": 0.28517556671765165,
+      "n": 73,
+      "bootstrap_se": 0.13240890361282814,
+      "permutation_p": 0.782435129740519,
+      "interpretation": "Positive rho = low-dim (high-alpha) regions have MORE evidence dims disconnected from choice. These regions encode evidence but don't route it to choice. Negative rho = high-dim regions encode more 'unused' evidence."
+    },
+    "alpha_vs_cross_condition_angle": {
+      "rho": -0.6456867826730841,
+      "p": 6.924213013837219e-10,
+      "ci_lo": -0.7592465523291249,
+      "ci_hi": -0.48455969245627056,
+      "n": 73,
+      "bootstrap_se": 0.06897272187309264,
+      "permutation_p": 0.001996007984031936,
+      "interpretation": "Negative rho = high-dim (low-alpha) regions show LARGER cross-condition principal angles (easy vs hard). Analog of 58-78 deg per-counterfactual result in transformer paper."
+    },
+    "pca_lda_angle_distribution": {
+      "mean_deg": 16.476160318886798,
+      "std_deg": 0.8554995053989777,
+      "min_deg": 14.238387107566044,
+      "max_deg": 18.000000622529278,
+      "n_regions": 73,
+      "interpretation": "Compare to ~88 deg in transformer paper."
+    },
+    "cross_condition_angle_distribution": {
+      "mean_deg": 46.140895366964294,
+      "std_deg": 7.341060181243592,
+      "min_deg": 25.06648831431822,
+      "max_deg": 64.83510576217377,
+      "n_regions": 73,
+      "interpretation": "Compare to 58-78 deg per-counterfactual result in transformer paper."
+    }
+  },
+  "top_pca_lda_angle": [
+    [
+      "OT",
+      18.000000622529278
+    ],
+    [
+      "EPd",
+      17.91719326081352
+    ],
+    [
+      "AUD",
+      17.906896022871805
+    ],
+    [
+      "PT",
+      17.868780459532154
+    ],
+    [
+      "VISrl",
+      17.799627238855003
+    ],
+    [
+      "VISa",
+      17.790459322083375
+    ],
+    [
+      "BLA",
+      17.680649269859934
+    ],
+    [
+      "CL",
+      17.67187435311105
+    ],
+    [
+      "TT",
+      17.651244337953067
+    ],
+    [
+      "POST",
+      17.468239532349543
+    ]
+  ],
+  "top_evidence_not_choice": [
+    [
+      "EPd",
+      1.0
+    ],
+    [
+      "LSc",
+      1.0
+    ],
+    [
+      "CL",
+      1.0
+    ],
+    [
+      "COA",
+      1.0
+    ],
+    [
+      "VISrl",
+      0.5
+    ],
+    [
+      "VISa",
+      0.4
+    ],
+    [
+      "SSp",
+      0.4
+    ],
+    [
+      "LS",
+      0.3333333333333333
+    ],
+    [
+      "SUB",
+      0.3333333333333333
+    ],
+    [
+      "VISl",
+      0.3333333333333333
+    ]
+  ]
+}

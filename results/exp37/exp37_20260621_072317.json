@@ -1,0 +1,1202 @@
+{
+  "timestamp": "2026-06-21T07:23:16.690269",
+  "n_sessions": 39,
+  "n_regions_analyzed": 50,
+  "params": {
+    "min_neurons": 10,
+    "time_window": [
+      15,
+      35
+    ],
+    "pca_shared_dims": 15,
+    "shrinkage": 0.1
+  },
+  "regions": {
+    "ACA": {
+      "n_sessions": 11,
+      "shared_dims": 15,
+      "mean_alpha": 13.451252027644427,
+      "affine_invariant": {
+        "mean": 5.022015887053434,
+        "std": 3.276965221166923,
+        "n_pairs": 55
+      },
+      "log_euclidean": {
+        "mean": 5.022015887053436,
+        "std": 3.2769652211669245,
+        "n_pairs": 55
+      },
+      "within_mouse_affine": {
+        "mean": 7.307028944211178,
+        "n": 3
+      },
+      "across_mouse_affine": {
+        "mean": 4.890188210678949,
+        "n": 52
+      }
+    },
+    "ACB": {
+      "n_sessions": 3,
+      "shared_dims": 15,
+      "mean_alpha": 2.0076974626573567,
+      "affine_invariant": {
+        "mean": 0.7262669191139474,
+        "std": 0.06624284373198154,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 0.7262669191139434,
+        "std": 0.0662428437319792,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 0.7262669191139474,
+        "n": 3
+      }
+    },
+    "APN": {
+      "n_sessions": 2,
+      "shared_dims": 15,
+      "mean_alpha": 1.8617734413218823,
+      "affine_invariant": {
+        "mean": 2.4151218623733905,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "log_euclidean": {
+        "mean": 2.4151218623733977,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 2.4151218623733905,
+        "n": 1
+      }
+    },
+    "BLA": {
+      "n_sessions": 2,
+      "shared_dims": 15,
+      "mean_alpha": 1.3040026552703354,
+      "affine_invariant": {
+        "mean": 0.7276426186867475,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "log_euclidean": {
+        "mean": 0.7276426186867537,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 0.7276426186867475,
+        "n": 1
+      }
+    },
+    "CA1": {
+      "n_sessions": 20,
+      "shared_dims": 15,
+      "mean_alpha": 17.62417341864879,
+      "affine_invariant": {
+        "mean": 3.150782467973752,
+        "std": 1.9694058857519388,
+        "n_pairs": 190
+      },
+      "log_euclidean": {
+        "mean": 3.150782467973752,
+        "std": 1.9694058857519396,
+        "n_pairs": 190
+      },
+      "within_mouse_affine": {
+        "mean": 3.356989629269823,
+        "n": 13
+      },
+      "across_mouse_affine": {
+        "mean": 3.1356373092344922,
+        "n": 177
+      }
+    },
+    "CA3": {
+      "n_sessions": 8,
+      "shared_dims": 15,
+      "mean_alpha": 9.64708796144409,
+      "affine_invariant": {
+        "mean": 3.3777021435624333,
+        "std": 2.042734258215464,
+        "n_pairs": 28
+      },
+      "log_euclidean": {
+        "mean": 3.3777021435624293,
+        "std": 2.042734258215465,
+        "n_pairs": 28
+      },
+      "within_mouse_affine": {
+        "mean": 5.0795627557942025,
+        "n": 2
+      },
+      "across_mouse_affine": {
+        "mean": 3.246789788775374,
+        "n": 26
+      }
+    },
+    "CP": {
+      "n_sessions": 5,
+      "shared_dims": 15,
+      "mean_alpha": 9.732991998880665,
+      "affine_invariant": {
+        "mean": 4.070743304206634,
+        "std": 2.114395143059957,
+        "n_pairs": 10
+      },
+      "log_euclidean": {
+        "mean": 4.070743304206638,
+        "std": 2.1143951430599617,
+        "n_pairs": 10
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 4.070743304206634,
+        "n": 10
+      }
+    },
+    "DG": {
+      "n_sessions": 16,
+      "shared_dims": 15,
+      "mean_alpha": 24.456553881694894,
+      "affine_invariant": {
+        "mean": 4.867779116354835,
+        "std": 3.0141607302994053,
+        "n_pairs": 120
+      },
+      "log_euclidean": {
+        "mean": 4.867779116354835,
+        "std": 3.0141607302994036,
+        "n_pairs": 120
+      },
+      "within_mouse_affine": {
+        "mean": 5.413188610139112,
+        "n": 6
+      },
+      "across_mouse_affine": {
+        "mean": 4.839073353524083,
+        "n": 114
+      }
+    },
+    "GPe": {
+      "n_sessions": 3,
+      "shared_dims": 15,
+      "mean_alpha": 1.5830225826112116,
+      "affine_invariant": {
+        "mean": 4.200668015755518,
+        "std": 1.807625124585153,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 4.200668015755532,
+        "std": 1.8076251245851624,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 4.200668015755518,
+        "n": 3
+      }
+    },
+    "ILA": {
+      "n_sessions": 3,
+      "shared_dims": 15,
+      "mean_alpha": 1.1245612823907407,
+      "affine_invariant": {
+        "mean": 1.8624552553998202,
+        "std": 0.6149924188641017,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 1.8624552553998275,
+        "std": 0.6149924188641058,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 1.8624552553998202,
+        "n": 3
+      }
+    },
+    "LD": {
+      "n_sessions": 6,
+      "shared_dims": 12,
+      "mean_alpha": 3.166011492212842,
+      "affine_invariant": {
+        "mean": 2.57513272331856,
+        "std": 1.0376600694040814,
+        "n_pairs": 15
+      },
+      "log_euclidean": {
+        "mean": 2.575132723318565,
+        "std": 1.037660069404084,
+        "n_pairs": 15
+      },
+      "within_mouse_affine": {
+        "mean": 1.8564347073961625,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 2.6264682958844463,
+        "n": 14
+      }
+    },
+    "LGd": {
+      "n_sessions": 9,
+      "shared_dims": 11,
+      "mean_alpha": 3.4948598647154454,
+      "affine_invariant": {
+        "mean": 3.1404349940567777,
+        "std": 2.520975468998775,
+        "n_pairs": 36
+      },
+      "log_euclidean": {
+        "mean": 3.1404349940567786,
+        "std": 2.5209754689987753,
+        "n_pairs": 36
+      },
+      "within_mouse_affine": {
+        "mean": 4.308374422070037,
+        "n": 10
+      },
+      "across_mouse_affine": {
+        "mean": 2.691227521743986,
+        "n": 26
+      }
+    },
+    "LP": {
+      "n_sessions": 10,
+      "shared_dims": 15,
+      "mean_alpha": 9.703570273171096,
+      "affine_invariant": {
+        "mean": 2.7063821570780657,
+        "std": 1.7665591002693968,
+        "n_pairs": 45
+      },
+      "log_euclidean": {
+        "mean": 2.7063821570780697,
+        "std": 1.7665591002693977,
+        "n_pairs": 45
+      },
+      "within_mouse_affine": {
+        "mean": 3.371629179311101,
+        "n": 3
+      },
+      "across_mouse_affine": {
+        "mean": 2.658864512632849,
+        "n": 42
+      }
+    },
+    "LS": {
+      "n_sessions": 3,
+      "shared_dims": 15,
+      "mean_alpha": 1.3584925930819642,
+      "affine_invariant": {
+        "mean": 5.622438222406409,
+        "std": 2.1106361350391794,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 5.622438222406411,
+        "std": 2.11063613503918,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 5.622438222406409,
+        "n": 3
+      }
+    },
+    "LSr": {
+      "n_sessions": 2,
+      "shared_dims": 15,
+      "mean_alpha": 12.398311644459005,
+      "affine_invariant": {
+        "mean": 5.245579843233141,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "log_euclidean": {
+        "mean": 5.245579843233146,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 5.245579843233141,
+        "n": 1
+      }
+    },
+    "MB": {
+      "n_sessions": 6,
+      "shared_dims": 15,
+      "mean_alpha": 8.224615704747626,
+      "affine_invariant": {
+        "mean": 2.3526887871906443,
+        "std": 1.1398700410757803,
+        "n_pairs": 15
+      },
+      "log_euclidean": {
+        "mean": 2.3526887871906412,
+        "std": 1.13987004107578,
+        "n_pairs": 15
+      },
+      "within_mouse_affine": {
+        "mean": 2.4709355974775264,
+        "n": 3
+      },
+      "across_mouse_affine": {
+        "mean": 2.3231270846189243,
+        "n": 12
+      }
+    },
+    "MD": {
+      "n_sessions": 3,
+      "shared_dims": 15,
+      "mean_alpha": 0.912063838941843,
+      "affine_invariant": {
+        "mean": 1.822676619560304,
+        "std": 0.9485989848668437,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 1.822676619560297,
+        "std": 0.9485989848668313,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 1.822676619560304,
+        "n": 3
+      }
+    },
+    "MG": {
+      "n_sessions": 2,
+      "shared_dims": 15,
+      "mean_alpha": 0.7747579675628294,
+      "affine_invariant": {
+        "mean": 2.809441271966453,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "log_euclidean": {
+        "mean": 2.809441271966455,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 2.809441271966453,
+        "n": 1
+      }
+    },
+    "MOp": {
+      "n_sessions": 3,
+      "shared_dims": 15,
+      "mean_alpha": 1.0388756075047705,
+      "affine_invariant": {
+        "mean": 1.4253107692773825,
+        "std": 0.6068702245692278,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 1.4253107692773794,
+        "std": 0.6068702245692228,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 1.4253107692773825,
+        "n": 3
+      }
+    },
+    "MOs": {
+      "n_sessions": 17,
+      "shared_dims": 15,
+      "mean_alpha": 19.328741573699205,
+      "affine_invariant": {
+        "mean": 5.570437126702016,
+        "std": 4.909578279097536,
+        "n_pairs": 136
+      },
+      "log_euclidean": {
+        "mean": 5.570437126702016,
+        "std": 4.909578279097535,
+        "n_pairs": 136
+      },
+      "within_mouse_affine": {
+        "mean": 5.637564533275582,
+        "n": 11
+      },
+      "across_mouse_affine": {
+        "mean": 5.564529914923543,
+        "n": 125
+      }
+    },
+    "MRN": {
+      "n_sessions": 11,
+      "shared_dims": 15,
+      "mean_alpha": 5.592189639712994,
+      "affine_invariant": {
+        "mean": 4.47895930575126,
+        "std": 3.6658292804167774,
+        "n_pairs": 55
+      },
+      "log_euclidean": {
+        "mean": 4.478959305751265,
+        "std": 3.665829280416781,
+        "n_pairs": 55
+      },
+      "within_mouse_affine": {
+        "mean": 3.1823600351708117,
+        "n": 5
+      },
+      "across_mouse_affine": {
+        "mean": 4.608619232809304,
+        "n": 50
+      }
+    },
+    "OLF": {
+      "n_sessions": 2,
+      "shared_dims": 15,
+      "mean_alpha": 1.0603526781028343,
+      "affine_invariant": {
+        "mean": 2.6836260996429226,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "log_euclidean": {
+        "mean": 2.683626099642922,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 2.6836260996429226,
+        "n": 1
+      }
+    },
+    "ORB": {
+      "n_sessions": 5,
+      "shared_dims": 15,
+      "mean_alpha": 11.860530879095968,
+      "affine_invariant": {
+        "mean": 6.189206591803906,
+        "std": 4.935785032551814,
+        "n_pairs": 10
+      },
+      "log_euclidean": {
+        "mean": 6.189206591803907,
+        "std": 4.9357850325518084,
+        "n_pairs": 10
+      },
+      "within_mouse_affine": {
+        "mean": 2.5732061347636437,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 6.5909844203639345,
+        "n": 9
+      }
+    },
+    "PAG": {
+      "n_sessions": 3,
+      "shared_dims": 14,
+      "mean_alpha": 10.694169401305262,
+      "affine_invariant": {
+        "mean": 3.2945266405764593,
+        "std": 1.303890362897064,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 3.294526640576445,
+        "std": 1.3038903628970633,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 3.2945266405764593,
+        "n": 3
+      }
+    },
+    "PL": {
+      "n_sessions": 10,
+      "shared_dims": 13,
+      "mean_alpha": 62.64148841834658,
+      "affine_invariant": {
+        "mean": 5.933202170503988,
+        "std": 4.437311026306885,
+        "n_pairs": 45
+      },
+      "log_euclidean": {
+        "mean": 5.93320217050399,
+        "std": 4.437311026306885,
+        "n_pairs": 45
+      },
+      "within_mouse_affine": {
+        "mean": 5.322156681936453,
+        "n": 3
+      },
+      "across_mouse_affine": {
+        "mean": 5.976848276830241,
+        "n": 42
+      }
+    },
+    "PO": {
+      "n_sessions": 5,
+      "shared_dims": 15,
+      "mean_alpha": 2.562574799913161,
+      "affine_invariant": {
+        "mean": 4.2754567826803065,
+        "std": 2.375274408063687,
+        "n_pairs": 10
+      },
+      "log_euclidean": {
+        "mean": 4.275456782680307,
+        "std": 2.3752744080636887,
+        "n_pairs": 10
+      },
+      "within_mouse_affine": {
+        "mean": 1.3542245282121435,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 4.600038144287881,
+        "n": 9
+      }
+    },
+    "POL": {
+      "n_sessions": 3,
+      "shared_dims": 15,
+      "mean_alpha": 17.67805170861561,
+      "affine_invariant": {
+        "mean": 5.29639060691425,
+        "std": 2.2537933223357607,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 5.296390606914245,
+        "std": 2.253793322335756,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 5.29639060691425,
+        "n": 3
+      }
+    },
+    "POST": {
+      "n_sessions": 4,
+      "shared_dims": 15,
+      "mean_alpha": 25.338229823985692,
+      "affine_invariant": {
+        "mean": 6.28587808977847,
+        "std": 2.8552712258512196,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 6.285878089778472,
+        "std": 2.8552712258512187,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": 3.7570928275145032,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 6.791635142231263,
+        "n": 5
+      }
+    },
+    "RSP": {
+      "n_sessions": 9,
+      "shared_dims": 15,
+      "mean_alpha": 7.4693427258286045,
+      "affine_invariant": {
+        "mean": 4.918996185182845,
+        "std": 3.3328931228917735,
+        "n_pairs": 36
+      },
+      "log_euclidean": {
+        "mean": 4.918996185182849,
+        "std": 3.332893122891775,
+        "n_pairs": 36
+      },
+      "within_mouse_affine": {
+        "mean": 6.24889274649205,
+        "n": 4
+      },
+      "across_mouse_affine": {
+        "mean": 4.752759115019196,
+        "n": 32
+      }
+    },
+    "RT": {
+      "n_sessions": 2,
+      "shared_dims": 15,
+      "mean_alpha": 11.499722084514628,
+      "affine_invariant": {
+        "mean": 0.9437142445041444,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "log_euclidean": {
+        "mean": 0.943714244504152,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 0.9437142445041444,
+        "n": 1
+      }
+    },
+    "SCig": {
+      "n_sessions": 4,
+      "shared_dims": 15,
+      "mean_alpha": 1.1274115845811583,
+      "affine_invariant": {
+        "mean": 2.230012108716389,
+        "std": 0.8544074385981726,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 2.2300121087163878,
+        "std": 0.8544074385981747,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": 2.5229631103856422,
+        "n": 3
+      },
+      "across_mouse_affine": {
+        "mean": 1.9370611070471355,
+        "n": 3
+      }
+    },
+    "SCm": {
+      "n_sessions": 7,
+      "shared_dims": 15,
+      "mean_alpha": 8.477772618680929,
+      "affine_invariant": {
+        "mean": 2.3455972086285377,
+        "std": 1.1912945041020948,
+        "n_pairs": 21
+      },
+      "log_euclidean": {
+        "mean": 2.345597208628546,
+        "std": 1.1912945041021006,
+        "n_pairs": 21
+      },
+      "within_mouse_affine": {
+        "mean": 1.2809592975901536,
+        "n": 3
+      },
+      "across_mouse_affine": {
+        "mean": 2.5230368604682685,
+        "n": 18
+      }
+    },
+    "SCs": {
+      "n_sessions": 4,
+      "shared_dims": 15,
+      "mean_alpha": 4.00171768002708,
+      "affine_invariant": {
+        "mean": 5.31886195395613,
+        "std": 3.697767443949037,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 5.318861953956129,
+        "std": 3.6977674439490373,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": 1.1861498324120119,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 6.145404378264954,
+        "n": 5
+      }
+    },
+    "SCsg": {
+      "n_sessions": 6,
+      "shared_dims": 12,
+      "mean_alpha": 26.10855898160544,
+      "affine_invariant": {
+        "mean": 3.630214677341402,
+        "std": 1.7923034961772586,
+        "n_pairs": 15
+      },
+      "log_euclidean": {
+        "mean": 3.630214677341409,
+        "std": 1.7923034961772593,
+        "n_pairs": 15
+      },
+      "within_mouse_affine": {
+        "mean": 3.2806315599854443,
+        "n": 2
+      },
+      "across_mouse_affine": {
+        "mean": 3.683996695396166,
+        "n": 13
+      }
+    },
+    "SNr": {
+      "n_sessions": 4,
+      "shared_dims": 15,
+      "mean_alpha": 8.036113457156926,
+      "affine_invariant": {
+        "mean": 3.135134045195727,
+        "std": 0.995986914003681,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 3.1351340451957292,
+        "std": 0.9959869140036821,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": 4.9892318971760385,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 2.764314474799665,
+        "n": 5
+      }
+    },
+    "SPF": {
+      "n_sessions": 2,
+      "shared_dims": 15,
+      "mean_alpha": 9.307598375221797,
+      "affine_invariant": {
+        "mean": 2.1134637510346086,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "log_euclidean": {
+        "mean": 2.1134637510346086,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 2.1134637510346086,
+        "n": 1
+      }
+    },
+    "SSp": {
+      "n_sessions": 5,
+      "shared_dims": 11,
+      "mean_alpha": 19.54192006368781,
+      "affine_invariant": {
+        "mean": 10.152072066386525,
+        "std": 5.989372965131408,
+        "n_pairs": 10
+      },
+      "log_euclidean": {
+        "mean": 10.152072066386529,
+        "std": 5.989372965131408,
+        "n_pairs": 10
+      },
+      "within_mouse_affine": {
+        "mean": 13.179401814672136,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 9.81570209435479,
+        "n": 9
+      }
+    },
+    "SUB": {
+      "n_sessions": 9,
+      "shared_dims": 15,
+      "mean_alpha": 1.9143607599731014,
+      "affine_invariant": {
+        "mean": 2.2813557855434516,
+        "std": 1.3812642694745774,
+        "n_pairs": 36
+      },
+      "log_euclidean": {
+        "mean": 2.281355785543446,
+        "std": 1.3812642694745765,
+        "n_pairs": 36
+      },
+      "within_mouse_affine": {
+        "mean": 1.601328113532861,
+        "n": 2
+      },
+      "across_mouse_affine": {
+        "mean": 2.321357413308781,
+        "n": 34
+      }
+    },
+    "TH": {
+      "n_sessions": 8,
+      "shared_dims": 15,
+      "mean_alpha": 7.668775456724045,
+      "affine_invariant": {
+        "mean": 4.242748287642454,
+        "std": 3.7711080425486934,
+        "n_pairs": 28
+      },
+      "log_euclidean": {
+        "mean": 4.242748287642453,
+        "std": 3.771108042548697,
+        "n_pairs": 28
+      },
+      "within_mouse_affine": {
+        "mean": 3.209604127223836,
+        "n": 2
+      },
+      "across_mouse_affine": {
+        "mean": 4.322220915366962,
+        "n": 26
+      }
+    },
+    "TT": {
+      "n_sessions": 4,
+      "shared_dims": 10,
+      "mean_alpha": 6.176917616999117,
+      "affine_invariant": {
+        "mean": 5.214178606514502,
+        "std": 3.4497093381822697,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 5.214178606514505,
+        "std": 3.4497093381822705,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": 1.9938928896261807,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 5.858235749892167,
+        "n": 5
+      }
+    },
+    "VISa": {
+      "n_sessions": 5,
+      "shared_dims": 15,
+      "mean_alpha": 2.206590920889144,
+      "affine_invariant": {
+        "mean": 4.210731406283061,
+        "std": 3.05106658774454,
+        "n_pairs": 10
+      },
+      "log_euclidean": {
+        "mean": 4.210731406283061,
+        "std": 3.0510665877445398,
+        "n_pairs": 10
+      },
+      "within_mouse_affine": {
+        "mean": 0.6098122978998326,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 4.6108335294367535,
+        "n": 9
+      }
+    },
+    "VISam": {
+      "n_sessions": 11,
+      "shared_dims": 15,
+      "mean_alpha": 6.23774835684517,
+      "affine_invariant": {
+        "mean": 2.9581944302322545,
+        "std": 1.7105243088259037,
+        "n_pairs": 55
+      },
+      "log_euclidean": {
+        "mean": 2.958194430232252,
+        "std": 1.7105243088259028,
+        "n_pairs": 55
+      },
+      "within_mouse_affine": {
+        "mean": 2.914726072813446,
+        "n": 4
+      },
+      "across_mouse_affine": {
+        "mean": 2.9616037131670634,
+        "n": 51
+      }
+    },
+    "VISl": {
+      "n_sessions": 3,
+      "shared_dims": 15,
+      "mean_alpha": 1.3199328575089178,
+      "affine_invariant": {
+        "mean": 2.9689513172282305,
+        "std": 1.895875165358209,
+        "n_pairs": 3
+      },
+      "log_euclidean": {
+        "mean": 2.9689513172282367,
+        "std": 1.8958751653582055,
+        "n_pairs": 3
+      },
+      "within_mouse_affine": {
+        "mean": 0.28965547131662067,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 4.308599240184035,
+        "n": 2
+      }
+    },
+    "VISp": {
+      "n_sessions": 12,
+      "shared_dims": 15,
+      "mean_alpha": 8.430971277774733,
+      "affine_invariant": {
+        "mean": 5.05232524851807,
+        "std": 3.1818320897907455,
+        "n_pairs": 66
+      },
+      "log_euclidean": {
+        "mean": 5.052325248518073,
+        "std": 3.1818320897907486,
+        "n_pairs": 66
+      },
+      "within_mouse_affine": {
+        "mean": 3.924900990364291,
+        "n": 4
+      },
+      "across_mouse_affine": {
+        "mean": 5.125062297431216,
+        "n": 62
+      }
+    },
+    "VISpm": {
+      "n_sessions": 4,
+      "shared_dims": 15,
+      "mean_alpha": 1.769457807491277,
+      "affine_invariant": {
+        "mean": 3.8677613346106443,
+        "std": 2.397490557063152,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 3.8677613346106434,
+        "std": 2.397490557063153,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 3.8677613346106443,
+        "n": 6
+      }
+    },
+    "VISrl": {
+      "n_sessions": 2,
+      "shared_dims": 15,
+      "mean_alpha": 1.0261517332019712,
+      "affine_invariant": {
+        "mean": 3.205551312040662,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "log_euclidean": {
+        "mean": 3.2055513120406682,
+        "std": 0.0,
+        "n_pairs": 1
+      },
+      "within_mouse_affine": {
+        "mean": null,
+        "n": 0
+      },
+      "across_mouse_affine": {
+        "mean": 3.205551312040662,
+        "n": 1
+      }
+    },
+    "VPL": {
+      "n_sessions": 4,
+      "shared_dims": 15,
+      "mean_alpha": 1.6805176098085306,
+      "affine_invariant": {
+        "mean": 1.6840093661357256,
+        "std": 0.731082367584922,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 1.684009366135725,
+        "std": 0.7310823675849257,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": 1.1028923844576053,
+        "n": 1
+      },
+      "across_mouse_affine": {
+        "mean": 1.8002327624713494,
+        "n": 5
+      }
+    },
+    "VPM": {
+      "n_sessions": 4,
+      "shared_dims": 15,
+      "mean_alpha": 2.489276802372039,
+      "affine_invariant": {
+        "mean": 2.6182920359576403,
+        "std": 1.3078986897420928,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 2.618292035957635,
+        "std": 1.3078986897420917,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": 3.272962737636383,
+        "n": 2
+      },
+      "across_mouse_affine": {
+        "mean": 2.290956685118269,
+        "n": 4
+      }
+    },
+    "ZI": {
+      "n_sessions": 4,
+      "shared_dims": 15,
+      "mean_alpha": 6.123464182253721,
+      "affine_invariant": {
+        "mean": 5.394578164170688,
+        "std": 3.709959812136905,
+        "n_pairs": 6
+      },
+      "log_euclidean": {
+        "mean": 5.394578164170686,
+        "std": 3.709959812136906,
+        "n_pairs": 6
+      },
+      "within_mouse_affine": {
+        "mean": 6.348933011196187,
+        "n": 3
+      },
+      "across_mouse_affine": {
+        "mean": 4.44022331714519,
+        "n": 3
+      }
+    },
+    "root": {
+      "n_sessions": 26,
+      "shared_dims": 12,
+      "mean_alpha": 84.29967305737038,
+      "affine_invariant": {
+        "mean": 5.665256958755012,
+        "std": 3.7304837682574554,
+        "n_pairs": 325
+      },
+      "log_euclidean": {
+        "mean": 5.665256958755012,
+        "std": 3.7304837682574563,
+        "n_pairs": 325
+      },
+      "within_mouse_affine": {
+        "mean": 4.129696885123916,
+        "n": 26
+      },
+      "across_mouse_affine": {
+        "mean": 5.798783921679453,
+        "n": 299
+      }
+    }
+  },
+  "prediction_tests": {
+    "alpha_vs_spd_distance": {
+      "rho": 0.4435798616280474,
+      "p": 1.7993150929601908e-71,
+      "ci_lo": 0.40083665628173426,
+      "ci_hi": 0.48530200248127153,
+      "n": 1461,
+      "bootstrap_se": 0.02120923297220568,
+      "permutation_p": 0.001996007984031936,
+      "interpretation": "Tests whether dimensionality (power-law exponent) predicts Riemannian distance between covariance matrices."
+    },
+    "spd_affine_vs_log_euclidean": {
+      "rho": 1.0,
+      "p": 0.0,
+      "ci_lo": 0.9999999999999999,
+      "ci_hi": 1.0,
+      "n": 1461,
+      "bootstrap_se": 5.5288660751834284e-17,
+      "permutation_p": 0.001996007984031936,
+      "interpretation": "Tests whether affine-invariant and log-Euclidean SPD metrics agree. High correlation means both capture similar structure."
+    },
+    "alpha_vs_spd_within_mouse": {
+      "rho": 0.03049563140815451,
+      "p": 0.24405596548324535,
+      "ci_lo": -0.01725208010802892,
+      "ci_hi": 0.07934057060241358,
+      "n": 1461,
+      "bootstrap_se": 0.025162749544713744,
+      "permutation_p": 0.23552894211576847,
+      "n_within": 125,
+      "n_across": 1336,
+      "mean_within": 4.068071521567569,
+      "mean_across": 4.527767088899552,
+      "interpretation": "Positive rho means within-mouse Riemannian distance is smaller than across-mouse, indicating mouse-specific covariance structure."
+    }
+  }
+}

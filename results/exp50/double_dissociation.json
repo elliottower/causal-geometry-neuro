@@ -1,0 +1,4714 @@
+{
+  "timestamp": "2026-06-21T17:22:43.527259",
+  "mechval_criterion": "I4 Double Dissociation",
+  "n_regions": 73,
+  "regions_with_dissociation": 5,
+  "overall_dissociation_rate": 0.21478628811424944,
+  "per_region": {
+    "ACA": {
+      "n_sessions": 11,
+      "double_dissociation_rate": 0.09090909090909091,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6270509159322042,
+      "mean_ev_on_rt": 0.6334155041367748,
+      "mean_rt_on_rt": 0.6810728922548651,
+      "mean_rt_on_ev": 0.5164253272689785
+    },
+    "CA3": {
+      "n_sessions": 8,
+      "double_dissociation_rate": 0.25,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6288048865050159,
+      "mean_ev_on_rt": 0.5819801876421337,
+      "mean_rt_on_rt": 0.6551819290445273,
+      "mean_rt_on_ev": 0.549062170387256
+    },
+    "DG": {
+      "n_sessions": 16,
+      "double_dissociation_rate": 0.25,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6112518092343974,
+      "mean_ev_on_rt": 0.6158158501680062,
+      "mean_rt_on_rt": 0.6710379652304894,
+      "mean_rt_on_ev": 0.5167850584751574
+    },
+    "LS": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6533369408369408,
+      "mean_ev_on_rt": 0.6070968905646325,
+      "mean_rt_on_rt": 0.6597932085835313,
+      "mean_rt_on_ev": 0.5687505818554205
+    },
+    "MOs": {
+      "n_sessions": 17,
+      "double_dissociation_rate": 0.29411764705882354,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6339680128053512,
+      "mean_ev_on_rt": 0.6113274168249254,
+      "mean_rt_on_rt": 0.692173539086426,
+      "mean_rt_on_ev": 0.5227686033938648
+    },
+    "SUB": {
+      "n_sessions": 9,
+      "double_dissociation_rate": 0.3333333333333333,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6362579885713604,
+      "mean_ev_on_rt": 0.6084737375018716,
+      "mean_rt_on_rt": 0.6617978017721025,
+      "mean_rt_on_ev": 0.5494360883892724
+    },
+    "VISp": {
+      "n_sessions": 12,
+      "double_dissociation_rate": 0.3333333333333333,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6220805138206088,
+      "mean_ev_on_rt": 0.6150654005873597,
+      "mean_rt_on_rt": 0.6723377413186667,
+      "mean_rt_on_ev": 0.5286990692777629
+    },
+    "root": {
+      "n_sessions": 22,
+      "double_dissociation_rate": 0.13636363636363635,
+      "mean_subspace_angle": 0.9999999984795136,
+      "mean_ev_on_ev": 0.6172925665472259,
+      "mean_ev_on_rt": 0.611487387865811,
+      "mean_rt_on_rt": 0.666938244256964,
+      "mean_rt_on_ev": 0.5277921786420371
+    },
+    "CA1": {
+      "n_sessions": 20,
+      "double_dissociation_rate": 0.2,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.611039393220911,
+      "mean_ev_on_rt": 0.6095710285200235,
+      "mean_rt_on_rt": 0.6660634186372979,
+      "mean_rt_on_ev": 0.5179552650518989
+    },
+    "POST": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.5,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6311516608391609,
+      "mean_ev_on_rt": 0.5728984557109558,
+      "mean_rt_on_rt": 0.6464670745920745,
+      "mean_rt_on_ev": 0.5881373834498834
+    },
+    "VISl": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6207307786255155,
+      "mean_ev_on_rt": 0.5951378112562323,
+      "mean_rt_on_rt": 0.6415800968432547,
+      "mean_rt_on_ev": 0.5243932928143454
+    },
+    "VISpm": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6373465272472626,
+      "mean_ev_on_rt": 0.5796849853577795,
+      "mean_rt_on_rt": 0.6643540234275529,
+      "mean_rt_on_ev": 0.5585027533740768
+    },
+    "MG": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 0.5,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6548408488063661,
+      "mean_ev_on_rt": 0.6424213717317165,
+      "mean_rt_on_rt": 0.7075123152709359,
+      "mean_rt_on_ev": 0.575454717696097
+    },
+    "MRN": {
+      "n_sessions": 11,
+      "double_dissociation_rate": 0.09090909090909091,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6271698631770714,
+      "mean_ev_on_rt": 0.6315246425123726,
+      "mean_rt_on_rt": 0.6769875873302945,
+      "mean_rt_on_ev": 0.5306503168091494
+    },
+    "NB": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6538461538461539,
+      "mean_ev_on_rt": 0.6538461538461539,
+      "mean_rt_on_rt": 0.6615384615384616,
+      "mean_rt_on_ev": 0.5923076923076922
+    },
+    "SPF": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6296892762410005,
+      "mean_ev_on_rt": 0.5905267146646458,
+      "mean_rt_on_rt": 0.6693255020841228,
+      "mean_rt_on_ev": 0.5573228495642288
+    },
+    "VISam": {
+      "n_sessions": 11,
+      "double_dissociation_rate": 0.09090909090909091,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6351441963042713,
+      "mean_ev_on_rt": 0.6394809100712144,
+      "mean_rt_on_rt": 0.6976315447328333,
+      "mean_rt_on_ev": 0.5409766658406072
+    },
+    "LGd": {
+      "n_sessions": 8,
+      "double_dissociation_rate": 0.375,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6308741246931352,
+      "mean_ev_on_rt": 0.6102910337444829,
+      "mean_rt_on_rt": 0.6900476484757733,
+      "mean_rt_on_ev": 0.5334111488734885
+    },
+    "LSr": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6377207799905168,
+      "mean_ev_on_rt": 0.598803558343032,
+      "mean_rt_on_rt": 0.6380552502263029,
+      "mean_rt_on_ev": 0.5579356868830553
+    },
+    "TH": {
+      "n_sessions": 8,
+      "double_dissociation_rate": 0.125,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6220040815292043,
+      "mean_ev_on_rt": 0.6159329414374445,
+      "mean_rt_on_rt": 0.6842880228150255,
+      "mean_rt_on_ev": 0.525019014310769
+    },
+    "VISa": {
+      "n_sessions": 5,
+      "double_dissociation_rate": 0.2,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6339289660878707,
+      "mean_ev_on_rt": 0.6227321368208903,
+      "mean_rt_on_rt": 0.6623505737524968,
+      "mean_rt_on_ev": 0.5438405226586539
+    },
+    "VPL": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.25,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6269187500428536,
+      "mean_ev_on_rt": 0.6261998365144954,
+      "mean_rt_on_rt": 0.7007728280355763,
+      "mean_rt_on_ev": 0.5275294420269832
+    },
+    "OLF": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 0.5,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6538306451612903,
+      "mean_ev_on_rt": 0.5501344086021505,
+      "mean_rt_on_rt": 0.6062194525904203,
+      "mean_rt_on_ev": 0.5591306207233626
+    },
+    "ORB": {
+      "n_sessions": 5,
+      "double_dissociation_rate": 0.4,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6175599186753686,
+      "mean_ev_on_rt": 0.602123034871337,
+      "mean_rt_on_rt": 0.677920355700067,
+      "mean_rt_on_ev": 0.5345933707729124
+    },
+    "AUD": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6125,
+      "mean_ev_on_rt": 0.625,
+      "mean_rt_on_rt": 0.7,
+      "mean_rt_on_ev": 0.53125
+    },
+    "CP": {
+      "n_sessions": 5,
+      "double_dissociation_rate": 0.2,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6407966958291502,
+      "mean_ev_on_rt": 0.6395015554462816,
+      "mean_rt_on_rt": 0.6907577003981669,
+      "mean_rt_on_ev": 0.5633694569085035
+    },
+    "EPd": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.5131034482758621,
+      "mean_ev_on_rt": 0.6213793103448275,
+      "mean_rt_on_rt": 0.7089655172413794,
+      "mean_rt_on_ev": 0.48528735632183906
+    },
+    "LD": {
+      "n_sessions": 5,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6319274567042261,
+      "mean_ev_on_rt": 0.6307891361974846,
+      "mean_rt_on_rt": 0.6672044502970093,
+      "mean_rt_on_ev": 0.5747048139861206
+    },
+    "PIR": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6758620689655173,
+      "mean_ev_on_rt": 0.6563218390804597,
+      "mean_rt_on_rt": 0.6620689655172414,
+      "mean_rt_on_ev": 0.6282758620689655
+    },
+    "SSp": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.25,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6533888581555924,
+      "mean_ev_on_rt": 0.6852804925522977,
+      "mean_rt_on_rt": 0.7375929682217715,
+      "mean_rt_on_ev": 0.5674699325916365
+    },
+    "ILA": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.3333333333333333,
+      "mean_subspace_angle": 1.0000000000000007,
+      "mean_ev_on_ev": 0.6405230361491704,
+      "mean_ev_on_rt": 0.6144710361225787,
+      "mean_rt_on_rt": 0.6540084960411638,
+      "mean_rt_on_ev": 0.5084121444194039
+    },
+    "LP": {
+      "n_sessions": 10,
+      "double_dissociation_rate": 0.3,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6255627267274613,
+      "mean_ev_on_rt": 0.6133243956122886,
+      "mean_rt_on_rt": 0.682951082217042,
+      "mean_rt_on_ev": 0.5539175195918349
+    },
+    "PL": {
+      "n_sessions": 8,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6332642839869006,
+      "mean_ev_on_rt": 0.652311084830835,
+      "mean_rt_on_rt": 0.6759971818946144,
+      "mean_rt_on_ev": 0.5393555398246067
+    },
+    "PO": {
+      "n_sessions": 5,
+      "double_dissociation_rate": 0.2,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6222353634985215,
+      "mean_ev_on_rt": 0.5968337305179411,
+      "mean_rt_on_rt": 0.6645626720363562,
+      "mean_rt_on_ev": 0.5575764226290543
+    },
+    "TT": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.3333333333333333,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6359942631448984,
+      "mean_ev_on_rt": 0.6086757901276957,
+      "mean_rt_on_rt": 0.6292756277148291,
+      "mean_rt_on_ev": 0.5735649037282431
+    },
+    "ORBm": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.7300142247510669,
+      "mean_ev_on_rt": 0.6507823613086772,
+      "mean_rt_on_rt": 0.6509246088193457,
+      "mean_rt_on_ev": 0.6772403982930297
+    },
+    "GPe": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6089789019224504,
+      "mean_ev_on_rt": 0.6054743064684667,
+      "mean_rt_on_rt": 0.6652432978281142,
+      "mean_rt_on_ev": 0.5363460803811193
+    },
+    "MB": {
+      "n_sessions": 6,
+      "double_dissociation_rate": 0.16666666666666666,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.5792687813791629,
+      "mean_ev_on_rt": 0.6149948486086506,
+      "mean_rt_on_rt": 0.6892558260199078,
+      "mean_rt_on_ev": 0.4771792829467852
+    },
+    "POL": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.3333333333333333,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6510579534844241,
+      "mean_ev_on_rt": 0.6229222901281725,
+      "mean_rt_on_rt": 0.6830576776165013,
+      "mean_rt_on_ev": 0.5440749936338171
+    },
+    "SCm": {
+      "n_sessions": 7,
+      "double_dissociation_rate": 0.14285714285714285,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.5886988322269777,
+      "mean_ev_on_rt": 0.6146203693074012,
+      "mean_rt_on_rt": 0.677915295021111,
+      "mean_rt_on_ev": 0.5152588858370272
+    },
+    "SCsg": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.3333333333333333,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6407025426680598,
+      "mean_ev_on_rt": 0.5902463427377219,
+      "mean_rt_on_rt": 0.6746805990943923,
+      "mean_rt_on_ev": 0.5157470393591083
+    },
+    "VISrl": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 0.5,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6677840909090909,
+      "mean_ev_on_rt": 0.6118484848484849,
+      "mean_rt_on_rt": 0.7006174242424243,
+      "mean_rt_on_ev": 0.5558446969696971
+    },
+    "LSc": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.5588235294117647,
+      "mean_ev_on_rt": 0.6235294117647059,
+      "mean_rt_on_rt": 0.6764705882352942,
+      "mean_rt_on_ev": 0.5176470588235295
+    },
+    "MOp": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.3333333333333333,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6886710239651416,
+      "mean_ev_on_rt": 0.685838779956427,
+      "mean_rt_on_rt": 0.7363834422657952,
+      "mean_rt_on_ev": 0.5849673202614379
+    },
+    "PT": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6176470588235294,
+      "mean_ev_on_rt": 0.6705882352941177,
+      "mean_rt_on_rt": 0.7352941176470589,
+      "mean_rt_on_ev": 0.5176470588235293
+    },
+    "LH": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6571428571428573,
+      "mean_ev_on_rt": 0.7071428571428572,
+      "mean_rt_on_rt": 0.7142857142857142,
+      "mean_rt_on_ev": 0.5857142857142857
+    },
+    "MD": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6324695689615044,
+      "mean_ev_on_rt": 0.6454702555509008,
+      "mean_rt_on_rt": 0.7052317530140111,
+      "mean_rt_on_ev": 0.5512463343108506
+    },
+    "MS": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.5723707664884136,
+      "mean_ev_on_rt": 0.6686274509803921,
+      "mean_rt_on_rt": 0.7344028520499111,
+      "mean_rt_on_ev": 0.46951871657754013
+    },
+    "RN": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.626916221033868,
+      "mean_ev_on_rt": 0.6511586452762923,
+      "mean_rt_on_rt": 0.6994652406417113,
+      "mean_rt_on_ev": 0.5477718360071301
+    },
+    "SCs": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.25,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6071426099324831,
+      "mean_ev_on_rt": 0.618364989402141,
+      "mean_rt_on_rt": 0.6371709022018619,
+      "mean_rt_on_ev": 0.5201016410663869
+    },
+    "ZI": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6187576767836493,
+      "mean_ev_on_rt": 0.648210440904938,
+      "mean_rt_on_rt": 0.6930306184872124,
+      "mean_rt_on_ev": 0.5307805581910183
+    },
+    "RSP": {
+      "n_sessions": 9,
+      "double_dissociation_rate": 0.3333333333333333,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6232469232638573,
+      "mean_ev_on_rt": 0.61205573983121,
+      "mean_rt_on_rt": 0.6715390909476296,
+      "mean_rt_on_ev": 0.537737132298757
+    },
+    "BLA": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 0.5,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6460164071190211,
+      "mean_ev_on_rt": 0.6365127919911012,
+      "mean_rt_on_rt": 0.6896238876529477,
+      "mean_rt_on_ev": 0.5691706062291435
+    },
+    "VPM": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6521627323542646,
+      "mean_ev_on_rt": 0.6124590519247777,
+      "mean_rt_on_rt": 0.6723845356405841,
+      "mean_rt_on_ev": 0.5705663344272215
+    },
+    "SSs": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6204991087344028,
+      "mean_ev_on_rt": 0.638680926916221,
+      "mean_rt_on_rt": 0.65650623885918,
+      "mean_rt_on_ev": 0.5122994652406417
+    },
+    "MEA": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6538306451612903,
+      "mean_ev_on_rt": 0.5975806451612903,
+      "mean_rt_on_rt": 0.6540322580645161,
+      "mean_rt_on_ev": 0.6100806451612903
+    },
+    "RT": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 1.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6727309227733675,
+      "mean_ev_on_rt": 0.5954429174505576,
+      "mean_rt_on_rt": 0.6486763238195752,
+      "mean_rt_on_ev": 0.5518294291745056
+    },
+    "ACB": {
+      "n_sessions": 3,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.5972005772005772,
+      "mean_ev_on_rt": 0.6016576479076479,
+      "mean_rt_on_rt": 0.6525050104216771,
+      "mean_rt_on_ev": 0.5095402437069104
+    },
+    "OT": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.571590909090909,
+      "mean_ev_on_rt": 0.6215909090909091,
+      "mean_rt_on_rt": 0.6460227272727272,
+      "mean_rt_on_ev": 0.4475378787878788
+    },
+    "SI": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.5462121212121211,
+      "mean_ev_on_rt": 0.6460227272727272,
+      "mean_rt_on_rt": 0.6710227272727273,
+      "mean_rt_on_ev": 0.39147727272727273
+    },
+    "SNr": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.5,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6211767459073494,
+      "mean_ev_on_rt": 0.5876629078137698,
+      "mean_rt_on_rt": 0.6595370007546731,
+      "mean_rt_on_ev": 0.5423153953326367
+    },
+    "APN": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 1.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6660504201680673,
+      "mean_ev_on_rt": 0.6030328495034377,
+      "mean_rt_on_rt": 0.6882200152788388,
+      "mean_rt_on_ev": 0.5901604278074867
+    },
+    "VAL": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.7555555555555556,
+      "mean_ev_on_rt": 0.7444444444444445,
+      "mean_rt_on_rt": 0.7666666666666666,
+      "mean_rt_on_ev": 0.5888888888888889
+    },
+    "IC": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 1.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.7132275132275132,
+      "mean_ev_on_rt": 0.6394179894179894,
+      "mean_rt_on_rt": 0.6621693121693121,
+      "mean_rt_on_ev": 0.4788359788359789
+    },
+    "CA2": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 1.0,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6536666666666667,
+      "mean_ev_on_rt": 0.5966666666666667,
+      "mean_rt_on_rt": 0.7166666666666667,
+      "mean_rt_on_ev": 0.5890000000000001
+    },
+    "SCig": {
+      "n_sessions": 4,
+      "double_dissociation_rate": 0.25,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.6896328585207896,
+      "mean_ev_on_rt": 0.6759595031405377,
+      "mean_rt_on_rt": 0.7354225401035746,
+      "mean_rt_on_ev": 0.5950019893899204
+    },
+    "DP": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000002,
+      "mean_ev_on_ev": 0.6305747126436781,
+      "mean_ev_on_rt": 0.6043678160919539,
+      "mean_rt_on_rt": 0.6648275862068964,
+      "mean_rt_on_ev": 0.5570114942528737
+    },
+    "CL": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 0.9999999999999998,
+      "mean_ev_on_ev": 0.7034632034632036,
+      "mean_ev_on_rt": 0.42683982683982685,
+      "mean_rt_on_rt": 0.6116883116883116,
+      "mean_rt_on_ev": 0.6294372294372295
+    },
+    "PAG": {
+      "n_sessions": 2,
+      "double_dissociation_rate": 0.5,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.6259601706970128,
+      "mean_ev_on_rt": 0.5940967283072547,
+      "mean_rt_on_rt": 0.6820330451909399,
+      "mean_rt_on_ev": 0.5190556953714849
+    },
+    "EP": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.000000000000001,
+      "mean_ev_on_ev": 0.6740740740740742,
+      "mean_ev_on_rt": 0.5703703703703704,
+      "mean_rt_on_rt": 0.5851851851851851,
+      "mean_rt_on_ev": 0.6222222222222221
+    },
+    "BMA": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 1.0,
+      "mean_subspace_angle": 0.9999999999999999,
+      "mean_ev_on_ev": 0.6773826458036983,
+      "mean_ev_on_rt": 0.5590327169274538,
+      "mean_rt_on_rt": 0.6073968705547652,
+      "mean_rt_on_ev": 0.553769559032717
+    },
+    "COA": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0000000000000004,
+      "mean_ev_on_ev": 0.5702702702702702,
+      "mean_ev_on_rt": 0.5536273115220484,
+      "mean_rt_on_rt": 0.6883357041251779,
+      "mean_rt_on_ev": 0.47866287339971547
+    },
+    "CA": {
+      "n_sessions": 1,
+      "double_dissociation_rate": 0.0,
+      "mean_subspace_angle": 1.0,
+      "mean_ev_on_ev": 0.5885714285714285,
+      "mean_ev_on_rt": 0.5485714285714285,
+      "mean_rt_on_rt": 0.6685714285714285,
+      "mean_rt_on_ev": 0.4914285714285714
+    }
+  },
+  "raw_entries": {
+    "ACA": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6475806451612904,
+        "ev_subspace_predicts_rt": 0.6407258064516128,
+        "rt_subspace_predicts_rt": 0.672782258064516,
+        "rt_subspace_predicts_evidence": 0.6094758064516128,
+        "ev_subspace_predicts_choice": 0.6280241935483871,
+        "rt_subspace_predicts_choice": 0.5514112903225806,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 109
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5912878787878788,
+        "ev_subspace_predicts_rt": 0.609280303030303,
+        "rt_subspace_predicts_rt": 0.6954545454545454,
+        "rt_subspace_predicts_evidence": 0.45094696969696973,
+        "ev_subspace_predicts_choice": 0.7136363636363636,
+        "rt_subspace_predicts_choice": 0.7316287878787879,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 304
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6064516129032258,
+        "ev_subspace_predicts_rt": 0.5935483870967742,
+        "rt_subspace_predicts_rt": 0.6580645161290323,
+        "rt_subspace_predicts_evidence": 0.5483870967741935,
+        "ev_subspace_predicts_choice": 0.696774193548387,
+        "rt_subspace_predicts_choice": 0.7096774193548387,
+        "double_dissociation": false,
+        "n_trials": 155,
+        "n_neurons": 53
+      },
+      {
+        "subspace_angle": 0.9999999999999998,
+        "ev_subspace_predicts_evidence": 0.5142857142857142,
+        "ev_subspace_predicts_rt": 0.7,
+        "rt_subspace_predicts_rt": 0.7,
+        "rt_subspace_predicts_evidence": 0.4642857142857143,
+        "ev_subspace_predicts_choice": 0.4928571428571429,
+        "rt_subspace_predicts_choice": 0.4642857142857143,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 16
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6440285204991086,
+        "ev_subspace_predicts_rt": 0.6570409982174688,
+        "rt_subspace_predicts_rt": 0.6811051693404635,
+        "rt_subspace_predicts_evidence": 0.4880570409982175,
+        "ev_subspace_predicts_choice": 0.5964349376114082,
+        "rt_subspace_predicts_choice": 0.4814616755793226,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 58
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.7132275132275132,
+        "ev_subspace_predicts_rt": 0.5962962962962963,
+        "rt_subspace_predicts_rt": 0.6912698412698413,
+        "rt_subspace_predicts_evidence": 0.43386243386243384,
+        "ev_subspace_predicts_choice": 0.6462962962962963,
+        "rt_subspace_predicts_choice": 0.41164021164021164,
+        "double_dissociation": true,
+        "n_trials": 136,
+        "n_neurons": 32
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6777011494252874,
+        "ev_subspace_predicts_rt": 0.6377011494252873,
+        "rt_subspace_predicts_rt": 0.6581609195402298,
+        "rt_subspace_predicts_evidence": 0.557471264367816,
+        "ev_subspace_predicts_choice": 0.6372413793103447,
+        "rt_subspace_predicts_choice": 0.6103448275862069,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 25
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.62,
+        "ev_subspace_predicts_rt": 0.6133333333333333,
+        "rt_subspace_predicts_rt": 0.6333333333333333,
+        "rt_subspace_predicts_evidence": 0.4866666666666667,
+        "ev_subspace_predicts_choice": 0.5933333333333334,
+        "rt_subspace_predicts_choice": 0.5933333333333334,
+        "double_dissociation": false,
+        "n_trials": 150,
+        "n_neurons": 67
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6497835497835498,
+        "ev_subspace_predicts_rt": 0.4913419913419913,
+        "rt_subspace_predicts_rt": 0.6662337662337663,
+        "rt_subspace_predicts_evidence": 0.6203463203463202,
+        "ev_subspace_predicts_choice": 0.7783549783549782,
+        "rt_subspace_predicts_choice": 0.7961038961038961,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 18
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.615725806451613,
+        "ev_subspace_predicts_rt": 0.698991935483871,
+        "rt_subspace_predicts_rt": 0.692540322580645,
+        "rt_subspace_predicts_evidence": 0.4933467741935484,
+        "ev_subspace_predicts_choice": 0.6153225806451612,
+        "rt_subspace_predicts_choice": 0.538508064516129,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 74
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.617487684729064,
+        "ev_subspace_predicts_rt": 0.7293103448275863,
+        "rt_subspace_predicts_rt": 0.7428571428571429,
+        "rt_subspace_predicts_evidence": 0.527832512315271,
+        "ev_subspace_predicts_choice": 0.6110837438423645,
+        "rt_subspace_predicts_choice": 0.5834975369458129,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 83
+      }
+    ],
+    "CA3": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6411290322580645,
+        "ev_subspace_predicts_rt": 0.5709677419354838,
+        "rt_subspace_predicts_rt": 0.6665322580645161,
+        "rt_subspace_predicts_evidence": 0.6278225806451612,
+        "ev_subspace_predicts_choice": 0.5377016129032258,
+        "rt_subspace_predicts_choice": 0.5125,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 68
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6496551724137932,
+        "ev_subspace_predicts_rt": 0.648735632183908,
+        "rt_subspace_predicts_rt": 0.7016091954022988,
+        "rt_subspace_predicts_evidence": 0.5075862068965518,
+        "ev_subspace_predicts_choice": 0.6611494252873563,
+        "rt_subspace_predicts_choice": 0.6413793103448275,
+        "double_dissociation": false,
+        "n_trials": 148,
+        "n_neurons": 130
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6217273954116059,
+        "ev_subspace_predicts_rt": 0.5650472334682861,
+        "rt_subspace_predicts_rt": 0.6375168690958164,
+        "rt_subspace_predicts_evidence": 0.5026990553306343,
+        "ev_subspace_predicts_choice": 0.575033738191633,
+        "rt_subspace_predicts_choice": 0.575033738191633,
+        "double_dissociation": true,
+        "n_trials": 193,
+        "n_neurons": 17
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6190611664295875,
+        "ev_subspace_predicts_rt": 0.5873399715504979,
+        "rt_subspace_predicts_rt": 0.5975817923186344,
+        "rt_subspace_predicts_evidence": 0.6402560455192035,
+        "ev_subspace_predicts_choice": 0.555049786628734,
+        "rt_subspace_predicts_choice": 0.5607396870554766,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 86
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5299465240641712,
+        "ev_subspace_predicts_rt": 0.6381461675579322,
+        "rt_subspace_predicts_rt": 0.6506238859180036,
+        "rt_subspace_predicts_evidence": 0.5115864527629234,
+        "ev_subspace_predicts_choice": 0.4524064171122995,
+        "rt_subspace_predicts_choice": 0.49376114081996436,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 21
+      },
+      {
+        "subspace_angle": 0.9999999999999998,
+        "ev_subspace_predicts_evidence": 0.6335227272727273,
+        "ev_subspace_predicts_rt": 0.6274621212121212,
+        "rt_subspace_predicts_rt": 0.7390151515151515,
+        "rt_subspace_predicts_evidence": 0.5024621212121212,
+        "ev_subspace_predicts_choice": 0.6089015151515151,
+        "rt_subspace_predicts_choice": 0.546780303030303,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 35
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6871212121212121,
+        "ev_subspace_predicts_rt": 0.5215909090909091,
+        "rt_subspace_predicts_rt": 0.6071969696969697,
+        "rt_subspace_predicts_evidence": 0.5759469696969697,
+        "ev_subspace_predicts_choice": 0.668939393939394,
+        "rt_subspace_predicts_choice": 0.6085227272727273,
+        "double_dissociation": false,
+        "n_trials": 163,
+        "n_neurons": 43
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6482758620689655,
+        "ev_subspace_predicts_rt": 0.496551724137931,
+        "rt_subspace_predicts_rt": 0.6413793103448275,
+        "rt_subspace_predicts_evidence": 0.5241379310344828,
+        "ev_subspace_predicts_choice": 0.48275862068965514,
+        "rt_subspace_predicts_choice": 0.46896551724137936,
+        "double_dissociation": true,
+        "n_trials": 145,
+        "n_neurons": 84
+      }
+    ],
+    "DG": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6798387096774192,
+        "ev_subspace_predicts_rt": 0.5705645161290323,
+        "rt_subspace_predicts_rt": 0.6725806451612902,
+        "rt_subspace_predicts_evidence": 0.5776209677419354,
+        "ev_subspace_predicts_choice": 0.5838709677419354,
+        "rt_subspace_predicts_choice": 0.558266129032258,
+        "double_dissociation": true,
+        "n_trials": 156,
+        "n_neurons": 34
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6846153846153845,
+        "ev_subspace_predicts_rt": 0.6153846153846153,
+        "rt_subspace_predicts_rt": 0.7153846153846153,
+        "rt_subspace_predicts_evidence": 0.5846153846153845,
+        "ev_subspace_predicts_choice": 0.6692307692307692,
+        "rt_subspace_predicts_choice": 0.6846153846153846,
+        "double_dissociation": true,
+        "n_trials": 130,
+        "n_neurons": 34
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6460227272727272,
+        "ev_subspace_predicts_rt": 0.6528409090909091,
+        "rt_subspace_predicts_rt": 0.7198863636363637,
+        "rt_subspace_predicts_evidence": 0.38977272727272727,
+        "ev_subspace_predicts_choice": 0.7073863636363636,
+        "rt_subspace_predicts_choice": 0.6952651515151514,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 144
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5290322580645161,
+        "ev_subspace_predicts_rt": 0.6193548387096774,
+        "rt_subspace_predicts_rt": 0.6516129032258065,
+        "rt_subspace_predicts_evidence": 0.4838709677419355,
+        "ev_subspace_predicts_choice": 0.735483870967742,
+        "rt_subspace_predicts_choice": 0.7290322580645162,
+        "double_dissociation": false,
+        "n_trials": 155,
+        "n_neurons": 16
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6635627530364372,
+        "ev_subspace_predicts_rt": 0.5234817813765182,
+        "rt_subspace_predicts_rt": 0.6781376518218624,
+        "rt_subspace_predicts_evidence": 0.5593792172739541,
+        "ev_subspace_predicts_choice": 0.6421052631578947,
+        "rt_subspace_predicts_choice": 0.6580296896086371,
+        "double_dissociation": true,
+        "n_trials": 193,
+        "n_neurons": 33
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6609848484848484,
+        "ev_subspace_predicts_rt": 0.5740530303030302,
+        "rt_subspace_predicts_rt": 0.6475378787878788,
+        "rt_subspace_predicts_evidence": 0.5433712121212121,
+        "ev_subspace_predicts_choice": 0.41325757575757577,
+        "rt_subspace_predicts_choice": 0.4876893939393939,
+        "double_dissociation": true,
+        "n_trials": 162,
+        "n_neurons": 73
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6357142857142858,
+        "ev_subspace_predicts_rt": 0.7142857142857143,
+        "rt_subspace_predicts_rt": 0.7142857142857142,
+        "rt_subspace_predicts_evidence": 0.45714285714285713,
+        "ev_subspace_predicts_choice": 0.6357142857142857,
+        "rt_subspace_predicts_choice": 0.5,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 65
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5540106951871657,
+        "ev_subspace_predicts_rt": 0.65650623885918,
+        "rt_subspace_predicts_rt": 0.6509803921568627,
+        "rt_subspace_predicts_evidence": 0.5304812834224599,
+        "ev_subspace_predicts_choice": 0.5358288770053476,
+        "rt_subspace_predicts_choice": 0.49447415329768274,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 17
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5927731092436975,
+        "ev_subspace_predicts_rt": 0.5628571428571428,
+        "rt_subspace_predicts_rt": 0.5746218487394957,
+        "rt_subspace_predicts_evidence": 0.506218487394958,
+        "ev_subspace_predicts_choice": 0.631764705882353,
+        "rt_subspace_predicts_choice": 0.6494117647058824,
+        "double_dissociation": false,
+        "n_trials": 174,
+        "n_neurons": 41
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5822660098522168,
+        "ev_subspace_predicts_rt": 0.6044334975369459,
+        "rt_subspace_predicts_rt": 0.6733990147783251,
+        "rt_subspace_predicts_evidence": 0.5349753694581281,
+        "ev_subspace_predicts_choice": 0.7224137931034483,
+        "rt_subspace_predicts_choice": 0.7224137931034482,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 45
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6290476190476191,
+        "ev_subspace_predicts_rt": 0.630952380952381,
+        "rt_subspace_predicts_rt": 0.6995238095238095,
+        "rt_subspace_predicts_evidence": 0.5014285714285713,
+        "ev_subspace_predicts_choice": 0.6599999999999999,
+        "rt_subspace_predicts_choice": 0.621904761904762,
+        "double_dissociation": false,
+        "n_trials": 103,
+        "n_neurons": 75
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.4600000000000001,
+        "ev_subspace_predicts_rt": 0.6333333333333332,
+        "rt_subspace_predicts_rt": 0.64,
+        "rt_subspace_predicts_evidence": 0.4066666666666666,
+        "ev_subspace_predicts_choice": 0.6266666666666667,
+        "rt_subspace_predicts_choice": 0.62,
+        "double_dissociation": false,
+        "n_trials": 150,
+        "n_neurons": 20
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5056277056277055,
+        "ev_subspace_predicts_rt": 0.5415584415584416,
+        "rt_subspace_predicts_rt": 0.5510822510822511,
+        "rt_subspace_predicts_evidence": 0.515151515151515,
+        "ev_subspace_predicts_choice": 0.7571428571428571,
+        "rt_subspace_predicts_choice": 0.7571428571428571,
+        "double_dissociation": false,
+        "n_trials": 107,
+        "n_neurons": 15
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6757575757575758,
+        "ev_subspace_predicts_rt": 0.5004329004329005,
+        "rt_subspace_predicts_rt": 0.6476190476190476,
+        "rt_subspace_predicts_evidence": 0.6484848484848484,
+        "ev_subspace_predicts_choice": 0.7502164502164502,
+        "rt_subspace_predicts_choice": 0.7593073593073593,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 67
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6211693548387096,
+        "ev_subspace_predicts_rt": 0.7308467741935484,
+        "rt_subspace_predicts_rt": 0.7502016129032258,
+        "rt_subspace_predicts_evidence": 0.5574596774193548,
+        "ev_subspace_predicts_choice": 0.5838709677419355,
+        "rt_subspace_predicts_choice": 0.564516129032258,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 28
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6596059113300493,
+        "ev_subspace_predicts_rt": 0.722167487684729,
+        "rt_subspace_predicts_rt": 0.7497536945812808,
+        "rt_subspace_predicts_evidence": 0.47192118226600976,
+        "ev_subspace_predicts_choice": 0.6389162561576355,
+        "rt_subspace_predicts_choice": 0.6115763546798029,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 69
+      }
+    ],
+    "LS": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6153225806451612,
+        "ev_subspace_predicts_rt": 0.5701612903225806,
+        "rt_subspace_predicts_rt": 0.6217741935483871,
+        "rt_subspace_predicts_evidence": 0.6024193548387096,
+        "ev_subspace_predicts_choice": 0.589516129032258,
+        "rt_subspace_predicts_choice": 0.6022177419354838,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 139
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7225108225108225,
+        "ev_subspace_predicts_rt": 0.5458874458874459,
+        "rt_subspace_predicts_rt": 0.658008658008658,
+        "rt_subspace_predicts_evidence": 0.6294372294372294,
+        "ev_subspace_predicts_choice": 0.7502164502164501,
+        "rt_subspace_predicts_choice": 0.7220779220779221,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 47
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6221774193548387,
+        "ev_subspace_predicts_rt": 0.705241935483871,
+        "rt_subspace_predicts_rt": 0.6995967741935484,
+        "rt_subspace_predicts_evidence": 0.4743951612903226,
+        "ev_subspace_predicts_choice": 0.5899193548387096,
+        "rt_subspace_predicts_choice": 0.4752016129032258,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 219
+      }
+    ],
+    "MOs": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6919354838709678,
+        "ev_subspace_predicts_rt": 0.6090725806451612,
+        "rt_subspace_predicts_rt": 0.6921370967741935,
+        "rt_subspace_predicts_evidence": 0.570766129032258,
+        "ev_subspace_predicts_choice": 0.6471774193548386,
+        "rt_subspace_predicts_choice": 0.5195564516129032,
+        "double_dissociation": true,
+        "n_trials": 156,
+        "n_neurons": 113
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6026515151515152,
+        "ev_subspace_predicts_rt": 0.621969696969697,
+        "rt_subspace_predicts_rt": 0.6464015151515151,
+        "rt_subspace_predicts_evidence": 0.48143939393939394,
+        "ev_subspace_predicts_choice": 0.7073863636363635,
+        "rt_subspace_predicts_choice": 0.7134469696969696,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 92
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5419354838709677,
+        "ev_subspace_predicts_rt": 0.5870967741935483,
+        "rt_subspace_predicts_rt": 0.632258064516129,
+        "rt_subspace_predicts_evidence": 0.5032258064516129,
+        "ev_subspace_predicts_choice": 0.729032258064516,
+        "rt_subspace_predicts_choice": 0.6903225806451614,
+        "double_dissociation": false,
+        "n_trials": 155,
+        "n_neurons": 29
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6578947368421052,
+        "ev_subspace_predicts_rt": 0.5441295546558704,
+        "rt_subspace_predicts_rt": 0.7207827260458839,
+        "rt_subspace_predicts_evidence": 0.5384615384615385,
+        "ev_subspace_predicts_choice": 0.6168690958164642,
+        "rt_subspace_predicts_choice": 0.5906882591093118,
+        "double_dissociation": true,
+        "n_trials": 193,
+        "n_neurons": 112
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6081996434937611,
+        "ev_subspace_predicts_rt": 0.662566844919786,
+        "rt_subspace_predicts_rt": 0.686452762923351,
+        "rt_subspace_predicts_evidence": 0.4998217468805704,
+        "ev_subspace_predicts_choice": 0.5784313725490196,
+        "rt_subspace_predicts_choice": 0.5304812834224599,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 46
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5883870967741934,
+        "ev_subspace_predicts_rt": 0.6470967741935484,
+        "rt_subspace_predicts_rt": 0.6673118279569892,
+        "rt_subspace_predicts_evidence": 0.42516129032258065,
+        "ev_subspace_predicts_choice": 0.5034408602150539,
+        "rt_subspace_predicts_choice": 0.3331182795698925,
+        "double_dissociation": false,
+        "n_trials": 153,
+        "n_neurons": 186
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6552910052910053,
+        "ev_subspace_predicts_rt": 0.6026455026455027,
+        "rt_subspace_predicts_rt": 0.6833333333333333,
+        "rt_subspace_predicts_evidence": 0.4925925925925926,
+        "ev_subspace_predicts_choice": 0.588095238095238,
+        "rt_subspace_predicts_choice": 0.5362433862433862,
+        "double_dissociation": true,
+        "n_trials": 136,
+        "n_neurons": 65
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.624367816091954,
+        "ev_subspace_predicts_rt": 0.6305747126436781,
+        "rt_subspace_predicts_rt": 0.6912643678160919,
+        "rt_subspace_predicts_evidence": 0.5708045977011494,
+        "ev_subspace_predicts_choice": 0.6572413793103448,
+        "rt_subspace_predicts_choice": 0.6041379310344828,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 80
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6747692307692309,
+        "ev_subspace_predicts_rt": 0.5633846153846154,
+        "rt_subspace_predicts_rt": 0.705846153846154,
+        "rt_subspace_predicts_evidence": 0.5009230769230769,
+        "ev_subspace_predicts_choice": 0.6981538461538462,
+        "rt_subspace_predicts_choice": 0.6510769230769232,
+        "double_dissociation": true,
+        "n_trials": 126,
+        "n_neurons": 166
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6466666666666667,
+        "ev_subspace_predicts_rt": 0.6599999999999999,
+        "rt_subspace_predicts_rt": 0.7066666666666667,
+        "rt_subspace_predicts_evidence": 0.5533333333333333,
+        "ev_subspace_predicts_choice": 0.6399999999999999,
+        "rt_subspace_predicts_choice": 0.62,
+        "double_dissociation": false,
+        "n_trials": 150,
+        "n_neurons": 97
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6943722943722943,
+        "ev_subspace_predicts_rt": 0.4346320346320346,
+        "rt_subspace_predicts_rt": 0.5826839826839827,
+        "rt_subspace_predicts_evidence": 0.6017316017316017,
+        "ev_subspace_predicts_choice": 0.7307359307359307,
+        "rt_subspace_predicts_choice": 0.7683982683982684,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 38
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6375,
+        "ev_subspace_predicts_rt": 0.5706439393939394,
+        "rt_subspace_predicts_rt": 0.6441287878787879,
+        "rt_subspace_predicts_evidence": 0.5337121212121212,
+        "ev_subspace_predicts_choice": 0.5892045454545455,
+        "rt_subspace_predicts_choice": 0.5520833333333334,
+        "double_dissociation": true,
+        "n_trials": 163,
+        "n_neurons": 281
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.5992887624466572,
+        "ev_subspace_predicts_rt": 0.5766714082503557,
+        "rt_subspace_predicts_rt": 0.6900426742532006,
+        "rt_subspace_predicts_evidence": 0.5883357041251778,
+        "ev_subspace_predicts_choice": 0.5460881934566145,
+        "rt_subspace_predicts_choice": 0.4874822190611664,
+        "double_dissociation": false,
+        "n_trials": 187,
+        "n_neurons": 69
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6161290322580645,
+        "ev_subspace_predicts_rt": 0.705241935483871,
+        "rt_subspace_predicts_rt": 0.7375,
+        "rt_subspace_predicts_evidence": 0.4306451612903226,
+        "ev_subspace_predicts_choice": 0.5441532258064516,
+        "rt_subspace_predicts_choice": 0.4296370967741936,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 34
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6399999999999999,
+        "ev_subspace_predicts_rt": 0.6342857142857142,
+        "rt_subspace_predicts_rt": 0.7028571428571428,
+        "rt_subspace_predicts_evidence": 0.5314285714285714,
+        "ev_subspace_predicts_choice": 0.5885714285714285,
+        "rt_subspace_predicts_choice": 0.5771428571428572,
+        "double_dissociation": false,
+        "n_trials": 175,
+        "n_neurons": 41
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6384615384615384,
+        "ev_subspace_predicts_rt": 0.5923076923076922,
+        "rt_subspace_predicts_rt": 0.7923076923076924,
+        "rt_subspace_predicts_evidence": 0.45384615384615384,
+        "ev_subspace_predicts_choice": 0.6230769230769232,
+        "rt_subspace_predicts_choice": 0.5076923076923077,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 233
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6596059113300492,
+        "ev_subspace_predicts_rt": 0.7502463054187192,
+        "rt_subspace_predicts_rt": 0.7849753694581281,
+        "rt_subspace_predicts_evidence": 0.6108374384236454,
+        "ev_subspace_predicts_choice": 0.5423645320197045,
+        "rt_subspace_predicts_choice": 0.6184729064039409,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 54
+      }
+    ],
+    "SUB": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6536290322580645,
+        "ev_subspace_predicts_rt": 0.6334677419354838,
+        "rt_subspace_predicts_rt": 0.7233870967741935,
+        "rt_subspace_predicts_evidence": 0.5963709677419354,
+        "ev_subspace_predicts_choice": 0.6211693548387096,
+        "rt_subspace_predicts_choice": 0.5959677419354839,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 75
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6049242424242424,
+        "ev_subspace_predicts_rt": 0.621969696969697,
+        "rt_subspace_predicts_rt": 0.6526515151515151,
+        "rt_subspace_predicts_evidence": 0.5369318181818181,
+        "ev_subspace_predicts_choice": 0.7013257575757575,
+        "rt_subspace_predicts_choice": 0.7013257575757577,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 108
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6387096774193548,
+        "ev_subspace_predicts_rt": 0.5612903225806452,
+        "rt_subspace_predicts_rt": 0.6258064516129032,
+        "rt_subspace_predicts_evidence": 0.5419354838709677,
+        "ev_subspace_predicts_choice": 0.7290322580645162,
+        "rt_subspace_predicts_choice": 0.7225806451612904,
+        "double_dissociation": true,
+        "n_trials": 155,
+        "n_neurons": 101
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.5908232118758435,
+        "ev_subspace_predicts_rt": 0.5029689608636978,
+        "rt_subspace_predicts_rt": 0.5758434547908232,
+        "rt_subspace_predicts_evidence": 0.5344129554655871,
+        "ev_subspace_predicts_choice": 0.6375168690958165,
+        "rt_subspace_predicts_choice": 0.6013495276653171,
+        "double_dissociation": false,
+        "n_trials": 193,
+        "n_neurons": 34
+      },
+      {
+        "subspace_angle": 1.0000000000000009,
+        "ev_subspace_predicts_evidence": 0.6571428571428571,
+        "ev_subspace_predicts_rt": 0.7,
+        "rt_subspace_predicts_rt": 0.6571428571428573,
+        "rt_subspace_predicts_evidence": 0.4928571428571429,
+        "ev_subspace_predicts_choice": 0.6285714285714286,
+        "rt_subspace_predicts_choice": 0.47857142857142854,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 105
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5983193277310924,
+        "ev_subspace_predicts_rt": 0.5460504201680673,
+        "rt_subspace_predicts_rt": 0.6030252100840336,
+        "rt_subspace_predicts_evidence": 0.5519327731092437,
+        "ev_subspace_predicts_choice": 0.620672268907563,
+        "rt_subspace_predicts_choice": 0.6490756302521008,
+        "double_dissociation": true,
+        "n_trials": 174,
+        "n_neurons": 57
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.569704433497537,
+        "ev_subspace_predicts_rt": 0.5837438423645319,
+        "rt_subspace_predicts_rt": 0.6596059113300492,
+        "rt_subspace_predicts_evidence": 0.5145320197044335,
+        "ev_subspace_predicts_choice": 0.7362068965517241,
+        "rt_subspace_predicts_choice": 0.6933497536945812,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 51
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7606060606060605,
+        "ev_subspace_predicts_rt": 0.6112554112554112,
+        "rt_subspace_predicts_rt": 0.7225108225108225,
+        "rt_subspace_predicts_evidence": 0.5922077922077922,
+        "ev_subspace_predicts_choice": 0.7502164502164502,
+        "rt_subspace_predicts_choice": 0.7311688311688311,
+        "double_dissociation": true,
+        "n_trials": 108,
+        "n_neurons": 61
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6524630541871921,
+        "ev_subspace_predicts_rt": 0.7155172413793103,
+        "rt_subspace_predicts_rt": 0.7362068965517242,
+        "rt_subspace_predicts_evidence": 0.5837438423645319,
+        "ev_subspace_predicts_choice": 0.5901477832512315,
+        "rt_subspace_predicts_choice": 0.5901477832512315,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 93
+      }
+    ],
+    "VISp": [
+      {
+        "subspace_angle": 1.0000000000000009,
+        "ev_subspace_predicts_evidence": 0.6415322580645161,
+        "ev_subspace_predicts_rt": 0.5584677419354838,
+        "rt_subspace_predicts_rt": 0.705241935483871,
+        "rt_subspace_predicts_evidence": 0.6159274193548386,
+        "ev_subspace_predicts_choice": 0.6346774193548386,
+        "rt_subspace_predicts_choice": 0.5508064516129032,
+        "double_dissociation": true,
+        "n_trials": 156,
+        "n_neurons": 178
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.7153846153846154,
+        "ev_subspace_predicts_rt": 0.5461538461538461,
+        "rt_subspace_predicts_rt": 0.6153846153846153,
+        "rt_subspace_predicts_evidence": 0.6538461538461537,
+        "ev_subspace_predicts_choice": 0.6692307692307691,
+        "rt_subspace_predicts_choice": 0.623076923076923,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 114
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5363636363636364,
+        "ev_subspace_predicts_rt": 0.6285984848484849,
+        "rt_subspace_predicts_rt": 0.6460227272727272,
+        "rt_subspace_predicts_evidence": 0.390530303030303,
+        "ev_subspace_predicts_choice": 0.7075757575757575,
+        "rt_subspace_predicts_choice": 0.7320075757575758,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 39
+      },
+      {
+        "subspace_angle": 0.9999999999999997,
+        "ev_subspace_predicts_evidence": 0.6269905533063428,
+        "ev_subspace_predicts_rt": 0.5859649122807017,
+        "rt_subspace_predicts_rt": 0.6375168690958164,
+        "rt_subspace_predicts_evidence": 0.5647773279352226,
+        "ev_subspace_predicts_choice": 0.5753036437246964,
+        "rt_subspace_predicts_choice": 0.570310391363023,
+        "double_dissociation": false,
+        "n_trials": 193,
+        "n_neurons": 48
+      },
+      {
+        "subspace_angle": 0.9999999999999998,
+        "ev_subspace_predicts_evidence": 0.6975378787878788,
+        "ev_subspace_predicts_rt": 0.54375,
+        "rt_subspace_predicts_rt": 0.6299242424242424,
+        "rt_subspace_predicts_evidence": 0.5365530303030303,
+        "ev_subspace_predicts_choice": 0.5490530303030303,
+        "rt_subspace_predicts_choice": 0.5621212121212121,
+        "double_dissociation": true,
+        "n_trials": 162,
+        "n_neurons": 105
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5642857142857143,
+        "ev_subspace_predicts_rt": 0.7071428571428572,
+        "rt_subspace_predicts_rt": 0.7714285714285715,
+        "rt_subspace_predicts_evidence": 0.5,
+        "ev_subspace_predicts_choice": 0.6071428571428572,
+        "rt_subspace_predicts_choice": 0.5214285714285715,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 66
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6073118279569891,
+        "ev_subspace_predicts_rt": 0.6279569892473119,
+        "rt_subspace_predicts_rt": 0.6670967741935484,
+        "rt_subspace_predicts_evidence": 0.4707526881720431,
+        "ev_subspace_predicts_choice": 0.5556989247311828,
+        "rt_subspace_predicts_choice": 0.5417204301075269,
+        "double_dissociation": false,
+        "n_trials": 153,
+        "n_neurons": 42
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5970443349753694,
+        "ev_subspace_predicts_rt": 0.5421182266009852,
+        "rt_subspace_predicts_rt": 0.653448275862069,
+        "rt_subspace_predicts_evidence": 0.5411330049261084,
+        "ev_subspace_predicts_choice": 0.7364532019704433,
+        "rt_subspace_predicts_choice": 0.7295566502463053,
+        "double_dissociation": true,
+        "n_trials": 144,
+        "n_neurons": 122
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6547619047619048,
+        "ev_subspace_predicts_rt": 0.6473544973544973,
+        "rt_subspace_predicts_rt": 0.669047619047619,
+        "rt_subspace_predicts_evidence": 0.4708994708994709,
+        "ev_subspace_predicts_choice": 0.6253968253968255,
+        "rt_subspace_predicts_choice": 0.5071428571428571,
+        "double_dissociation": false,
+        "n_trials": 136,
+        "n_neurons": 133
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6308045977011494,
+        "ev_subspace_predicts_rt": 0.6981609195402299,
+        "rt_subspace_predicts_rt": 0.6917241379310346,
+        "rt_subspace_predicts_evidence": 0.5563218390804596,
+        "ev_subspace_predicts_choice": 0.6577011494252873,
+        "rt_subspace_predicts_choice": 0.6039080459770115,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 94
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6510769230769232,
+        "ev_subspace_predicts_rt": 0.5310769230769231,
+        "rt_subspace_predicts_rt": 0.6033846153846154,
+        "rt_subspace_predicts_evidence": 0.5163076923076924,
+        "ev_subspace_predicts_choice": 0.6584615384615385,
+        "rt_subspace_predicts_choice": 0.6590769230769232,
+        "double_dissociation": true,
+        "n_trials": 126,
+        "n_neurons": 162
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.541871921182266,
+        "ev_subspace_predicts_rt": 0.7640394088669951,
+        "rt_subspace_predicts_rt": 0.777832512315271,
+        "rt_subspace_predicts_evidence": 0.5273399014778326,
+        "ev_subspace_predicts_choice": 0.5421182266009852,
+        "rt_subspace_predicts_choice": 0.569704433497537,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 15
+      }
+    ],
+    "root": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6086693548387097,
+        "ev_subspace_predicts_rt": 0.5064516129032258,
+        "rt_subspace_predicts_rt": 0.6794354838709677,
+        "rt_subspace_predicts_evidence": 0.5578629032258065,
+        "ev_subspace_predicts_choice": 0.6548387096774192,
+        "rt_subspace_predicts_choice": 0.5701612903225806,
+        "double_dissociation": true,
+        "n_trials": 156,
+        "n_neurons": 18
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6189393939393939,
+        "ev_subspace_predicts_rt": 0.5706439393939393,
+        "rt_subspace_predicts_rt": 0.6685606060606061,
+        "rt_subspace_predicts_evidence": 0.5276515151515151,
+        "ev_subspace_predicts_choice": 0.5892045454545454,
+        "rt_subspace_predicts_choice": 0.5888257575757575,
+        "double_dissociation": false,
+        "n_trials": 163,
+        "n_neurons": 156
+      },
+      {
+        "subspace_angle": 0.9999999999997202,
+        "ev_subspace_predicts_evidence": 0.5935483870967742,
+        "ev_subspace_predicts_rt": 0.6774193548387096,
+        "rt_subspace_predicts_rt": 0.6709677419354838,
+        "rt_subspace_predicts_evidence": 0.5161290322580645,
+        "ev_subspace_predicts_choice": 0.7096774193548387,
+        "rt_subspace_predicts_choice": 0.7032258064516128,
+        "double_dissociation": false,
+        "n_trials": 155,
+        "n_neurons": 524
+      },
+      {
+        "subspace_angle": 0.9999999785203499,
+        "ev_subspace_predicts_evidence": 0.6375,
+        "ev_subspace_predicts_rt": 0.61875,
+        "rt_subspace_predicts_rt": 0.60625,
+        "rt_subspace_predicts_evidence": 0.475,
+        "ev_subspace_predicts_choice": 0.61875,
+        "rt_subspace_predicts_choice": 0.5875,
+        "double_dissociation": false,
+        "n_trials": 160,
+        "n_neurons": 628
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6485057471264367,
+        "ev_subspace_predicts_rt": 0.6349425287356322,
+        "rt_subspace_predicts_rt": 0.7227586206896552,
+        "rt_subspace_predicts_evidence": 0.5273563218390804,
+        "ev_subspace_predicts_choice": 0.6018390804597701,
+        "rt_subspace_predicts_choice": 0.5678160919540229,
+        "double_dissociation": false,
+        "n_trials": 148,
+        "n_neurons": 89
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6482954545454545,
+        "ev_subspace_predicts_rt": 0.5928030303030303,
+        "rt_subspace_predicts_rt": 0.6053030303030302,
+        "rt_subspace_predicts_evidence": 0.5621212121212121,
+        "ev_subspace_predicts_choice": 0.5933712121212121,
+        "rt_subspace_predicts_choice": 0.5619318181818181,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 36
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5642857142857143,
+        "ev_subspace_predicts_rt": 0.7,
+        "rt_subspace_predicts_rt": 0.6928571428571428,
+        "rt_subspace_predicts_evidence": 0.5142857142857142,
+        "ev_subspace_predicts_choice": 0.5714285714285714,
+        "rt_subspace_predicts_choice": 0.5857142857142857,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 100
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5967914438502674,
+        "ev_subspace_predicts_rt": 0.6262032085561497,
+        "rt_subspace_predicts_rt": 0.6443850267379678,
+        "rt_subspace_predicts_evidence": 0.4461675579322638,
+        "ev_subspace_predicts_choice": 0.6622103386809268,
+        "rt_subspace_predicts_choice": 0.5606060606060606,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 173
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6602822580645161,
+        "ev_subspace_predicts_rt": 0.6292338709677419,
+        "rt_subspace_predicts_rt": 0.6798387096774194,
+        "rt_subspace_predicts_evidence": 0.5280241935483871,
+        "ev_subspace_predicts_choice": 0.6415322580645161,
+        "rt_subspace_predicts_choice": 0.5286290322580645,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 83
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6477822580645161,
+        "ev_subspace_predicts_rt": 0.6288306451612903,
+        "rt_subspace_predicts_rt": 0.6229838709677419,
+        "rt_subspace_predicts_evidence": 0.5850806451612903,
+        "ev_subspace_predicts_choice": 0.5405241935483871,
+        "rt_subspace_predicts_choice": 0.5282258064516129,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 358
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5590909090909091,
+        "ev_subspace_predicts_rt": 0.6272727272727272,
+        "rt_subspace_predicts_rt": 0.6643939393939394,
+        "rt_subspace_predicts_evidence": 0.5210227272727272,
+        "ev_subspace_predicts_choice": 0.6151515151515151,
+        "rt_subspace_predicts_choice": 0.5085227272727273,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 99
+      },
+      {
+        "subspace_angle": 0.9999999999999998,
+        "ev_subspace_predicts_evidence": 0.6899159663865546,
+        "ev_subspace_predicts_rt": 0.5460504201680673,
+        "rt_subspace_predicts_rt": 0.6440336134453781,
+        "rt_subspace_predicts_evidence": 0.597983193277311,
+        "ev_subspace_predicts_choice": 0.6381512605042017,
+        "rt_subspace_predicts_choice": 0.6322689075630252,
+        "double_dissociation": false,
+        "n_trials": 174,
+        "n_neurons": 24
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5777777777777777,
+        "ev_subspace_predicts_rt": 0.6777777777777778,
+        "rt_subspace_predicts_rt": 0.6888888888888889,
+        "rt_subspace_predicts_evidence": 0.5555555555555556,
+        "ev_subspace_predicts_choice": 0.6,
+        "rt_subspace_predicts_choice": 0.6222222222222222,
+        "double_dissociation": false,
+        "n_trials": 90,
+        "n_neurons": 18
+      },
+      {
+        "subspace_angle": 0.9999999880292261,
+        "ev_subspace_predicts_evidence": 0.6009523809523809,
+        "ev_subspace_predicts_rt": 0.5923809523809525,
+        "rt_subspace_predicts_rt": 0.6785714285714286,
+        "rt_subspace_predicts_evidence": 0.47714285714285715,
+        "ev_subspace_predicts_choice": 0.5233333333333332,
+        "rt_subspace_predicts_choice": 0.5533333333333333,
+        "double_dissociation": false,
+        "n_trials": 103,
+        "n_neurons": 555
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.524,
+        "ev_subspace_predicts_rt": 0.5803333333333333,
+        "rt_subspace_predicts_rt": 0.6849999999999999,
+        "rt_subspace_predicts_evidence": 0.4843333333333333,
+        "ev_subspace_predicts_choice": 0.5963333333333334,
+        "rt_subspace_predicts_choice": 0.5806666666666667,
+        "double_dissociation": false,
+        "n_trials": 124,
+        "n_neurons": 28
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5476923076923077,
+        "ev_subspace_predicts_rt": 0.5233846153846153,
+        "rt_subspace_predicts_rt": 0.7067692307692307,
+        "rt_subspace_predicts_evidence": 0.5403076923076924,
+        "ev_subspace_predicts_choice": 0.6264615384615385,
+        "rt_subspace_predicts_choice": 0.6673846153846152,
+        "double_dissociation": false,
+        "n_trials": 126,
+        "n_neurons": 321
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6149359886201992,
+        "ev_subspace_predicts_rt": 0.5557610241820768,
+        "rt_subspace_predicts_rt": 0.6147937411095306,
+        "rt_subspace_predicts_evidence": 0.5294452347083926,
+        "ev_subspace_predicts_choice": 0.5190611664295876,
+        "rt_subspace_predicts_choice": 0.44381223328591757,
+        "double_dissociation": true,
+        "n_trials": 187,
+        "n_neurons": 24
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6662873399715504,
+        "ev_subspace_predicts_rt": 0.57524893314367,
+        "rt_subspace_predicts_rt": 0.671977240398293,
+        "rt_subspace_predicts_evidence": 0.5322901849217638,
+        "ev_subspace_predicts_choice": 0.7042674253200569,
+        "rt_subspace_predicts_choice": 0.7042674253200569,
+        "double_dissociation": true,
+        "n_trials": 186,
+        "n_neurons": 102
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6114285714285714,
+        "ev_subspace_predicts_rt": 0.5885714285714286,
+        "rt_subspace_predicts_rt": 0.6457142857142857,
+        "rt_subspace_predicts_evidence": 0.5714285714285714,
+        "ev_subspace_predicts_choice": 0.5428571428571428,
+        "rt_subspace_predicts_choice": 0.5257142857142857,
+        "double_dissociation": false,
+        "n_trials": 175,
+        "n_neurons": 104
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6615384615384615,
+        "ev_subspace_predicts_rt": 0.6230769230769231,
+        "rt_subspace_predicts_rt": 0.6461538461538462,
+        "rt_subspace_predicts_evidence": 0.5230769230769231,
+        "ev_subspace_predicts_choice": 0.6692307692307692,
+        "rt_subspace_predicts_choice": 0.5692307692307692,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 28
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6137931034482758,
+        "ev_subspace_predicts_rt": 0.6344827586206897,
+        "rt_subspace_predicts_rt": 0.7034482758620689,
+        "rt_subspace_predicts_evidence": 0.5241379310344827,
+        "ev_subspace_predicts_choice": 0.5724137931034482,
+        "rt_subspace_predicts_choice": 0.5379310344827586,
+        "double_dissociation": false,
+        "n_trials": 145,
+        "n_neurons": 295
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.688423645320197,
+        "ev_subspace_predicts_rt": 0.743103448275862,
+        "rt_subspace_predicts_rt": 0.7295566502463054,
+        "rt_subspace_predicts_evidence": 0.5150246305418719,
+        "ev_subspace_predicts_choice": 0.6532019704433498,
+        "rt_subspace_predicts_choice": 0.5421182266009852,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 442
+      }
+    ],
+    "CA1": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.63125,
+        "ev_subspace_predicts_rt": 0.5642045454545455,
+        "rt_subspace_predicts_rt": 0.6386363636363637,
+        "rt_subspace_predicts_evidence": 0.5401515151515152,
+        "ev_subspace_predicts_choice": 0.5517045454545454,
+        "rt_subspace_predicts_choice": 0.5337121212121212,
+        "double_dissociation": true,
+        "n_trials": 163,
+        "n_neurons": 190
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6846153846153846,
+        "ev_subspace_predicts_rt": 0.6307692307692307,
+        "rt_subspace_predicts_rt": 0.7384615384615385,
+        "rt_subspace_predicts_evidence": 0.6307692307692307,
+        "ev_subspace_predicts_choice": 0.6615384615384615,
+        "rt_subspace_predicts_choice": 0.6769230769230768,
+        "double_dissociation": true,
+        "n_trials": 130,
+        "n_neurons": 42
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.628030303030303,
+        "ev_subspace_predicts_rt": 0.6223484848484848,
+        "rt_subspace_predicts_rt": 0.6399621212121211,
+        "rt_subspace_predicts_evidence": 0.5428030303030303,
+        "ev_subspace_predicts_choice": 0.7134469696969697,
+        "rt_subspace_predicts_choice": 0.7073863636363635,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 98
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6129032258064516,
+        "ev_subspace_predicts_rt": 0.6838709677419355,
+        "rt_subspace_predicts_rt": 0.696774193548387,
+        "rt_subspace_predicts_evidence": 0.5806451612903225,
+        "ev_subspace_predicts_choice": 0.7225806451612904,
+        "rt_subspace_predicts_choice": 0.696774193548387,
+        "double_dissociation": false,
+        "n_trials": 155,
+        "n_neurons": 28
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6,
+        "ev_subspace_predicts_rt": 0.63125,
+        "rt_subspace_predicts_rt": 0.65625,
+        "rt_subspace_predicts_evidence": 0.425,
+        "ev_subspace_predicts_choice": 0.55,
+        "rt_subspace_predicts_choice": 0.59375,
+        "double_dissociation": false,
+        "n_trials": 160,
+        "n_neurons": 36
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5651821862348178,
+        "ev_subspace_predicts_rt": 0.59055330634278,
+        "rt_subspace_predicts_rt": 0.6318488529014845,
+        "rt_subspace_predicts_evidence": 0.517948717948718,
+        "ev_subspace_predicts_choice": 0.6273954116059379,
+        "rt_subspace_predicts_choice": 0.5651821862348178,
+        "double_dissociation": false,
+        "n_trials": 193,
+        "n_neurons": 56
+      },
+      {
+        "subspace_angle": 0.9999999999999998,
+        "ev_subspace_predicts_evidence": 0.6876244665718351,
+        "ev_subspace_predicts_rt": 0.5716927453769559,
+        "rt_subspace_predicts_rt": 0.6244665718349929,
+        "rt_subspace_predicts_evidence": 0.6452347083926032,
+        "ev_subspace_predicts_choice": 0.5662873399715506,
+        "rt_subspace_predicts_choice": 0.5718349928876244,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 90
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5746212121212121,
+        "ev_subspace_predicts_rt": 0.5301136363636363,
+        "rt_subspace_predicts_rt": 0.6179924242424242,
+        "rt_subspace_predicts_evidence": 0.5240530303030303,
+        "ev_subspace_predicts_choice": 0.5128787878787879,
+        "rt_subspace_predicts_choice": 0.4876893939393939,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 76
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.55,
+        "ev_subspace_predicts_rt": 0.7214285714285715,
+        "rt_subspace_predicts_rt": 0.7142857142857142,
+        "rt_subspace_predicts_evidence": 0.4142857142857143,
+        "ev_subspace_predicts_choice": 0.55,
+        "rt_subspace_predicts_choice": 0.4714285714285714,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 50
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6326203208556149,
+        "ev_subspace_predicts_rt": 0.6443850267379678,
+        "rt_subspace_predicts_rt": 0.6623885918003565,
+        "rt_subspace_predicts_evidence": 0.5238859180035651,
+        "ev_subspace_predicts_choice": 0.5784313725490196,
+        "rt_subspace_predicts_choice": 0.47575757575757577,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 34
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6079569892473118,
+        "ev_subspace_predicts_rt": 0.6150537634408602,
+        "rt_subspace_predicts_rt": 0.6412903225806452,
+        "rt_subspace_predicts_evidence": 0.5683870967741935,
+        "ev_subspace_predicts_choice": 0.5040860215053764,
+        "rt_subspace_predicts_choice": 0.5165591397849463,
+        "double_dissociation": false,
+        "n_trials": 153,
+        "n_neurons": 99
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5579831932773109,
+        "ev_subspace_predicts_rt": 0.5295798319327731,
+        "rt_subspace_predicts_rt": 0.6205042016806723,
+        "rt_subspace_predicts_evidence": 0.5231932773109242,
+        "ev_subspace_predicts_choice": 0.6265546218487394,
+        "rt_subspace_predicts_choice": 0.6381512605042017,
+        "double_dissociation": false,
+        "n_trials": 174,
+        "n_neurons": 66
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6165024630541871,
+        "ev_subspace_predicts_rt": 0.5556650246305418,
+        "rt_subspace_predicts_rt": 0.6455665024630541,
+        "rt_subspace_predicts_evidence": 0.4916256157635467,
+        "ev_subspace_predicts_choice": 0.701231527093596,
+        "rt_subspace_predicts_choice": 0.7224137931034482,
+        "double_dissociation": true,
+        "n_trials": 144,
+        "n_neurons": 37
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5923809523809523,
+        "ev_subspace_predicts_rt": 0.622857142857143,
+        "rt_subspace_predicts_rt": 0.7085714285714285,
+        "rt_subspace_predicts_evidence": 0.4776190476190476,
+        "ev_subspace_predicts_choice": 0.6519047619047619,
+        "rt_subspace_predicts_choice": 0.5638095238095239,
+        "double_dissociation": false,
+        "n_trials": 103,
+        "n_neurons": 82
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6936666666666668,
+        "ev_subspace_predicts_rt": 0.6596666666666666,
+        "rt_subspace_predicts_rt": 0.7406666666666666,
+        "rt_subspace_predicts_evidence": 0.5483333333333333,
+        "ev_subspace_predicts_choice": 0.6453333333333333,
+        "rt_subspace_predicts_choice": 0.637,
+        "double_dissociation": false,
+        "n_trials": 124,
+        "n_neurons": 187
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.48,
+        "ev_subspace_predicts_rt": 0.6133333333333333,
+        "rt_subspace_predicts_rt": 0.6066666666666667,
+        "rt_subspace_predicts_evidence": 0.43999999999999995,
+        "ev_subspace_predicts_choice": 0.6133333333333334,
+        "rt_subspace_predicts_choice": 0.6066666666666667,
+        "double_dissociation": false,
+        "n_trials": 150,
+        "n_neurons": 20
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6541125541125542,
+        "ev_subspace_predicts_rt": 0.561038961038961,
+        "rt_subspace_predicts_rt": 0.7008658008658009,
+        "rt_subspace_predicts_evidence": 0.42987012987012985,
+        "ev_subspace_predicts_choice": 0.7471861471861472,
+        "rt_subspace_predicts_choice": 0.7476190476190476,
+        "double_dissociation": true,
+        "n_trials": 107,
+        "n_neurons": 56
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.703030303030303,
+        "ev_subspace_predicts_rt": 0.4415584415584416,
+        "rt_subspace_predicts_rt": 0.6086580086580086,
+        "rt_subspace_predicts_evidence": 0.6298701298701299,
+        "ev_subspace_predicts_choice": 0.7506493506493506,
+        "rt_subspace_predicts_choice": 0.7406926406926407,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 36
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5709677419354838,
+        "ev_subspace_predicts_rt": 0.6796370967741936,
+        "rt_subspace_predicts_rt": 0.7118951612903226,
+        "rt_subspace_predicts_evidence": 0.4743951612903226,
+        "ev_subspace_predicts_choice": 0.5258064516129032,
+        "rt_subspace_predicts_choice": 0.5002016129032258,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 24
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5773399014778325,
+        "ev_subspace_predicts_rt": 0.7224137931034482,
+        "rt_subspace_predicts_rt": 0.7155172413793103,
+        "rt_subspace_predicts_evidence": 0.43103448275862066,
+        "ev_subspace_predicts_choice": 0.5625615763546797,
+        "rt_subspace_predicts_choice": 0.5763546798029557,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 47
+      }
+    ],
+    "POST": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5952651515151515,
+        "ev_subspace_predicts_rt": 0.521780303030303,
+        "rt_subspace_predicts_rt": 0.6378787878787879,
+        "rt_subspace_predicts_evidence": 0.48465909090909093,
+        "ev_subspace_predicts_choice": 0.6261363636363637,
+        "rt_subspace_predicts_choice": 0.5761363636363637,
+        "double_dissociation": true,
+        "n_trials": 163,
+        "n_neurons": 191
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6615384615384616,
+        "ev_subspace_predicts_rt": 0.6076923076923078,
+        "rt_subspace_predicts_rt": 0.6923076923076923,
+        "rt_subspace_predicts_evidence": 0.6307692307692307,
+        "ev_subspace_predicts_choice": 0.7000000000000001,
+        "rt_subspace_predicts_choice": 0.6692307692307692,
+        "double_dissociation": true,
+        "n_trials": 130,
+        "n_neurons": 63
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6350378787878788,
+        "ev_subspace_predicts_rt": 0.5793560606060606,
+        "rt_subspace_predicts_rt": 0.6354166666666666,
+        "rt_subspace_predicts_evidence": 0.6356060606060606,
+        "ev_subspace_predicts_choice": 0.6412878787878789,
+        "rt_subspace_predicts_choice": 0.4382575757575758,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 41
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6327651515151516,
+        "ev_subspace_predicts_rt": 0.5827651515151515,
+        "rt_subspace_predicts_rt": 0.6202651515151515,
+        "rt_subspace_predicts_evidence": 0.6015151515151514,
+        "ev_subspace_predicts_choice": 0.6138257575757576,
+        "rt_subspace_predicts_choice": 0.6011363636363637,
+        "double_dissociation": false,
+        "n_trials": 163,
+        "n_neurons": 17
+      }
+    ],
+    "VISl": [
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.5581439393939394,
+        "ev_subspace_predicts_rt": 0.5827651515151515,
+        "rt_subspace_predicts_rt": 0.6071969696969697,
+        "rt_subspace_predicts_evidence": 0.4545454545454545,
+        "ev_subspace_predicts_choice": 0.6198863636363636,
+        "rt_subspace_predicts_choice": 0.6077651515151515,
+        "double_dissociation": false,
+        "n_trials": 163,
+        "n_neurons": 231
+      },
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.6500711237553343,
+        "ev_subspace_predicts_rt": 0.597724039829303,
+        "rt_subspace_predicts_rt": 0.65049786628734,
+        "rt_subspace_predicts_evidence": 0.6186344238975818,
+        "ev_subspace_predicts_choice": 0.5819345661450924,
+        "rt_subspace_predicts_choice": 0.5975817923186344,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 104
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6539772727272728,
+        "ev_subspace_predicts_rt": 0.6049242424242424,
+        "rt_subspace_predicts_rt": 0.6670454545454545,
+        "rt_subspace_predicts_evidence": 0.5,
+        "ev_subspace_predicts_choice": 0.5678030303030303,
+        "rt_subspace_predicts_choice": 0.4753787878787879,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 99
+      }
+    ],
+    "VISpm": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5892045454545454,
+        "ev_subspace_predicts_rt": 0.5706439393939393,
+        "rt_subspace_predicts_rt": 0.6984848484848485,
+        "rt_subspace_predicts_evidence": 0.4475378787878787,
+        "ev_subspace_predicts_choice": 0.6077651515151515,
+        "rt_subspace_predicts_choice": 0.5954545454545455,
+        "double_dissociation": false,
+        "n_trials": 163,
+        "n_neurons": 302
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6267226890756303,
+        "ev_subspace_predicts_rt": 0.5569747899159664,
+        "rt_subspace_predicts_rt": 0.5522689075630252,
+        "rt_subspace_predicts_evidence": 0.5292436974789916,
+        "ev_subspace_predicts_choice": 0.655126050420168,
+        "rt_subspace_predicts_choice": 0.6836974789915967,
+        "double_dissociation": false,
+        "n_trials": 174,
+        "n_neurons": 68
+      },
+      {
+        "subspace_angle": 1.0000000000000009,
+        "ev_subspace_predicts_evidence": 0.7256666666666668,
+        "ev_subspace_predicts_rt": 0.6123333333333333,
+        "rt_subspace_predicts_rt": 0.669,
+        "rt_subspace_predicts_evidence": 0.62,
+        "ev_subspace_predicts_choice": 0.6523333333333332,
+        "rt_subspace_predicts_choice": 0.6036666666666667,
+        "double_dissociation": false,
+        "n_trials": 124,
+        "n_neurons": 146
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6077922077922078,
+        "ev_subspace_predicts_rt": 0.5787878787878787,
+        "rt_subspace_predicts_rt": 0.7376623376623377,
+        "rt_subspace_predicts_evidence": 0.6372294372294371,
+        "ev_subspace_predicts_choice": 0.7281385281385282,
+        "rt_subspace_predicts_choice": 0.7376623376623377,
+        "double_dissociation": false,
+        "n_trials": 107,
+        "n_neurons": 71
+      }
+    ],
+    "MG": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.676923076923077,
+        "ev_subspace_predicts_rt": 0.7153846153846153,
+        "rt_subspace_predicts_rt": 0.7,
+        "rt_subspace_predicts_evidence": 0.6230769230769231,
+        "ev_subspace_predicts_choice": 0.6615384615384615,
+        "rt_subspace_predicts_choice": 0.6615384615384615,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 137
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6327586206896552,
+        "ev_subspace_predicts_rt": 0.5694581280788178,
+        "rt_subspace_predicts_rt": 0.7150246305418719,
+        "rt_subspace_predicts_evidence": 0.527832512315271,
+        "ev_subspace_predicts_choice": 0.7359605911330049,
+        "rt_subspace_predicts_choice": 0.7364532019704433,
+        "double_dissociation": true,
+        "n_trials": 144,
+        "n_neurons": 158
+      }
+    ],
+    "MRN": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6923076923076923,
+        "ev_subspace_predicts_rt": 0.6923076923076923,
+        "rt_subspace_predicts_rt": 0.7307692307692307,
+        "rt_subspace_predicts_evidence": 0.6,
+        "ev_subspace_predicts_choice": 0.6615384615384615,
+        "rt_subspace_predicts_choice": 0.6384615384615385,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 41
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6479166666666667,
+        "ev_subspace_predicts_rt": 0.531060606060606,
+        "rt_subspace_predicts_rt": 0.6606060606060606,
+        "rt_subspace_predicts_evidence": 0.5365530303030303,
+        "ev_subspace_predicts_choice": 0.6104166666666666,
+        "rt_subspace_predicts_choice": 0.5994318181818181,
+        "double_dissociation": true,
+        "n_trials": 162,
+        "n_neurons": 72
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6262032085561497,
+        "ev_subspace_predicts_rt": 0.65650623885918,
+        "rt_subspace_predicts_rt": 0.7049910873440286,
+        "rt_subspace_predicts_evidence": 0.379144385026738,
+        "ev_subspace_predicts_choice": 0.5964349376114082,
+        "rt_subspace_predicts_choice": 0.48146167557932273,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 51
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5946236559139784,
+        "ev_subspace_predicts_rt": 0.6602150537634408,
+        "rt_subspace_predicts_rt": 0.686236559139785,
+        "rt_subspace_predicts_evidence": 0.5230107526881721,
+        "ev_subspace_predicts_choice": 0.5561290322580645,
+        "rt_subspace_predicts_choice": 0.4503225806451613,
+        "double_dissociation": false,
+        "n_trials": 153,
+        "n_neurons": 72
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5891534391534392,
+        "ev_subspace_predicts_rt": 0.6026455026455027,
+        "rt_subspace_predicts_rt": 0.5661375661375662,
+        "rt_subspace_predicts_evidence": 0.5288359788359788,
+        "ev_subspace_predicts_choice": 0.5362433862433862,
+        "rt_subspace_predicts_choice": 0.557936507936508,
+        "double_dissociation": false,
+        "n_trials": 136,
+        "n_neurons": 112
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5563333333333333,
+        "ev_subspace_predicts_rt": 0.6446666666666667,
+        "rt_subspace_predicts_rt": 0.6849999999999999,
+        "rt_subspace_predicts_evidence": 0.4916666666666667,
+        "ev_subspace_predicts_choice": 0.5726666666666668,
+        "rt_subspace_predicts_choice": 0.613,
+        "double_dissociation": false,
+        "n_trials": 124,
+        "n_neurons": 80
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6108045977011494,
+        "ev_subspace_predicts_rt": 0.6305747126436781,
+        "rt_subspace_predicts_rt": 0.6777011494252874,
+        "rt_subspace_predicts_evidence": 0.5239080459770115,
+        "ev_subspace_predicts_choice": 0.5970114942528735,
+        "rt_subspace_predicts_choice": 0.5505747126436782,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 182
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7067692307692308,
+        "ev_subspace_predicts_rt": 0.6904615384615386,
+        "rt_subspace_predicts_rt": 0.7301538461538462,
+        "rt_subspace_predicts_evidence": 0.6436923076923078,
+        "ev_subspace_predicts_choice": 0.7141538461538463,
+        "rt_subspace_predicts_choice": 0.6107692307692308,
+        "double_dissociation": false,
+        "n_trials": 126,
+        "n_neurons": 217
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.7108225108225108,
+        "ev_subspace_predicts_rt": 0.7385281385281386,
+        "rt_subspace_predicts_rt": 0.7766233766233765,
+        "rt_subspace_predicts_evidence": 0.6064935064935065,
+        "ev_subspace_predicts_choice": 0.729004329004329,
+        "rt_subspace_predicts_choice": 0.7476190476190475,
+        "double_dissociation": false,
+        "n_trials": 107,
+        "n_neurons": 67
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6153627311522049,
+        "ev_subspace_predicts_rt": 0.5455192034139402,
+        "rt_subspace_predicts_rt": 0.5829302987197724,
+        "rt_subspace_predicts_evidence": 0.5352773826458037,
+        "ev_subspace_predicts_choice": 0.5288762446657185,
+        "rt_subspace_predicts_choice": 0.48677098150782366,
+        "double_dissociation": false,
+        "n_trials": 187,
+        "n_neurons": 23
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5485714285714286,
+        "ev_subspace_predicts_rt": 0.5542857142857143,
+        "rt_subspace_predicts_rt": 0.6457142857142857,
+        "rt_subspace_predicts_evidence": 0.4685714285714286,
+        "ev_subspace_predicts_choice": 0.5142857142857142,
+        "rt_subspace_predicts_choice": 0.5542857142857142,
+        "double_dissociation": false,
+        "n_trials": 175,
+        "n_neurons": 99
+      }
+    ],
+    "NB": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6538461538461539,
+        "ev_subspace_predicts_rt": 0.6538461538461539,
+        "rt_subspace_predicts_rt": 0.6615384615384616,
+        "rt_subspace_predicts_evidence": 0.5923076923076922,
+        "ev_subspace_predicts_choice": 0.6692307692307692,
+        "rt_subspace_predicts_choice": 0.6846153846153846,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 43
+      }
+    ],
+    "SPF": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6692307692307693,
+        "ev_subspace_predicts_rt": 0.5692307692307692,
+        "rt_subspace_predicts_rt": 0.6307692307692307,
+        "rt_subspace_predicts_evidence": 0.6153846153846153,
+        "ev_subspace_predicts_choice": 0.6538461538461539,
+        "rt_subspace_predicts_choice": 0.676923076923077,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 15
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5901477832512315,
+        "ev_subspace_predicts_rt": 0.6118226600985223,
+        "rt_subspace_predicts_rt": 0.7078817733990148,
+        "rt_subspace_predicts_evidence": 0.49926108374384237,
+        "ev_subspace_predicts_choice": 0.7155172413793103,
+        "rt_subspace_predicts_choice": 0.7224137931034482,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 38
+      }
+    ],
+    "VISam": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.676923076923077,
+        "ev_subspace_predicts_rt": 0.6538461538461539,
+        "rt_subspace_predicts_rt": 0.6692307692307692,
+        "rt_subspace_predicts_evidence": 0.6461538461538461,
+        "ev_subspace_predicts_choice": 0.6692307692307692,
+        "rt_subspace_predicts_choice": 0.7,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 114
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6669985775248933,
+        "ev_subspace_predicts_rt": 0.5866287339971551,
+        "rt_subspace_predicts_rt": 0.6665718349928876,
+        "rt_subspace_predicts_evidence": 0.6613086770981508,
+        "ev_subspace_predicts_choice": 0.6085348506401138,
+        "rt_subspace_predicts_choice": 0.5823613086770981,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 38
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6285714285714286,
+        "ev_subspace_predicts_rt": 0.7071428571428572,
+        "rt_subspace_predicts_rt": 0.7071428571428571,
+        "rt_subspace_predicts_evidence": 0.4928571428571429,
+        "ev_subspace_predicts_choice": 0.6214285714285714,
+        "rt_subspace_predicts_choice": 0.47857142857142854,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 79
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6083778966131906,
+        "ev_subspace_predicts_rt": 0.6385026737967914,
+        "rt_subspace_predicts_rt": 0.6563279857397504,
+        "rt_subspace_predicts_evidence": 0.5850267379679145,
+        "ev_subspace_predicts_choice": 0.614795008912656,
+        "rt_subspace_predicts_choice": 0.530837789661319,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 34
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6210084033613447,
+        "ev_subspace_predicts_rt": 0.5633613445378152,
+        "rt_subspace_predicts_rt": 0.6443697478991596,
+        "rt_subspace_predicts_evidence": 0.5808403361344537,
+        "ev_subspace_predicts_choice": 0.6087394957983193,
+        "rt_subspace_predicts_choice": 0.6263865546218488,
+        "double_dissociation": true,
+        "n_trials": 174,
+        "n_neurons": 111
+      },
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.6309523809523809,
+        "ev_subspace_predicts_rt": 0.6695238095238094,
+        "rt_subspace_predicts_rt": 0.7376190476190476,
+        "rt_subspace_predicts_evidence": 0.5523809523809524,
+        "ev_subspace_predicts_choice": 0.5738095238095238,
+        "rt_subspace_predicts_choice": 0.6119047619047618,
+        "double_dissociation": false,
+        "n_trials": 103,
+        "n_neurons": 190
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5866666666666667,
+        "ev_subspace_predicts_rt": 0.5866666666666667,
+        "rt_subspace_predicts_rt": 0.7133333333333333,
+        "rt_subspace_predicts_evidence": 0.48,
+        "ev_subspace_predicts_choice": 0.5933333333333333,
+        "rt_subspace_predicts_choice": 0.5933333333333334,
+        "double_dissociation": false,
+        "n_trials": 150,
+        "n_neurons": 103
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6161290322580644,
+        "ev_subspace_predicts_rt": 0.6796370967741935,
+        "rt_subspace_predicts_rt": 0.7370967741935484,
+        "rt_subspace_predicts_evidence": 0.4481854838709677,
+        "ev_subspace_predicts_choice": 0.5961693548387096,
+        "rt_subspace_predicts_choice": 0.5699596774193548,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 75
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6057142857142856,
+        "ev_subspace_predicts_rt": 0.6114285714285714,
+        "rt_subspace_predicts_rt": 0.6399999999999999,
+        "rt_subspace_predicts_evidence": 0.43428571428571433,
+        "ev_subspace_predicts_choice": 0.5657142857142857,
+        "rt_subspace_predicts_choice": 0.5028571428571429,
+        "double_dissociation": false,
+        "n_trials": 175,
+        "n_neurons": 53
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6230769230769231,
+        "ev_subspace_predicts_rt": 0.6153846153846154,
+        "rt_subspace_predicts_rt": 0.7384615384615385,
+        "rt_subspace_predicts_evidence": 0.5,
+        "ev_subspace_predicts_choice": 0.5384615384615385,
+        "rt_subspace_predicts_choice": 0.5,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 77
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.722167487684729,
+        "ev_subspace_predicts_rt": 0.722167487684729,
+        "rt_subspace_predicts_rt": 0.7637931034482758,
+        "rt_subspace_predicts_evidence": 0.569704433497537,
+        "ev_subspace_predicts_choice": 0.6182266009852216,
+        "rt_subspace_predicts_choice": 0.5834975369458129,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 126
+      }
+    ],
+    "LGd": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6768939393939395,
+        "ev_subspace_predicts_rt": 0.609469696969697,
+        "rt_subspace_predicts_rt": 0.6767045454545455,
+        "rt_subspace_predicts_evidence": 0.4630681818181818,
+        "ev_subspace_predicts_choice": 0.6886363636363636,
+        "rt_subspace_predicts_choice": 0.7196969696969697,
+        "double_dissociation": true,
+        "n_trials": 164,
+        "n_neurons": 140
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5657754010695186,
+        "ev_subspace_predicts_rt": 0.6324420677361854,
+        "rt_subspace_predicts_rt": 0.6509803921568628,
+        "rt_subspace_predicts_evidence": 0.5301247771836007,
+        "ev_subspace_predicts_choice": 0.5417112299465241,
+        "rt_subspace_predicts_choice": 0.5358288770053476,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 150
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.615524193548387,
+        "ev_subspace_predicts_rt": 0.6477822580645161,
+        "rt_subspace_predicts_rt": 0.748991935483871,
+        "rt_subspace_predicts_evidence": 0.4846774193548387,
+        "ev_subspace_predicts_choice": 0.6227822580645161,
+        "rt_subspace_predicts_choice": 0.5276209677419355,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 121
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6566844919786096,
+        "ev_subspace_predicts_rt": 0.6746880570409981,
+        "rt_subspace_predicts_rt": 0.7290552584670232,
+        "rt_subspace_predicts_evidence": 0.6511586452762923,
+        "ev_subspace_predicts_choice": 0.6090909090909091,
+        "rt_subspace_predicts_choice": 0.5477718360071301,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 73
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.528219696969697,
+        "ev_subspace_predicts_rt": 0.6085227272727273,
+        "rt_subspace_predicts_rt": 0.7263257575757576,
+        "rt_subspace_predicts_evidence": 0.42215909090909093,
+        "ev_subspace_predicts_choice": 0.5340909090909091,
+        "rt_subspace_predicts_choice": 0.4973484848484849,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 89
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6603448275862069,
+        "ev_subspace_predicts_rt": 0.5834975369458129,
+        "rt_subspace_predicts_rt": 0.6669950738916256,
+        "rt_subspace_predicts_evidence": 0.5618226600985222,
+        "ev_subspace_predicts_choice": 0.7155172413793103,
+        "rt_subspace_predicts_choice": 0.6879310344827586,
+        "double_dissociation": true,
+        "n_trials": 144,
+        "n_neurons": 147
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6814814814814814,
+        "ev_subspace_predicts_rt": 0.5259259259259259,
+        "rt_subspace_predicts_rt": 0.6592592592592592,
+        "rt_subspace_predicts_evidence": 0.6370370370370371,
+        "ev_subspace_predicts_choice": 0.6592592592592592,
+        "rt_subspace_predicts_choice": 0.6296296296296295,
+        "double_dissociation": false,
+        "n_trials": 135,
+        "n_neurons": 34
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6620689655172414,
+        "ev_subspace_predicts_rt": 0.6,
+        "rt_subspace_predicts_rt": 0.6620689655172415,
+        "rt_subspace_predicts_evidence": 0.5172413793103448,
+        "ev_subspace_predicts_choice": 0.4206896551724138,
+        "rt_subspace_predicts_choice": 0.496551724137931,
+        "double_dissociation": true,
+        "n_trials": 145,
+        "n_neurons": 109
+      }
+    ],
+    "LSr": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5979166666666667,
+        "ev_subspace_predicts_rt": 0.615530303030303,
+        "rt_subspace_predicts_rt": 0.6943181818181818,
+        "rt_subspace_predicts_evidence": 0.47575757575757577,
+        "ev_subspace_predicts_choice": 0.7073863636363635,
+        "rt_subspace_predicts_choice": 0.7013257575757575,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 435
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6775248933143669,
+        "ev_subspace_predicts_rt": 0.582076813655761,
+        "rt_subspace_predicts_rt": 0.581792318634424,
+        "rt_subspace_predicts_evidence": 0.6401137980085349,
+        "ev_subspace_predicts_choice": 0.6446657183499289,
+        "rt_subspace_predicts_choice": 0.6135135135135135,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 33
+      }
+    ],
+    "TH": [
+      {
+        "subspace_angle": 1.0000000000000009,
+        "ev_subspace_predicts_evidence": 0.6522727272727272,
+        "ev_subspace_predicts_rt": 0.6221590909090908,
+        "rt_subspace_predicts_rt": 0.7746212121212122,
+        "rt_subspace_predicts_evidence": 0.518560606060606,
+        "ev_subspace_predicts_choice": 0.7134469696969697,
+        "rt_subspace_predicts_choice": 0.6890151515151515,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 256
+      },
+      {
+        "subspace_angle": 1.0000000000000009,
+        "ev_subspace_predicts_evidence": 0.5375,
+        "ev_subspace_predicts_rt": 0.61875,
+        "rt_subspace_predicts_rt": 0.65,
+        "rt_subspace_predicts_evidence": 0.46875,
+        "ev_subspace_predicts_choice": 0.61875,
+        "rt_subspace_predicts_choice": 0.625,
+        "double_dissociation": false,
+        "n_trials": 160,
+        "n_neurons": 248
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6614509246088194,
+        "ev_subspace_predicts_rt": 0.5870554765291607,
+        "rt_subspace_predicts_rt": 0.666145092460882,
+        "rt_subspace_predicts_evidence": 0.6398293029871978,
+        "ev_subspace_predicts_choice": 0.5450924608819345,
+        "rt_subspace_predicts_choice": 0.5449502133712659,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 52
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5670231729055258,
+        "ev_subspace_predicts_rt": 0.6262032085561497,
+        "rt_subspace_predicts_rt": 0.7106951871657754,
+        "rt_subspace_predicts_evidence": 0.43386809269162213,
+        "ev_subspace_predicts_choice": 0.6203208556149732,
+        "rt_subspace_predicts_choice": 0.5844919786096257,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 159
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6761363636363636,
+        "ev_subspace_predicts_rt": 0.6401515151515151,
+        "rt_subspace_predicts_rt": 0.6085227272727273,
+        "rt_subspace_predicts_evidence": 0.5348484848484849,
+        "ev_subspace_predicts_choice": 0.6329545454545455,
+        "rt_subspace_predicts_choice": 0.5831439393939395,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 175
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6674876847290641,
+        "ev_subspace_predicts_rt": 0.5766009852216749,
+        "rt_subspace_predicts_rt": 0.7014778325123153,
+        "rt_subspace_predicts_evidence": 0.5485221674876847,
+        "ev_subspace_predicts_choice": 0.7155172413793103,
+        "rt_subspace_predicts_choice": 0.7362068965517241,
+        "double_dissociation": true,
+        "n_trials": 144,
+        "n_neurons": 191
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6304924242424242,
+        "ev_subspace_predicts_rt": 0.5642045454545455,
+        "rt_subspace_predicts_rt": 0.6321969696969697,
+        "rt_subspace_predicts_evidence": 0.6323863636363637,
+        "ev_subspace_predicts_choice": 0.6445075757575758,
+        "rt_subspace_predicts_choice": 0.571590909090909,
+        "double_dissociation": false,
+        "n_trials": 163,
+        "n_neurons": 109
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5836693548387096,
+        "ev_subspace_predicts_rt": 0.6923387096774193,
+        "rt_subspace_predicts_rt": 0.7306451612903226,
+        "rt_subspace_predicts_evidence": 0.4233870967741936,
+        "ev_subspace_predicts_choice": 0.6102822580645161,
+        "rt_subspace_predicts_choice": 0.5131048387096774,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 67
+      }
+    ],
+    "VISa": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5854166666666667,
+        "ev_subspace_predicts_rt": 0.7,
+        "rt_subspace_predicts_rt": 0.7672348484848485,
+        "rt_subspace_predicts_evidence": 0.46931818181818186,
+        "ev_subspace_predicts_choice": 0.7011363636363637,
+        "rt_subspace_predicts_choice": 0.7011363636363636,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 81
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6387096774193548,
+        "ev_subspace_predicts_rt": 0.6193548387096774,
+        "rt_subspace_predicts_rt": 0.6580645161290322,
+        "rt_subspace_predicts_evidence": 0.5419354838709677,
+        "ev_subspace_predicts_choice": 0.7096774193548386,
+        "rt_subspace_predicts_choice": 0.696774193548387,
+        "double_dissociation": false,
+        "n_trials": 155,
+        "n_neurons": 99
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.600944669365722,
+        "ev_subspace_predicts_rt": 0.5801619433198381,
+        "rt_subspace_predicts_rt": 0.6167341430499325,
+        "rt_subspace_predicts_evidence": 0.5333333333333334,
+        "ev_subspace_predicts_choice": 0.6278002699055332,
+        "rt_subspace_predicts_choice": 0.5968960863697707,
+        "double_dissociation": false,
+        "n_trials": 193,
+        "n_neurons": 63
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6320197044334975,
+        "ev_subspace_predicts_rt": 0.575615763546798,
+        "rt_subspace_predicts_rt": 0.666256157635468,
+        "rt_subspace_predicts_evidence": 0.5352216748768474,
+        "ev_subspace_predicts_choice": 0.7224137931034483,
+        "rt_subspace_predicts_choice": 0.7293103448275862,
+        "double_dissociation": true,
+        "n_trials": 144,
+        "n_neurons": 78
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7125541125541125,
+        "ev_subspace_predicts_rt": 0.6385281385281385,
+        "rt_subspace_predicts_rt": 0.6034632034632035,
+        "rt_subspace_predicts_evidence": 0.6393939393939394,
+        "ev_subspace_predicts_choice": 0.7779220779220779,
+        "rt_subspace_predicts_choice": 0.7874458874458874,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 19
+      }
+    ],
+    "VPL": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5854166666666666,
+        "ev_subspace_predicts_rt": 0.7013257575757577,
+        "rt_subspace_predicts_rt": 0.75625,
+        "rt_subspace_predicts_evidence": 0.48219696969696973,
+        "ev_subspace_predicts_choice": 0.6950757575757576,
+        "rt_subspace_predicts_choice": 0.6892045454545455,
+        "double_dissociation": false,
+        "n_trials": 164,
+        "n_neurons": 72
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6482758620689655,
+        "ev_subspace_predicts_rt": 0.6351724137931034,
+        "rt_subspace_predicts_rt": 0.6620689655172414,
+        "rt_subspace_predicts_evidence": 0.4590804597701149,
+        "ev_subspace_predicts_choice": 0.6416091954022989,
+        "rt_subspace_predicts_choice": 0.5880459770114943,
+        "double_dissociation": false,
+        "n_trials": 148,
+        "n_neurons": 106
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6449502133712659,
+        "ev_subspace_predicts_rt": 0.5711237553342816,
+        "rt_subspace_predicts_rt": 0.7248933143669987,
+        "rt_subspace_predicts_evidence": 0.6345661450924609,
+        "ev_subspace_predicts_choice": 0.5448079658605974,
+        "rt_subspace_predicts_choice": 0.5132290184921764,
+        "double_dissociation": true,
+        "n_trials": 189,
+        "n_neurons": 73
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6290322580645161,
+        "ev_subspace_predicts_rt": 0.5971774193548387,
+        "rt_subspace_predicts_rt": 0.6598790322580645,
+        "rt_subspace_predicts_evidence": 0.5342741935483871,
+        "ev_subspace_predicts_choice": 0.603225806451613,
+        "rt_subspace_predicts_choice": 0.5401209677419355,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 50
+      }
+    ],
+    "OLF": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6451612903225806,
+        "ev_subspace_predicts_rt": 0.5419354838709677,
+        "rt_subspace_predicts_rt": 0.5677419354838709,
+        "rt_subspace_predicts_evidence": 0.5419354838709677,
+        "ev_subspace_predicts_choice": 0.7161290322580645,
+        "rt_subspace_predicts_choice": 0.7290322580645162,
+        "double_dissociation": false,
+        "n_trials": 155,
+        "n_neurons": 181
+      },
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.6625,
+        "ev_subspace_predicts_rt": 0.5583333333333333,
+        "rt_subspace_predicts_rt": 0.6446969696969698,
+        "rt_subspace_predicts_evidence": 0.5763257575757575,
+        "ev_subspace_predicts_choice": 0.64375,
+        "rt_subspace_predicts_choice": 0.6558712121212121,
+        "double_dissociation": true,
+        "n_trials": 163,
+        "n_neurons": 78
+      }
+    ],
+    "ORB": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5096774193548387,
+        "ev_subspace_predicts_rt": 0.5999999999999999,
+        "rt_subspace_predicts_rt": 0.6258064516129032,
+        "rt_subspace_predicts_evidence": 0.5225806451612903,
+        "ev_subspace_predicts_choice": 0.7032258064516128,
+        "rt_subspace_predicts_choice": 0.7161290322580646,
+        "double_dissociation": false,
+        "n_trials": 155,
+        "n_neurons": 32
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6277419354838709,
+        "ev_subspace_predicts_rt": 0.653763440860215,
+        "rt_subspace_predicts_rt": 0.68,
+        "rt_subspace_predicts_evidence": 0.5552688172043011,
+        "ev_subspace_predicts_choice": 0.6079569892473118,
+        "rt_subspace_predicts_choice": 0.5356989247311827,
+        "double_dissociation": false,
+        "n_trials": 153,
+        "n_neurons": 170
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.675,
+        "ev_subspace_predicts_rt": 0.6691287878787879,
+        "rt_subspace_predicts_rt": 0.6816287878787879,
+        "rt_subspace_predicts_evidence": 0.6017045454545454,
+        "ev_subspace_predicts_choice": 0.6751893939393939,
+        "rt_subspace_predicts_choice": 0.66875,
+        "double_dissociation": false,
+        "n_trials": 163,
+        "n_neurons": 291
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.5830725462304409,
+        "ev_subspace_predicts_rt": 0.5184921763869131,
+        "rt_subspace_predicts_rt": 0.6790896159317212,
+        "rt_subspace_predicts_evidence": 0.5241820768136558,
+        "ev_subspace_predicts_choice": 0.5617354196301565,
+        "rt_subspace_predicts_choice": 0.5725462304409673,
+        "double_dissociation": true,
+        "n_trials": 187,
+        "n_neurons": 153
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6923076923076923,
+        "ev_subspace_predicts_rt": 0.5692307692307692,
+        "rt_subspace_predicts_rt": 0.7230769230769231,
+        "rt_subspace_predicts_evidence": 0.46923076923076923,
+        "ev_subspace_predicts_choice": 0.676923076923077,
+        "rt_subspace_predicts_choice": 0.5615384615384615,
+        "double_dissociation": true,
+        "n_trials": 130,
+        "n_neurons": 166
+      }
+    ],
+    "AUD": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6125,
+        "ev_subspace_predicts_rt": 0.625,
+        "rt_subspace_predicts_rt": 0.7,
+        "rt_subspace_predicts_evidence": 0.53125,
+        "ev_subspace_predicts_choice": 0.6375,
+        "rt_subspace_predicts_choice": 0.59375,
+        "double_dissociation": false,
+        "n_trials": 160,
+        "n_neurons": 246
+      }
+    ],
+    "CP": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6491954022988506,
+        "ev_subspace_predicts_rt": 0.6351724137931034,
+        "rt_subspace_predicts_rt": 0.6622988505747125,
+        "rt_subspace_predicts_evidence": 0.546896551724138,
+        "ev_subspace_predicts_choice": 0.6213793103448276,
+        "rt_subspace_predicts_choice": 0.6087356321839079,
+        "double_dissociation": false,
+        "n_trials": 148,
+        "n_neurons": 59
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6058823529411765,
+        "ev_subspace_predicts_rt": 0.6352941176470589,
+        "rt_subspace_predicts_rt": 0.7176470588235294,
+        "rt_subspace_predicts_evidence": 0.5117647058823529,
+        "ev_subspace_predicts_choice": 0.6058823529411765,
+        "rt_subspace_predicts_choice": 0.5647058823529413,
+        "double_dissociation": false,
+        "n_trials": 170,
+        "n_neurons": 275
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5340909090909091,
+        "ev_subspace_predicts_rt": 0.6085227272727273,
+        "rt_subspace_predicts_rt": 0.6145833333333333,
+        "rt_subspace_predicts_evidence": 0.4100378787878788,
+        "ev_subspace_predicts_choice": 0.5837121212121212,
+        "rt_subspace_predicts_choice": 0.540340909090909,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 158
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7333333333333333,
+        "ev_subspace_predicts_rt": 0.6666666666666667,
+        "rt_subspace_predicts_rt": 0.7555555555555555,
+        "rt_subspace_predicts_evidence": 0.6888888888888889,
+        "ev_subspace_predicts_choice": 0.7333333333333333,
+        "rt_subspace_predicts_choice": 0.7444444444444446,
+        "double_dissociation": true,
+        "n_trials": 90,
+        "n_neurons": 340
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6814814814814815,
+        "ev_subspace_predicts_rt": 0.6518518518518518,
+        "rt_subspace_predicts_rt": 0.7037037037037036,
+        "rt_subspace_predicts_evidence": 0.6592592592592592,
+        "ev_subspace_predicts_choice": 0.6222222222222221,
+        "rt_subspace_predicts_choice": 0.6074074074074074,
+        "double_dissociation": false,
+        "n_trials": 135,
+        "n_neurons": 383
+      }
+    ],
+    "EPd": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5131034482758621,
+        "ev_subspace_predicts_rt": 0.6213793103448275,
+        "rt_subspace_predicts_rt": 0.7089655172413794,
+        "rt_subspace_predicts_evidence": 0.48528735632183906,
+        "ev_subspace_predicts_choice": 0.614712643678161,
+        "rt_subspace_predicts_choice": 0.6080459770114943,
+        "double_dissociation": false,
+        "n_trials": 148,
+        "n_neurons": 52
+      }
+    ],
+    "LD": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5685057471264368,
+        "ev_subspace_predicts_rt": 0.6285057471264368,
+        "rt_subspace_predicts_rt": 0.6351724137931034,
+        "rt_subspace_predicts_evidence": 0.546896551724138,
+        "ev_subspace_predicts_choice": 0.5744827586206896,
+        "rt_subspace_predicts_choice": 0.546896551724138,
+        "double_dissociation": false,
+        "n_trials": 148,
+        "n_neurons": 42
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.653306342780027,
+        "ev_subspace_predicts_rt": 0.5855600539811066,
+        "rt_subspace_predicts_rt": 0.6219973009446693,
+        "rt_subspace_predicts_evidence": 0.6014844804318489,
+        "ev_subspace_predicts_choice": 0.6379217273954116,
+        "rt_subspace_predicts_choice": 0.6064777327935222,
+        "double_dissociation": false,
+        "n_trials": 193,
+        "n_neurons": 41
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6667140825035561,
+        "ev_subspace_predicts_rt": 0.6243243243243243,
+        "rt_subspace_predicts_rt": 0.6455192034139403,
+        "rt_subspace_predicts_evidence": 0.6295874822190611,
+        "ev_subspace_predicts_choice": 0.6082503556187767,
+        "rt_subspace_predicts_choice": 0.5712660028449502,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 79
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6444444444444445,
+        "ev_subspace_predicts_rt": 0.6888888888888889,
+        "rt_subspace_predicts_rt": 0.7666666666666667,
+        "rt_subspace_predicts_evidence": 0.5555555555555556,
+        "ev_subspace_predicts_choice": 0.6111111111111112,
+        "rt_subspace_predicts_choice": 0.6666666666666666,
+        "double_dissociation": false,
+        "n_trials": 90,
+        "n_neurons": 100
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6266666666666666,
+        "ev_subspace_predicts_rt": 0.6266666666666666,
+        "rt_subspace_predicts_rt": 0.6666666666666666,
+        "rt_subspace_predicts_evidence": 0.5399999999999999,
+        "ev_subspace_predicts_choice": 0.6466666666666667,
+        "rt_subspace_predicts_choice": 0.6133333333333333,
+        "double_dissociation": false,
+        "n_trials": 150,
+        "n_neurons": 24
+      }
+    ],
+    "PIR": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6758620689655173,
+        "ev_subspace_predicts_rt": 0.6563218390804597,
+        "rt_subspace_predicts_rt": 0.6620689655172414,
+        "rt_subspace_predicts_evidence": 0.6282758620689655,
+        "ev_subspace_predicts_choice": 0.6422988505747126,
+        "rt_subspace_predicts_choice": 0.6360919540229885,
+        "double_dissociation": false,
+        "n_trials": 148,
+        "n_neurons": 67
+      }
+    ],
+    "SSp": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5471264367816092,
+        "ev_subspace_predicts_rt": 0.6349425287356322,
+        "rt_subspace_predicts_rt": 0.6425287356321838,
+        "rt_subspace_predicts_evidence": 0.5542528735632184,
+        "ev_subspace_predicts_choice": 0.6016091954022988,
+        "rt_subspace_predicts_choice": 0.6216091954022989,
+        "double_dissociation": false,
+        "n_trials": 148,
+        "n_neurons": 39
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6442067736185383,
+        "ev_subspace_predicts_rt": 0.6506238859180036,
+        "rt_subspace_predicts_rt": 0.6745098039215687,
+        "rt_subspace_predicts_evidence": 0.49340463458110523,
+        "ev_subspace_predicts_choice": 0.5839572192513369,
+        "rt_subspace_predicts_choice": 0.5659536541889483,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 24
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6444444444444445,
+        "ev_subspace_predicts_rt": 0.7777777777777778,
+        "rt_subspace_predicts_rt": 0.8777777777777777,
+        "rt_subspace_predicts_evidence": 0.6,
+        "ev_subspace_predicts_choice": 0.6444444444444445,
+        "rt_subspace_predicts_choice": 0.6555555555555556,
+        "double_dissociation": false,
+        "n_trials": 90,
+        "n_neurons": 211
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7777777777777778,
+        "ev_subspace_predicts_rt": 0.6777777777777778,
+        "rt_subspace_predicts_rt": 0.7555555555555556,
+        "rt_subspace_predicts_evidence": 0.6222222222222221,
+        "ev_subspace_predicts_choice": 0.6444444444444445,
+        "rt_subspace_predicts_choice": 0.7,
+        "double_dissociation": true,
+        "n_trials": 90,
+        "n_neurons": 230
+      }
+    ],
+    "ILA": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6373819163292846,
+        "ev_subspace_predicts_rt": 0.5178137651821862,
+        "rt_subspace_predicts_rt": 0.5909581646423752,
+        "rt_subspace_predicts_evidence": 0.507962213225371,
+        "ev_subspace_predicts_choice": 0.6470985155195681,
+        "rt_subspace_predicts_choice": 0.5705802968960864,
+        "double_dissociation": true,
+        "n_trials": 193,
+        "n_neurons": 144
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6179310344827587,
+        "ev_subspace_predicts_rt": 0.6036781609195401,
+        "rt_subspace_predicts_rt": 0.6636781609195402,
+        "rt_subspace_predicts_evidence": 0.5029885057471264,
+        "ev_subspace_predicts_choice": 0.624367816091954,
+        "rt_subspace_predicts_choice": 0.5301149425287356,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 80
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6662561576354681,
+        "ev_subspace_predicts_rt": 0.7219211822660098,
+        "rt_subspace_predicts_rt": 0.7073891625615764,
+        "rt_subspace_predicts_evidence": 0.5142857142857142,
+        "ev_subspace_predicts_choice": 0.65935960591133,
+        "rt_subspace_predicts_choice": 0.5972906403940887,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 187
+      }
+    ],
+    "LP": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5546558704453441,
+        "ev_subspace_predicts_rt": 0.5489878542510122,
+        "rt_subspace_predicts_rt": 0.6524966261808367,
+        "rt_subspace_predicts_evidence": 0.5183535762483131,
+        "ev_subspace_predicts_choice": 0.533468286099865,
+        "rt_subspace_predicts_choice": 0.5488529014844804,
+        "double_dissociation": false,
+        "n_trials": 193,
+        "n_neurons": 120
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6435294117647059,
+        "ev_subspace_predicts_rt": 0.5914285714285714,
+        "rt_subspace_predicts_rt": 0.6154621848739497,
+        "rt_subspace_predicts_evidence": 0.5174789915966386,
+        "ev_subspace_predicts_choice": 0.654453781512605,
+        "rt_subspace_predicts_choice": 0.6381512605042017,
+        "double_dissociation": true,
+        "n_trials": 174,
+        "n_neurons": 32
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5699507389162561,
+        "ev_subspace_predicts_rt": 0.5554187192118227,
+        "rt_subspace_predicts_rt": 0.6738916256157635,
+        "rt_subspace_predicts_evidence": 0.5768472906403941,
+        "ev_subspace_predicts_choice": 0.7362068965517241,
+        "rt_subspace_predicts_choice": 0.6948275862068967,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 30
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.709047619047619,
+        "ev_subspace_predicts_rt": 0.6295238095238094,
+        "rt_subspace_predicts_rt": 0.7866666666666666,
+        "rt_subspace_predicts_evidence": 0.5519047619047619,
+        "ev_subspace_predicts_choice": 0.6595238095238095,
+        "rt_subspace_predicts_choice": 0.6699999999999999,
+        "double_dissociation": true,
+        "n_trials": 103,
+        "n_neurons": 164
+      },
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.5533333333333333,
+        "ev_subspace_predicts_rt": 0.6066666666666667,
+        "rt_subspace_predicts_rt": 0.6733333333333332,
+        "rt_subspace_predicts_evidence": 0.5066666666666666,
+        "ev_subspace_predicts_choice": 0.5933333333333333,
+        "rt_subspace_predicts_choice": 0.62,
+        "double_dissociation": false,
+        "n_trials": 150,
+        "n_neurons": 30
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5528138528138529,
+        "ev_subspace_predicts_rt": 0.6255411255411255,
+        "rt_subspace_predicts_rt": 0.70995670995671,
+        "rt_subspace_predicts_evidence": 0.44848484848484843,
+        "ev_subspace_predicts_choice": 0.7567099567099567,
+        "rt_subspace_predicts_choice": 0.7467532467532468,
+        "double_dissociation": false,
+        "n_trials": 107,
+        "n_neurons": 15
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.7125541125541125,
+        "ev_subspace_predicts_rt": 0.6108225108225108,
+        "rt_subspace_predicts_rt": 0.6567099567099567,
+        "rt_subspace_predicts_evidence": 0.6935064935064934,
+        "ev_subspace_predicts_choice": 0.7502164502164502,
+        "rt_subspace_predicts_choice": 0.7502164502164501,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 209
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6128022759601708,
+        "ev_subspace_predicts_rt": 0.5483641536273115,
+        "rt_subspace_predicts_rt": 0.6128022759601708,
+        "rt_subspace_predicts_evidence": 0.5433854907539118,
+        "ev_subspace_predicts_choice": 0.6934566145092461,
+        "rt_subspace_predicts_choice": 0.7042674253200569,
+        "double_dissociation": true,
+        "n_trials": 186,
+        "n_neurons": 19
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6671370967741936,
+        "ev_subspace_predicts_rt": 0.6733870967741936,
+        "rt_subspace_predicts_rt": 0.7114919354838709,
+        "rt_subspace_predicts_evidence": 0.6276209677419354,
+        "ev_subspace_predicts_choice": 0.595766129032258,
+        "rt_subspace_predicts_choice": 0.5959677419354839,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 66
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6798029556650246,
+        "ev_subspace_predicts_rt": 0.743103448275862,
+        "rt_subspace_predicts_rt": 0.7366995073891625,
+        "rt_subspace_predicts_evidence": 0.5549261083743842,
+        "ev_subspace_predicts_choice": 0.5699507389162561,
+        "rt_subspace_predicts_choice": 0.5692118226600984,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 59
+      }
+    ],
+    "PL": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6165991902834008,
+        "ev_subspace_predicts_rt": 0.6373819163292846,
+        "rt_subspace_predicts_rt": 0.7147098515519568,
+        "rt_subspace_predicts_evidence": 0.5384615384615385,
+        "ev_subspace_predicts_choice": 0.6326585695006747,
+        "rt_subspace_predicts_choice": 0.5809716599190283,
+        "double_dissociation": false,
+        "n_trials": 193,
+        "n_neurons": 144
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6931721194879089,
+        "ev_subspace_predicts_rt": 0.6506401137980086,
+        "rt_subspace_predicts_rt": 0.6933143669985775,
+        "rt_subspace_predicts_evidence": 0.6351351351351351,
+        "ev_subspace_predicts_choice": 0.5443812233285918,
+        "rt_subspace_predicts_choice": 0.5718349928876244,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 50
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6714285714285714,
+        "ev_subspace_predicts_rt": 0.7142857142857143,
+        "rt_subspace_predicts_rt": 0.7142857142857143,
+        "rt_subspace_predicts_evidence": 0.5642857142857143,
+        "ev_subspace_predicts_choice": 0.6142857142857142,
+        "rt_subspace_predicts_choice": 0.48571428571428565,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 56
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6258467023172904,
+        "ev_subspace_predicts_rt": 0.6566844919786096,
+        "rt_subspace_predicts_rt": 0.6563279857397504,
+        "rt_subspace_predicts_evidence": 0.5114081996434938,
+        "ev_subspace_predicts_choice": 0.6210338680926916,
+        "rt_subspace_predicts_choice": 0.5787878787878787,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 184
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5886243386243386,
+        "ev_subspace_predicts_rt": 0.6103174603174604,
+        "rt_subspace_predicts_rt": 0.6328042328042328,
+        "rt_subspace_predicts_evidence": 0.46957671957671954,
+        "ev_subspace_predicts_choice": 0.5804232804232805,
+        "rt_subspace_predicts_choice": 0.4992063492063492,
+        "double_dissociation": false,
+        "n_trials": 136,
+        "n_neurons": 48
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6303448275862069,
+        "ev_subspace_predicts_rt": 0.6177011494252873,
+        "rt_subspace_predicts_rt": 0.624367816091954,
+        "rt_subspace_predicts_evidence": 0.5163218390804598,
+        "ev_subspace_predicts_choice": 0.5845977011494253,
+        "rt_subspace_predicts_choice": 0.5510344827586205,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 60
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.5942857142857143,
+        "ev_subspace_predicts_rt": 0.6228571428571429,
+        "rt_subspace_predicts_rt": 0.6285714285714287,
+        "rt_subspace_predicts_evidence": 0.4685714285714285,
+        "ev_subspace_predicts_choice": 0.6114285714285714,
+        "rt_subspace_predicts_choice": 0.48571428571428565,
+        "double_dissociation": false,
+        "n_trials": 175,
+        "n_neurons": 121
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6458128078817734,
+        "ev_subspace_predicts_rt": 0.7086206896551723,
+        "rt_subspace_predicts_rt": 0.7435960591133005,
+        "rt_subspace_predicts_evidence": 0.6110837438423645,
+        "ev_subspace_predicts_choice": 0.5620689655172414,
+        "rt_subspace_predicts_choice": 0.5699507389162561,
+        "double_dissociation": false,
+        "n_trials": 144,
+        "n_neurons": 173
+      }
+    ],
+    "PO": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5445344129554656,
+        "ev_subspace_predicts_rt": 0.6210526315789473,
+        "rt_subspace_predicts_rt": 0.6842105263157896,
+        "rt_subspace_predicts_evidence": 0.5333333333333333,
+        "ev_subspace_predicts_choice": 0.5600539811066128,
+        "rt_subspace_predicts_choice": 0.5600539811066126,
+        "double_dissociation": false,
+        "n_trials": 193,
+        "n_neurons": 255
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6409523809523809,
+        "ev_subspace_predicts_rt": 0.6209523809523809,
+        "rt_subspace_predicts_rt": 0.7376190476190476,
+        "rt_subspace_predicts_evidence": 0.5038095238095238,
+        "ev_subspace_predicts_choice": 0.6409523809523809,
+        "rt_subspace_predicts_choice": 0.621904761904762,
+        "double_dissociation": false,
+        "n_trials": 103,
+        "n_neurons": 202
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6599999999999999,
+        "ev_subspace_predicts_rt": 0.5933333333333334,
+        "rt_subspace_predicts_rt": 0.72,
+        "rt_subspace_predicts_evidence": 0.5666666666666667,
+        "ev_subspace_predicts_choice": 0.6133333333333333,
+        "rt_subspace_predicts_choice": 0.6,
+        "double_dissociation": true,
+        "n_trials": 150,
+        "n_neurons": 96
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.658008658008658,
+        "ev_subspace_predicts_rt": 0.5627705627705628,
+        "rt_subspace_predicts_rt": 0.5731601731601732,
+        "rt_subspace_predicts_evidence": 0.6303030303030304,
+        "ev_subspace_predicts_choice": 0.7307359307359307,
+        "rt_subspace_predicts_choice": 0.7593073593073593,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 94
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6076813655761024,
+        "ev_subspace_predicts_rt": 0.5860597439544808,
+        "rt_subspace_predicts_rt": 0.607823613086771,
+        "rt_subspace_predicts_evidence": 0.553769559032717,
+        "ev_subspace_predicts_choice": 0.6990042674253201,
+        "rt_subspace_predicts_choice": 0.7150782361308677,
+        "double_dissociation": false,
+        "n_trials": 186,
+        "n_neurons": 45
+      }
+    ],
+    "TT": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6058029689608637,
+        "ev_subspace_predicts_rt": 0.5543859649122806,
+        "rt_subspace_predicts_rt": 0.6526315789473685,
+        "rt_subspace_predicts_evidence": 0.5182186234817814,
+        "ev_subspace_predicts_choice": 0.58582995951417,
+        "rt_subspace_predicts_choice": 0.5395411605937922,
+        "double_dissociation": true,
+        "n_trials": 193,
+        "n_neurons": 82
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6718349928876244,
+        "ev_subspace_predicts_rt": 0.6139402560455192,
+        "rt_subspace_predicts_rt": 0.597724039829303,
+        "rt_subspace_predicts_evidence": 0.6452347083926032,
+        "ev_subspace_predicts_choice": 0.5705547652916074,
+        "rt_subspace_predicts_choice": 0.5443812233285917,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 55
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6303448275862069,
+        "ev_subspace_predicts_rt": 0.6577011494252873,
+        "rt_subspace_predicts_rt": 0.637471264367816,
+        "rt_subspace_predicts_evidence": 0.5572413793103448,
+        "ev_subspace_predicts_choice": 0.6036781609195403,
+        "rt_subspace_predicts_choice": 0.5505747126436782,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 34
+      }
+    ],
+    "ORBm": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.7300142247510669,
+        "ev_subspace_predicts_rt": 0.6507823613086772,
+        "rt_subspace_predicts_rt": 0.6509246088193457,
+        "rt_subspace_predicts_evidence": 0.6772403982930297,
+        "ev_subspace_predicts_choice": 0.582076813655761,
+        "rt_subspace_predicts_choice": 0.5874822190611664,
+        "double_dissociation": false,
+        "n_trials": 189,
+        "n_neurons": 122
+      }
+    ],
+    "GPe": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6606060606060606,
+        "ev_subspace_predicts_rt": 0.5181818181818182,
+        "rt_subspace_predicts_rt": 0.6053030303030302,
+        "rt_subspace_predicts_evidence": 0.5859848484848484,
+        "ev_subspace_predicts_choice": 0.5367424242424242,
+        "rt_subspace_predicts_choice": 0.46893939393939393,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 63
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5663306451612903,
+        "ev_subspace_predicts_rt": 0.6223790322580645,
+        "rt_subspace_predicts_rt": 0.6731854838709678,
+        "rt_subspace_predicts_evidence": 0.4782258064516129,
+        "ev_subspace_predicts_choice": 0.5909274193548387,
+        "rt_subspace_predicts_choice": 0.5528225806451613,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 142
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6,
+        "ev_subspace_predicts_rt": 0.6758620689655171,
+        "rt_subspace_predicts_rt": 0.7172413793103447,
+        "rt_subspace_predicts_evidence": 0.5448275862068965,
+        "ev_subspace_predicts_choice": 0.6,
+        "rt_subspace_predicts_choice": 0.593103448275862,
+        "double_dissociation": false,
+        "n_trials": 145,
+        "n_neurons": 87
+      }
+    ],
+    "MB": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6104166666666667,
+        "ev_subspace_predicts_rt": 0.5797348484848485,
+        "rt_subspace_predicts_rt": 0.6357954545454545,
+        "rt_subspace_predicts_evidence": 0.5615530303030303,
+        "ev_subspace_predicts_choice": 0.4818181818181818,
+        "rt_subspace_predicts_choice": 0.4878787878787879,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 275
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.602139037433155,
+        "ev_subspace_predicts_rt": 0.6508021390374331,
+        "rt_subspace_predicts_rt": 0.7351158645276292,
+        "rt_subspace_predicts_evidence": 0.511764705882353,
+        "ev_subspace_predicts_choice": 0.6142602495543672,
+        "rt_subspace_predicts_choice": 0.5666666666666667,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 63
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5477822580645161,
+        "ev_subspace_predicts_rt": 0.6413306451612903,
+        "rt_subspace_predicts_rt": 0.6917338709677419,
+        "rt_subspace_predicts_evidence": 0.4977822580645161,
+        "ev_subspace_predicts_choice": 0.5536290322580645,
+        "rt_subspace_predicts_choice": 0.4528225806451613,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 45
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5668449197860962,
+        "ev_subspace_predicts_rt": 0.6265597147950088,
+        "rt_subspace_predicts_rt": 0.6566844919786096,
+        "rt_subspace_predicts_evidence": 0.3611408199643494,
+        "ev_subspace_predicts_choice": 0.5960784313725489,
+        "rt_subspace_predicts_choice": 0.4816399286987522,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 77
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.602275960170697,
+        "ev_subspace_predicts_rt": 0.5376955903271693,
+        "rt_subspace_predicts_rt": 0.6238975817923187,
+        "rt_subspace_predicts_evidence": 0.5539118065433855,
+        "ev_subspace_predicts_choice": 0.6988620199146516,
+        "rt_subspace_predicts_choice": 0.7044096728307255,
+        "double_dissociation": true,
+        "n_trials": 186,
+        "n_neurons": 66
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5461538461538462,
+        "ev_subspace_predicts_rt": 0.6538461538461539,
+        "rt_subspace_predicts_rt": 0.7923076923076924,
+        "rt_subspace_predicts_evidence": 0.37692307692307697,
+        "ev_subspace_predicts_choice": 0.6,
+        "rt_subspace_predicts_choice": 0.4461538461538462,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 348
+      }
+    ],
+    "POL": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6168560606060607,
+        "ev_subspace_predicts_rt": 0.5367424242424242,
+        "rt_subspace_predicts_rt": 0.6162878787878788,
+        "rt_subspace_predicts_evidence": 0.5488636363636363,
+        "ev_subspace_predicts_choice": 0.5060606060606061,
+        "rt_subspace_predicts_choice": 0.5178030303030303,
+        "double_dissociation": true,
+        "n_trials": 162,
+        "n_neurons": 154
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.655798319327731,
+        "ev_subspace_predicts_rt": 0.6489075630252101,
+        "rt_subspace_predicts_rt": 0.6947899159663866,
+        "rt_subspace_predicts_evidence": 0.626218487394958,
+        "ev_subspace_predicts_choice": 0.6670588235294118,
+        "rt_subspace_predicts_choice": 0.6152941176470588,
+        "double_dissociation": false,
+        "n_trials": 174,
+        "n_neurons": 22
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6805194805194805,
+        "ev_subspace_predicts_rt": 0.683116883116883,
+        "rt_subspace_predicts_rt": 0.7380952380952381,
+        "rt_subspace_predicts_evidence": 0.45714285714285713,
+        "ev_subspace_predicts_choice": 0.7571428571428571,
+        "rt_subspace_predicts_choice": 0.7575757575757576,
+        "double_dissociation": false,
+        "n_trials": 107,
+        "n_neurons": 39
+      }
+    ],
+    "SCm": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5554924242424242,
+        "ev_subspace_predicts_rt": 0.5861742424242424,
+        "rt_subspace_predicts_rt": 0.6795454545454546,
+        "rt_subspace_predicts_evidence": 0.531060606060606,
+        "ev_subspace_predicts_choice": 0.4876893939393939,
+        "rt_subspace_predicts_choice": 0.41325757575757577,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 23
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5541889483065954,
+        "ev_subspace_predicts_rt": 0.6504456327985739,
+        "rt_subspace_predicts_rt": 0.6563279857397506,
+        "rt_subspace_predicts_evidence": 0.4652406417112299,
+        "ev_subspace_predicts_choice": 0.5786096256684492,
+        "rt_subspace_predicts_choice": 0.5183600713012477,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 45
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6073118279569891,
+        "ev_subspace_predicts_rt": 0.6602150537634408,
+        "rt_subspace_predicts_rt": 0.6733333333333333,
+        "rt_subspace_predicts_evidence": 0.48946236559139783,
+        "ev_subspace_predicts_choice": 0.5612903225806452,
+        "rt_subspace_predicts_choice": 0.5156989247311827,
+        "double_dissociation": false,
+        "n_trials": 153,
+        "n_neurons": 48
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5821969696969698,
+        "ev_subspace_predicts_rt": 0.5640151515151516,
+        "rt_subspace_predicts_rt": 0.65625,
+        "rt_subspace_predicts_evidence": 0.5640151515151515,
+        "ev_subspace_predicts_choice": 0.6196969696969697,
+        "rt_subspace_predicts_choice": 0.65,
+        "double_dissociation": false,
+        "n_trials": 163,
+        "n_neurons": 41
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6311522048364153,
+        "ev_subspace_predicts_rt": 0.5722617354196302,
+        "rt_subspace_predicts_rt": 0.6577524893314368,
+        "rt_subspace_predicts_evidence": 0.5768136557610242,
+        "ev_subspace_predicts_choice": 0.5776671408250356,
+        "rt_subspace_predicts_choice": 0.5349928876244665,
+        "double_dissociation": true,
+        "n_trials": 187,
+        "n_neurons": 56
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5828571428571429,
+        "ev_subspace_predicts_rt": 0.6,
+        "rt_subspace_predicts_rt": 0.6914285714285714,
+        "rt_subspace_predicts_evidence": 0.45714285714285713,
+        "ev_subspace_predicts_choice": 0.5828571428571427,
+        "rt_subspace_predicts_choice": 0.5657142857142857,
+        "double_dissociation": false,
+        "n_trials": 175,
+        "n_neurons": 56
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6076923076923076,
+        "ev_subspace_predicts_rt": 0.6692307692307692,
+        "rt_subspace_predicts_rt": 0.7307692307692307,
+        "rt_subspace_predicts_evidence": 0.5230769230769232,
+        "ev_subspace_predicts_choice": 0.5538461538461539,
+        "rt_subspace_predicts_choice": 0.49230769230769234,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 87
+      }
+    ],
+    "SCsg": [
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.6053030303030302,
+        "ev_subspace_predicts_rt": 0.5683712121212121,
+        "rt_subspace_predicts_rt": 0.6113636363636363,
+        "rt_subspace_predicts_evidence": 0.537689393939394,
+        "ev_subspace_predicts_choice": 0.4943181818181818,
+        "rt_subspace_predicts_choice": 0.5253787878787879,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 19
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6926666666666667,
+        "ev_subspace_predicts_rt": 0.5713333333333332,
+        "rt_subspace_predicts_rt": 0.749,
+        "rt_subspace_predicts_evidence": 0.4996666666666667,
+        "ev_subspace_predicts_choice": 0.6453333333333334,
+        "rt_subspace_predicts_choice": 0.6290000000000001,
+        "double_dissociation": true,
+        "n_trials": 124,
+        "n_neurons": 84
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6241379310344828,
+        "ev_subspace_predicts_rt": 0.6310344827586206,
+        "rt_subspace_predicts_rt": 0.6636781609195402,
+        "rt_subspace_predicts_evidence": 0.5098850574712643,
+        "ev_subspace_predicts_choice": 0.6441379310344827,
+        "rt_subspace_predicts_choice": 0.5094252873563219,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 36
+      }
+    ],
+    "VISrl": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6172348484848484,
+        "ev_subspace_predicts_rt": 0.5863636363636363,
+        "rt_subspace_predicts_rt": 0.6422348484848485,
+        "rt_subspace_predicts_evidence": 0.562689393939394,
+        "ev_subspace_predicts_choice": 0.5678030303030303,
+        "rt_subspace_predicts_choice": 0.4753787878787879,
+        "double_dissociation": false,
+        "n_trials": 162,
+        "n_neurons": 136
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.7183333333333334,
+        "ev_subspace_predicts_rt": 0.6373333333333333,
+        "rt_subspace_predicts_rt": 0.7590000000000001,
+        "rt_subspace_predicts_evidence": 0.549,
+        "ev_subspace_predicts_choice": 0.5406666666666667,
+        "rt_subspace_predicts_choice": 0.6053333333333334,
+        "double_dissociation": true,
+        "n_trials": 124,
+        "n_neurons": 150
+      }
+    ],
+    "LSc": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5588235294117647,
+        "ev_subspace_predicts_rt": 0.6235294117647059,
+        "rt_subspace_predicts_rt": 0.6764705882352942,
+        "rt_subspace_predicts_evidence": 0.5176470588235295,
+        "ev_subspace_predicts_choice": 0.4470588235294118,
+        "rt_subspace_predicts_choice": 0.41764705882352937,
+        "double_dissociation": false,
+        "n_trials": 170,
+        "n_neurons": 72
+      }
+    ],
+    "MOp": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5882352941176471,
+        "ev_subspace_predicts_rt": 0.6352941176470588,
+        "rt_subspace_predicts_rt": 0.6647058823529411,
+        "rt_subspace_predicts_evidence": 0.488235294117647,
+        "ev_subspace_predicts_choice": 0.6352941176470589,
+        "rt_subspace_predicts_choice": 0.48235294117647065,
+        "double_dissociation": false,
+        "n_trials": 170,
+        "n_neurons": 447
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.7333333333333333,
+        "ev_subspace_predicts_rt": 0.7777777777777778,
+        "rt_subspace_predicts_rt": 0.8555555555555555,
+        "rt_subspace_predicts_evidence": 0.6333333333333334,
+        "ev_subspace_predicts_choice": 0.6777777777777777,
+        "rt_subspace_predicts_choice": 0.6777777777777777,
+        "double_dissociation": false,
+        "n_trials": 90,
+        "n_neurons": 166
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.7444444444444445,
+        "ev_subspace_predicts_rt": 0.6444444444444445,
+        "rt_subspace_predicts_rt": 0.6888888888888889,
+        "rt_subspace_predicts_evidence": 0.6333333333333333,
+        "ev_subspace_predicts_choice": 0.7444444444444445,
+        "rt_subspace_predicts_choice": 0.711111111111111,
+        "double_dissociation": true,
+        "n_trials": 90,
+        "n_neurons": 180
+      }
+    ],
+    "PT": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6176470588235294,
+        "ev_subspace_predicts_rt": 0.6705882352941177,
+        "rt_subspace_predicts_rt": 0.7352941176470589,
+        "rt_subspace_predicts_evidence": 0.5176470588235293,
+        "ev_subspace_predicts_choice": 0.5470588235294118,
+        "rt_subspace_predicts_choice": 0.5,
+        "double_dissociation": false,
+        "n_trials": 170,
+        "n_neurons": 45
+      }
+    ],
+    "LH": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6571428571428573,
+        "ev_subspace_predicts_rt": 0.7071428571428572,
+        "rt_subspace_predicts_rt": 0.7142857142857142,
+        "rt_subspace_predicts_evidence": 0.5857142857142857,
+        "ev_subspace_predicts_choice": 0.5928571428571429,
+        "rt_subspace_predicts_choice": 0.5214285714285715,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 18
+      }
+    ],
+    "MD": [
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.5857142857142857,
+        "ev_subspace_predicts_rt": 0.7142857142857143,
+        "rt_subspace_predicts_rt": 0.7571428571428571,
+        "rt_subspace_predicts_evidence": 0.5428571428571429,
+        "ev_subspace_predicts_choice": 0.5928571428571429,
+        "rt_subspace_predicts_choice": 0.5285714285714286,
+        "double_dissociation": false,
+        "n_trials": 140,
+        "n_neurons": 126
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.7147186147186148,
+        "ev_subspace_predicts_rt": 0.5168831168831168,
+        "rt_subspace_predicts_rt": 0.6277056277056277,
+        "rt_subspace_predicts_evidence": 0.6116883116883117,
+        "ev_subspace_predicts_choice": 0.7593073593073593,
+        "rt_subspace_predicts_choice": 0.7683982683982684,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 155
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5969758064516129,
+        "ev_subspace_predicts_rt": 0.705241935483871,
+        "rt_subspace_predicts_rt": 0.7308467741935484,
+        "rt_subspace_predicts_evidence": 0.4991935483870968,
+        "ev_subspace_predicts_choice": 0.615524193548387,
+        "rt_subspace_predicts_choice": 0.5641129032258065,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 116
+      }
+    ],
+    "MS": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5723707664884136,
+        "ev_subspace_predicts_rt": 0.6686274509803921,
+        "rt_subspace_predicts_rt": 0.7344028520499111,
+        "rt_subspace_predicts_evidence": 0.46951871657754013,
+        "ev_subspace_predicts_choice": 0.6144385026737968,
+        "rt_subspace_predicts_choice": 0.5181818181818182,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 23
+      }
+    ],
+    "RN": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.626916221033868,
+        "ev_subspace_predicts_rt": 0.6511586452762923,
+        "rt_subspace_predicts_rt": 0.6994652406417113,
+        "rt_subspace_predicts_evidence": 0.5477718360071301,
+        "ev_subspace_predicts_choice": 0.5905525846702318,
+        "rt_subspace_predicts_choice": 0.5732620320855615,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 58
+      }
+    ],
+    "SCs": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6206773618538324,
+        "ev_subspace_predicts_rt": 0.6684491978609625,
+        "rt_subspace_predicts_rt": 0.6327985739750446,
+        "rt_subspace_predicts_evidence": 0.6024955436720142,
+        "ev_subspace_predicts_choice": 0.5962566844919786,
+        "rt_subspace_predicts_choice": 0.5666666666666667,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 32
+      },
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.5941935483870968,
+        "ev_subspace_predicts_rt": 0.6733333333333332,
+        "rt_subspace_predicts_rt": 0.6933333333333332,
+        "rt_subspace_predicts_evidence": 0.45075268817204306,
+        "ev_subspace_predicts_choice": 0.5483870967741935,
+        "rt_subspace_predicts_choice": 0.5105376344086021,
+        "double_dissociation": false,
+        "n_trials": 153,
+        "n_neurons": 37
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5829302987197724,
+        "ev_subspace_predicts_rt": 0.5624466571834993,
+        "rt_subspace_predicts_rt": 0.668705547652916,
+        "rt_subspace_predicts_evidence": 0.534850640113798,
+        "ev_subspace_predicts_choice": 0.6260312944523471,
+        "rt_subspace_predicts_choice": 0.5940256045519204,
+        "double_dissociation": false,
+        "n_trials": 187,
+        "n_neurons": 73
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6307692307692309,
+        "ev_subspace_predicts_rt": 0.5692307692307692,
+        "rt_subspace_predicts_rt": 0.5538461538461539,
+        "rt_subspace_predicts_evidence": 0.49230769230769234,
+        "ev_subspace_predicts_choice": 0.5923076923076923,
+        "rt_subspace_predicts_choice": 0.5384615384615383,
+        "double_dissociation": true,
+        "n_trials": 130,
+        "n_neurons": 15
+      }
+    ],
+    "ZI": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5479500891265597,
+        "ev_subspace_predicts_rt": 0.6385026737967914,
+        "rt_subspace_predicts_rt": 0.7112299465240642,
+        "rt_subspace_predicts_evidence": 0.5360071301247772,
+        "ev_subspace_predicts_choice": 0.5420677361853833,
+        "rt_subspace_predicts_choice": 0.542602495543672,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 15
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6034274193548387,
+        "ev_subspace_predicts_rt": 0.6229838709677419,
+        "rt_subspace_predicts_rt": 0.6477822580645161,
+        "rt_subspace_predicts_evidence": 0.4155241935483871,
+        "ev_subspace_predicts_choice": 0.5411290322580645,
+        "rt_subspace_predicts_choice": 0.4272177419354839,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 55
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6643939393939394,
+        "ev_subspace_predicts_rt": 0.6276515151515152,
+        "rt_subspace_predicts_rt": 0.6649621212121212,
+        "rt_subspace_predicts_evidence": 0.571590909090909,
+        "ev_subspace_predicts_choice": 0.628030303030303,
+        "rt_subspace_predicts_choice": 0.5160984848484849,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 175
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6592592592592592,
+        "ev_subspace_predicts_rt": 0.7037037037037036,
+        "rt_subspace_predicts_rt": 0.7481481481481481,
+        "rt_subspace_predicts_evidence": 0.6,
+        "ev_subspace_predicts_choice": 0.6074074074074074,
+        "rt_subspace_predicts_choice": 0.6,
+        "double_dissociation": false,
+        "n_trials": 135,
+        "n_neurons": 44
+      }
+    ],
+    "RSP": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5879569892473118,
+        "ev_subspace_predicts_rt": 0.6599999999999999,
+        "rt_subspace_predicts_rt": 0.6591397849462365,
+        "rt_subspace_predicts_evidence": 0.47655913978494624,
+        "ev_subspace_predicts_choice": 0.5488172043010752,
+        "rt_subspace_predicts_choice": 0.40559139784946235,
+        "double_dissociation": false,
+        "n_trials": 153,
+        "n_neurons": 85
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6619047619047619,
+        "ev_subspace_predicts_rt": 0.6097883597883598,
+        "rt_subspace_predicts_rt": 0.6761904761904762,
+        "rt_subspace_predicts_evidence": 0.5148148148148148,
+        "ev_subspace_predicts_choice": 0.6978835978835979,
+        "rt_subspace_predicts_choice": 0.5433862433862433,
+        "double_dissociation": true,
+        "n_trials": 136,
+        "n_neurons": 82
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6213333333333333,
+        "ev_subspace_predicts_rt": 0.5076666666666667,
+        "rt_subspace_predicts_rt": 0.6443333333333333,
+        "rt_subspace_predicts_evidence": 0.5643333333333334,
+        "ev_subspace_predicts_choice": 0.5966666666666668,
+        "rt_subspace_predicts_choice": 0.629,
+        "double_dissociation": true,
+        "n_trials": 124,
+        "n_neurons": 181
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6377011494252873,
+        "ev_subspace_predicts_rt": 0.6443678160919539,
+        "rt_subspace_predicts_rt": 0.6714942528735632,
+        "rt_subspace_predicts_evidence": 0.5370114942528735,
+        "ev_subspace_predicts_choice": 0.584367816091954,
+        "rt_subspace_predicts_choice": 0.5639080459770115,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 57
+      },
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.616017316017316,
+        "ev_subspace_predicts_rt": 0.5787878787878789,
+        "rt_subspace_predicts_rt": 0.7095238095238094,
+        "rt_subspace_predicts_evidence": 0.5233766233766234,
+        "ev_subspace_predicts_choice": 0.7281385281385282,
+        "rt_subspace_predicts_choice": 0.7567099567099567,
+        "double_dissociation": false,
+        "n_trials": 107,
+        "n_neurons": 135
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5930735930735931,
+        "ev_subspace_predicts_rt": 0.6476190476190476,
+        "rt_subspace_predicts_rt": 0.6930735930735932,
+        "rt_subspace_predicts_evidence": 0.574025974025974,
+        "ev_subspace_predicts_choice": 0.7588744588744589,
+        "rt_subspace_predicts_choice": 0.7493506493506493,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 60
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6089615931721195,
+        "ev_subspace_predicts_rt": 0.5564722617354196,
+        "rt_subspace_predicts_rt": 0.5937411095305832,
+        "rt_subspace_predicts_evidence": 0.5500711237553343,
+        "ev_subspace_predicts_choice": 0.5081081081081081,
+        "rt_subspace_predicts_choice": 0.4923186344238976,
+        "double_dissociation": false,
+        "n_trials": 187,
+        "n_neurons": 79
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6284274193548388,
+        "ev_subspace_predicts_rt": 0.711491935483871,
+        "rt_subspace_predicts_rt": 0.7502016129032258,
+        "rt_subspace_predicts_evidence": 0.5379032258064516,
+        "ev_subspace_predicts_choice": 0.5320564516129032,
+        "rt_subspace_predicts_choice": 0.5439516129032258,
+        "double_dissociation": false,
+        "n_trials": 156,
+        "n_neurons": 72
+      },
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6538461538461539,
+        "ev_subspace_predicts_rt": 0.5923076923076922,
+        "rt_subspace_predicts_rt": 0.6461538461538461,
+        "rt_subspace_predicts_evidence": 0.5615384615384615,
+        "ev_subspace_predicts_choice": 0.5846153846153845,
+        "rt_subspace_predicts_choice": 0.6,
+        "double_dissociation": true,
+        "n_trials": 130,
+        "n_neurons": 16
+      }
+    ],
+    "BLA": [
+      {
+        "subspace_angle": 1.0000000000000007,
+        "ev_subspace_predicts_evidence": 0.6092741935483871,
+        "ev_subspace_predicts_rt": 0.6661290322580645,
+        "rt_subspace_predicts_rt": 0.7102822580645161,
+        "rt_subspace_predicts_evidence": 0.5659274193548387,
+        "ev_subspace_predicts_choice": 0.6098790322580645,
+        "rt_subspace_predicts_choice": 0.4717741935483871,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 132
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6827586206896552,
+        "ev_subspace_predicts_rt": 0.6068965517241379,
+        "rt_subspace_predicts_rt": 0.6689655172413793,
+        "rt_subspace_predicts_evidence": 0.5724137931034482,
+        "ev_subspace_predicts_choice": 0.5310344827586206,
+        "rt_subspace_predicts_choice": 0.5103448275862068,
+        "double_dissociation": true,
+        "n_trials": 145,
+        "n_neurons": 185
+      }
+    ],
+    "VPM": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5915322580645161,
+        "ev_subspace_predicts_rt": 0.6477822580645161,
+        "rt_subspace_predicts_rt": 0.6925403225806452,
+        "rt_subspace_predicts_evidence": 0.5088709677419355,
+        "ev_subspace_predicts_choice": 0.5590725806451613,
+        "rt_subspace_predicts_choice": 0.5290322580645161,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 162
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6167338709677419,
+        "ev_subspace_predicts_rt": 0.5975806451612903,
+        "rt_subspace_predicts_rt": 0.6479838709677419,
+        "rt_subspace_predicts_evidence": 0.4840725806451613,
+        "ev_subspace_predicts_choice": 0.6046370967741936,
+        "rt_subspace_predicts_choice": 0.4786290322580645,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 60
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.7411255411255411,
+        "ev_subspace_predicts_rt": 0.5822510822510822,
+        "rt_subspace_predicts_rt": 0.6675324675324675,
+        "rt_subspace_predicts_evidence": 0.6670995670995671,
+        "ev_subspace_predicts_choice": 0.7406926406926407,
+        "rt_subspace_predicts_choice": 0.7497835497835498,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 100
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6592592592592592,
+        "ev_subspace_predicts_rt": 0.6222222222222221,
+        "rt_subspace_predicts_rt": 0.6814814814814815,
+        "rt_subspace_predicts_evidence": 0.6222222222222222,
+        "ev_subspace_predicts_choice": 0.6296296296296295,
+        "rt_subspace_predicts_choice": 0.6074074074074074,
+        "double_dissociation": false,
+        "n_trials": 135,
+        "n_neurons": 31
+      }
+    ],
+    "SSs": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6204991087344028,
+        "ev_subspace_predicts_rt": 0.638680926916221,
+        "rt_subspace_predicts_rt": 0.65650623885918,
+        "rt_subspace_predicts_evidence": 0.5122994652406417,
+        "ev_subspace_predicts_choice": 0.5661319073083779,
+        "rt_subspace_predicts_choice": 0.4636363636363637,
+        "double_dissociation": false,
+        "n_trials": 166,
+        "n_neurons": 120
+      }
+    ],
+    "MEA": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6538306451612903,
+        "ev_subspace_predicts_rt": 0.5975806451612903,
+        "rt_subspace_predicts_rt": 0.6540322580645161,
+        "rt_subspace_predicts_evidence": 0.6100806451612903,
+        "ev_subspace_predicts_choice": 0.6419354838709678,
+        "rt_subspace_predicts_choice": 0.5723790322580645,
+        "double_dissociation": false,
+        "n_trials": 159,
+        "n_neurons": 41
+      }
+    ],
+    "RT": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.6790322580645161,
+        "ev_subspace_predicts_rt": 0.5782258064516129,
+        "rt_subspace_predicts_rt": 0.6417338709677419,
+        "rt_subspace_predicts_evidence": 0.5665322580645161,
+        "ev_subspace_predicts_choice": 0.7044354838709678,
+        "rt_subspace_predicts_choice": 0.5905241935483871,
+        "double_dissociation": true,
+        "n_trials": 159,
+        "n_neurons": 44
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.666429587482219,
+        "ev_subspace_predicts_rt": 0.6126600284495022,
+        "rt_subspace_predicts_rt": 0.6556187766714083,
+        "rt_subspace_predicts_evidence": 0.537126600284495,
+        "ev_subspace_predicts_choice": 0.7147937411095306,
+        "rt_subspace_predicts_choice": 0.7203413940256046,
+        "double_dissociation": true,
+        "n_trials": 186,
+        "n_neurons": 129
+      }
+    ],
+    "ACB": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.603030303030303,
+        "ev_subspace_predicts_rt": 0.5964015151515152,
+        "rt_subspace_predicts_rt": 0.6274621212121212,
+        "rt_subspace_predicts_evidence": 0.5284090909090909,
+        "ev_subspace_predicts_choice": 0.5899621212121212,
+        "rt_subspace_predicts_choice": 0.5535984848484848,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 155
+      },
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.5952380952380952,
+        "ev_subspace_predicts_rt": 0.5952380952380952,
+        "rt_subspace_predicts_rt": 0.6767195767195767,
+        "rt_subspace_predicts_evidence": 0.44021164021164016,
+        "ev_subspace_predicts_choice": 0.5806878306878307,
+        "rt_subspace_predicts_choice": 0.5433862433862433,
+        "double_dissociation": false,
+        "n_trials": 136,
+        "n_neurons": 92
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5933333333333334,
+        "ev_subspace_predicts_rt": 0.6133333333333333,
+        "rt_subspace_predicts_rt": 0.6533333333333333,
+        "rt_subspace_predicts_evidence": 0.56,
+        "ev_subspace_predicts_choice": 0.6333333333333333,
+        "rt_subspace_predicts_choice": 0.6,
+        "double_dissociation": false,
+        "n_trials": 150,
+        "n_neurons": 90
+      }
+    ],
+    "OT": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.571590909090909,
+        "ev_subspace_predicts_rt": 0.6215909090909091,
+        "rt_subspace_predicts_rt": 0.6460227272727272,
+        "rt_subspace_predicts_evidence": 0.4475378787878788,
+        "ev_subspace_predicts_choice": 0.5214015151515151,
+        "rt_subspace_predicts_choice": 0.4903409090909091,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 26
+      }
+    ],
+    "SI": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.5462121212121211,
+        "ev_subspace_predicts_rt": 0.6460227272727272,
+        "rt_subspace_predicts_rt": 0.6710227272727273,
+        "rt_subspace_predicts_evidence": 0.39147727272727273,
+        "ev_subspace_predicts_choice": 0.571590909090909,
+        "rt_subspace_predicts_choice": 0.453219696969697,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 48
+      }
+    ],
+    "SNr": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6024621212121212,
+        "ev_subspace_predicts_rt": 0.6272727272727272,
+        "rt_subspace_predicts_rt": 0.6399621212121211,
+        "rt_subspace_predicts_evidence": 0.5098484848484849,
+        "ev_subspace_predicts_choice": 0.621969696969697,
+        "rt_subspace_predicts_choice": 0.571590909090909,
+        "double_dissociation": false,
+        "n_trials": 161,
+        "n_neurons": 129
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6446969696969698,
+        "ev_subspace_predicts_rt": 0.5882575757575758,
+        "rt_subspace_predicts_rt": 0.668939393939394,
+        "rt_subspace_predicts_evidence": 0.5643939393939393,
+        "ev_subspace_predicts_choice": 0.625,
+        "rt_subspace_predicts_choice": 0.6073863636363637,
+        "double_dissociation": true,
+        "n_trials": 163,
+        "n_neurons": 117
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6444444444444444,
+        "ev_subspace_predicts_rt": 0.6592592592592592,
+        "rt_subspace_predicts_rt": 0.674074074074074,
+        "rt_subspace_predicts_evidence": 0.5777777777777777,
+        "ev_subspace_predicts_choice": 0.6074074074074074,
+        "rt_subspace_predicts_choice": 0.6518518518518518,
+        "double_dissociation": false,
+        "n_trials": 135,
+        "n_neurons": 15
+      },
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5931034482758621,
+        "ev_subspace_predicts_rt": 0.47586206896551725,
+        "rt_subspace_predicts_rt": 0.6551724137931034,
+        "rt_subspace_predicts_evidence": 0.5172413793103449,
+        "ev_subspace_predicts_choice": 0.5862068965517241,
+        "rt_subspace_predicts_choice": 0.5586206896551724,
+        "double_dissociation": true,
+        "n_trials": 145,
+        "n_neurons": 45
+      }
+    ],
+    "APN": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.660672268907563,
+        "ev_subspace_predicts_rt": 0.5969747899159664,
+        "rt_subspace_predicts_rt": 0.6374789915966387,
+        "rt_subspace_predicts_evidence": 0.5751260504201681,
+        "ev_subspace_predicts_choice": 0.6727731092436975,
+        "rt_subspace_predicts_choice": 0.666890756302521,
+        "double_dissociation": true,
+        "n_trials": 174,
+        "n_neurons": 185
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6714285714285715,
+        "ev_subspace_predicts_rt": 0.609090909090909,
+        "rt_subspace_predicts_rt": 0.7389610389610389,
+        "rt_subspace_predicts_evidence": 0.6051948051948053,
+        "ev_subspace_predicts_choice": 0.7285714285714286,
+        "rt_subspace_predicts_choice": 0.7376623376623377,
+        "double_dissociation": true,
+        "n_trials": 107,
+        "n_neurons": 62
+      }
+    ],
+    "VAL": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7555555555555556,
+        "ev_subspace_predicts_rt": 0.7444444444444445,
+        "rt_subspace_predicts_rt": 0.7666666666666666,
+        "rt_subspace_predicts_evidence": 0.5888888888888889,
+        "ev_subspace_predicts_choice": 0.5666666666666667,
+        "rt_subspace_predicts_choice": 0.6444444444444445,
+        "double_dissociation": false,
+        "n_trials": 90,
+        "n_neurons": 83
+      }
+    ],
+    "IC": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7132275132275132,
+        "ev_subspace_predicts_rt": 0.6394179894179894,
+        "rt_subspace_predicts_rt": 0.6621693121693121,
+        "rt_subspace_predicts_evidence": 0.4788359788359789,
+        "ev_subspace_predicts_choice": 0.6992063492063492,
+        "rt_subspace_predicts_choice": 0.5962962962962963,
+        "double_dissociation": true,
+        "n_trials": 136,
+        "n_neurons": 58
+      }
+    ],
+    "CA2": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6536666666666667,
+        "ev_subspace_predicts_rt": 0.5966666666666667,
+        "rt_subspace_predicts_rt": 0.7166666666666667,
+        "rt_subspace_predicts_evidence": 0.5890000000000001,
+        "ev_subspace_predicts_choice": 0.6133333333333334,
+        "rt_subspace_predicts_choice": 0.6206666666666667,
+        "double_dissociation": true,
+        "n_trials": 124,
+        "n_neurons": 115
+      }
+    ],
+    "SCig": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.7343333333333333,
+        "ev_subspace_predicts_rt": 0.7163333333333333,
+        "rt_subspace_predicts_rt": 0.741,
+        "rt_subspace_predicts_evidence": 0.6456666666666667,
+        "ev_subspace_predicts_choice": 0.6933333333333332,
+        "rt_subspace_predicts_choice": 0.6776666666666668,
+        "double_dissociation": false,
+        "n_trials": 124,
+        "n_neurons": 366
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7112643678160919,
+        "ev_subspace_predicts_rt": 0.6377011494252873,
+        "rt_subspace_predicts_rt": 0.6977011494252874,
+        "rt_subspace_predicts_evidence": 0.5979310344827586,
+        "ev_subspace_predicts_choice": 0.6250574712643677,
+        "rt_subspace_predicts_choice": 0.557471264367816,
+        "double_dissociation": true,
+        "n_trials": 149,
+        "n_neurons": 186
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6107692307692308,
+        "ev_subspace_predicts_rt": 0.6584615384615384,
+        "rt_subspace_predicts_rt": 0.7458461538461539,
+        "rt_subspace_predicts_evidence": 0.6030769230769231,
+        "ev_subspace_predicts_choice": 0.6353846153846154,
+        "rt_subspace_predicts_choice": 0.6424615384615385,
+        "double_dissociation": false,
+        "n_trials": 126,
+        "n_neurons": 190
+      },
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.7021645021645021,
+        "ev_subspace_predicts_rt": 0.6913419913419914,
+        "rt_subspace_predicts_rt": 0.7571428571428571,
+        "rt_subspace_predicts_evidence": 0.5333333333333333,
+        "ev_subspace_predicts_choice": 0.7658008658008658,
+        "rt_subspace_predicts_choice": 0.7467532467532467,
+        "double_dissociation": false,
+        "n_trials": 107,
+        "n_neurons": 65
+      }
+    ],
+    "DP": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6305747126436781,
+        "ev_subspace_predicts_rt": 0.6043678160919539,
+        "rt_subspace_predicts_rt": 0.6648275862068964,
+        "rt_subspace_predicts_evidence": 0.5570114942528737,
+        "ev_subspace_predicts_choice": 0.5634482758620689,
+        "rt_subspace_predicts_choice": 0.5705747126436782,
+        "double_dissociation": false,
+        "n_trials": 149,
+        "n_neurons": 39
+      }
+    ],
+    "CL": [
+      {
+        "subspace_angle": 0.9999999999999998,
+        "ev_subspace_predicts_evidence": 0.7034632034632036,
+        "ev_subspace_predicts_rt": 0.42683982683982685,
+        "rt_subspace_predicts_rt": 0.6116883116883116,
+        "rt_subspace_predicts_evidence": 0.6294372294372295,
+        "ev_subspace_predicts_choice": 0.7593073593073593,
+        "rt_subspace_predicts_choice": 0.7774891774891775,
+        "double_dissociation": false,
+        "n_trials": 108,
+        "n_neurons": 32
+      }
+    ],
+    "PAG": [
+      {
+        "subspace_angle": 1.0000000000000002,
+        "ev_subspace_predicts_evidence": 0.6519203413940257,
+        "ev_subspace_predicts_rt": 0.5881934566145093,
+        "rt_subspace_predicts_rt": 0.6256045519203413,
+        "rt_subspace_predicts_evidence": 0.5458036984352773,
+        "ev_subspace_predicts_choice": 0.561877667140825,
+        "rt_subspace_predicts_choice": 0.5083926031294452,
+        "double_dissociation": true,
+        "n_trials": 187,
+        "n_neurons": 41
+      },
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.6,
+        "ev_subspace_predicts_rt": 0.6,
+        "rt_subspace_predicts_rt": 0.7384615384615385,
+        "rt_subspace_predicts_evidence": 0.49230769230769234,
+        "ev_subspace_predicts_choice": 0.6461538461538462,
+        "rt_subspace_predicts_choice": 0.5307692307692308,
+        "double_dissociation": false,
+        "n_trials": 130,
+        "n_neurons": 85
+      }
+    ],
+    "EP": [
+      {
+        "subspace_angle": 1.000000000000001,
+        "ev_subspace_predicts_evidence": 0.6740740740740742,
+        "ev_subspace_predicts_rt": 0.5703703703703704,
+        "rt_subspace_predicts_rt": 0.5851851851851851,
+        "rt_subspace_predicts_evidence": 0.6222222222222221,
+        "ev_subspace_predicts_choice": 0.6370370370370371,
+        "rt_subspace_predicts_choice": 0.6074074074074074,
+        "double_dissociation": false,
+        "n_trials": 135,
+        "n_neurons": 91
+      }
+    ],
+    "BMA": [
+      {
+        "subspace_angle": 0.9999999999999999,
+        "ev_subspace_predicts_evidence": 0.6773826458036983,
+        "ev_subspace_predicts_rt": 0.5590327169274538,
+        "rt_subspace_predicts_rt": 0.6073968705547652,
+        "rt_subspace_predicts_evidence": 0.553769559032717,
+        "ev_subspace_predicts_choice": 0.7098150782361309,
+        "rt_subspace_predicts_choice": 0.7096728307254623,
+        "double_dissociation": true,
+        "n_trials": 186,
+        "n_neurons": 104
+      }
+    ],
+    "COA": [
+      {
+        "subspace_angle": 1.0000000000000004,
+        "ev_subspace_predicts_evidence": 0.5702702702702702,
+        "ev_subspace_predicts_rt": 0.5536273115220484,
+        "rt_subspace_predicts_rt": 0.6883357041251779,
+        "rt_subspace_predicts_evidence": 0.47866287339971547,
+        "ev_subspace_predicts_choice": 0.7096728307254624,
+        "rt_subspace_predicts_choice": 0.7150782361308677,
+        "double_dissociation": false,
+        "n_trials": 186,
+        "n_neurons": 316
+      }
+    ],
+    "CA": [
+      {
+        "subspace_angle": 1.0,
+        "ev_subspace_predicts_evidence": 0.5885714285714285,
+        "ev_subspace_predicts_rt": 0.5485714285714285,
+        "rt_subspace_predicts_rt": 0.6685714285714285,
+        "rt_subspace_predicts_evidence": 0.4914285714285714,
+        "ev_subspace_predicts_choice": 0.5428571428571429,
+        "rt_subspace_predicts_choice": 0.5428571428571428,
+        "double_dissociation": false,
+        "n_trials": 175,
+        "n_neurons": 193
+      }
+    ]
+  }
+}

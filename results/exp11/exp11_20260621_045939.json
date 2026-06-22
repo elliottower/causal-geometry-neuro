@@ -1,0 +1,310 @@
+{
+  "timestamp": "2026-06-21T04:59:38.155939",
+  "n_regions": 24,
+  "n_pairs": 29,
+  "pairs": [
+    {
+      "region": "ACA",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.32131893632876785,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.8501960109878087
+    },
+    {
+      "region": "ACA",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.10536293964764677,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9752927197644586
+    },
+    {
+      "region": "ACA",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "cka_linear": 0.16438622306878384,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9617570899554415
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "cka_linear": 0.285972310254504,
+      "grassmannian_distance": 2.9623322224653745,
+      "procrustes_distance": 0.7741265668489838
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.3201417112680094,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.7619273416578671
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.13712375724151993,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.8990985338231368
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.21903089862408007,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.8173333433602029
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.09000274546752624,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9463124913037567
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "cka_linear": 0.11976725424494998,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9495174600166438
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.09825268314049138,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9888412377552686
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.06864727581035308,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9672312683579447
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "cka_linear": 0.055275716621818516,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9877637293282262
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.18413282798960387,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9159043356437917
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.197984921510446,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.8510658666218744
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "cka_linear": 0.25489778349420483,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.8749176510012144
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "cka_linear": 0.20593728656899493,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9065684377696281
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.11685664543561594,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9836220442164607
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.10285691090654361,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9814875010541819
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "cka_linear": 0.13849688272528707,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9378424113636031
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.31604309601853564,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.7078521347403528
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.20326044029534307,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9325273414919286
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "cka_linear": 0.17650744374454214,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9512007217284904
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.18902523941054494,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.946618028019937
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.19214894535776944,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.8914674737394624
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.13578622527887155,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9563278783396477
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "cka_linear": 0.1056272344140917,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9545938287326093
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "cka_linear": 0.11681453443377633,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.934586351920924
+    },
+    {
+      "region": "POST",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "cka_linear": 0.17626194634448739,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9392870447809413
+    },
+    {
+      "region": "VISa",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "cka_linear": 0.2337632671665707,
+      "grassmannian_distance": null,
+      "procrustes_distance": 0.9078905646918258
+    }
+  ],
+  "cka_vs_procrustes": {
+    "spearman_rho": -0.8635467980295565,
+    "p_value": 1.632494545841671e-09,
+    "interpretation": "rho < 1 means linear (CKA) and nonlinear (UMAP) dissociate"
+  },
+  "per_region": {
+    "ACA": {
+      "n_pairs": 3,
+      "cka_mean": 0.1970226996817328,
+      "proc_mean": 0.929081940235903
+    },
+    "DG": {
+      "n_pairs": 6,
+      "cka_mean": 0.19533977951676493,
+      "proc_mean": 0.8580526228350985
+    },
+    "MOs": {
+      "n_pairs": 3,
+      "cka_mean": 0.074058558524221,
+      "proc_mean": 0.9812787451471466
+    },
+    "SUB": {
+      "n_pairs": 3,
+      "cka_mean": 0.21233851099808487,
+      "proc_mean": 0.8806292844222936
+    },
+    "VISp": {
+      "n_pairs": 3,
+      "cka_mean": 0.14188361430371818,
+      "proc_mean": 0.9572259943467568
+    },
+    "root": {
+      "n_pairs": 3,
+      "cka_mean": 0.2192668063463886,
+      "proc_mean": 0.859407295865295
+    },
+    "CA1": {
+      "n_pairs": 6,
+      "cka_mean": 0.152651603773266,
+      "proc_mean": 0.9391323804135118
+    }
+  }
+}

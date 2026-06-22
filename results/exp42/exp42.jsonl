@@ -1,0 +1,7 @@
+{"ts": "2026-06-21T08:13:50.539038", "experiment": "exp42", "event": "started", "module": "experiments.exp42_real_iia", "max_sessions": null}
+{"ts": "2026-06-21T08:48:19.366766", "experiment": "exp42", "event": "started", "module": "experiments.exp42_real_iia", "max_sessions": null}
+{"ts": "2026-06-21T09:40:38.839763", "experiment": "exp42", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T09:40:41.783725", "experiment": "exp42", "event": "saved_volume", "path": "/results/exp42/exp42_20260621_094040.json"}
+{"ts": "2026-06-21T09:40:43.740706", "experiment": "exp42", "event": "copied_artifacts"}
+{"ts": "2026-06-21T09:40:45.900363", "experiment": "exp42", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T09:40:47.488267", "experiment": "exp42", "event": "done"}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-06-21T03:11:18.050437",
+  "k": 5,
+  "accuracy_match_tolerance": 0.1,
+  "n_regions_measured": 0,
+  "n_matched_pairs": 0,
+  "cka_dg_correlation": {
+    "pearson_r": null,
+    "pearson_p": null,
+    "spearman_r": null,
+    "spearman_p": null,
+    "prediction": "correlation < 1.0, significantly so for cross-region pairs"
+  },
+  "same_region_pairs": {},
+  "cross_region_pairs": {},
+  "pairs": []
+}

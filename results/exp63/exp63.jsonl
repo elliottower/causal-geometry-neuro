@@ -1,0 +1,7 @@
+{"ts": "2026-06-22T01:41:10.537899", "experiment": "exp63", "event": "started", "module": "experiments.exp63_linear_vae_ablation", "max_sessions": null}
+{"ts": "2026-06-22T01:44:19.440411", "experiment": "exp63", "event": "started", "module": "experiments.exp63_linear_vae_ablation", "max_sessions": null}
+{"ts": "2026-06-22T02:39:41.039230", "experiment": "exp63", "event": "run_complete", "n_keys": 10}
+{"ts": "2026-06-22T02:39:49.100570", "experiment": "exp63", "event": "saved_volume", "path": "/results/exp63/exp63_20260622_023944.json"}
+{"ts": "2026-06-22T02:39:57.161697", "experiment": "exp63", "event": "copied_artifacts"}
+{"ts": "2026-06-22T02:40:01.609128", "experiment": "exp63", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T02:40:05.825938", "experiment": "exp63", "event": "done"}

@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T05:28:57.913464", "experiment": "exp20", "event": "started", "module": "experiments.exp20_jpca_rotation", "max_sessions": null}
+{"ts": "2026-06-21T05:29:40.439532", "experiment": "exp20", "event": "run_complete", "n_keys": 5}
+{"ts": "2026-06-21T05:29:42.965072", "experiment": "exp20", "event": "saved_volume", "path": "/results/exp20/exp20_20260621_052941.json"}
+{"ts": "2026-06-21T05:29:44.716387", "experiment": "exp20", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:29:46.348422", "experiment": "exp20", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:29:47.443486", "experiment": "exp20", "event": "done"}

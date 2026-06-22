@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T15:00:25.904188", "experiment": "exp45", "event": "started", "module": "experiments.exp45_allen_atlas_validation", "max_sessions": null}
+{"ts": "2026-06-21T15:49:30.211020", "experiment": "exp45", "event": "run_complete", "n_keys": 13}
+{"ts": "2026-06-21T15:49:38.418052", "experiment": "exp45", "event": "saved_volume", "path": "/results/exp45/exp45_20260621_154934.json"}
+{"ts": "2026-06-21T15:49:43.131368", "experiment": "exp45", "event": "copied_artifacts"}
+{"ts": "2026-06-21T15:49:47.638176", "experiment": "exp45", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T15:49:51.674729", "experiment": "exp45", "event": "done"}

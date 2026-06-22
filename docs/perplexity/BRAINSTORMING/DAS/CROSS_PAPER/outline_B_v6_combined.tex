@@ -1,0 +1,3536 @@
+% OUTLINE B v6 COMBINED: Full TMLR paper. Built from v5.5 base + all
+% recent findings (V8-V10 writeups, factor overlap, per-edge fingerprints,
+% attribution-causal orthogonality, background/modulation decomposition,
+% per-counterfactual stability, conceptor steering, causal discovery,
+% distributed logit lens, cross-task factor disjointness).
+%
+% v6 changes from v5.5:
+%   - NEW CONTRIBUTION C4: Attribution-causal orthogonality + factor manifold
+%     enables SOTA DAS. ~88 deg between PCA/Tucker and DAS subspaces.
+%     14-40x activation-causal gap. Background/modulation decomposition
+%     resolves the gap (Tucker modes necessary but not sufficient).
+%   - NEW Section 5.x: Factor overlap across circuit stages (4x4 Jaccard
+%     heatmap, within-pathway 0.018-0.037, cross-pathway 0.001-0.004).
+%     Per-edge factor fingerprints. Q/K/V factor sharing.
+%   - NEW Section 7: Attribution vs Causation Are Orthogonal in Factor Space
+%     (threeway subspace comparison, activation-causal gap, background/
+%     modulation decomposition, per-counterfactual stability)
+%   - NEW Appendix: Per-counterfactual Tucker analysis (V10 experiment A)
+%   - NEW Appendix: Distributed logit lens on DAS dimensions
+%   - NEW Appendix: Subspace trimming and k-sweep
+%   - NEW Appendix: Factor mediation / causal discovery
+%   - NEW Appendix: Conceptor steering via factor subspaces
+%   - NEW Appendix: Post-hoc sparsity recovery (negative result)
+%   - NEW Appendix: Extended null controls
+%   - NEW Appendix: Merullo composition comparison
+%   - UPDATED abstract to include C4 (orthogonality finding)
+%   - UPDATED intro contributions list (4 contributions, not 3)
+%   - UPDATED discussion to cover orthogonality interpretation
+%   - UPDATED figure/table inventory for new content
+%   - DAS/manifold material structured for possible later extraction
+%     into standalone paper
+%
+% Preserved from v5.5:
+%   - ALL appendix content, figure specs, table specs, reviewer annotations
+%   - ALL technical detail (Tucker modes, EAP derivation, gauge freedom, etc.)
+%   - ALL bolded openers, source/data annotations, REVIEWER comments
+%   - Model equivalence (Section 3.3)
+%   - Family of adapted methods (Section 4) including full DAS section
+%   - Full scoring results and ablations
+%   - Complete reviewer critique summary
+%
+% Design principles (from v5.5):
+%   - Nanda: 1-3 concrete claims, intro is self-contained, every section must justify its existence
+%   - Perplexity: Figure 1 on page 1, every section opens with its conclusion not a question
+%   - IOI: contributions list, question-style subsection titles, hypothesis -> experiment -> result
+%   - Grokking: "N lines of evidence" roadmap, bolded openers, evidence-type labels
+%   - MIB: formal metric definitions with equations, bold finding statements
+%   - Advisor: sell readers, proofs in appendix, 8-10 pages for top conference
+%
+% Narrative arc (v6):
+%   (1) We factorize weights as W=SF (architecture, training, equivalence)
+%   (2) Substituting W=SF into EAP gives per-factor attribution for free
+%   (3) PCA/Tucker on the attribution tensor decomposes circuits into sub-circuits
+%   (4) But attribution subspaces are orthogonal to causal subspaces (~88 deg)
+%   (5) The factor manifold nonetheless enables SOTA causal variable discovery
+%       (91.2% hard-IIA via CPCA-init DAS, gradient attractor)
+%   (6) Background/modulation decomposition resolves the gap
+%
+% Key numbers (v6 additions in CAPS):
+%   - CE gap <0.02 nats at 99% sparsity (model equivalence)
+%   - Bidirectional DAS IIA >= 0.97 (representational equivalence)
+%   - PCA sub-circuits: IOI NMI = 0.600 (p=0.004) vs Wang et al. roles
+%   - Tucker = PCA factor directions: cosine 1.000, geodesic ~0
+%   - ATTRIBUTION-CAUSAL ANGLE: ~88 DEG ACROSS 5 TASKS
+%   - ACTIVATION-CAUSAL GAP: 14-40X (r=0.97-0.99 VS 0.03-0.43)
+%   - CPCA-init DAS: 91.2% hard IIA vs 73.5% random (k=1), 100% strict (k=4)
+%   - Gradient attractor: rho rises 26% -> 83%
+%   - Group lasso DAS: ~81 of 8192 factors sufficient for 98.8% regular IIA
+%   - CROSS-PATHWAY FACTOR OVERLAP: JACCARD 0.001-0.004
+%   - WITHIN-PATHWAY FACTOR OVERLAP: JACCARD 0.018-0.037
+%   - TUCKER MODES NECESSARY (REMOVING 8 DROPS LOGIT DIFF 21%) BUT NOT
+%     SUFFICIENT (KEEPING ONLY MODES REVERSES LOGIT DIFF TO -30%)
+%   - PER-COUNTERFACTUAL STABILITY: MEAN PRINCIPAL ANGLES 58-78 DEG
+%
+% Target: TMLR (~25 pages main + unlimited appendix).
+% Page budgets in comments. Figures and tables inventoried at bottom.
+
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{hyperref}
+
+% ============================================================
+% TITLE OPTIONS (pick one)
+% ============================================================
+%
+% OPTION 1 (CURRENT FAVORITE):
+%   "Subspace Circuit Discovery via Sparse Transformer Factorization"
+%   - "Subspace Circuit Discovery" = the novel concept (what we find)
+%   - "Sparse Transformer Factorization" = the method (how we find it)
+%   - "Transformer" not "Weight" because we factorize the whole model
+%
+% OPTION 2 (safe fallback):
+%   "Sparse Transformer Factorization for Sub-Edge Circuit Analysis"
+%
+% OPTION 3 (memorable):
+%   "Opening Up the Edges: Per-Factor Attribution via Sparse Transformer Factorization"
+
+\title{Subspace Circuit Discovery via Sparse Transformer Factorization}
+\author{Ivan Vegner, Elliot Tower, N.\ Siddharth, Alex Doumas}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+% ABSTRACT (~200 words)
+% ============================================================
+
+\begin{abstract}
+
+% REVIEWER: "what information flows" is too evocative if you can't name
+% the information. Safer: "which factor subspaces carry the signal."
+% REVIEWER: "lossless" --- only exact for first-order EAP, approximate
+% for EAP-IG. Must be precise here.
+
+[1 sentence: Circuit discovery identifies which edges in a transformer's
+computational graph matter for a task, but says nothing about \emph{what}
+information flows along each edge --- which subspaces of the residual
+stream carry the signal.]
+
+[1 sentence: We decompose each weight matrix as $W = SF$ where $F$ is a
+shared factor bank and $S$ is a sparse selector, trained by distillation
+to faithfully reproduce a pretrained model (GPT-2 Small, CE gap $<$0.02
+nats at 99\% sparsity).]
+
+[1 sentence: This factorization makes existing circuit methods ---
+EAP, EAP-IG, EAP-GP, DAS --- automatically produce per-factor
+attribution scores: each edge score becomes a sum over per-factor
+contributions via a purely algebraic identity, yielding a 3D attribution
+tensor of shape (writers $\times$ readers $\times$ factors).]
+
+[1 sentence: PCA on this 3D tensor (flattened to edges $\times$ factors)
+automatically decomposes circuits into interpretable sub-circuits --- groups
+of edges sharing the same factor subspace --- with auto-$k$ at 90\% variance
+requiring no per-task tuning; Tucker decomposition of the same tensor
+independently recovers identical factor directions (cosine similarity 1.000,
+Grassmannian geodesic distance $\approx$ 0), confirming these sub-circuits
+are real structure, not decomposition artifacts.]
+
+[1 sentence: The factor bank also provides a geometric inductive bias
+for causal variable localization: constraining PCA to the factor
+subspace matches DAS at 98.8\% IIA with zero training, and initializing
+DAS from this subspace improves hard-example IIA from 73.5\% to 91.2\%.]
+
+[1 sentence (NEW v6): Analyzing the relationship between attribution
+and causal structure reveals a striking finding: the factor subspace
+explaining most attribution variance is nearly orthogonal
+($\sim$88\textdegree) to the causally-active subspace (DAS), with a
+14--40$\times$ gap between activation universality and causal specificity.
+Tucker modes capture the modulation component --- necessary for task
+performance (removing 8 modes drops logit diff by 21\%) but not
+sufficient in isolation (keeping only Tucker modes reverses the logit
+diff). The factor manifold acts as a gradient attractor ($\rho$:
+26\%$\to$83\%), determining whether DAS training finds the global optimum
+--- a launch pad for causal discovery, not a container.]
+\end{abstract}
+
+
+% ============================================================
+% 1. INTRODUCTION (~1.5 pages)
+% ============================================================
+
+\section{Introduction}
+
+% Open with the problem, not the method (Nanda: "intro should be self-contained")
+
+% REVIEWER: "There is no training-free method" --- NDM (Huang & Hahn 2025)
+% does unsupervised subspace decomposition. Must acknowledge and differentiate.
+% REVIEWER: "analogous to SAE dictionary" --- reviewer WILL ask how factors
+% compare to SAEs. Need to be precise about the differences.
+
+[1 paragraph: Edge-level circuit discovery (EAP, ACDC) tells us \emph{which}
+attention heads communicate for a task, but each edge is a single scalar.
+We don't know which dimensions of the 768-dimensional residual stream
+carry the signal, whether an edge transmits one signal or several
+superimposed ones, or whether two edges carry the same information.
+Causal variable localization (DAS) finds the relevant subspace but
+requires supervised training on counterfactual pairs --- specifying the
+causal model in advance. There is no general-purpose method to decompose
+an edge into its constituent factor-level contributions.]
+
+% [FIGURE 1 --- NEED to create]
+% A single figure that tells the whole story. Three panels:
+%
+% Panel A: "Standard circuit" --- a small computational graph (4-5 heads)
+% with thick/thin edges labeled by EAP scores. Each edge is a single number.
+% Caption: "EAP: which edges matter (but what flows along them?)"
+%
+% Panel B: "Factorized circuit" --- same graph but each edge is now a bundle
+% of colored strands (factors). Some strands shared between edges.
+% Caption: "Factorized EAP: per-factor attribution for every edge"
+%
+% Panel C: "Attribution PCA" --- the scores_W matrix (edges x factors) with
+% a scree plot inset, then an arrow to a low-rank version. Below: a bar
+% showing CMD = 0.023 (PCA k=8) vs 0.052 (full) vs 0.071 (DAS k=4).
+% Caption: "SVD denoises the attribution tensor --- fewer dimensions, better circuits"
+%
+% This must be on page 1.
+%
+% REVIEWER: Figure 1 Panel C should NOT be PCA-centric if the headline
+% is the factorization itself. Consider: Panel C shows the family of
+% adapted methods (EAP -> factorized EAP, DAS -> factorized DAS) instead.
+
+\textbf{[FIGURE 1 --- NEED: Three-panel pipeline figure. (A) Standard EAP circuit
+with scalar edges. (B) Factorized circuit with per-factor edge bundles.
+(C) PCA denoising: scree plot + CMD comparison bar chart.]}
+
+% The approach, compressed
+
+[1 paragraph: We propose \emph{sparse weight factorization}: every weight
+matrix $W$ in a pretrained transformer is decomposed as $W = SF$, where
+$F$ is a shared overcomplete factor bank and $S$ is a sparse per-projection
+selector, trained by distillation on the composite QK and OV circuits.
+The model computes through factors --- $Wx = S(Fx)$ --- so factors are
+part of the computation, not a post-hoc reconstruction. This structural
+property makes existing circuit methods automatically produce per-factor
+scores: factorized EAP decomposes each edge score into a sum over
+per-factor contributions via a purely algebraic identity. Factorized DAS
+identifies which factors span the causal subspace. The contribution is
+the factorized model and the adapted methods; PCA sub-circuit
+decomposition is the primary tool applied to the factor-level scores,
+with Tucker decomposition providing independent validation.]
+
+% The punchline result
+
+% REVIEWER: "The contribution is the factorized model" --- a reviewer
+% will say "so you built a model. What did you LEARN from it?"
+% The answer: the IOI case study in Section 5.
+
+[1 paragraph: Our main finding is that per-factor attribution reveals
+structure invisible to scalar edge scores. PCA on the per-factor
+attribution tensor automatically decomposes circuits into interpretable
+sub-circuits --- groups of edges sharing the same factor subspace --- and
+Tucker decomposition independently recovers identical factor directions
+(cosine similarity 1.000, Grassmannian geodesic $\approx$ 0, 8/8
+top-edge match on IOI). This convergence of two mathematically different
+methods is strong evidence that the sub-circuits are real. PCA at
+auto-$k$ (90\% variance) requires no per-task tuning: IOI $k{=}108$,
+SVA $k{=}5$, GT $k{=}79$, Gender $k{=}190$, Capital $k{=}29$ ---
+adapting to circuit complexity automatically. The right unit of analysis
+is the \emph{factor subspace}: individual factor attribution is near
+chance (gauge-dependent), but the PCA/Tucker mode spans are
+gauge-invariant and causally meaningful. The factor bank also serves as
+a geometric inductive bias for causal variable localization: constrained
+PCA (restricting to the top 1\% of factors) matches DAS at 98.8\% IIA
+with zero training on regular examples, and initializing DAS from this
+subspace improves hard-example IIA from 73.5\% to 91.2\% despite
+starting 82.5$^\circ$ from the optimum. Factor-constrained subspaces
+]
+
+% Contributions (IOI paper style, numbered)
+
+[Contributions:
+\begin{enumerate}
+\item \textbf{Sparse weight factorization} ($W = SF$): a shared factor
+bank + sparse selectors, trained by composite-circuit distillation
+(QK, OV), achieving Pareto-optimal sparsity vs.\ fidelity across 7
+selector mechanisms and bank sizes from 1024 to 40000. The factorized
+model is causally equivalent to the pretrained model (CE gap $<$0.02
+nats, DAS IIA $\geq$0.97 bidirectional). (\S\ref{sec:factorization})
+
+\item \textbf{Factorized circuit methods}: algebraically lossless
+per-factor decomposition of EAP edge scores, extended to EAP-IG,
+EAP-GP, and DAS. Each adapted method returns standard outputs plus
+per-factor attribution at zero additional cost.
+(\S\ref{sec:factorized_methods}; proof in Appendix~\ref{app:eap_derivation})
+
+\item \textbf{Sub-circuit decomposition via factor subspaces}:
+PCA on the per-factor attribution tensor automatically decomposes any
+circuit into interpretable sub-circuits, each mediated by a distinct
+factor subspace (IOI: early heads $\to$ MLP0, S-inhibition fan-out,
+name movers $\to$ logits). Tucker decomposition independently recovers
+identical factor directions (cosine 1.000, Grassmannian geodesic
+$\approx$ 0), confirming the sub-circuits are real structure, not
+decomposition artifacts. The factor \emph{subspace} is gauge-invariant
+and causally meaningful; individual factors are not.
+(\S\ref{sec:analysis})
+
+\item \textbf{Causal variable localization via the factor manifold}:
+Constraining PCA to factor subspace matches DAS on regular examples
+(98.8\% IIA, zero training). Manifold-initialized DAS achieves 91.2\%
+hard IIA vs 73.5\% vanilla.
+% SOURCE: lib/factorized_das/RESULTS_CATALOG.md (IIA numbers)
+(\S\ref{sec:factorized_methods})
+
+\item \textbf{Attribution-causal orthogonality and the background/modulation
+decomposition} (NEW v6): The factor subspace explaining most attribution
+variance is $\sim$88\textdegree\ from the causally-active subspace across
+5 tasks, with a 14--40$\times$ activation-causal gap. Tucker C modes
+capture the modulation component --- necessary (removing 8 modes drops
+logit diff 21\%) but not sufficient (keeping only modes reverses logit
+diff to $-$30\%). Different corruptions route through partially distinct
+factor subspaces (principal angles 58--78\textdegree). Each circuit
+pathway uses nearly disjoint factor subsets (cross-pathway Jaccard
+$<$ 0.5\%). (\S\ref{sec:orthogonality})
+\end{enumerate}]
+
+
+% ============================================================
+% 2. BACKGROUND (~0.75 pages)
+% ============================================================
+
+\section{Background}
+
+% Open with what the reader needs, not a literature survey
+
+% REVIEWER: Must cite Syed et al. 2024, Nanda & Bloom 2022,
+% Conmy et al. 2023 (ACDC). Don't miss any.
+
+% --- 2.1 ---
+\subsection{Edge Attribution}
+
+[3-4 sentences: Attribution patching approximates activation patching
+via first-order Taylor expansion, giving per-module importance in O(1).
+EAP (Syed et al.\ 2024) extends this to edges --- the connection from
+writer $u$ to reader $v$ through the residual stream.
+State the EAP formula:
+$\Delta L_{uv} = \sum_n \langle r_u'^{(n)} - r_u^{(n)},\;
+\partial L / \partial \text{resid}_v^{(n)} \rangle$.
+Each edge gets one scalar: important, but no information about
+\emph{what} flows.]
+
+% --- 2.2 ---
+\subsection{Causal Abstraction}
+
+[3-4 sentences: Geiger et al.\ (2024) frame interpretability as alignment
+between a neural network and a causal model. DAS learns a rotation $R$
+that aligns the causal variable with the first $k$ axes, then swaps those
+$k$ dimensions between inputs. Interchange Intervention Accuracy (IIA):
+fraction where the patched model predicts the source answer. This
+identifies \emph{where} information is encoded but requires specifying
+the causal model and training $R$.]
+
+% --- 2.3 ---
+\subsection{MIB Evaluation Framework}
+
+[3-4 sentences: MIB (Mueller et al.\ 2025) standardizes evaluation.
+Track 1 measures circuit faithfulness at multiple sizes via activation
+patching; CPR = $\int_0^1 f(\mathcal{C}_k)\,dk$ (area under faithfulness
+curve, higher = better) and CMD = $\int_0^1 |1 - f(\mathcal{C}_k)|\,dk$
+(distance from perfect reproduction, lower = better).
+State the faithfulness formula:
+$f(\mathcal{C}, \mathcal{N}; m) = (m(\mathcal{C}) - m(\varnothing)) /
+(m(\mathcal{N}) - m(\varnothing))$.]
+
+
+% ============================================================
+% 3. SPARSE WEIGHT FACTORIZATION (~1 page)
+% ============================================================
+
+\section{Sparse Weight Factorization}
+\label{sec:factorization}
+
+% REVIEWER: "Why not just use SAEs?" This must be addressed HEAD-ON.
+% Key differences: (1) factors are in the model's forward pass,
+% (2) shared bank across all projections enables cross-layer tracking,
+% (3) no reconstruction error --- W = SF exactly (within distillation loss).
+% REVIEWER: "You trained a different model and are analyzing THAT, not
+% the original. How do you know the factorized model's structure reflects
+% GPT-2's structure and not an artifact of the factorization?"
+% Answer: model equivalence (Section 3.3) + the factorization is heavily
+% constrained (only S and F are free; all other params frozen from GPT-2).
+
+% --- 3.1 Architecture ---
+\subsection{Architecture}
+
+% Open with the conclusion (Perplexity guide principle)
+
+[Bolded opener: \textbf{Every weight matrix in the model can be faithfully
+decomposed as $W_i = S_i F$, where $F$ is a shared overcomplete factor
+bank and $S_i$ is a sparse selector, achieving 99\% sparsity with no
+CE degradation.}]
+
+% --- Architecture ---
+
+[1 paragraph: $F \in \mathbb{R}^{N_F \times d_m}$ is a factor bank
+whose rows are directions in the residual stream, shared across all
+projections ($W_Q, W_K, W_V, W_O, W_{\text{in}}, W_{\text{out}}$).
+$S_i \in \mathbb{R}^{d_h \times N_F}$ is a per-projection sparse
+selector. The bank is overcomplete ($N_F \geq d_m$; we use $N_F = 8192$
+for GPT-2's $d_m = 768$). Each channel in each head activates only a
+small subset of factors, so the selector matrix is highly sparse ---
+analogous to an SAE's encoder activations, but in \emph{weight space}.
+The key difference from SAEs: factors are part of the model's computation
+(the model literally computes $W_i x = S_i F x$), not a post-hoc
+decomposition of what the model outputs.]
+
+% --- 3.2 Why QK and OV, not individual weights (gauge freedom) ---
+\subsection{Distillation on Composite Circuits}
+
+[1 paragraph: We distill on the \emph{composite} circuits
+$QK_i = W_Q^i (W_K^i)^\top$ and $OV_i = W_V^i W_O^i$, not on
+individual weight matrices. This is necessary because of rotational
+gauge freedom: for any orthogonal $R$, replacing $W_Q \to W_Q R$
+and $W_K \to W_K R$ leaves the QK circuit unchanged but produces a
+completely different individual factorization. The composite circuits
+are gauge-invariant observables; matching them is both necessary and
+sufficient for faithful reproduction. Formal statement and proof in
+Appendix~\ref{app:gauge}.]
+
+% --- Training ---
+
+[2-3 sentences: Core loss: MSE on QK and OV circuits summed over layers.
+Sparsity via selector mechanism (DST or JumpReLU with straight-through
+estimator). Only $F$ and $S$ optimized; all other parameters copied
+from the pretrained model. Full training details in
+Appendix~\ref{app:training}.]
+
+% --- 3.3 Model Equivalence --- [NEW IN V4]
+\subsection{Model Equivalence}
+\label{sec:equivalence}
+
+% REVIEWER: "CE gap is not model equivalence. The model could have
+% the same CE but completely different internal representations."
+% Answer: we also show CREH L3 (DAS IIA bidirectional) and MAS >= 0.97.
+% REVIEWER: "Why always DAS for equivalence? What about other probes?"
+% Answer: CE is behavioral. DAS/MAS is representational. EAP recovery
+% is structural. Three independent methods at three levels.
+
+[Bolded opener: \textbf{The factorized model is not merely an approximation
+of GPT-2 --- it is causally equivalent. CE gap $<$0.02 nats, DAS IIA
+$\geq$0.97 bidirectional on IOI, and MAS confirms the factorized
+model's representations are interchange-compatible with GPT-2's.}]
+
+[1 paragraph: Three levels of equivalence evidence:
+(1) \textbf{Behavioral}: CE gap $<$0.02 nats at 99\% selector sparsity.
+    The factorized model produces the same next-token distribution as GPT-2.
+(2) \textbf{Representational}: DAS trained on GPT-2 representations achieves
+    IIA $\geq$0.97 when applied to the factorized model's representations,
+    and vice versa. This bidirectional interchange (MAS) confirms the
+    internal representations are structurally aligned, not just
+    input-output equivalent.
+(3) \textbf{Circuit-level}: EAP-IG on the factorized model recovers the
+    same circuit structure as on GPT-2 (same top edges, same head rankings).
+    The factorized model eliminates negative name movers --- heads that exist
+    in GPT-2 to cancel other heads' errors --- because the factorized
+    representation doesn't need that cancellation structure.]
+
+% REVIEWER: "Negative name mover elimination is interesting but you
+% buried it in one sentence. This could be a finding."
+% Consider: expand in Section 5 or Discussion.
+
+% --- 3.4 Pareto result ---
+\subsection{Sparsity--Fidelity Tradeoffs}
+
+% [FIGURE 2: Pareto frontier --- NEED to create or clean up from existing]
+% x-axis: average active factors per channel (L0). y-axis: cross-entropy loss.
+% GPT-2 baseline as horizontal line. Each point = one checkpoint.
+% Color by selector type (DST, JumpReLU, L1). DST dominates.
+% Clean, publication-quality version of the W&B scatter.
+\textbf{[FIGURE 2 --- NEED: Pareto frontier. CE vs L0/channel by selector
+type. DST reaches GPT-2 CE at $\sim$100 active factors/channel (99\% sparse).
+Horizontal line at GPT-2 baseline CE.]}
+
+[2 sentences: DST achieves Pareto-optimal tradeoffs: 99\% sparsity
+with $<$0.02 CE gap from GPT-2 ($\sim$3.25). The overcomplete factor bank
+($N_F = 8192 \gg d_m = 768$) enables extreme sparsity without
+information loss.]
+
+
+% ============================================================
+% 4. FACTORIZED CIRCUIT METHODS (~1 page) [NEW SECTION IN V4]
+% ============================================================
+
+\section{Factorized Circuit Methods}
+\label{sec:factorized_methods}
+
+% REVIEWER: "This is just substituting W=SF into existing formulas.
+% Is that really a contribution?"
+% Answer: Yes, because (1) the algebraic identity is non-obvious
+% (involves LayerNorm Jacobian), (2) it enables a FAMILY of methods,
+% not just one, (3) the resulting per-factor scores are a new object
+% nobody has had access to before, and (4) the closed-form version
+% avoids materializing factor activations entirely.
+%
+% REVIEWER: "You adapted 4 methods but only show detailed results
+% for EAP-IG. What about EAP-GP and DAS results?"
+% Must show at least CMD numbers for each adapted method, even briefly.
+
+[Bolded opener: \textbf{The $W = SF$ structure makes four existing
+circuit methods --- EAP, EAP-IG, EAP-GP, and DAS --- automatically
+produce per-factor attribution scores via algebraic decomposition,
+requiring no additional forward passes.}]
+
+% --- 4.1 Factorized EAP ---
+\subsection{Factorized EAP and EAP-IG}
+
+[1 paragraph: We first state standard EAP (Eq.~\ref{eqn:eap}): the edge
+score $\Delta L_{uv}$ between writer $u$ and reader $v$ is the sum over
+tokens of the writer's output difference dotted with the reader's gradient.
+Show the formula with shape annotations (as in Ivan's draft \S2.1). Then
+substitute $W_u^{o\top} = S_u F$ and $W_v^{in} = F^\top S_v^\top$,
+expand, and rearrange to get
+$\Delta L_{uv} = \sum_{i,j} \Delta L(u,i,v,j)$ (Eq.~\ref{eqn:feap}).
+The per-factor score $\Delta L(u,i,v,j)$ measures how much writing by
+module $u$ into factor $i$, as read by module $v$ through factor $j$,
+affects the loss. This decomposition is exact --- purely algebraic, no
+approximation. We present EAP (not EAP-IG) because the linear
+approximation makes the algebra exact; EAP-IG uses integrated gradients
+and the decomposition becomes approximate.
+Full derivation with LayerNorm Jacobian expansion in
+Appendix~\ref{app:eap_derivation}.]
+
+% --- Losslessness ---
+
+[1 paragraph: State the losslessness formally as a proposition.
+\textbf{Proposition 1} (Factorized EAP aggregates to EAP):
+$\Delta L_{uv} = \sum_{i=0}^{N_F} \sum_{j=0}^{N_F} \Delta L(u,i,v,j)$.
+This is immediate from the derivation --- factorized EAP is strictly
+more informative than standard EAP at zero additional cost (one forward
++ one backward pass, same as standard EAP). The closed-form score
+$\Delta L(u,i,v,j) = M_{ij} T_1^{(uv)} - \frac{1}{d_m} T_2^{(uv)}$
+(where $M$ is the factor Gram matrix and $T_1, T_2$ are sum-of-outer-products)
+enables efficient computation via einsums.
+Closed-form derivation in Appendix~\ref{app:closed_form}.]
+
+% --- 4.2 Factorized EAP-GP --- [NEW IN V4]
+\subsection{Factorized EAP-GP (GradPath)}
+
+[1 paragraph: EAP-GP (gradient path attribution) tracks gradients
+through the full computational graph. The $W = SF$ substitution
+applies identically: each GradPath edge score decomposes into
+per-factor contributions. Brief comparison of EAP-GP CMD vs
+EAP-IG CMD on IOI.]
+
+% --- 4.3 Factorized DAS --- [NEW IN V4, EXPANDED IN V5, REWRITTEN V5.5]
+\subsection{Factorized DAS and Causal Subspace Localization}
+\label{sec:factorized-das}
+
+% REVIEWER: "DAS on the raw model also finds a subspace. What's the
+% advantage of constraining to factor span?"
+% Answer: (1) Training-free constrained PCA matches DAS on regular
+% examples (98.8% IIA). (2) Factor-manifold initialization dramatically
+% improves DAS on hard examples (91.2% vs 73.5%). (3) Extensive ablation
+% shows that training is required for hard examples --- the manifold is
+% an initialization aid, not a substitute.
+
+% SOURCE: writeups/SUB_EDGE_RESULTS.md lines 73-82 (IIA 0.988 at k=2..16)
+% SOURCE: gradient_and_geodesic_preview_v2.tex (CPCA-init 91.2%, random-init 73.5%, strict IIA 100% at k=4)
+% SOURCE: artifacts/geodesic_line_search_5bases/ (5-bases geodesic results)
+% SOURCE: Modal hard-init-methods job (8 untrained methods results)
+% DATA: factorized_das results .pt files (per_proj_sel format)
+% DATA: artifacts/geodesic_line_search_5bases/geodesic_line_search_5bases_k1.json
+% DATA: artifacts/geodesic_line_search_5bases/geodesic_line_search_5bases_k4.json
+% DATA: Modal fc-results volume /hard_init_methods_k1/, /hard_init_methods_k4/
+
+\textbf{Standard IIA on regular examples is a deceptively easy metric:
+zero-training constrained PCA achieves 98.8\%, trained DAS achieves
+94--97\%, and even random baselines exceed 90\% because fewer than 2\%
+of examples are flippable.}
+Hard examples (logit margin $< 1.0$) are the only regime that
+differentiates methods.
+On hard examples, CPCA-initialized DAS achieves the best results of
+any initialization strategy (91.2\% at $k=1$, 97.1\% at $k=4$, and
+100\% strict IIA at $k=4$), while random-init DAS reaches only 73.5\%.
+Thirteen untrained methods and five structured-basis geodesic searches
+all fail to exceed the majority-class baseline (70.6\%) on hard examples,
+confirming that training is required --- but the factor manifold
+determines \emph{where} on the Grassmannian that training succeeds.
+
+\subsubsection{Regular Examples: CPCA Matches Trained DAS}
+
+% SOURCE: writeups/SUB_EDGE_RESULTS.md lines 73-82 (CPCA 98.8% IIA)
+% SOURCE: lib/factorized_das/RESULTS_CATALOG.md (DAS IIA numbers, layer choices)
+Standard DAS learns a rotation $R$ in $\mathbb{R}^{d_m}$.
+Factorized DAS constrains $R$ to the span of the factor bank via
+$U = F^\top A$ where $A \in \mathbb{R}^{N_F \times k}$ is sparse
+(group lasso penalty). But a simpler approach works for regular examples:
+\emph{constrained PCA} (CPCA) selects the top $\sim$1\% of factors by selector
+magnitude ($\sim$81 of 8192), projects activation deltas into this
+81-dimensional subspace, and takes the top-$k$ principal components.
+This zero-training method achieves 98.8\% IIA on IOI at Layer~9 ---
+compared to 21.3\% for unconstrained PCA at Layer~8. The factor bank
+collapses the search space from $\mathrm{Gr}(k, 768)$ to
+$\mathrm{Gr}(k, 81)$, making PCA sufficient where it normally fails.
+
+This near-perfect regular IIA is \emph{not} evidence that the causal
+variable is easy to find --- it reflects the metric's insensitivity.
+On the regular evaluation set, only 2/370 IOI and 5/380 SVA examples
+are flippable, so any reasonable direction achieves $\geq$99\% IIA.
+Hard examples are where methods actually separate.
+
+\subsubsection{Hard Examples: CPCA-Init DAS is the Best Strategy}
+
+% SOURCE: gradient_and_geodesic_preview_v2.tex Section 1.2 (CPCA-init 91.2%, random 73.5%)
+% SOURCE: gradient_and_geodesic_preview_v2.tex line 56 (strict IIA 100%/100% at k=4)
+% SOURCE: lib/factorized_das/modal_riemannian_das_experiment.py (Riemannian DAS 64%)
+% DATA: Modal fc-results volume /riemannian_das/ (2x2 design results)
+On hard examples (logit margin $< 1.0$, $\sim$8\% of data),
+CPCA alone achieves only 47--53\% IIA. But
+\emph{initializing} vanilla DAS from the CPCA direction ---
+then training in unconstrained $\mathbb{R}^{768}$ --- yields the best
+performance of any initialization strategy:
+91.2\% hard IIA at $k=1$ (100 steps), versus 73.5\% for random-init DAS.
+At $k=4$, CPCA-init DAS achieves 97.1\% IIA and \textbf{100\% strict IIA}
+on both IOI and SVA, while unconstrained PCA init achieves only
+66.7\%/90\% strict IIA.
+The CPCA direction is 82.5$^\circ$ from the DAS
+optimal (nearly orthogonal on $\mathrm{Gr}(1, 768)$) --- the factor
+manifold provides a better \emph{optimization basin}, not a better
+initial direction.
+More constraint is worse: Riemannian DAS (Stiefel manifold constraint)
+drops to 64\% on regular IOI. The factor manifold is a launch pad, not
+a prison.
+
+\begin{table}[h!]
+\centering
+\small
+\caption{DAS IIA on hard IOI examples (34 eval, Layer~8). CPCA-init unconstrained achieves the best result across all four conditions.}
+\label{tab:das-2x2}
+\begin{tabular}{lcc}
+\hline
+ & \textbf{Unconstrained} & \textbf{On-manifold (Riemannian)} \\
+\hline
+\textbf{Random init}   & 73.5\% & 88.2\% \\
+\textbf{CPCA init}     & \textbf{91.2\%} & 64.0\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Riemannian Gradient Decomposition}
+
+% SOURCE: gradient_and_geodesic_preview_v2.tex Section 1.1 (rho rises 26%->82.5%)
+% SOURCE: gradient_and_geodesic_preview_v2.tex Section 1.2 (geodesic interpolation, angular distances)
+% DATA: Modal fc-results volume /gradient_decomposition/ (per-step rho, angular trajectories)
+Why does CPCA initialization outperform all alternatives?
+We decompose each DAS gradient step into components tangent and normal
+to the factor manifold $\mathrm{Gr}(1, 81) \subset \mathrm{Gr}(1, 768)$.
+The manifold gradient fraction $\rho = \|\nabla_{\text{on}}\| / \|\nabla_{\text{tang}}\|$
+measures how much useful gradient signal lies along the factor manifold.
+
+Two findings explain CPCA-init's superiority:
+(1)~$\rho$ \emph{rises} from 26\% to 82.5\% for CPCA init, while
+staying flat at $\sim$50\% for unconstrained PCA init ---
+the factor manifold is a \emph{gradient attractor} (Figure~\ref{fig:grassmannian-landscape}).
+(2)~CPCA init converges to the global optimum (0.1$^\circ$ away);
+unconstrained PCA init converges to a local optimum 23.8$^\circ$ away,
+despite starting 17$^\circ$ closer.
+On $\mathrm{Gr}(4, 768)$, the effect is stronger: CPCA init converges to
+$0.59^\circ$ from optimal while unconstrained PCA gets stuck at $86.5^\circ$.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/grassmannian_landscape/grassmannian_landscape_v11_dark_optimal.png}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/grassmannian_landscape/grassmannian_landscape_v12_rho.png}
+\caption{\textbf{Grassmannian landscape for DAS training on hard IOI, $\mathrm{Gr}(1, 768)$.}
+\emph{Left:} IIA as a function of angle to the DAS optimal direction ($x$-axis) and
+factor manifold proximity ($y$-axis). The on-manifold init (blue, starting at 100\%
+proximity) follows a high-IIA ridge to the global optimum (star); the off-manifold
+init (orange, starting at $\sim$12\% proximity) gets trapped in a local optimum.
+\emph{Right:} Same landscape, $x$-axis replaced by manifold gradient fraction $\rho$.
+The on-manifold trajectory's $\rho$ rises from 0.26 to 0.83 (gradient attractor);
+the off-manifold trajectory stays flat at $\sim$0.35.}
+\label{fig:grassmannian-landscape}
+\end{figure}
+
+\subsubsection{Geodesic Line Search: Training-Free Methods Fail on Hard Examples}
+
+% SOURCE: lib/factorized_das/geodesic_line_search_5bases.py (experiment code)
+% SOURCE: lib/factorized_das/modal_geodesic_line_search_5bases.py (Modal wrapper)
+% DATA: artifacts/geodesic_line_search_5bases/geodesic_line_search_5bases_k1.json
+% DATA: artifacts/geodesic_line_search_5bases/geodesic_line_search_5bases_k4.json
+Can we find high-IIA directions without gradient descent?
+We implement a geodesic line search: Riemannian gradient at $Q_0$,
+30-point coarse sweep along the geodesic, 10-step ternary refinement
+($\sim$40 evaluations total, vs.\ 200 gradient steps for DAS).
+We compare five initialization bases --- factor bank (CPCA), SAE decoders,
+unconstrained PCA, probing directions, and random --- each with 10--11 starts.
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Geodesic line search IIA on hard IOI (34 eval, Layer~8). Mean $\pm$ std over 10--11 runs. The 70.6\% floor ($= 24/34$) is the majority-class baseline.}
+\label{tab:geodesic-5bases}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Basis} & \textbf{Mean ($k$=1)} & \textbf{Max} & \textbf{Mean ($k$=4)} & \textbf{Max} \\
+\hline
+Probing             & 81.3 $\pm$ 2.0 & 82.4 & 80.5 $\pm$ 3.0 & 82.4 \\
+Unconstrained PCA   & 72.7 $\pm$ 7.1 & 94.1 & 73.3 $\pm$ 7.9 & 97.1 \\
+Factor bank (CPCA)  & 70.6 $\pm$ 0.0 & 70.6 & 70.9 $\pm$ 0.9 & 73.5 \\
+SAE decoders        & 70.6 $\pm$ 0.0 & 70.6 & 71.1 $\pm$ 1.2 & 73.5 \\
+Random              & 70.9 $\pm$ 0.9 & 73.5 & 70.6 $\pm$ 0.0 & 70.6 \\
+\hline
+\textit{Trained DAS (CPCA init)}    & \multicolumn{2}{c}{\textit{94.1}} & \multicolumn{2}{c}{\textit{97.1}} \\
+\hline
+\end{tabular}
+\end{table}
+
+A single geodesic step is insufficient: nearly all bases converge to
+the majority-class baseline (70.6\% $= 24/34$). Probing, which is
+supervised, reaches 81\% but cannot flip the hard examples.
+The factor bank (CPCA) is trapped at the baseline from every start ---
+the geodesic cannot escape the local landscape.
+This is why CPCA \emph{initialization} for trained DAS works while
+CPCA alone does not: the factor manifold identifies the right basin,
+but reaching the optimum within that basin requires gradient descent
+through the IIA objective.
+
+\subsubsection{Comprehensive Untrained-Method Comparison}
+
+% SOURCE: lib/factorized_das/hard_init_methods.py (experiment code: 8 methods)
+% SOURCE: lib/factorized_das/modal_hard_init_methods.py (Modal wrapper)
+% DATA: Modal fc-results volume /hard_init_methods_k1/, /hard_init_methods_k4/
+We further test 8 zero-training or low-training methods:
+CPCA baseline, difference-in-means, top EAP factors (gradient-weighted
+attribution), logit gradient (1 backward pass), constrained probing
+(200 steps in factor subspace), LDA in factor subspace, hard-example
+CPCA (PCA on hard deltas only), margin-weighted CPCA, and iterative
+geodesic descent (5 Riemannian steps from CPCA).
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Hard-example IIA for untrained methods vs.\ trained DAS.
+All factor-constrained methods have manifold fraction $\approx 1.0$.
+No untrained method exceeds the majority-class baseline (70.6\%).}
+\label{tab:untrained-methods}
+\begin{tabular}{lcc}
+\hline
+\textbf{Method} & \textbf{Hard IIA ($k$=1)} & \textbf{Hard IIA ($k$=4)} \\
+\hline
+Iterative geodesic      & 70.6 & 70.6 \\
+LDA (factor subspace)   & 70.6 & 67.6 \\
+Constrained probing     & 67.6 & 64.7 \\
+Top EAP factors         & 64.7 & 47.1 \\
+Logit gradient          & 50.0 & 52.9 \\
+Margin-weighted CPCA    & 52.9 & 50.0 \\
+CPCA baseline           & 52.9 & 47.1 \\
+Hard-example CPCA       & 52.9 & 47.1 \\
+Difference-in-means     & 52.9 & 47.1 \\
+\hline
+Trained DAS (CPCA init) & \textbf{91.2} & \textbf{97.1} \\
+Trained DAS (random)    & 73.5 & --- \\
+\hline
+\end{tabular}
+\end{table}
+
+No untrained method exceeds the majority-class baseline (70.6\%).
+The 70.6\% barrier corresponds to 24/34 examples that are already
+correctly predicted; the remaining 10 require the intervention to
+\emph{flip} the model's prediction. At 70.6\%, none of these 10 are
+flipped. Only trained DAS breaks through, and CPCA-init DAS breaks
+through the farthest.
+
+Hard-example CPCA (training PCA only on hard deltas) provides no
+benefit over standard CPCA --- the hard examples do not occupy a
+spectrally distinct subspace. They differ in \emph{degree} (smaller
+logit margin), not \emph{kind} (different direction).
+
+\paragraph{Takeaway.}
+Regular IIA is not the right metric for evaluating causal variable
+discovery --- it is too easy, saturating at $\geq$94\% for any
+reasonable method. Hard examples are where methods differentiate, and
+on hard examples CPCA-initialized DAS is the best strategy we tested:
+91.2\% at $k=1$, 97.1\% at $k=4$, and 100\% strict IIA at $k=4$.
+The factor manifold provides a $20\times$ search space reduction
+($\mathrm{Gr}(k, 81)$ vs.\ $\mathrm{Gr}(k, 768)$), places
+initialization in the global optimum's basin of attraction
+(Figure~\ref{fig:grassmannian-landscape}), and acts as a gradient
+attractor during training ($\rho$ rises from 26\% to 83\%).
+It cannot replace training --- but it determines whether training
+finds the right answer.
+
+% --- 4.4 The attribution tensor ---
+\subsection{The Per-Factor Attribution Tensor}
+
+[1 paragraph: For circuit ranking, we marginalize over the reader
+factor to get a matrix $\text{scores}_W \in \mathbb{R}^{n_{\text{edges}}
+\times N_F}$ (69,865 $\times$ 8,192 for GPT-2 IOI). Each row is an
+edge's factor-attribution profile. Standard EAP is the row-sum
+(collapsing factor dimension). Factorized EAP preserves the full
+factor profile per edge. Or keep the 3D tensor
+$\mathbb{R}^{n_w \times n_r \times N_F}$ for Tucker decomposition.
+The question is: what is the intrinsic dimensionality of this
+factor-attribution space?]
+
+
+% ============================================================
+% 5. FACTOR-LEVEL CIRCUIT ANALYSIS: IOI CASE STUDY (~2 pages)
+% ============================================================
+
+\section{Factor-Level Circuit Analysis: IOI Case Study}
+\label{sec:analysis}
+
+% REVIEWER: "This is all on one task (IOI). How do you know it generalizes?"
+% Answer: concentration analysis is on 3 tasks. Cross-architecture is
+% in Section 6. But IOI is the worked example.
+% REVIEWER: "You're analyzing the factorized model, not GPT-2.
+% Everything you find could be an artifact of the factorization."
+% Answer: Section 3.3 establishes causal equivalence. The factorized
+% model preserves GPT-2's circuits (same edges, same rankings).
+% The factor structure is HOW the preserved circuits are implemented
+% in the factorized representation.
+
+[1 paragraph: We demonstrate what per-factor attribution reveals using
+IOI as the primary worked example, with PCA decomposition across 5 tasks
+(IOI, SVA, Greater-Than, capital-country, gender bias). PCA on the
+flattened attribution tensor automatically decomposes circuits into
+sub-circuits: groups of edges sharing the same factor subspace. Each
+principal component defines a ``factor direction'' --- edges loading on
+the same PC use the same factor subspace to communicate, forming a
+coherent sub-circuit. Tucker decomposition of the full 3D tensor
+independently recovers identical factor directions (cosine similarity
+1.000, 8/8 top-edge match), confirming this structure is real. All use
+checkpoint atomic-sweep-40 (8192 factors, DST selector).]
+
+% --- 5.1 PCA Sub-Circuit Decomposition ---
+\subsection{PCA Sub-Circuit Decomposition}
+
+[Bolded opener: \textbf{PCA on the flattened attribution tensor
+$\text{scores}_W \in \mathbb{R}^{(n_w \cdot n_r) \times N_F}$
+automatically decomposes any circuit into interpretable sub-circuits,
+each mediated by a distinct factor subspace, with auto-$k$ at 90\%
+explained variance requiring no per-task tuning.}]
+
+% SOURCE: Auto-k values computed in pca_multi_task_subcircuits.py (90% cumulative variance threshold)
+% DATA: /results/das_eap/atomic-sweep-40/multi_task_pca/{task}/scores_WR_ig10.pt
+% --- The tensor and why PCA works ---
+
+[1 paragraph: The factorized attribution tensor
+$\text{scores}_W \in \mathbb{R}^{n_w \times n_r \times N_F}$ assigns
+each edge a vector in $\mathbb{R}^{N_F}$ rather than a scalar. Flattening
+to $\mathbb{R}^{(n_w \cdot n_r) \times N_F}$ and applying truncated SVD
+yields principal components --- orthogonal directions in factor space ---
+and per-edge loadings on each component. Edges loading on the same PC
+share a factor subspace: they communicate through the same subset of
+factors and form a coherent sub-circuit. The number of components $k$ is
+set automatically at the 90\% variance threshold: IOI $k{=}108$,
+SVA $k{=}5$, GT $k{=}79$, Gender $k{=}190$, Capital $k{=}29$. This
+requires no per-task tuning and adapts to circuit complexity ---
+structurally simple circuits (SVA) concentrate variance in few
+components while complex circuits (Gender, IOI) spread it across many.]
+
+% --- Tucker equivalence ---
+\subsection{Tucker Decomposition Recovers Identical Factor Directions}
+\label{sec:tucker_equivalence}
+
+[Bolded opener: \textbf{Tucker decomposition of the full 3D tensor
+$\text{scores}_W \approx \mathcal{G} \times_1 U_w \times_2 U_r \times_3 U_f$
+recovers factor modes $U_f$ that are identical to the PCA principal
+components (cosine similarity 1.000, Grassmannian geodesic distance
+$\approx$ 0, 8/8 top-edge match), providing independent validation that
+the sub-circuit structure is real.}]
+
+[1 paragraph: Tucker decomposition preserves the 3D structure of the
+attribution tensor, yielding writer modes $U_w$, reader modes $U_r$,
+factor modes $U_f$, and a core tensor $\mathcal{G}$. The factor modes
+$U_f \in \mathbb{R}^{N_F \times r_3}$ identify directions in factor
+space --- the same object PCA finds from the flattened matrix. On IOI
+with Tucker ranks $(10,10,8)$: each of the 8 Tucker factor modes aligns
+with a PCA PC at $|\cos\theta| \geq 0.998$; the cross-method cosine
+similarity matrix is a near-perfect identity matrix (all off-diagonal
+entries $< 0.04$); and every matched pair identifies the same dominant
+edge. This convergence of two mathematically different methods ---
+PCA maximizes variance of the flattened matrix, Tucker minimizes
+reconstruction error of the 3D tensor --- is strong evidence that the
+factor sub-circuits reflect genuine structure in the attribution tensor,
+not artifacts of the decomposition. Tucker's additional writer and reader
+modes are fully determined by the (shared) factor modes: each factor
+direction is associated with a single dominant writer-reader pattern,
+so the extra dimensions add no information beyond what the PCA edge
+loadings already contain.]
+
+% SOURCE: pca_tucker_agreement computed in modal_all_figures.py
+% DATA: pca_tucker_agreement.json (cosine_matrix, geodesic_matrix)
+% VERIFIED: Previous session output showed cos=1.000 on all 8 matched pairs
+% [FIGURE --- Agreement matrix]
+\textbf{[FIGURE --- PCA vs Tucker factor direction agreement.
+8$\times$8 $|\cos|$ matrix = perfect diagonal. Geodesic distance
+matrix = all zeros on diagonal, $\pi/2$ off-diagonal. One compact
+panel suffices; no side-by-side comparison needed since the methods
+are identical. See pca\_tucker\_geodesic\_agreement.png.]}
+
+% --- Method and rank selection ---
+
+\subsubsection{Method and Rank Selection}
+
+[1 paragraph: We compute Tucker decomposition via Higher-Order SVD (HOSVD)
+initialization followed by Alternating Least Squares (ALS) refinement,
+using tensorly. Ranks $(r_1, r_2, r_3)$ are selected by two criteria:
+(1) \textbf{variance elbow}: explained variance saturates at $(10, 10, 8)$
+--- increasing to $(15, 15, 8)$ adds $<$2\% variance, while $(5, 5, 4)$
+loses 20\% (Figure~\ref{fig:rank_sweep}); (2) \textbf{core tensor
+concentration}: at $(10, 10, 8)$, only 5 of 800 core entries account for
+50\% of total energy, and 25 entries for 90\%. Higher ranks add near-zero
+entries without improving the decomposition. The core tensor's extreme
+sparsity is the rank justification: the circuit is dominated by a handful
+of writer-reader-factor interactions, and the decomposition has captured
+all of them.]
+
+% [FIGURE 3: Rank selection]
+\textbf{[FIGURE 3 --- NEED: Two-panel rank justification.
+Left: Variance explained vs Tucker rank config ---
+(5,5,4), (8,8,6), (10,10,8), (12,12,8), (15,15,8), (20,20,16).
+Elbow at (10,10,8).
+Right: Cumulative core tensor energy vs number of entries (sorted by
+magnitude). At (10,10,8): 5 entries = 50\%, 25 = 90\%, 800 total.
+Shows extreme sparsity.]}
+
+\subsubsection{A Priori Rank Selection via Effective Rank}
+
+[Bolded opener: \textbf{The effective rank per mode --- computed by SVD
+on each unfolding of the attribution tensor before Tucker --- predicts
+both the optimal Tucker configuration and whether Tucker will improve
+circuit scoring.}]
+
+[1 paragraph: Before running Tucker, we compute the effective rank of
+each mode by SVD on the mode-$n$ unfolding, measuring the number of
+singular values needed for 90\% of the energy. This gives an a priori
+diagnostic:]
+
+\textbf{[TABLE 1a --- Effective rank per mode across tasks.]}
+% Mode             | IOI | SVA | GT  | Hypernymy | Cap-Country | Gender
+% Writers  (90%)   | 13  | 5   | 10  | TBD       | TBD         | TBD
+% Readers  (90%)   | 17  | 1   | 10  | TBD       | TBD         | TBD
+% Factors  (90%)   | 51  | 5   | 51  | TBD       | TBD         | TBD
+% s1/s2 ratio (rd) | 2.5 | 8.0 | 5.8 | TBD       | TBD         | TBD
+
+[1 paragraph: SVA's reader effective rank is 1 --- a single reader mode
+(m0, MLP layer 0) captures 90\% of the reader-mode energy, with an
+$\sigma_1/\sigma_2$ ratio of 8.0. This means the reader dimension is
+trivial: all circuit edges route through a single downstream target,
+and Tucker's reader decomposition reduces to a scalar multiplier that
+cannot change edge rankings. IOI (reader rank 17) and GT (reader rank 10)
+have multi-dimensional reader structure that Tucker can exploit. The
+effective rank table is both a rank-selection guide (set $r_n$ at or
+above the 90\% effective rank) and a diagnostic of circuit complexity:
+rank-1 modes indicate structurally simple circuits where the corresponding
+dimension offers no denoising opportunity.]
+
+\subsubsection{Scoring Results Across Tasks}
+
+[Bolded opener: \textbf{PCA at auto-$k$ (90\% variance) improves or
+matches EAP-IG CMD on 4/5 tasks with zero tuning. Tucker matches PCA's
+factor directions exactly but requires per-task rank selection to achieve
+its best CMD, and adaptive rank selection (variance-threshold) fails
+catastrophically.}]
+
+% SOURCE: tucker_deep_dive/TUCKER_ANALYSIS_COMPLETE.md Section 2 "Results"
+% DATA: das_eap/atomic-sweep-40/tucker_scoring/{task}/tucker_scoring.json
+% PCA CMD numbers from modal_pca_scoring_variants.py runs
+% [TABLE 1b: Scoring results]
+\textbf{[TABLE 1b --- PCA and Tucker scoring vs standard EAP-IG.]}
+% Task    | EAP-IG CMD | PCA CMD (auto-k@90%) | Best Tucker CMD | Tucker config
+% IOI     | 0.032      | 0.021 (k=128)  +34%  | 0.013 (10,10,8)   +59%
+% SVA     | 0.015      | 0.014 (k=512)  +5%   | 0.022 (worse)
+% GT      | 0.030      | 0.018 (k=256)  +40%  | 0.018 (20,20,16)  +39%
+% Gender  | 0.017      | 0.013 (k=512)  +27%  | 0.017 (20,20,16)  +2%
+% Capital | 0.021      | 0.025 (k=64)   worse  | 0.021 (no improvement)
+
+[1 paragraph: PCA with auto-$k$ at 90\% variance is the universal
+scoring method: it improves CMD on IOI (+34\%), GT (+40\%), Gender
+(+27\%), and SVA (+5\%) with no per-task tuning. Tucker at its
+best fixed ranks matches or exceeds PCA on IOI (+59\%) and GT (+39\%),
+but requires per-task rank selection --- there is no universal Tucker
+configuration. Critically, adaptive Tucker (setting ranks to mode
+effective ranks at 50--90\% variance) is catastrophically worse than
+EAP-IG (CMD 10--27$\times$ higher), because Tucker's scoring value
+comes from aggressive compression/denoising, not faithful reconstruction.
+PCA operates at 90\% variance (gentle denoising); Tucker must operate
+at $\sim$50--60\% variance (aggressive denoising) to improve scoring,
+but the optimal aggressiveness varies by task. PCA's simplicity and
+universality make it the recommended default; Tucker's value is as an
+interpretability tool (\S\ref{sec:tucker_equivalence}), not a scoring
+method.]
+
+% [TABLE 1c: Combined Tucker results across tasks]
+\textbf{[TABLE 1c --- NEED: Combined table with effective rank, optimal
+Tucker config, CMD, core tensor sparsity across all 5 tasks.]}
+% This is the main results table for the paper.
+
+% --- Interpretable modes ---
+
+\subsubsection{Interpretable Sub-Circuit Modes}
+
+% SOURCE: tucker_deep_dive/FINDINGS.md (IOI sub-circuit table, lines 37-52)
+% DATA: tucker_deep_dive/sub_circuits_ioi.png (top 10 sub-circuits by core energy)
+% CROSS-REF: Tucker factor modes match PCA PCs at cos=1.000 (pca_tucker_agreement.json)
+[Bolded opener: \textbf{PCA automatically decomposes IOI into three
+functional groups --- corresponding to known sub-circuit components ---
+without any supervision, circuit labels, or causal model specification.}]
+
+[1 paragraph: The 8 principal components of the IOI attribution tensor
+separate into three clean functional groups:
+\begin{itemize}
+\item \textbf{PC0--PC3 (47\% variance):} Four L0 attention heads
+(a0.h1, a0.h4, a0.h5, a0.h3) writing to MLP layer 0 (m0). Each head
+occupies its own PC --- they use \emph{different factor subspaces} to
+write to the same reader, which is why they separate into 4 components.
+These are the duplicate-token and early-processing heads from Wang et al.\ (2023).
+\item \textbf{PC4--PC6 (11\% variance):} a5.h5 (the S-inhibition head)
+fanning out to mid-layer readers: m5, a6.h3.Q, m6, a7.h0.K, a7.h11.Q,
+a8.h10.Q, a8.h11.K. Different PCs capture different reader targets of
+the same writer, with different factor subspaces mediating each pathway.
+\item \textbf{PC7 (2\% variance):} Name mover heads (a9.h9, a9.h6,
+a10.h7, a11.h10) writing to logits. The final output circuit.
+\end{itemize}
+This is the core finding: \textbf{IOI is not one circuit --- it is a
+composition of several sub-circuits, each mediated by a distinct factor
+subspace.} The factor bank provides the decomposition; PCA merely
+reveals it.
+
+% NOTE: The clustering is fully unsupervised (PCA on the attribution
+% tensor, no labels). The role NAMES ("duplicate-token", "S-inhibition",
+% "name mover") come from matching discovered head groups to Wang et al.'s
+% prior annotations. Frame carefully: "PCA discovers head groupings that
+% correspond to known circuit roles" --- not "PCA discovers the roles."
+% The discovery is the grouping + factor subspace separation; the naming
+% is post-hoc identification with existing labels.]
+
+% [FIGURE 4: Layer-aggregated sub-circuit heatmap]
+\textbf{[FIGURE 4 --- HAVE: Layer-aggregated PCA sub-circuit heatmap.
+8 panels, one per PC. Each panel is a 13$\times$13 (writer layer $\times$
+reader layer) heatmap showing where that PC's energy is concentrated.
+PC0--3 light up embed/L0 $\to$ L0. PC4--6 light up L5 $\to$ L5/L6/L7.
+PC7 lights up L9/L10/L11 $\to$ logits. Clean separation of the three
+functional groups. See pca\_layer\_heatmap.png.
+
+Also: zoomed heatmap showing top 15 edges per PC with head names and
+numeric loadings. See pca\_subcircuit\_zoomed.png.
+
+Also: per-task versions with 8 PCs each, showing that different tasks
+have different layer structure. See pca\_layer\_heatmap\_\{task\}.png.]}
+
+[1 paragraph: The layer-aggregated view (Figure~4) collapses the
+157$\times$445 edge tensor to 13$\times$13 (writer layer $\times$
+reader layer) per PC, making the sub-circuit structure immediately
+visible. Each PC lights up a different layer pair: PC0--3 concentrate
+in embed/L0 $\to$ L0 (early processing), PC4--6 in L5 $\to$ L5--L8
+(S-inhibition fan-out), PC7 in L9--L11 $\to$ logits (output). This
+decomposition requires no supervised labels, no causal model
+specification, and no additional forward passes --- only SVD on the
+attribution matrix.]
+
+% --- NEW v6: Factor overlap across circuit stages ---
+
+\subsubsection{Each Edge Uses a Distinct Factor Subset}
+\label{sec:factor_overlap}
+
+% SOURCE: today's session (June 19 2026); TUCKER_CIRCUIT_SECTION_FOR_PAPER.md
+% DATA: fig3_factor_overlap_stages_v2.png, fig1_per_edge_factor_fingerprints.png,
+%       fig2_qkv_factor_sharing.png (all in BATCH2/)
+
+[Bolded opener: \textbf{Circuit stages use nearly disjoint factor subsets.
+Even edges within the same pathway share only 1.8--3.7\% of their top-20
+factors, and cross-pathway sharing drops to $<$0.5\%.}]
+
+[1 paragraph: For each of the four canonical IOI pathways
+(Dup$\to$Ind, Prev$\to$Ind, Ind$\to$SInh, SInh$\to$NM), we pool the
+top-20 factors per edge (by attribution magnitude) and compute pairwise
+Jaccard similarity. Within-pathway Jaccard ranges from 0.018
+(Dup$\to$Ind) to 0.037 (Ind$\to$SInh). Cross-pathway Jaccard is
+0.001--0.004. Each edge operates through its own $\sim$20 factors out
+of the 8192-dimensional bank. This is not cherry-picking: the pattern
+holds across all 6 pathway pairs. Even edges doing the \emph{same job}
+(e.g., two S-inhibition$\to$name-mover connections) use almost entirely
+different factors --- each edge has a unique factor fingerprint.]
+
+% [FIGURE: Factor overlap heatmap]
+\textbf{[FIGURE --- HAVE: 4$\times$4 factor overlap heatmap across IOI
+circuit stages. Diagonal (within-pathway) = 0.018--0.037. Off-diagonal
+(cross-pathway) = 0.001--0.004. YlOrRd colormap, values 0--0.04.
+See fig3\_factor\_overlap\_stages\_v2.png in BATCH2/.
+Caption should explain: diagonal values are NOT self-similarity (which
+would be 1.0) but mean pairwise Jaccard between different edges within
+the same stage.]}
+
+\subsubsection{Per-Edge Factor Fingerprints and Q/K/V Factor Sharing}
+\label{sec:factor_fingerprints}
+
+% SOURCE: fig1_per_edge_factor_fingerprints.png, fig2_qkv_factor_sharing.png
+
+[1 paragraph: Per-edge factor fingerprints confirm the disjointness
+finding at individual edge resolution: the top-20 factors for each
+Ind$\to$SInh edge are largely non-overlapping, with different edges
+using different factor channels to carry information between the same
+head pairs. Q/K/V projections within a single head use partially
+overlapping but not identical factor sets --- Q and K share more
+factors with each other than with V, consistent with the $QK^\top$
+attention-score duality observed in the 4D Tucker decomposition
+(\S\ref{app:tucker_4d}).]
+
+% [FIGURE: Per-edge fingerprints + Q/K/V sharing]
+\textbf{[FIGURE --- HAVE: Left: Per-edge factor fingerprints for the 8
+Ind$\to$SInh edges (top-20 factors each, binary heatmap showing which
+factors each edge uses). Right: Q/K/V factor sharing for 4 IOI heads
+with overlap stats.
+See fig1\_per\_edge\_factor\_fingerprints.png and
+fig2\_qkv\_factor\_sharing.png in BATCH2/.]}
+
+\subsubsection{Cross-Task Factor Disjointness}
+\label{sec:cross_task_factors}
+
+% SOURCE: SUB_EDGE_DECOMPOSITION_V4.md
+
+[1 paragraph: At k=10, 76\% of the most-attributed factors are
+task-disjoint (38 of 50 unique across 5 tasks). Per-edge Jaccard is
+0.007 at k=10, with 89\% of edges having zero factor overlap between
+task pairs. Tasks use the same factor bank but activate different
+subsets. This is consistent with the cross-pathway disjointness within
+IOI: the factor bank provides a large shared vocabulary, but each
+circuit edge --- within or across tasks --- selects its own sparse
+subset.]
+
+% --- Tucker as interpretability tool on pre-identified circuits ---
+
+\subsubsection{Tucker on Pre-Identified Circuits}
+
+[1 paragraph: Tucker can also be applied to the \emph{circuit sub-tensor}
+--- the top-$k$\% edges pre-identified by standard EAP-IG. On the top-1\%
+sub-tensor (698 edges), Tucker (10,10,8) explains 93\% variance on IOI,
+95\% on SVA, 79\% on GT. The core tensor is sparse on all three tasks:
+3--5 entries for 50\% energy. Writer and reader modes are near-axis-aligned
+(loading $>$0.99 on individual heads) across all tasks. \emph{This confirms
+that Tucker's modular decomposition is a general property of circuit
+sub-tensors, not an IOI artifact.} However, the interpretable sub-circuit
+structure (a5.h5 $\to$ a9.h9) only emerges for IOI; SVA and GT are
+dominated by infrastructure pathways (layer-0 heads $\to$ MLP0).]
+
+% --- Q/K/V separation ---
+
+\subsubsection{Q/K/V Separation Is Task-Diagnostic}
+
+% REVIEWER: "Is this IOI-specific or general?"
+% Answer: It's task-diagnostic. IOI separates, SVA doesn't. The pattern
+% tells you about the circuit type, not about the method.
+
+[1 paragraph: Reshaping the 3D tensor into 4D by separating reader
+projections (writers $\times$ reader\_heads $\times$ projection $\times$
+factors) reveals whether Q, K, and V carry distinct factor subpopulations.
+On IOI, the three projection modes are $>$99.9\% pure: each mode loads
+on exactly one of Q, K, or V, with a small but consistent Q$\leftrightarrow$K
+mixing coefficient (0.020). On SVA, Q and K \emph{do not separate}:
+the projection modes mix Q and K at 0.85/0.53. This is structurally
+informative: IOI uses distinct factor subpopulations for attention-pattern
+(Q/K) vs value-routing (V) because the circuit has separate roles for
+``where to look'' vs ``what to match.'' SVA's Q and K are coupled because
+subject-verb agreement works through the joint attention score $QK^\top$
+--- the same factors help Q find number-bearing subjects and K signal
+number information. The Q/K mixing pattern is diagnostic of circuit type:
+identity matrix = distinct-role circuit; Q/K merged = joint-attention
+circuit. (Appendix~\ref{app:tucker_dimensionality} compares 3D, 4D, and
+6D decompositions.)]
+
+% --- Tucker scoring limitation ---
+
+\subsubsection{Scoring vs.\ Interpretability}
+
+[1 paragraph: PCA and Tucker serve complementary roles that happen to
+converge on the same decomposition. As a \emph{scoring method}, PCA at
+auto-$k$ is universal and requires no tuning; Tucker at fixed low ranks
+can beat PCA on specific tasks (IOI: 0.013 vs 0.021) but requires
+per-task configuration and fails catastrophically with adaptive ranks.
+As an \emph{interpretability tool}, both methods decompose circuits into
+the same sub-circuits (cosine 1.000) --- PCA is simpler with one
+hyperparameter $k$ vs three ranks. The principled recommendation:
+use PCA for both scoring and interpretability; cite Tucker equivalence
+as validation that the discovered sub-circuits are method-independent.]
+
+
+% ============================================================
+% 6. EXPERIMENTAL VALIDATION (~2 pages)
+% ============================================================
+
+\section{Experimental Validation}
+\label{sec:experiments}
+
+% Grokking-style "lines of evidence" opener
+
+[1 paragraph: We validate the factorization and per-factor attribution
+with four lines of evidence: (1) null controls (\S6.1),
+(2) metric robustness (\S6.2),
+(3) circuit faithfulness comparison (\S6.3),
+and (4) split-half stability (\S6.4).
+All experiments use GPT-2 Small with $N_F = 8192$ (DST
+selector, checkpoint atomic-sweep-40).]
+
+% --- 6.1 ---
+\subsection{Null Controls}
+
+[1 paragraph: Three null baselines. (i) Random 8D subspaces in
+$\mathbb{R}^{8192}$ (20 trials): project scores$_W$, evaluate CMD.
+Should be $\gg$0.052 (worse than using all factors). (ii) Shuffled
+factors (20 trials): permute factor columns of scores$_W$, run PCA $k=8$,
+evaluate CMD. Should be $\approx$0.052 (PCA on destroyed structure
+gives no benefit). (iii) Full-factor baseline: CMD = 0.052. PCA's
+0.023 is significant if it beats all controls by a wide margin.]
+
+% Results pending from Modal job
+
+% --- 6.2 ---
+\subsection{Metric Robustness}
+
+% [FIGURE 6: Grassmannian angles --- NEED]
+% Heatmap: 5x5 matrix of mean principal angles between PCA subspaces.
+% logit_diff-prob_diff cluster (27 deg), entropy-logit_diff far (82 deg).
+% Color scale: blue (0 deg, aligned) to red (90 deg, orthogonal).
+\textbf{[FIGURE 6 --- NEED: Grassmannian angle heatmap, 5 metrics.
+logit\_diff vs prob\_diff = 27\textdegree\ (aligned),
+entropy vs logit\_diff = 82\textdegree\ (orthogonal).]}
+
+[1 paragraph: PCA computed independently with five EAP-IG metrics
+(logit\_diff, prob\_diff, gated\_logit\_diff, log\_prob, entropy).
+\textbf{Finding}: the IO-specific metrics (logit\_diff, prob\_diff) share
+a common subspace (mean angle 27\textdegree) and both yield strong CMD
+improvement (2.3$\times$, 2.1$\times$). Global metrics (entropy) produce
+nearly orthogonal subspaces (82\textdegree) and no CMD improvement.
+This is the correct behavior: the PCA subspace reflects \emph{what the
+metric optimizes}, not an artifact of the factorization. The subspace
+is stable across metrics that measure the same causal distinction.]
+
+% [TABLE 3: Per-metric CMD --- HAVE]
+\textbf{[TABLE 3: Per-metric results. 5 rows (one per metric):
+variance explained at $k=8$, full CMD, PCA $k=8$ CMD, improvement ratio.]}
+
+% --- 6.3 ---
+\subsection{Circuit Faithfulness}
+
+% [FIGURE 7: Faithfulness curves --- NEED]
+% Two panels (or one overlaid):
+% Left: faithfulness f(k) vs proportion of circuit kept.
+%   Lines: standard EAP, factorized EAP (full), PCA k=8, DAS k=4.
+% Right (or inset): CMD/CPR bar chart for each method.
+\textbf{[FIGURE 7 --- NEED: Faithfulness curves. Standard EAP vs factorized
+EAP (full) vs PCA $k=8$ vs Tucker (10,10,8). x-axis: proportion of circuit
+kept. y-axis: normalized faithfulness.]}
+
+[1 paragraph: Standard MIB faithfulness evaluation. Compare methods
+at all circuit sizes $k \in [0.001, 1]$: (i) standard EAP (edges ranked
+by $|\Delta L_{uv}|$), (ii) factorized EAP with all factors
+(sub-edges ranked by $|\Delta L(u,i,v,j)|$), (iii) PCA $k=8$ projected
+factorized EAP, (iv) Tucker (10,10,8). Report CMD and CPR
+for each. The key comparison is (ii) vs (iii): PCA projection improves
+CMD by 2.3$\times$, confirming the denoising effect.]
+
+% --- 6.4 ---
+\subsection{Split-Half Stability}
+
+[1 paragraph: PCA computed independently on two disjoint halves of
+the IOI prompts (100 each). Principal angles between the half-subspaces
+measure stability. Report mean angle at $k=4$, $k=8$, $k=16$.
+Expected: $<$15\textdegree\ for top directions confirms the subspace
+is a property of the circuit, not prompt-specific overfitting.
+Also compare each half to the full-prompt PCA.]
+
+% Results pending from Modal job
+
+
+% ============================================================
+% 7. ATTRIBUTION VS CAUSATION (NEW v6, ~3 pages)
+% ============================================================
+
+\section{Attribution and Causation Are Orthogonal in Factor Space}
+\label{sec:orthogonality}
+
+% This section is structured to be extractable into a standalone paper
+% if desired. It depends on Sections 3-5 (factorization, per-factor
+% attribution, sub-circuit decomposition) but the findings are self-contained.
+
+% --- 7.1 Threeway Subspace Comparison ---
+\subsection{The Threeway Subspace Comparison}
+
+% SOURCE: SUB_EDGE_DECOMPOSITION_V8.md; outline_ELLIOT_v2.tex lines 183-226
+% DATA: Modal fc-results volume /threeway_subspace_comparison/
+
+[Bolded opener: \textbf{The factor subspace that explains the most
+attribution variance is nearly orthogonal to the subspace where causal
+interventions succeed --- $\sim$88\textdegree\ across 5 tasks.}]
+
+[1 paragraph: PCA, Tucker, and DAS each identify a subspace of the
+8192-d factor bank. The first two maximize explained variance in the
+attribution tensor; the third maximizes causal interchange accuracy.
+We compare all three pairwise via principal angles on the Grassmannian:]
+
+\begin{center}
+\small
+\begin{tabular}{lcc}
+\toprule
+\textbf{Pair} & \textbf{Mean cosine} & \textbf{Mean angle} \\
+\midrule
+PCA vs Tucker & 1.000 & 0\textdegree \\
+PCA vs DAS    & $\sim$0.03 & $\sim$88\textdegree \\
+Tucker vs DAS & $\sim$0.03 & $\sim$88\textdegree \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+[1 paragraph: PCA and Tucker agree perfectly (as established in
+\S\ref{sec:tucker_equivalence}) but both are $\sim$88\textdegree\ from
+DAS across IOI, SVA, GT, Gender, Capital. The factors explaining the
+most variance in ``how information flows'' are not the factors that
+matter for ``what the model computes.'' This is not a failure of PCA
+or Tucker --- it is a geometric fact about the relationship between
+attribution structure and causal structure in factor space.]
+
+% --- 7.2 Activation-Causal Gap ---
+\subsection{The Activation-Causal Gap}
+
+% SOURCE: SUB_EDGE_DECOMPOSITION_V8.md; outline_ELLIOT_v2.tex lines 236-256
+% DATA: Modal fc-results volume /activation_causal_gap/
+
+[Bolded opener: \textbf{Factors activate at $r = 0.97$--$0.99$
+correlation across tasks but have causal effects at $r = 0.03$--$0.43$,
+a 14--40$\times$ gap.}]
+
+[1 paragraph: For each factor, compute activation profile (how strongly
+it fires across tasks) and causal profile (how much causal effect per
+task). Activation profiles are nearly identical across tasks
+($r \geq 0.97$): every factor fires the same regardless of task.
+Causal profiles are highly task-specific ($r$ as low as 0.03): which
+factors \emph{matter} varies dramatically. This gap is invisible to
+scalar edge scores and explains why the attribution subspace (dominated
+by high-activation factors) is orthogonal to the causal subspace
+(dominated by task-specific factors).]
+
+% --- 7.3 Background/Modulation Decomposition ---
+\subsection{Background/Modulation Decomposition}
+
+% SOURCE: SUB_EDGE_DECOMPOSITION_V10.md experiment 2
+% DATA: Modal fc-results volume /causal_tucker_modes/
+
+[Bolded opener: \textbf{Tucker C modes capture the modulation
+component --- necessary for task performance but not sufficient in
+isolation.}]
+
+[1 paragraph: Activation projection experiments using
+\texttt{factor\_acts\_enabled()} hooks. Project factor activations
+$h = x \cdot F^\top$ onto/orthogonal-to Tucker C subspace at runtime:]
+
+\begin{center}
+\small
+\begin{tabular}{lcc}
+\toprule
+$k$ modes & Sufficiency (keep C only) & Necessity (remove C) \\
+\midrule
+1 & $-$30.4\% (\textbf{reversed}) & 99.6\% \\
+2 & $-$29.3\% (\textbf{reversed}) & 97.7\% \\
+4 & $-$15.8\% (\textbf{reversed}) & 94.3\% \\
+8 & $-$16.8\% (\textbf{reversed}) & 78.9\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+[1 paragraph: Removing 8 Tucker C modes drops logit diff by 21\%
+(from 0.1956 to 0.1544) --- \textbf{necessary}. But projecting to
+\emph{only} Tucker modes reverses the logit diff (negative values =
+model predicts the wrong name) --- \textbf{not sufficient}. Like
+keeping only the AC component of a signal and discarding the DC offset.
+This resolves the activation-causal gap: factors activate universally
+because the \textbf{background} dominates activation patterns (baseline
+computation sustaining coherent predictions). Causal effects are
+concentrated because only the \textbf{modulation} component carries
+task-specific information. The 14--40$\times$ gap is the ratio of
+background to modulation magnitude.]
+
+% REVIEWER: "This is just saying attribution != causation. That's known."
+% Answer: Yes, but we quantify it precisely in factor space and show it's
+% not a small effect (~88 deg, not ~45 deg). And we resolve it with the
+% background/modulation decomposition, which is new.
+
+[1 paragraph: Note on the factor bank projection null: projecting the
+factor bank $F$ (not activations) onto the Tucker C subspace produces
+zero effect at all ranks (k=1,2,4,8). This is expected, not a failure:
+$F$ is (8192, 768), so any rank-8 subspace in factor-index space maps
+to a full-rank-768 output space. The intervention is too weak at the
+weight level. The correct intervention is activation projection (above),
+which constrains how factors are \emph{read} during forward computation.
+Details in Appendix~\ref{app:nullcontrols_extended}.]
+
+% --- 7.4 Per-Counterfactual Stability ---
+\subsection{Per-Counterfactual Tucker Stability}
+
+% SOURCE: SUB_EDGE_DECOMPOSITION_V10.md experiment A
+% DATA: das_eap/atomic-sweep-40/per_counterfactual_tucker/
+
+[Bolded opener: \textbf{Tucker modes are partially stable across IOI
+counterfactual types --- not identical, not orthogonal --- indicating
+the structure captures a mix of model-intrinsic geometry and
+corruption-specific routing.}]
+
+[1 paragraph: EAP-IG computed separately per IOI counterfactual type
+(s2\_io\_flip, s1\_io\_flip, abc, compound). Tucker (10,10,8) decomposed
+independently for each. Variance explained varies: s1\_io\_flip is much
+more compressible (83.3\%) than compound (39.5\%). Cross-counterfactual
+C mode comparison:]
+
+\begin{center}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Pair} & \textbf{Matched cos} & \textbf{Mean angle} & \textbf{Factor Jaccard} \\
+\midrule
+s2\_io vs compound & 0.440 & 58.0\textdegree & 0.123 \\
+s2\_io vs abc & 0.415 & 60.6\textdegree & 0.139 \\
+abc vs compound & 0.242 & 73.7\textdegree & 0.072 \\
+s1\_io vs abc & 0.240 & 74.1\textdegree & 0.088 \\
+s1\_io vs compound & 0.191 & 78.0\textdegree & 0.046 \\
+s2\_io vs s1\_io & 0.145 & 78.4\textdegree & 0.111 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+[1 paragraph: s2\_io\_flip and compound share the most structure
+(5/8 modes with cosine $>$0.64, then 3 nearly orthogonal) --- expected
+since compound includes s2\_io\_flip. s1\_io\_flip is most different
+from all others (angles $\sim$78\textdegree), consistent with its
+simpler attribution structure. Factor overlap is low across all pairs
+(Jaccard 0.05--0.14) --- different corruptions route through different
+factors even when mode directions partially agree. Full tables in
+Appendix~\ref{app:per_counterfactual}.]
+
+% --- 7.5 Discrimination ---
+
+\subsection{Factor-Level Discrimination}
+
+% SOURCE: fig2_discrimination.png (from artifacts/spectral_results/neurips_figures/)
+% DATA: copied to BATCH2/fig2_discrimination.png
+
+\textbf{[FIGURE --- HAVE: Factor-level discrimination analysis showing
+separation between circuit and non-circuit factor usage. Confirms that
+circuit-relevant factors form a distinguishable population.
+See fig2\_discrimination.png in BATCH2/.]}
+
+[1 paragraph: Factor-level discrimination analysis confirms that
+circuit-relevant factors are statistically distinguishable from
+background factors. The separation is consistent with the factor overlap
+results (\S\ref{sec:factor_overlap}): circuit edges use sparse, disjoint
+factor subsets, creating clear signal above the background distribution.]
+
+
+% --- 7.6 Cross-Task Orthogonality ---
+
+\subsection{Cross-Task Factor Orthogonality}
+\label{sec:cross_task_orthogonality}
+
+% SOURCE: cross_task_combined.png (right panel), fig_mode_specificity.png
+% DATA: PCA subspace overlap matrix (5 tasks), Tucker mode specificity matrix
+% FIGURES: subspace_overlap.png (candidates/), mode_specificity.png (candidates/)
+
+[Bolded opener: \textbf{Different tasks use nearly orthogonal factor
+subspaces: mean cosine of principal angles between top-8 PCA subspaces
+is 0.03--0.11 across all 10 task pairs.}]
+
+[1 paragraph: For each of 5 tasks (IOI, GT, SVA, Gender Bias,
+Capital-Country), we compute the top-8 PCA subspace of the
+(writers $\times$ readers $\times$ factors) attribution tensor. Pairwise
+subspace overlap (mean cosine of principal angles) is uniformly low:
+GT--SVA and GT--Gender are 0.03, the highest pair (IOI--Capital) is
+0.11. This is not an artifact of factor sparsity: random 8D subspaces
+of $\mathbb{R}^{8192}$ would yield cosine $\sim$0.001. The observed
+0.03--0.11 is above random but far below alignment --- each task's
+circuit occupies its own region of factor space.]
+
+% [FIGURE: Cross-task subspace overlap heatmap]
+\textbf{[FIGURE --- HAVE: 5$\times$5 subspace overlap heatmap (IOI, GT,
+SVA, Gender, Capital). Diagonal = 1.0, off-diagonal 0.03--0.11.
+RdBu colormap. See subspace\_overlap.png in candidates/.]}
+
+[1 paragraph: Tucker mode specificity confirms this at the component level.
+For each task, the best Tucker C mode concentrates 1.5--7.7\% of circuit
+energy in its own task's circuit but only 0.3--0.8\% in other tasks' circuits.
+SVA modes are the most task-specific (7.7\% own vs 0.3--0.4\% others);
+IOI modes are the least specific (1.5\% own vs 0.4--0.7\% others),
+consistent with IOI's higher circuit complexity requiring more distributed
+factor usage. The specificity matrix is strongly diagonal-dominant:
+each task's modes explain its own circuit, not others.]
+
+% [FIGURE: Mode specificity heatmap]
+\textbf{[FIGURE --- HAVE: 5$\times$5 mode specificity heatmap showing
+\% circuit energy in best mode. Diagonal dominant (1.5--7.7\%) vs
+off-diagonal (0.3--0.8\%). See mode\_specificity.png in candidates/.]}
+
+% --- 7.7 Within-Task Sub-Variable Separation ---
+
+\subsection{Within-Task Sub-Variable Separation}
+\label{sec:subtask_orthogonality}
+
+% SOURCE: grassmann_heatmap_GOOD.png, 12a_jaccard_mds_v2.png,
+%         pca_vs_das_overlap.png, variance_decomposition.png
+% DATA: per_variable_das_exploration.json, ioi_subtask_decomposition_v2.json
+
+[Bolded opener: \textbf{Orthogonality holds not only across tasks but
+within a single task: IOI sub-variables (IO name, Subject, ABC, Random,
+Full flip) route through nearly orthogonal factor subspaces.}]
+
+[1 paragraph: Training separate DAS directions per IOI counterfactual
+type at Layer 5 ($k=4$) reveals that the learned causal subspaces are
+near-orthogonal. Grassmannian distances between all 10 subtask pairs
+range from 0.60 (IO name vs Full flip) to 2.12 (IO name vs Subject),
+with 8 of 10 pairs exceeding $\pi/2 \approx 1.57$ (orthogonal).
+IO name and Full flip are the closest pair (0.60 radians), which is
+expected since Full flip includes the IO name swap. All other pairs
+are at or beyond orthogonality.]
+
+% [FIGURE: Grassmannian distance heatmap between IOI subtask DAS subspaces]
+\textbf{[FIGURE --- HAVE: 5$\times$5 Grassmann distance heatmap.
+IO flip--Full flip = 0.60, all others 1.75--2.12.
+$\pi/2 \approx 1.57$ = orthogonal; values $> \pi/2$ = beyond orthogonal.
+See grassmann\_heatmap\_GOOD.png in candidates/.]}
+
+[1 paragraph: The factor-level picture confirms this. Each subtask's
+DAS direction selects $\sim$17--20 private factors (out of its top 20),
+with only 1.0 factor shared on average per pair. MDS embedding of
+Jaccard distances shows five well-separated clusters: IO name and
+Full flip share 9 factors (thick edge), all other pairs share 0--4.
+Out of 82 unique factors identified by DAS across all 5 subtasks,
+68 are private to a single subtask and only 14 are shared by 2 or more.
+The factor bank provides the vocabulary; each sub-variable selects its
+own words.]
+
+% [FIGURE: Jaccard MDS of subtask factor sharing]
+\textbf{[FIGURE --- HAVE: MDS of Jaccard distance between IOI subtask
+factor sets (DAS top-20, Layer 5). Five colored nodes with edge
+thickness $\propto$ shared factors. IO name--Full flip = 9 shared;
+most pairs = 0--1 shared. Chance expects $<$1 shared.
+See 12a\_jaccard\_mds\_v2.png in candidates/.]}
+
+[1 paragraph: Constrained PCA (unsupervised) and DAS (supervised) find
+almost entirely disjoint factor sets: of 20 factors selected per subtask,
+mean overlap is 1.0 factor. DAS uses 82 unique factors across subtasks
+while CPCA uses only 27 --- the supervised method explores a much larger
+region of factor space because it can find subtle causal directions
+that don't dominate variance. This reinforces the attribution--causation
+orthogonality (\S\ref{sec:orthogonality}): the factors that explain the
+most variance (CPCA) are not the factors that carry causal signal (DAS),
+and this holds per-subtask, not just globally.]
+
+% [FIGURE: DAS vs CPCA factor overlap]
+\textbf{[FIGURE --- HAVE: Three-panel figure. Left: DAS factor overlap
+matrix (5$\times$5, 82 unique factors). Center: CPCA factor overlap
+matrix (5$\times$5, 27 unique factors). Right: private factors per
+subtask (DAS $\sim$17 vs CPCA $\sim$2). Mean overlap 1.0/20 between
+methods. See pca\_vs\_das\_overlap.png in candidates/.]}
+
+% REVIEWER: "But orthogonality across subtasks is expected if you
+% train separate DAS per type. It's just a property of the optimization."
+% Answer: No. DAS finds the direction that maximizes IIA within the same
+% 8192-d factor space. Nothing constrains different subtasks to find
+% orthogonal directions --- they COULD converge on the same subspace
+% if the task used the same factors. Orthogonality is a finding about
+% the model's structure, not an artifact of the training procedure.
+% The Grassmann distance measures geometry of the converged solution,
+% not the optimization path.
+
+
+% ============================================================
+% 8. RELATED WORK (~1 page)
+% ============================================================
+
+\section{Related Work}
+
+% Lead with how we differ, not a catalog (Nanda principle)
+
+% REVIEWER: "How does this compare to transcoders? They also decompose
+% computations into features."
+% Must address. Transcoders decompose MLP computations into SAE features.
+% Our factors decompose ALL weight matrices (including attention) through
+% a shared bank. Different scope, complementary.
+
+\paragraph{Sparse autoencoders and activation-space decomposition.}
+[3-4 sentences: SAEs learn interpretable directions in activation space.
+Our factor bank is analogous but in weight space: the model computes
+through factors, so they are guaranteed to participate in computation.
+SAEs decompose what the model outputs; factors decompose how it computes.
+Cite Bricken et al.\ 2023, Huben et al.\ 2023, transcoders.
+Factorized DAS with group lasso identifies 9 active factors for IOI
+--- but individual factors are gauge-dependent; the causally meaningful
+object is the subspace they span.]
+
+% REVIEWER: "The 9 vs 140 comparison is apples to oranges. SAE features
+% are at one site; your factors are shared across all sites."
+% Acknowledge this. The point is not "we're better than SAEs" but
+% "factors provide a different lens."
+
+% NEW v6: SAE comparison paragraph with numbers
+SAE features and factors span the same subspace but use different bases.
+Projecting 24,576 JumpReLU SAE features (Bloom et al., layer 8, GPT-2
+Small) onto the 8,192-factor bank recovers 99.8\% of variance on
+average, yet individual alignment is low: the maximum cosine similarity
+between any SAE feature and its nearest factor is 0.37, with a mean of
+0.15 across all features. This holds regardless of which layer's SAE is
+used (layers 5, 7, 8, 9 all yield max cosine $\leq$0.34 with the top
+circuit factors). The two decompositions are complementary: SAE features
+are monosemantic directions in per-layer activation space, while factors
+are shared communication channels in weight space. Critically, because
+factors share a global index across all layers, 8\% of factors active in
+the IOI circuit participate in two or more pathway stages (top-20 per
+edge), rising to 17\% at top-50 --- cross-layer tracking that per-layer
+SAE dictionaries cannot provide.
+% [FIGURE: SAE cross-layer tracking --- sae_cross_layer_tracking.png]
+% See Appendix~\ref{app:figures} Figure~\ref{fig:sae_cross_layer}.
+
+\paragraph{Unsupervised subspace decomposition (NDM).}
+[3-4 sentences: Huang \& Hahn (2025) learn an orthogonal rotation of
+the residual stream via neighbor distance minimization, achieving Gini
+0.71 on IOI subspace patching. Their PCA baseline fails (Gini 0.38)
+because PCA on $\mathbb{R}^{d_m}$ activations captures variance, not
+task structure. Our PCA succeeds (CMD 0.023 vs 0.052 baseline) because
+the factor-attribution tensor \emph{already encodes task relevance} ---
+PCA denoises rather than discovers. They decompose \emph{where}
+information is stored; we decompose \emph{how} attribution flows.
+Their future directions (\S6) propose subspace circuits via weight-space
+analysis --- our factorized architecture is exactly this.]
+
+\paragraph{Low-rank structure in weights.}
+[2-3 sentences: Kaushik et al.\ (2025) show weight matrices across 500+
+LoRA adapters converge to a shared low-rank subspace ($\leq$16 principal
+directions). We find analogous low-rank structure in attribution space
+within a single model. LoRA's success further supports the low-dimensional
+weight-space structure we exploit.]
+
+\paragraph{Circuit discovery methods.}
+[2 sentences: ACDC, EAP, EAP-IG, MIB operate at full-edge granularity.
+Our contribution decomposes each edge into per-factor contributions and
+finds the optimal low-dimensional basis for those contributions.]
+
+\paragraph{Weight-space circuit discovery.}
+[2-3 sentences: Tower (2026) shows functional roles (name mover,
+S-inhibition, etc.) are recoverable from weight features alone, without
+forward passes. Our factorization is complementary: weight features
+classify \emph{what role} a head plays; per-factor attribution
+decomposes \emph{what information} flows through each edge. Together,
+they provide role identification + sub-edge decomposition entirely from
+weight structure.]
+
+% NEW v6 related work entries:
+
+\paragraph{Causal abstraction and DAS.}
+[2-3 sentences: Geiger et al.\ (2023, 2024). We show the factor
+manifold provides effective initialization for DAS. Attribution-based
+subspaces are $\sim$88\textdegree\ from the causal subspace --- a
+geometric finding, not a method improvement. The orthogonality is
+consistent with Geiger et al.'s observation that causal structure
+requires interventionist methods, not just observational analysis.]
+
+\paragraph{Conceptor steering and subspace methods.}
+[2-3 sentences: Conceptor matrices (NeurIPS 2024) project activations
+onto learned subspaces for steering. Factor manifold is a weight-space
+analogue. Boolean operations (AND/OR/NOT) on factor-identified task
+subspaces produce valid causal interventions (97--100\% IIA).
+See Appendix~\ref{app:conceptor}.]
+
+\paragraph{Composition scores.}
+[2-3 sentences: Merullo et al.\ (2024) ``Talking Heads'': per-pair SVD
+of composition. Our shared factor bank provides a unified cross-edge
+basis. Factorized composition via $S_u^\top (F F^\top) S_v$ is
+algebraically equivalent to standard composition through the shared
+factor bank. See Appendix~\ref{app:merullo}.]
+
+
+% ============================================================
+% 8. DISCUSSION (~0.5 pages)
+% ============================================================
+
+\section{Discussion}
+
+% --- What this means ---
+
+[1 paragraph: We adopt the view that sub-edge circuit structure is captured
+by factor subspaces --- the spans of factors that circuit projections
+selectively activate --- rather than by individual weight matrix ranks or
+individual factors. The factor bank makes this precise: PCA on the
+per-factor attribution tensor decomposes circuits into interpretable
+sub-circuits (IOI: early heads $\to$ MLP0, S-inhibition fan-out, name
+movers $\to$ logits), and Tucker decomposition independently recovers
+identical factor directions (cosine 1.000, Grassmannian geodesic
+$\approx$ 0). This convergence of two mathematically different methods
+--- PCA maximizes variance of the flattened matrix, Tucker minimizes
+reconstruction error of the 3D tensor --- is strong evidence that the
+sub-circuit structure is real, not an artifact of the decomposition
+method. Individual factors are basis vectors in the overcomplete
+dictionary, analogous to SAE encoder directions --- interpretable as a
+catalog, but gauge-dependent; only their spans are mechanistically
+invariant. The factor bank also provides a geometric inductive bias for
+causal variable discovery: it defines a low-dimensional submanifold of
+the Grassmannian where spectral methods succeed (constrained PCA at
+98.8\% IIA, zero training) and where DAS optimization converges faster
+(91.2\% vs 73.5\% on hard examples). The constraint gradient --- more
+geometric constraint yields worse IIA (Riemannian DAS 64\% vs vanilla
+99.3\%) --- shows the manifold's value is as initialization, not
+ongoing constraint.]
+
+% NEW v6: Orthogonality interpretation
+
+[1 paragraph (NEW v6): The $\sim$88\textdegree\ orthogonality between
+attribution and causal subspaces reveals a fundamental distinction.
+Attribution captures sensitivity: the directions along which the model's
+output changes most when the input is perturbed. Causation captures
+computation: the directions through which the model routes task-relevant
+information. These are different questions with orthogonal answers in
+factor space. The background/modulation decomposition makes this concrete:
+factors activate universally to sustain baseline computation (background),
+but only a small modulation component carries task-specific signal. Tucker
+decomposes the modulation component, which is necessary (21\% logit diff
+drop when removed) but not sufficient alone (reversed logit diff when
+isolated). The 14--40$\times$ activation-causal gap is the ratio of
+background to modulation magnitude.]
+
+[1 paragraph (NEW v6): Each circuit edge uses a distinct factor subset
+(cross-pathway Jaccard $<$ 0.5\%), and different counterfactual types
+route through partially distinct factor subspaces (principal angles
+58--78\textdegree). This suggests the factor bank functions as a
+high-dimensional routing table: the bank provides the vocabulary, the
+selectors choose the words, and different edges ``say different things''
+through the same vocabulary. The sparsity of factor usage per edge
+($\sim$20 of 8192) enables this multiplexing without interference.]
+
+% --- Limitations ---
+
+% REVIEWER: "This is a LOT of limitations. Is the paper ready?"
+% Be honest. These are real. But the contribution (the factorization
+% and adapted methods) is solid even with these limitations.
+
+[1 paragraph: Limitations. (1) The factorized model is an approximation
+of the pretrained model, so sub-edge structure exists in the factorized
+representation, not directly in the original weights. Model equivalence
+(\S3.3) mitigates but does not eliminate this concern.
+(2) GPT-2 Small only. Cross-architecture validation (Qwen, Pythia) is
+planned but not yet run.
+(3) Factorization requires training ($\sim$2 GPU-hours for GPT-2 Small);
+per-factor attribution is then free.
+(4) Individual factors are gauge-dependent (any rotation of the bank is
+equally valid). Only factor \emph{subspaces} (PCA/Tucker mode spans) are
+gauge-invariant. The factorization provides the right overcomplete
+dictionary to search for subspaces; individual factors are basis vectors,
+not interpretable units. This parallels how PCA components aren't
+meaningful individually but their span is well-defined.
+(5) (NEW v6) Hard-IIA results are on $\sim$34 evaluation examples ---
+enough to demonstrate the gradient attractor effect but larger-scale
+validation is needed.
+(6) (NEW v6) The background/modulation decomposition is demonstrated on
+IOI only. Extension to other tasks would strengthen the claim.
+(7) (NEW v6) Sub-circuit decomposition recovers known structure
+(validation) rather than discovering new biological insights --- the
+method is the contribution, the IOI findings are validation.]
+
+% REVIEWER: Limitation (4) is the key one to handle well.
+% "You claim per-factor attribution but factors are arbitrary?"
+% Answer: The per-factor SCORES are gauge-dependent, but the SUBSPACES
+% they identify (via Tucker) are gauge-invariant. The factorization
+% gives you the right dictionary to search for subspaces; individual
+% factors are basis vectors in that dictionary, not interpretable units.
+% The paper's ontological claim: the right unit is the factor subspace,
+% not the individual factor.
+
+% --- Future work ---
+
+[1 paragraph: Future directions. (i) Cross-architecture validation:
+train factorized Qwen-0.5B, Pythia-160M, and test whether Tucker
+structure (core tensor sparsity, mode interpretability) transfers.
+(ii) Larger models (GPT-2 Medium/Large).
+(iii) Integration with weight-space circuit discovery for end-to-end
+role identification + sub-edge decomposition.
+(iv) Sparser checkpoints: train factorizations with stronger DST/JumpReLU
+penalties to achieve $\sim$500--2000 active factors per head, enabling
+pathway-specific factor identification and single-factor knockout experiments.
+(v) RAVEL disentanglement: test whether factor subspaces separate
+entangled properties (e.g., entity vs.\ attribute).
+(vi) Applications: circuit-guided fine-tuning (targeting the active
+factor subspace via FactorLoRA), dynamic inference (gating inactive
+factors based on selector predictions), conceptor-style compositional
+steering via factor subspace algebra (AND/OR/NOT).]
+
+
+\newpage
+
+% ============================================================
+% APPENDICES
+% ============================================================
+
+\appendix
+\part*{Appendix}
+
+% ============================================================
+% APPENDIX A: Gauge Freedom
+% ============================================================
+
+\section{Gauge Freedom and QK/OV Distillation}
+\label{app:gauge}
+
+% This appendix justifies WHY we distill on composite circuits, not individual W_Q, W_K etc.
+
+\subsection{Rotational gauge freedom in attention}
+
+[State the problem: for any orthogonal $R \in O(d_h)$, replacing
+$W_Q \to W_Q R$ and $W_K \to W_K R$ leaves the QK circuit invariant:
+$(W_Q R)(W_K R)^\top = W_Q R R^\top W_K^\top = W_Q W_K^\top$.
+So individual weight matrices $W_Q, W_K$ are not uniquely determined
+by the model's behavior --- only the composite QK = $W_Q W_K^\top$
+and OV = $W_V W_O$ are gauge-invariant observables.]
+
+[1 paragraph: This means distilling on individual weights
+($\|S_Q F - W_Q\|^2$) is ill-posed: there are infinitely many valid
+targets related by arbitrary rotations $R$, and the factorization would
+need to ``guess'' the right gauge. Distilling on the composite circuits
+($\|QK^{\text{fac}} - QK^{\text{tgt}}\|^2$) eliminates this ambiguity
+entirely. The factorization is free to choose any internal gauge for its
+$S_Q, S_K$ as long as their product $S_Q F (S_K F)^\top$ matches the
+target QK.]
+
+\subsection{Bias reparameterization}
+
+[State the problem: if we zero $b_Q, b_K$ for the factorized model
+(since factors should capture bias effects), the attention score changes
+because the cross-terms $W_Q b_K$, $b_Q W_K^\top$, and $b_Q \cdot b_K$
+are gauge-dependent and nonzero in the pretrained model.]
+
+[1 paragraph: Solution: compute these cross-terms from the \emph{pretrained}
+weights before training, store them as frozen buffers
+$(\texttt{\_qk\_bias\_q}, \texttt{\_qk\_bias\_k}, \texttt{\_qk\_bias\_const})$,
+and add them back during attention score computation. This makes the
+factorized attention scores match the pretrained model exactly even with
+$b_Q = b_K = 0$. Similarly, $b_V$ is folded through $W_O$ into $b_O$.
+See \texttt{reparameterize\_layer\_biases\_} in the codebase.]
+
+
+% ============================================================
+% APPENDIX B: EAP Derivation (EXISTS in Ivan's draft)
+% ============================================================
+
+\section{EAP Derivation}
+\label{app:eap_derivation}
+
+% Ivan's overleaf_draft.tex Section 2.1 has this COMPLETE.
+% Copy from there, lightly edited for notation consistency.
+
+\subsection{Standard EAP}
+
+[COPY FROM Ivan's draft \S2.1 (overleaf\_draft.tex lines 196--292).
+The full derivation from $r_u^{(n)} = z_u^{(n)} W_u^{o\top}$ and
+$\text{act}_v^{(n)} = \text{LN}(\text{resid}_v^{(n)}) W_v^{in}$ to
+the EAP formula with shape annotations. Already publication-ready.]
+
+\subsection{Factorized EAP}
+
+[COPY FROM Ivan's draft \S2.2 (overleaf\_draft.tex lines 404--512).
+The four-line algebraic expansion substituting $W = SF$ into the EAP
+formula, arriving at $\Delta L_{uv} = \sum_{i,j} \Delta L(u,i,v,j)$.
+Already publication-ready. Includes the intuitive description:
+``$\Delta L(u,i,v,j)$ answers: how much does writing by module $u$ into
+factor subspace $i$, as read by module $v$ through factor subspace $j$,
+affect the loss?'']
+
+\subsection{EAP vs.\ EAP-IG}
+
+[1--2 paragraphs:
+
+\textbf{Paragraph 1 (decomposition is exact for both):}
+We present the factored decomposition (Proposition~1) for first-order
+EAP.  The decomposition extends immediately to EAP-IG by linearity: at
+each integration step~$s$ the substitution $W = SF$ is the same
+algebra, so the per-factor score at step~$s$ sums to the edge score at
+step~$s$.  Averaging over steps preserves the equality:
+$\Delta L_{uv}^{\mathrm{IG}} = \sum_{i,j} \Delta L^{\mathrm{IG}}(u,i,v,j)$
+where each per-factor EAP-IG score is simply the average of per-factor
+scores across integration steps.  No new proof is required.
+
+\textbf{Paragraph 2 (closed-form shortcut is EAP-only):}
+What \emph{does not} extend to EAP-IG is the closed-form shortcut
+(Appendix~\ref{app:closed_form}), which pre-computes the LayerNorm
+Jacobian as a single matrix~$M$.  Under EAP-IG the Jacobian varies at
+each interpolation point, so $M$ would need to be recomputed per step.
+Our implementation handles this correctly by running the factored
+decomposition at each IG step independently via
+\texttt{attribute\_rotation.get\_scores\_eap\_ig}.  All scores reported
+in the main text use \textbf{factorized EAP-IG} (5 integration steps),
+which computes exact per-factor scores at each step and averages.]
+
+
+% ============================================================
+% APPENDIX C: Closed-Form Score (EXISTS in Ivan's draft)
+% ============================================================
+
+\section{Closed-Form Factorized EAP Score}
+\label{app:closed_form}
+
+% Ivan's overleaf_draft.tex Appendix B has this COMPLETE.
+% The LayerNorm Jacobian expansion, M matrix, r encoding, T1/T2 terms, einsum form.
+
+\subsection{LayerNorm Jacobian}
+
+[COPY FROM Ivan's draft Appendix A (overleaf\_draft.tex lines 590--751).
+Full derivation of $J_{\text{LN}} = \frac{1}{\sigma}(I - \frac{1}{d_m}
+\mathbf{1}\mathbf{1}^\top - \frac{1}{d_m}\hat{x}\hat{x}^\top)$.
+Already publication-ready with all intermediate steps.]
+
+\subsection{Expanding $F_i J_{\text{LN},v}^{(n)\top} F_j^\top$}
+
+[COPY FROM Ivan's draft Appendix B \S B.1 (lines 757--829).
+Introduction of the Gram matrix $M_{ij} = F_i F_j^\top -
+\frac{1}{d_m}(F_i \mathbf{1})(\mathbf{1}^\top F_j^\top)$ and the
+factor encoding $r_v^{(n)} = F \hat{x}_v^{(n)}$. Arrives at the
+scalar form of the link term.]
+
+\subsection{Final closed-form score}
+
+[COPY FROM Ivan's draft Appendix B \S B.2--B.3 (lines 831--974).
+The writer scalar $A_{u,i}^{(n)}$, reader scalar $C_{v,j}^{(n)}$,
+substitution chain arriving at
+$\Delta L(u,i,v,j) = M_{ij} T_1^{(uv)} - \frac{1}{d_m} T_2^{(uv)}$.
+Einsum forms for $T_1$ and $T_2$. Cache contents table.]
+
+
+% ============================================================
+% APPENDIX D: PCA Theorem Proofs
+% ============================================================
+
+\section{Proofs of Theorems 1--3}
+\label{app:proofs}
+
+\subsection{Theorem 1: Eckart-Young-Mirsky (Optimal Linear Compression)}
+
+[State the theorem formally for our setting. Let $S \in \mathbb{R}^{E
+\times N_F}$ be the attribution matrix with SVD $S = U \Sigma V^\top$.
+For any rank-$k$ matrix $B$, $\|S - U_k \Sigma_k V_k^\top\|_F \leq
+\|S - B\|_F$. Apply: at $k=8$, reconstruction error = 40.8\% of total
+variance, which is the minimum achievable by any rank-8 projection.]
+
+\subsection{Theorem 2: Davis-Kahan Subspace Stability}
+
+[State the $\sin\Theta$ theorem. If $S = S_{\text{true}} + E$ and
+$\delta_k = \sigma_k - \sigma_{k+1}$ is the singular value gap, then
+$\sin\angle(\hat{V}_k, V_k) \leq \|E\|_{\text{op}} / \delta_k$.
+
+Estimate noise level: the Marchenko-Pastur threshold for an
+$E \times N_F$ random matrix gives $\sigma_{\text{noise}} = 0.0002$.
+
+Compute bounds:
+\begin{itemize}
+\item $k=4$: $\delta_4 = 0.0023$, bound = $0.0002 / 0.0023 = 0.087$,
+  $\arcsin(0.087) \approx 5.0°$.
+\item $k=8$: $\delta_8 = 0.0003$, bound = $0.0002 / 0.0003 = 0.667$,
+  $\arcsin(0.667) \approx 41.8°$.
+\item $k=16$: $\delta_{16} \approx 0$, bound $\to \infty$, angle $\to 90°$.
+\end{itemize}]
+
+\subsection{Theorem 3: Active Subspace Error Bound / SURE Rank Selection}
+
+[If using active subspace (Constantine 2015):
+State the Poincar\'{e}-type inequality. The MSE from projecting the
+metric onto the top-$k$ subspace is bounded by $\sum_{i>k} \lambda_i /
+(\lambda_k - \lambda_{k+1})$. Compute: $k=4$ bound = 14.2, $k=8$
+bound = 144.1. The 10$\times$ gap reflects the primary/secondary
+eigenvalue separation.]
+
+[If SURE results available:
+State Stein's lemma for the truncated SVD denoiser. The unbiased risk
+estimate $\text{SURE}(k) = \|S - S_k\|_F^2 + 2 \text{df}(k) \hat\sigma^2$.
+The divergence term $\text{df}(k)$ for truncated SVD counts effective
+degrees of freedom. Plot $\text{SURE}(k)$ for $k = 1 \ldots 64$, show
+minimum at $k \approx$ ?.  This provides non-circular rank selection.]
+
+
+% ============================================================
+% APPENDIX E: Training Details
+% ============================================================
+
+\section{Training Details}
+\label{app:training}
+
+\subsection{Optimization}
+
+[Optimizer: Adam. Learning rate schedule: reactive halving --- if
+$\mathcal{L}_{\text{total}} > 2 \times \mathcal{L}_{\text{prev}}$,
+skip the step and halve LR (bounded below by $\texttt{min\_lr}$).
+No warmup, no cosine. Only $F$ and $S$ parameters are optimized
+(deduplicated by \texttt{id()}); all other parameters frozen from
+pretrained model.]
+
+\subsection{Loss components}
+
+[Core loss: $\mathcal{L}_{\text{core}} = \sum_i \|QK_i^{\text{fac}} -
+QK_i^{\text{tgt}}\|^2 + \|OV_i^{\text{fac}} - OV_i^{\text{tgt}}\|^2$,
+summed over layers.
+
+Auxiliary loss: selector-specific sparsity penalty.
+\begin{itemize}
+\item L1: $\lambda_{\text{aux}} \cdot \text{mean}(|S|)$
+\item JumpReLU: $\lambda_{\text{aux}} \cdot L_0(S)$ (straight-through estimator)
+\item DST: $\lambda_{\text{aux}} \cdot |\theta|$ (learnable per-channel threshold)
+\end{itemize}
+
+Optional: entropy loss (within-head + across-model deficit),
+factor contrastive loss (pairwise $\exp(|\cos| \cdot \text{mult}) - 1$
+on learned factors).]
+
+\subsection{Selector types}
+
+% [TABLE A1: Selector comparison --- from slide 14 / existing data]
+\textbf{[TABLE A1: Selector types. Type / Mechanism / Auxiliary loss formula / Masking.
+L1: soft penalty, continuous.
+JumpReLU: per-channel threshold, hard (STE).
+JumpReLU-tanh: JumpReLU + tanh-scaled magnitude, hard (STE).
+DST: per-channel learnable threshold + BinaryStep STE, hard (STE).]}
+
+\subsection{Hyperparameter ranges}
+
+[$N_F \in \{1024, 2048, 4096, 8192, 16384, 32768, 40000\}$.
+$\lambda_{\text{aux}}$ swept per selector type.
+At $N_F = 32768$: $\sim$100 active factors per channel ($\sim$0.3\%).
+Pareto sweep: trained $>$200 checkpoints across bank sizes and selector
+types. Frontier extracted by non-dominated sorting on (CE, L0/channel).]
+
+% [FIGURE A1: Pareto by bank size --- HAVE]
+\textbf{[FIGURE A1: Pareto frontier by bank size, all checkpoints.]}
+
+\subsection{Model Equivalence Details}
+% [NEW IN V4]
+[CREH evaluation methodology. MAS IIA computation. CE gap measurement.
+Bidirectional DAS interchange protocol. Details for both GPT-2 and Qwen.]
+
+
+% ============================================================
+% APPENDIX F: Extended Results
+% ============================================================
+
+\section{Extended Results}
+
+\subsection{Full CMD/CPR tables}
+[CMD and CPR at $k = 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 8192$
+for PCA, plus full baseline and DAS $k=1,2,4,8$.]
+
+\subsection{Per-checkpoint faithfulness curves}
+[Faithfulness curves for all checkpoints shown in the Pareto analysis,
+separated by selector type. Show that the PCA improvement is not
+checkpoint-specific.]
+
+\subsection{Split-half raw data}
+[Full principal angle vectors between half-subspaces at $k=4,8,16$.
+Comparison of each half to the full-prompt PCA.]
+
+\subsection{Null control distributions}
+[Histograms of CMD for (i) 20 random 8D subspaces, (ii) 20 shuffled-factor
+PCA runs. Mark PCA $k=8$ CMD and full baseline CMD on the histogram.]
+
+\subsection{SURE risk curve}
+[If computed: $\text{SURE}(k)$ for $k=1 \ldots 64$. Mark the minimum.]
+
+\subsection{Variance explained spectrum}
+[Scree plot: singular values $\sigma_1 \ldots \sigma_{64}$ and cumulative
+variance explained. Mark the primary/secondary gap at $k=4$ and the
+secondary/tail transition at $k=8$.]
+
+\subsection{Cross-Architecture Results}
+% Deferred --- Qwen/Pythia experiments not yet run.
+% When available: faithfulness curves, Tucker decomposition, CE gap.
+% Same format as GPT-2 results for direct comparison.
+[DEFERRED to future revision. Cross-architecture validation planned
+for Qwen-0.5B and Pythia-160M.]
+
+
+% ============================================================
+% APPENDIX G: Alternative Decomposition Methods
+% ============================================================
+
+\section{Alternative Decomposition Methods}
+\label{app:alternative_methods}
+
+% Full comparison table showing we tried everything reasonable
+
+\textbf{[TABLE A2: Full method comparison.]}
+% Method              | k   | CMD    | Notes
+% Varimax k=8         | 8   | 0.019  | Best overall. Orthogonal rotation of PCA.
+% PCA k=8             | 8   | 0.023  | Provably optimal linear projection.
+% PCA k=16            | 16  | 0.025  | Slightly worse --- noise creeping in.
+% ICA k=16            | 16  | 0.032  | Best ICA. Statistical independence weaker than variance.
+% PLS-DA n=8          | 8   | 0.045  | Supervised (Wang et al. labels). Worse than unsupervised PCA.
+% Group Lasso DAS     | --- | 0.047  | Trained. Supervised.
+% EAP-IG baseline     | all | 0.052  | Full N_F-factor baseline (no projection).
+% Sparse PCA          | --- | failed | All zeros even at alpha=0.001.
+% ICA k=2             | 2   | 0.084  | Too few components.
+% ICA k=4             | 4   | 0.080  |
+
+[1 paragraph: We evaluated decomposition methods on the factorized
+attribution tensor to verify that PCA/Varimax's performance is not an
+artifact of method choice. Table~A2 reports CMD for all methods at their
+best $k$. PCA and Varimax dominate; ICA (statistical independence) and
+PLS-DA (supervised labels) both underperform unsupervised PCA, confirming
+that the low-rank linear structure in the attribution tensor is the
+primary signal, and that rotating within the PCA subspace (Varimax)
+extracts additional benefit from the sparsity of factor selectors.]
+
+\subsection{ICA}
+
+[2-3 sentences: FastICA at $k = 2, 4, 8, 16$. Best result at $k=16$
+(CMD 0.032), worse than PCA at $k=8$ (0.023). ICA seeks statistically
+independent components, which is a weaker criterion than variance
+maximization for this problem --- the attribution signal is low-rank
+and approximately Gaussian in the dominant dimensions, so PCA is
+better suited.]
+
+\subsection{PLS-DA}
+
+[2-3 sentences: Partial Least Squares Discriminant Analysis using Wang et
+al.\ (2023) IOI circuit labels (13{,}795 circuit edges). Best result at
+$n=8$ components (CMD 0.045), better than the full baseline but worse
+than unsupervised PCA. The supervised labels help concentrate signal but
+PLS overcommits to the binary circuit/background separation at the expense
+of fine-grained within-circuit ranking. The unsupervised factor structure
+is richer than the binary labels.]
+
+
+% ============================================================
+% APPENDIX H: Stability and Enrichment Analysis
+% ============================================================
+
+\section{Stability and Enrichment Analysis}
+\label{app:stability_enrichment}
+
+\subsection{Bootstrap Stability of Principal Components}
+
+[Bolded opener: \textbf{The leading PCA components are unstable under
+bootstrap resampling, while tail components are rock-solid ---
+inverting the normal expectation and explaining the U-shaped CMD curve.}]
+
+[1 paragraph: 50 bootstrap PCA runs (resampling edges with replacement).
+Principal angles between each bootstrap subspace and the full-data PCA
+subspace: PC0 at 89\textdegree\ (essentially random), PC1 at 85\textdegree,
+PC2 at 76\textdegree. But PC6 at 2.7\textdegree, PC7 at 0.2\textdegree.
+No individual factor achieves stability $>$ 0.5 (the highest is f44 at
+0.32). Interpretation: the dominant variance (PC0--2) is driven by
+outlier edges --- high-variance positional/embedding structure that
+changes with the edge sample. The robust structure lives in the
+smaller components (PC6--7), which capture the stable computational
+pathway (induction $\to$ S-inhibition $\to$ name mover). This explains
+why $k=8$ works: it captures enough stable structure while the
+leading-component noise is diluted by the more stable tail components
+in the norm-based ranking.]
+
+% [FIGURE A2: Bootstrap stability --- NEED]
+\textbf{[FIGURE A2 --- NEED: Principal angle vs.\ component index for
+50 bootstrap runs. Error bars showing spread. Clear two-tier structure:
+PC0-3 at 50--90\textdegree, PC4-7 at 0--15\textdegree.]}
+
+\subsection{GSEA Enrichment of Principal Components}
+
+[Bolded opener: \textbf{Gene Set Enrichment Analysis on factor loadings
+reveals that duplicate token heads cluster in PC0--1 (6$\times$
+enrichment, $p = 0.001$) while induction heads cluster in PC3/PC6.}]
+
+[1 paragraph: We treat each PC's factor loadings as a ranked list and
+test enrichment for Wang et al.\ head categories (duplicate token,
+induction, S-inhibition, name mover, backup name mover) using standard
+GSEA permutation tests. Duplicate token heads show strong enrichment in
+PC0--1 (top-100 factors: 6$\times$ enrichment, $p = 0.001$). Induction
+heads cluster in PC3 and PC6. Name movers do not show significant
+enrichment in any single PC --- they likely use distributed factor
+patterns that span multiple components. This categorical structure in
+the principal components provides interpretability: PCs are not arbitrary
+directions but correspond to functional head categories in the IOI circuit.]
+
+\subsection{Convergent Factors Across Methods}
+
+[1 paragraph: Three factors appear consistently across PLS-DA
+and stability analysis: f44 (highest bootstrap stability at 0.32),
+f1798, and f4461. These are candidates for ``core IOI factors'' ---
+directions in the factor bank that are both computationally important
+(high PCA loading) and structurally robust (high bootstrap stability).
+However, individual factor identity is gauge-dependent (\S8), so these
+should be interpreted as markers of a robust subspace, not as individually
+interpretable features.]
+
+
+% ============================================================
+% Appendix: Tucker Dimensionality Comparison
+% ============================================================
+
+\section{Tucker Dimensionality Comparison}
+\label{app:tucker_dimensionality}
+
+[1 paragraph: We compare three reshapings of the attribution tensor for
+Tucker decomposition: 3D (writers $\times$ readers $\times$ factors,
+standard), 4D (writers $\times$ reader\_heads $\times$ projection $\times$
+factors), and 6D (wr\_layer $\times$ wr\_head $\times$ rd\_layer $\times$
+rd\_head $\times$ projection $\times$ factors). All use HOSVD with
+randomized truncated SVD on checkpoint atomic-sweep-40, IOI task.]
+
+\textbf{[TABLE A1: Variance explained by decomposition.]}
+% Decomposition           | Shape                  | Variance explained
+% 3D (10, 10, 8)          | 157 × 445 × 8192       | 59.75%
+% 4D (10, 10, 3, 8)       | 157 × 144 × 3 × 8192   | 42.73%
+% 6D (4, 6, 4, 6, 3, 8)   | 12 × 12 × 12 × 12 × 3 × 8192 | 40.51%
+
+[1 paragraph: 3D captures the most variance (59.75\%) because writer/reader
+modes can freely mix layer/head/projection structure. 4D and 6D impose
+structural constraints that reduce total variance capture but yield more
+interpretable modes. For CMD scoring, 3D is the default (Section~5.2).
+The 4D/6D decompositions are diagnostic tools: they reveal whether the
+circuit has distinct Q/K/V subpopulations.]
+
+\subsection{Factor Subspace Equivalence}
+
+\textbf{[TABLE A2: Principal angles between factor mode subspaces.]}
+% Comparison   | Mean angle | Spectrum
+% 3D vs 4D     | 68.3°      | [2.8, 29.2, 76.2, 82.0, 87.8, 89.0, 89.3, 89.9]
+% 3D vs 6D     | 68.3°      | [2.8, 29.3, 76.3, 82.2, 87.9, 89.0, 89.3, 89.9]
+% 4D vs 6D     | 0.2°       | [0.0, 0.1, 0.1, 0.1, 0.2, 0.2, 0.3, 0.7]
+
+[1 paragraph: 4D and 6D factor modes span the same subspace (mean angle
+0.2\textdegree, max 0.7\textdegree): separating writer layers from heads
+does not change which factors matter. 3D factor modes differ substantially
+(68.3\textdegree) because the flat writer/reader axes force structural
+information into the factor modes. The 3D decomposition conflates
+structure and content; 4D/6D separate them. For applications that need
+the factor subspace specifically (e.g., ablation experiments), the 4D
+decomposition is preferable. For circuit scoring, the 3D decomposition is
+preferable because it captures more total variance.]
+
+\subsection{Q/K/V Projection Modes by Task}
+
+\textbf{[TABLE A3: Projection mode purity by task.]}
+% Task | Mode 0       | Mode 1       | Mode 2       | Purity  | 4D var%
+% IOI  | Q(1.000)     | V(1.000)     | K(1.000)     | >99.9%  | 42.73%
+% SVA  | V(1.000)     | K(0.85)/Q(0.53) | Q(0.85)/K(0.53) | Mixed | 13.98%
+% GT   | [TBD --- run pending]                                   |
+
+[1 paragraph: On IOI, projection modes separate Q, K, and V with
+$>$99.9\% purity (Table A3). A small but consistent Q$\leftrightarrow$K
+mixing coefficient (0.020) reflects the attention-score duality $QK^\top$.
+On SVA, V separates cleanly but Q and K mix at 0.85/0.53 --- the circuit
+uses Q and K jointly for number agreement, so the attribution distributes
+symmetrically across both projections. The 4D variance explained drops
+from 42.73\% (IOI) to 13.98\% (SVA) because SVA's signal is
+MLP-dominated: separating reader projections splits 99\% of the signal
+away from the 1\% in attention. The projection separation pattern is
+\emph{diagnostic of circuit type}: identity matrix = distinct-role
+circuit (IOI), Q/K merged = joint-attention circuit (SVA).]
+
+\subsection{ICA and Varimax}
+
+[1 paragraph: We apply ICA (FastICA) and varimax rotation to the 8 factor
+modes from each decomposition. Neither improves sparsity (Gini shift
+$<$0.02). The HOSVD modes are already near-optimal --- the useful
+structure is in \emph{which} 8 of 8192 factor directions to use, not in
+how to rotate within those 8.]
+
+
+% ============================================================
+% Appendix: Tucker Scoring Details
+% ============================================================
+
+\section{Tucker Scoring: Full Results and Ablations}
+\label{app:tucker_scoring}
+
+% SOURCE: lib/analysis_grassmanian_subspace/factorized_das_eap/tucker_deep_dive/TUCKER_ANALYSIS_COMPLETE.md
+% DATA:   Modal volume fc-results, das_eap/atomic-sweep-40/tucker_scoring/
+%         das_eap/atomic-sweep-40/tucker_autorank/
+%         das_eap/atomic-sweep-40/tucker_adaptive/
+%         das_eap/atomic-sweep-40/tucker_cpca/
+
+\subsection{Scoring Aggregation Methods}
+\label{app:tucker_scoring_agg}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 2 "Scoring Methods"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/{task}/tucker_scoring.json
+
+[1 paragraph: Two aggregation methods for converting Tucker-reconstructed
+factor scores into edge scores. \textbf{abs\_of\_sum}:
+$|\sum_f \tilde{T}[w,r,f]|$ matches standard EAP-IG's aggregation.
+\textbf{sum\_of\_abs}: $\sum_f |\tilde{T}[w,r,f]|$ counts total
+unsigned factor contribution. The optimal method varies by task.]
+
+\begin{table}[h]
+\centering
+\caption{Scoring aggregation comparison (CMD, lower is better).}
+\label{tab:tucker_agg}
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 2 "Scoring Methods"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/{ioi,sva,greater_than}/tucker_scoring.json
+\begin{tabular}{llcc}
+\toprule
+\textbf{Task} & \textbf{Config} & \textbf{sum\_of\_abs CMD} & \textbf{abs\_of\_sum CMD} \\
+\midrule
+IOI & (10,10,8) & \textbf{0.013} & 0.028 \\
+GT  & (20,20,16) & 0.034 & \textbf{0.027} \\
+SVA & (15,15,8) & 0.028 & 0.022 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[1 paragraph: sum\_of\_abs works better for IOI because the circuit has
+many factors contributing with mixed signs along each edge ---
+absolute-value-then-sum captures total factor involvement. abs\_of\_sum
+works better for GT because the dominant factors are aligned in sign
+within each edge, so summation preserves signal while cancellation
+removes noise. Both methods should be tested; we report the best for
+each task in the main text.]
+
+
+\subsection{Sparse Factor Modes}
+\label{app:tucker_sparse}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 2 "Sparse Factor Modes"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/{task}/tucker_scoring.json (sparse configs)
+
+[1 paragraph: We test thresholding each factor mode $U_f[:,k]$ to its
+top-$m$ entries by absolute value before Tucker reconstruction. This
+removes noise factors while preserving task-relevant ones.]
+
+\begin{table}[h]
+\centering
+\caption{Effect of sparse factor modes on Tucker CMD.}
+\label{tab:tucker_sparse}
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 2 "Sparse Factor Modes"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/{ioi,greater_than}/tucker_scoring.json
+\begin{tabular}{lcc}
+\toprule
+\textbf{Factor sparsity} & \textbf{IOI CMD} & \textbf{GT CMD} \\
+\midrule
+Dense (all 8192) & \textbf{0.013} & 0.027 \\
+Sparse-200 & 0.018 & 0.018 \\
+Sparse-50  & 0.018 & \textbf{0.018} \\
+Sparse-20  & 0.018 & 0.028 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[1 paragraph: For GT, sparse-50 is better than dense (0.018 vs 0.027) ---
+the top 50 factors per mode capture the task-relevant signal and removing
+the remaining factors eliminates noise. For IOI, dense is marginally
+better (0.013 vs 0.018) because IOI's richer factor structure benefits
+from retaining all contributions. The optimal sparsity level correlates
+with the factor effective rank (Table~\ref{tab:tucker_effrank} in
+\S\ref{sec:analysis}): higher effective rank $\to$ denser modes preferred.]
+
+
+\subsection{HOSVD vs ALS Refinement}
+\label{app:tucker_als}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 5 "Fast HOSVD (No ALS Refinement)"
+% DATA:   das_eap/atomic-sweep-40/tucker_autorank/{task}/tucker_autorank.json (HOSVD-only configs)
+
+[1 paragraph: We compare HOSVD initialization alone (randomized truncated
+SVD, no iterative refinement) against HOSVD + Alternating Least Squares
+refinement (100 iterations, tolerance $10^{-5}$). ALS refinement is
+critical for scoring quality.]
+
+\begin{table}[h]
+\centering
+\caption{HOSVD-only vs HOSVD+ALS refinement (CMD, lower is better).}
+\label{tab:tucker_als}
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 5 "Fast HOSVD"
+% DATA:   das_eap/atomic-sweep-40/tucker_autorank/{task}/tucker_autorank.json
+\begin{tabular}{lccc}
+\toprule
+\textbf{Task} & \textbf{HOSVD-only CMD} & \textbf{HOSVD+ALS CMD} & \textbf{Improvement} \\
+\midrule
+IOI & 0.170 & \textbf{0.013} & 13$\times$ \\
+GT  & 0.080 & \textbf{0.018} & 4.4$\times$ \\
+SVA & 0.069 & \textbf{0.022} & 3.1$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[1 paragraph: HOSVD-only initialization is catastrophically worse: 13$\times$
+worse CMD on IOI, 4.4$\times$ on GT, 3.1$\times$ on SVA. The randomized
+SVD provides a coarse starting point, but the alternating least squares
+steps are essential for accurate reconstruction of the fine-grained
+factor structure. We use HOSVD+ALS (tensorly's \texttt{tucker} with
+\texttt{init="svd"}, \texttt{n\_iter\_max=100}) throughout.]
+
+
+\subsection{Negative Results: Approaches That Did Not Improve Scoring}
+\label{app:tucker_negative}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 5 "What Doesn't Work"
+% DATA:   das_eap/atomic-sweep-40/tucker_adaptive/ (asymmetric ranks)
+%         das_eap/atomic-sweep-40/tucker_cpca/ (CPCA pre-filtering)
+
+\subsubsection{Asymmetric Tucker Ranks}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 5 "Asymmetric Ranks"
+% DATA:   das_eap/atomic-sweep-40/tucker_adaptive/{task}/
+
+[1 paragraph: Setting mode ranks independently (e.g., $r_w=15, r_r=1,
+r_f=8$ for SVA's rank-1 reader structure) produces CMD 0.33--0.81.
+Even when a mode has effective rank 1, compressing it to rank 1 in
+Tucker removes the 20\% of variance in non-dominant modes that contains
+essential edge-discrimination signal. The rank-1 degeneration described
+in \S5.1.2 means Tucker \emph{cannot improve rankings} via the dominant
+mode, but aggressively compressing the non-dominant modes actively
+\emph{destroys} signal.]
+
+\subsubsection{CPCA Pre-filtering}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 5 "CPCA Pre-filtering"
+% DATA:   das_eap/atomic-sweep-40/tucker_cpca/{task}/tucker_cpca_partial.json
+
+[1 paragraph: We tested restricting the factor dimension to factors
+identified by constrained PCA (top 1--10\% by selector magnitude)
+before Tucker decomposition. This did not help scoring:]
+
+\begin{table}[h]
+\centering
+\caption{CPCA pre-filtering on SVA (CMD, lower is better).}
+\label{tab:tucker_cpca}
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 4 "CPCA Pre-filtering"
+% DATA:   das_eap/atomic-sweep-40/tucker_cpca/sva/tucker_cpca_partial.json
+\begin{tabular}{lcc}
+\toprule
+\textbf{Method} & \textbf{Factors retained} & \textbf{CMD} \\
+\midrule
+Standard EAP-IG (all factors) & 8192 & \textbf{0.015} \\
+CPCA filtered 5\% (no Tucker) & 409 & 0.038 \\
+CPCA filtered 10\% (no Tucker) & 819 & 0.047 \\
+Best CPCA + Tucker & 409--819 & 0.182 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[1 paragraph: The top 1\% of factors by selector magnitude holds only
+10\% of the EAP-IG attribution energy. The remaining 90\% is distributed
+across ``inactive'' factors that still carry real attribution signal.
+CPCA pre-filtering works for DAS (\S4.3) because DAS operates at a
+single layer where the selector identifies the right causal subspace.
+EAP-IG aggregates across all layers and all edges, so the attribution
+signal is broadly distributed and pre-filtering removes real signal,
+not just noise. This is a fundamental difference between causal
+intervention (DAS) and gradient-based attribution (EAP-IG).]
+
+\subsubsection{SVA Edge-Case Methods}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 5 "Tucker on SVA"
+% DATA:   das_eap/atomic-sweep-40/tucker_rank1/ (pending results)
+
+[1 paragraph: No Tucker variant, rank configuration, scoring method,
+or pre-processing step improved on SVA's standard EAP-IG CMD of 0.015.
+We tested: factor-only PCA ($k=2$ to 512), soft thresholding
+($0.5\sigma$ to $5\sigma$), top-$k$ factors per edge ($k=10$ to 1000),
+and high-reader-rank Tucker ($r_r=50, 100, 445$). SVA's circuit is
+structurally incompatible with Tucker denoising --- it is already clean,
+and the rank-1 reader structure means no Tucker configuration can change
+edge rankings (see \S5.1.2). The correct interpretation is that SVA's
+0.015 CMD is the floor for this checkpoint and task.]
+
+
+\subsection{Cross-Task Circuit Structure}
+\label{app:tucker_crosstask}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 3 "Cross-Task"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/{task}/tucker_scoring.json (circuit sub-tensor configs)
+
+\subsubsection{IOI Sub-Circuit Recovery}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 3 "IOI: Full Circuit Recovery"
+
+[1 paragraph: Tucker (10,10,8) on IOI's circuit sub-tensor (top 1\% of
+edges by standard EAP-IG) recovers the complete Wang et al.\ (2022)
+IOI circuit automatically. Each head loads on a single writer mode
+with loading $>0.99$. The modes are perfectly interpretable:]
+
+\begin{table}[h]
+\centering
+\caption{IOI Tucker sub-circuits (top 8 core tensor entries, accounting
+for 67\% of total energy).}
+\label{tab:ioi_subcircuits}
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 3 "IOI: Full Circuit Recovery"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/ioi/tucker_scoring.json (circuit sub-tensor)
+\begin{tabular}{clccl}
+\toprule
+\textbf{\#} & \textbf{Sub-circuit} & \textbf{Energy} & \textbf{Tier} & \textbf{Known IOI Role} \\
+\midrule
+1 & a0.h1 $\to$ m0 via F0 & 13.8\% & Primary & Duplicate token $\to$ MLP0 \\
+2 & a0.h4 $\to$ m0 via F1 & 11.5\% & Primary & Early attn $\to$ MLP0 \\
+3 & a0.h5 $\to$ m0 via F2 & 10.6\% & Primary & Early attn $\to$ MLP0 \\
+4 & a0.h3 $\to$ m0 via F3 & 9.7\%  & Primary & Self-attn $\to$ MLP0 \\
+5 & a5.h5 $\to$ m5 via F4 & 7.6\%  & Secondary & Induction $\to$ MLP5 \\
+6 & a5.h5 $\to$ a8.h6$\langle$v$\rangle$ via F5 & 5.5\% & Secondary & Induction $\to$ S-inhibition \\
+7 & a5.h5 $\to$ m5 via F6 & 4.5\%  & Secondary & Induction $\to$ MLP5 \\
+8 & a9.h9 $\to$ logits via F7 & 3.8\% & Secondary & Name mover $\to$ output \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[1 paragraph: Two-tier structure emerges: the \emph{primary tier}
+(\#1--4, 46\% of energy) is infrastructure --- layer-0 heads routing
+through MLP0, which every task needs for embedding processing. The
+\emph{secondary tier} (\#5--8, 21\%) is the actual IOI algorithm:
+induction $\to$ S-inhibition $\to$ name mover, the pathway identified
+by manual circuit analysis.]
+
+\subsubsection{SVA: Shallow Rank-1 Circuit}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 3 "SVA: Shallow Rank-1 Circuit"
+
+[1 paragraph: All 8 SVA sub-circuits route through a single reader (m0):]
+
+\begin{table}[h]
+\centering
+\caption{SVA Tucker sub-circuits (top 5 core tensor entries).}
+\label{tab:sva_subcircuits}
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 3 "SVA: Shallow Rank-1 Circuit"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/sva/tucker_scoring.json
+\begin{tabular}{clc}
+\toprule
+\textbf{\#} & \textbf{Sub-circuit} & \textbf{Energy} \\
+\midrule
+1 & a0.h5 $\to$ m0 via F0 & 29.2\% \\
+2 & a0.h3 $\to$ m0 via F1 & 16.3\% \\
+3 & a0.h1 $\to$ m0 via F2 & 14.4\% \\
+4 & a0.h4 $\to$ m0 via F3 & 12.5\% \\
+5--8 & a0.h\{11,10,6\} + input $\to$ m0 & 24.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[1 paragraph: No mid-layer or late-layer structure in the top-1\%
+circuit. SVA is a ``shallow'' task: subject-verb agreement is processed
+primarily through early attention heads routing to MLP layer 0. The
+reader rank-1 structure (Table~\ref{tab:tucker_effrank}) is not just a
+scoring diagnostic --- it reflects the circuit's actual architecture.
+There is no multi-layer relay; information goes directly from layer-0
+attention to MLP0.]
+
+\subsubsection{Greater-Than: MLP Cascade}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 3 "Greater-Than: MLP Cascade"
+
+[1 paragraph: GT shares IOI/SVA's primary structure (early heads $\to$
+m0) but has a distinctive secondary structure --- a 3-layer MLP cascade:]
+
+\begin{table}[h]
+\centering
+\caption{Greater-Than Tucker sub-circuits (top 10 core tensor entries).}
+\label{tab:gt_subcircuits}
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 3 "Greater-Than: MLP Cascade"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/greater_than/tucker_scoring.json
+\begin{tabular}{clcl}
+\toprule
+\textbf{\#} & \textbf{Sub-circuit} & \textbf{Energy} & \textbf{Role} \\
+\midrule
+1--6 & a0.h\{1,3,5,4,7,10\} $\to$ m0 & 82\% & Primary: early $\to$ MLP0 \\
+7 & a0.h1 $\to$ m1 via F6 & 3.8\% & MLP cascade layer 1 \\
+8 & a0.h1 $\to$ m2 via F7 & 3.3\% & MLP cascade layer 2 \\
+9 & m0 $\to$ m1 via F6 & 0.5\% & MLP cascade: m0 $\to$ m1 \\
+10 & m0 $\to$ m2 via F7 & 0.3\% & MLP cascade: m0 $\to$ m2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[1 paragraph: Factor modes F6 and F7 are \emph{shared} between the
+a0.h1$\to$m1, a0.h1$\to$m2, m0$\to$m1, and m0$\to$m2 sub-circuits.
+This sharing means the same factor subspace carries the ``number
+representation'' through consecutive MLP layers for greater-than
+comparison. The MLP cascade (m0$\to$m1$\to$m2) is GT's distinctive
+secondary structure, absent in SVA (rank-1 readers) and present in
+a different form in IOI (attention relay rather than MLP cascade).]
+
+\subsubsection{Two-Tier Universal Structure}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 3 "Cross-Task: Universal Primary + Task-Specific Secondary"
+
+[1 paragraph: All three tasks share the same \emph{primary structure}:
+layer-0 attention heads $\to$ MLP0 through task-distinct factor
+subspaces (F0--F5). This is infrastructure --- embedding processing
+that every task requires. The primary tier accounts for 46\% (IOI),
+97\% (SVA), and 82\% (GT) of circuit energy. Tasks differ in their
+\emph{secondary structure}: IOI has a multi-layer attention relay
+(layers 5$\to$8$\to$9), GT has an MLP cascade (m0$\to$m1$\to$m2),
+and SVA has no secondary structure at all. The secondary tier is where
+task-specific computation happens; Tucker separates it from the
+universal infrastructure via the core tensor's block structure.]
+
+
+\subsection{4D Tucker: Q/K/V Separation}
+\label{app:tucker_4d}
+
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 4 "4D Tucker (Separating Q/K/V)"
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/{task}/ (4D configs)
+
+[1 paragraph: Reshaping the reader axis from flat 445 nodes to
+(157 head-components $\times$ 4 Q/K/V/MLP types) yields a 4D tensor.
+Tucker on this 4D tensor reveals whether a circuit uses Q, K, and V
+independently or jointly.]
+
+\begin{table}[h]
+\centering
+\caption{4D Tucker Q/K/V projection mode purity by task.}
+\label{tab:tucker_4d_purity}
+% SOURCE: TUCKER_ANALYSIS_COMPLETE.md Section 4 / Appendix Table A3
+% DATA:   das_eap/atomic-sweep-40/tucker_scoring/{ioi,sva}/tucker_scoring.json (4D configs)
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Task} & \textbf{Mode 0} & \textbf{Mode 1} & \textbf{Mode 2} & \textbf{QKV purity} \\
+\midrule
+IOI & Q (1.000) & V (1.000) & K (1.000) & $>$99.9\% \\
+SVA & V (1.000) & K(0.85)/Q(0.53) & Q(0.85)/K(0.53) & Mixed \\
+GT  & \multicolumn{4}{c}{[TBD --- pod pending]} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+[1 paragraph: IOI separates Q, K, V with $>$99.9\% purity --- each
+projection type becomes an independent Tucker mode. The small Q$\leftrightarrow$K
+mixing (0.020) reflects the $QK^\top$ attention score duality. SVA
+separates V cleanly but mixes Q and K (0.85/0.53 loadings), indicating
+the circuit uses Q and K jointly for number agreement. This pattern is
+\emph{diagnostic of circuit type}: identity-like projection modes indicate
+distinct-role circuits (IOI), while Q/K merging indicates joint-attention
+circuits (SVA). The 4D variance drops from 42.7\% (IOI) to 14.0\% (SVA)
+because SVA is MLP-dominated --- separating attention projections isolates
+a minor fraction of the total signal.]
+
+
+% ============================================================
+% REVIEWER CRITIQUE SUMMARY (from v4 reframing)
+% ============================================================
+%
+% Below: every major reviewer concern and how to address it.
+% These are the hardest questions. Resolve before writing prose.
+%
+% ---- CONCERN 1: "You're analyzing a different model" ----
+% Q: The factorized model is not GPT-2. How do you know the
+%    factor structure isn't an artifact of the factorization?
+% A: Model equivalence (Section 3.3). CE gap < 0.02, DAS IIA >= 0.97
+%    bidirectional, same circuit edges recovered. The factorized model
+%    is constrained (only S and F are free), so it can't invent arbitrary
+%    structure --- it must preserve GPT-2's computations to achieve low CE.
+% STATUS: Addressed in Section 3.3. Need to strengthen with MAS numbers.
+%
+% ---- CONCERN 2: "Individual factors are arbitrary (gauge freedom)" ----
+% Q: You claim per-factor attribution but factors are basis-dependent.
+%    Any rotation gives different per-factor scores. How is this useful?
+% A: Individual factors are basis vectors; subspaces are the invariant
+%    objects. PCA/Tucker on factor scores identifies gauge-invariant
+%    subspaces. The factorization provides the dictionary; downstream
+%    analysis extracts the invariant structure. Same as how PCA components
+%    individually are meaningless but their span is well-defined.
+% STATUS: Acknowledged in limitations. Could be stronger in Section 4.
+%    Consider adding a paragraph: "Per-factor scores are basis-dependent,
+%    but the subspaces they identify are not."
+%
+% ---- CONCERN 3: "Tucker only works on IOI" ----
+% Q: Tucker results on SVA and GT?
+% A: Tucker on the full tensor doesn't scale to weaker circuits.
+%    Concentration analysis (PR/k) works on all 3 tasks. Tucker is
+%    best used on pre-identified circuit edges, not for discovery.
+% STATUS: Acknowledged in Section 5.2. Frame Tucker as interpretability
+%    tool, not discovery method.
+%
+% ---- CONCERN 4: "PCA always finds low-rank structure" ----
+% Q: A 70k x 8k matrix will have low-rank structure by definition.
+%    What's the null?
+% A: Shuffled-factor null: PCA on permuted factors gives CMD = 0.052
+%    (no improvement). Random subspaces: CMD >> 0.052. The structure
+%    is in the factor attributions, not in the matrix dimensions.
+% STATUS: Section 6.1. Need to run and report exact null numbers.
+%
+% ---- CONCERN 5: "Concentration is trivially explained by score magnitude" ----
+% Q: Circuit edges have larger scores. Larger scores = less noise = more
+%    concentrated. You're just measuring signal-to-noise, not structure.
+% A: RESOLVED by cutting concentration from paper. Magnitude control
+%    experiment showed: GT fails entirely, IOI partially structural at
+%    high k only, SVA structural but weak. Not robust enough to be a
+%    headline claim. Tucker core tensor sparsity replaces this.
+% STATUS: CUT from paper. No longer blocking.
+%
+% ---- CONCERN 6: "Why not just use SAEs?" ----
+% Q: SAEs already give per-feature attribution via SAE-patching.
+%    What's the advantage of factors?
+% A: (1) Factors are shared across all projections --- same dictionary for
+%    Q, K, V, O, MLP_in, MLP_out. SAEs are per-layer. (2) Factors are
+%    in the model's computation, not post-hoc. (3) No reconstruction
+%    error. (4) The shared bank enables cross-layer tracking.
+%    BUT: be honest that SAEs are more interpretable per-feature
+%    (each SAE feature has a clear activation pattern) while factors
+%    are basis-dependent.
+% STATUS: Discussed in Related Work. Could be stronger.
+%
+% ---- CONCERN 7: "Why DAS for equivalence? Why not other probes?" ----
+% Q: DAS is one specific method. Model equivalence should be demonstrated
+%    with multiple independent methods.
+% A: We use THREE levels: CE (behavioral), DAS/MAS (representational),
+%    EAP circuit recovery (structural). That's three independent methods
+%    at three different levels of analysis.
+% STATUS: Section 3.3. This is adequate.
+%
+% ---- CONCERN 8: "Only GPT-2 Small" ----
+% Q: One model is not enough. Cross-architecture?
+% A: Acknowledge as limitation. Cross-architecture (Qwen, Pythia) is
+%    planned but not yet run. Deferred to future work / revision.
+% STATUS: Limitation acknowledged. Future work. Qwen cut from this version.
+%
+% ---- CONCERN 9: "The factorization requires training" ----
+% Q: This isn't training-free. You need to train a factorized model
+%    before you can do any of this. That's a significant cost.
+% A: True. ~2 GPU-hours for GPT-2 Small. But: (1) the factorized model
+%    is reusable across all tasks (train once, analyze many tasks),
+%    (2) per-factor attribution is free once the model exists,
+%    (3) the Pareto sweep gives guidance on which checkpoint to use.
+% STATUS: Acknowledged in limitations.
+%
+% ---- CONCERN 10: "What did you actually LEARN about IOI?" ----
+% Q: You have 8 dimensions, a 4+4 split, head characterization.
+%    But what's the NEW insight about IOI that nobody knew?
+% A: (1) The primary/secondary split shows infrastructure vs computation
+%    are separable in factor space. (2) Each edge only uses 2 of 8 global
+%    dimensions --- the circuit is locally low-dimensional.
+%    (3) Tucker identifies the specific pathways.
+%    Whether these are "new" depends on the audience. For the mech-interp
+%    community, the METHOD is new; the IOI findings are validation.
+% STATUS: This is the weakest part of the paper. The method is the
+%    contribution; the IOI findings are validation, not discovery.
+%    Be honest about this framing.
+%
+% ============================================================
+
+
+% ============================================================
+% FIGURE + TABLE INVENTORY (updated for v5.3)
+% ============================================================
+%
+% MAIN TEXT FIGURES (target: 5-7 figures + 2-4 tables)
+%
+%   Figure 1  [NEED]  Pipeline overview (standard -> factorized -> per-factor)  PAGE 1
+%   Figure 2  [NEED]  Pareto frontier: CE vs L0/channel by selector type        Section 3
+%   Figure 3  [HAVE]  PCA layer-aggregated sub-circuit heatmap (IOI, 8 PCs)     Section 5
+%                     pca_layer_heatmaps.png --- 13x13 writer layer x reader layer
+%   Figure 4  [HAVE]  PCA vs Tucker agreement matrix (cosine + geodesic)        Section 5
+%                     pca_tucker_geodesic_agreement.png --- 8x8 |cos| + Gr(1,8192) geodesic
+%   Figure 5  [NEED]  Grassmannian angle heatmap across 5 metrics               Section 6
+%   Figure 6  [NEED]  Faithfulness curves (std EAP vs fac EAP vs PCA)           Section 6
+%
+%   Table 1a  [NEED]  PCA and Tucker scoring vs EAP-IG across 5 tasks           Section 5
+%   Table 1b  [NEED]  Effective rank per mode across tasks                      Section 5
+%   Table 2   [NEED]  Per-metric robustness                                     Section 6
+%
+% SUPPLEMENTARY FIGURES (all HAVE):
+%   pca_subcircuit_zoomed.png     --- IOI top 15 edges per PC with names + values
+%   pca_subcircuit_heatmaps_v2.png --- Full 157x445 SymLog-scaled heatmaps (8 PCs)
+%   pca_layer_heatmap_ioi.png     --- IOI 8-panel (same as Figure 3)
+%   pca_layer_heatmap_sva.png     --- SVA 8-panel
+%   pca_layer_heatmap_greater_than.png  --- GT 8-panel
+%   pca_layer_heatmap_gender_bias.png   --- Gender 8-panel
+%   pca_layer_heatmap_capital_country.png --- Capital 8-panel
+%   pca_multi_task_layer_heatmaps.png  --- 5 tasks x 4 PCs combined
+%   pca_multi_task_subcircuits.png --- Full heatmaps 5 tasks x 4 PCs
+%   pca_multi_task_zoomed.png     --- Zoomed top edges 5 tasks x 4 PCs
+%   tucker_layer_heatmaps.png     --- Tucker 8-panel layer heatmap (IOI)
+%   tucker_subcircuit_zoomed.png  --- Tucker top edges per factor mode
+%   tucker_subcircuit_heatmaps.png --- Tucker full 157x445 heatmaps
+%   pca_tucker_agreement.png      --- 8x8 cosine matrix (diagonal = 1.000)
+%   pca_vs_tucker_comparison.png  --- Side-by-side matched pairs
+%
+% APPENDIX FIGURES/TABLES:
+%   Figure A1 [HAVE]  Pareto frontier by bank size (all checkpoints)
+%   Figure A2 [NEED]  Bootstrap stability: principal angle vs component index    Appendix H
+%   Table A1  [NEED]  Selector types comparison                                 Appendix E
+%   Table A2  [NEED]  Full alternative method comparison (9+ rows)              Appendix G
+%
+% ============================================================
+\section{Weight-Space Communication Analysis}
+\label{app:weight_comms}
+% ============================================================
+
+% SOURCE: lib/factorized_spectral/compare_shared_vs_svd_basis.py
+%         lib/factorized_spectral/compare_subspace_geodesic.py
+% DATA:   atomic-sweep-40 checkpoint (DST, 8192 factors, 95.8\% sparse)
+
+\subsection{Communication Matrices Are Full-Rank}
+\label{app:comm_full_rank}
+
+[1 paragraph: For each edge $(u \to v)$, the communication matrix
+$C_{uv} = W_O^{u\top} W_V^v$ is $(d_\text{head} \times d_\text{head})$.
+We compute singular value concentration $\sigma_1 / \sum_i \sigma_i$
+across all IOI edges and random baseline edges. \textbf{Result:}
+concentration is 3.9--5.5\% for all pathway types (previous-token
+$\to$ induction, induction $\to$ S-inhibition, S-inhibition $\to$
+name-mover) and 4.6\% for random edges. Communication is distributed
+across all 64 singular values with no dominant channel. This is why
+the nuclear norm (sum of all $\sigma_i$) is the appropriate summary
+statistic, and why rank-1 dominance tests
+capture only $\sim$4\% of the communication bandwidth.]
+
+\subsection{Geodesic Distance Between Communication Subspaces}
+\label{app:comm_geodesic}
+
+% SOURCE: compare_subspace_geodesic.py
+% DATA:   24 IOI edges (3 pathways) + 8 random baseline edges
+
+[1 paragraph: We compare communication matrix subspaces across edges
+via geodesic distance on the Grassmannian $\mathrm{Gr}(k, d_\text{head})$.
+For rank-$k$ subspaces (top-$k$ left singular vectors), we compute
+principal angles and the geodesic $d_G = \sqrt{\sum \theta_i^2}$.
+\textbf{Result:} at all ranks ($k = 1, 3, 5, 10$), within-pathway
+geodesic distances are 85--95\% of the maximum possible distance,
+with across-pathway distances only slightly larger (discrimination
+ratio 1.03--1.07$\times$). Communication subspaces are near-orthogonal
+between all edge pairs, regardless of functional relationship.]
+
+[1 paragraph: \textbf{Interpretation:} the geometric structure
+lives in the \emph{selector subspaces}, not in the communication
+matrices. Selector subspaces show strong task-specific structure:
+IOI and SVA route through 88--89$^\circ$ orthogonal subspaces at
+task-critical layers (Appendix~\ref{app:selector_orthogonality}).
+The communication matrix captures structural \emph{capacity} (the
+pipe diameter), while the selector subspace captures functional
+\emph{routing} (which pipe to use). These are complementary views.]
+
+\subsection{Factorized vs Standard Composition Scores}
+\label{app:fac_vs_std_cs}
+
+% SOURCE: compare_shared_vs_svd_basis.py
+% DATA:   24 IOI edges, 7 scoring methods
+
+[1 paragraph: The factorized and standard paths produce numerically
+identical scores (geodesic between subspaces $< 0.001$), confirming
+that the factorization is faithful.]
+
+[1 paragraph: For cross-edge comparison, individual factor indices
+show near-zero overlap (Jaccard@10 $= 0.015$ within-pathway) with
+8192 factors ($\sim$344 active per channel). However, the
+discrimination ratio (within/across similarity) is $12.7\times$
+for factor Jaccard vs $2.0\times$ for SVD cosine. Full
+contribution-vector cosine shows within-pathway $\sim$0.75 vs
+across-pathway $\sim$0.66.]
+
+[1 paragraph: \textbf{Implication:} the shared vocabulary
+operates at the \emph{subspace} level (PCA/Tucker), not
+at individual factor indices. This motivates the PCA and Tucker
+decompositions as the natural analysis layer above raw factors.]
+
+\subsection{Selector Subspace Orthogonality Across Tasks}
+\label{app:selector_orthogonality}
+
+% SOURCE: grassmannian_similarity.pdf (v7 slides, slide 4-5)
+% DATA:   atomic-sweep-40, IOI vs SVA selectors per layer
+% TODO:   Redo across all 6 tasks with proper controls
+
+[TODO: Redo the Grassmannian orthogonality analysis across all 6
+tasks (IOI, SVA, greater-than, hypernymy, capital-country,
+gender-bias) with proper controls. Preliminary results (v7 slides):
+top-50 factor Jaccard 0.69--0.85 (shared factors), mean principal
+angle 75--83$^\circ$ ($\approx$ orthogonal), strengthening to
+88--89$^\circ$ at task-critical layers with DST 8192. Tasks share
+the same factors but route through orthogonal subspaces.]
+
+% ============================================================
+% NEW v6 APPENDICES
+% ============================================================
+
+
+% ============================================================
+% Appendix: Per-Counterfactual Tucker Analysis (NEW v6)
+% ============================================================
+
+\section{Per-Counterfactual Tucker Analysis}
+\label{app:per_counterfactual}
+
+% SOURCE: SUB_EDGE_DECOMPOSITION_V10.md experiment A
+% DATA: das_eap/atomic-sweep-40/per_counterfactual_tucker/
+
+\subsection{Variance Explained by Counterfactual Type}
+
+[1 paragraph: Tucker (10,10,8) variance explained varies dramatically
+across IOI counterfactual types: s2\_io\_flip 59.1\%, s1\_io\_flip
+$\sim$83.3\%, abc $\sim$52.8\%, compound $\sim$39.5\%. s1\_io\_flip
+is much more compressible --- simpler attribution structure for that
+corruption type. Compound corruptions have the most complex attribution
+tensor (least compressible) because they include multiple perturbation
+types simultaneously.]
+
+\subsection{Cross-Counterfactual Mode Comparison}
+
+% [TABLE: All 6 pairwise comparisons]
+\textbf{[TABLE --- All 6 pairwise comparisons between counterfactual
+types. Columns: pair, mean matched cosine, mean principal angle, factor
+Jaccard. Ranked from most similar (s2\_io vs compound: 0.440 cos,
+58.0\textdegree) to most different (s2\_io vs s1\_io: 0.145 cos,
+78.4\textdegree). Include interpretation: s2\_io and compound share
+5/8 modes (cosine $>$0.64), then 3 nearly orthogonal; s1\_io produces
+structurally simpler tensor with largely distinct modes.]}
+
+\subsection{Interpretation}
+
+[1 paragraph: Different corruption types route through partially
+distinct factor subspaces. The \emph{shared} modes likely reflect
+model-intrinsic circuit geometry (always activated regardless of
+corruption type), while the \emph{distinct} modes reflect
+corruption-specific information routing. The s1\_io\_flip case is
+instructive: swapping the subject (S1) position rather than the indirect
+object (S2) produces a fundamentally simpler attribution structure
+(83\% vs $\sim$50\% variance explained) with largely distinct modes,
+suggesting S1 and S2 information flows through different factor subspaces
+even though both contribute to the same task.]
+
+
+% ============================================================
+% Appendix: Distributed Logit Lens on DAS Dimensions (NEW v6)
+% ============================================================
+
+\section{Distributed Logit Lens on DAS Dimensions}
+\label{app:logitlens}
+
+% SOURCE: analysis4_logit_lens_distributed/RESULTS.md
+%         analysis5_logit_lens_distributed_pt2/NECESSITY_SUFFICIENCY_TAXONOMY.md
+
+\subsection{Per-Dimension Token Categories}
+
+[1 paragraph: Each DAS dimension has a coherent lexical signature when
+decoded through the unembedding matrix. SVA dim 0 promotes singular
+verbs (IIA 0.920), dim 1 promotes plural pronouns (IIA 0.960). IOI
+dims promote names and gender categories. The distributed logit lens
+reveals what information each causal dimension carries, providing
+interpretability for the otherwise opaque DAS rotation matrix.]
+
+\subsection{Necessity/Sufficiency Taxonomy}
+
+[1 paragraph: SVA: 1 privileged direction with 3 redundant copies.
+IOI: inflated 32-dim subspace; greedy forward search finds 5 optimal
+dimensions (IIA 0.987) vs full 32 (IIA 0.820, worse due to
+over-parameterization). Different tasks have qualitatively different
+causal subspace geometry: SVA is rank-1 with redundancy, IOI is
+rank-$\sim$5 with padding noise.]
+
+\subsection{JS Divergence Clustering}
+
+[1 paragraph: JS divergence between token distributions decoded from
+each DAS dimension reveals semantic clustering. IOI has 3--5
+semantically distinct direction types within its 32 DAS dims. Gender
+Bias has near-duplicate vectors. This clustering suggests the causal
+subspace has interpretable internal structure that factor-constrained
+initialization helps discover.]
+
+
+% ============================================================
+% Appendix: Subspace Trimming and k-Sweep (NEW v6)
+% ============================================================
+
+\section{Subspace Trimming and Dimensionality Analysis}
+\label{app:trimming}
+
+% SOURCE: analysis7_subspace_trimming; analysis9_k_sweep
+
+\subsection{IOI Subspace Trimming}
+
+[1 paragraph: Greedy forward search: 5 dimensions achieve IIA 0.987 vs
+full 32-dim DAS at 0.820. $k=32$ is 16$\times$ inflated with $-$0.167
+IIA penalty from noise dimensions that interfere with the intervention.
+The ``optimal'' DAS dimensionality is much lower than the trained
+dimensionality, consistent with the rank-$\sim$5 structure identified
+by the distributed logit lens.]
+
+\subsection{Cross-Task k-Sweep}
+
+[1 paragraph: Diminishing returns after $k=4$ on several tasks. $k=4$
+near-optimal with improved generalization. Larger $k$ overfits to
+training distribution.]
+
+\subsection{Teacher vs Factorized IIA}
+
+[1 paragraph: IOI improves on factorized model (0.820 $\to$ 0.913 at
+$k=32$). SVA/Gender/Capital worsen slightly. Factorization enhances IOI
+but may subtly damage other tasks --- consistent with the factorization
+creating slightly different internal representations that happen to be
+better-aligned with IOI's causal structure.]
+
+
+% ============================================================
+% Appendix: Factor Mediation / Causal Discovery (NEW v6)
+% ============================================================
+
+\section{Factor Mediation Analysis}
+\label{app:mediation}
+
+% SOURCE: lib/causal_discovery/FINDINGS.md
+
+[1 paragraph: PC algorithm on factor activations identifies 286 unique
+factors mediating known IOI composition edges (CI-significant at
+$\alpha = 0.05$). 90\%+ of mediating factors are unique to a single
+edge; 2 factors capture 50\% of mediation. Per-edge factor mediation
+is highly specific, consistent with the Jaccard overlap results in
+\S\ref{sec:factor_overlap}: the same pattern of factor disjointness
+observed in attribution scores is replicated by an independent causal
+discovery algorithm (constraint-based PC) operating on factor
+activations.]
+
+
+% ============================================================
+% Appendix: Conceptor Steering (NEW v6)
+% ============================================================
+
+\section{Conceptor Steering via Factor Subspaces}
+\label{app:conceptor}
+
+% SOURCE: experiments/batch6_atlas/06_13_2026/sub_edge_directions/CONCEPTOR_STEERING_WRITEUP.md
+
+[1 paragraph: Boolean operations on DAS-identified factor subspaces:
+AND (intersection of two task subspaces), OR (union), NOT (complement)
+produce valid causal interventions at 97--100\% IIA. This demonstrates
+that factor subspace algebra enables compositional steering without
+retraining DAS. The AND operation identifies shared causal directions
+between tasks; NOT removes one task's influence while preserving
+another's. The factor bank provides the shared basis that makes these
+operations well-defined.]
+
+
+% ============================================================
+% Appendix: Merullo Composition Comparison (NEW v6)
+% ============================================================
+
+\section{Comparison to Talking Heads Composition Scores}
+\label{app:merullo}
+
+% SOURCE: lib/factorized_spectral/MERULLO_COMPARISON.md
+
+[1 paragraph: Merullo et al.\ (2024) compute per-pair SVD of composition
+scores between head pairs. Our factor bank provides a global basis: the
+Gram matrix $F F^\top$ mediates all cross-layer communication.
+Factorized composition via $S_u^\top (F F^\top) S_v$ is algebraically
+equivalent to standard composition through the shared factor bank. The
+shared basis enables cross-edge comparison that per-pair SVD cannot ---
+two edges can be compared in the same factor coordinates, whereas
+per-pair SVD produces incomparable singular vectors.]
+
+
+% ============================================================
+% Appendix: Post-Hoc Sparsity Recovery (NEW v6, negative result)
+% ============================================================
+
+\section{Post-Hoc Sparsity Recovery}
+\label{app:posthoc}
+
+% SOURCE: lib/analysis_grassmanian_subspace/channel_sparsity_posthoc/RESULTS.md
+
+[1 paragraph: Seven unsupervised methods tested for recovering selector
+sparsity post-hoc (without access to the selector matrix): activation
+thresholding, gradient magnitude, mutual information, correlation
+analysis, sparse coding, ICA, and spectral methods. All fail ---
+selector sparsity is coordinate-aligned in the learned factor basis
+and is unrecoverable from activations or gradients alone without
+supervision. The factorization training procedure is essential;
+post-hoc analysis cannot substitute. This negative result strengthens
+the case for distillation-based factorization: the sparse structure
+must be \emph{trained into} the model, not discovered after the fact.]
+
+
+% ============================================================
+% Appendix: Extended Null Controls (NEW v6)
+% ============================================================
+
+\section{Extended Null Controls}
+\label{app:nullcontrols_extended}
+
+\subsection{Random Subspace Controls}
+
+[20 random 8D subspaces in $\mathbb{R}^{8192}$: CMD distribution.
+PCA k=8 CMD should beat all 20 trials by wide margin.]
+
+\subsection{Shuffled Factor Controls}
+
+[20 shuffled-factor PCA runs: CMD distribution. Histogram with PCA
+k=8 CMD and full baseline CMD marked.]
+
+\subsection{Sub-Variable Orthogonality Null}
+
+[1 paragraph: Tucker modes from DAS sub-variable attribution tensors
+tested against 50 random weightings. Random cosine: 0.08 vs reference;
+DAS sub-variables: 0.13. Cross-comparison also not significant.
+\textbf{Honest null result} --- the sub-variable Tucker modes do not
+carry significantly more information than random weightings. This is
+important to report: it constrains the interpretation of Tucker modes
+as capturing task-specific (not just data-specific) structure.]
+
+\subsection{Factor Bank Projection Null}
+
+[1 paragraph: Projecting the factor bank $F$ onto Tucker C subspace
+produces zero effect at all ranks (k=1,2,4,8). Random subspace
+projections also produce zero effect. Explanation: $F$ is (8192, 768),
+so any rank-8 subspace of factor-index space maps to a full-rank-768
+output space via the overcomplete basis. Weight-level projection is too
+weak an intervention; activation-level projection (Section~7.3) is the
+correct approach.]
+
+
+% ============================================================
+% Appendix: CMD Evaluation Across 6 Tasks (NEW v6)
+% ============================================================
+
+\section{CMD Evaluation of Tucker Factor Subspaces}
+\label{app:cmd_6tasks}
+
+% SOURCE: SUB_EDGE_DECOMPOSITION_V10.md experiment 3
+% DATA: das_eap/atomic-sweep-40/causal_tucker_modes/
+
+\textbf{[TABLE --- Tucker CMD comparison across 6 tasks. Per-task Tucker
+decomposition of each task's own attribution tensor.]}
+
+% Task           | Var Expl | Full CMD | Tucker CMD | FP k=8 | Random k=8 | FP/Rand
+% IOI            | 59.2%    | 0.0366   | 0.0178     | 0.0398 | 0.0642     | 0.62
+% SVA            | 95.7%    | 0.0116   | 0.0770     | 0.0236 | 0.1032     | 0.23
+% greater_than   | 77.1%    | 0.0295   | 0.5164     | 0.1339 | 0.0638     | 2.10
+% capital_country| 83.4%    | 0.0209   | 0.0339     | 0.0301 | 0.1118     | 0.27
+% hypernymy      | 77.2%    | 0.1011   | 0.1937     | 0.1946 | 0.2903     | 0.67
+% gender_bias    | 66.5%    | 0.0173   | 0.0384     | 0.0284 | 0.1259     | 0.23
+
+[1 paragraph: Tucker reconstruction beats full EAP-IG only on IOI
+(0.0178 vs 0.0366). Factor-projected beats random on 5/6 tasks
+(FP/Rand $<$ 1). greater\_than is the sole outlier --- Tucker
+reconstruction catastrophically fails (CMD 0.5164) and random beats
+factor-projected. This task may have a qualitatively different
+attribution geometry. High variance capture $\neq$ good edge ranking:
+SVA achieves 95.7\% variance explained but Tucker reconstruction still
+hurts CMD. Interpretation: Tucker identifies a meaningful factor
+subspace (not random) but compressing attribution to that subspace
+generally loses information needed for optimal circuit ranking. IOI's
+improvement was likely a denoising effect specific to that task's
+attribution structure.]
+
+
+% ============================================================
+% Appendix: NMI Role Recovery Details (NEW v6)
+% ============================================================
+
+\section{Unsupervised Role Recovery Details}
+\label{app:nmi_recovery}
+
+% SOURCE: IOI_CIRCUIT_FROM_ATTRIBUTION_DECOMPOSITION.md; TUCKER_CIRCUIT_SECTION_FOR_PAPER.md
+
+[1 paragraph: PCA on the flattened attribution tensor produces per-edge
+loading vectors. Clustering these (k-means, $k=5$ matching the number of
+Wang et al.\ functional roles) and comparing to ground-truth role
+assignments gives NMI = 0.600 ($p$ = 0.004 by permutation test, 1000
+permutations). Within-pathway edges have 1.46$\times$ higher cosine
+similarity of PCA loading vectors than cross-pathway edges ($p$ = 0.004
+by bootstrap). ``Early NMI'' (considering only the first-assigned mode
+per head) reaches 0.826. The decomposition recovers known functional
+structure without any supervision, circuit labels, or causal model
+specification.]
+
+
+% ============================================================
+% v6 FIGURE + TABLE INVENTORY UPDATE
+% ============================================================
+%
+% NEW MAIN TEXT FIGURES (v6 additions):
+%   Figure X  [HAVE]  Factor overlap heatmap (4x4 IOI pathway Jaccard)         Section 5
+%                     fig3_factor_overlap_stages_v2.png (BATCH2)
+%   Figure X  [HAVE]  Per-edge factor fingerprints + Q/K/V sharing             Section 5
+%                     fig1_per_edge_factor_fingerprints.png (BATCH2)
+%                     fig2_qkv_factor_sharing.png (BATCH2)
+%   Figure X  [HAVE]  Factor discrimination analysis                           Section 7
+%                     fig2_discrimination.png (BATCH2)
+%   Figure X  [HAVE]  Role similarity heatmaps                                 Section 5
+%                     25_role_similarity_heatmaps_v2.png (BATCH2)
+%
+% NEW MAIN TEXT TABLES (v6 additions):
+%   Table X: Threeway subspace comparison (PCA vs Tucker vs DAS, 5 tasks)      Section 7
+%   Table X: Activation projection sufficiency/necessity (k=1,2,4,8)           Section 7
+%   Table X: Per-counterfactual Tucker stability (6 pairwise comparisons)      Section 7
+%
+% NEW APPENDIX CONTENT (v6 additions):
+%   Per-counterfactual Tucker analysis (variance, mode comparison tables)
+%   Distributed logit lens (per-dim tokens, necessity/sufficiency taxonomy)
+%   Subspace trimming (greedy forward search, k-sweep)
+%   Factor mediation (286 CI-significant factors, PC algorithm)
+%   Conceptor steering (AND/OR/NOT boolean operations)
+%   Merullo composition comparison (shared vs per-pair basis)
+%   Post-hoc sparsity recovery (7 methods, all fail -- negative result)
+%   Extended null controls (random/shuffled/sub-variable/projection nulls)
+%   CMD evaluation across 6 tasks (Tucker vs factor-projected vs random)
+%   NMI role recovery details (0.600, p=0.004, bootstrap)
+%
+% EXISTING FIGURE FILES (v6 additions):
+%   docs/for_paper/NEW/figures/sub_circuit_graph/GOOD/good_pca/BATCH2/
+%     fig1_per_edge_factor_fingerprints.png
+%     fig2_qkv_factor_sharing.png
+%     fig2_discrimination.png
+%     fig3_factor_overlap_stages_v2.png
+%     25_role_similarity_heatmaps_v2.png
+%   docs/for_paper/NEW/figures/grassmannian_landscape/
+%     grassmannian_landscape_v11_dark_optimal.png
+%     grassmannian_landscape_v12_rho.png
+%
+% ============================================================
+
+% FIGURES THAT EXIST BUT NEED REMAKING:
+%   - Pareto plots exist in W&B / slides but need publication-quality versions
+%   - Faithfulness curves exist from slides 31-32 but need PCA overlay + cleaner format
+%   - Grassmannian angle data exists (Experiment 4) but needs heatmap visualization
+%
+% FIGURES THAT MUST BE CREATED FROM SCRATCH:
+%   - Figure 1 (pipeline overview) --- the most important, defines the paper visually
+%
+% BLOCKING EXPERIMENTS (must run before paper is writable):
+%   1. Null control numbers (random subspaces, shuffled factors)
+%   2. Split-half stability numbers
+%   3. Faithfulness curves for PCA vs standard EAP-IG across all tasks
+%   4. DiM baseline for constrained PCA comparison (is CPCA novel or does DiM match?)
+%   5. CPCA-init DAS on SVA and Greater-Than (extend beyond IOI)
+%   6. Composition on hard examples (do AND/OR/NOT help where individual methods fail?)
+%   7. Hypernymy as zero-shot test of auto-k PCA (not in training set)
+
+% ============================================================
+% Appendix: FIGURE GALLERY (NEW v6)
+%
+% Each figure gets its own entry. Figures can be promoted to
+% main text or killed from here. This is the staging area.
+% ============================================================
+
+\section{Figure Gallery}
+\label{app:figures}
+
+% All figure files are in:
+%   docs/for_paper/NEW/figures/sub_circuit_graph/GOOD/good_pca/BATCH2/
+%   docs/for_paper/NEW/figures/grassmannian_landscape/
+%   artifacts/spectral_results/neurips_figures/
+%   artifacts/spectral_results/sae_deep_comparison/
+%
+% Generation scripts (where available) are in the same BATCH2/ directory.
+
+% --- F1: Per-Edge Factor Fingerprints ---
+\subsection{Per-Edge Factor Fingerprints}
+\label{fig:per_edge_fingerprints}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.9\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/fig1_per_edge_factor_fingerprints.png}
+\caption{\textbf{Per-edge factor fingerprints for Ind$\to$SInh edges.}
+Each row is one edge; columns are factor indices. Binary heatmap
+showing top-20 factors per edge. Edges between the same head pairs
+use largely non-overlapping factor subsets --- each edge has a unique
+factor ``fingerprint.'' Generated by \texttt{viz\_factor\_sharing.py}.}
+\end{figure}
+
+% STATUS: Main text candidate (Section 5, factor overlap).
+
+% --- F2: Q/K/V Factor Sharing ---
+\subsection{Q/K/V Factor Sharing}
+\label{fig:qkv_sharing}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.85\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/fig2_qkv_factor_sharing.png}
+\caption{\textbf{Q/K/V factor sharing for 4 IOI heads.}
+Per head: Venn-style overlap of top factors used by Q, K, and V
+projections. Q and K share more factors with each other than with V,
+consistent with the QK attention-score duality. Generated by
+\texttt{viz\_factor\_sharing.py}.}
+\end{figure}
+
+% STATUS: Main text candidate (Section 5, alongside fingerprints).
+
+% --- F3: Factor Discrimination ---
+\subsection{Factor-Level Discrimination}
+\label{fig:discrimination}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.85\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/fig2_discrimination.png}
+\caption{\textbf{Factor-level discrimination: circuit vs non-circuit
+factors.} 15.4$\times$ discrimination ratio for circuit factors vs
+1.5$\times$ for non-circuit. Circuit-relevant factors form a
+statistically distinguishable population. Originally from
+\texttt{artifacts/spectral\_results/neurips\_figures/}.}
+\end{figure}
+
+% STATUS: Main text candidate (Section 7, attribution-causal gap).
+
+% --- F4: Factor Overlap Heatmap ---
+\subsection{Factor Overlap Across Circuit Stages}
+\label{fig:factor_overlap}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.6\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/fig3_factor_overlap_stages_v2.png}
+\caption{\textbf{4$\times$4 Jaccard overlap between IOI circuit stages.}
+Diagonal: within-pathway Jaccard (0.018--0.037). Off-diagonal:
+cross-pathway Jaccard (0.001--0.004). Values are mean pairwise
+Jaccard between different edges within/across the same stage, NOT
+self-similarity. YlOrRd colormap. Generated by
+\texttt{viz\_factor\_overlap\_v3.py}.}
+\end{figure}
+
+% STATUS: Main text (Section 5, factor overlap).
+
+% --- F5: SAE Cross-Layer Tracking ---
+\subsection{SAE vs Factor Cross-Layer Tracking}
+\label{fig:sae_cross_layer}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.85\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/sae_cross_layer_tracking.png}
+\caption{\textbf{Cross-layer factor reuse in IOI circuit.} Left panel:
+8\% of factors participate in 2+ pathway stages at top-20, rising to
+17\% at top-50. Right panel: example of a factor active across
+Dup$\to$Ind and Ind$\to$SInh stages. Per-layer SAE features cannot
+provide this cross-layer tracking. Originally from
+\texttt{artifacts/spectral\_results/sae\_deep\_comparison/exp3\_cross\_layer\_tracking.png}.}
+\end{figure}
+
+% STATUS: Related Work (SAE comparison) or appendix.
+
+% --- F6: Grassmannian Landscape ---
+\subsection{Grassmannian Landscape for DAS Training}
+\label{fig:grassmannian}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.48\textwidth]{figures/grassmannian_landscape/grassmannian_landscape_v11_dark_optimal.png}
+%\hfill
+%\includegraphics[width=0.48\textwidth]{figures/grassmannian_landscape/grassmannian_landscape_v12_rho.png}
+\caption{\textbf{Grassmannian landscape for DAS training on hard IOI,
+$\mathrm{Gr}(1, 768)$.}
+\emph{Left:} IIA as function of angle to DAS optimal ($x$) and
+manifold proximity ($y$). On-manifold init (blue) follows high-IIA
+ridge to global optimum (star); off-manifold init (orange) trapped.
+\emph{Right:} $\rho$ trajectory showing gradient attractor (26\%$\to$83\%).}
+\end{figure}
+
+% STATUS: Main text (Section 4.3, already in v5.5).
+
+% --- F7: Role Similarity Heatmaps ---
+\subsection{Head-to-Head Role Similarity}
+\label{fig:role_similarity}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.85\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/25_role_similarity_heatmaps_v2.png}
+\caption{\textbf{Head-to-head similarity: factor profiles vs edge
+profiles.} Left: cosine similarity of factor usage profiles (which
+factors each head uses). Right: cosine similarity of edge profiles
+(which readers each head connects to). Block structure along diagonal
+corresponds to Wang et al.\ functional roles (labeled on left axis).
+Factor profiles show stronger block structure (higher within-role
+similarity) than edge profiles. Generated by
+\texttt{viz\_25\_role\_similarity\_v2.py}.}
+\end{figure}
+
+% STATUS: Main text candidate (Section 5, role recovery / NMI).
+
+% --- F8: PCA Layer-Aggregated Heatmaps ---
+\subsection{PCA Sub-Circuit Layer Heatmaps}
+\label{fig:pca_layer_heatmaps}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.95\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/GOOD/pca_layer_heatmaps.png}
+\caption{\textbf{Layer-aggregated PCA sub-circuit heatmaps (IOI, 8 PCs).}
+Each panel: 13$\times$13 (writer layer $\times$ reader layer). PC0--3:
+embed/L0 $\to$ L0 (early processing, 47\% variance). PC4--6: L5 $\to$
+L5--L8 (S-inhibition fan-out, 11\%). PC7: L9--L11 $\to$ logits (name
+movers, 2\%). Clean three-tier separation.}
+\end{figure}
+
+% STATUS: Main text (Section 5, already in v5.5 as Figure 3/4).
+
+% --- F9: PCA-Tucker Agreement ---
+\subsection{PCA vs Tucker Factor Direction Agreement}
+\label{fig:pca_tucker_agreement}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.6\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/GOOD/pca_tucker_agreement.png}
+\caption{\textbf{PCA vs Tucker factor direction agreement (IOI).}
+8$\times$8 $|\cos\theta|$ matrix = perfect diagonal. All matched pairs
+have cosine $\geq$0.998, confirming identical factor directions from
+two mathematically different methods (variance maximization vs tensor
+reconstruction). Off-diagonal $<$0.04.}
+\end{figure}
+
+% STATUS: Main text (Section 5, already in v5.5 as Figure 4).
+
+% --- F10: MDS Subspace Map ---
+\subsection{MDS Subspace Map}
+\label{fig:mds_subspace}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.7\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/2_mds_subspace_map.png}
+\caption{\textbf{MDS projection of factor subspace geometry.} Each
+point is a head; distance reflects Grassmannian distance between
+factor subspaces. Functional groups (prev-token, dup-token, induction,
+S-inhibition, name-mover) cluster. Generated by \texttt{viz\_mds\_v4.py}.}
+\end{figure}
+
+% STATUS: Appendix or supplementary. Good overview but dense.
+
+% --- F11: Factor Loading Heatmap ---
+\subsection{Factor Loading Heatmap}
+\label{fig:factor_loading}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.85\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/9b_factor_loading_heatmap_v2.png}
+\caption{\textbf{Factor loading heatmap.} Per-head loading on each of
+the top 8 PCA components. Shows which heads load on which PCs,
+confirming the functional group assignments. Generated by
+\texttt{viz\_factor\_loading\_heatmap\_v2.py}.}
+\end{figure}
+
+% STATUS: Appendix (detailed version of the role assignment).
+
+% --- F12: Cumulative Factor Mass ---
+\subsection{Cumulative Factor Mass}
+\label{fig:factor_mass}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.7\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/23b_cumulative_factor_mass.png}
+\caption{\textbf{Cumulative factor mass for IOI circuit heads.}
+Each line is one head; $x$-axis is number of factors (sorted by
+magnitude); $y$-axis is cumulative attribution mass. Steep rise
+confirms sparse factor usage: most heads reach 80\% mass with
+$<$50 factors (of 8192). Generated by
+\texttt{viz\_head\_factor\_fingerprints.py}.}
+\end{figure}
+
+% STATUS: Appendix (supports factor sparsity claim).
+
+% --- F13: Head Jaccard Heatmap ---
+\subsection{Head Pairwise Jaccard Heatmap}
+\label{fig:head_jaccard}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.7\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/24_head_jaccard_heatmap.png}
+\caption{\textbf{Pairwise Jaccard similarity between IOI heads (top-20
+factors).} Block-diagonal structure matches Wang et al.\ roles.
+Within-role Jaccard $\sim$0.1--0.2; across-role Jaccard $<$0.05.
+Different from the stage-level Jaccard (Figure~\ref{fig:factor_overlap})
+which pools edges within pathways. Generated by
+\texttt{viz\_head\_factor\_fingerprints.py}.}
+\end{figure}
+
+% STATUS: Appendix (supports factor disjointness claim).
+
+% --- F14: Cross-Layer Evolution ---
+\subsection{Cross-Layer Factor Subspace Evolution}
+\label{fig:cross_layer}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.85\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/5_cross_layer_evolution.png}
+\caption{\textbf{Factor subspace evolution across layers.} Grassmannian
+distance between layer-$l$ and layer-$l+1$ factor subspaces for IOI
+circuit heads. Large jumps at L5 and L9 correspond to functional
+transitions (early processing $\to$ S-inhibition $\to$ name movers).}
+\end{figure}
+
+% STATUS: Appendix (nice but not essential).
+
+% --- F15: Full 144-Edge Clustering ---
+\subsection{Full Edge Clustering}
+\label{fig:full_clustering}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.95\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/26_full_144_edge_clustering.png}
+\caption{\textbf{Hierarchical clustering of all 144 IOI circuit edges
+by factor attribution profile.} Dendrogram with functional role
+coloring. Edges from the same functional group cluster together
+(NMI = 0.600). The method discovers the circuit's role structure
+without supervision. Generated by \texttt{viz\_batch3.py}.}
+\end{figure}
+
+% STATUS: Main text candidate (Section 5, role recovery).
+
+% --- F16: CMD Method Comparison ---
+\subsection{CMD Method Comparison}
+\label{fig:cmd_comparison}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.85\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/14_cmd_method_comparison.png}
+\caption{\textbf{CMD comparison across decomposition methods.} PCA,
+Tucker, Varimax, ICA, PLS-DA at various ranks. PCA and Varimax
+dominate; ICA substantially worse. Generated by
+\texttt{viz\_cmd\_method\_comparison.py}.}
+\end{figure}
+
+% STATUS: Appendix (Alternative Decomposition Methods).
+
+% --- F17: Scree Plot ---
+\subsection{Scree Plot and Cumulative Variance}
+\label{fig:scree}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.7\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/15_scree_plot.png}
+\caption{\textbf{Scree plot for IOI attribution tensor PCA.}
+Primary/secondary gap at $k=4$; secondary/tail transition at $k=8$.
+Auto-$k$ at 90\% variance selects $k=108$.}
+\end{figure}
+
+% STATUS: Appendix (Extended Results, variance spectrum).
+
+% --- F18: Cumulative Variance by Task ---
+\subsection{Cumulative Variance by Task}
+\label{fig:cumvar_task}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.7\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/16_cumvar_by_task.png}
+\caption{\textbf{Cumulative variance explained by PCA rank, per task.}
+SVA reaches 90\% at $k=5$ (simple circuit); Gender requires $k=190$
+(complex). The auto-$k$ threshold adapts to circuit complexity.}
+\end{figure}
+
+% STATUS: Main text candidate (Section 5, cross-task) or appendix.
+
+% --- F19: DAS Cosine Matrix ---
+\subsection{DAS Direction Angles}
+\label{fig:das_angles}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.6\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/10_das_direction_angles.png}
+\caption{\textbf{Pairwise cosine between PCA components and DAS
+directions.} Off-diagonal, confirming the $\sim$88\textdegree\
+orthogonality between attribution and causal subspaces.}
+\end{figure}
+
+% STATUS: Main text candidate (Section 7, threeway comparison).
+
+% --- F20: IIA vs CMD ---
+\subsection{IIA vs CMD Scatterplot}
+\label{fig:iia_vs_cmd}
+
+\begin{figure}[h!]
+\centering
+%\includegraphics[width=0.6\textwidth]{figures/sub_circuit_graph/GOOD/good_pca/BATCH2/17_iia_vs_cmd.png}
+\caption{\textbf{IIA vs CMD across methods and tasks.} Shows the
+tradeoff between causal accuracy (IIA) and circuit faithfulness (CMD).
+Points colored by method. PCA-projected factorized EAP achieves the
+best CMD; trained DAS achieves the best IIA.}
+\end{figure}
+
+% STATUS: Appendix (nice summary but not essential).
+
+
+\end{document}

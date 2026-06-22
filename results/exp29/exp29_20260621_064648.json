@@ -1,0 +1,168 @@
+{
+  "timestamp": "2026-06-21T06:46:45.880490",
+  "n_sessions": 5,
+  "n_regions": 11,
+  "region_results": {
+    "ACA": {
+      "n_sessions": 1,
+      "full_alpha": 0.6680837317491297,
+      "easy_alpha_mean": 0.7687590015713341,
+      "hard_alpha_mean": 11.78332585323828,
+      "alpha_shift": 11.014566851666945,
+      "easy_dim_mean": 31.702146726879107,
+      "hard_dim_mean": 22.031081605566804,
+      "dim_shift": -9.671065121312303,
+      "within_cka_mean": 0.6951194494695696,
+      "within_procrustes_mean": 0.9185134628504329
+    },
+    "CA1": {
+      "n_sessions": 1,
+      "full_alpha": 1.236126562786412,
+      "easy_alpha_mean": 1.3967481147028522,
+      "hard_alpha_mean": 12.780281504529936,
+      "alpha_shift": 11.383533389827084,
+      "easy_dim_mean": 13.173004783308926,
+      "hard_dim_mean": 8.274064452823865,
+      "dim_shift": -4.898940330485061,
+      "within_cka_mean": 0.3852448226952831,
+      "within_procrustes_mean": 0.9523301387075446
+    },
+    "DG": {
+      "n_sessions": 1,
+      "full_alpha": 1.1989532652167185,
+      "easy_alpha_mean": 1.326983886183145,
+      "hard_alpha_mean": 12.187899394931952,
+      "alpha_shift": 10.860915508748807,
+      "easy_dim_mean": 13.212468936963807,
+      "hard_dim_mean": 9.527184695939082,
+      "dim_shift": -3.685284241024725,
+      "within_cka_mean": 0.37931030103916835,
+      "within_procrustes_mean": 0.9462237640202604
+    },
+    "LGd": {
+      "n_sessions": 1,
+      "full_alpha": 0.8942060000914109,
+      "easy_alpha_mean": 1.0202986928886166,
+      "hard_alpha_mean": 12.29210923697819,
+      "alpha_shift": 11.271810544089574,
+      "easy_dim_mean": 32.478589264426795,
+      "hard_dim_mean": 19.330645632207368,
+      "dim_shift": -13.147943632219427,
+      "within_cka_mean": 0.5914351869140831,
+      "within_procrustes_mean": 0.85888511550157
+    },
+    "LSr": {
+      "n_sessions": 1,
+      "full_alpha": 0.557855743698717,
+      "easy_alpha_mean": 0.6371364459049018,
+      "hard_alpha_mean": 11.620268229869948,
+      "alpha_shift": 10.983131783965046,
+      "easy_dim_mean": 25.668051090438944,
+      "hard_dim_mean": 22.66227646567401,
+      "dim_shift": -3.005774624764932,
+      "within_cka_mean": 0.7564309175675086,
+      "within_procrustes_mean": 0.8271591181936055
+    },
+    "MOs": {
+      "n_sessions": 1,
+      "full_alpha": 1.9148235146570016,
+      "easy_alpha_mean": 2.0743134132014736,
+      "hard_alpha_mean": 13.869281237528705,
+      "alpha_shift": 11.794967824327232,
+      "easy_dim_mean": 16.151963090397224,
+      "hard_dim_mean": 10.547794659641669,
+      "dim_shift": -5.604168430755555,
+      "within_cka_mean": 0.34630005663422175,
+      "within_procrustes_mean": 0.9310565800635606
+    },
+    "SUB": {
+      "n_sessions": 1,
+      "full_alpha": 1.3401083628781,
+      "easy_alpha_mean": 1.4823162243082657,
+      "hard_alpha_mean": 12.612623399600496,
+      "alpha_shift": 11.13030717529223,
+      "easy_dim_mean": 21.48683616742702,
+      "hard_dim_mean": 14.130498426000303,
+      "dim_shift": -7.3563377414267155,
+      "within_cka_mean": 0.47638175820259804,
+      "within_procrustes_mean": 0.8671981577530552
+    },
+    "TH": {
+      "n_sessions": 1,
+      "full_alpha": 0.7676359605470745,
+      "easy_alpha_mean": 0.8918580135272295,
+      "hard_alpha_mean": 11.740524367315555,
+      "alpha_shift": 10.848666353788325,
+      "easy_dim_mean": 11.748737961754474,
+      "hard_dim_mean": 12.074538958656095,
+      "dim_shift": 0.3258009969016218,
+      "within_cka_mean": 0.530064726982111,
+      "within_procrustes_mean": 0.9146748366285993
+    },
+    "VISa": {
+      "n_sessions": 1,
+      "full_alpha": 1.4330384360122923,
+      "easy_alpha_mean": 1.665055799705632,
+      "hard_alpha_mean": 12.649779986071755,
+      "alpha_shift": 10.984724186366122,
+      "easy_dim_mean": 12.172755297836055,
+      "hard_dim_mean": 6.258232064374425,
+      "dim_shift": -5.91452323346163,
+      "within_cka_mean": 0.2787137522803504,
+      "within_procrustes_mean": 0.8920928801105797
+    },
+    "VISp": {
+      "n_sessions": 1,
+      "full_alpha": 11.263807506656892,
+      "easy_alpha_mean": 11.425867504954578,
+      "hard_alpha_mean": 25.816052643952823,
+      "alpha_shift": 14.390185138998245,
+      "easy_dim_mean": 12.724363260510717,
+      "hard_dim_mean": 10.34723080171086,
+      "dim_shift": -2.377132458799858,
+      "within_cka_mean": 0.27377653977711935,
+      "within_procrustes_mean": 0.9283745803751476
+    },
+    "VPL": {
+      "n_sessions": 1,
+      "full_alpha": 1.5635123696136217,
+      "easy_alpha_mean": 1.6883230366621471,
+      "hard_alpha_mean": 12.983369802817318,
+      "alpha_shift": 11.29504676615517,
+      "easy_dim_mean": 17.12326172761716,
+      "hard_dim_mean": 12.126909109788587,
+      "dim_shift": -4.996352617828572,
+      "within_cka_mean": 0.41270258971041285,
+      "within_procrustes_mean": 0.9218509187639525
+    }
+  },
+  "stability_tests": {
+    "alpha_vs_alpha_shift_magnitude": {
+      "rho": 0.7181818181818183,
+      "p": 0.01279959806885844,
+      "n": 11,
+      "interpretation": "Does spectral structure predict how much geometric type shifts with task difficulty?"
+    },
+    "alpha_shift_wilcoxon": {
+      "statistic": 0.0,
+      "p": 0.0009765625,
+      "n": 11,
+      "mean_shift": 11.45071413847498,
+      "interpretation": "Is there a systematic direction to alpha shifts (easy\u2192hard)?"
+    },
+    "alpha_vs_within_cka": {
+      "rho": -0.8636363636363636,
+      "p": 0.0006116938500931706,
+      "n": 11,
+      "interpretation": "Do high-alpha regions have lower within-condition CKA (less stable linear structure)?"
+    }
+  },
+  "summary": {
+    "n_regions": 11,
+    "mean_alpha_shift": 11.45071413847498,
+    "mean_dim_shift": -5.484701948652468,
+    "mean_within_cka": 0.4659527364793115,
+    "mean_within_procrustes": 0.9053054139062098,
+    "verdict": "shifting"
+  }
+}

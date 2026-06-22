@@ -1,0 +1,7 @@
+{"ts": "2026-06-22T01:41:10.098838", "experiment": "exp62", "event": "started", "module": "experiments.exp62_shuffled_label_control", "max_sessions": null}
+{"ts": "2026-06-22T03:08:57.062571", "experiment": "exp62", "event": "started", "module": "experiments.exp62_shuffled_label_control", "max_sessions": null}
+{"ts": "2026-06-22T05:39:02.607673", "experiment": "exp62", "event": "run_complete", "n_keys": 9}
+{"ts": "2026-06-22T05:39:03.927790", "experiment": "exp62", "event": "saved_volume", "path": "/results/exp62/exp62_20260622_053903.json"}
+{"ts": "2026-06-22T05:39:05.226664", "experiment": "exp62", "event": "copied_artifacts"}
+{"ts": "2026-06-22T05:39:06.478034", "experiment": "exp62", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T05:39:07.235316", "experiment": "exp62", "event": "done"}

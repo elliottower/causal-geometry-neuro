@@ -1,0 +1,227 @@
+Yes. This can absolutely become more than a neuroscience paper. The broader frame is:
+Mechanistic validity is a general auditing layer for scientific AI systems: when a model, paper, or lab claims “we found a mechanism,” MechVal asks what kind of evidence would make that claim real, what evidence is missing, and what experiment would most cheaply close the gap.
+That is useful in neuroscience, drug discovery, single-cell biology, autonomous labs, foundation models for science, and causal discovery benchmarks.
+And honestly, this is probably more fundable and job-relevant than “I have a new metric for neural manifolds.”
+The punchline: you should not pitch yourself as “I do Grassmannian geometry on brain data.” You should pitch:
+I build validity infrastructure for mechanistic claims in high-dimensional biological systems.
+That is the thing Lila, Recursion, Broad, CZI, ARPA-H, and Boston biotech people can understand.
+Lila specifically is trying to build AI Science Factories: AI systems that generate hypotheses, design experiments, run experiments, learn from results, and iterate across life sciences, chemistry, and materials science [Attachment +2]. Their public framing is basically “automate the scientific method,” including experiment design, observation, and redesign [Attachment]. That screams for a MechVal-like layer: an autonomous lab needs to know when its mechanistic claim is merely predictive, when it is causally supported, when it has discriminant validity, and what experiment would improve its evidential tier.
+So your wedge is not “hire me for drug discovery because I know biology.” It is “hire me because autonomous science systems will hallucinate mechanism unless they have explicit validity accounting.”
+That is a much sharper angle.
+Open challenges / benchmarks you can actually use
+1. Open Problems in Single-Cell Analysis
+This is probably the cleanest “challenge” ecosystem for you. Open Problems is a living benchmark platform for single-cell methods, with 81 public datasets, 171 methods, 12 core tasks, and 37 metrics, and it has powered multiple NeurIPS competitions [lila +2]. There was a major Open Problems single-cell perturbation challenge where the task was predicting how small molecules change gene expression in different cell types [engineering.yale +2].
+Your unique contribution: add a MechVal-style evaluation layer to perturbation prediction.
+Most methods answer: “Can I predict the post-drug expression vector?”
+You ask: “Does the model’s proposed mechanism survive validity tests?”
+For example:
+Does the inferred drug mechanism transfer across cell types?
+Does it distinguish direct target effects from downstream correlated expression?
+Does it pass counterfactual consistency under held-out perturbations?
+Does it recover known pathway structure, or just exploit batch/cell-type confounds?
+Does it make useful experiment-selection recommendations?
+That is a stronger scientific question than leaderboard RMSE. It is very Jensen-coded: stop optimizing predictive score; define the causal estimand, the selection mechanism, the bias structure, the intervention regime, and the generalization target.
+2. CausalBench / gene regulatory network inference
+CausalBench is a benchmark for gene regulatory network inference using large-scale single-cell perturbation data, designed specifically because synthetic causal benchmarks do not reflect real biological settings [semanticscholar +1]. This is basically begging for your thing.
+The standard task is: infer edges in a gene regulatory network.
+Your twist: evaluate inferred edges by mechanistic validity tier.
+A gene edge “A causes B” is not one thing. It could mean:
+A is predictive of B observationally.
+A perturbation changes B.
+A’s effect on B is direct rather than mediated.
+A’s effect is stable across cell types.
+A’s effect is dose-dependent.
+A’s effect survives adjustment for cell state, batch, cell cycle, and latent differentiation trajectory.
+Those are MechVal criteria in biology clothing. You could write a methods paper: “Mechanistic Validity for Gene Regulatory Network Claims.” It would be incredibly natural.
+3. DREAM challenges / HPN-DREAM cancer network inference
+The DREAM5 challenge benchmarked over 30 methods for transcriptional network inference on organisms like E. coli, S. aureus, yeast, and synthetic systems [zitniklab.hms.harvard]. The HPN-DREAM breast cancer network challenge scored inferred causal networks against unseen interventional data in cancer cell lines . This is gold for you because it already has the Jensen-style structure: train on some perturbations, test on held-out interventions.
+Your contribution: take the old challenge submissions or modern methods and analyze failure modes using MechVal categories.
+Instead of “method A got AUROC 0.62,” ask:
+Which validity criterion does each method fail?
+Does it fail internal validity because it confounds common causes?
+Does it fail external validity because it does not transfer across cell lines?
+Does it fail discriminant validity because it cannot distinguish pathway neighbors?
+Does it fail construct validity because “edge” is not operationally defined consistently?
+This is a great low-cost paper because the data and historical baselines already exist.
+4. Therapeutics Data Commons / TDC-2
+Therapeutics Data Commons includes AI-ready datasets and benchmarks across drug discovery tasks . TDC-2 expands this into multimodal therapeutic science with single-cell biology, molecule data, drug effects, clinical trial data, biomedical knowledge graphs, and new tasks like contextualized drug-target identification and perturbation response prediction .
+Your angle: current TDC-style benchmarks mostly evaluate predictive performance. You can define a “mechanistic validity card” for models on TDC tasks:
+What is the claimed mechanism?
+What intervention would test it?
+Does prediction transfer out of distribution by cell type, target family, disease context, or assay platform?
+Are attributions stable under equivalent representations?
+Does the model identify a causal target or a correlated biomarker?
+This could become a benchmark add-on or grant proposal: MechVal-TDC: validity metrics for therapeutic AI.
+5. Recursion / RxRx3 / phenomics
+Recursion released RxRx3-style phenomics data and OpenPhenom models for cellular microscopy embeddings; Phenom-Beta was trained on RxRx3, which contains millions of images across genetic knockouts and chemical entities . RxRx3-core is a challenge dataset with labeled images of genetic knockouts and small-molecule perturbations plus OpenPhenom embeddings .
+This is very compatible with your “geometric type” stuff. A cell image embedding is just another high-dimensional representation. You can ask:
+Do genetic knockout and chemical perturbation embeddings align in the same mechanism subspace?
+Can you distinguish two drugs that phenotypically look similar but act through different mechanisms?
+Does representation similarity imply mechanism similarity?
+That last sentence is exactly your neuroscience paper, but in drug discovery:
+Representational similarity is not mechanistic identity.
+That is a very strong biotech-facing paper title.
+The Lila / autonomous lab pitch
+Lila is publicly selling “scientific superintelligence” and AI Science Factories that generate hypotheses, design experiments, run them, learn, and iterate [Attachment +1]. That is basically an agentic closed-loop scientific discovery system.
+The failure mode of such systems is obvious: they will optimize for plausible discoveries, benchmark wins, and correlations unless there is an explicit validity ledger.
+You can pitch:
+Autonomous labs need a mechanistic validity layer.
+A closed-loop lab should not just ask “what experiment maximizes expected model improvement?” It should ask:
+Which claim are we trying to validate?
+What validity tier is it currently at?
+Which criterion is the bottleneck?
+What experiment most cheaply upgrades the claim?
+Could the same result be explained by confounding, measurement artifact, proxy variables, or construct mismatch?
+That maps directly onto ARPA-H’s IGoR program too. IGoR explicitly asks for rigorous AI-enabled research ecosystems for therapeutic discovery, including mechanistic disease models encoding causal biological relationships, an AI orchestration layer that identifies knowledge gaps and designs optimal experiments, standardized protocols, and validated lab execution . That is basically the grant-shaped version of your idea.
+You could write a proposal called:
+Mechanistic Validity Infrastructure for Autonomous Therapeutic Discovery
+Core idea:
+Build an AI layer that tracks biological mechanism claims, represents their causal assumptions, assigns validity tiers, and recommends experiments that maximally reduce uncertainty about the mechanism.
+That is extremely aligned with Lila, ARPA-H IGoR, CZI open science, ASAP Parkinson’s, and Broad-style causal biology.
+Drug discovery as MechVal
+Yes, drug discovery is absolutely a MechVal problem.
+A drug discovery claim usually sounds like:
+Compound X treats disease Y by modulating target/pathway Z.
+That contains at least four separable claims:
+1.	The compound binds or affects target Z.
+2.	Target Z causally affects disease-relevant phenotype Y.
+3.	The compound’s beneficial effect is mediated by Z, not off-targets.
+4.	The mechanism generalizes across relevant biological contexts: cell types, patient subgroups, disease stages, species, assay platforms.
+Most AI drug discovery models only support claim 1-ish or a weak version of claim 2. They predict binding, expression response, morphology, or clinical outcome. But they do not prove the mechanism.
+So your validity tiers could be:
+Proposed: model predicts compound-target or compound-phenotype association.
+Associationally supported: association replicates across datasets.
+Perturbationally supported: genetic or chemical perturbation moves phenotype.
+Mediation-supported: target/pathway mediates compound effect.
+Discriminantly supported: similar phenotype but different mechanism is separated; similar target but different phenotype is separated.
+Translationally supported: mechanism transfers across cell type, organoid, animal, and patient data.
+Triangulated: multiple independent evidence families agree: binding assay, CRISPR perturbation, transcriptomics, imaging, pathway prior, dose-response, rescue experiment.
+That is a product. Not just a paper.
+What David Jensen would probably tell you
+Based on the Jensen-style causal inference instinct, he would probably be excited but would slap the vague “mechanism” language out of it.
+He’d say something like:
+First define the unit, treatment, outcome, time, and population. Then define the causal query. Then tell me what assumptions identify it.
+For neuroscience:
+Unit: session, animal, trial, neuron, region?
+Treatment: perturbing a subspace? choosing a metric? optogenetic inhibition? task condition?
+Outcome: decoding accuracy, behavior, activity geometry, future region activity?
+Population: Steinmetz mice? IBL mice? all mammals? decision tasks only?
+For drug discovery:
+Unit: cell, cell line, patient, assay, perturbation condition?
+Treatment: drug, dose, genetic knockout, pathway activation?
+Outcome: expression shift, morphology, viability, disease phenotype?
+Population: one cell line or clinical subgroup?
+He would also warn you not to confuse predictive representation with causal structure. A graph neural network over a connectome or gene network is not causal just because it has edges. A high CKA score is not mechanism similarity. A drug embedding cluster is not mechanism of action. The causal claim requires a counterfactual: what would change under intervention?
+But he would probably like the MechVal angle because it forces the claim to be explicit and auditably wrong. That is very Jensen: make the hypothesis graph explicit, track assumptions, test generalization under shifts, and use held-out interventions when possible.
+He’d also probably push you toward relational/selection-bias questions rather than fancy geometry first:
+Why did these samples get observed?
+Which neurons/cells/drugs/targets are missing?
+Are you conditioning on post-treatment variables?
+Are perturbations randomized or chosen by an adaptive policy?
+Are cell lines exchangeable?
+Are assays comparable?
+Does a model trained on one experimental design generalize to another?
+In other words: geometry gives you invariants; causal inference tells you whether those invariants mean anything.
+What causal inference stuff you should actually be doing
+The highest-value methods for you are not generic DAGs. They are:
+1. Transportability and external validity
+This is huge for both neuroscience and drug discovery.
+Question: when does a mechanism found in one context transfer to another?
+Neuroscience:
+mouse A to mouse B
+Steinmetz to IBL
+MOs to ACA
+choice task to navigation task
+Drug discovery:
+cell line to primary tissue
+in vitro to in vivo
+mouse to human
+healthy to disease
+one patient subgroup to another
+Your geometry paper is already secretly a transportability paper. CKA/UMAP/Grassmannian are not just similarity metrics; they are candidate transportability diagnostics. The better framing:
+Which geometric invariants predict transportability of neural or biological mechanisms?
+That is much more fundable.
+2. Invariant causal prediction
+Find features whose relationship to outcome stays stable across environments. This maps perfectly to “mechanistic features.”
+In neuroscience: a choice subspace is more mechanistic if its relationship to behavior is invariant across animals, labs, stimulus contrasts, and behavioral states.
+In drug discovery: a pathway is more likely causal if its relationship to phenotype is invariant across cell lines, perturbation modalities, and assay platforms.
+This is a natural bridge between MechVal and causal inference: invariance is observational evidence that raises a claim’s validity tier, even without direct intervention.
+3. Negative controls and falsification tests
+This is underrated and very Jensen.
+For every claimed mechanism, define variables it should not predict or conditions where it should disappear.
+Neuroscience:
+A choice subspace should not predict irrelevant movement artifacts after controlling for licking.
+A visual stimulus manifold should weaken in nonvisual regions or pre-stimulus windows.
+A claimed topological loop should vanish under time-shuffle or trial-label shuffle.
+Drug discovery:
+A drug mechanism should not appear in an unrelated pathway.
+A target effect should vanish under rescue.
+A chemical perturbation should not match a genetic knockout if the target is wrong.
+This is exactly how you can make observational evidence stronger without intervention: falsify plausible alternatives.
+4. Proximal causal inference / latent confounding
+Biology is confounder hell. You rarely observe all causes.
+Proximal causal inference uses proxy variables to adjust for hidden confounding. This could be huge in single-cell and neuroscience:
+cell state proxies for unobserved differentiation state
+behavioral variables proxy for arousal/movement
+batch variables proxy for lab/assay artifacts
+gene modules proxy for unobserved pathway activation
+You could build MechVal criteria around whether a claim survives proximal adjustment.
+5. Causal representation learning
+This is your natural home. The goal is to learn latent variables that correspond to causal factors, not just predictive factors.
+Your geometric type idea is basically a causal representation learning diagnostic:
+A representation is more likely mechanistic if it is invariant across environments, predictive under interventions, disentangled from known confounds, and transportable.
+This applies equally to neural manifolds, cell embeddings, drug embeddings, and LLM internals.
+Grant angles that are actually plausible
+ARPA-H IGoR / Open BAA
+Best ambitious health funding fit. IGoR wants AI research ecosystems with mechanistic disease models, experiment design, protocol standardization, and validated labs . Your pitch: validity-aware AI scientist for therapeutic discovery.
+You probably need partners. You cannot solo ARPA-H realistically. But you can attach as the methods person to a Broad/MIT/Boston biotech team.
+CZI Open Science / Neurodegeneration
+CZI funds open science and neurodegenerative disease biology . Your pitch: open validity benchmarks for mechanistic claims in neurodegeneration models. Use public perturb-seq, imaging, and disease model datasets.
+ASAP Parkinson’s
+ASAP funds multidisciplinary, high-risk Parkinson’s projects on mechanisms, functional genomics, neuro-immune interactions, brain-body circuitry, and disease progression . Your pitch: causal validity auditing for Parkinson’s target mechanisms. Especially good if you partner with a wet lab.
+Schmidt / AI2050 / Open Phil / Survival and Flourishing-style AI science grants
+Frame as AI systems for reliable scientific discovery. Your unique contribution is not biology per se; it is preventing mechanistic false positives in AI-generated science.
+NIH NLM / BD2K-ish / computational biology methods
+Mechanistic validity for AI-discovered biological mechanisms. More conservative, but harder as independent unless you have an institutional sponsor.
+Job angles in Boston/Cambridge
+For Lila:
+Subject line concept: Mechanistic validity layer for autonomous science systems
+Pitch:
+Your AI Science Factory will generate hypotheses at a scale where human review becomes the bottleneck. My work builds validity frameworks for mechanistic claims: explicit claim structure, causal assumptions, evidence tiers, falsification tests, and experiment-selection criteria. I’ve applied this in neural network interpretability and am extending it to neuroscience and perturbation biology. I’d be excited to discuss whether a MechVal-style validity layer could help prioritize which autonomous discoveries are merely predictive versus mechanistically actionable.
+For Broad / Perturb-seq / single-cell teams:
+I build causal-validity tools for perturbation-based mechanism discovery: when does an inferred gene module or pathway claim survive confounding, transfer across cell types, and predict held-out interventions?
+For Recursion / phenomics:
+I study when representation similarity does and does not imply mechanism similarity. In phenomics, that maps directly onto distinguishing visual phenotype similarity from shared mechanism of action.
+For Cellarity / Generate / Valo / insitro / Related Sciences / Flagship companies:
+Mechanism-of-action validity and transportability. Can the learned representation identify causal pathways rather than assay-specific correlates?
+The most unique thing you can do
+Build a benchmark called something like MechVal-Bio.
+Input: a biological mechanism claim plus associated datasets.
+Output:
+claim decomposition
+evidence tier
+assumption graph
+validity gaps
+negative controls
+transportability tests
+next-best experiment
+Start with 5 case studies:
+1.	Steinmetz/IBL choice circuit claim.
+2.	Stringer visual cortex power-law geometry claim.
+3.	DREAM/HPN cancer signaling network claim.
+4.	Open Problems single-cell drug perturbation claim.
+5.	Recursion/RxRx phenotypic similarity to mechanism-of-action claim.
+That would let you say:
+Across neuroscience, single-cell biology, and drug discovery, current AI methods often conflate predictive structure with mechanistic validity. We introduce a general validity framework and benchmark suite for evaluating when high-dimensional representations support mechanistic claims.
+That is a standout research identity. Not just “I did a cool analysis.”
+My actual recommendation
+Do not chase GNNs as the main story. GNNs are a tool. The story is validity under intervention and transport.
+Your strongest north star:
+Mechanistic validity for AI-generated biological mechanisms.
+Your immediate execution plan:
+1.	Finish the neuro metric dissociation paper as an observational case study.
+2.	Write a 2-page MechVal-Bio whitepaper using Steinmetz + Open Problems + CausalBench as examples.
+3.	Implement one tiny demo on Open Problems single-cell perturbation: show that two models with similar prediction error differ in validity under held-out cell type or held-out perturbation mechanism.
+4.	Email Lila/Broad/Recursion-style people with that demo and the whitepaper.
+5.	Ask Jensen for 30 minutes and pitch it as causal validity infrastructure for autonomous science. Ask him specifically: “What would make this a causal inference paper rather than an interpretability philosophy paper?”
+That last question is the right one

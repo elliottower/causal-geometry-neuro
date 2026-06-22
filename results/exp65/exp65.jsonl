@@ -1,0 +1,6 @@
+{"ts": "2026-06-22T01:41:10.755994", "experiment": "exp65", "event": "started", "module": "experiments.exp65_temporal_iia", "max_sessions": null}
+{"ts": "2026-06-22T02:55:07.199594", "experiment": "exp65", "event": "run_complete", "n_keys": 9}
+{"ts": "2026-06-22T02:55:14.638005", "experiment": "exp65", "event": "saved_volume", "path": "/results/exp65/exp65_20260622_025510.json"}
+{"ts": "2026-06-22T02:55:21.961623", "experiment": "exp65", "event": "copied_artifacts"}
+{"ts": "2026-06-22T02:55:26.157880", "experiment": "exp65", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T02:55:29.926917", "experiment": "exp65", "event": "done"}

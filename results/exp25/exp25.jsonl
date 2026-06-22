@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T06:22:09.595744", "experiment": "exp25", "event": "started", "module": "experiments.exp25_cortical_hierarchy", "max_sessions": null}
+{"ts": "2026-06-21T06:56:25.880503", "experiment": "exp25", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T06:56:27.276853", "experiment": "exp25", "event": "saved_volume", "path": "/results/exp25/exp25_20260621_065626.json"}
+{"ts": "2026-06-21T06:56:28.139533", "experiment": "exp25", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:56:29.409139", "experiment": "exp25", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:56:29.984004", "experiment": "exp25", "event": "done"}

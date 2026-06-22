@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T07:22:31.801369", "experiment": "exp37", "event": "started", "module": "experiments.exp37_spd_riemannian", "max_sessions": null}
+{"ts": "2026-06-21T07:23:16.713035", "experiment": "exp37", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T07:23:19.046908", "experiment": "exp37", "event": "saved_volume", "path": "/results/exp37/exp37_20260621_072317.json"}
+{"ts": "2026-06-21T07:23:20.570610", "experiment": "exp37", "event": "copied_artifacts"}
+{"ts": "2026-06-21T07:23:22.574052", "experiment": "exp37", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T07:23:23.777237", "experiment": "exp37", "event": "done"}

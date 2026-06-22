@@ -1,0 +1,376 @@
+{
+  "timestamp": "2026-06-21T17:24:33.383874",
+  "mechval_criterion": "E5 Graded Response (dose-response)",
+  "mechval_threshold": "monotonic dose-response in >= 70% of regions",
+  "n_regions": 73,
+  "overall_ablation_monotonic": 0.4888678717647291,
+  "overall_iia_monotonic": 0.704081697020859,
+  "graded_response_pass": false,
+  "per_region": {
+    "ACA": {
+      "n_sessions": 11,
+      "ablation_monotonic_rate": 0.8181818181818182,
+      "iia_monotonic_rate": 0.5454545454545454
+    },
+    "CA3": {
+      "n_sessions": 8,
+      "ablation_monotonic_rate": 0.375,
+      "iia_monotonic_rate": 0.875
+    },
+    "DG": {
+      "n_sessions": 16,
+      "ablation_monotonic_rate": 0.75,
+      "iia_monotonic_rate": 0.8125
+    },
+    "LS": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "MOs": {
+      "n_sessions": 17,
+      "ablation_monotonic_rate": 0.6470588235294118,
+      "iia_monotonic_rate": 0.7058823529411765
+    },
+    "SUB": {
+      "n_sessions": 9,
+      "ablation_monotonic_rate": 0.4444444444444444,
+      "iia_monotonic_rate": 0.8888888888888888
+    },
+    "VISp": {
+      "n_sessions": 12,
+      "ablation_monotonic_rate": 0.6666666666666666,
+      "iia_monotonic_rate": 0.6666666666666666
+    },
+    "root": {
+      "n_sessions": 22,
+      "ablation_monotonic_rate": 0.45454545454545453,
+      "iia_monotonic_rate": 0.7272727272727273
+    },
+    "CA1": {
+      "n_sessions": 20,
+      "ablation_monotonic_rate": 0.85,
+      "iia_monotonic_rate": 0.7
+    },
+    "POST": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 0.75,
+      "iia_monotonic_rate": 0.75
+    },
+    "VISl": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "VISpm": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 0.75,
+      "iia_monotonic_rate": 0.25
+    },
+    "MG": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "MRN": {
+      "n_sessions": 11,
+      "ablation_monotonic_rate": 0.45454545454545453,
+      "iia_monotonic_rate": 0.6363636363636364
+    },
+    "NB": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "SPF": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "VISam": {
+      "n_sessions": 11,
+      "ablation_monotonic_rate": 0.8181818181818182,
+      "iia_monotonic_rate": 0.6363636363636364
+    },
+    "LGd": {
+      "n_sessions": 8,
+      "ablation_monotonic_rate": 0.875,
+      "iia_monotonic_rate": 1.0
+    },
+    "LSr": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 0.5
+    },
+    "TH": {
+      "n_sessions": 8,
+      "ablation_monotonic_rate": 0.5,
+      "iia_monotonic_rate": 0.75
+    },
+    "VISa": {
+      "n_sessions": 5,
+      "ablation_monotonic_rate": 0.6,
+      "iia_monotonic_rate": 0.8
+    },
+    "VPL": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 0.5,
+      "iia_monotonic_rate": 0.5
+    },
+    "OLF": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "ORB": {
+      "n_sessions": 5,
+      "ablation_monotonic_rate": 0.6,
+      "iia_monotonic_rate": 0.8
+    },
+    "AUD": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "CP": {
+      "n_sessions": 5,
+      "ablation_monotonic_rate": 0.4,
+      "iia_monotonic_rate": 0.8
+    },
+    "EPd": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 0.0
+    },
+    "LD": {
+      "n_sessions": 5,
+      "ablation_monotonic_rate": 0.6,
+      "iia_monotonic_rate": 1.0
+    },
+    "PIR": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "SSp": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 0.25,
+      "iia_monotonic_rate": 0.0
+    },
+    "ILA": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 0.6666666666666666,
+      "iia_monotonic_rate": 0.6666666666666666
+    },
+    "LP": {
+      "n_sessions": 10,
+      "ablation_monotonic_rate": 0.6,
+      "iia_monotonic_rate": 0.7
+    },
+    "PL": {
+      "n_sessions": 8,
+      "ablation_monotonic_rate": 0.625,
+      "iia_monotonic_rate": 0.875
+    },
+    "PO": {
+      "n_sessions": 5,
+      "ablation_monotonic_rate": 0.2,
+      "iia_monotonic_rate": 0.8
+    },
+    "TT": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 0.6666666666666666,
+      "iia_monotonic_rate": 0.6666666666666666
+    },
+    "ORBm": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "GPe": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 0.3333333333333333,
+      "iia_monotonic_rate": 0.6666666666666666
+    },
+    "MB": {
+      "n_sessions": 6,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 0.8333333333333334
+    },
+    "POL": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 0.3333333333333333,
+      "iia_monotonic_rate": 0.6666666666666666
+    },
+    "SCm": {
+      "n_sessions": 7,
+      "ablation_monotonic_rate": 0.7142857142857143,
+      "iia_monotonic_rate": 0.42857142857142855
+    },
+    "SCsg": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 0.6666666666666666,
+      "iia_monotonic_rate": 0.6666666666666666
+    },
+    "VISrl": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 0.5,
+      "iia_monotonic_rate": 1.0
+    },
+    "LSc": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "MOp": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 0.3333333333333333
+    },
+    "PT": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 0.0
+    },
+    "LH": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "MD": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 0.3333333333333333,
+      "iia_monotonic_rate": 1.0
+    },
+    "MS": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 0.0
+    },
+    "RN": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "SCs": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 0.25,
+      "iia_monotonic_rate": 1.0
+    },
+    "ZI": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 0.5,
+      "iia_monotonic_rate": 0.75
+    },
+    "RSP": {
+      "n_sessions": 9,
+      "ablation_monotonic_rate": 0.4444444444444444,
+      "iia_monotonic_rate": 0.6666666666666666
+    },
+    "BLA": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "VPM": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 0.5,
+      "iia_monotonic_rate": 0.5
+    },
+    "SSs": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 0.0
+    },
+    "MEA": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 0.0
+    },
+    "RT": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 0.5
+    },
+    "ACB": {
+      "n_sessions": 3,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 0.3333333333333333
+    },
+    "OT": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 0.0
+    },
+    "SI": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "SNr": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 0.5
+    },
+    "APN": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "VAL": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "IC": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "CA2": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "SCig": {
+      "n_sessions": 4,
+      "ablation_monotonic_rate": 0.25,
+      "iia_monotonic_rate": 0.5
+    },
+    "DP": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 0.0
+    },
+    "CL": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "PAG": {
+      "n_sessions": 2,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 0.0
+    },
+    "EP": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "BMA": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "COA": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 0.0,
+      "iia_monotonic_rate": 1.0
+    },
+    "CA": {
+      "n_sessions": 1,
+      "ablation_monotonic_rate": 1.0,
+      "iia_monotonic_rate": 1.0
+    }
+  }
+}

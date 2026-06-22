@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-06-21T06:44:19.802697",
+  "n_sessions": 5,
+  "n_mice": 2,
+  "n_regions": 24,
+  "n_regions_analyzed": 0,
+  "region_results": {},
+  "prediction_tests": {},
+  "summary": {
+    "n_regions_analyzed": 0,
+    "mean_invariant_dim": null,
+    "mean_choice_dim": null,
+    "mean_gap": null,
+    "fraction_with_invariant_set": null
+  }
+}

@@ -1,0 +1,3343 @@
+{
+  "timestamp": "2026-06-21T17:23:00.406666",
+  "mechval_criterion": "I2 Sufficiency",
+  "mechval_threshold": "recovery_fraction >= 0.70",
+  "n_regions": 73,
+  "regions_passing_sufficiency": 62,
+  "overall_mean_recovery": 1.1471360176888301,
+  "overall_mean_restoration": 0.1437802158214531,
+  "per_region": {
+    "ACA": {
+      "n_sessions": 11,
+      "mean_full_accuracy": 0.5583944103345341,
+      "mean_restricted_accuracy": 0.6372144675440152,
+      "mean_recovery_fraction": 1.1008327011863528,
+      "mean_restoration_flip_rate": 0.20984171241523963,
+      "sufficiency_pass": true
+    },
+    "CA3": {
+      "n_sessions": 8,
+      "mean_full_accuracy": 0.48865387738103744,
+      "mean_restricted_accuracy": 0.5677425637379766,
+      "mean_recovery_fraction": 1.0141657607677024,
+      "mean_restoration_flip_rate": 0.19385421946596723,
+      "sufficiency_pass": true
+    },
+    "DG": {
+      "n_sessions": 16,
+      "mean_full_accuracy": 0.5596439510579017,
+      "mean_restricted_accuracy": 0.6433668543827038,
+      "mean_recovery_fraction": 1.130701861725053,
+      "mean_restoration_flip_rate": 0.1252720544003998,
+      "sufficiency_pass": true
+    },
+    "LS": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.528344214029698,
+      "mean_restricted_accuracy": 0.6432173113624726,
+      "mean_recovery_fraction": 1.1960151753067714,
+      "mean_restoration_flip_rate": 0.06576448243114909,
+      "sufficiency_pass": true
+    },
+    "MOs": {
+      "n_sessions": 17,
+      "mean_full_accuracy": 0.5345188851227114,
+      "mean_restricted_accuracy": 0.6194130948421931,
+      "mean_recovery_fraction": 1.1541516186345946,
+      "mean_restoration_flip_rate": 0.15361534538322824,
+      "sufficiency_pass": true
+    },
+    "SUB": {
+      "n_sessions": 9,
+      "mean_full_accuracy": 0.558867311504534,
+      "mean_restricted_accuracy": 0.6683176741192443,
+      "mean_recovery_fraction": 1.1858758918706698,
+      "mean_restoration_flip_rate": 0.10633942082609632,
+      "sufficiency_pass": true
+    },
+    "VISp": {
+      "n_sessions": 12,
+      "mean_full_accuracy": 0.5436816987412069,
+      "mean_restricted_accuracy": 0.626567778659851,
+      "mean_recovery_fraction": 1.1475545984151572,
+      "mean_restoration_flip_rate": 0.14675941491764588,
+      "sufficiency_pass": true
+    },
+    "root": {
+      "n_sessions": 22,
+      "mean_full_accuracy": 0.5457982793131094,
+      "mean_restricted_accuracy": 0.6125560895545287,
+      "mean_recovery_fraction": 1.0944376446355504,
+      "mean_restoration_flip_rate": 0.1456718069886768,
+      "sufficiency_pass": true
+    },
+    "CA1": {
+      "n_sessions": 20,
+      "mean_full_accuracy": 0.5370077962412458,
+      "mean_restricted_accuracy": 0.6181455329339391,
+      "mean_recovery_fraction": 1.1123644462682654,
+      "mean_restoration_flip_rate": 0.14772989134888462,
+      "sufficiency_pass": true
+    },
+    "POST": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.526810168997669,
+      "mean_restricted_accuracy": 0.6453125000000001,
+      "mean_recovery_fraction": 1.227399572709162,
+      "mean_restoration_flip_rate": 0.1770142566666084,
+      "sufficiency_pass": true
+    },
+    "VISl": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.531644593157751,
+      "mean_restricted_accuracy": 0.5898746533614955,
+      "mean_recovery_fraction": 1.0419900688791839,
+      "mean_restoration_flip_rate": 0.09179295798246036,
+      "sufficiency_pass": true
+    },
+    "VISpm": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.557087439521263,
+      "mean_restricted_accuracy": 0.6608407658517952,
+      "mean_recovery_fraction": 1.1070118899345305,
+      "mean_restoration_flip_rate": 0.11101911132052877,
+      "sufficiency_pass": true
+    },
+    "MG": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.5172697991663509,
+      "mean_restricted_accuracy": 0.6987495263357333,
+      "mean_recovery_fraction": 1.349972374516554,
+      "mean_restoration_flip_rate": 0.0038461538461538464,
+      "sufficiency_pass": true
+    },
+    "MRN": {
+      "n_sessions": 11,
+      "mean_full_accuracy": 0.5190054875817549,
+      "mean_restricted_accuracy": 0.601523707213376,
+      "mean_recovery_fraction": 1.1291482207602133,
+      "mean_restoration_flip_rate": 0.14604744297853983,
+      "sufficiency_pass": true
+    },
+    "NB": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5461538461538462,
+      "mean_restricted_accuracy": 0.6692307692307692,
+      "mean_recovery_fraction": 1.225352112676056,
+      "mean_restoration_flip_rate": 0.1076923076923077,
+      "sufficiency_pass": true
+    },
+    "SPF": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.651686244789693,
+      "mean_restricted_accuracy": 0.6846816976127321,
+      "mean_recovery_fraction": 1.0505783964026785,
+      "mean_restoration_flip_rate": 0.14909188034188034,
+      "sufficiency_pass": true
+    },
+    "VISam": {
+      "n_sessions": 11,
+      "mean_full_accuracy": 0.5160590339564448,
+      "mean_restricted_accuracy": 0.6007675757411857,
+      "mean_recovery_fraction": 1.0779511879765875,
+      "mean_restoration_flip_rate": 0.17166212324761362,
+      "sufficiency_pass": true
+    },
+    "LGd": {
+      "n_sessions": 8,
+      "mean_full_accuracy": 0.5168640142775518,
+      "mean_restricted_accuracy": 0.5989722282050256,
+      "mean_recovery_fraction": 1.1388456470257313,
+      "mean_restoration_flip_rate": 0.09171948024960863,
+      "sufficiency_pass": true
+    },
+    "LSr": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.6224850747877064,
+      "mean_restricted_accuracy": 0.6760260409931462,
+      "mean_recovery_fraction": 1.086120956065393,
+      "mean_restoration_flip_rate": 0.2547487065779749,
+      "sufficiency_pass": true
+    },
+    "TH": {
+      "n_sessions": 8,
+      "mean_full_accuracy": 0.5311358876134851,
+      "mean_restricted_accuracy": 0.6376089883562281,
+      "mean_recovery_fraction": 1.1628821466644585,
+      "mean_restoration_flip_rate": 0.0907495687114539,
+      "sufficiency_pass": true
+    },
+    "VISa": {
+      "n_sessions": 5,
+      "mean_full_accuracy": 0.6019013158309013,
+      "mean_restricted_accuracy": 0.7077899847844523,
+      "mean_recovery_fraction": 1.1875414653906045,
+      "mean_restoration_flip_rate": 0.09084455859752613,
+      "sufficiency_pass": true
+    },
+    "VPL": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.5003170333842206,
+      "mean_restricted_accuracy": 0.6211796813225667,
+      "mean_recovery_fraction": 1.2289042938361536,
+      "mean_restoration_flip_rate": 0.1479548064568773,
+      "sufficiency_pass": true
+    },
+    "OLF": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.5356763196480938,
+      "mean_restricted_accuracy": 0.6799395161290323,
+      "mean_recovery_fraction": 1.2471910112359552,
+      "mean_restoration_flip_rate": 0.12576687116564417,
+      "sufficiency_pass": true
+    },
+    "ORB": {
+      "n_sessions": 5,
+      "mean_full_accuracy": 0.573776602204446,
+      "mean_restricted_accuracy": 0.6450061372383104,
+      "mean_recovery_fraction": 1.1281945789482972,
+      "mean_restoration_flip_rate": 0.06739169130992277,
+      "sufficiency_pass": true
+    },
+    "AUD": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.46875,
+      "mean_restricted_accuracy": 0.6375,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.05,
+      "sufficiency_pass": false
+    },
+    "CP": {
+      "n_sessions": 5,
+      "mean_full_accuracy": 0.5776033031464067,
+      "mean_restricted_accuracy": 0.6333058680107362,
+      "mean_recovery_fraction": 1.0404973916171973,
+      "mean_restoration_flip_rate": 0.09910573708527673,
+      "sufficiency_pass": true
+    },
+    "EPd": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5737931034482757,
+      "mean_restricted_accuracy": 0.614712643678161,
+      "mean_recovery_fraction": 1.071314102564103,
+      "mean_restoration_flip_rate": 0.033783783783783786,
+      "sufficiency_pass": true
+    },
+    "LD": {
+      "n_sessions": 5,
+      "mean_full_accuracy": 0.5556994565415618,
+      "mean_restricted_accuracy": 0.6156865238825311,
+      "mean_recovery_fraction": 1.118597428227723,
+      "mean_restoration_flip_rate": 0.16157287326852546,
+      "sufficiency_pass": true
+    },
+    "PIR": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5013793103448275,
+      "mean_restricted_accuracy": 0.6422988505747126,
+      "mean_recovery_fraction": 1.2810637322329208,
+      "mean_restoration_flip_rate": 0.22972972972972974,
+      "sufficiency_pass": true
+    },
+    "SSp": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.5414724322330813,
+      "mean_restricted_accuracy": 0.6186138258856312,
+      "mean_recovery_fraction": 1.0451298701298701,
+      "mean_restoration_flip_rate": 0.1557079670031477,
+      "sufficiency_pass": true
+    },
+    "ILA": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.5568120788265979,
+      "mean_restricted_accuracy": 0.6436086458409507,
+      "mean_recovery_fraction": 1.1599223457242196,
+      "mean_restoration_flip_rate": 0.08010056306671422,
+      "sufficiency_pass": true
+    },
+    "LP": {
+      "n_sessions": 10,
+      "mean_full_accuracy": 0.5859801799329905,
+      "mean_restricted_accuracy": 0.6543085996405503,
+      "mean_recovery_fraction": 1.1149512944757787,
+      "mean_restoration_flip_rate": 0.10800897614940146,
+      "sufficiency_pass": true
+    },
+    "PL": {
+      "n_sessions": 8,
+      "mean_full_accuracy": 0.5105273198963816,
+      "mean_restricted_accuracy": 0.5938597367157739,
+      "mean_recovery_fraction": 1.1204466825754067,
+      "mean_restoration_flip_rate": 0.14881552579550938,
+      "sufficiency_pass": true
+    },
+    "PO": {
+      "n_sessions": 5,
+      "mean_full_accuracy": 0.5755196268880478,
+      "mean_restricted_accuracy": 0.6488159787107155,
+      "mean_recovery_fraction": 1.1298332693144635,
+      "mean_restoration_flip_rate": 0.07156586768279466,
+      "sufficiency_pass": true
+    },
+    "TT": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.5154597680187517,
+      "mean_restricted_accuracy": 0.5866876285751059,
+      "mean_recovery_fraction": 0.991775188485264,
+      "mean_restoration_flip_rate": 0.18612312208752244,
+      "sufficiency_pass": true
+    },
+    "ORBm": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.4708392603129445,
+      "mean_restricted_accuracy": 0.582076813655761,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.07272727272727272,
+      "sufficiency_pass": false
+    },
+    "GPe": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.52282755249941,
+      "mean_restricted_accuracy": 0.5758899478657543,
+      "mean_recovery_fraction": 1.0504561858626502,
+      "mean_restoration_flip_rate": 0.1214042640920397,
+      "sufficiency_pass": true
+    },
+    "MB": {
+      "n_sessions": 6,
+      "mean_full_accuracy": 0.5083816389787378,
+      "mean_restricted_accuracy": 0.5907746524863023,
+      "mean_recovery_fraction": 1.088826467175871,
+      "mean_restoration_flip_rate": 0.13191685243414172,
+      "sufficiency_pass": true
+    },
+    "POL": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.5447587216704863,
+      "mean_restricted_accuracy": 0.6434207622442917,
+      "mean_recovery_fraction": 1.201566199994276,
+      "mean_restoration_flip_rate": 0.13507769595068628,
+      "sufficiency_pass": true
+    },
+    "SCm": {
+      "n_sessions": 7,
+      "mean_full_accuracy": 0.4617996194546679,
+      "mean_restricted_accuracy": 0.56595096420197,
+      "mean_recovery_fraction": 1.141199233850991,
+      "mean_restoration_flip_rate": 0.22241710487444258,
+      "sufficiency_pass": true
+    },
+    "SCsg": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.5403514454893766,
+      "mean_restricted_accuracy": 0.5945964820619993,
+      "mean_recovery_fraction": 1.0984753452188671,
+      "mean_restoration_flip_rate": 0.26508574798849266,
+      "sufficiency_pass": true
+    },
+    "VISrl": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.4777916666666666,
+      "mean_restricted_accuracy": 0.5542348484848485,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.058393070489844684,
+      "sufficiency_pass": false
+    },
+    "LSc": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.4764705882352941,
+      "mean_restricted_accuracy": 0.4470588235294118,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.07647058823529412,
+      "sufficiency_pass": false
+    },
+    "MOp": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.5376906318082789,
+      "mean_restricted_accuracy": 0.685838779956427,
+      "mean_recovery_fraction": 1.2075471698113205,
+      "mean_restoration_flip_rate": 0.09564270152505445,
+      "sufficiency_pass": true
+    },
+    "PT": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.44117647058823534,
+      "mean_restricted_accuracy": 0.5470588235294118,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.21764705882352942,
+      "sufficiency_pass": false
+    },
+    "LH": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5285714285714286,
+      "mean_restricted_accuracy": 0.5928571428571429,
+      "mean_recovery_fraction": 1.1216216216216217,
+      "mean_restoration_flip_rate": 0.5142857142857142,
+      "sufficiency_pass": true
+    },
+    "MD": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.546054438393148,
+      "mean_restricted_accuracy": 0.6558962319042964,
+      "mean_recovery_fraction": 1.204833975391767,
+      "mean_restoration_flip_rate": 0.04439696106362773,
+      "sufficiency_pass": true
+    },
+    "MS": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5053475935828877,
+      "mean_restricted_accuracy": 0.6144385026737968,
+      "mean_recovery_fraction": 1.215873015873016,
+      "mean_restoration_flip_rate": 0.3132530120481928,
+      "sufficiency_pass": true
+    },
+    "RN": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.4944741532976827,
+      "mean_restricted_accuracy": 0.5905525846702318,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.1686746987951807,
+      "sufficiency_pass": false
+    },
+    "SCs": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.49799276951429156,
+      "mean_restricted_accuracy": 0.5907456920065529,
+      "mean_recovery_fraction": 1.1286658917466263,
+      "mean_restoration_flip_rate": 0.2076953363983839,
+      "sufficiency_pass": true
+    },
+    "ZI": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.5036896878334259,
+      "mean_restricted_accuracy": 0.5796586197202895,
+      "mean_recovery_fraction": 1.1101500806718185,
+      "mean_restoration_flip_rate": 0.15942828438380788,
+      "sufficiency_pass": true
+    },
+    "RSP": {
+      "n_sessions": 9,
+      "mean_full_accuracy": 0.5449259520594126,
+      "mean_restricted_accuracy": 0.6155031351436308,
+      "mean_recovery_fraction": 1.1260227827401952,
+      "mean_restoration_flip_rate": 0.16795777270280748,
+      "sufficiency_pass": true
+    },
+    "BLA": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.5014251946607342,
+      "mean_restricted_accuracy": 0.5704567575083426,
+      "mean_recovery_fraction": 0.9871794871794871,
+      "mean_restoration_flip_rate": 0.059748427672955975,
+      "sufficiency_pass": true
+    },
+    "VPM": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.5254923709056774,
+      "mean_restricted_accuracy": 0.6335079869354063,
+      "mean_recovery_fraction": 1.2303053663475698,
+      "mean_restoration_flip_rate": 0.12288609364081063,
+      "sufficiency_pass": true
+    },
+    "SSs": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.4278074866310161,
+      "mean_restricted_accuracy": 0.5661319073083779,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.12650602409638553,
+      "sufficiency_pass": false
+    },
+    "MEA": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5479838709677419,
+      "mean_restricted_accuracy": 0.6419354838709678,
+      "mean_recovery_fraction": 1.171449595290655,
+      "mean_restoration_flip_rate": 0.2830188679245283,
+      "sufficiency_pass": true
+    },
+    "RT": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.5277569058872115,
+      "mean_restricted_accuracy": 0.7096146124902492,
+      "mean_recovery_fraction": 1.3446060127546777,
+      "mean_restoration_flip_rate": 0.28267890532041473,
+      "sufficiency_pass": true
+    },
+    "ACB": {
+      "n_sessions": 3,
+      "mean_full_accuracy": 0.47660333493666823,
+      "mean_restricted_accuracy": 0.6013277617444284,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.1207638127714854,
+      "sufficiency_pass": false
+    },
+    "OT": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5278409090909091,
+      "mean_restricted_accuracy": 0.5214015151515151,
+      "mean_recovery_fraction": 0.9878005023322568,
+      "mean_restoration_flip_rate": 0.37267080745341613,
+      "sufficiency_pass": true
+    },
+    "SI": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.42897727272727276,
+      "mean_restricted_accuracy": 0.571590909090909,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.18633540372670807,
+      "sufficiency_pass": false
+    },
+    "SNr": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.5264004992453268,
+      "mean_restricted_accuracy": 0.6101460002322071,
+      "mean_recovery_fraction": 1.0504746835443037,
+      "mean_restoration_flip_rate": 0.13632907472644046,
+      "sufficiency_pass": true
+    },
+    "APN": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.5433689839572193,
+      "mean_restricted_accuracy": 0.7006722689075631,
+      "mean_recovery_fraction": 1.2931359819255346,
+      "mean_restoration_flip_rate": 0.08733483725427005,
+      "sufficiency_pass": true
+    },
+    "VAL": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5333333333333334,
+      "mean_restricted_accuracy": 0.5666666666666667,
+      "mean_recovery_fraction": 1.0624999999999998,
+      "mean_restoration_flip_rate": 0.05555555555555555,
+      "sufficiency_pass": true
+    },
+    "IC": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5801587301587301,
+      "mean_restricted_accuracy": 0.6992063492063492,
+      "mean_recovery_fraction": 1.2051983584131327,
+      "mean_restoration_flip_rate": 0.3235294117647059,
+      "sufficiency_pass": true
+    },
+    "CA2": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5176666666666667,
+      "mean_restricted_accuracy": 0.6133333333333334,
+      "mean_recovery_fraction": 1.1848036059240181,
+      "mean_restoration_flip_rate": 0.056451612903225805,
+      "sufficiency_pass": true
+    },
+    "SCig": {
+      "n_sessions": 4,
+      "mean_full_accuracy": 0.5554129634733083,
+      "mean_restricted_accuracy": 0.6798940714457955,
+      "mean_recovery_fraction": 1.2261649200766362,
+      "mean_restoration_flip_rate": 0.10278799322175625,
+      "sufficiency_pass": true
+    },
+    "DP": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.48275862068965514,
+      "mean_restricted_accuracy": 0.5634482758620689,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.2348993288590604,
+      "sufficiency_pass": false
+    },
+    "CL": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.6670995670995671,
+      "mean_restricted_accuracy": 0.7593073593073593,
+      "mean_recovery_fraction": 1.1382219338092148,
+      "mean_restoration_flip_rate": 0.07407407407407407,
+      "sufficiency_pass": true
+    },
+    "PAG": {
+      "n_sessions": 2,
+      "mean_full_accuracy": 0.5286191049348945,
+      "mean_restricted_accuracy": 0.6040157566473356,
+      "mean_recovery_fraction": 1.1415409925966546,
+      "mean_restoration_flip_rate": 0.2373931623931624,
+      "sufficiency_pass": true
+    },
+    "EP": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5037037037037037,
+      "mean_restricted_accuracy": 0.6370370370370371,
+      "mean_recovery_fraction": 1.2647058823529413,
+      "mean_restoration_flip_rate": 0.1111111111111111,
+      "sufficiency_pass": true
+    },
+    "BMA": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5694167852062588,
+      "mean_restricted_accuracy": 0.7098150782361309,
+      "mean_recovery_fraction": 1.2465650761928555,
+      "mean_restoration_flip_rate": 0.0918918918918919,
+      "sufficiency_pass": true
+    },
+    "COA": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.5485064011379801,
+      "mean_restricted_accuracy": 0.7096728307254624,
+      "mean_recovery_fraction": 1.2938278008298756,
+      "mean_restoration_flip_rate": 0.010810810810810811,
+      "sufficiency_pass": true
+    },
+    "CA": {
+      "n_sessions": 1,
+      "mean_full_accuracy": 0.4514285714285714,
+      "mean_restricted_accuracy": 0.5428571428571429,
+      "mean_recovery_fraction": null,
+      "mean_restoration_flip_rate": 0.0,
+      "sufficiency_pass": false
+    }
+  },
+  "raw_entries": {
+    "ACA": [
+      {
+        "full_accuracy": 0.4548387096774194,
+        "restricted_accuracy": 0.6280241935483871,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.1282051282051282,
+        "n_neurons": 109,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.628030303030303,
+        "restricted_accuracy": 0.7136363636363636,
+        "recovery_fraction": 1.1363088057901085,
+        "restoration_flip_rate": 0.06707317073170732,
+        "n_neurons": 304,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.6129032258064515,
+        "restricted_accuracy": 0.696774193548387,
+        "recovery_fraction": 1.1368421052631579,
+        "restoration_flip_rate": 0.06451612903225806,
+        "n_neurons": 53,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.37857142857142856,
+        "restricted_accuracy": 0.4928571428571429,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.5285714285714286,
+        "n_neurons": 16,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.46951871657754013,
+        "restricted_accuracy": 0.5964349376114082,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.10843373493975904,
+        "n_neurons": 58,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.5656084656084656,
+        "restricted_accuracy": 0.6462962962962963,
+        "recovery_fraction": 1.1426566884939195,
+        "restoration_flip_rate": 0.6102941176470589,
+        "n_neurons": 32,
+        "n_trials": 136
+      },
+      {
+        "full_accuracy": 0.5229885057471264,
+        "restricted_accuracy": 0.6372413793103447,
+        "recovery_fraction": 1.2184615384615383,
+        "restoration_flip_rate": 0.22818791946308725,
+        "n_neurons": 25,
+        "n_trials": 149
+      },
+      {
+        "full_accuracy": 0.6466666666666667,
+        "restricted_accuracy": 0.5933333333333334,
+        "recovery_fraction": 0.9175257731958762,
+        "restoration_flip_rate": 0.24,
+        "n_neurons": 67,
+        "n_trials": 150
+      },
+      {
+        "full_accuracy": 0.7593073593073593,
+        "restricted_accuracy": 0.7783549783549782,
+        "recovery_fraction": 1.025085518814139,
+        "restoration_flip_rate": 0.037037037037037035,
+        "n_neurons": 18,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.5201612903225806,
+        "restricted_accuracy": 0.6153225806451612,
+        "recovery_fraction": 1.1829457364341085,
+        "restoration_flip_rate": 0.1987179487179487,
+        "n_neurons": 74,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.583743842364532,
+        "restricted_accuracy": 0.6110837438423645,
+        "recovery_fraction": 1.0468354430379747,
+        "restoration_flip_rate": 0.09722222222222222,
+        "n_neurons": 83,
+        "n_trials": 144
+      }
+    ],
+    "CA3": [
+      {
+        "full_accuracy": 0.4741935483870968,
+        "restricted_accuracy": 0.5377016129032258,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.07692307692307693,
+        "n_neurons": 68,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.5,
+        "restricted_accuracy": 0.6611494252873563,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.06756756756756757,
+        "n_neurons": 130,
+        "n_trials": 148
+      },
+      {
+        "full_accuracy": 0.4967611336032388,
+        "restricted_accuracy": 0.575033738191633,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.27717391304347827,
+        "n_neurons": 17,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.5128022759601707,
+        "restricted_accuracy": 0.555049786628734,
+        "recovery_fraction": 1.0823855755894591,
+        "restoration_flip_rate": 0.10909090909090909,
+        "n_neurons": 86,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.4458110516934046,
+        "restricted_accuracy": 0.4524064171122995,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.2710843373493976,
+        "n_neurons": 21,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.4962121212121212,
+        "restricted_accuracy": 0.6089015151515151,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.36024844720496896,
+        "n_neurons": 35,
+        "n_trials": 161
+      },
+      {
+        "full_accuracy": 0.47310606060606053,
+        "restricted_accuracy": 0.668939393939394,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.3128834355828221,
+        "n_neurons": 43,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.5103448275862069,
+        "restricted_accuracy": 0.48275862068965514,
+        "recovery_fraction": 0.9459459459459458,
+        "restoration_flip_rate": 0.07586206896551724,
+        "n_neurons": 84,
+        "n_trials": 145
+      }
+    ],
+    "DG": [
+      {
+        "full_accuracy": 0.5064516129032258,
+        "restricted_accuracy": 0.5838709677419354,
+        "recovery_fraction": 1.1528662420382163,
+        "restoration_flip_rate": 0.17307692307692307,
+        "n_neurons": 34,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.6076923076923076,
+        "restricted_accuracy": 0.6692307692307692,
+        "recovery_fraction": 1.1012658227848102,
+        "restoration_flip_rate": 0.08461538461538462,
+        "n_neurons": 34,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.5609848484848485,
+        "restricted_accuracy": 0.7073863636363636,
+        "recovery_fraction": 1.2609723160027009,
+        "restoration_flip_rate": 0.012195121951219513,
+        "n_neurons": 144,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.6774193548387097,
+        "restricted_accuracy": 0.735483870967742,
+        "recovery_fraction": 1.0857142857142859,
+        "restoration_flip_rate": 0.05161290322580645,
+        "n_neurons": 16,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.5443994601889338,
+        "restricted_accuracy": 0.6421052631578947,
+        "recovery_fraction": 1.179474467030243,
+        "restoration_flip_rate": 0.24456521739130435,
+        "n_neurons": 33,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.4185606060606061,
+        "restricted_accuracy": 0.41325757575757577,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.08024691358024691,
+        "n_neurons": 73,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.4714285714285714,
+        "restricted_accuracy": 0.6357142857142857,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.20714285714285716,
+        "n_neurons": 65,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.5479500891265597,
+        "restricted_accuracy": 0.5358288770053476,
+        "recovery_fraction": 0.9778789850357841,
+        "restoration_flip_rate": 0.03614457831325301,
+        "n_neurons": 17,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.6087394957983193,
+        "restricted_accuracy": 0.631764705882353,
+        "recovery_fraction": 1.037824406405301,
+        "restoration_flip_rate": 0.09770114942528736,
+        "n_neurons": 41,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.6189655172413793,
+        "restricted_accuracy": 0.7224137931034483,
+        "recovery_fraction": 1.1671309192200559,
+        "restoration_flip_rate": 0.04861111111111111,
+        "n_neurons": 45,
+        "n_trials": 144
+      },
+      {
+        "full_accuracy": 0.47619047619047616,
+        "restricted_accuracy": 0.6599999999999999,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.2524271844660194,
+        "n_neurons": 75,
+        "n_trials": 103
+      },
+      {
+        "full_accuracy": 0.62,
+        "restricted_accuracy": 0.6266666666666667,
+        "recovery_fraction": 1.010752688172043,
+        "restoration_flip_rate": 0.09333333333333334,
+        "n_neurons": 20,
+        "n_trials": 150
+      },
+      {
+        "full_accuracy": 0.7285714285714285,
+        "restricted_accuracy": 0.7571428571428571,
+        "recovery_fraction": 1.0392156862745099,
+        "restoration_flip_rate": 0.018691588785046728,
+        "n_neurons": 15,
+        "n_trials": 107
+      },
+      {
+        "full_accuracy": 0.5640692640692639,
+        "restricted_accuracy": 0.7502164502164502,
+        "recovery_fraction": 1.330007674597084,
+        "restoration_flip_rate": 0.018518518518518517,
+        "n_neurons": 67,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.4814516129032258,
+        "restricted_accuracy": 0.5838709677419355,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.391025641025641,
+        "n_neurons": 28,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.5214285714285715,
+        "restricted_accuracy": 0.6389162561576355,
+        "recovery_fraction": 1.2253188474256023,
+        "restoration_flip_rate": 0.19444444444444445,
+        "n_neurons": 69,
+        "n_trials": 144
+      }
+    ],
+    "LS": [
+      {
+        "full_accuracy": 0.4685483870967742,
+        "restricted_accuracy": 0.589516129032258,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.02564102564102564,
+        "n_neurons": 139,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.5904761904761905,
+        "restricted_accuracy": 0.7502164502164501,
+        "recovery_fraction": 1.2705278592375364,
+        "restoration_flip_rate": 0.037037037037037035,
+        "n_neurons": 47,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.526008064516129,
+        "restricted_accuracy": 0.5899193548387096,
+        "recovery_fraction": 1.121502491376006,
+        "restoration_flip_rate": 0.1346153846153846,
+        "n_neurons": 219,
+        "n_trials": 156
+      }
+    ],
+    "MOs": [
+      {
+        "full_accuracy": 0.519758064516129,
+        "restricted_accuracy": 0.6471774193548386,
+        "recovery_fraction": 1.2451512800620634,
+        "restoration_flip_rate": 0.14102564102564102,
+        "n_neurons": 113,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.6526515151515151,
+        "restricted_accuracy": 0.7073863636363635,
+        "recovery_fraction": 1.0838653511317469,
+        "restoration_flip_rate": 0.07317073170731707,
+        "n_neurons": 92,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.7096774193548386,
+        "restricted_accuracy": 0.729032258064516,
+        "recovery_fraction": 1.0272727272727271,
+        "restoration_flip_rate": 0.01935483870967742,
+        "n_neurons": 29,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.5237516869095817,
+        "restricted_accuracy": 0.6168690958164642,
+        "recovery_fraction": 1.177789229580005,
+        "restoration_flip_rate": 0.11413043478260869,
+        "n_neurons": 112,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.49393939393939396,
+        "restricted_accuracy": 0.5784313725490196,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.25301204819277107,
+        "n_neurons": 46,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.4509677419354839,
+        "restricted_accuracy": 0.5034408602150539,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.013071895424836602,
+        "n_neurons": 186,
+        "n_trials": 153
+      },
+      {
+        "full_accuracy": 0.5068783068783069,
+        "restricted_accuracy": 0.588095238095238,
+        "recovery_fraction": 1.1602296450939453,
+        "restoration_flip_rate": 0.27941176470588236,
+        "n_neurons": 65,
+        "n_trials": 136
+      },
+      {
+        "full_accuracy": 0.5574712643678161,
+        "restricted_accuracy": 0.6572413793103448,
+        "recovery_fraction": 1.1789690721649482,
+        "restoration_flip_rate": 0.2214765100671141,
+        "n_neurons": 80,
+        "n_trials": 149
+      },
+      {
+        "full_accuracy": 0.5486153846153846,
+        "restricted_accuracy": 0.6981538461538462,
+        "recovery_fraction": 1.2725743129556928,
+        "restoration_flip_rate": 0.07936507936507936,
+        "n_neurons": 166,
+        "n_trials": 126
+      },
+      {
+        "full_accuracy": 0.5199999999999999,
+        "restricted_accuracy": 0.6399999999999999,
+        "recovery_fraction": 1.2307692307692308,
+        "restoration_flip_rate": 0.21333333333333335,
+        "n_neurons": 97,
+        "n_trials": 150
+      },
+      {
+        "full_accuracy": 0.5558441558441558,
+        "restricted_accuracy": 0.7307359307359307,
+        "recovery_fraction": 1.3146417445482865,
+        "restoration_flip_rate": 0.1111111111111111,
+        "n_neurons": 38,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.5759469696969697,
+        "restricted_accuracy": 0.5892045454545455,
+        "recovery_fraction": 1.023018743834265,
+        "restoration_flip_rate": 0.06748466257668712,
+        "n_neurons": 281,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.49701280227596023,
+        "restricted_accuracy": 0.5460881934566145,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.09444444444444444,
+        "n_neurons": 69,
+        "n_trials": 187
+      },
+      {
+        "full_accuracy": 0.4229838709677419,
+        "restricted_accuracy": 0.5441532258064516,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.3782051282051282,
+        "n_neurons": 34,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.5314285714285714,
+        "restricted_accuracy": 0.5885714285714285,
+        "recovery_fraction": 1.1075268817204302,
+        "restoration_flip_rate": 0.28,
+        "n_neurons": 41,
+        "n_trials": 175
+      },
+      {
+        "full_accuracy": 0.49230769230769234,
+        "restricted_accuracy": 0.6230769230769232,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.09230769230769231,
+        "n_neurons": 233,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.5275862068965518,
+        "restricted_accuracy": 0.5423645320197045,
+        "recovery_fraction": 1.0280112044817926,
+        "restoration_flip_rate": 0.18055555555555555,
+        "n_neurons": 54,
+        "n_trials": 144
+      }
+    ],
+    "SUB": [
+      {
+        "full_accuracy": 0.5131048387096774,
+        "restricted_accuracy": 0.6211693548387096,
+        "recovery_fraction": 1.2106090373280942,
+        "restoration_flip_rate": 0.17307692307692307,
+        "n_neurons": 75,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.5738636363636364,
+        "restricted_accuracy": 0.7013257575757575,
+        "recovery_fraction": 1.222112211221122,
+        "restoration_flip_rate": 0.042682926829268296,
+        "n_neurons": 108,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.5935483870967742,
+        "restricted_accuracy": 0.7290322580645162,
+        "recovery_fraction": 1.2282608695652175,
+        "restoration_flip_rate": 0.025806451612903226,
+        "n_neurons": 101,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.5755735492577598,
+        "restricted_accuracy": 0.6375168690958165,
+        "recovery_fraction": 1.107620164126612,
+        "restoration_flip_rate": 0.29891304347826086,
+        "n_neurons": 34,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.5285714285714285,
+        "restricted_accuracy": 0.6285714285714286,
+        "recovery_fraction": 1.1891891891891895,
+        "restoration_flip_rate": 0.07142857142857142,
+        "n_neurons": 105,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.4894117647058823,
+        "restricted_accuracy": 0.620672268907563,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.13218390804597702,
+        "n_neurons": 57,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.6389162561576355,
+        "restricted_accuracy": 0.7362068965517241,
+        "recovery_fraction": 1.1522744795682343,
+        "restoration_flip_rate": 0.06944444444444445,
+        "n_neurons": 51,
+        "n_trials": 144
+      },
+      {
+        "full_accuracy": 0.6298701298701299,
+        "restricted_accuracy": 0.7502164502164502,
+        "recovery_fraction": 1.19106529209622,
+        "restoration_flip_rate": 0.018518518518518517,
+        "n_neurons": 61,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.48694581280788185,
+        "restricted_accuracy": 0.5901477832512315,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.125,
+        "n_neurons": 93,
+        "n_trials": 144
+      }
+    ],
+    "VISp": [
+      {
+        "full_accuracy": 0.5578629032258065,
+        "restricted_accuracy": 0.6346774193548386,
+        "recovery_fraction": 1.1376942537043728,
+        "restoration_flip_rate": 0.019230769230769232,
+        "n_neurons": 178,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.5461538461538462,
+        "restricted_accuracy": 0.6692307692307691,
+        "recovery_fraction": 1.2253521126760558,
+        "restoration_flip_rate": 0.11538461538461539,
+        "n_neurons": 114,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.6526515151515151,
+        "restricted_accuracy": 0.7075757575757575,
+        "recovery_fraction": 1.0841555426581544,
+        "restoration_flip_rate": 0.13414634146341464,
+        "n_neurons": 39,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.45546558704453444,
+        "restricted_accuracy": 0.5753036437246964,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.15217391304347827,
+        "n_neurons": 48,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.5308712121212121,
+        "restricted_accuracy": 0.5490530303030303,
+        "recovery_fraction": 1.0342490189083124,
+        "restoration_flip_rate": 0.13580246913580246,
+        "n_neurons": 105,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.5142857142857142,
+        "restricted_accuracy": 0.6071428571428572,
+        "recovery_fraction": 1.1805555555555558,
+        "restoration_flip_rate": 0.21428571428571427,
+        "n_neurons": 66,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.5096774193548388,
+        "restricted_accuracy": 0.5556989247311828,
+        "recovery_fraction": 1.0902953586497888,
+        "restoration_flip_rate": 0.3790849673202614,
+        "n_neurons": 42,
+        "n_trials": 153
+      },
+      {
+        "full_accuracy": 0.5140394088669951,
+        "restricted_accuracy": 0.7364532019704433,
+        "recovery_fraction": 1.4326784858648778,
+        "restoration_flip_rate": 0.06944444444444445,
+        "n_neurons": 122,
+        "n_trials": 144
+      },
+      {
+        "full_accuracy": 0.5433862433862433,
+        "restricted_accuracy": 0.6253968253968255,
+        "recovery_fraction": 1.1509250243427462,
+        "restoration_flip_rate": 0.22794117647058823,
+        "n_neurons": 133,
+        "n_trials": 136
+      },
+      {
+        "full_accuracy": 0.5836781609195402,
+        "restricted_accuracy": 0.6577011494252873,
+        "recovery_fraction": 1.1268215833005122,
+        "restoration_flip_rate": 0.16778523489932887,
+        "n_neurons": 94,
+        "n_trials": 149
+      },
+      {
+        "full_accuracy": 0.54,
+        "restricted_accuracy": 0.6584615384615385,
+        "recovery_fraction": 1.2193732193732194,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 162,
+        "n_trials": 126
+      },
+      {
+        "full_accuracy": 0.5761083743842363,
+        "restricted_accuracy": 0.5421182266009852,
+        "recovery_fraction": 0.941000427533134,
+        "restoration_flip_rate": 0.14583333333333334,
+        "n_neurons": 15,
+        "n_trials": 144
+      }
+    ],
+    "root": [
+      {
+        "full_accuracy": 0.6288306451612904,
+        "restricted_accuracy": 0.6548387096774192,
+        "recovery_fraction": 1.041359410067329,
+        "restoration_flip_rate": 0.3974358974358974,
+        "n_neurons": 18,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.5583333333333333,
+        "restricted_accuracy": 0.5892045454545454,
+        "recovery_fraction": 1.0552917232021708,
+        "restoration_flip_rate": 0.018404907975460124,
+        "n_neurons": 156,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.7483870967741936,
+        "restricted_accuracy": 0.6967741935483871,
+        "recovery_fraction": 0.9310344827586207,
+        "restoration_flip_rate": 0.08387096774193549,
+        "n_neurons": 524,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.5625,
+        "restricted_accuracy": 0.625,
+        "recovery_fraction": 1.1111111111111112,
+        "restoration_flip_rate": 0.11875,
+        "n_neurons": 628,
+        "n_trials": 160
+      },
+      {
+        "full_accuracy": 0.608735632183908,
+        "restricted_accuracy": 0.6018390804597701,
+        "recovery_fraction": 0.9886706948640483,
+        "restoration_flip_rate": 0.11486486486486487,
+        "n_neurons": 89,
+        "n_trials": 148
+      },
+      {
+        "full_accuracy": 0.5373106060606061,
+        "restricted_accuracy": 0.5933712121212121,
+        "recovery_fraction": 1.1043355657384561,
+        "restoration_flip_rate": 0.16049382716049382,
+        "n_neurons": 36,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.42857142857142855,
+        "restricted_accuracy": 0.5714285714285714,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.1357142857142857,
+        "n_neurons": 100,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.5598930481283422,
+        "restricted_accuracy": 0.6622103386809268,
+        "recovery_fraction": 1.1827443489334606,
+        "restoration_flip_rate": 0.006024096385542169,
+        "n_neurons": 173,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.4340725806451613,
+        "restricted_accuracy": 0.6415322580645161,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.20754716981132076,
+        "n_neurons": 83,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.5536290322580645,
+        "restricted_accuracy": 0.5405241935483871,
+        "recovery_fraction": 0.9763292061179899,
+        "restoration_flip_rate": 0.1069182389937107,
+        "n_neurons": 358,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.4785984848484849,
+        "restricted_accuracy": 0.6151515151515151,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.13664596273291926,
+        "n_neurons": 99,
+        "n_trials": 161
+      },
+      {
+        "full_accuracy": 0.5751260504201681,
+        "restricted_accuracy": 0.6381512605042017,
+        "recovery_fraction": 1.1095850379894798,
+        "restoration_flip_rate": 0.14367816091954022,
+        "n_neurons": 24,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.5666666666666667,
+        "restricted_accuracy": 0.6,
+        "recovery_fraction": 1.0588235294117647,
+        "restoration_flip_rate": 0.17777777777777778,
+        "n_neurons": 18,
+        "n_trials": 90
+      },
+      {
+        "full_accuracy": 0.5719047619047619,
+        "restricted_accuracy": 0.5623809523809523,
+        "recovery_fraction": 0.9833472106577851,
+        "restoration_flip_rate": 0.13592233009708737,
+        "n_neurons": 555,
+        "n_trials": 103
+      },
+      {
+        "full_accuracy": 0.5233333333333333,
+        "restricted_accuracy": 0.5963333333333334,
+        "recovery_fraction": 1.1394904458598727,
+        "restoration_flip_rate": 0.04032258064516129,
+        "n_neurons": 28,
+        "n_trials": 124
+      },
+      {
+        "full_accuracy": 0.5313846153846153,
+        "restricted_accuracy": 0.6264615384615385,
+        "recovery_fraction": 1.1789229878401855,
+        "restoration_flip_rate": 0.03968253968253968,
+        "n_neurons": 321,
+        "n_trials": 126
+      },
+      {
+        "full_accuracy": 0.44893314366998577,
+        "restricted_accuracy": 0.5190611664295876,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.25,
+        "n_neurons": 24,
+        "n_trials": 187
+      },
+      {
+        "full_accuracy": 0.537126600284495,
+        "restricted_accuracy": 0.7042674253200569,
+        "recovery_fraction": 1.3111758474576272,
+        "restoration_flip_rate": 0.07027027027027027,
+        "n_neurons": 102,
+        "n_trials": 186
+      },
+      {
+        "full_accuracy": 0.5142857142857142,
+        "restricted_accuracy": 0.5428571428571428,
+        "recovery_fraction": 1.0555555555555556,
+        "restoration_flip_rate": 0.14285714285714285,
+        "n_neurons": 104,
+        "n_trials": 175
+      },
+      {
+        "full_accuracy": 0.5384615384615385,
+        "restricted_accuracy": 0.6692307692307692,
+        "recovery_fraction": 1.2428571428571427,
+        "restoration_flip_rate": 0.5307692307692308,
+        "n_neurons": 28,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.503448275862069,
+        "restricted_accuracy": 0.5724137931034482,
+        "recovery_fraction": 1.136986301369863,
+        "restoration_flip_rate": 0.09655172413793103,
+        "n_neurons": 295,
+        "n_trials": 145
+      },
+      {
+        "full_accuracy": 0.5980295566502464,
+        "restricted_accuracy": 0.6532019704433498,
+        "recovery_fraction": 1.0922570016474464,
+        "restoration_flip_rate": 0.09027777777777778,
+        "n_neurons": 442,
+        "n_trials": 144
+      }
+    ],
+    "CA1": [
+      {
+        "full_accuracy": 0.5143939393939394,
+        "restricted_accuracy": 0.5517045454545454,
+        "recovery_fraction": 1.0725331369661266,
+        "restoration_flip_rate": 0.006134969325153374,
+        "n_neurons": 190,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.5461538461538462,
+        "restricted_accuracy": 0.6615384615384615,
+        "recovery_fraction": 1.2112676056338028,
+        "restoration_flip_rate": 0.15384615384615385,
+        "n_neurons": 42,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.46344696969696975,
+        "restricted_accuracy": 0.7134469696969697,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.04878048780487805,
+        "n_neurons": 98,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.6774193548387096,
+        "restricted_accuracy": 0.7225806451612904,
+        "recovery_fraction": 1.0666666666666669,
+        "restoration_flip_rate": 0.06451612903225806,
+        "n_neurons": 28,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.46875,
+        "restricted_accuracy": 0.55,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.175,
+        "n_neurons": 36,
+        "n_trials": 160
+      },
+      {
+        "full_accuracy": 0.6002699055330635,
+        "restricted_accuracy": 0.6273954116059379,
+        "recovery_fraction": 1.0451888489208632,
+        "restoration_flip_rate": 0.19021739130434784,
+        "n_neurons": 56,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.486628733997155,
+        "restricted_accuracy": 0.5662873399715506,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.15757575757575756,
+        "n_neurons": 90,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.4876893939393939,
+        "restricted_accuracy": 0.5128787878787879,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.1111111111111111,
+        "n_neurons": 76,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.55,
+        "restricted_accuracy": 0.55,
+        "recovery_fraction": 1.0,
+        "restoration_flip_rate": 0.16428571428571428,
+        "n_neurons": 50,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.48235294117647054,
+        "restricted_accuracy": 0.5784313725490196,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.3674698795180723,
+        "n_neurons": 34,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.4778494623655914,
+        "restricted_accuracy": 0.5040860215053764,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.10457516339869281,
+        "n_neurons": 99,
+        "n_trials": 153
+      },
+      {
+        "full_accuracy": 0.5463865546218487,
+        "restricted_accuracy": 0.6265546218487394,
+        "recovery_fraction": 1.1467240848969547,
+        "restoration_flip_rate": 0.15517241379310345,
+        "n_neurons": 66,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.6672413793103449,
+        "restricted_accuracy": 0.701231527093596,
+        "recovery_fraction": 1.0509413067552602,
+        "restoration_flip_rate": 0.1111111111111111,
+        "n_neurons": 37,
+        "n_trials": 144
+      },
+      {
+        "full_accuracy": 0.4766666666666667,
+        "restricted_accuracy": 0.6519047619047619,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.20388349514563106,
+        "n_neurons": 82,
+        "n_trials": 103
+      },
+      {
+        "full_accuracy": 0.5486666666666667,
+        "restricted_accuracy": 0.6453333333333333,
+        "recovery_fraction": 1.1761846901579585,
+        "restoration_flip_rate": 0.04838709677419355,
+        "n_neurons": 187,
+        "n_trials": 124
+      },
+      {
+        "full_accuracy": 0.5333333333333333,
+        "restricted_accuracy": 0.6133333333333334,
+        "recovery_fraction": 1.1500000000000001,
+        "restoration_flip_rate": 0.04666666666666667,
+        "n_neurons": 20,
+        "n_trials": 150
+      },
+      {
+        "full_accuracy": 0.6268398268398268,
+        "restricted_accuracy": 0.7471861471861472,
+        "recovery_fraction": 1.1919889502762433,
+        "restoration_flip_rate": 0.08411214953271028,
+        "n_neurons": 56,
+        "n_trials": 107
+      },
+      {
+        "full_accuracy": 0.6675324675324676,
+        "restricted_accuracy": 0.7506493506493506,
+        "recovery_fraction": 1.1245136186770426,
+        "restoration_flip_rate": 0.16666666666666666,
+        "n_neurons": 36,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.4875,
+        "restricted_accuracy": 0.5258064516129032,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.358974358974359,
+        "n_neurons": 24,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.43103448275862066,
+        "restricted_accuracy": 0.5625615763546797,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.2361111111111111,
+        "n_neurons": 47,
+        "n_trials": 144
+      }
+    ],
+    "POST": [
+      {
+        "full_accuracy": 0.5028409090909091,
+        "restricted_accuracy": 0.6261363636363637,
+        "recovery_fraction": 1.2451977401129946,
+        "restoration_flip_rate": 0.04294478527607362,
+        "n_neurons": 191,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.5153846153846153,
+        "restricted_accuracy": 0.7000000000000001,
+        "recovery_fraction": 1.358208955223881,
+        "restoration_flip_rate": 0.18461538461538463,
+        "n_neurons": 63,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.5369318181818181,
+        "restricted_accuracy": 0.6412878787878789,
+        "recovery_fraction": 1.194356261022928,
+        "restoration_flip_rate": 0.32098765432098764,
+        "n_neurons": 41,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.5520833333333333,
+        "restricted_accuracy": 0.6138257575757576,
+        "recovery_fraction": 1.1118353344768441,
+        "restoration_flip_rate": 0.15950920245398773,
+        "n_neurons": 17,
+        "n_trials": 163
+      }
+    ],
+    "VISl": [
+      {
+        "full_accuracy": 0.49109848484848484,
+        "restricted_accuracy": 0.6198863636363636,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.06134969325153374,
+        "n_neurons": 231,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.5667140825035561,
+        "restricted_accuracy": 0.5819345661450924,
+        "recovery_fraction": 1.0268574297188755,
+        "restoration_flip_rate": 0.10909090909090909,
+        "n_neurons": 104,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.5371212121212121,
+        "restricted_accuracy": 0.5678030303030303,
+        "recovery_fraction": 1.0571227080394923,
+        "restoration_flip_rate": 0.10493827160493827,
+        "n_neurons": 99,
+        "n_trials": 162
+      }
+    ],
+    "VISpm": [
+      {
+        "full_accuracy": 0.5587121212121212,
+        "restricted_accuracy": 0.6077651515151515,
+        "recovery_fraction": 1.0877966101694916,
+        "restoration_flip_rate": 0.049079754601226995,
+        "n_neurons": 302,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.5692436974789916,
+        "restricted_accuracy": 0.655126050420168,
+        "recovery_fraction": 1.150870977266017,
+        "restoration_flip_rate": 0.13218390804597702,
+        "n_neurons": 68,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.42766666666666664,
+        "restricted_accuracy": 0.6523333333333332,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.1693548387096774,
+        "n_neurons": 146,
+        "n_trials": 124
+      },
+      {
+        "full_accuracy": 0.6727272727272726,
+        "restricted_accuracy": 0.7281385281385282,
+        "recovery_fraction": 1.0823680823680826,
+        "restoration_flip_rate": 0.09345794392523364,
+        "n_neurons": 71,
+        "n_trials": 107
+      }
+    ],
+    "MG": [
+      {
+        "full_accuracy": 0.5076923076923078,
+        "restricted_accuracy": 0.6615384615384615,
+        "recovery_fraction": 1.3030303030303028,
+        "restoration_flip_rate": 0.007692307692307693,
+        "n_neurons": 137,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.526847290640394,
+        "restricted_accuracy": 0.7359605911330049,
+        "recovery_fraction": 1.3969144460028051,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 158,
+        "n_trials": 144
+      }
+    ],
+    "MRN": [
+      {
+        "full_accuracy": 0.5923076923076923,
+        "restricted_accuracy": 0.6615384615384615,
+        "recovery_fraction": 1.1168831168831168,
+        "restoration_flip_rate": 0.23076923076923078,
+        "n_neurons": 41,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.5503787878787879,
+        "restricted_accuracy": 0.6104166666666666,
+        "recovery_fraction": 1.1090846524432207,
+        "restoration_flip_rate": 0.18518518518518517,
+        "n_neurons": 72,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.45828877005347596,
+        "restricted_accuracy": 0.5964349376114082,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.2469879518072289,
+        "n_neurons": 51,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.49720430107526886,
+        "restricted_accuracy": 0.5561290322580645,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.16339869281045752,
+        "n_neurons": 72,
+        "n_trials": 153
+      },
+      {
+        "full_accuracy": 0.5518518518518518,
+        "restricted_accuracy": 0.5362433862433862,
+        "recovery_fraction": 0.9717162032598274,
+        "restoration_flip_rate": 0.07352941176470588,
+        "n_neurons": 112,
+        "n_trials": 136
+      },
+      {
+        "full_accuracy": 0.5243333333333333,
+        "restricted_accuracy": 0.5726666666666668,
+        "recovery_fraction": 1.0921805467260015,
+        "restoration_flip_rate": 0.14516129032258066,
+        "n_neurons": 80,
+        "n_trials": 124
+      },
+      {
+        "full_accuracy": 0.443448275862069,
+        "restricted_accuracy": 0.5970114942528735,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.020134228187919462,
+        "n_neurons": 182,
+        "n_trials": 149
+      },
+      {
+        "full_accuracy": 0.5483076923076923,
+        "restricted_accuracy": 0.7141538461538463,
+        "recovery_fraction": 1.3024691358024694,
+        "restoration_flip_rate": 0.10317460317460317,
+        "n_neurons": 217,
+        "n_trials": 126
+      },
+      {
+        "full_accuracy": 0.5515151515151515,
+        "restricted_accuracy": 0.729004329004329,
+        "recovery_fraction": 1.3218210361067504,
+        "restoration_flip_rate": 0.11214953271028037,
+        "n_neurons": 67,
+        "n_trials": 107
+      },
+      {
+        "full_accuracy": 0.5342816500711238,
+        "restricted_accuracy": 0.5288762446657185,
+        "recovery_fraction": 0.9898828541001066,
+        "restoration_flip_rate": 0.18888888888888888,
+        "n_neurons": 23,
+        "n_trials": 187
+      },
+      {
+        "full_accuracy": 0.45714285714285713,
+        "restricted_accuracy": 0.5142857142857142,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.13714285714285715,
+        "n_neurons": 99,
+        "n_trials": 175
+      }
+    ],
+    "NB": [
+      {
+        "full_accuracy": 0.5461538461538462,
+        "restricted_accuracy": 0.6692307692307692,
+        "recovery_fraction": 1.225352112676056,
+        "restoration_flip_rate": 0.1076923076923077,
+        "n_neurons": 43,
+        "n_trials": 130
+      }
+    ],
+    "SPF": [
+      {
+        "full_accuracy": 0.623076923076923,
+        "restricted_accuracy": 0.6538461538461539,
+        "recovery_fraction": 1.049382716049383,
+        "restoration_flip_rate": 0.13846153846153847,
+        "n_neurons": 15,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.680295566502463,
+        "restricted_accuracy": 0.7155172413793103,
+        "recovery_fraction": 1.0517740767559738,
+        "restoration_flip_rate": 0.1597222222222222,
+        "n_neurons": 38,
+        "n_trials": 144
+      }
+    ],
+    "VISam": [
+      {
+        "full_accuracy": 0.49230769230769234,
+        "restricted_accuracy": 0.6692307692307692,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.08461538461538462,
+        "n_neurons": 114,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.5183499288762448,
+        "restricted_accuracy": 0.6085348506401138,
+        "recovery_fraction": 1.173984632272228,
+        "restoration_flip_rate": 0.3090909090909091,
+        "n_neurons": 38,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.5714285714285714,
+        "restricted_accuracy": 0.6214285714285714,
+        "recovery_fraction": 1.0875000000000001,
+        "restoration_flip_rate": 0.1357142857142857,
+        "n_neurons": 79,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.4944741532976827,
+        "restricted_accuracy": 0.614795008912656,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.25903614457831325,
+        "n_neurons": 34,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.4996638655462185,
+        "restricted_accuracy": 0.6087394957983193,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.08620689655172414,
+        "n_neurons": 111,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.5523809523809524,
+        "restricted_accuracy": 0.5738095238095238,
+        "recovery_fraction": 1.0387931034482758,
+        "restoration_flip_rate": 0.0970873786407767,
+        "n_neurons": 190,
+        "n_trials": 103
+      },
+      {
+        "full_accuracy": 0.5599999999999999,
+        "restricted_accuracy": 0.5933333333333333,
+        "recovery_fraction": 1.0595238095238095,
+        "restoration_flip_rate": 0.08666666666666667,
+        "n_neurons": 103,
+        "n_trials": 150
+      },
+      {
+        "full_accuracy": 0.5381048387096774,
+        "restricted_accuracy": 0.5961693548387096,
+        "recovery_fraction": 1.1079055826152115,
+        "restoration_flip_rate": 0.27564102564102566,
+        "n_neurons": 75,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.44571428571428573,
+        "restricted_accuracy": 0.5657142857142857,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.18285714285714286,
+        "n_neurons": 53,
+        "n_trials": 175
+      },
+      {
+        "full_accuracy": 0.5384615384615385,
+        "restricted_accuracy": 0.5384615384615385,
+        "recovery_fraction": 1.0,
+        "restoration_flip_rate": 0.17692307692307693,
+        "n_neurons": 77,
+        "n_trials": 130
+      },
+      {
+        "full_accuracy": 0.46576354679802956,
+        "restricted_accuracy": 0.6182266009852216,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.19444444444444445,
+        "n_neurons": 126,
+        "n_trials": 144
+      }
+    ],
+    "LGd": [
+      {
+        "full_accuracy": 0.5486742424242423,
+        "restricted_accuracy": 0.6886363636363636,
+        "recovery_fraction": 1.2550914739385572,
+        "restoration_flip_rate": 0.03048780487804878,
+        "n_neurons": 140,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.48752228163992867,
+        "restricted_accuracy": 0.5417112299465241,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.030120481927710843,
+        "n_neurons": 150,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.5149193548387097,
+        "restricted_accuracy": 0.6227822580645161,
+        "recovery_fraction": 1.2094753328112766,
+        "restoration_flip_rate": 0.1509433962264151,
+        "n_neurons": 121,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.45098039215686275,
+        "restricted_accuracy": 0.6090909090909091,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.16265060240963855,
+        "n_neurons": 73,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.5212121212121212,
+        "restricted_accuracy": 0.5340909090909091,
+        "recovery_fraction": 1.0247093023255813,
+        "restoration_flip_rate": 0.13043478260869565,
+        "n_neurons": 89,
+        "n_trials": 161
+      },
+      {
+        "full_accuracy": 0.5625615763546797,
+        "restricted_accuracy": 0.7155172413793103,
+        "recovery_fraction": 1.271891418563923,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 147,
+        "n_trials": 144
+      },
+      {
+        "full_accuracy": 0.5111111111111111,
+        "restricted_accuracy": 0.6592592592592592,
+        "recovery_fraction": 1.289855072463768,
+        "restoration_flip_rate": 0.2222222222222222,
+        "n_neurons": 34,
+        "n_trials": 135
+      },
+      {
+        "full_accuracy": 0.5379310344827586,
+        "restricted_accuracy": 0.4206896551724138,
+        "recovery_fraction": 0.7820512820512822,
+        "restoration_flip_rate": 0.006896551724137931,
+        "n_neurons": 109,
+        "n_trials": 145
+      }
+    ],
+    "LSr": [
+      {
+        "full_accuracy": 0.6526515151515151,
+        "restricted_accuracy": 0.7073863636363635,
+        "recovery_fraction": 1.0838653511317469,
+        "restoration_flip_rate": 0.06707317073170732,
+        "n_neurons": 435,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.5923186344238976,
+        "restricted_accuracy": 0.6446657183499289,
+        "recovery_fraction": 1.0883765609990392,
+        "restoration_flip_rate": 0.44242424242424244,
+        "n_neurons": 33,
+        "n_trials": 189
+      }
+    ],
+    "TH": [
+      {
+        "full_accuracy": 0.6587121212121212,
+        "restricted_accuracy": 0.7134469696969697,
+        "recovery_fraction": 1.0830937320299023,
+        "restoration_flip_rate": 0.04878048780487805,
+        "n_neurons": 256,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.55,
+        "restricted_accuracy": 0.61875,
+        "recovery_fraction": 1.125,
+        "restoration_flip_rate": 0.05,
+        "n_neurons": 248,
+        "n_trials": 160
+      },
+      {
+        "full_accuracy": 0.46571834992887623,
+        "restricted_accuracy": 0.5450924608819345,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.17575757575757575,
+        "n_neurons": 52,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.44563279857397503,
+        "restricted_accuracy": 0.6203208556149732,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.04216867469879518,
+        "n_neurons": 159,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.521969696969697,
+        "restricted_accuracy": 0.6329545454545455,
+        "recovery_fraction": 1.2126269956458637,
+        "restoration_flip_rate": 0.07453416149068323,
+        "n_neurons": 175,
+        "n_trials": 161
+      },
+      {
+        "full_accuracy": 0.5551724137931034,
+        "restricted_accuracy": 0.7155172413793103,
+        "recovery_fraction": 1.2888198757763973,
+        "restoration_flip_rate": 0.013888888888888888,
+        "n_neurons": 191,
+        "n_trials": 144
+      },
+      {
+        "full_accuracy": 0.5833333333333333,
+        "restricted_accuracy": 0.6445075757575758,
+        "recovery_fraction": 1.10487012987013,
+        "restoration_flip_rate": 0.13496932515337423,
+        "n_neurons": 109,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.4685483870967742,
+        "restricted_accuracy": 0.6102822580645161,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.1858974358974359,
+        "n_neurons": 67,
+        "n_trials": 156
+      }
+    ],
+    "VISa": [
+      {
+        "full_accuracy": 0.6164772727272727,
+        "restricted_accuracy": 0.7011363636363637,
+        "recovery_fraction": 1.1373271889400922,
+        "restoration_flip_rate": 0.10365853658536585,
+        "n_neurons": 81,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.5096774193548387,
+        "restricted_accuracy": 0.7096774193548386,
+        "recovery_fraction": 1.3924050632911391,
+        "restoration_flip_rate": 0.012903225806451613,
+        "n_neurons": 99,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.5341430499325236,
+        "restricted_accuracy": 0.6278002699055332,
+        "recovery_fraction": 1.1753410813542196,
+        "restoration_flip_rate": 0.20108695652173914,
+        "n_neurons": 63,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.6184729064039409,
+        "restricted_accuracy": 0.7224137931034483,
+        "recovery_fraction": 1.1680605336519314,
+        "restoration_flip_rate": 0.0625,
+        "n_neurons": 78,
+        "n_trials": 144
+      },
+      {
+        "full_accuracy": 0.7307359307359308,
+        "restricted_accuracy": 0.7779220779220779,
+        "recovery_fraction": 1.0645734597156398,
+        "restoration_flip_rate": 0.07407407407407407,
+        "n_neurons": 19,
+        "n_trials": 108
+      }
+    ],
+    "VPL": [
+      {
+        "full_accuracy": 0.5613636363636363,
+        "restricted_accuracy": 0.6950757575757576,
+        "recovery_fraction": 1.2381916329284752,
+        "restoration_flip_rate": 0.07317073170731707,
+        "n_neurons": 72,
+        "n_trials": 164
+      },
+      {
+        "full_accuracy": 0.5075862068965517,
+        "restricted_accuracy": 0.6416091954022989,
+        "recovery_fraction": 1.264039855072464,
+        "restoration_flip_rate": 0.12162162162162163,
+        "n_neurons": 106,
+        "n_trials": 148
+      },
+      {
+        "full_accuracy": 0.4230440967283073,
+        "restricted_accuracy": 0.5448079658605974,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.14545454545454545,
+        "n_neurons": 73,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.5092741935483871,
+        "restricted_accuracy": 0.603225806451613,
+        "recovery_fraction": 1.1844813935075218,
+        "restoration_flip_rate": 0.25157232704402516,
+        "n_neurons": 50,
+        "n_trials": 159
+      }
+    ],
+    "OLF": [
+      {
+        "full_accuracy": 0.5741935483870967,
+        "restricted_accuracy": 0.7161290322580645,
+        "recovery_fraction": 1.2471910112359552,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 181,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.49715909090909094,
+        "restricted_accuracy": 0.64375,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.25153374233128833,
+        "n_neurons": 78,
+        "n_trials": 163
+      }
+    ],
+    "ORB": [
+      {
+        "full_accuracy": 0.6774193548387096,
+        "restricted_accuracy": 0.7032258064516128,
+        "recovery_fraction": 1.038095238095238,
+        "restoration_flip_rate": 0.03225806451612903,
+        "n_neurons": 32,
+        "n_trials": 155
+      },
+      {
+        "full_accuracy": 0.5608602150537634,
+        "restricted_accuracy": 0.6079569892473118,
+        "recovery_fraction": 1.083972392638037,
+        "restoration_flip_rate": 0.0196078431372549,
+        "n_neurons": 170,
+        "n_trials": 153
+      },
+      {
+        "full_accuracy": 0.5575757575757575,
+        "restricted_accuracy": 0.6751893939393939,
+        "recovery_fraction": 1.2109375000000002,
+        "restoration_flip_rate": 0.12269938650306748,
+        "n_neurons": 291,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.5345661450924609,
+        "restricted_accuracy": 0.5617354196301565,
+        "recovery_fraction": 1.050824906865354,
+        "restoration_flip_rate": 0.07777777777777778,
+        "n_neurons": 153,
+        "n_trials": 187
+      },
+      {
+        "full_accuracy": 0.5384615384615384,
+        "restricted_accuracy": 0.676923076923077,
+        "recovery_fraction": 1.2571428571428573,
+        "restoration_flip_rate": 0.08461538461538462,
+        "n_neurons": 166,
+        "n_trials": 130
+      }
+    ],
+    "AUD": [
+      {
+        "full_accuracy": 0.46875,
+        "restricted_accuracy": 0.6375,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.05,
+        "n_neurons": 246,
+        "n_trials": 160
+      }
+    ],
+    "CP": [
+      {
+        "full_accuracy": 0.6013793103448275,
+        "restricted_accuracy": 0.6213793103448276,
+        "recovery_fraction": 1.0332568807339453,
+        "restoration_flip_rate": 0.18243243243243243,
+        "n_neurons": 59,
+        "n_trials": 148
+      },
+      {
+        "full_accuracy": 0.5,
+        "restricted_accuracy": 0.6058823529411765,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.09411764705882353,
+        "n_neurons": 275,
+        "n_trials": 170
+      },
+      {
+        "full_accuracy": 0.4903409090909091,
+        "restricted_accuracy": 0.5837121212121212,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.07453416149068323,
+        "n_neurons": 158,
+        "n_trials": 161
+      },
+      {
+        "full_accuracy": 0.6666666666666667,
+        "restricted_accuracy": 0.7333333333333333,
+        "recovery_fraction": 1.0999999999999999,
+        "restoration_flip_rate": 0.07777777777777778,
+        "n_neurons": 340,
+        "n_trials": 90
+      },
+      {
+        "full_accuracy": 0.6296296296296295,
+        "restricted_accuracy": 0.6222222222222221,
+        "recovery_fraction": 0.988235294117647,
+        "restoration_flip_rate": 0.06666666666666667,
+        "n_neurons": 383,
+        "n_trials": 135
+      }
+    ],
+    "EPd": [
+      {
+        "full_accuracy": 0.5737931034482757,
+        "restricted_accuracy": 0.614712643678161,
+        "recovery_fraction": 1.071314102564103,
+        "restoration_flip_rate": 0.033783783783783786,
+        "n_neurons": 52,
+        "n_trials": 148
+      }
+    ],
+    "LD": [
+      {
+        "full_accuracy": 0.52,
+        "restricted_accuracy": 0.5744827586206896,
+        "recovery_fraction": 1.1047745358090184,
+        "restoration_flip_rate": 0.10810810810810811,
+        "n_neurons": 42,
+        "n_trials": 148
+      },
+      {
+        "full_accuracy": 0.5085020242914979,
+        "restricted_accuracy": 0.6379217273954116,
+        "recovery_fraction": 1.2545116772823781,
+        "restoration_flip_rate": 0.23369565217391305,
+        "n_neurons": 41,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.5233285917496444,
+        "restricted_accuracy": 0.6082503556187767,
+        "recovery_fraction": 1.1622723566186464,
+        "restoration_flip_rate": 0.20606060606060606,
+        "n_neurons": 79,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.6666666666666667,
+        "restricted_accuracy": 0.6111111111111112,
+        "recovery_fraction": 0.9166666666666666,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 100,
+        "n_trials": 90
+      },
+      {
+        "full_accuracy": 0.56,
+        "restricted_accuracy": 0.6466666666666667,
+        "recovery_fraction": 1.1547619047619047,
+        "restoration_flip_rate": 0.26,
+        "n_neurons": 24,
+        "n_trials": 150
+      }
+    ],
+    "PIR": [
+      {
+        "full_accuracy": 0.5013793103448275,
+        "restricted_accuracy": 0.6422988505747126,
+        "recovery_fraction": 1.2810637322329208,
+        "restoration_flip_rate": 0.22972972972972974,
+        "n_neurons": 67,
+        "n_trials": 148
+      }
+    ],
+    "SSp": [
+      {
+        "full_accuracy": 0.44574712643678166,
+        "restricted_accuracy": 0.6016091954022988,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.23648648648648649,
+        "n_neurons": 39,
+        "n_trials": 148
+      },
+      {
+        "full_accuracy": 0.48680926916221035,
+        "restricted_accuracy": 0.5839572192513369,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.25301204819277107,
+        "n_neurons": 24,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.6111111111111112,
+        "restricted_accuracy": 0.6444444444444445,
+        "recovery_fraction": 1.0545454545454545,
+        "restoration_flip_rate": 0.07777777777777778,
+        "n_neurons": 211,
+        "n_trials": 90
+      },
+      {
+        "full_accuracy": 0.6222222222222222,
+        "restricted_accuracy": 0.6444444444444445,
+        "recovery_fraction": 1.0357142857142858,
+        "restoration_flip_rate": 0.05555555555555555,
+        "n_neurons": 230,
+        "n_trials": 90
+      }
+    ],
+    "ILA": [
+      {
+        "full_accuracy": 0.528744939271255,
+        "restricted_accuracy": 0.6470985155195681,
+        "recovery_fraction": 1.2238386932108218,
+        "restoration_flip_rate": 0.07065217391304347,
+        "n_neurons": 144,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.5301149425287356,
+        "restricted_accuracy": 0.624367816091954,
+        "recovery_fraction": 1.1777970511708586,
+        "restoration_flip_rate": 0.11409395973154363,
+        "n_neurons": 80,
+        "n_trials": 149
+      },
+      {
+        "full_accuracy": 0.611576354679803,
+        "restricted_accuracy": 0.65935960591133,
+        "recovery_fraction": 1.0781312927909785,
+        "restoration_flip_rate": 0.05555555555555555,
+        "n_neurons": 187,
+        "n_trials": 144
+      }
+    ],
+    "LP": [
+      {
+        "full_accuracy": 0.49757085020242914,
+        "restricted_accuracy": 0.533468286099865,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.09239130434782608,
+        "n_neurons": 120,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.6149579831932772,
+        "restricted_accuracy": 0.654453781512605,
+        "recovery_fraction": 1.064225198141569,
+        "restoration_flip_rate": 0.19540229885057472,
+        "n_neurons": 32,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.680295566502463,
+        "restricted_accuracy": 0.7362068965517241,
+        "recovery_fraction": 1.0821868211440984,
+        "restoration_flip_rate": 0.027777777777777776,
+        "n_neurons": 30,
+        "n_trials": 144
+      },
+      {
+        "full_accuracy": 0.5433333333333333,
+        "restricted_accuracy": 0.6595238095238095,
+        "recovery_fraction": 1.2138475021910604,
+        "restoration_flip_rate": 0.1553398058252427,
+        "n_neurons": 164,
+        "n_trials": 103
+      },
+      {
+        "full_accuracy": 0.5333333333333334,
+        "restricted_accuracy": 0.5933333333333333,
+        "recovery_fraction": 1.1124999999999996,
+        "restoration_flip_rate": 0.05333333333333334,
+        "n_neurons": 30,
+        "n_trials": 150
+      },
+      {
+        "full_accuracy": 0.7575757575757576,
+        "restricted_accuracy": 0.7567099567099567,
+        "recovery_fraction": 0.9988571428571428,
+        "restoration_flip_rate": 0.102803738317757,
+        "n_neurons": 15,
+        "n_trials": 107
+      },
+      {
+        "full_accuracy": 0.5839826839826839,
+        "restricted_accuracy": 0.7502164502164502,
+        "recovery_fraction": 1.284655300222387,
+        "restoration_flip_rate": 0.018518518518518517,
+        "n_neurons": 209,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.6614509246088194,
+        "restricted_accuracy": 0.6934566145092461,
+        "recovery_fraction": 1.0483870967741935,
+        "restoration_flip_rate": 0.06486486486486487,
+        "n_neurons": 19,
+        "n_trials": 186
+      },
+      {
+        "full_accuracy": 0.4939516129032258,
+        "restricted_accuracy": 0.595766129032258,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.23076923076923078,
+        "n_neurons": 66,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.49334975369458123,
+        "restricted_accuracy": 0.5699507389162561,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.1388888888888889,
+        "n_neurons": 59,
+        "n_trials": 144
+      }
+    ],
+    "PL": [
+      {
+        "full_accuracy": 0.5645074224021592,
+        "restricted_accuracy": 0.6326585695006747,
+        "recovery_fraction": 1.1207267511355485,
+        "restoration_flip_rate": 0.06521739130434782,
+        "n_neurons": 144,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.5129445234708394,
+        "restricted_accuracy": 0.5443812233285918,
+        "recovery_fraction": 1.0612867443150305,
+        "restoration_flip_rate": 0.14545454545454545,
+        "n_neurons": 50,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.5,
+        "restricted_accuracy": 0.6142857142857142,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.2642857142857143,
+        "n_neurons": 56,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.5602495543672015,
+        "restricted_accuracy": 0.6210338680926916,
+        "recovery_fraction": 1.1084950684059813,
+        "restoration_flip_rate": 0.018072289156626505,
+        "n_neurons": 184,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.41878306878306876,
+        "restricted_accuracy": 0.5804232804232805,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.27205882352941174,
+        "n_neurons": 48,
+        "n_trials": 136
+      },
+      {
+        "full_accuracy": 0.503448275862069,
+        "restricted_accuracy": 0.5845977011494253,
+        "recovery_fraction": 1.1611872146118722,
+        "restoration_flip_rate": 0.26174496644295303,
+        "n_neurons": 60,
+        "n_trials": 149
+      },
+      {
+        "full_accuracy": 0.5314285714285714,
+        "restricted_accuracy": 0.6114285714285714,
+        "recovery_fraction": 1.1505376344086022,
+        "restoration_flip_rate": 0.14285714285714285,
+        "n_neurons": 121,
+        "n_trials": 175
+      },
+      {
+        "full_accuracy": 0.4928571428571429,
+        "restricted_accuracy": 0.5620689655172414,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.020833333333333332,
+        "n_neurons": 173,
+        "n_trials": 144
+      }
+    ],
+    "PO": [
+      {
+        "full_accuracy": 0.513630229419703,
+        "restricted_accuracy": 0.5600539811066128,
+        "recovery_fraction": 1.0903836048344722,
+        "restoration_flip_rate": 0.04891304347826087,
+        "n_neurons": 255,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.5733333333333335,
+        "restricted_accuracy": 0.6409523809523809,
+        "recovery_fraction": 1.1179401993355478,
+        "restoration_flip_rate": 0.1262135922330097,
+        "n_neurons": 202,
+        "n_trials": 103
+      },
+      {
+        "full_accuracy": 0.5733333333333334,
+        "restricted_accuracy": 0.6133333333333333,
+        "recovery_fraction": 1.069767441860465,
+        "restoration_flip_rate": 0.08,
+        "n_neurons": 96,
+        "n_trials": 150
+      },
+      {
+        "full_accuracy": 0.5562770562770563,
+        "restricted_accuracy": 0.7307359307359307,
+        "recovery_fraction": 1.3136186770428016,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 94,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.6610241820768137,
+        "restricted_accuracy": 0.6990042674253201,
+        "recovery_fraction": 1.0574564234990316,
+        "restoration_flip_rate": 0.10270270270270271,
+        "n_neurons": 45,
+        "n_trials": 186
+      }
+    ],
+    "TT": [
+      {
+        "full_accuracy": 0.5906882591093117,
+        "restricted_accuracy": 0.58582995951417,
+        "recovery_fraction": 0.991775188485264,
+        "restoration_flip_rate": 0.11956521739130435,
+        "n_neurons": 82,
+        "n_trials": 193
+      },
+      {
+        "full_accuracy": 0.4655761024182077,
+        "restricted_accuracy": 0.5705547652916074,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.16363636363636364,
+        "n_neurons": 55,
+        "n_trials": 189
+      },
+      {
+        "full_accuracy": 0.49011494252873566,
+        "restricted_accuracy": 0.6036781609195403,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.2751677852348993,
+        "n_neurons": 34,
+        "n_trials": 149
+      }
+    ],
+    "ORBm": [
+      {
+        "full_accuracy": 0.4708392603129445,
+        "restricted_accuracy": 0.582076813655761,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.07272727272727272,
+        "n_neurons": 122,
+        "n_trials": 189
+      }
+    ],
+    "GPe": [
+      {
+        "full_accuracy": 0.5801136363636363,
+        "restricted_accuracy": 0.5367424242424242,
+        "recovery_fraction": 0.9252366960496246,
+        "restoration_flip_rate": 0.13580246913580246,
+        "n_neurons": 63,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.4780241935483871,
+        "restricted_accuracy": 0.5909274193548387,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.06289308176100629,
+        "n_neurons": 142,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.5103448275862068,
+        "restricted_accuracy": 0.6,
+        "recovery_fraction": 1.1756756756756759,
+        "restoration_flip_rate": 0.16551724137931034,
+        "n_neurons": 87,
+        "n_trials": 145
+      }
+    ],
+    "MB": [
+      {
+        "full_accuracy": 0.5494318181818182,
+        "restricted_accuracy": 0.4818181818181818,
+        "recovery_fraction": 0.8769389865563598,
+        "restoration_flip_rate": 0.024691358024691357,
+        "n_neurons": 275,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.4461675579322638,
+        "restricted_accuracy": 0.6142602495543672,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.15060240963855423,
+        "n_neurons": 63,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.4223790322580645,
+        "restricted_accuracy": 0.5536290322580645,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.2389937106918239,
+        "n_neurons": 45,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.5294117647058824,
+        "restricted_accuracy": 0.5960784313725489,
+        "recovery_fraction": 1.1259259259259258,
+        "restoration_flip_rate": 0.15060240963855423,
+        "n_neurons": 77,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.5644381223328592,
+        "restricted_accuracy": 0.6988620199146516,
+        "recovery_fraction": 1.238155241935484,
+        "restoration_flip_rate": 0.11891891891891893,
+        "n_neurons": 66,
+        "n_trials": 186
+      },
+      {
+        "full_accuracy": 0.5384615384615384,
+        "restricted_accuracy": 0.6,
+        "recovery_fraction": 1.1142857142857143,
+        "restoration_flip_rate": 0.1076923076923077,
+        "n_neurons": 348,
+        "n_trials": 130
+      }
+    ],
+    "POL": [
+      {
+        "full_accuracy": 0.4496212121212121,
+        "restricted_accuracy": 0.5060606060606061,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.030864197530864196,
+        "n_neurons": 154,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.5863865546218487,
+        "restricted_accuracy": 0.6670588235294118,
+        "recovery_fraction": 1.1375752364574376,
+        "restoration_flip_rate": 0.25287356321839083,
+        "n_neurons": 22,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.5982683982683982,
+        "restricted_accuracy": 0.7571428571428571,
+        "recovery_fraction": 1.2655571635311145,
+        "restoration_flip_rate": 0.12149532710280374,
+        "n_neurons": 39,
+        "n_trials": 107
+      }
+    ],
+    "SCm": [
+      {
+        "full_accuracy": 0.38768939393939394,
+        "restricted_accuracy": 0.4876893939393939,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.19135802469135801,
+        "n_neurons": 23,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.45846702317290555,
+        "restricted_accuracy": 0.5786096256684492,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.30120481927710846,
+        "n_neurons": 45,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.47677419354838707,
+        "restricted_accuracy": 0.5612903225806452,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.3137254901960784,
+        "n_neurons": 48,
+        "n_trials": 153
+      },
+      {
+        "full_accuracy": 0.5335227272727273,
+        "restricted_accuracy": 0.6196969696969697,
+        "recovery_fraction": 1.1615193468228613,
+        "restoration_flip_rate": 0.17177914110429449,
+        "n_neurons": 41,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.4869132290184922,
+        "restricted_accuracy": 0.5776671408250356,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.25555555555555554,
+        "n_neurons": 56,
+        "n_trials": 187
+      },
+      {
+        "full_accuracy": 0.5199999999999999,
+        "restricted_accuracy": 0.5828571428571427,
+        "recovery_fraction": 1.120879120879121,
+        "restoration_flip_rate": 0.17714285714285713,
+        "n_neurons": 56,
+        "n_trials": 175
+      },
+      {
+        "full_accuracy": 0.3692307692307693,
+        "restricted_accuracy": 0.5538461538461539,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.14615384615384616,
+        "n_neurons": 87,
+        "n_trials": 130
+      }
+    ],
+    "SCsg": [
+      {
+        "full_accuracy": 0.5189393939393939,
+        "restricted_accuracy": 0.4943181818181818,
+        "recovery_fraction": 0.9525547445255474,
+        "restoration_flip_rate": 0.2716049382716049,
+        "n_neurons": 19,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.532,
+        "restricted_accuracy": 0.6453333333333334,
+        "recovery_fraction": 1.2130325814536342,
+        "restoration_flip_rate": 0.12096774193548387,
+        "n_neurons": 84,
+        "n_trials": 124
+      },
+      {
+        "full_accuracy": 0.5701149425287356,
+        "restricted_accuracy": 0.6441379310344827,
+        "recovery_fraction": 1.1298387096774192,
+        "restoration_flip_rate": 0.40268456375838924,
+        "n_neurons": 36,
+        "n_trials": 149
+      }
+    ],
+    "VISrl": [
+      {
+        "full_accuracy": 0.45625,
+        "restricted_accuracy": 0.5678030303030303,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.09259259259259259,
+        "n_neurons": 136,
+        "n_trials": 162
+      },
+      {
+        "full_accuracy": 0.4993333333333333,
+        "restricted_accuracy": 0.5406666666666667,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.024193548387096774,
+        "n_neurons": 150,
+        "n_trials": 124
+      }
+    ],
+    "LSc": [
+      {
+        "full_accuracy": 0.4764705882352941,
+        "restricted_accuracy": 0.4470588235294118,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.07647058823529412,
+        "n_neurons": 72,
+        "n_trials": 170
+      }
+    ],
+    "MOp": [
+      {
+        "full_accuracy": 0.4352941176470589,
+        "restricted_accuracy": 0.6352941176470589,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.06470588235294118,
+        "n_neurons": 447,
+        "n_trials": 170
+      },
+      {
+        "full_accuracy": 0.5888888888888889,
+        "restricted_accuracy": 0.6777777777777777,
+        "recovery_fraction": 1.1509433962264148,
+        "restoration_flip_rate": 0.12222222222222222,
+        "n_neurons": 166,
+        "n_trials": 90
+      },
+      {
+        "full_accuracy": 0.5888888888888889,
+        "restricted_accuracy": 0.7444444444444445,
+        "recovery_fraction": 1.2641509433962264,
+        "restoration_flip_rate": 0.1,
+        "n_neurons": 180,
+        "n_trials": 90
+      }
+    ],
+    "PT": [
+      {
+        "full_accuracy": 0.44117647058823534,
+        "restricted_accuracy": 0.5470588235294118,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.21764705882352942,
+        "n_neurons": 45,
+        "n_trials": 170
+      }
+    ],
+    "LH": [
+      {
+        "full_accuracy": 0.5285714285714286,
+        "restricted_accuracy": 0.5928571428571429,
+        "recovery_fraction": 1.1216216216216217,
+        "restoration_flip_rate": 0.5142857142857142,
+        "n_neurons": 18,
+        "n_trials": 140
+      }
+    ],
+    "MD": [
+      {
+        "full_accuracy": 0.5571428571428572,
+        "restricted_accuracy": 0.5928571428571429,
+        "recovery_fraction": 1.064102564102564,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 126,
+        "n_trials": 140
+      },
+      {
+        "full_accuracy": 0.529004329004329,
+        "restricted_accuracy": 0.7593073593073593,
+        "recovery_fraction": 1.4353518821603926,
+        "restoration_flip_rate": 0.037037037037037035,
+        "n_neurons": 155,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.552016129032258,
+        "restricted_accuracy": 0.615524193548387,
+        "recovery_fraction": 1.1150474799123447,
+        "restoration_flip_rate": 0.09615384615384616,
+        "n_neurons": 116,
+        "n_trials": 156
+      }
+    ],
+    "MS": [
+      {
+        "full_accuracy": 0.5053475935828877,
+        "restricted_accuracy": 0.6144385026737968,
+        "recovery_fraction": 1.215873015873016,
+        "restoration_flip_rate": 0.3132530120481928,
+        "n_neurons": 23,
+        "n_trials": 166
+      }
+    ],
+    "RN": [
+      {
+        "full_accuracy": 0.4944741532976827,
+        "restricted_accuracy": 0.5905525846702318,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.1686746987951807,
+        "n_neurons": 58,
+        "n_trials": 166
+      }
+    ],
+    "SCs": [
+      {
+        "full_accuracy": 0.45187165775401067,
+        "restricted_accuracy": 0.5962566844919786,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.3253012048192771,
+        "n_neurons": 32,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.5163440860215054,
+        "restricted_accuracy": 0.5483870967741935,
+        "recovery_fraction": 1.062057476051645,
+        "restoration_flip_rate": 0.19607843137254902,
+        "n_neurons": 37,
+        "n_trials": 153
+      },
+      {
+        "full_accuracy": 0.5237553342816501,
+        "restricted_accuracy": 0.6260312944523471,
+        "recovery_fraction": 1.1952743074416077,
+        "restoration_flip_rate": 0.15555555555555556,
+        "n_neurons": 73,
+        "n_trials": 187
+      },
+      {
+        "full_accuracy": 0.5,
+        "restricted_accuracy": 0.5923076923076923,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.15384615384615385,
+        "n_neurons": 15,
+        "n_trials": 130
+      }
+    ],
+    "ZI": [
+      {
+        "full_accuracy": 0.5180035650623885,
+        "restricted_accuracy": 0.5420677361853833,
+        "recovery_fraction": 1.0464556090846526,
+        "restoration_flip_rate": 0.3313253012048193,
+        "n_neurons": 15,
+        "n_trials": 166
+      },
+      {
+        "full_accuracy": 0.4145161290322581,
+        "restricted_accuracy": 0.5411290322580645,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.20125786163522014,
+        "n_neurons": 55,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.5340909090909091,
+        "restricted_accuracy": 0.628030303030303,
+        "recovery_fraction": 1.175886524822695,
+        "restoration_flip_rate": 0.031055900621118012,
+        "n_neurons": 175,
+        "n_trials": 161
+      },
+      {
+        "full_accuracy": 0.5481481481481482,
+        "restricted_accuracy": 0.6074074074074074,
+        "recovery_fraction": 1.1081081081081081,
+        "restoration_flip_rate": 0.07407407407407407,
+        "n_neurons": 44,
+        "n_trials": 135
+      }
+    ],
+    "RSP": [
+      {
+        "full_accuracy": 0.535483870967742,
+        "restricted_accuracy": 0.5488172043010752,
+        "recovery_fraction": 1.024899598393574,
+        "restoration_flip_rate": 0.1437908496732026,
+        "n_neurons": 85,
+        "n_trials": 153
+      },
+      {
+        "full_accuracy": 0.5447089947089946,
+        "restricted_accuracy": 0.6978835978835979,
+        "recovery_fraction": 1.2812044681884414,
+        "restoration_flip_rate": 0.2867647058823529,
+        "n_neurons": 82,
+        "n_trials": 136
+      },
+      {
+        "full_accuracy": 0.5406666666666667,
+        "restricted_accuracy": 0.5966666666666668,
+        "recovery_fraction": 1.1035758323057954,
+        "restoration_flip_rate": 0.08064516129032258,
+        "n_neurons": 181,
+        "n_trials": 124
+      },
+      {
+        "full_accuracy": 0.5167816091954023,
+        "restricted_accuracy": 0.584367816091954,
+        "recovery_fraction": 1.1307829181494662,
+        "restoration_flip_rate": 0.2550335570469799,
+        "n_neurons": 57,
+        "n_trials": 149
+      },
+      {
+        "full_accuracy": 0.5878787878787879,
+        "restricted_accuracy": 0.7281385281385282,
+        "recovery_fraction": 1.2385861561119293,
+        "restoration_flip_rate": 0.009345794392523364,
+        "n_neurons": 135,
+        "n_trials": 107
+      },
+      {
+        "full_accuracy": 0.6294372294372294,
+        "restricted_accuracy": 0.7588744588744589,
+        "recovery_fraction": 1.205639614855571,
+        "restoration_flip_rate": 0.018518518518518517,
+        "n_neurons": 60,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.5510668563300143,
+        "restricted_accuracy": 0.5081081081081081,
+        "recovery_fraction": 0.9220443985544656,
+        "restoration_flip_rate": 0.1111111111111111,
+        "n_neurons": 79,
+        "n_trials": 187
+      },
+      {
+        "full_accuracy": 0.4675403225806452,
+        "restricted_accuracy": 0.5320564516129032,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.1987179487179487,
+        "n_neurons": 72,
+        "n_trials": 156
+      },
+      {
+        "full_accuracy": 0.5307692307692308,
+        "restricted_accuracy": 0.5846153846153845,
+        "recovery_fraction": 1.1014492753623186,
+        "restoration_flip_rate": 0.4076923076923077,
+        "n_neurons": 16,
+        "n_trials": 130
+      }
+    ],
+    "BLA": [
+      {
+        "full_accuracy": 0.4649193548387097,
+        "restricted_accuracy": 0.6098790322580645,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.11949685534591195,
+        "n_neurons": 132,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.5379310344827586,
+        "restricted_accuracy": 0.5310344827586206,
+        "recovery_fraction": 0.9871794871794871,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 185,
+        "n_trials": 145
+      }
+    ],
+    "VPM": [
+      {
+        "full_accuracy": 0.4965725806451613,
+        "restricted_accuracy": 0.5590725806451613,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 162,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.5475806451612903,
+        "restricted_accuracy": 0.6046370967741936,
+        "recovery_fraction": 1.10419734904271,
+        "restoration_flip_rate": 0.27672955974842767,
+        "n_neurons": 60,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.5541125541125541,
+        "restricted_accuracy": 0.7406926406926407,
+        "recovery_fraction": 1.3367187500000002,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 100,
+        "n_trials": 108
+      },
+      {
+        "full_accuracy": 0.5037037037037038,
+        "restricted_accuracy": 0.6296296296296295,
+        "recovery_fraction": 1.2499999999999998,
+        "restoration_flip_rate": 0.21481481481481482,
+        "n_neurons": 31,
+        "n_trials": 135
+      }
+    ],
+    "SSs": [
+      {
+        "full_accuracy": 0.4278074866310161,
+        "restricted_accuracy": 0.5661319073083779,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.12650602409638553,
+        "n_neurons": 120,
+        "n_trials": 166
+      }
+    ],
+    "MEA": [
+      {
+        "full_accuracy": 0.5479838709677419,
+        "restricted_accuracy": 0.6419354838709678,
+        "recovery_fraction": 1.171449595290655,
+        "restoration_flip_rate": 0.2830188679245283,
+        "n_neurons": 41,
+        "n_trials": 159
+      }
+    ],
+    "RT": [
+      {
+        "full_accuracy": 0.5286290322580645,
+        "restricted_accuracy": 0.7044354838709678,
+        "recovery_fraction": 1.33257055682685,
+        "restoration_flip_rate": 0.48427672955974843,
+        "n_neurons": 44,
+        "n_trials": 159
+      },
+      {
+        "full_accuracy": 0.5268847795163585,
+        "restricted_accuracy": 0.7147937411095306,
+        "recovery_fraction": 1.3566414686825055,
+        "restoration_flip_rate": 0.08108108108108109,
+        "n_neurons": 129,
+        "n_trials": 186
+      }
+    ],
+    "ACB": [
+      {
+        "full_accuracy": 0.4962121212121212,
+        "restricted_accuracy": 0.5899621212121212,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.11180124223602485,
+        "n_neurons": 155,
+        "n_trials": 161
+      },
+      {
+        "full_accuracy": 0.43359788359788354,
+        "restricted_accuracy": 0.5806878306878307,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.18382352941176472,
+        "n_neurons": 92,
+        "n_trials": 136
+      },
+      {
+        "full_accuracy": 0.5,
+        "restricted_accuracy": 0.6333333333333333,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.06666666666666667,
+        "n_neurons": 90,
+        "n_trials": 150
+      }
+    ],
+    "OT": [
+      {
+        "full_accuracy": 0.5278409090909091,
+        "restricted_accuracy": 0.5214015151515151,
+        "recovery_fraction": 0.9878005023322568,
+        "restoration_flip_rate": 0.37267080745341613,
+        "n_neurons": 26,
+        "n_trials": 161
+      }
+    ],
+    "SI": [
+      {
+        "full_accuracy": 0.42897727272727276,
+        "restricted_accuracy": 0.571590909090909,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.18633540372670807,
+        "n_neurons": 48,
+        "n_trials": 161
+      }
+    ],
+    "SNr": [
+      {
+        "full_accuracy": 0.4727272727272728,
+        "restricted_accuracy": 0.621969696969697,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.08695652173913043,
+        "n_neurons": 129,
+        "n_trials": 161
+      },
+      {
+        "full_accuracy": 0.4954545454545454,
+        "restricted_accuracy": 0.625,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.15950920245398773,
+        "n_neurons": 117,
+        "n_trials": 163
+      },
+      {
+        "full_accuracy": 0.5925925925925926,
+        "restricted_accuracy": 0.6074074074074074,
+        "recovery_fraction": 1.0250000000000001,
+        "restoration_flip_rate": 0.13333333333333333,
+        "n_neurons": 15,
+        "n_trials": 135
+      },
+      {
+        "full_accuracy": 0.5448275862068965,
+        "restricted_accuracy": 0.5862068965517241,
+        "recovery_fraction": 1.0759493670886076,
+        "restoration_flip_rate": 0.16551724137931034,
+        "n_neurons": 45,
+        "n_trials": 145
+      }
+    ],
+    "APN": [
+      {
+        "full_accuracy": 0.5633613445378152,
+        "restricted_accuracy": 0.6727731092436975,
+        "recovery_fraction": 1.1942124105011933,
+        "restoration_flip_rate": 0.034482758620689655,
+        "n_neurons": 185,
+        "n_trials": 174
+      },
+      {
+        "full_accuracy": 0.5233766233766234,
+        "restricted_accuracy": 0.7285714285714286,
+        "recovery_fraction": 1.392059553349876,
+        "restoration_flip_rate": 0.14018691588785046,
+        "n_neurons": 62,
+        "n_trials": 107
+      }
+    ],
+    "VAL": [
+      {
+        "full_accuracy": 0.5333333333333334,
+        "restricted_accuracy": 0.5666666666666667,
+        "recovery_fraction": 1.0624999999999998,
+        "restoration_flip_rate": 0.05555555555555555,
+        "n_neurons": 83,
+        "n_trials": 90
+      }
+    ],
+    "IC": [
+      {
+        "full_accuracy": 0.5801587301587301,
+        "restricted_accuracy": 0.6992063492063492,
+        "recovery_fraction": 1.2051983584131327,
+        "restoration_flip_rate": 0.3235294117647059,
+        "n_neurons": 58,
+        "n_trials": 136
+      }
+    ],
+    "CA2": [
+      {
+        "full_accuracy": 0.5176666666666667,
+        "restricted_accuracy": 0.6133333333333334,
+        "recovery_fraction": 1.1848036059240181,
+        "restoration_flip_rate": 0.056451612903225805,
+        "n_neurons": 115,
+        "n_trials": 124
+      }
+    ],
+    "SCig": [
+      {
+        "full_accuracy": 0.6143333333333334,
+        "restricted_accuracy": 0.6933333333333332,
+        "recovery_fraction": 1.1285946825827453,
+        "restoration_flip_rate": 0.1935483870967742,
+        "n_neurons": 366,
+        "n_trials": 124
+      },
+      {
+        "full_accuracy": 0.5236781609195402,
+        "restricted_accuracy": 0.6250574712643677,
+        "recovery_fraction": 1.1935908691834942,
+        "restoration_flip_rate": 0.10738255033557047,
+        "n_neurons": 186,
+        "n_trials": 149
+      },
+      {
+        "full_accuracy": 0.5316923076923077,
+        "restricted_accuracy": 0.6353846153846154,
+        "recovery_fraction": 1.1950231481481484,
+        "restoration_flip_rate": 0.06349206349206349,
+        "n_neurons": 190,
+        "n_trials": 126
+      },
+      {
+        "full_accuracy": 0.551948051948052,
+        "restricted_accuracy": 0.7658008658008658,
+        "recovery_fraction": 1.3874509803921569,
+        "restoration_flip_rate": 0.04672897196261682,
+        "n_neurons": 65,
+        "n_trials": 107
+      }
+    ],
+    "DP": [
+      {
+        "full_accuracy": 0.48275862068965514,
+        "restricted_accuracy": 0.5634482758620689,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.2348993288590604,
+        "n_neurons": 39,
+        "n_trials": 149
+      }
+    ],
+    "CL": [
+      {
+        "full_accuracy": 0.6670995670995671,
+        "restricted_accuracy": 0.7593073593073593,
+        "recovery_fraction": 1.1382219338092148,
+        "restoration_flip_rate": 0.07407407407407407,
+        "n_neurons": 32,
+        "n_trials": 108
+      }
+    ],
+    "PAG": [
+      {
+        "full_accuracy": 0.5187766714082503,
+        "restricted_accuracy": 0.561877667140825,
+        "recovery_fraction": 1.0830819851933096,
+        "restoration_flip_rate": 0.3055555555555556,
+        "n_neurons": 41,
+        "n_trials": 187
+      },
+      {
+        "full_accuracy": 0.5384615384615385,
+        "restricted_accuracy": 0.6461538461538462,
+        "recovery_fraction": 1.2,
+        "restoration_flip_rate": 0.16923076923076924,
+        "n_neurons": 85,
+        "n_trials": 130
+      }
+    ],
+    "EP": [
+      {
+        "full_accuracy": 0.5037037037037037,
+        "restricted_accuracy": 0.6370370370370371,
+        "recovery_fraction": 1.2647058823529413,
+        "restoration_flip_rate": 0.1111111111111111,
+        "n_neurons": 91,
+        "n_trials": 135
+      }
+    ],
+    "BMA": [
+      {
+        "full_accuracy": 0.5694167852062588,
+        "restricted_accuracy": 0.7098150782361309,
+        "recovery_fraction": 1.2465650761928555,
+        "restoration_flip_rate": 0.0918918918918919,
+        "n_neurons": 104,
+        "n_trials": 186
+      }
+    ],
+    "COA": [
+      {
+        "full_accuracy": 0.5485064011379801,
+        "restricted_accuracy": 0.7096728307254624,
+        "recovery_fraction": 1.2938278008298756,
+        "restoration_flip_rate": 0.010810810810810811,
+        "n_neurons": 316,
+        "n_trials": 186
+      }
+    ],
+    "CA": [
+      {
+        "full_accuracy": 0.4514285714285714,
+        "restricted_accuracy": 0.5428571428571429,
+        "recovery_fraction": null,
+        "restoration_flip_rate": 0.0,
+        "n_neurons": 193,
+        "n_trials": 175
+      }
+    ]
+  }
+}

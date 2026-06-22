@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T14:49:24.563397", "experiment": "exp44", "event": "started", "module": "experiments.exp44_iia_causal_direction", "max_sessions": null}
+{"ts": "2026-06-21T15:24:46.422197", "experiment": "exp44", "event": "run_complete", "n_keys": 13}
+{"ts": "2026-06-21T15:24:54.351141", "experiment": "exp44", "event": "saved_volume", "path": "/results/exp44/exp44_20260621_152450.json"}
+{"ts": "2026-06-21T15:24:58.906066", "experiment": "exp44", "event": "copied_artifacts"}
+{"ts": "2026-06-21T15:25:03.369981", "experiment": "exp44", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T15:25:08.218593", "experiment": "exp44", "event": "done"}

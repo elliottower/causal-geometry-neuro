@@ -1,0 +1,67 @@
+## Perplexity Deep Dive: Dose-Response Novelty Claim (June 2026)
+
+### Search 1: Is graded dose-response on subspace dimensions novel?
+
+**Answer: "Among the first" — not "the first"**
+
+**Closest paper:** Neural dynamics outside task-coding dimensions drive decision trajectories
+(Pereira-Obilinovic, Daie, Chen, Svoboda, Darshan, bioRxiv Nov 2025)
+https://www.biorxiv.org/content/10.1101/2025.11.20.689599v1
+
+- Records from ALM + motor thalamus in mice, delayed-response task
+- Perturbs individual subspace dimensions (choice axis vs residual)
+- Causal measure: model-based perturbation of fitted RNN, validated with two-photon optogenetics
+- Finding: residual dimensions flip choices, choice axis does NOT
+- This is dimension-level causal perturbation — but categorical (coding vs residual), not graded
+
+**Multiplexed Subspaces** (Princeton, through 2025): relates neural responses to individual
+subspace dimensions, but causal measure is functional connectivity, not formal intervention.
+
+**Our specific combination is defensibly novel:**
+1. Dose-response framing — progressive, graded dimension removal (1, then 2, then 3...)
+   producing a monotonic curve. The ALM paper does categorical contrast, not graded sweep.
+2. IIA/DAS (interchange interventions from Geiger et al.) rather than model-based or
+   optogenetic perturbation. IIA lives in ML interpretability, not neuro.
+
+### Search 2: Deeper dive on the actual papers
+
+**Pereira-Obilinovic et al. 2025 (Svoboda/Darshan):**
+- Heavyweight paper (Svoboda is major figure)
+- Causal claim measured IN the RNN model, validated against two-photon optogenetics
+- They ask "which subspace is causal?" — we ask "how does causal effect SCALE as you
+  progressively remove dimensions?"
+- ANY reviewer in this subfield will know this paper — MUST cite and position against it
+
+**ML-side threat — A Low-Rank Subspace Analysis of LLM Interventions (2026):**
+https://arxiv.org/html/2606.14388v1
+- Literally varies category subspace rank r ∈ {1,2,3} and measures effects
+- That IS a dose-response sweep over subspace dimensions with causal intervention
+- Exactly our method, just in LLMs not brains
+
+**A Geometric Notion of Causal Probing:** interventions splitting concept subspace from
+orthogonal complement. IIA/interchange-intervention-on-subspaces well established in DAS/pyvene.
+
+### What we CAN and CANNOT say:
+
+CANNOT: "first to apply dose-response to subspace dimensions" (falsified by LLM rank paper)
+CANNOT: "first to causally perturb individual subspace dimensions in neural data" (falsified by Pereira-Obilinovic)
+
+CAN say: "Causal perturbation of neural subspace dimensions has recently been demonstrated
+in motor cortex, contrasting coding versus residual subspaces [Pereira-Obilinovic et al. 2025].
+Graded, dimension-by-dimension dose-response analysis using interchange interventions (DAS/IIA)
+— rather than model-based or optogenetic perturbation — has been explored in language-model
+interpretability but not, to our knowledge, applied to biological population recordings.
+We bring these two threads together."
+
+### Strategic warning:
+Svoboda/Darshan finding (choice axis is causally INERT, residual dimensions drive behavior)
+could be a confound for our interpretation. Our ~10% IIA flip rate might be modest BECAUSE
+we're intervening on the coding subspace. Should run progressive ablation on BOTH coding
+and residual subspaces and compare — either replicates their finding (citation magnet) or
+shows cross-dataset disagreement (also interesting).
+
+### Key references to add:
+1. Pereira-Obilinovic et al. 2025 (bioRxiv 2025.11.20.689599)
+2. A Low-Rank Subspace Analysis of LLM Interventions, 2026 (arXiv 2606.14388)
+3. A Geometric Notion of Causal Probing (arXiv 2307.15054)
+4. Structured Disentangled Representations (arXiv 1804.02086) — Sid connection

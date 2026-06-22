@@ -1,0 +1,131 @@
+Now I have a thorough picture of your full context — your MechVal and MechViews papers, the neuroscience project state, and what's in the literature. Let me synthesize the real landscape of where you can do novel work.
+
+***
+
+## What's Actually Underdone in Neuro That You Can Do
+
+Let me separate this by domain and be honest about what's genuinely novel vs. what sounds novel but isn't.
+
+***
+
+## The Real Gap: MI Tools Haven't Touched Real Neural Data
+
+The whole MI toolkit — DAS/causal scrubbing, SAEs, attribution patching, your own MechVal validity framework — was built for transformers and basically nobody has tried to port it to real neural recordings in a principled way. Not EEG, not fMRI, not spike trains. There's a small Harvard/Kempner group doing convolutional SAEs on neural responses to images, but their framing is totally different — they're fitting SAEs to *model activations* and then correlating with brain signals, not doing mechanistic interpretability *on the brain itself*. That's the SAE-BrainMap approach. What you're doing is fundamentally different and hasn't been done: asking **"what is the mechanistic-level equivalence class of this neural computation across animals?"** using the Grassmannian as the identity criterion.[1][2][3]
+
+The key insight from your own MechViews paper  is that the field is stuck in the object-view (which neurons/heads fire) and role-view (what function they serve), and almost nobody has tried to apply the structural-view (equivalence class under gauge orbits) or subspace-view (Grassmannian identity) to real brain data. That's the gap. The transformer versions of these ideas exist because you have exact weights. Neuroscience has zero exact-weight access, so everyone defaulted to coarser measures.[4]
+
+***
+
+## The Five Domains Where You Have Real Novelty
+
+### 1. MICrONS: Structure-Function Subspace Matching
+
+This is the most exciting underexplored dataset. Released April 2025 in *Nature*, it has 75,000 neurons with calcium imaging **and** co-registered electron microscopy showing exactly which neurons are synaptically connected. This means for the first time in mammalian cortex you have the actual connectivity matrix **W** — not estimated from cross-correlations, but measured directly from EM.[5][6]
+
+This destroys your exp7 artifact problem entirely. The restriction maps in the sheaf are no longer noisy cross-correlations from 250 trials — they're actual synaptic weights from EM reconstruction. The sheaf experiment becomes well-posed: you have the true W_{ij} for the ~12,000 co-registered neurons that appear in both the functional and EM data. You can compute restriction maps that are structurally grounded.[7][8]
+
+What nobody has done: apply the Grassmannian subspace framework with **connectivity-constrained restriction maps** from the EM data to test whether stimulus-encoding subspaces in V1 vs. higher visual areas (VISrl, VISal, VISlm) are sheaf-coherent. The "like-to-like" connectivity principle (neurons with similar feature selectivity preferentially connect)  is precisely the claim that the sheaf would be approximately trivial — the restriction maps preserve subspace structure. That's a testable prediction from your framework that has never been tested with actual synaptic connectivity data.[9]
+
+### 2. Sparse Autoencoders on Spike Trains: Direct Superposition Test
+
+SAEs have never been seriously applied to spike trains as the primary data modality. The Kempner paper does convolutional SAEs on neural responses but they're working with rate-coded trial-averaged responses in the visual system, not raw spike data. The question nobody has asked: **do neural populations encode variables in superposition the way transformers do?**[10][11][1]
+
+In transformers, superposition means one neuron's activation represents multiple unrelated features (that's why SAEs work — they find the sparse code underlying mixed neuron activations). In a neural population with 30 neurons encoding both choice and arousal and position, you have the same structural problem: the neurons are "mixed selective." An SAE on the population activity matrix should recover monosemantic "virtual neurons" that correspond to single task variables. The novelty is asking whether the SAE latents match what LDA/DAS finds as the causal subspace for a specific task variable — that's a direct mechanistic validity check (your MechVal framework ). If the SAE feature direction doesn't causally influence choice when you intervene along it (in optogenetics data), the SAE is not finding mechanisms, just correlations. That's the probing-without-intervention gap your MechVal paper explicitly describes.[12]
+
+### 3. Connectome-Constrained Causal Discovery: FlyWire / C. elegans
+
+The FlyWire complete fly brain connectome (140K neurons, 50M synapses) and the C. elegans connectome (with optogenetic perturbation data matching causal interactions) are the only settings where you can do **exact** causal inference on neural circuits. The C. elegans paper just published (2025) shows a dynamical model constrained by the connectome captured causal interactions 92% as well as the perturbation data reproducibility — meaning the connectome essentially determines the causal structure.[13][14][15]
+
+What your framework adds: the MechVal six-layer validity framework  has never been applied to connectome-level claims. Current connectome papers make mechanistic claims (e.g., "the head-direction circuit implements a ring attractor") but don't have a formal validity framework for when those claims are sufficiently evidenced. Applying MechVal's criteria (necessity, sufficiency, specificity, convergent validity from different evidence families) to connectome-derived circuit claims is genuinely novel — it turns "we found a motif that looks like a ring attractor" into "here is what evidence would make this claim Causally Suggestive vs. Mechanistically Supported vs. Triangulated." The NeurIPS 2025 C. elegans paper is exactly the kind of claim MechVal was built to evaluate.[16][12]
+
+### 4. Latent Causal Discovery on Neural Population Data
+
+The causal discovery literature has exploded with methods for latent variable causal graphs — RLCD, score-based latent causal discovery, nonlinear hierarchical latent causal models. These are designed for exactly the neural data problem: you observe neurons but the causal variables are latent (choice, arousal, attention), and you want to recover the causal graph over latent variables without assuming you know what they are.[17][18][19]
+
+Nobody has applied these methods to IBL or Steinmetz data with the framing "recover the latent causal DAG over task variables from population spike trains." Current neuroscience uses GLMs, decoding, and manifold methods — none of which give you a causal graph. The RLCD paper  does real-world personality data as a proof-of-concept. Spike trains from a decision task are a much better-motivated application. The connection to your work: the Grassmannian subspace you recover for a specific task variable should correspond to a latent node in the causal graph, and the transport maps between regions should correspond to edges. This is the formal bridge between your geometric framework and the latent causal discovery literature that nobody has drawn explicitly.[17]
+
+### 5. Your MechVal Framework Directly Applied to Neural Circuit Claims
+
+This one is maybe the most straightforward path. Your MechVal paper  evaluates 13 transformer circuit claims. The analogous thing in neuroscience is a literature of published circuit claims — perceptual decision circuits in FEF/LIP/SC, head direction in RSC/ADN, working memory in PFC, place cells in hippocampus — each of which has a specific mechanistic claim with a specific evidence base.[12]
+
+Applying MechVal's six layers to published neuroscience circuit claims would be a genuine meta-scientific contribution. The "probing classifier → proposed" analogy in neuroscience is the linear decoding claim (e.g., "MOs encodes choice at 0.82 accuracy" — that's Type 0 scalar, not even a mechanistic claim under MechViews). The "IOI circuit → mechanistically supported" analogy is something like the perceptual decision accumulator in LIP. The key question MechVal asks — "what is the sufficiency gap?" — maps directly: most neural circuit papers show necessity (lesion/inactivation breaks the behavior) but don't show sufficiency (stimulating the circuit produces the behavior). That asymmetry is exactly the I1→I2 barrier your MechVal paper identifies.[12]
+
+***
+
+## The Parcellation Angle You Mentioned
+
+You mentioned parcellation — this is worth one paragraph because it's underrated. The traditional brain parcellation problem (divide the cortex into functional regions) is done with fMRI correlation structures or anatomical atlases. NMF-based parcellation has been shown to work but is basically not connected to the functional/mechanistic literature. The connection to your work: if you define brain regions *by their causal subspaces* rather than by anatomical boundaries or correlation structure, you get a mechanistically grounded parcellation. Two patches of cortex that share the same stimulus-encoding Grassmannian subspace belong to the same "causal parcel" even if they're anatomically distant. That's a new definition of brain region that your framework makes precise and computable. The IBL dataset — 279 brain areas, 139 mice — is the right scale to test whether Grassmannian-based parcels agree with or diverge from anatomical parcels.[20][21]
+
+***
+
+## The Honest Priority Ranking
+
+| Opportunity | Novelty | Feasibility now | Dataset |
+|---|---|---|---|
+| MICrONS subspace + EM connectivity | Very high | Medium (CAVE API learning curve) | MICrONS |
+| SAE on spike trains + MechVal validity check | High | High (you know SAE code) | IBL, Steinmetz |
+| Latent causal discovery → Grassmannian bridge | Very high | Medium (needs causal discovery lib integration) | IBL |
+| MechVal applied to neural circuit literature | High | High (pure theory/meta-science) | Published papers |
+| Grassmannian parcellation | Medium-high | High (extends current exps 1-4) | IBL |
+| FlyWire/C. elegans MechVal evaluation | High | Low (new domain) | FlyWire |
+
+The single highest-leverage move that doesn't require new infrastructure: **SAEs on IBL/Steinmetz spike data + MechVal validity check.** You already have the spike train pipeline from exps 1-9, you know SAE code from your MI work, and your MechVal paper is the theoretical framing. The paper writes itself as: "We apply sparse autoencoders to neural population data and show that the SAE features fail MechVal's interventional criteria — they are representational, not causal — motivating the Grassmannian subspace approach which does satisfy those criteria." That's a clean methodological argument that unifies your two existing papers with a new empirical domain.
+
+Sources
+[1] Mechanistic Interpretability: A Challenge Common to Both Artificial ... http://kempnerinstitute.harvard.edu/research/deeper-learning/mechanistic-interpretability-a-challenge/
+[2] Published in Transactions on Machine Learning Research (08/2024) https://openreview.net/pdf?id=ePUVetPKu6
+[3] Sparse Autoencoders Bridge The Deep Learning Model and The Brain https://arxiv.org/abs/2506.11123
+[4] mechviews_v4.pdf https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/52682738/7afed5de-8e9e-4a29-9911-16e0b9d81c8b/mechviews_v4.pdf?AWSAccessKeyId=ASIA2F3EMEYEWBS5EXDN&Signature=F0Md22sG8FmXU3VK0rzGzMn%2BAxk%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEBwaCXVzLWVhc3QtMSJHMEUCIFUwtyxwu7uwg0cEfG6tb48Azrx374PwkR6Z3lAJjIwgAiEA8RPFEZdo2Zs9oqTcH13CQEX7OCL%2B8cQUmw8UmRsYsaAq%2FAQI5f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDKszMaRGzrfw3bxH9SrQBEJ029jWydU0oeOOFj0LZwS0aHSH6yJvZvq%2BvnObW38rFZSkOs1u9HvkVl2R%2FdzA%2Bl%2FVydc6tAvMrAUpppTjQW0M3fUyz5tXSLFC02s6xUDIkZO41Lz9d4UfunxLzgHaI09XhThQOmDUbJ7Db8xySyF8xrl5fBNpwSXWPMv%2FzhmIlBe%2Buj4H41usYOtJeBuHP4BsTbSdWQGFfohD%2Bv%2Bvlqcf%2FN8jROS2LGz9%2FYSljvRP%2BD%2BI9gDU9ETfi5laL31ivdUYZTo2G%2B%2FfAdu89BDJpF5D%2B74ZbB6SAygWc03HUym2MSeXv8I%2BFPlQYmxi9raVn036cBvw5f%2FW9xVpQ52YVo0R381ZCgZT4mr25sFo8XgAmykWVhjgb0XbZ0GomR%2FiflzQvutQ8z5ENr6vU1OmtSMbEqE9%2BCI99DjnjhF%2FIxyvkk8pFAl2mE%2F%2Fu%2BHxpebaqKkSF7UiWLgKcy1XOeNZBn%2Bia5pzDZLksmJVZe4lOb%2BlE3qOHtgEaBlDeFNsflJSq7M%2FSAizwY0i0i9%2B2tnTtFYbs0NkOL5H23DFO1F92YUenzWLp222mSKK093VRRzdRd3FgN34waVDfmt3HS%2FnrHuemXTKd1%2B5bwzFlyh48RIUAFnLOnQdpeZpXiMMIrtMQHUe%2B%2F77vxpBsxc0BsS3B5LfJgmGvUE5um8sTPra8ETQZMzfPM%2BsacxqGTY9do7zlLBpvMK5CdpdOWT9AP9DQIweov3KpPvj3QvUKVNG24bYJ00MZK6Q759stncq7YBFSnGZbfvXXyFsWaxxbJS6zYww97vd0QY6mAFQIX1JF%2BVswzJ6ysjwc8XqTqPVGIuXW2jeJxCW3EWxVtabX2m10f%2F%2BSmXPjrP2EBVgQHiFBdLyDghhRpTssSr%2FmT18Atw0yvDFnh3gulUumXoitqCGOCRz3avJs2VM0kbpIwLc7V3ylEPP1Rm5O%2FJE5O7hTu8zgMcrQHlhMcqG%2F%2BF%2BDYu5QnpkJ63iK58JkNtOLNXaHbKR9w%3D%3D&Expires=1782016970
+[5] Functional connectomics spanning multiple areas of mouse visual ... https://pubmed.ncbi.nlm.nih.gov/40205214/
+[6] Mapping the Visual Cortex to Inspire Next-Gen AI Models https://www.azorobotics.com/News.aspx?newsID=15905
+[7] AllenInstitute/MICrONS_workshop_neuroai2024 - GitHub https://github.com/AllenInstitute/MICrONS_workshop_neuroai2024
+[8] Functional connectomics spanning multiple areas of mouse visual ... https://collaborate.princeton.edu/en/publications/functional-connectomics-spanning-multiple-areas-of-mouse-visual-c/
+[9] 75K neurons in visual cortex in a single mouse, then ... https://x.com/AToliasLab/status/1910485299718668654
+[10] A Survey on Sparse Autoencoders: Interpreting the Internal ... - arXiv https://arxiv.org/html/2503.05613v3
+[11] ICML Poster Sparse Autoencoders, Again? https://icml.cc/virtual/2025/poster/43600
+[12] main.tex https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/52682738/35a19803-d516-4bd8-9e10-7aaf4764f962/main.tex?AWSAccessKeyId=ASIA2F3EMEYEWBS5EXDN&Signature=hYF4YFYbJ2G6BlHlDngTu%2BWjr70%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEBwaCXVzLWVhc3QtMSJHMEUCIFUwtyxwu7uwg0cEfG6tb48Azrx374PwkR6Z3lAJjIwgAiEA8RPFEZdo2Zs9oqTcH13CQEX7OCL%2B8cQUmw8UmRsYsaAq%2FAQI5f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDKszMaRGzrfw3bxH9SrQBEJ029jWydU0oeOOFj0LZwS0aHSH6yJvZvq%2BvnObW38rFZSkOs1u9HvkVl2R%2FdzA%2Bl%2FVydc6tAvMrAUpppTjQW0M3fUyz5tXSLFC02s6xUDIkZO41Lz9d4UfunxLzgHaI09XhThQOmDUbJ7Db8xySyF8xrl5fBNpwSXWPMv%2FzhmIlBe%2Buj4H41usYOtJeBuHP4BsTbSdWQGFfohD%2Bv%2Bvlqcf%2FN8jROS2LGz9%2FYSljvRP%2BD%2BI9gDU9ETfi5laL31ivdUYZTo2G%2B%2FfAdu89BDJpF5D%2B74ZbB6SAygWc03HUym2MSeXv8I%2BFPlQYmxi9raVn036cBvw5f%2FW9xVpQ52YVo0R381ZCgZT4mr25sFo8XgAmykWVhjgb0XbZ0GomR%2FiflzQvutQ8z5ENr6vU1OmtSMbEqE9%2BCI99DjnjhF%2FIxyvkk8pFAl2mE%2F%2Fu%2BHxpebaqKkSF7UiWLgKcy1XOeNZBn%2Bia5pzDZLksmJVZe4lOb%2BlE3qOHtgEaBlDeFNsflJSq7M%2FSAizwY0i0i9%2B2tnTtFYbs0NkOL5H23DFO1F92YUenzWLp222mSKK093VRRzdRd3FgN34waVDfmt3HS%2FnrHuemXTKd1%2B5bwzFlyh48RIUAFnLOnQdpeZpXiMMIrtMQHUe%2B%2F77vxpBsxc0BsS3B5LfJgmGvUE5um8sTPra8ETQZMzfPM%2BsacxqGTY9do7zlLBpvMK5CdpdOWT9AP9DQIweov3KpPvj3QvUKVNG24bYJ00MZK6Q759stncq7YBFSnGZbfvXXyFsWaxxbJS6zYww97vd0QY6mAFQIX1JF%2BVswzJ6ysjwc8XqTqPVGIuXW2jeJxCW3EWxVtabX2m10f%2F%2BSmXPjrP2EBVgQHiFBdLyDghhRpTssSr%2FmT18Atw0yvDFnh3gulUumXoitqCGOCRz3avJs2VM0kbpIwLc7V3ylEPP1Rm5O%2FJE5O7hTu8zgMcrQHlhMcqG%2F%2BF%2BDYu5QnpkJ63iK58JkNtOLNXaHbKR9w%3D%3D&Expires=1782016970
+[13] The FlyWire connectome: neuronal wiring diagram of a complete fly brain Artificial intelligence and human expertise meet to generate a map of all the connections in the fly brain. The resource is already being used by experimentalists and theoreticians to further our understanding of neural circuits in the fly and beyond. 2 October 2024 Image credit: Perception Image credit: Perception https://www.nature.com/immersive/d42859-024-00053-4/index.html
+[14] The fly connectome reveals a path to the effectome https://www.nature.com/articles/s41586-024-07982-0
+[15] Bridging the gap between the connectome and whole-brain ... https://pubmed.ncbi.nlm.nih.gov/41040343/
+[16] Obtaining Function from Structure in a Connectome Constrained ... https://neurips.cc/virtual/2025/loc/san-diego/poster/115017
+[17] Score-Based Causal Discovery of Latent Variable Causal ... https://proceedings.mlr.press/v235/ng24a.html
+[18] Highly Reproducible Whole Brain Parcellation in Individuals ... https://pmc.ncbi.nlm.nih.gov/articles/PMC9531918/
+[19] [PDF] Application of Non-Negative Matrix factorization for brain ... - ORBi https://orbi.uliege.be/bitstream/2268/333707/1/NMF_Benelux_meeting_2025.pdf
+[20] [PDF] Tracking Equivalent Mechanistic Interpretations Across Neural ... https://arxiv.org/pdf/2603.30002.pdf
+[21] Foundation Models for Neural Signal Decoding: EEG ... https://pubmed.ncbi.nlm.nih.gov/41459740/?fc=None&ff=20260104034749&v=2.18.0.post22+67771e2
+[22] Sequential sparse autoencoder for dynamic heading representation in ventral intraparietal area - PubMed https://pubmed.ncbi.nlm.nih.gov/37329620/
+[23] Scaling EEG foundation models on VSC: an ICLR 2026 benchmark ... https://www.vscentrum.be/post/scaling-eeg-foundation-models-on-vsc-an-iclr-2026-benchmark-and-a-neurips-2025-eeg-challenge-win
+[24] Towards Neural Foundation Models for Vision: Aligning EEG, MEG, and fMRI Representations for Decoding, Encoding, and Modality Conversion https://arxiv.org/abs/2411.09723v1
+[25] [PDF] Identifying and Interpreting Features with Sparse Autoencoders https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_313.pdf
+[26] [PDF] Understanding Diverse Reasoning Procedures in Foundation ... https://2025.ccneuro.org/abstract_pdf/Hoveyda_2025_Understanding_Diverse_Reasoning_Procedures_Foundation_Models.pdf
+[27] Neural Encoding and Decoding at Scale https://arxiv.org/html/2504.08201v1
+[28] IS MECHANISTIC INTERPRETABILITY IDENTIFIABLE? https://proceedings.iclr.cc/paper_files/paper/2025/file/51157713f1f1f572a05647e1aef1b1ed-Paper-Conference.pdf
+[29] Foundation models for sensory and behavioral neuroscience - ARNI https://arni-institute.org/research-foundation-models-for-sensory-and-behavioral-neuroscience/
+[30] Sparse Autoencoders, Again? https://www.arxiv.org/pdf/2506.04859.pdf
+[31] https://public-pages-files-2025.frontiersin. ... https://public-pages-files-2025.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2023.1282828/xml
+[32] Allen Institute for Brain Science https://brain-map.org
+[33] Sparse Spike Encoding of Channel Responses for Energy Efficient ... https://www.arxiv.org/abs/2602.06766
+[34] Causal Inference with Latent Variables: Recent Advances and Future Prospectives https://dl.acm.org/doi/pdf/10.1145/3637528.3671450
+[35] Atlases - Allen Brain Map https://brain-map.org/atlases
+[36] Sparse Autoencoders https://arxiv.org/html/2503.01824v1
+[37] linear, nonlinear, and latent variables causal discovery https://proceedings.mlr.press/v275/montagna25a.html
+[38] Allen Brain Atlas: Data Portal: Tool/Resource Info - NITRC https://www.nitrc.org/projects/abaportal/
+[39] Allen Brain Atlas https://atlas.brain-map.org
+[40] Scaling and evaluating sparse autoencoders https://cdn.openai.com/papers/sparse-autoencoders.pdf
+[41] Connectivity - Allen Brain Map https://brain-map.org/our-research/connectivity
+[42] MICrONS Explorer https://www.microns-explorer.org
+[43] [PDF] Connectome-Constrained Unsupervised Learning Reveals ... https://2025.ccneuro.org/abstract_pdf/Toyoda_2025_Connectome-Constrained_Unsupervised_Learning_Reveals_Emergent_Visual.pdf
+[44] Causal Discovery in High-Dimensional Point Process Networks with ... https://pmc.ncbi.nlm.nih.gov/articles/PMC8700240/
+[45] [PDF] Latent Variable Models for Bayesian Causal Discovery - OpenReview https://openreview.net/references/pdf?id=r7ONOyRpeA
+[46] GitHub - murthylab/flywire-network-analysis: Analysis scripts for the network analyses of the Flywire connectome. Publication: "Network Statistics of the Whole-Brain Connectome of Drosophila" https://github.com/murthylab/flywire-network-analysis
+[47] Causal Discovery over High-Dimensional Structured Hypothesis ... https://neurips.cc/virtual/2025/133720
+[48] Publications https://www.microns-explorer.org/publications
+[49] Drosophila connectome - Wikipedia https://en.wikipedia.org/wiki/Drosophila_connectome
+[50] [PDF] Learning Latent Causal Structures with a Redundant Input Neural ... http://proceedings.mlr.press/v127/young20a/young20a.pdf
+[51] Functional connectomics spanning multiple areas of mouse visual ... https://xu.research.engineering.cornell.edu/project/functional-connectomics-spanning-multiple-areas-of-mouse-visual-cortex/
+[52] A network control theory pipeline for studying the dynamics of the structural connectome https://par.nsf.gov/biblio/10534656
+[53] Non-negative Matrix Factorization as a Tool for fMRI Analysis ... https://repositum.tuwien.at/bitstream/20.500.12708/16477/2/Fuerboeck%20Christoph%20-%202020%20-%20Non-negative%20matrix%20factorization%20as%20a%20tool%20for...pdf
+[54] The connected brain: Causality, models and intrinsic ... https://arxiv.org/pdf/1602.02945.pdf
+[55] Analyses of microstructural variation in the human striatum using non-negative matrix factorization https://pure.mpg.de/rest/items/item_3357234_2/component/file_3357235/content
+[56] From connectome to effectome: learning the causal interaction map of the fly brain | Semantic Scholar https://www.semanticscholar.org/paper/From-connectome-to-effectome:-learning-the-causal-Pospisil-Aragon/6509be8160dcb971d281c01d6da7f329cb646291
+[57] Decoding the Encoding of Functional Brain Networks: an fMRI https://arxiv.org/pdf/1607.00435v1.pdf
