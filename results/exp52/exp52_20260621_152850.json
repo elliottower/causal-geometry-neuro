@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-06-21T15:28:49.526554",
+  "mechval_criterion": "E1 Intervention Reach / Multi-Method",
+  "mechval_threshold": "cross-method rank correlation >= 0.7",
+  "n_matched_regions": 24,
+  "matched_regions": [
+    "ACA",
+    "CA1",
+    "CA3",
+    "DG",
+    "LGd",
+    "LS",
+    "LSr",
+    "MG",
+    "MOs",
+    "MRN",
+    "NB",
+    "OLF",
+    "ORB",
+    "POST",
+    "SPF",
+    "SUB",
+    "TH",
+    "VISa",
+    "VISam",
+    "VISl",
+    "VISp",
+    "VISpm",
+    "VPL",
+    "root"
+  ],
+  "mean_cross_method_rho": 0.7227175240814506,
+  "intervention_reach_pass": true,
+  "cross_method_correlations": {
+    "projection_swap_vs_noise_injection": {
+      "rho": 0.7269578522571615,
+      "p": 5.727337686513838e-05
+    },
+    "projection_swap_vs_mean_shift": {
+      "rho": 0.853589859948147,
+      "p": 1.1414636605634873e-07
+    },
+    "projection_swap_vs_subspace_zeroing": {
+      "rho": 0.6881693337614256,
+      "p": 0.00020158433027522951
+    },
+    "noise_injection_vs_mean_shift": {
+      "rho": 0.8789733225847646,
+      "p": 1.5902061003136512e-08
+    },
+    "noise_injection_vs_subspace_zeroing": {
+      "rho": 0.5843478260869565,
+      "p": 0.0027132076985506813
+    },
+    "mean_shift_vs_subspace_zeroing": {
+      "rho": 0.6042669498502493,
+      "p": 0.0017644920291386365
+    }
+  },
+  "per_method": {
+    "projection_swap": {
+      "n_regions": 24,
+      "mean_iia": 0.10355152568273686
+    },
+    "noise_injection": {
+      "n_regions": 24,
+      "mean_iia": 0.118170103957475
+    },
+    "mean_shift": {
+      "n_regions": 24,
+      "mean_iia": 0.09500706813898378
+    },
+    "subspace_zeroing": {
+      "n_regions": 24,
+      "mean_iia": 0.10216875942161996
+    }
+  }
+}

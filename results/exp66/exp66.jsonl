@@ -1,0 +1,6 @@
+{"ts": "2026-06-22T01:41:11.962960", "experiment": "exp66", "event": "started", "module": "experiments.exp66_per_mouse_silencing", "max_sessions": null}
+{"ts": "2026-06-22T01:41:21.061969", "experiment": "exp66", "event": "run_complete", "n_keys": 2}
+{"ts": "2026-06-22T01:41:23.565657", "experiment": "exp66", "event": "saved_volume", "path": "/results/exp66/exp66_20260622_014122.json"}
+{"ts": "2026-06-22T01:41:24.651764", "experiment": "exp66", "event": "copied_artifacts"}
+{"ts": "2026-06-22T01:41:26.514859", "experiment": "exp66", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T01:41:27.756779", "experiment": "exp66", "event": "done"}

@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-06-21T07:23:10.153965",
+  "config": {
+    "subspace_k": 4,
+    "min_neurons": 10,
+    "time_window": [
+      15,
+      35
+    ],
+    "min_sessions_per_region": 3
+  },
+  "n_total_triangles": 1,
+  "n_regions": 1,
+  "region_summaries": {
+    "root": {
+      "n_sessions": 26,
+      "n_triangles": 1,
+      "mean_holonomy": 2.1080038466401234,
+      "std_holonomy": 0.0,
+      "mean_grassmannian_distance": 2.441933577165424,
+      "std_grassmannian_distance": 0.0,
+      "k": 4
+    }
+  },
+  "prediction_tests": {},
+  "triangles": [
+    {
+      "region": "root",
+      "sessions": [
+        2,
+        24,
+        27
+      ],
+      "mice": [
+        "Cori",
+        "Radnitz"
+      ],
+      "within_mouse": false,
+      "holonomy": 2.1080038466401234,
+      "mean_grassmannian_distance": 2.441933577165424,
+      "distances": {
+        "ab": 2.2004577083025234,
+        "bc": 2.125617139224082,
+        "ca": 2.9997258839696674
+      },
+      "mean_alpha": 493.82593707103905,
+      "k": 4
+    }
+  ]
+}

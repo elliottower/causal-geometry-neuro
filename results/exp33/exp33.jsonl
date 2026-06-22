@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T07:02:59.749304", "experiment": "exp33", "event": "started", "module": "experiments.exp33_causal_abstraction_geometry", "max_sessions": null}
+{"ts": "2026-06-21T07:03:39.240999", "experiment": "exp33", "event": "run_complete", "n_keys": 8}
+{"ts": "2026-06-21T07:03:41.553976", "experiment": "exp33", "event": "saved_volume", "path": "/results/exp33/exp33_20260621_070340.json"}
+{"ts": "2026-06-21T07:03:43.607724", "experiment": "exp33", "event": "copied_artifacts"}
+{"ts": "2026-06-21T07:03:45.098632", "experiment": "exp33", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T07:03:46.157458", "experiment": "exp33", "event": "done"}

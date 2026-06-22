@@ -1,0 +1,6 @@
+{"ts": "2026-06-22T03:17:54.077682", "experiment": "exp72", "event": "started", "module": "experiments.exp72_sutter_continuous", "max_sessions": null}
+{"ts": "2026-06-22T04:11:35.865408", "experiment": "exp72", "event": "run_complete", "n_keys": 3}
+{"ts": "2026-06-22T04:11:37.867740", "experiment": "exp72", "event": "saved_volume", "path": "/results/exp72/exp72_20260622_041137.json"}
+{"ts": "2026-06-22T04:11:39.274553", "experiment": "exp72", "event": "copied_artifacts"}
+{"ts": "2026-06-22T04:11:40.627770", "experiment": "exp72", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T04:11:41.562861", "experiment": "exp72", "event": "done"}

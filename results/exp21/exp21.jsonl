@@ -1,0 +1,7 @@
+{"ts": "2026-06-21T05:27:13.108974", "experiment": "exp21", "event": "started", "module": "experiments.exp21_baseline_comparisons", "max_sessions": 5}
+{"ts": "2026-06-21T05:32:44.606512", "experiment": "exp21", "event": "started", "module": "experiments.exp21_baseline_comparisons", "max_sessions": null}
+{"ts": "2026-06-21T06:26:37.870346", "experiment": "exp21", "event": "run_complete", "n_keys": 5}
+{"ts": "2026-06-21T06:26:45.367094", "experiment": "exp21", "event": "saved_volume", "path": "/results/exp21/exp21_20260621_062641.json"}
+{"ts": "2026-06-21T06:26:49.304206", "experiment": "exp21", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:26:53.393573", "experiment": "exp21", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:26:56.972081", "experiment": "exp21", "event": "done"}

@@ -1,0 +1,14 @@
+{"ts": "2026-06-22T02:11:31.251034", "experiment": "exp71", "event": "started", "module": "experiments.exp71_vae_causal_circuits", "max_sessions": null}
+{"ts": "2026-06-22T02:12:00.689879", "experiment": "exp71", "event": "run_failed", "error": "all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 109 and the array at index 1 has size 304", "traceback": "Traceback (most recent call last):\n  File \"/root/modal_run.py\", line 249, in run_experiment\n    results = mod.run(**kwargs)\n              ^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp71_vae_causal_circuits.py\", line 348, in run\n    all_act = np.concatenate([s[\"activity\"] for s in sessions_data])\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<__array_function__ internals>\", line 180, in concatenate\nValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 109 and the array at index 1 has size 304\n"}
+{"ts": "2026-06-22T02:33:47.995122", "experiment": "exp71", "event": "started", "module": "experiments.exp71_vae_causal_circuits", "max_sessions": null}
+{"ts": "2026-06-22T03:02:31.875070", "experiment": "exp71", "event": "run_complete", "n_keys": 3}
+{"ts": "2026-06-22T03:02:37.602098", "experiment": "exp71", "event": "saved_volume", "path": "/results/exp71/exp71_20260622_030234.json"}
+{"ts": "2026-06-22T03:02:42.978707", "experiment": "exp71", "event": "copied_artifacts"}
+{"ts": "2026-06-22T03:02:53.871680", "experiment": "exp71", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T03:02:56.554366", "experiment": "exp71", "event": "done"}
+{"ts": "2026-06-22T04:34:19.428393", "experiment": "exp71", "event": "started", "module": "experiments.exp71_vae_causal_circuits", "max_sessions": null}
+{"ts": "2026-06-22T05:08:57.492055", "experiment": "exp71", "event": "run_complete", "n_keys": 4}
+{"ts": "2026-06-22T05:09:09.985384", "experiment": "exp71", "event": "saved_volume", "path": "/results/exp71/exp71_20260622_050904.json"}
+{"ts": "2026-06-22T05:09:17.022616", "experiment": "exp71", "event": "copied_artifacts"}
+{"ts": "2026-06-22T05:09:25.192487", "experiment": "exp71", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T05:09:30.294635", "experiment": "exp71", "event": "done"}

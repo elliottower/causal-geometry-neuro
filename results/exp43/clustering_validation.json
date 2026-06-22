@@ -1,0 +1,335 @@
+{
+  "timestamp": "2026-06-21T08:22:58.200186",
+  "n_regions": 50,
+  "regions": [
+    "ACA",
+    "ACB",
+    "APN",
+    "BLA",
+    "CA1",
+    "CA3",
+    "CP",
+    "DG",
+    "GPe",
+    "ILA",
+    "LD",
+    "LGd",
+    "LP",
+    "LS",
+    "LSr",
+    "MB",
+    "MD",
+    "MG",
+    "MOp",
+    "MOs",
+    "MRN",
+    "OLF",
+    "ORB",
+    "PAG",
+    "PL",
+    "PO",
+    "POL",
+    "POST",
+    "RSP",
+    "RT",
+    "SCig",
+    "SCm",
+    "SCs",
+    "SCsg",
+    "SNr",
+    "SPF",
+    "SSp",
+    "SUB",
+    "TH",
+    "TT",
+    "VISa",
+    "VISam",
+    "VISl",
+    "VISp",
+    "VISpm",
+    "VISrl",
+    "VPL",
+    "VPM",
+    "ZI",
+    "root"
+  ],
+  "n_labeled_regions": 45,
+  "k3": {
+    "ari": 0.0023405500292568754,
+    "nmi": 0.16307710349258048,
+    "n_clusters": 3,
+    "clusters": {
+      "cluster_1": [
+        "ACA",
+        "ACB",
+        "APN",
+        "CA1",
+        "CA3",
+        "DG",
+        "ILA",
+        "LD",
+        "LGd",
+        "LP",
+        "LS",
+        "MB",
+        "MD",
+        "MG",
+        "MOs",
+        "OLF",
+        "ORB",
+        "PAG",
+        "PL",
+        "POL",
+        "POST",
+        "RSP",
+        "RT",
+        "SCm",
+        "SCs",
+        "SCsg",
+        "SNr",
+        "SUB",
+        "VISam",
+        "VISl",
+        "VISp",
+        "VISpm",
+        "VISrl",
+        "root"
+      ],
+      "cluster_2": [
+        "BLA",
+        "CP",
+        "GPe",
+        "LSr",
+        "MOp",
+        "MRN",
+        "PO",
+        "SCig",
+        "SSp",
+        "TH",
+        "VISa",
+        "VPL",
+        "VPM",
+        "ZI"
+      ],
+      "cluster_3": [
+        "SPF",
+        "TT"
+      ]
+    }
+  },
+  "k5": {
+    "ari": 0.05702311404622809,
+    "nmi": 0.29782297654017126,
+    "n_clusters": 5,
+    "clusters": {
+      "cluster_1": [
+        "ACA",
+        "ACB",
+        "APN",
+        "ILA",
+        "LD",
+        "LGd",
+        "LP",
+        "LS",
+        "MB",
+        "MD",
+        "MG",
+        "MOs",
+        "OLF",
+        "ORB",
+        "PAG",
+        "PL",
+        "POL",
+        "RSP",
+        "RT",
+        "SCm",
+        "SNr",
+        "SUB",
+        "VISam",
+        "VISl",
+        "VISp",
+        "VISpm",
+        "root"
+      ],
+      "cluster_2": [
+        "CA1",
+        "CA3",
+        "DG",
+        "POST",
+        "SCs",
+        "SCsg"
+      ],
+      "cluster_3": [
+        "VISrl"
+      ],
+      "cluster_4": [
+        "BLA",
+        "CP",
+        "GPe",
+        "LSr",
+        "MOp",
+        "MRN",
+        "PO",
+        "SCig",
+        "SSp",
+        "TH",
+        "VISa",
+        "VPL",
+        "VPM",
+        "ZI"
+      ],
+      "cluster_5": [
+        "SPF",
+        "TT"
+      ]
+    }
+  },
+  "k7": {
+    "ari": 0.050127813454704157,
+    "nmi": 0.32958137559814127,
+    "n_clusters": 7,
+    "clusters": {
+      "cluster_1": [
+        "ACA",
+        "APN",
+        "MOs",
+        "PAG",
+        "PL",
+        "POL",
+        "RT",
+        "SNr",
+        "SUB",
+        "VISam",
+        "VISl",
+        "VISp",
+        "VISpm"
+      ],
+      "cluster_2": [
+        "ACB",
+        "ILA",
+        "LD",
+        "LGd",
+        "LP",
+        "LS",
+        "MB",
+        "MD",
+        "MG",
+        "OLF",
+        "ORB",
+        "RSP",
+        "SCm",
+        "root"
+      ],
+      "cluster_3": [
+        "CA1",
+        "CA3",
+        "DG",
+        "POST",
+        "SCsg"
+      ],
+      "cluster_4": [
+        "SCs"
+      ],
+      "cluster_5": [
+        "VISrl"
+      ],
+      "cluster_6": [
+        "BLA",
+        "CP",
+        "GPe",
+        "LSr",
+        "MOp",
+        "MRN",
+        "PO",
+        "SCig",
+        "SSp",
+        "TH",
+        "VISa",
+        "VPL",
+        "VPM",
+        "ZI"
+      ],
+      "cluster_7": [
+        "SPF",
+        "TT"
+      ]
+    }
+  },
+  "k10": {
+    "ari": 0.024996811631169492,
+    "nmi": 0.3464278573526708,
+    "n_clusters": 10,
+    "clusters": {
+      "cluster_1": [
+        "ACA",
+        "APN",
+        "MOs",
+        "PAG",
+        "PL",
+        "POL",
+        "RT",
+        "SNr",
+        "SUB",
+        "VISam",
+        "VISl",
+        "VISp",
+        "VISpm"
+      ],
+      "cluster_2": [
+        "ACB",
+        "ILA",
+        "LD",
+        "LGd",
+        "LP",
+        "LS",
+        "MB",
+        "MD",
+        "MG",
+        "OLF",
+        "ORB",
+        "RSP",
+        "SCm",
+        "root"
+      ],
+      "cluster_3": [
+        "CA1",
+        "CA3"
+      ],
+      "cluster_4": [
+        "DG"
+      ],
+      "cluster_5": [
+        "SCsg"
+      ],
+      "cluster_6": [
+        "POST"
+      ],
+      "cluster_7": [
+        "SCs"
+      ],
+      "cluster_8": [
+        "VISrl"
+      ],
+      "cluster_9": [
+        "BLA",
+        "CP",
+        "GPe",
+        "LSr",
+        "MOp",
+        "MRN",
+        "PO",
+        "SCig",
+        "SSp",
+        "TH",
+        "VISa",
+        "VPL",
+        "VPM",
+        "ZI"
+      ],
+      "cluster_10": [
+        "SPF",
+        "TT"
+      ]
+    }
+  }
+}

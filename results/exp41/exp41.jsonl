@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T07:22:33.136246", "experiment": "exp41", "event": "started", "module": "experiments.exp41_cross_paper_bridge", "max_sessions": null}
+{"ts": "2026-06-21T07:23:25.574070", "experiment": "exp41", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T07:23:27.842434", "experiment": "exp41", "event": "saved_volume", "path": "/results/exp41/exp41_20260621_072326.json"}
+{"ts": "2026-06-21T07:23:29.663814", "experiment": "exp41", "event": "copied_artifacts"}
+{"ts": "2026-06-21T07:23:31.338156", "experiment": "exp41", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T07:23:32.417846", "experiment": "exp41", "event": "done"}

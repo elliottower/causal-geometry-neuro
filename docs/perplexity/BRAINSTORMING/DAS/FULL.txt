@@ -1,0 +1,161 @@
+OK here are the genuinely novel things nobody has done, ordered by how directly they'd upgrade this specific paper.
+
+## Score-Based Causal Discovery on the Subspaces Themselves
+
+This is the freshest angle. The score function approach to causal discovery — using \(\nabla \log p(X)\) to infer causal ordering without assuming Gaussian noise — was proven to work for additive noise models with essentially any noise distribution, and the June 2025 ICML paper by Montagna et al. extends it to linear, nonlinear, and latent variable settings simultaneously. The key insight for your paper is this: your regions have different intrinsic dimensionalities and different noise distributions (spiking is Poisson, not Gaussian). CD-NOD handles the heterogeneous-distribution problem across animals. But the score approach handles something different — it lets you infer causal ordering between regions from the geometry of the data distribution itself, without requiring parametric assumptions. Nobody has applied score-based causal discovery to neural population subspaces. The specific thing you would compute: treat each region's population activity projected onto its choice subspace as a variable in a causal graph, and ask what causal ordering between regions is implied by the score function across the 39 IBL animals. That gives you a data-driven causal circuit — not a correlation graph, not a connectivity matrix, but a causal ordering of regions in the choice computation — derived from geometry. That is a completely new claim about IBL data that nobody has made.[1][2][3]
+
+## Causal Mixture Models for Region Types
+
+The 2025 CISPA paper on Causal Mixture Models — where each observation is assigned to a latent subpopulation with its own structural causal model — is directly applicable to your heterogeneous brain region problem. Right now your geometric type taxonomy is a post-hoc classification: you run the experiments, then label regions. A causal mixture model treats the region type as a latent variable that you infer jointly with the causal structure. Applied to your data, the question becomes: is there a discrete latent variable indexing geometric regime (type 1 low-dim CKA-stable vs type 5 high-dim Procrustes-stable), and does that latent variable explain the distribution of CKA and Procrustes scores across regions? If the mixture model recovers two clean clusters whose assignments align with your a priori regional taxonomy (sensory vs association), you have a principled generative model for your geometric type classification rather than just a descriptive one. More importantly, the causal mixture model gives you identifiability conditions — you can say formally when the regime assignments are recoverable from the data, which makes the whole taxonomy claim a stronger scientific statement.[4][5]
+
+## Invariant Subspace Learning on the Stiefel Manifold
+
+The June 2025 paper on learning invariant linear subspaces when the concept shifts across environments — Stiefel manifold constrained optimization, provable local optima guarantee — is almost embarrassingly directly applicable to your problem. The setup is: you have multiple environments (animals), a target variable (choice direction), and you want the subspace \(V \in \text{St}(k,d)\) whose predictive relationship to choice is maximally invariant across animals, while penalizing for covariance shift in the direction of \(V\). That is exactly the ICP-for-subspaces idea from the previous answer, but now it has a concrete algorithm with convergence proofs. You run this on your IBL data and get an invariant choice subspace. Then you compare: is the invariant subspace lower-dimensional than the session-wise PCA choice subspace? Do the invariant regions cluster differently on the CKA-Procrustes plot? Do the invariant subspace Grassmannian distances across animals decrease compared to PCA-estimated subspace distances? Every one of those comparisons is a new figure that nobody has published.[6]
+
+## Causal Abstraction From Brains to Circuit Models
+
+The 2025 JMLR paper on causal abstraction — Geiger, Icard, and collaborators — formalizes when a low-level system implements a high-level causal model via abstraction maps, and this has been the theoretical backbone of DAS and IIT in transformer circuits. You probably know this from your MI work. The novel thing here is applying it to biological circuits: does the mouse choice circuit in IBL implement the causal structure of a simple two-state accumulator model? You define the high-level causal model (prior × evidence → decision), define the candidate alignment (specific subspaces in specific regions align to prior, accumulated evidence, and decision variables), and then test it using interchange interventions — but in biology you don't get to do hard interventions, so you use the prior-block manipulation as a natural intervention on the prior variable. If swapping the prior-block context in region A's activity causes region B's activity to shift in the way the causal model predicts, the abstraction holds. If it doesn't, you have a precise statement of where the model fails. This has been done in transformers thousands of times but essentially never with biological electrophysiology data. The IBL dataset — with its within-animal block manipulation — is one of the only datasets where you could even attempt it.[7][8][9]
+
+## The Heterogeneous Data Angle You're Already Working On, But Deeper
+
+For CD-NOG specifically — since you mentioned it — the key limitation of standard CD-NOD for your data is that it assumes the variables are the same across environments but their mechanisms change. Your problem is worse: the variables are literally different (different neurons across animals), so you can't directly apply CD-NOD to the raw activity. What you can do is apply it at the subspace level: the subspace coordinates (projected onto the k-dimensional Grassmannian point estimated per session) are comparable across animals even when the neurons are not, because the subspace is a geometry-invariant summary. That is the principled fix for the heterogeneous-neuron problem that CD-NOD doesn't handle out of the box. You project each session onto its estimated choice subspace, get k-dimensional latent coordinates per trial, then run CD-NOD across animals treating each animal as a different environment. The regime-change variable CD-NOD recovers would be the animal identity — but if it also recovers a region-type variable, you have discovered that the causal mechanism of choice computation genuinely differs by geometric type, not just by animal. That is a publishable result about circuit heterogeneity that requires no new data and only a clean pipeline on top of what you already have.[2][10][1]
+
+## The One Nobody Would Think To Do
+
+Distributional invariance as a test of whether a representation is truly mechanistic has a precise statistical formulation from IRM and related work, but nobody has applied it to test whether population geometry metrics are mechanistic or spurious. The specific experiment: you have multiple environments in IBL (different stimulus contrasts, prior blocks, behavioral states). For each region, compute how much the regression from subspace coordinates to behavior changes across environments. A truly mechanistic subspace should have a stable regression coefficient across environments — the mechanism is invariant even if the distribution of inputs shifts. CKA-type regions (low-dimensional, linearly stable) should be more invariant under this test. Procrustes-type regions (high-dimensional, geometry-stable but not linearly stable) should fail the invariance test when environments shift. That prediction is testable right now with your IBL data across prior blocks and connects your geometric type taxonomy to a formal causal invariance criterion. It would let you say "geometric type predicts the degree to which a region's representation is causally invariant to environmental shifts" — which is a mechanistic interpretation nobody has given to population geometry before.[11][6]
+
+Sources
+[1] Causal Discovery from Nonstationary/Heterogeneous Data https://pubmed.ncbi.nlm.nih.gov/28966540/
+[2] linear, nonlinear, and latent variables causal discovery https://proceedings.mlr.press/v275/montagna25a.html
+[3] Proceedings of Machine Learning Research vol 213:1–24, 2023 https://proceedings.mlr.press/v213/montagna23a/montagna23a.pdf
+[4] [PDF] Causal Mixture Models: Characterization and Discovery https://eda.rg.cispa.io/pubs/2025/cmm-mameche,kalofolias,vreeken.pdf
+[5] UCSD Researchers Propose a General Variational Inference-based ... https://www.marktechpost.com/2024/07/17/ucsd-researchers-propose-a-general-variational-inference-based-framework-mcd-to-infer-the-underlying-causal-models-as-well-as-the-mixing-probability-of-each-sample/
+[6] Learning When the Concept Shifts: Confounding, Invariance, and ... https://arxiv.org/html/2406.15904v2
+[7] [PDF] Causal Abstractions of Neural Networks | Semantic Scholar https://www.semanticscholar.org/paper/Causal-Abstractions-of-Neural-Networks-Geiger-Lu/5951ede73a1dbb9c5ea8b4d95f31c5ed646aacbd
+[8] Causal Abstraction: A Theoretical Foundation for ... https://www.jmlr.org/papers/v26/23-0058.html
+[9] Combining Causal Models for More Accurate Abstractions of Neural Networks https://proceedings.mlr.press/v275/pislar25a.html
+[10] Biwei-Huang/Causal-Discovery-from-Nonstationary-Heterogeneous ... https://github.com/Biwei-Huang/Causal-Discovery-from-Nonstationary-Heterogeneous-Data
+[11] [PDF] Learning Causally Invariant Representations for Out-of-Distribution ... https://proceedings.neurips.cc/paper_files/paper/2022/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf
+[12] Under review as a conference paper at ICLR 2024 https://openreview.net/pdf?id=Qqu5mMgIBV
+[13] GitHub - francescomontagna/NoGAM: Repository of the official implementation of NoGAM causal discovery method https://github.com/francescomontagna/NoGAM
+[14] Causal discoveries for high dimensional mixed data - PubMed https://pubmed.ncbi.nlm.nih.gov/35968913/
+[15] Causal discovery methods in psychological research - PMC https://pmc.ncbi.nlm.nih.gov/articles/PMC12904928/
+[16] High-Dimensional Causal Discovery Under non-Gaussianity http://arxiv.org/abs/1803.11273
+[17] A Review of Causal Methods for High-Dimensional Data https://oulurepo.oulu.fi/bitstream/handle/10024/53646/nbnfioulu-202501131133.pdf?sequence=1&isAllowed=y
+[18] [PDF] CUTS+: High-dimensional Causal Discovery from Irregular Time-series | Semantic Scholar https://www.semanticscholar.org/paper/CUTS+:-High-dimensional-Causal-Discovery-from-Cheng-Li/f66c14b41d385dfb071bb8e72a74d03111d0cade
+[19] Identification of Partially Observed Linear Causal Models: Graphical ... https://proceedings.neurips.cc/paper/2021/hash/c0f6fb5d3a389de216345e490469145e-Abstract.html
+[20] Addressing Information Asymmetry: Deep Temporal Causality Discovery for Mixed Time Series - PubMed https://pubmed.ncbi.nlm.nih.gov/40126946/
+[21] Published as a conference paper at ICLR 2025 https://openreview.net/pdf?id=Bp0HBaMNRl
+[22] Handling Distribution Shifts on Graphs: An Invariance Perspective https://arxiv.org/abs/2202.02466
+[23] Causal pattern recovery from neural spike train data using the Snap Shot Score - PubMed https://pubmed.ncbi.nlm.nih.gov/19644745/
+[24] Sample Complexity Bounds for Score-Matching: https://proceedings.neurips.cc/paper_files/paper/2023/file/0a3dc35a2391cabcb59a6b123544e3db-Paper-Conference.pdf
+[25] arXiv:2306.06138v2  [q-bio.NC]  8 Mar 2024 http://arxiv.org/pdf/2306.06138.pdf
+[26] GitHub - Biwei-Huang/Generalized-Score-Functions-for-Causal-Discovery: A generalized score-based method for Causal Discovery https://github.com/Biwei-Huang/Generalized-Score-Functions-for-Causal-Discovery
+[27] Causal Abstractions of Neural Networks https://arxiv.org/abs/2106.02997
+[28] interpretable representations of neural population dynamics using ... https://www.nature.com/articles/s41592-024-02582-2
+[29] [PDF] Frameworks for Representing and Learning Abstract Causal ... - UNIPI https://pages.di.unipi.it/massidda/assets/causalitymeetingDec2024.pdf
+[30] Shifting the Paradigm: A Diffeomorphism Between Time Series Data ... https://arxiv.org/abs/2502.19921
+
+
+
+----
+
+
+
+OK, let me actually lay out what causal abstraction looks like concretely for your data, with specific candidate high-level models you could test right now.
+
+## What Causal Abstraction Actually Means Here
+
+The causal abstraction framework asks: does your low-level system (neural populations in specific brain regions) implement a high-level causal model (a computational account of decision-making)? The test is the interchange intervention — you take two trials, swap the neural representation of one variable between them, and check if behavior changes as the high-level model predicts. In transformers you do this by patching activations. In biology your interchange interventions are natural — the IBL prior block manipulation is exactly this. When the prior switches from 80% left to 80% right, the brain's prior representation is being "patched" by the environment. You check whether downstream neural activity and behavior shift as your causal model predicts.[1][2][3]
+
+The critical wrinkle: a 2024 paper proved that without the linearity constraint on alignment maps, you can find a spurious causal abstraction in literally any network including randomly initialized ones. Your Grassmannian geometry is exactly the right constraint to impose — the alignment map must be a rotation in Grassmannian space, not an arbitrary nonlinear transformation. That makes your geometric framework not just a comparison tool but the principled regularizer that makes causal abstraction non-trivial for biological data.[4]
+
+## Candidate High-Level Causal Models to Test
+
+These are real, published computational models of the IBL task where you can define specific variables, specific interventions, and specific predictions.
+
+### Model 1: The Bayesian Accumulator
+
+This is the canonical account. The high-level causal model has four variables: prior \(P(\text{left})\), sensory evidence \(e_t\), posterior belief \(b_t = P(\text{left}|e_{1:t})\), and choice \(c\). The causal structure is \(\text{prior} \to b_0\), then \(b_{t-1} + e_t \to b_t\), then \(b_T \to c\). The IBL September 2025 Nature paper showed that prior information was encoded across 20–30% of brain regions spanning from sensory to high-level cortex [3][5]. What nobody has done is ask which specific subspace in each region encodes which variable in this causal graph. You define: the alignment map sends prior-encoding subspace (estimated during the pre-stimulus window when only block identity differs) to the high-level prior variable, and the evidence-encoding subspace (estimated from stimulus-onset response) to the evidence variable. Then your interchange intervention is: take a trial from a left-prior block, swap in the prior subspace coordinates from a right-prior block trial, and see if the downstream choice subspace shifts. The natural block switch — which happens every ~50 trials — is your intervention. The prediction of the Bayesian accumulator is clean: swapping the prior subspace should shift the posterior subspace by a predictable rotation, and that rotation should be consistent across animals in Grassmannian distance even if not in raw coordinates.
+
+### Model 2: The RL Synaptic-Weight Hypothesis
+
+A 2021 arXiv paper from Krishnagopal and Latham proposed a completely different account of the IBL prior: the prior is stored in synaptic weights, not neural activity, and the neural activity difference between blocks is too small to decode. This is actually a testable negative prediction for your analysis. If the prior is stored in weights, you should find that the prior subspace Grassmannian distance across prior blocks is near zero — the subspace geometry does not change, only the activity magnitude does. If you find that the prior subspace actually does rotate between blocks (high Grassmannian distance between left-block and right-block pre-stimulus population activity), that is direct evidence against the synaptic-weight hypothesis and for the neural-activity hypothesis. This requires no new data — it is just computing Grassmannian distance between the choice subspace estimated on left-prior-block trials vs right-prior-block trials within each session.[6]
+
+### Model 3: The Hidden Markov State Model
+
+The 2024 biorXiv paper on IBL nonstationarity used an HMM with four behavioral states — two engaged (left bias, right bias) and two disengaged — and showed that mice switch between them in a predictable way based on reward and stimulus history. This gives you a richer causal model than just "left prior vs right prior." The high-level causal graph has: engagement state → strategy → choice, and reward history → state transition. For causal abstraction, the alignment question is: does any brain region's subspace geometry track engagement state independently of choice direction? A region that encodes engagement (not just left/right prior) would have a choice subspace that changes in a specific way during disengaged states — the subspace might collapse (lower effective dimensionality) or rotate to a different orientation. You can test this by splitting trials by behavioral state (using the published HMM classifications if you use the same IBL data) and computing the within-session Grassmannian distance between subspaces estimated in engaged vs disengaged trials. The prediction: regions that are part of the arousal/neuromodulatory circuit should show large engaged-vs-disengaged Grassmannian distances, while purely visual regions should show small ones.[7]
+
+## What the Actual Experiment Looks Like
+
+Concretely for Model 1, you would do this:
+
+Step 1: for each session, estimate three subspaces — the prior subspace \(V_\text{prior}\) (LDA between left-block and right-block trials on pre-stimulus window), the evidence subspace \(V_\text{ev}\) (LDA between strong-left and strong-right contrast trials), and the choice subspace \(V_\text{choice}\) (LDA between left-choice and right-choice trials). These are your alignment maps from low-level neural activity to high-level causal variables.
+
+Step 2: define the interchange intervention geometrically. Take the pre-stimulus population trajectory for a left-block trial, project it onto \(V_\text{prior}\), and replace those coordinates with the mean coordinates from right-block trials. Predict what the choice-time population activity should look like under the Bayesian accumulator model. The prediction is that the posterior subspace should shift toward the right-choice attractor.
+
+Step 3: test the prediction across sessions. Does the Grassmannian distance between \(V_\text{prior}\) and \(V_\text{choice}\) across sessions predict behavioral prior sensitivity (the shift of the psychometric curve between blocks)? Regions where \(d_G(V_\text{prior}, V_\text{choice})\) is small should be "prior-to-choice routing" regions; regions where it is large should be regions that encode prior and choice in separate subspaces.
+
+Step 4: the key causal abstraction test. Compute interchange intervention accuracy: how often does swapping prior subspace coordinates between left-block and right-block trials cause the downstream choice subspace to flip to the correct side? This is your IIA analog from DAS, but implemented in geometry rather than activation patching.
+
+## Why This Is Genuinely Novel
+
+The DAS/causal abstraction literature has been applied only to artificial neural networks so far. The biological neuroscience literature has never used interchange interventions as an analysis tool — it has used lesion studies, optogenetics, and stimulation, but not the computational notion of counterfactual swapping of representational subspaces. The connection you can make is this: your Grassmannian framework provides the only principled way to define "same subspace" across animals and sessions, which is the prerequisite for interchange interventions to be meaningful in biological data. Without it, swapping activations between animals is incoherent (different neurons). With Grassmannian geometry, you can define a swap as "transport the subspace coordinates along the geodesic to the other animal's reference frame." That is the technical contribution that makes this approach original, and it directly draws on everything already in your paper.[2][8][1]
+
+The connection to your geometric type taxonomy is the final piece. Your hypothesis is: CKA-type regions (low dimensionality, linearly stable) will have high IIA for simple linear causal variables like prior, while Procrustes-type regions (high dimensionality, geometry-stable but not linearly stable) will have high IIA only for nonlinear causal variables like engagement state or strategy. That prediction ties the entire paper together: your metric comparison, your dimensionality mediation result, your geometric type taxonomy, and the causal abstraction analysis all converge on the same story about which computational operations different cortical regions support.
+
+Sources
+[1] Finding Alignments Between Interpretable Causal Variables ... - arXiv https://arxiv.org/html/2303.02536v4
+[2] Intro to Distributed Alignment Search (DAS) - Stanford NLP Group https://stanfordnlp.github.io/pyvene/tutorials/advanced_tutorials/DAS_Main_Introduction.html
+[3] Brain-wide representations of prior information in mouse decision ... https://pmc.ncbi.nlm.nih.gov/articles/PMC12408363/
+[4] Is Causal Abstraction Enough for Mechanistic Interpretability? https://openreview.net/pdf?id=ZYXTLo7kCi
+[5] International Brain Laboratory - Wikipedia https://en.wikipedia.org/wiki/International_Brain_Laboratory
+[6] a reinforcement learning model for mouse decision making - arXiv https://arxiv.org/abs/2112.05816
+[7] Identifying the factors governing internal state switches during nonstationary sensory decision-making https://www.biorxiv.org/content/10.1101/2024.02.02.578482v1.full
+[8] Interpretability at Scale: Identifying Causal Mechanisms in Alpaca https://neurips.cc/virtual/2023/poster/70504
+[9] Combining Causal Models for More Accurate Abstractions ... https://arxiv.org/html/2503.11429v1
+[10] 2025 - Brain Wide Map - IBL code library documentation! https://docs.internationalbrainlab.org/notebooks_external/2025_data_release_brainwidemap.html
+[11] 000 https://openreview.net/pdf?id=jyjfRLnfww
+[12] Publicly Available IBL Data — IBL Library documentation https://docs.internationalbrainlab.org/public_docs/public_introduction.html
+[13] An International Laboratory for Systems and Computational ... https://pmc.ncbi.nlm.nih.gov/articles/PMC5752703/
+[14] A Partial Replication of Distributed Alignment Search - dillonkn https://dillonkn.com/posts/toy-das/
+[15] Model Alignment Search https://arxiv.org/html/2501.06164v7
+
+
+
+---
+
+
+
+Yes, that is exactly what I'm saying — the interventions already happened, you're just interpreting them after the fact. Let me be more concrete.
+
+## The IBL Interventions You Can Steal Right Now
+
+The IBL prior block manipulation is a published, pre-existing intervention in the exact dataset you're already using. When the block switches from 80% left to 80% right, the experimenters have intervened on the animal's prior belief. You didn't do it, it's already in the data, and it creates exactly the counterfactual structure DAS needs. The interchange intervention in transformer DAS says "swap the value of variable X between two forward passes, check if output changes as predicted." Your biological analog is "compare neural geometry on left-block trials vs right-block trials — those are two forward passes through the same circuit with the prior variable set to different values by the experimenter." You're not patching activations, you're using trials where nature patched them for you.[1][2]
+
+## Three Specific Datasets With Pre-Existing Interventions
+
+**The Steinmetz 2019 dataset** — which you're already using — has optogenetic silencing of specific cortical regions on a subset of trials. That is a hard intervention, not a soft perturbation. When they silence VISp, they have performed \(do(\text{VISp} = 0)\) in Pearl's notation. Your analysis: compute the choice subspace in MOs across trials where VISp is intact vs silenced. If the Grassmannian distance between these two subspaces is large, VISp causally shapes MOs's choice geometry. If small, MOs is computing choice independently. Nobody has framed the Steinmetz optogenetics results in terms of subspace geometry — all prior analyses use decoding accuracy, not geometric change. This is a new analysis of existing intervention data.[3]
+
+**The Allen Brain Observatory Visual Behavior dataset** has an omission paradigm — trials where the expected stimulus is omitted. That is an intervention on the evidence variable: \(do(e_t = 0)\) when the circuit expected a stimulus. You can compute how much the evidence subspace rotates between normal and omission trials and whether the choice subspace downstream changes proportionally. The causal abstraction test is: does evidence-subspace collapse (during omission) cause choice-subspace collapse in the way the accumulator model predicts?[4]
+
+**The IBL biased-blocks dataset specifically** — the September 2025 Nature paper showed brain-wide representations of prior across 241 regions. They've already done the neural-vs-behavioral prior comparison. You can use their published session metadata to stratify your existing Grassmannian analysis by prior sensitivity: animals where the behavioral psychometric curve shifts a lot between blocks vs animals where it shifts little. The prior-sensitive animals are ones where the prior intervention "worked" — it actually changed the computation. Comparing those two groups in terms of which regions show large Grassmannian distance between block conditions gives you a causal dissociation: regions that change geometry only in prior-sensitive animals are causally downstream of prior encoding, not just correlated with it.[1]
+
+## The Closest Thing to DAS You Can Actually Do Without Patching
+
+Here's the precise procedure for doing DAS-style analysis with natural interventions:
+
+You define a high-level causal model — say, the two-variable model: prior \(P\) causes choice \(C\). You define your alignment maps as rotations: \(R_P: \mathbb{R}^k \to \{-1, +1\}\) projects the k-dimensional prior subspace onto a scalar prior estimate, and \(R_C\) does the same for choice. The interchange intervention test is: does the correlation between \(R_P\) and \(R_C\) across trials correctly predict the behavioral prior effect, and does it do so region-specifically? You compute this for every region and get a map of "which regions show the causal prior→choice geometry predicted by the model." That map is your biological DAS result.
+
+The key methodological novelty over what already exists in the IBL literature: previous papers ask whether you can decode prior from a region. That is a purely associational claim. Your analysis asks whether the prior subspace geometry in a region is causally organized relative to the choice subspace geometry downstream — which requires the Grassmannian distance between \(V_\text{prior}\) and \(V_\text{choice}\) to be predictive of behavioral causal sensitivity, not just decoding accuracy. A region could have high prior decodability but low causal role — it encodes prior as a side effect but doesn't use it for choice. Your geometry test distinguishes these cases and the decoding approach cannot.
+
+## One More Angle: The Geiger et al. Boundedness Result
+
+The 2024 paper showed causal abstraction is trivially satisfied without the linearity constraint. But they also showed the converse: with a sufficiently constrained alignment map, failed causal abstraction is informative — it tells you the causal structure of the high-level model is wrong, not just that the alignment was too flexible. Your Grassmannian rotation constraint is exactly the right constraint. So if your IIA metric comes back low — the prior subspace geometry does not predict choice subspace geometry the way the Bayesian accumulator says it should — that is not a failure of your method. It is a result about the animal's actual causal circuit structure. You can say: the Bayesian accumulator's causal structure is not implemented in MOs (low IIA), but it is implemented in ACA (high IIA), which gives you a specific anatomical localization of which step of the accumulator is where. That is the kind of result that ends up in Nature Neuroscience, not just a methods paper.[5]
+
+Sources
+[1] Brain-wide representations of prior information in mouse decision ... https://pmc.ncbi.nlm.nih.gov/articles/PMC12408363/
+[2] a reinforcement learning model for mouse decision making - arXiv https://arxiv.org/abs/2112.05816
+[3] International Brain Laboratory - Wikipedia https://en.wikipedia.org/wiki/International_Brain_Laboratory
+[4] Neuropixels http://portal.brain-map.org/circuits-behavior/visual-behavior-neuropixels
+[5] Is Causal Abstraction Enough for Mechanistic Interpretability? https://openreview.net/pdf?id=ZYXTLo7kCi

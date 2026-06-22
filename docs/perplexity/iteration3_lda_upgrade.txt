@@ -1,0 +1,20 @@
+Perplexity iteration 3: LDA upgrade plan for experiments 1-6.
+
+Core swap: fit_pca_subspace → fit_lda_subspace everywhere.
+
+PCA finds max-variance directions (dominated by locomotion/arousal).
+LDA finds max-discrimination directions (separates left vs right choice).
+
+For binary labels, LDA gives 1 discriminative dimension, then fill remaining
+k-1 dims with PCA of within-class residuals. Need PCA pre-whitening when
+n_neurons >> n_trials (standard PCA+LDA pipeline for high-dim neural data).
+
+Experiment-specific notes:
+- Exp 1/2: Biggest win. Choice is ~3-10% of variance in motor regions.
+- Exp 4/6: Moderate win. V1 encodes stimulus strongly, so PCA isn't as wrong.
+- Exp 5: Need shared-fit control (fit LDA on full data, measure split deviations).
+- Exp 7/8: Dead (sheaf artifact, holonomy needs causal intervention).
+- Exp 9: Within-region parts are fine, cross-region parts have same issues as exp7.
+
+Also: k=5 needs reconsideration. Binary LDA gives 1 real dim + 4 residual PCA dims.
+Consider dropping to k=2-3 or using elbow heuristic.

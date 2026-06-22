@@ -1,0 +1,84 @@
+OK, I have a thorough picture of the whole project. Let me synthesize this honestly.
+
+***
+
+## The Core Problem You're Correctly Worried About
+
+**Your H¹ >> 0 result is almost certainly an artifact, and here's exactly why.**
+
+### Why the Restriction Maps are Garbage
+
+The sheaf setup requires that for each edge (region A → region B), you have a restriction map ρ_{AB}: Gr(k_A, N_A) → Gr(k_B, N_B) that sends "the choice subspace at A" to "what it should look like at B." In your implementation in exp7_sheaf_cohomology.py, this is estimated as a normalized cross-correlation matrix: W = X_B^T X_A / n from ~250 trials.
+
+The problem is dimensional. MOs lives in R^30, ACA in R^25 — these are different ambient spaces. The "restriction map" between them is a 25 × 30 matrix estimated from 250 data points. With 750 free parameters and 250 samples, you're in a severely underdetermined regime — the matrix is almost entirely noise. Sheaf cohomology was designed for cases where restriction maps are exact (algebraic topology) or at least consistent (cellular sheaves on graphs). When the restriction maps are noise, H¹ >> 0 is the trivially expected outcome for any set of subspaces, meaningful or not.
+
+In transformers, this problem disappears entirely because all layers share the same d_model = 768-dimensional residual stream, so restriction maps are square identity matrices and the comparison is well-posed. That's why your transformer OASR result (H¹ ≈ 0) is interpretable but your neural result probably isn't.
+
+### The Two Failure Modes in the Code
+
+There are actually two distinct problems stacked on top of each other:
+
+1. Subspace estimation uses PCA, not DAS. fit_pca_subspace recovers the top-variance subspace, not the causally active subspace. The choice direction might explain 3% of variance in a region with a huge locomotion signal dominating the first PCs. PCA will give you the wrong subspace to put in the sheaf stalk.
+
+2. Cross-region connectivity is trial-average correlation, not effective connectivity. The "restriction map" in _build_sheaf is literally (mean2.T @ mean1) / n_trials — mean firing rates correlated across regions, normalized. This is a measure of co-firing, not of how information from one region's causal subspace arrives at another region's neurons. It's not what sheaf theory needs.
+
+The result H¹ ∈ {75, 495} is in the range expected from the random subspace control — which is why that control is the key test.
+
+***
+
+## What Experiments Are Actually Solid
+
+Not everything is suspect. The problems are specific to exp7 (and exp3, exp8 by extension). Here's an honest triage:
+
+| Experiment | Problem | Honest Status |
+|---|---|---|
+| Exp 1 (cross-animal Grassmannian) | Within-region comparison, same neurons across animals — PCA ok here as approximation | Solid if gauge correction works |
+| Exp 2 (CKA vs d_G dissociation) | CKA is the control condition, so PCA vs DAS matters less for the dissociation argument | Mostly solid |
+| Exp 4 (stimulus transportability) | Within-region, cross-animal in visual cortex | Solid |
+| Exp 5 (behavioral state modulation) | Within-region, within-animal — best setting | Solid |
+| Exp 6 (gauge correction) | This is explicitly a within-animal measurement | Solid |
+| Exp 7 (sheaf H¹) | Cross-region, different neurons, noisy restriction maps | Suspect |
+| Exp 8 (holonomy) | PCA gives holonomy = 0 trivially (PCA is state-independent by construction) | Inconclusive |
+| Exp 9 (multiple realization) | CKA vs d_G within Steinmetz; within-region comparisons are fine | Partially solid |
+
+The safe core of the paper is exps 1, 2, 4, 5, 6 — all of which are within-region Grassmannian comparisons and don't require cross-region restriction maps.
+
+***
+
+## What the Controls Will Tell You
+
+The exp7_controls logic is exactly right. There are three outcomes:
+
+- H¹_real >> H¹_shuffle: Choice labels matter; the result is not just noise in restriction maps.
+- H¹_real ≈ H¹_shuffle: The restriction maps are the problem.
+- H¹_split >> 0: The method is broken for neural data at a more basic level.
+
+Perplexity's prediction: H¹_real ≈ H¹_shuffle and H¹_split >> 0. Both failure modes are active simultaneously.
+
+***
+
+## What the Real Novelty Is
+
+### The Strong, Defensible Novelty
+
+1. CKA / d_G dissociation as empirical demonstration (Exp 2, Exp 9)
+2. Gauge normalization for cross-session neural comparisons (Exp 6)
+3. Cross-animal Grassmannian hierarchy (Exp 1, Exp 4)
+4. Direction vs. subspace as a diagnostic test (proposed Exp 10)
+
+### The Weaker, Recoverable Novelty
+
+5. Sheaf cohomology — if the controls work
+6. Holonomy — only with DAS
+
+***
+
+## The Path Forward
+
+1. Run the controls (already queued). Wait for the verdict on exp7.
+2. Run the direction-vs-subspace experiment (Exp 10). CPU-only and fast.
+3. Switch subspace estimation from PCA to LDA or DAS.
+4. If controls show H¹_real >> H¹_shuffle: proceed to cocycle decomposition.
+5. If controls show H¹_real ≈ H¹_shuffle: pivot the sheaf story to a negative result.
+
+The paper is still real. The safe bets (exps 1, 2, 4, 5, 6) deliver the core CKA/Grassmannian dissociation story cleanly.

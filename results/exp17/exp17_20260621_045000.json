@@ -1,0 +1,354 @@
+{
+  "timestamp": "2026-06-21T04:49:59.518333",
+  "n_factors": 5,
+  "n_regions": 24,
+  "n_pairs": 29,
+  "pairs": [
+    {
+      "region": "ACA",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.07613509437998703,
+      "singular_value_correlation": 0.9816055439005058,
+      "var_explained_1": 0.5173191138379095,
+      "var_explained_2": 0.19807546127021686
+    },
+    {
+      "region": "ACA",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.023662342499669444,
+      "singular_value_correlation": 0.9393767545312659,
+      "var_explained_1": 0.5173191138379095,
+      "var_explained_2": 0.5325013123581672
+    },
+    {
+      "region": "ACA",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.02834500310903424,
+      "singular_value_correlation": 0.9319369012877683,
+      "var_explained_1": 0.19807546127021686,
+      "var_explained_2": 0.5325013123581672
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.27258917017370493,
+      "singular_value_correlation": 0.9864990586881116,
+      "var_explained_1": 0.7114966613990142,
+      "var_explained_2": 0.6534278318790036
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.039438845568041746,
+      "singular_value_correlation": 0.9978772819834058,
+      "var_explained_1": 0.7114966613990142,
+      "var_explained_2": 0.4224150819188299
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.10843119394439797,
+      "singular_value_correlation": 0.9444243350888555,
+      "var_explained_1": 0.7114966613990142,
+      "var_explained_2": 0.6445406861774784
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.02504351586755904,
+      "singular_value_correlation": 0.9763155915426543,
+      "var_explained_1": 0.6534278318790036,
+      "var_explained_2": 0.4224150819188299
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.13230639737588462,
+      "singular_value_correlation": 0.9756280426606142,
+      "var_explained_1": 0.6534278318790036,
+      "var_explained_2": 0.6445406861774784
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.17735820173646072,
+      "singular_value_correlation": 0.936837376417632,
+      "var_explained_1": 0.4224150819188299,
+      "var_explained_2": 0.6445406861774784
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.05096014036906438,
+      "singular_value_correlation": 0.9947354991218745,
+      "var_explained_1": 0.4003682645743269,
+      "var_explained_2": 0.4417128067702726
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.031311742144256215,
+      "singular_value_correlation": 0.8415328467970778,
+      "var_explained_1": 0.4003682645743269,
+      "var_explained_2": 0.596267484390513
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.03473604944505278,
+      "singular_value_correlation": 0.8251498949419354,
+      "var_explained_1": 0.4417128067702726,
+      "var_explained_2": 0.596267484390513
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.15449188705094427,
+      "singular_value_correlation": 0.9504798628575405,
+      "var_explained_1": 0.3538938867279458,
+      "var_explained_2": 0.3243270145924494
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.1265134583661299,
+      "singular_value_correlation": 0.9940252324433742,
+      "var_explained_1": 0.3538938867279458,
+      "var_explained_2": 0.45812538018361404
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.15266840731188538,
+      "singular_value_correlation": 0.9740969030242382,
+      "var_explained_1": 0.3243270145924494,
+      "var_explained_2": 0.45812538018361404
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.04264847249288811,
+      "singular_value_correlation": 0.989765690711727,
+      "var_explained_1": 0.32154464700461416,
+      "var_explained_2": 0.3731939593742392
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.03844348847358146,
+      "singular_value_correlation": 0.9862058825840962,
+      "var_explained_1": 0.32154464700461416,
+      "var_explained_2": 0.486863938044055
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.023901172300135103,
+      "singular_value_correlation": 0.9573911799754271,
+      "var_explained_1": 0.3731939593742392,
+      "var_explained_2": 0.486863938044055
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.04354758197650588,
+      "singular_value_correlation": 0.7680818018267391,
+      "var_explained_1": 0.8679911501313898,
+      "var_explained_2": 0.2586377547234919
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.012489699552170047,
+      "singular_value_correlation": 0.7852821653397948,
+      "var_explained_1": 0.8679911501313898,
+      "var_explained_2": 0.3796708322293071
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.04885960604475607,
+      "singular_value_correlation": 0.9488437373916525,
+      "var_explained_1": 0.2586377547234919,
+      "var_explained_2": 0.3796708322293071
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.16798764302392294,
+      "singular_value_correlation": 0.9942548600216248,
+      "var_explained_1": 0.2523929387358648,
+      "var_explained_2": 0.4801002440524523
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.0474277397385124,
+      "singular_value_correlation": 0.9684024714898938,
+      "var_explained_1": 0.2523929387358648,
+      "var_explained_2": 0.5256270556775875
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.04082201138274938,
+      "singular_value_correlation": 0.9550058876456944,
+      "var_explained_1": 0.2523929387358648,
+      "var_explained_2": 0.6905829773482696
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.035133992719171545,
+      "singular_value_correlation": 0.9763067380606174,
+      "var_explained_1": 0.4801002440524523,
+      "var_explained_2": 0.5256270556775875
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "trial_mode_similarity": 0.1299622132429628,
+      "singular_value_correlation": 0.9671312391980382,
+      "var_explained_1": 0.4801002440524523,
+      "var_explained_2": 0.6905829773482696
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.1827037726824981,
+      "singular_value_correlation": 0.9778263078840843,
+      "var_explained_1": 0.5256270556775875,
+      "var_explained_2": 0.6905829773482696
+    },
+    {
+      "region": "POST",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.07148896171594075,
+      "singular_value_correlation": 0.9913635539814042,
+      "var_explained_1": 0.28291963864928643,
+      "var_explained_2": 0.4725416548066263
+    },
+    {
+      "region": "VISa",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "trial_mode_similarity": 0.14335931482970787,
+      "singular_value_correlation": 0.9876654863842013,
+      "var_explained_1": 0.4841950331449482,
+      "var_explained_2": 0.45589879223439306
+    }
+  ],
+  "region_summaries": {
+    "ACA": {
+      "n_sessions": 3,
+      "n_pairs": 3,
+      "mean_trial_mode_similarity": 0.042714146662896905,
+      "mean_var_explained": 0.41596529582209785
+    },
+    "DG": {
+      "n_sessions": 4,
+      "n_pairs": 6,
+      "mean_trial_mode_similarity": 0.12586122077767484,
+      "mean_var_explained": 0.6079700653435816
+    },
+    "MOs": {
+      "n_sessions": 3,
+      "n_pairs": 3,
+      "mean_trial_mode_similarity": 0.039002643986124456,
+      "mean_var_explained": 0.47944951857837087
+    },
+    "SUB": {
+      "n_sessions": 3,
+      "n_pairs": 3,
+      "mean_trial_mode_similarity": 0.14455791757631986,
+      "mean_var_explained": 0.37878209383466976
+    },
+    "VISp": {
+      "n_sessions": 3,
+      "n_pairs": 3,
+      "mean_trial_mode_similarity": 0.034997711088868226,
+      "mean_var_explained": 0.3938675148076361
+    },
+    "root": {
+      "n_sessions": 3,
+      "n_pairs": 3,
+      "mean_trial_mode_similarity": 0.034965629191143995,
+      "mean_var_explained": 0.5020999123613962
+    },
+    "CA1": {
+      "n_sessions": 4,
+      "n_pairs": 6,
+      "mean_trial_mode_similarity": 0.10067289546496953,
+      "mean_var_explained": 0.48717580395354354
+    },
+    "POST": {
+      "n_sessions": 2,
+      "n_pairs": 1,
+      "mean_trial_mode_similarity": 0.07148896171594075,
+      "mean_var_explained": 0.37773064672795637
+    },
+    "VISa": {
+      "n_sessions": 2,
+      "n_pairs": 1,
+      "mean_trial_mode_similarity": 0.14335931482970787,
+      "mean_var_explained": 0.47004691268967064
+    }
+  }
+}

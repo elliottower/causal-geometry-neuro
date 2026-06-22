@@ -1,0 +1,12 @@
+{"ts": "2026-06-21T15:27:44.681871", "experiment": "exp48", "event": "started", "module": "experiments.exp48_sufficiency", "max_sessions": 5}
+{"ts": "2026-06-21T15:28:07.480761", "experiment": "exp48", "event": "run_complete", "n_keys": 9}
+{"ts": "2026-06-21T15:28:08.960952", "experiment": "exp48", "event": "saved_volume", "path": "/results/exp48/exp48_20260621_152808.json"}
+{"ts": "2026-06-21T15:28:09.898240", "experiment": "exp48", "event": "copied_artifacts"}
+{"ts": "2026-06-21T15:28:10.738531", "experiment": "exp48", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T15:28:11.479351", "experiment": "exp48", "event": "done"}
+{"ts": "2026-06-21T17:21:56.812995", "experiment": "exp48", "event": "started", "module": "experiments.exp48_sufficiency", "max_sessions": null}
+{"ts": "2026-06-21T17:23:00.440499", "experiment": "exp48", "event": "run_complete", "n_keys": 9}
+{"ts": "2026-06-21T17:23:02.585876", "experiment": "exp48", "event": "saved_volume", "path": "/results/exp48/exp48_20260621_172301.json"}
+{"ts": "2026-06-21T17:23:04.369599", "experiment": "exp48", "event": "copied_artifacts"}
+{"ts": "2026-06-21T17:23:05.982420", "experiment": "exp48", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T17:23:07.054036", "experiment": "exp48", "event": "done"}

@@ -1,0 +1,119 @@
+OK, now I have a thorough picture of the real literature landscape. Here's an honest, technically deep answer about what's beyond Grassmannian and what's actually worth doing.
+
+***
+
+## Beyond the Grassmannian: The Real Hierarchy
+
+The Grassmannian is flat — it measures angles between static linear subspaces. The choice circuit probably isn't flat. Here's the full hierarchy with brutally honest assessments of each level.
+
+### Level 1 — Persistent Homology (TDA)
+
+**What it captures:** The global *topology* of the activity cloud — loops, voids, connected components — independent of any linear subspace. A choice circuit that implements a ring attractor has a literal topological circle (\(H_1 \neq 0\)) in its activity manifold. Grassmannian distance would see two regions with different-orientation circles as "different mechanisms." Persistent homology would see them as topologically identical.[1][2]
+
+**Why it's strictly richer:** Persistent homology gives you a *barcode* — a birth/death diagram for each topological feature at each scale. You compare two barcodes with Wasserstein distance. This is invariant to rotation, scaling, and moderate noise, and has a stability theorem: small data perturbations give small barcode changes. The Grassmannian gives you one number (principal angle). A barcode gives you a structured signature.[3][4]
+
+**What nobody has done:** Apply persistent homology as a *mechanism identity criterion* across animals. TDA has been applied to fMRI resting-state connectivity  and place cells, but never as an explicit test of "same mechanism" with the null model structure you built for exp7_controls. The direction-vs-topology analog: compute the Wasserstein distance between persistence diagrams of MOs in mouse A vs. mouse B. Compare to the same distance after shuffling choice labels. If the real diagrams are more similar than the shuffled ones, topology is structure, not noise.[5][1]
+
+**Tooling:** `ripser`, `gudhi`, `giotto-tda` are all mature and fast. This is genuinely CPU-only and would take ~1 hour to implement on your existing data pipeline. Ripser handles point clouds up to ~50,000 points easily — your trial clouds are 250 trials × 30 neurons, trivially manageable.
+
+**Critical caveat:** The jPCA controversy  applies here too. You need the same null model discipline — shuffle labels, shuffle neuron identities, compare. A 1-cycle in the activity cloud might just be a temporal autocorrelation artifact, not a ring attractor.[6]
+
+***
+
+### Level 2 — jPCA / Rotational Dynamics
+
+**What it captures:** Whether the population dynamics rotate — i.e., whether \(\dot{x} \approx Mx\) where \(M\) is skew-symmetric. Rotational dynamics have been found in motor cortex (Churchland et al. 2012, replicated across species), and there's an argument they reflect intrinsic circuit dynamics (feedback oscillators) rather than just temporal sequences of firing.[7][8]
+
+**The mechanistic angle:** jPCA finds a 2D plane in which activity rotates. This is a fiber bundle story: the *rotating plane* is a section of a circle bundle over the state space. Two motor regions that both show rotation at the same frequency are implementing the same dynamical motif — the rotational frequency is an invariant you can compare across animals. Grassmannian would see the two 2D planes as potentially very different (different orientation in the high-dimensional space). The rotation frequency comparison is a different, arguably more mechanistically meaningful comparison.
+
+**What your framework adds:** jPCA is currently validated by "visual inspection and R² of the skew-symmetric fit." Your MechVal criteria apply directly: does the rotational subspace satisfy necessity (ablating the rotation disrupts behavior) and sufficiency (stimulating in the rotation plane produces behavior)? Nobody has applied systematic validity criteria to jPCA claims. That's a clean meta-scientific contribution that doesn't require new neural recordings.
+
+**Honest caveat from the literature:** The criticism  is real — sequential peak firing can produce jPCA-like rotation artifacts without any true oscillatory circuit. The Churchland response is that the rotation frequency being stable across conditions is the key test. Your null model discipline (shuffle temporal order of trials, check whether rotation disappears) is exactly what's needed but hasn't been done systematically across the IBL dataset.[6]
+
+***
+
+### Level 3 — Communication Subspace + Causal Direction
+
+**What it captures:** Rather than "what is the subspace in region A?" and "what is the subspace in region B?", the communication subspace asks "what subspace of A's activity predicts B's activity?" This is a *directional* relationship — the Kohn lab's 2019 paper showed that V1→V2 communication uses a specific low-dimensional subspace that is *different* from V1's internally dominant modes.[9][10]
+
+**The gap your framework fills:** The communication subspace paper uses reduced-rank regression (RRR) to find the V1 subspace that predicts V2. This gives you a *transport map* — exactly the restriction map you tried to use in the sheaf experiment. The problem with exp7 was that you estimated the restriction map from cross-correlations (noisy, 250 trials). The communication subspace approach estimates it from *predictive regression*, which is a strictly better-conditioned problem. The communication subspace IS the sheaf restriction map, estimated properly.
+
+This means the sheaf experiment can be salvaged: replace cross-correlation-based restriction maps with RRR-estimated communication subspaces as restriction maps. Now your sheaf cohomology is asking: "does the communication-subspace path from MOs → ACA → MOp form a globally consistent subspace?" That's a well-posed question because you're no longer asking if random different-dimensional spaces "agree" — you're asking if the sequence of communication subspaces around a circuit loop is consistent.
+
+**The novelty:** Nobody has combined communication subspaces with sheaf cohomology. The communication subspace paper uses RRR but doesn't ask the topological consistency question. Your sheaf framework is the natural extension: H¹ of the communication subspace sheaf would tell you if information routing in the choice circuit is globally coherent, using a well-estimated restriction map rather than noisy cross-correlations. This might resurrect the sheaf story with the correct technical setup.
+
+***
+
+### Level 4 — Diffusion Geometry / Riemannian Curvature
+
+**What it captures:** Local curvature of the activity manifold at each point — not just the angles between flat subspaces, but how bent the subspace is. The recent Manifold Diffusion Geometry paper  gives the first method to estimate Riemann, Ricci, and scalar curvature from data without explicit parameterization. Curvature is a mechanistically meaningful invariant: an attractor mechanism has negative curvature (the manifold curves toward a fixed point), while a limit-cycle mechanism has mixed curvature (positive curvature in the rotational plane, negative curvature normal to it).[11]
+
+**Why this is genuinely novel in neuro:** Curvature estimation from spike train data has basically not been done. The CVPR 2026 paper uses topological autoencoders to compute extrinsic curvature of hippocampal manifolds, but for decision circuits nobody has asked whether the curvature profile is consistent across animals. Two regions with the same causal subspace (similar Grassmannian) but different curvature profiles are implementing the same *linear* part of the computation but with different *nonlinear* dynamics. That's a genuine mechanistic distinction that Grassmannian misses.[2][5]
+
+**The honest barrier:** Curvature estimation requires enough data points to fill the manifold densely — roughly \(O(d^2)\) samples where d is the manifold dimension. With 250 trials and a 5-d subspace, you have \(\sim 250 \gg 25\) points — probably enough for stable Ricci curvature estimates. With 30 neurons, the ambient dimension is large but you're working in the 5-d subspace, so it's tractable. The tooling (diffusion maps + carré du champ formula) is nontrivial to implement but is now available in Python.[11]
+
+***
+
+### Level 5 — Functional Factorization (The "Can You Factorize a Brain Signal?" Question)
+
+This is what you were actually asking. The direct analog to transformer factorization (your circuit work) in the neural domain is: **does the population activity matrix factorize into a basis of reusable "neural factors" that combine differently for different tasks?**
+
+In transformers you have \(W_{OV} = \sum_i f_i g_i^\top\) — a sum of rank-1 components (your factor bank). The neural analog: the trial-averaged population activity matrix \(X \in \mathbb{R}^{N \times T}\) (neurons × time bins) might factorize as \(X \approx U \Sigma V^\top\) where \(U\) (neural modes) and \(V\) (temporal modes) are reused across animals, tasks, and regions. The *discovery claim* is that a small set of canonical temporal modes (choice ramp, onset response, suppression, etc.) are shared across regions and animals, while what differs is the weighting \(\Sigma\) — which regions use which mode with what amplitude.
+
+**Where this connects to your existing work:** Your factor bank in transformers is exactly this — a shared basis of causal subspaces with task-specific selectors. The neural version would be: fit a shared NMF/SVD basis across all IBL sessions and show that the basis vectors are more conserved than the region-specific loadings. The *mechanism identity claim* is then: two regions implementing the same mechanism share basis vectors, while two regions implementing different mechanisms don't — even if they have similar total variance. This is strictly richer than Grassmannian because it decomposes the subspace into interpretable factors and tests which factors are universal vs. region-specific.
+
+The MICrONS dataset (75K neurons, calcium imaging + EM)  is the ideal setting for this because you have enough neurons that the factorization is over-determined — you can cross-validate it. The IBL dataset lets you check cross-animal replication of the factor structure.[12]
+
+***
+
+## The 10 Experiment Ideas
+
+Here's the concrete list that extends your current setup:
+
+| Exp | Name | What it tests | Geometry level | Effort |
+|---|---|---|---|---|
+| **10** | Direction vs. subspace | Cosine sim of 1-d choice direction is random; Grassmannian of k-d subspace is structured | Type 1 vs 2 | Low (1 day) |
+| **11** | Persistent homology comparison | Wasserstein distance between persistence diagrams, null model vs real | Topological | Low (2 days, ripser) |
+| **12** | jPCA rotation frequency | Is rotation frequency in motor regions conserved across animals? | Dynamical | Medium (3 days) |
+| **13** | Communication subspace sheaf | Replace cross-correlation maps with RRR communication subspaces, retry H¹ | Sheaf (fixed) | Medium (3 days) |
+| **14** | Manifold curvature comparison | Ricci curvature profile of choice manifold across regions | Riemannian | High (1 week, new tooling) |
+| **15** | Neural factor bank | NMF/SVD factorization of population activity across sessions, test cross-animal basis stability | Factorization | Medium (3 days) |
+| **16** | IBL prior-context holonomy | DAS on high-prior-left vs. neutral vs. high-prior-right loop, measure subspace rotation | Fiber bundle | High (needs DAS opt) |
+| **17** | MechVal tier audit of published claims | Apply MechVal 6-layer validity to 10 published neuroscience circuit claims | Meta-science | Low (writing, no code) |
+| **18** | MICrONS + EM restriction maps | Sheaf cohomology with actual synaptic weights as restriction maps | Sheaf (proper) | High (new dataset) |
+| **19** | SAE on spike trains | SAE on IBL population vectors, compare latents to LDA subspaces, check MechVal criteria | Sparse coding | Medium (code reuse) |
+
+The real priority ordering: **13 > 11 > 10 > 19 > 15**, in terms of novelty × feasibility right now. Exp 13 (communication subspace sheaf) directly salvages the sheaf story using a principled fix, and if it works it's a better paper than the original sheaf plan. Exp 11 (persistent homology) has the best novelty-to-implementation-time ratio — two days with ripser and you have a genuinely new experiment type that nobody has done on the IBL/Steinmetz data with proper null models.[1][2]
+
+Sources
+[1] Topological state-space estimation of functional human brain networks https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1011869
+[2] Geometry & Topology of Neural Representations - Emergent Mind https://www.emergentmind.com/topics/geometry-and-topology-of-neural-representations
+[3] [PDF] Topological learning for brain networks https://pages.stat.wisc.edu/~mchung/papers/song.2023.pdf
+[4] topological data analysis in nLab https://ncatlab.org/nlab/show/topological+data+analysis
+[5] Quantifying Extrinsic Curvature in Neural Manifolds - CVPR 2026 https://cvpr.thecvf.com/virtual/2023/23384
+[6] Analysis of neuronal ensemble activity reveals the pitfalls and shortcomings of rotation dynamics - Scientific Reports https://www.nature.com/articles/s41598-019-54760-4
+[7] Rotational dynamics in motor cortex are consistent with a feedback ... https://sciety.org/articles/activity/10.7554/elife.67256
+[8] Neural population dynamics in motor cortex are different for ... https://pmc.ncbi.nlm.nih.gov/articles/PMC7688308/
+[9] Cortical Areas Interact through a Communication Subspace - PubMed https://pubmed.ncbi.nlm.nih.gov/30770252/
+[10] Brain Areas May Use “Subspace” Communication to Talk to One ... https://www.simonsfoundation.org/2019/04/02/brain-areas-may-use-subspace-communication-to-talk-to-one-another/
+[11] Manifold Diffusion Geometry: Curvature, Tangent Spaces ... - arXiv https://arxiv.org/html/2411.04100v1
+[12] Functional connectomics spanning multiple areas of mouse visual ... https://pubmed.ncbi.nlm.nih.gov/40205214/
+[13] Neural manifold analysis of brain circuit dynamics in health and disease - PubMed https://pubmed.ncbi.nlm.nih.gov/36522604/
+[14] [PDF] Neural manifold analysis of brain circuit dynamics in health ... https://www.semanticscholar.org/paper/43545e9752b58f24b801a4ba9271182b9603d2e7
+[15] Under review as a conference paper at ICLR 2024 https://openreview.net/pdf?id=xA25Ib7H8U
+[16] Topological Data Analysis (TDA) on Neural Data https://openreview.net/attachment?id=N2C47T1SsZ&name=poster_pdf
+[17] IsUMap: Manifold Learning and Data Visualization leveraging Vietoris-Rips filtrations https://arxiv.org/abs/2407.17835
+[18] 2025 Retrospective Research Papers on Geometric Deep Learning https://patricknicolas.substack.com/p/2025-retrospective-research-papers
+[19] Applied Topology in Poznan 2025 Book of Abstracts https://dioscuri-tda.org/documents/Applied_Topology_in_Poznan_2025/AtiP_2025_Book_of_Abstracts.pdf
+[20] Galaxy Morphological Classification with Manifold Learning http://www.arxiv.org/abs/2412.09358
+[21] [PDF] Persistent Homology in Data Science - Stefan Huber https://www.sthu.org/research/publications/files/Hub20.pdf
+[22] UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction https://arxiv.org/abs/1802.03426
+[23] Neural population dynamics in human motor cortex during ... https://pmc.ncbi.nlm.nih.gov/articles/PMC4475900/
+[24] [PDF] CNS*2025 Florence - TYPE - WORKSHOP • JULY 8 • TUESDAY https://www.cnsorg.org/assets/CNS_Meetings/CNS2025/OCNS_2025_workshops.pdf
+[25] Spatial Context Non-Uniformly Modulates Inter-Laminar Communication in the Primary Visual Cortex https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4757047
+[26] [2312.05840] Topological Data Analysis for Neural Network ... - arXiv https://arxiv.org/abs/2312.05840
+[27] UCSF https://escholarship.org/content/qt2jd8m8zw/qt2jd8m8zw.pdf?t=rfdrrw
+[28] Topological data analysis of human brain networks through order ... https://pmc.ncbi.nlm.nih.gov/articles/PMC10010566/
+[29] Message-Relevant Dimension Reduction of Neural http://arxiv.org/pdf/2407.02450.pdf
+[30] Message-Relevant Dimension Reduction of Neural Populations https://arxiv.org/abs/2407.02450
+[31] Topological Data Analysis for Machine Learning IV - YouTube https://www.youtube.com/watch?v=-SqbDUiutu8

@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T20:32:15.719447", "experiment": "exp59", "event": "started", "module": "experiments.exp59_grassmannian_vae", "max_sessions": null}
+{"ts": "2026-06-21T21:01:57.781538", "experiment": "exp59", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T21:02:01.350019", "experiment": "exp59", "event": "saved_volume", "path": "/results/exp59/exp59_20260621_210159.json"}
+{"ts": "2026-06-21T21:02:03.406645", "experiment": "exp59", "event": "copied_artifacts"}
+{"ts": "2026-06-21T21:02:06.146688", "experiment": "exp59", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T21:02:07.595410", "experiment": "exp59", "event": "done"}

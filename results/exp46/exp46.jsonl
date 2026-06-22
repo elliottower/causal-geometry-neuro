@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T15:00:26.191277", "experiment": "exp46", "event": "started", "module": "experiments.exp46_ibl_cross_dataset", "max_sessions": null}
+{"ts": "2026-06-21T16:54:02.267686", "experiment": "exp46", "event": "run_complete", "n_keys": 12}
+{"ts": "2026-06-21T16:54:05.050198", "experiment": "exp46", "event": "saved_volume", "path": "/results/exp46/exp46_20260621_165403.json"}
+{"ts": "2026-06-21T16:54:07.300891", "experiment": "exp46", "event": "copied_artifacts"}
+{"ts": "2026-06-21T16:54:09.331558", "experiment": "exp46", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T16:54:10.755720", "experiment": "exp46", "event": "done"}

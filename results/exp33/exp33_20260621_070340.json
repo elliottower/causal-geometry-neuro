@@ -1,0 +1,733 @@
+{
+  "timestamp": "2026-06-21T07:03:39.210558",
+  "n_sessions": 39,
+  "n_regions": 73,
+  "n_regions_analyzed": 73,
+  "region_results": {
+    "ACA": {
+      "n_sessions": 11,
+      "power_law_alpha": 36.928357494300236,
+      "mean_grassmannian_ev_ch": 0.7426060066275636,
+      "mean_subspace_overlap": 0.9398093459296656,
+      "mean_ev_choice_corr": 0.047378605216570176,
+      "mean_choice_subspace_shift": 2.0132373626030584,
+      "mean_cross_evidence_overlap": 0.6363416851792328
+    },
+    "CA3": {
+      "n_sessions": 8,
+      "power_law_alpha": 9.823907579784201,
+      "mean_grassmannian_ev_ch": 0.8020981299565701,
+      "mean_subspace_overlap": 0.9356012694682145,
+      "mean_ev_choice_corr": 0.04294220263248051,
+      "mean_choice_subspace_shift": 2.0125840681087266,
+      "mean_cross_evidence_overlap": 0.6337524044683286
+    },
+    "DG": {
+      "n_sessions": 16,
+      "power_law_alpha": 41.50999998831728,
+      "mean_grassmannian_ev_ch": 0.7306320913185401,
+      "mean_subspace_overlap": 0.933464660726605,
+      "mean_ev_choice_corr": -0.03144476416042535,
+      "mean_choice_subspace_shift": 1.9722896624854755,
+      "mean_cross_evidence_overlap": 0.6529127686415515
+    },
+    "LS": {
+      "n_sessions": 3,
+      "power_law_alpha": 1.4391996040456405,
+      "mean_grassmannian_ev_ch": 0.936382930161912,
+      "mean_subspace_overlap": 0.9085141772076808,
+      "mean_ev_choice_corr": 0.04001888951113578,
+      "mean_choice_subspace_shift": 2.352242573338847,
+      "mean_cross_evidence_overlap": 0.5149885147888398
+    },
+    "MOs": {
+      "n_sessions": 17,
+      "power_law_alpha": 20.11543807937338,
+      "mean_grassmannian_ev_ch": 0.7083182877856198,
+      "mean_subspace_overlap": 0.948042311739663,
+      "mean_ev_choice_corr": 0.04624248928224811,
+      "mean_choice_subspace_shift": 2.2189468784936786,
+      "mean_cross_evidence_overlap": 0.5698670439555776
+    },
+    "SUB": {
+      "n_sessions": 9,
+      "power_law_alpha": 2.077659050168143,
+      "mean_grassmannian_ev_ch": 1.0901062554536032,
+      "mean_subspace_overlap": 0.8873334212649027,
+      "mean_ev_choice_corr": -0.04160066680348747,
+      "mean_choice_subspace_shift": 2.168571592412477,
+      "mean_cross_evidence_overlap": 0.583144416686511
+    },
+    "VISp": {
+      "n_sessions": 12,
+      "power_law_alpha": 11.12659767020677,
+      "mean_grassmannian_ev_ch": 0.788964278782544,
+      "mean_subspace_overlap": 0.9360942028207567,
+      "mean_ev_choice_corr": 0.001748671715008858,
+      "mean_choice_subspace_shift": 2.1972237452764745,
+      "mean_cross_evidence_overlap": 0.5648618066568798
+    },
+    "root": {
+      "n_sessions": 22,
+      "power_law_alpha": 23.457635541581965,
+      "mean_grassmannian_ev_ch": 0.6583156642616483,
+      "mean_subspace_overlap": 0.948845842464867,
+      "mean_ev_choice_corr": 0.052439027852913815,
+      "mean_choice_subspace_shift": 2.203905903941146,
+      "mean_cross_evidence_overlap": 0.5676519555287228
+    },
+    "CA1": {
+      "n_sessions": 20,
+      "power_law_alpha": 26.390828271056954,
+      "mean_grassmannian_ev_ch": 0.8123779245426755,
+      "mean_subspace_overlap": 0.9315306768619047,
+      "mean_ev_choice_corr": -0.07676318554493142,
+      "mean_choice_subspace_shift": 1.9915229021377427,
+      "mean_cross_evidence_overlap": 0.6479607667251499
+    },
+    "POST": {
+      "n_sessions": 4,
+      "power_law_alpha": 36.54627686307511,
+      "mean_grassmannian_ev_ch": 0.6698808672700227,
+      "mean_subspace_overlap": 0.955859147431696,
+      "mean_ev_choice_corr": 0.12325060160833859,
+      "mean_choice_subspace_shift": 2.130407534194954,
+      "mean_cross_evidence_overlap": 0.601548511702534
+    },
+    "VISl": {
+      "n_sessions": 3,
+      "power_law_alpha": 1.4087368431203873,
+      "mean_grassmannian_ev_ch": 0.9155295477374321,
+      "mean_subspace_overlap": 0.9195405241387743,
+      "mean_ev_choice_corr": -0.01286433870533473,
+      "mean_choice_subspace_shift": 2.2132497093467705,
+      "mean_cross_evidence_overlap": 0.5726218005370542
+    },
+    "VISpm": {
+      "n_sessions": 4,
+      "power_law_alpha": 1.8645702869840592,
+      "mean_grassmannian_ev_ch": 0.8890814464183021,
+      "mean_subspace_overlap": 0.9249840142788412,
+      "mean_ev_choice_corr": 0.11254443169949507,
+      "mean_choice_subspace_shift": 2.3162488009170197,
+      "mean_cross_evidence_overlap": 0.5308714989931702
+    },
+    "MG": {
+      "n_sessions": 2,
+      "power_law_alpha": 0.9171454195443254,
+      "mean_grassmannian_ev_ch": 1.094109182251178,
+      "mean_subspace_overlap": 0.8914186522900472,
+      "mean_ev_choice_corr": -0.05160106105698058,
+      "mean_choice_subspace_shift": 2.7497272670267243,
+      "mean_cross_evidence_overlap": 0.3504554528007332
+    },
+    "MRN": {
+      "n_sessions": 11,
+      "power_law_alpha": 10.468925751876101,
+      "mean_grassmannian_ev_ch": 0.8027538894341496,
+      "mean_subspace_overlap": 0.9315227519889091,
+      "mean_ev_choice_corr": -0.025547477980247892,
+      "mean_choice_subspace_shift": 2.128807053897827,
+      "mean_cross_evidence_overlap": 0.6004296613863619
+    },
+    "NB": {
+      "n_sessions": 1,
+      "power_law_alpha": 2.9653006112403384,
+      "mean_grassmannian_ev_ch": 0.9242923065191375,
+      "mean_subspace_overlap": 0.9204799240668622,
+      "mean_ev_choice_corr": 0.1447751774631627,
+      "mean_choice_subspace_shift": 1.9546949447766535,
+      "mean_cross_evidence_overlap": 0.6528916550418703
+    },
+    "SPF": {
+      "n_sessions": 2,
+      "power_law_alpha": 9.478523737529933,
+      "mean_grassmannian_ev_ch": 0.6512052193493585,
+      "mean_subspace_overlap": 0.9584409949215134,
+      "mean_ev_choice_corr": -0.24675411133385555,
+      "mean_choice_subspace_shift": 2.113492834325031,
+      "mean_cross_evidence_overlap": 0.6111723466583399
+    },
+    "VISam": {
+      "n_sessions": 11,
+      "power_law_alpha": 7.160302044654042,
+      "mean_grassmannian_ev_ch": 0.8109778607833554,
+      "mean_subspace_overlap": 0.9353869570897764,
+      "mean_ev_choice_corr": 0.029276782447421247,
+      "mean_choice_subspace_shift": 2.2038773004191317,
+      "mean_cross_evidence_overlap": 0.5699165910089394
+    },
+    "LGd": {
+      "n_sessions": 8,
+      "power_law_alpha": 1.753297082619341,
+      "mean_grassmannian_ev_ch": 0.8758460190171344,
+      "mean_subspace_overlap": 0.9246826253913052,
+      "mean_ev_choice_corr": -0.016824857133205015,
+      "mean_choice_subspace_shift": 2.2266826787446607,
+      "mean_cross_evidence_overlap": 0.5573001904499271
+    },
+    "LSr": {
+      "n_sessions": 2,
+      "power_law_alpha": 12.372117714628441,
+      "mean_grassmannian_ev_ch": 0.8569442819035527,
+      "mean_subspace_overlap": 0.9293301647531076,
+      "mean_ev_choice_corr": 0.07551843600485876,
+      "mean_choice_subspace_shift": 2.2194504753422377,
+      "mean_cross_evidence_overlap": 0.5725517105748222
+    },
+    "TH": {
+      "n_sessions": 8,
+      "power_law_alpha": 8.267303902302748,
+      "mean_grassmannian_ev_ch": 0.7692223428934517,
+      "mean_subspace_overlap": 0.9358639489996196,
+      "mean_ev_choice_corr": -0.1164719626338222,
+      "mean_choice_subspace_shift": 2.228181763936583,
+      "mean_cross_evidence_overlap": 0.561969901172608
+    },
+    "VISa": {
+      "n_sessions": 5,
+      "power_law_alpha": 2.3196619571313226,
+      "mean_grassmannian_ev_ch": 1.0824988487945841,
+      "mean_subspace_overlap": 0.8906851936534966,
+      "mean_ev_choice_corr": 0.10197635839797037,
+      "mean_choice_subspace_shift": 2.0561251214683933,
+      "mean_cross_evidence_overlap": 0.6326622126809278
+    },
+    "VPL": {
+      "n_sessions": 4,
+      "power_law_alpha": 1.752615547104015,
+      "mean_grassmannian_ev_ch": 0.7950860461483686,
+      "mean_subspace_overlap": 0.9334132833491438,
+      "mean_ev_choice_corr": 0.10154252277398891,
+      "mean_choice_subspace_shift": 2.106276634475494,
+      "mean_cross_evidence_overlap": 0.6032328308708279
+    },
+    "OLF": {
+      "n_sessions": 2,
+      "power_law_alpha": 1.1669582063244535,
+      "mean_grassmannian_ev_ch": 0.7773536550298531,
+      "mean_subspace_overlap": 0.9318496626233356,
+      "mean_ev_choice_corr": 0.11886238847129763,
+      "mean_choice_subspace_shift": 2.1835817498420127,
+      "mean_cross_evidence_overlap": 0.5760886900311317
+    },
+    "ORB": {
+      "n_sessions": 5,
+      "power_law_alpha": 14.817303232178194,
+      "mean_grassmannian_ev_ch": 0.7618440389259071,
+      "mean_subspace_overlap": 0.9427771099310267,
+      "mean_ev_choice_corr": 0.05282668043888322,
+      "mean_choice_subspace_shift": 2.1908969044607653,
+      "mean_cross_evidence_overlap": 0.5667171535928804
+    },
+    "AUD": {
+      "n_sessions": 1,
+      "power_law_alpha": 0.795166598328838,
+      "mean_grassmannian_ev_ch": 0.8673268485836918,
+      "mean_subspace_overlap": 0.9293734815815291,
+      "mean_ev_choice_corr": -0.22733142254220046,
+      "mean_choice_subspace_shift": 2.3664337631761154,
+      "mean_cross_evidence_overlap": 0.5112587302660756
+    },
+    "CP": {
+      "n_sessions": 5,
+      "power_law_alpha": 10.416144630303435,
+      "mean_grassmannian_ev_ch": 1.0245317317410958,
+      "mean_subspace_overlap": 0.8994189784944504,
+      "mean_ev_choice_corr": 0.016200008083846525,
+      "mean_choice_subspace_shift": 2.192440324493714,
+      "mean_cross_evidence_overlap": 0.5745126709493622
+    },
+    "EPd": {
+      "n_sessions": 1,
+      "power_law_alpha": 43.60890536407937,
+      "mean_grassmannian_ev_ch": 1.3966468630817328,
+      "mean_subspace_overlap": 0.8346541058129352,
+      "mean_ev_choice_corr": 0.04885958491959429,
+      "mean_choice_subspace_shift": 1.580265121413016,
+      "mean_cross_evidence_overlap": 0.7745034202160401
+    },
+    "LD": {
+      "n_sessions": 5,
+      "power_law_alpha": 8.063916951688853,
+      "mean_grassmannian_ev_ch": 0.9679742073107391,
+      "mean_subspace_overlap": 0.9084242785337017,
+      "mean_ev_choice_corr": -0.11019683550069077,
+      "mean_choice_subspace_shift": 2.1740829311475185,
+      "mean_cross_evidence_overlap": 0.5812194436494477
+    },
+    "PIR": {
+      "n_sessions": 1,
+      "power_law_alpha": 1.9592773999784883,
+      "mean_grassmannian_ev_ch": 0.9173224303758798,
+      "mean_subspace_overlap": 0.9215896522305652,
+      "mean_ev_choice_corr": 0.3308894179316354,
+      "mean_choice_subspace_shift": 2.0720369945755004,
+      "mean_cross_evidence_overlap": 0.621653779875622
+    },
+    "SSp": {
+      "n_sessions": 4,
+      "power_law_alpha": 30.004516897288198,
+      "mean_grassmannian_ev_ch": 1.1066848360305228,
+      "mean_subspace_overlap": 0.8878430257235259,
+      "mean_ev_choice_corr": -0.01980809810981436,
+      "mean_choice_subspace_shift": 2.039758109271862,
+      "mean_cross_evidence_overlap": 0.630953518981703
+    },
+    "ILA": {
+      "n_sessions": 3,
+      "power_law_alpha": 1.2413146724422615,
+      "mean_grassmannian_ev_ch": 0.49464853131562575,
+      "mean_subspace_overlap": 0.974960739834362,
+      "mean_ev_choice_corr": 0.1201016599330751,
+      "mean_choice_subspace_shift": 2.4030601955387008,
+      "mean_cross_evidence_overlap": 0.49545982879908096
+    },
+    "LP": {
+      "n_sessions": 10,
+      "power_law_alpha": 11.05950607286815,
+      "mean_grassmannian_ev_ch": 1.0137950656481651,
+      "mean_subspace_overlap": 0.9011095379817817,
+      "mean_ev_choice_corr": -0.006050193466331585,
+      "mean_choice_subspace_shift": 2.2559319534096134,
+      "mean_cross_evidence_overlap": 0.550951063927319
+    },
+    "PL": {
+      "n_sessions": 8,
+      "power_law_alpha": 9.192290104784998,
+      "mean_grassmannian_ev_ch": 0.7385516298923078,
+      "mean_subspace_overlap": 0.9437501306830206,
+      "mean_ev_choice_corr": -0.11970016938521635,
+      "mean_choice_subspace_shift": 2.1486767392938324,
+      "mean_cross_evidence_overlap": 0.5903099120759034
+    },
+    "PO": {
+      "n_sessions": 5,
+      "power_law_alpha": 2.70406172196484,
+      "mean_grassmannian_ev_ch": 1.1204793374489177,
+      "mean_subspace_overlap": 0.8861315530859735,
+      "mean_ev_choice_corr": -0.04065988635062864,
+      "mean_choice_subspace_shift": 2.3515612745646637,
+      "mean_cross_evidence_overlap": 0.5088471095950718
+    },
+    "TT": {
+      "n_sessions": 3,
+      "power_law_alpha": 6.212130328107726,
+      "mean_grassmannian_ev_ch": 0.7468343896598396,
+      "mean_subspace_overlap": 0.9455824414653836,
+      "mean_ev_choice_corr": 0.10058301700330004,
+      "mean_choice_subspace_shift": 2.0229068827331615,
+      "mean_cross_evidence_overlap": 0.6418058255234708
+    },
+    "ORBm": {
+      "n_sessions": 1,
+      "power_law_alpha": 1.4810642387594424,
+      "mean_grassmannian_ev_ch": 1.0787005634563904,
+      "mean_subspace_overlap": 0.8944948028256325,
+      "mean_ev_choice_corr": -0.13509780474402164,
+      "mean_choice_subspace_shift": 2.3404953401509108,
+      "mean_cross_evidence_overlap": 0.5356133378826081
+    },
+    "GPe": {
+      "n_sessions": 3,
+      "power_law_alpha": 1.6819304904734167,
+      "mean_grassmannian_ev_ch": 0.9778162165429246,
+      "mean_subspace_overlap": 0.9078201544376366,
+      "mean_ev_choice_corr": 0.054244585487408535,
+      "mean_choice_subspace_shift": 2.2807244519310976,
+      "mean_cross_evidence_overlap": 0.5442842767605457
+    },
+    "MB": {
+      "n_sessions": 6,
+      "power_law_alpha": 8.980709588958641,
+      "mean_grassmannian_ev_ch": 0.8229664584756894,
+      "mean_subspace_overlap": 0.9321444914261804,
+      "mean_ev_choice_corr": 0.14144622820765237,
+      "mean_choice_subspace_shift": 2.19043602687923,
+      "mean_cross_evidence_overlap": 0.5815962600312371
+    },
+    "POL": {
+      "n_sessions": 3,
+      "power_law_alpha": 23.77402051465513,
+      "mean_grassmannian_ev_ch": 0.8216763951642969,
+      "mean_subspace_overlap": 0.9274541723483217,
+      "mean_ev_choice_corr": 0.029609358690689407,
+      "mean_choice_subspace_shift": 1.8800780782469761,
+      "mean_cross_evidence_overlap": 0.6710001119645076
+    },
+    "SCm": {
+      "n_sessions": 7,
+      "power_law_alpha": 15.599410080954206,
+      "mean_grassmannian_ev_ch": 0.48624728737102874,
+      "mean_subspace_overlap": 0.9717360655164821,
+      "mean_ev_choice_corr": 0.010252216325051895,
+      "mean_choice_subspace_shift": 1.9459559017329724,
+      "mean_cross_evidence_overlap": 0.6667218052606281
+    },
+    "SCsg": {
+      "n_sessions": 3,
+      "power_law_alpha": 32.66093355146855,
+      "mean_grassmannian_ev_ch": 0.6733936064458907,
+      "mean_subspace_overlap": 0.9521449644493214,
+      "mean_ev_choice_corr": 0.11196939095620644,
+      "mean_choice_subspace_shift": 2.093082169263478,
+      "mean_cross_evidence_overlap": 0.6160936930242641
+    },
+    "VISrl": {
+      "n_sessions": 2,
+      "power_law_alpha": 1.1596676817635911,
+      "mean_grassmannian_ev_ch": 1.0781197112040912,
+      "mean_subspace_overlap": 0.8943144398348755,
+      "mean_ev_choice_corr": -0.0506471680958286,
+      "mean_choice_subspace_shift": 2.5632651177675276,
+      "mean_cross_evidence_overlap": 0.4359571157537334
+    },
+    "LSc": {
+      "n_sessions": 1,
+      "power_law_alpha": 2.3818826397366286,
+      "mean_grassmannian_ev_ch": 1.2162104929860522,
+      "mean_subspace_overlap": 0.8694403987920486,
+      "mean_ev_choice_corr": -0.13538831737880377,
+      "mean_choice_subspace_shift": 2.45086258986403,
+      "mean_cross_evidence_overlap": 0.48554577346635097
+    },
+    "MOp": {
+      "n_sessions": 3,
+      "power_law_alpha": 1.1576546479254104,
+      "mean_grassmannian_ev_ch": 0.9928363896422393,
+      "mean_subspace_overlap": 0.9019412095894644,
+      "mean_ev_choice_corr": 0.027087321287325383,
+      "mean_choice_subspace_shift": 2.3509772408278007,
+      "mean_cross_evidence_overlap": 0.5190861199243035
+    },
+    "PT": {
+      "n_sessions": 1,
+      "power_law_alpha": 8.986202519280095,
+      "mean_grassmannian_ev_ch": 0.7679035619753329,
+      "mean_subspace_overlap": 0.9438736990599124,
+      "mean_ev_choice_corr": -0.21607272916352535,
+      "mean_choice_subspace_shift": 2.1536745378124045,
+      "mean_cross_evidence_overlap": 0.6084799831180026
+    },
+    "LH": {
+      "n_sessions": 1,
+      "power_law_alpha": 3.8705983127146726,
+      "mean_grassmannian_ev_ch": 0.47097624581241504,
+      "mean_subspace_overlap": 0.9782251470137575,
+      "mean_ev_choice_corr": 0.34893753398285443,
+      "mean_choice_subspace_shift": 1.828577984411013,
+      "mean_cross_evidence_overlap": 0.7042079415184616
+    },
+    "MD": {
+      "n_sessions": 3,
+      "power_law_alpha": 1.0486321678066721,
+      "mean_grassmannian_ev_ch": 0.8058833024403261,
+      "mean_subspace_overlap": 0.9325616555646462,
+      "mean_ev_choice_corr": -0.20508437499877608,
+      "mean_choice_subspace_shift": 2.383238298865187,
+      "mean_cross_evidence_overlap": 0.5004306389315561
+    },
+    "MS": {
+      "n_sessions": 1,
+      "power_law_alpha": 5.24337937210045,
+      "mean_grassmannian_ev_ch": 0.49013077770272784,
+      "mean_subspace_overlap": 0.9764542607385225,
+      "mean_ev_choice_corr": 0.29495831692420293,
+      "mean_choice_subspace_shift": 2.082135282211242,
+      "mean_cross_evidence_overlap": 0.6158993543773692
+    },
+    "RN": {
+      "n_sessions": 1,
+      "power_law_alpha": 2.365403507505064,
+      "mean_grassmannian_ev_ch": 0.7098699930750448,
+      "mean_subspace_overlap": 0.9516893224971164,
+      "mean_ev_choice_corr": 0.23427749584352062,
+      "mean_choice_subspace_shift": 2.2847759137971546,
+      "mean_cross_evidence_overlap": 0.5485421054379339
+    },
+    "SCs": {
+      "n_sessions": 4,
+      "power_law_alpha": 9.998340360767484,
+      "mean_grassmannian_ev_ch": 0.7343729512152736,
+      "mean_subspace_overlap": 0.9407748951645358,
+      "mean_ev_choice_corr": -0.070012984608812,
+      "mean_choice_subspace_shift": 2.0572249157537303,
+      "mean_cross_evidence_overlap": 0.6261448579130983
+    },
+    "ZI": {
+      "n_sessions": 4,
+      "power_law_alpha": 6.182120715349097,
+      "mean_grassmannian_ev_ch": 0.7427071240531362,
+      "mean_subspace_overlap": 0.9359169365274791,
+      "mean_ev_choice_corr": -0.048139013636461996,
+      "mean_choice_subspace_shift": 1.9400573975644613,
+      "mean_cross_evidence_overlap": 0.6625264928452927
+    },
+    "RSP": {
+      "n_sessions": 9,
+      "power_law_alpha": 14.514217206282183,
+      "mean_grassmannian_ev_ch": 0.8786496548313978,
+      "mean_subspace_overlap": 0.9218832342345169,
+      "mean_ev_choice_corr": 0.07789570075652001,
+      "mean_choice_subspace_shift": 2.244116060887623,
+      "mean_cross_evidence_overlap": 0.556736387254843
+    },
+    "BLA": {
+      "n_sessions": 2,
+      "power_law_alpha": 1.350333835614417,
+      "mean_grassmannian_ev_ch": 0.7239325178025334,
+      "mean_subspace_overlap": 0.9447133360190616,
+      "mean_ev_choice_corr": -0.22779211444996283,
+      "mean_choice_subspace_shift": 1.974141804226969,
+      "mean_cross_evidence_overlap": 0.6533073395210915
+    },
+    "VPM": {
+      "n_sessions": 4,
+      "power_law_alpha": 2.5424344027564842,
+      "mean_grassmannian_ev_ch": 0.9252424254303124,
+      "mean_subspace_overlap": 0.9096911158287461,
+      "mean_ev_choice_corr": -0.13574269934143962,
+      "mean_choice_subspace_shift": 2.3083387870499346,
+      "mean_cross_evidence_overlap": 0.5361928378189826
+    },
+    "SSs": {
+      "n_sessions": 1,
+      "power_law_alpha": 1.445388502067375,
+      "mean_grassmannian_ev_ch": 0.6197532455265251,
+      "mean_subspace_overlap": 0.9628043609817132,
+      "mean_ev_choice_corr": 0.2801110720855559,
+      "mean_choice_subspace_shift": 2.155230970267558,
+      "mean_cross_evidence_overlap": 0.5835299469855564
+    },
+    "MEA": {
+      "n_sessions": 1,
+      "power_law_alpha": 2.9792263385117956,
+      "mean_grassmannian_ev_ch": 0.4529376816260965,
+      "mean_subspace_overlap": 0.9798330857037134,
+      "mean_ev_choice_corr": 0.35158397059677426,
+      "mean_choice_subspace_shift": 2.1326196084630777,
+      "mean_cross_evidence_overlap": 0.5944722736828523
+    },
+    "RT": {
+      "n_sessions": 2,
+      "power_law_alpha": 11.512956757216859,
+      "mean_grassmannian_ev_ch": 0.5951861076226552,
+      "mean_subspace_overlap": 0.9573196441340803,
+      "mean_ev_choice_corr": 0.09544965446688364,
+      "mean_choice_subspace_shift": 2.1209717869638274,
+      "mean_cross_evidence_overlap": 0.603599586088909
+    },
+    "ACB": {
+      "n_sessions": 3,
+      "power_law_alpha": 2.076952852665682,
+      "mean_grassmannian_ev_ch": 0.6715161381534364,
+      "mean_subspace_overlap": 0.9560716515385171,
+      "mean_ev_choice_corr": 0.06540209417591382,
+      "mean_choice_subspace_shift": 2.303474621537679,
+      "mean_cross_evidence_overlap": 0.5406707751840907
+    },
+    "OT": {
+      "n_sessions": 1,
+      "power_law_alpha": 104.21055604260307,
+      "mean_grassmannian_ev_ch": 0.19747634297141012,
+      "mean_subspace_overlap": 0.9961129659235535,
+      "mean_ev_choice_corr": -0.21518270873526474,
+      "mean_choice_subspace_shift": 2.00289014076657,
+      "mean_cross_evidence_overlap": 0.6580005425734793
+    },
+    "SI": {
+      "n_sessions": 1,
+      "power_law_alpha": 44.329197251065104,
+      "mean_grassmannian_ev_ch": 0.7642640668461919,
+      "mean_subspace_overlap": 0.9443783645957223,
+      "mean_ev_choice_corr": 0.2035562239678152,
+      "mean_choice_subspace_shift": 2.264645425037493,
+      "mean_cross_evidence_overlap": 0.5642942034280566
+    },
+    "SNr": {
+      "n_sessions": 4,
+      "power_law_alpha": 7.8564414263472475,
+      "mean_grassmannian_ev_ch": 0.6632157342104184,
+      "mean_subspace_overlap": 0.9547052253621598,
+      "mean_ev_choice_corr": 0.23881313913006252,
+      "mean_choice_subspace_shift": 2.07127810767031,
+      "mean_cross_evidence_overlap": 0.626734206988184
+    },
+    "APN": {
+      "n_sessions": 2,
+      "power_law_alpha": 1.950895579905298,
+      "mean_grassmannian_ev_ch": 0.6389102363715831,
+      "mean_subspace_overlap": 0.9605473311560532,
+      "mean_ev_choice_corr": -0.23022723274478413,
+      "mean_choice_subspace_shift": 2.1547277851410165,
+      "mean_cross_evidence_overlap": 0.5922511001545665
+    },
+    "VAL": {
+      "n_sessions": 1,
+      "power_law_alpha": 1.6644712652904807,
+      "mean_grassmannian_ev_ch": 1.1633127006037307,
+      "mean_subspace_overlap": 0.879260049915624,
+      "mean_ev_choice_corr": 0.003854403123175559,
+      "mean_choice_subspace_shift": 2.430627371995746,
+      "mean_cross_evidence_overlap": 0.47796668861305525
+    },
+    "IC": {
+      "n_sessions": 1,
+      "power_law_alpha": 13.060369109546286,
+      "mean_grassmannian_ev_ch": 0.4090177552005182,
+      "mean_subspace_overlap": 0.9835023824543626,
+      "mean_ev_choice_corr": -0.3629917733775822,
+      "mean_choice_subspace_shift": 2.2187565725056446,
+      "mean_cross_evidence_overlap": 0.5735758768061794
+    },
+    "CA2": {
+      "n_sessions": 1,
+      "power_law_alpha": 1.1705362831887551,
+      "mean_grassmannian_ev_ch": 0.8998876360148587,
+      "mean_subspace_overlap": 0.9243395964159188,
+      "mean_ev_choice_corr": 0.261386754336605,
+      "mean_choice_subspace_shift": 2.532681270763889,
+      "mean_cross_evidence_overlap": 0.4515514661907975
+    },
+    "SCig": {
+      "n_sessions": 4,
+      "power_law_alpha": 1.2405383355137605,
+      "mean_grassmannian_ev_ch": 0.8049292757517308,
+      "mean_subspace_overlap": 0.9327280735654169,
+      "mean_ev_choice_corr": 0.04949052924252186,
+      "mean_choice_subspace_shift": 2.3883096822274714,
+      "mean_cross_evidence_overlap": 0.5033753523587591
+    },
+    "DP": {
+      "n_sessions": 1,
+      "power_law_alpha": 32.69047279299186,
+      "mean_grassmannian_ev_ch": 0.6119054336690989,
+      "mean_subspace_overlap": 0.9637109939242491,
+      "mean_ev_choice_corr": -0.2396808828930264,
+      "mean_choice_subspace_shift": 2.124476118407878,
+      "mean_cross_evidence_overlap": 0.6016252525187702
+    },
+    "CL": {
+      "n_sessions": 1,
+      "power_law_alpha": 27.655003575161082,
+      "mean_grassmannian_ev_ch": 1.3807001191353718,
+      "mean_subspace_overlap": 0.8377906740862857,
+      "mean_ev_choice_corr": -0.10232724970564062,
+      "mean_choice_subspace_shift": 2.2721924748941347,
+      "mean_cross_evidence_overlap": 0.5536824166019946
+    },
+    "PAG": {
+      "n_sessions": 2,
+      "power_law_alpha": 15.953249730889416,
+      "mean_grassmannian_ev_ch": 0.6700241818866195,
+      "mean_subspace_overlap": 0.9567452026784601,
+      "mean_ev_choice_corr": -0.2772964217092879,
+      "mean_choice_subspace_shift": 2.065037543804447,
+      "mean_cross_evidence_overlap": 0.6224409197277032
+    },
+    "EP": {
+      "n_sessions": 1,
+      "power_law_alpha": 1.5093664690249937,
+      "mean_grassmannian_ev_ch": 0.8888400659666145,
+      "mean_subspace_overlap": 0.9260625909835427,
+      "mean_ev_choice_corr": -0.2240069101500385,
+      "mean_choice_subspace_shift": 2.8167943765079926,
+      "mean_cross_evidence_overlap": 0.31574662485189975
+    },
+    "BMA": {
+      "n_sessions": 1,
+      "power_law_alpha": 1.1904022513668737,
+      "mean_grassmannian_ev_ch": 0.8684683271134912,
+      "mean_subspace_overlap": 0.9291992984606076,
+      "mean_ev_choice_corr": -0.20393872851088157,
+      "mean_choice_subspace_shift": 2.482047425393587,
+      "mean_cross_evidence_overlap": 0.462354403280316
+    },
+    "COA": {
+      "n_sessions": 1,
+      "power_law_alpha": 0.6559877571109046,
+      "mean_grassmannian_ev_ch": 1.3131376266887946,
+      "mean_subspace_overlap": 0.8509634481178059,
+      "mean_ev_choice_corr": 0.060101791275864,
+      "mean_choice_subspace_shift": 2.5336432318098474,
+      "mean_cross_evidence_overlap": 0.44016250387645417
+    },
+    "CA": {
+      "n_sessions": 1,
+      "power_law_alpha": 0.96865801882544,
+      "mean_grassmannian_ev_ch": 0.7776927303028304,
+      "mean_subspace_overlap": 0.9425068599188396,
+      "mean_ev_choice_corr": 0.21611887261287374,
+      "mean_choice_subspace_shift": 2.328716490215629,
+      "mean_cross_evidence_overlap": 0.5261084138196757
+    }
+  },
+  "prediction_tests": {
+    "alpha_vs_geometric_iia": {
+      "rho": 0.28779464395902754,
+      "p": 0.013550814087336842,
+      "n": 73,
+      "interpretation": "Positive rho means low-dim (high-alpha) regions have higher evidence-choice subspace overlap \u2014 CKA-type regions implement the linear evidence\u2192choice causal variable more faithfully."
+    },
+    "alpha_vs_choice_shift": {
+      "rho": -0.592712575589288,
+      "p": 3.303087914338485e-08,
+      "n": 73,
+      "interpretation": "Negative rho means high-dim regions show larger choice subspace rotation when evidence changes \u2014 their geometry is more sensitive to the evidence intervention."
+    }
+  },
+  "top_routing_regions": [
+    {
+      "region": "OT",
+      "grassmannian_ev_ch": 0.19747634297141012,
+      "alpha": 104.21055604260307
+    },
+    {
+      "region": "IC",
+      "grassmannian_ev_ch": 0.4090177552005182,
+      "alpha": 13.060369109546286
+    },
+    {
+      "region": "MEA",
+      "grassmannian_ev_ch": 0.4529376816260965,
+      "alpha": 2.9792263385117956
+    },
+    {
+      "region": "LH",
+      "grassmannian_ev_ch": 0.47097624581241504,
+      "alpha": 3.8705983127146726
+    },
+    {
+      "region": "SCm",
+      "grassmannian_ev_ch": 0.48624728737102874,
+      "alpha": 15.599410080954206
+    }
+  ],
+  "bottom_routing_regions": [
+    {
+      "region": "VAL",
+      "grassmannian_ev_ch": 1.1633127006037307,
+      "alpha": 1.6644712652904807
+    },
+    {
+      "region": "LSc",
+      "grassmannian_ev_ch": 1.2162104929860522,
+      "alpha": 2.3818826397366286
+    },
+    {
+      "region": "COA",
+      "grassmannian_ev_ch": 1.3131376266887946,
+      "alpha": 0.6559877571109046
+    },
+    {
+      "region": "CL",
+      "grassmannian_ev_ch": 1.3807001191353718,
+      "alpha": 27.655003575161082
+    },
+    {
+      "region": "EPd",
+      "grassmannian_ev_ch": 1.3966468630817328,
+      "alpha": 43.60890536407937
+    }
+  ]
+}

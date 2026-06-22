@@ -1,0 +1,12 @@
+{"ts": "2026-06-21T04:58:18.528885", "experiment": "exp18", "event": "started", "module": "experiments.exp18_grassmannian_parcellation", "max_sessions": 5}
+{"ts": "2026-06-21T04:58:48.067547", "experiment": "exp18", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T04:58:50.536478", "experiment": "exp18", "event": "saved_volume", "path": "/results/exp18/exp18_20260621_045849.json"}
+{"ts": "2026-06-21T04:58:52.431530", "experiment": "exp18", "event": "copied_artifacts"}
+{"ts": "2026-06-21T04:58:54.059453", "experiment": "exp18", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T04:58:55.178913", "experiment": "exp18", "event": "done"}
+{"ts": "2026-06-21T05:28:57.839187", "experiment": "exp18", "event": "started", "module": "experiments.exp18_grassmannian_parcellation", "max_sessions": null}
+{"ts": "2026-06-21T05:32:11.086297", "experiment": "exp18", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T05:32:13.608213", "experiment": "exp18", "event": "saved_volume", "path": "/results/exp18/exp18_20260621_053212.json"}
+{"ts": "2026-06-21T05:32:16.017291", "experiment": "exp18", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:32:18.007762", "experiment": "exp18", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:32:19.261809", "experiment": "exp18", "event": "done"}

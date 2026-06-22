@@ -1,0 +1,319 @@
+{
+  "timestamp": "2026-06-21T06:52:50.693794",
+  "n_sessions": 39,
+  "n_mice": 0,
+  "common_regions": [
+    "ACA",
+    "ACB",
+    "CA1",
+    "CA3",
+    "CP",
+    "DG",
+    "GPe",
+    "ILA",
+    "LD",
+    "LGd",
+    "LP",
+    "LS",
+    "MB",
+    "MD",
+    "MOp",
+    "MOs",
+    "MRN",
+    "ORB",
+    "PL",
+    "PO",
+    "POL",
+    "POST",
+    "RSP",
+    "SCig",
+    "SCm",
+    "SCs",
+    "SCsg",
+    "SNr",
+    "SSp",
+    "SUB",
+    "TH",
+    "TT",
+    "VISa",
+    "VISam",
+    "VISl",
+    "VISp",
+    "VISpm",
+    "VPL",
+    "VPM",
+    "ZI",
+    "root"
+  ],
+  "n_common_regions": 41,
+  "n_variables": 123,
+  "pooled_results": {},
+  "region_edge_profile": {
+    "ACA": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "ACB": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "CA1": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "CA3": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "CP": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "DG": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "GPe": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "ILA": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "LD": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "LGd": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "LP": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "LS": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "MB": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "MD": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "MOp": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "MOs": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "MRN": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "ORB": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "PL": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "PO": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "POL": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "POST": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "RSP": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "SCig": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "SCm": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "SCs": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "SCsg": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "SNr": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "SSp": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "SUB": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "TH": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "TT": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "VISa": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "VISam": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "VISl": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "VISp": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "VISpm": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "VPL": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "VPM": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "ZI": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    },
+    "root": {
+      "in": 0,
+      "out": 0,
+      "undirected": 0
+    }
+  },
+  "region_alphas": {
+    "ACA": 2.1205139073528225,
+    "ACB": 1.7588336357429313,
+    "CA1": 0.7793275147198602,
+    "CA3": 1.3515941005025518,
+    "CP": 44.82318371482288,
+    "DG": 3.6561532223398903,
+    "GPe": 2.243100456491281,
+    "ILA": 0.9309503370938712,
+    "LD": 2.177056893355092,
+    "LGd": 0.8942060000914109,
+    "LP": 0.9293238784070129,
+    "LS": 1.0720086101846364,
+    "MB": 1.2318936666352247,
+    "MD": 0.9595612371771872,
+    "MOp": 0.6853623469946726,
+    "MOs": 2.053018578302266,
+    "MRN": 3.0900650198597446,
+    "ORB": 55.18998989193372,
+    "PL": 1.130700200033965,
+    "PO": 0.6706185108166515,
+    "POL": 1.1635219835314676,
+    "POST": 0.8520932287140452,
+    "RSP": 2.0081489625731392,
+    "SCig": 0.7664421405170082,
+    "SCm": 37.76748508951897,
+    "SCs": 4.4989055359000565,
+    "SCsg": 27.834700447465085,
+    "SNr": 1.0443571024315688,
+    "SSp": 58.23208762548126,
+    "SUB": 1.3216813245706869,
+    "TH": 0.7676359605470745,
+    "TT": 2.4330516858974,
+    "VISa": 1.4330384360122923,
+    "VISam": 1.073827707989669,
+    "VISl": 0.8545630492066708,
+    "VISp": 1.073187017483878,
+    "VISpm": 0.6805743691219568,
+    "VPL": 1.5635123696136217,
+    "VPM": 1.0222622923103526,
+    "ZI": 5.38760943810544,
+    "root": 5.653194627493045
+  },
+  "alpha_vs_edges": {
+    "alpha_vs_in_degree": {
+      "rho": NaN,
+      "p": NaN
+    },
+    "alpha_vs_out_degree": {
+      "rho": NaN,
+      "p": NaN
+    },
+    "alpha_vs_in_out_ratio": {
+      "rho": NaN,
+      "p": NaN,
+      "interpretation": "Positive rho means high-alpha regions receive more causal input than they send \u2014 consistent with association cortex integrating from multiple sources."
+    }
+  },
+  "consensus": {},
+  "method_comparison": {},
+  "n_per_session_runs": 0
+}

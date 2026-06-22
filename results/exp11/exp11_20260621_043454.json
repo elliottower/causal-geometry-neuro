@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-06-21T04:34:54.440289",
+  "n_regions": 24,
+  "n_pairs": 1,
+  "pairs": [
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": 2.9623322224653177,
+      "procrustes_distance": 0.7754132466687481
+    }
+  ],
+  "correlation": {
+    "spearman_rho": NaN,
+    "p_value": NaN,
+    "interpretation": "rho < 1 means linear and nonlinear metrics dissociate"
+  },
+  "per_region": {}
+}

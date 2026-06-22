@@ -1,0 +1,12 @@
+{"ts": "2026-06-21T06:05:49.970672", "experiment": "exp22", "event": "started", "module": "experiments.exp22_geometric_type_prediction", "max_sessions": 5}
+{"ts": "2026-06-21T06:07:13.672720", "experiment": "exp22", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T06:07:16.485951", "experiment": "exp22", "event": "saved_volume", "path": "/results/exp22/exp22_20260621_060714.json"}
+{"ts": "2026-06-21T06:07:18.346175", "experiment": "exp22", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:07:19.806009", "experiment": "exp22", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:07:21.062739", "experiment": "exp22", "event": "done"}
+{"ts": "2026-06-21T06:11:22.770098", "experiment": "exp22", "event": "started", "module": "experiments.exp22_geometric_type_prediction", "max_sessions": null}
+{"ts": "2026-06-21T06:14:43.219072", "experiment": "exp22", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T06:14:45.573812", "experiment": "exp22", "event": "saved_volume", "path": "/results/exp22/exp22_20260621_061444.json"}
+{"ts": "2026-06-21T06:14:47.234566", "experiment": "exp22", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:14:48.880550", "experiment": "exp22", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:14:50.474400", "experiment": "exp22", "event": "done"}

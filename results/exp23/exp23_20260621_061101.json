@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-06-21T06:10:57.780500",
+  "n_regions": 24,
+  "n_pairs_original": 29,
+  "n_pairs_subsampled": 29,
+  "original_correlation": {
+    "spearman_rho": -0.8635467980295565,
+    "p_value": 1.632494545841671e-09,
+    "n": 29
+  },
+  "subsampled_correlation": {
+    "spearman_rho": -0.8137931034482757,
+    "p_value": 7.947901892518156e-08,
+    "n": 29
+  },
+  "neuron_ratio_effect": {
+    "ratio_vs_cka_rho": -0.07390983225041603,
+    "ratio_vs_cka_p": 0.703180385859326,
+    "interpretation": "If rho ~ 0, neuron count asymmetry does not drive CKA values"
+  },
+  "conclusion": "If original and subsampled correlations are similar, the CKA-UMAP anti-correlation is not an artifact of neuron count differences."
+}

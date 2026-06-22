@@ -1,0 +1,622 @@
+{
+  "timestamp": "2026-06-21T04:30:46.940719",
+  "n_regions": 24,
+  "n_pairs": 29,
+  "pairs": [
+    {
+      "region": "ACA",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 25.230850517749786,
+      "wasserstein_h1": 2.1306097829259714,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "ACA",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 25.285096623003483,
+      "wasserstein_h1": 1.4423107325911073,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "ACA",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 50.393606949862374,
+      "wasserstein_h1": 1.3477942963895815,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": 2.9623322224653177,
+      "wasserstein_h0": 3.361955404281616,
+      "wasserstein_h1": 1.3288237034687707,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 17.906403332948685,
+      "wasserstein_h1": 3.0133782856052247,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 25.677702121436596,
+      "wasserstein_h1": 1.8388659837375911,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        66,
+        10
+      ]
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 14.544447928667068,
+      "wasserstein_h1": 2.921040988985678,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 28.999859356051306,
+      "wasserstein_h1": 1.7560731781381247,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        66,
+        10
+      ]
+    },
+    {
+      "region": "DG",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 43.006223944103425,
+      "wasserstein_h1": 1.9662449709992211,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        66,
+        10
+      ]
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 13.65360164642334,
+      "wasserstein_h1": 1.9380057026814563,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 24.68919974711605,
+      "wasserstein_h1": 1.4316547422479189,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        0,
+        0
+      ]
+    },
+    {
+      "region": "MOs",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 14.238752916758887,
+      "wasserstein_h1": 0.6527975876249085,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        0,
+        0
+      ]
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 22.420027792453766,
+      "wasserstein_h1": 2.6126432893450664,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 9.793116867542267,
+      "wasserstein_h1": 2.918987197416021,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "SUB",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 12.626910924911499,
+      "wasserstein_h1": 1.972615577787121,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 32.0318164229393,
+      "wasserstein_h1": 3.32589746234145,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 56.907852441072464,
+      "wasserstein_h1": 2.7768658293163115,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "VISp",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 24.876036018133163,
+      "wasserstein_h1": 2.196970838843341,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 46.464715518057346,
+      "wasserstein_h1": 2.466839027540204,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 110.84433623328506,
+      "wasserstein_h1": 2.4359240612763777,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "root",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 82.93557232618332,
+      "wasserstein_h1": 3.482069027016449,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 27.712725341320038,
+      "wasserstein_h1": 2.6484651602999314,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 26.33712363243103,
+      "wasserstein_h1": 2.0830056129559162,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 47.31987512111664,
+      "wasserstein_h1": 1.929759060641,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 1.3756017088890076,
+      "wasserstein_h1": 0.6578944322067364,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Cori",
+      "mouse_2": "Forssmann",
+      "same_mouse": false,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 19.6071497797966,
+      "wasserstein_h1": 1.9864733983572258,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "CA1",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 20.982751488685608,
+      "wasserstein_h1": 1.4210138510132113,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "POST",
+      "mouse_1": "Cori",
+      "mouse_2": "Cori",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 40.48224502801895,
+      "wasserstein_h1": 2.885585226630408,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    },
+    {
+      "region": "VISa",
+      "mouse_1": "Forssmann",
+      "mouse_2": "Forssmann",
+      "same_mouse": true,
+      "grassmannian_distance": null,
+      "wasserstein_h0": 4.3533980548381805,
+      "wasserstein_h1": 1.5649429833518458,
+      "betti_1": [
+        99,
+        0
+      ],
+      "betti_2": [
+        99,
+        0
+      ]
+    }
+  ],
+  "betti_summary": {
+    "ACA": {
+      "n_sessions": 3,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "CA3": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "DG": {
+      "n_sessions": 4,
+      "beta_0_mean": 90.75,
+      "beta_1_mean": 2.5
+    },
+    "LS": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "MOs": {
+      "n_sessions": 3,
+      "beta_0_mean": 66.0,
+      "beta_1_mean": 0.0
+    },
+    "SUB": {
+      "n_sessions": 3,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "VISp": {
+      "n_sessions": 3,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "root": {
+      "n_sessions": 3,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "CA1": {
+      "n_sessions": 4,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "POST": {
+      "n_sessions": 2,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "VISl": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "VISpm": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "MG": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "MRN": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "NB": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "SPF": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "VISam": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "LGd": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "LSr": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "TH": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "VISa": {
+      "n_sessions": 2,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "VPL": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "OLF": {
+      "n_sessions": 1,
+      "beta_0_mean": 99.0,
+      "beta_1_mean": 0.0
+    },
+    "ORB": {
+      "n_sessions": 1,
+      "beta_0_mean": 2.0,
+      "beta_1_mean": 1.0
+    }
+  }
+}

@@ -1,0 +1,2505 @@
+{
+  "timestamp": "2026-06-21T15:49:30.184429",
+  "duration_seconds": 2937.53931,
+  "n_sessions": 39,
+  "n_regions": 15,
+  "regions": [
+    "CA1",
+    "MOs",
+    "DG",
+    "VISp",
+    "ACA",
+    "MRN",
+    "VISam",
+    "LP",
+    "RSP",
+    "SUB",
+    "CA3",
+    "LGd",
+    "PL",
+    "TH",
+    "SCm"
+  ],
+  "n_iia_pairs": 210,
+  "n_allen_pairs": 210,
+  "region_to_allen_id": {
+    "CA1": 382,
+    "MOs": 993,
+    "DG": 726,
+    "VISp": 385,
+    "ACA": 31,
+    "MRN": 128,
+    "VISam": 394,
+    "LP": 218,
+    "RSP": 254,
+    "SUB": 502,
+    "CA3": 463,
+    "LGd": 170,
+    "PL": 972,
+    "TH": 549,
+    "SCm": 294
+  },
+  "correlation": {
+    "rho": 0.03136514271460642,
+    "p_value": 0.651324902345213,
+    "n_matched_pairs": 210,
+    "matched_pairs": [
+      {
+        "source": "CA1",
+        "target": "MOs",
+        "iia": 0.4668367500306896,
+        "allen_density": 0.0002934723438362257
+      },
+      {
+        "source": "CA1",
+        "target": "DG",
+        "iia": 0.42774595644913294,
+        "allen_density": 0.002600530040135023
+      },
+      {
+        "source": "CA1",
+        "target": "VISp",
+        "iia": 0.4618898797966384,
+        "allen_density": 0.0006802724099933053
+      },
+      {
+        "source": "CA1",
+        "target": "ACA",
+        "iia": 0.4545197002076837,
+        "allen_density": 0.0009242348827225717
+      },
+      {
+        "source": "CA1",
+        "target": "MRN",
+        "iia": 0.40479705011653033,
+        "allen_density": 4.9817065601702037e-05
+      },
+      {
+        "source": "CA1",
+        "target": "VISam",
+        "iia": 0.4486192438424546,
+        "allen_density": 0.0026080329722032443
+      },
+      {
+        "source": "CA1",
+        "target": "LP",
+        "iia": 0.4046983713441239,
+        "allen_density": 0.0011403033884530799
+      },
+      {
+        "source": "CA1",
+        "target": "RSP",
+        "iia": 0.4722861555010291,
+        "allen_density": 0.0017087951807012996
+      },
+      {
+        "source": "CA1",
+        "target": "SUB",
+        "iia": 0.3924847810716094,
+        "allen_density": 0.03297089693323041
+      },
+      {
+        "source": "CA1",
+        "target": "CA3",
+        "iia": 0.4639591295413048,
+        "allen_density": 0.009819334726800705
+      },
+      {
+        "source": "CA1",
+        "target": "LGd",
+        "iia": 0.4321469621578135,
+        "allen_density": 0.00014034813833848863
+      },
+      {
+        "source": "CA1",
+        "target": "PL",
+        "iia": 0.47022668451862143,
+        "allen_density": 0.0018907210594282004
+      },
+      {
+        "source": "CA1",
+        "target": "TH",
+        "iia": 0.4361584627988256,
+        "allen_density": 0.000931680923644866
+      },
+      {
+        "source": "CA1",
+        "target": "SCm",
+        "iia": 0.4573585721310051,
+        "allen_density": 0.00037262349844870656
+      },
+      {
+        "source": "MOs",
+        "target": "CA1",
+        "iia": 0.44305535809003577,
+        "allen_density": 1.5222577366577087e-05
+      },
+      {
+        "source": "MOs",
+        "target": "DG",
+        "iia": 0.43551123971725136,
+        "allen_density": 0.00014684450297892948
+      },
+      {
+        "source": "MOs",
+        "target": "VISp",
+        "iia": 0.46659596408837406,
+        "allen_density": 0.0006875234691123159
+      },
+      {
+        "source": "MOs",
+        "target": "ACA",
+        "iia": 0.4574370116405356,
+        "allen_density": 0.009399513971127513
+      },
+      {
+        "source": "MOs",
+        "target": "MRN",
+        "iia": 0.4106267792105769,
+        "allen_density": 0.01105034032923241
+      },
+      {
+        "source": "MOs",
+        "target": "VISam",
+        "iia": 0.4532228061288424,
+        "allen_density": 0.002522812147791208
+      },
+      {
+        "source": "MOs",
+        "target": "LP",
+        "iia": 0.40774047659867096,
+        "allen_density": 0.0024949793973271447
+      },
+      {
+        "source": "MOs",
+        "target": "RSP",
+        "iia": 0.46879535286438556,
+        "allen_density": 0.001600284308665776
+      },
+      {
+        "source": "MOs",
+        "target": "SUB",
+        "iia": 0.3931051074766372,
+        "allen_density": 5.352056900262775e-05
+      },
+      {
+        "source": "MOs",
+        "target": "CA3",
+        "iia": 0.4591795054346844,
+        "allen_density": 7.194236334742166e-05
+      },
+      {
+        "source": "MOs",
+        "target": "LGd",
+        "iia": 0.42274399553562536,
+        "allen_density": 3.346648468991439e-05
+      },
+      {
+        "source": "MOs",
+        "target": "PL",
+        "iia": 0.4758432608185365,
+        "allen_density": 0.00695861528604053
+      },
+      {
+        "source": "MOs",
+        "target": "TH",
+        "iia": 0.4514234353795434,
+        "allen_density": 0.008772085770490651
+      },
+      {
+        "source": "MOs",
+        "target": "SCm",
+        "iia": 0.4565167826100025,
+        "allen_density": 0.007014655161095007
+      },
+      {
+        "source": "DG",
+        "target": "CA1",
+        "iia": 0.4348096438696253,
+        "allen_density": 0.016537156664131816
+      },
+      {
+        "source": "DG",
+        "target": "MOs",
+        "iia": 0.45274016022818164,
+        "allen_density": 5.977253809258674e-05
+      },
+      {
+        "source": "DG",
+        "target": "VISp",
+        "iia": 0.46696813290395517,
+        "allen_density": 0.00022739908704307238
+      },
+      {
+        "source": "DG",
+        "target": "ACA",
+        "iia": 0.4478691084669903,
+        "allen_density": 7.363004488941903e-05
+      },
+      {
+        "source": "DG",
+        "target": "MRN",
+        "iia": 0.4075148457804593,
+        "allen_density": 3.772895815325633e-05
+      },
+      {
+        "source": "DG",
+        "target": "VISam",
+        "iia": 0.45548585557557947,
+        "allen_density": 0.00026427263072321565
+      },
+      {
+        "source": "DG",
+        "target": "LP",
+        "iia": 0.4058972400263297,
+        "allen_density": 0.0011424924017852383
+      },
+      {
+        "source": "DG",
+        "target": "RSP",
+        "iia": 0.45662432392141067,
+        "allen_density": 0.0003104024091557962
+      },
+      {
+        "source": "DG",
+        "target": "SUB",
+        "iia": 0.3952417336366132,
+        "allen_density": 0.002819385505861042
+      },
+      {
+        "source": "DG",
+        "target": "CA3",
+        "iia": 0.4581071895921531,
+        "allen_density": 0.02242204107354995
+      },
+      {
+        "source": "DG",
+        "target": "LGd",
+        "iia": 0.43583645670746735,
+        "allen_density": 0.0008139763965066373
+      },
+      {
+        "source": "DG",
+        "target": "PL",
+        "iia": 0.470078043663516,
+        "allen_density": 3.1094542193918415e-05
+      },
+      {
+        "source": "DG",
+        "target": "TH",
+        "iia": 0.44381233104600193,
+        "allen_density": 0.00042614234100412323
+      },
+      {
+        "source": "DG",
+        "target": "SCm",
+        "iia": 0.454351007630237,
+        "allen_density": 0.0001419090581350893
+      },
+      {
+        "source": "VISp",
+        "target": "CA1",
+        "iia": 0.4402820458992848,
+        "allen_density": 0.0006004979609526684
+      },
+      {
+        "source": "VISp",
+        "target": "MOs",
+        "iia": 0.46111080519235925,
+        "allen_density": 0.0007602851505706701
+      },
+      {
+        "source": "VISp",
+        "target": "DG",
+        "iia": 0.43922297478816713,
+        "allen_density": 0.00023757883949398714
+      },
+      {
+        "source": "VISp",
+        "target": "ACA",
+        "iia": 0.463054888244831,
+        "allen_density": 0.0025106647683308166
+      },
+      {
+        "source": "VISp",
+        "target": "MRN",
+        "iia": 0.41277536117466074,
+        "allen_density": 3.420436169035619e-05
+      },
+      {
+        "source": "VISp",
+        "target": "VISam",
+        "iia": 0.4396870699378298,
+        "allen_density": 0.01438930308537713
+      },
+      {
+        "source": "VISp",
+        "target": "LP",
+        "iia": 0.3941384609506281,
+        "allen_density": 0.02433610275367521
+      },
+      {
+        "source": "VISp",
+        "target": "RSP",
+        "iia": 0.4468205972220534,
+        "allen_density": 0.00735552804133112
+      },
+      {
+        "source": "VISp",
+        "target": "SUB",
+        "iia": 0.4017891617094744,
+        "allen_density": 0.001159996268159263
+      },
+      {
+        "source": "VISp",
+        "target": "CA3",
+        "iia": 0.44471291777580596,
+        "allen_density": 0.00026770884846493055
+      },
+      {
+        "source": "VISp",
+        "target": "LGd",
+        "iia": 0.43682897071872223,
+        "allen_density": 0.044048814057063075
+      },
+      {
+        "source": "VISp",
+        "target": "PL",
+        "iia": 0.46125502963866705,
+        "allen_density": 0.00023477625114492372
+      },
+      {
+        "source": "VISp",
+        "target": "TH",
+        "iia": 0.44505009612540664,
+        "allen_density": 0.006457635823426656
+      },
+      {
+        "source": "VISp",
+        "target": "SCm",
+        "iia": 0.451116645944753,
+        "allen_density": 0.0032403351927331753
+      },
+      {
+        "source": "ACA",
+        "target": "CA1",
+        "iia": 0.4393688852844067,
+        "allen_density": 1.4966842913144753e-05
+      },
+      {
+        "source": "ACA",
+        "target": "MOs",
+        "iia": 0.4626816400041201,
+        "allen_density": 0.007188795455370716
+      },
+      {
+        "source": "ACA",
+        "target": "DG",
+        "iia": 0.4218312737515662,
+        "allen_density": 0.00019005824762981856
+      },
+      {
+        "source": "ACA",
+        "target": "VISp",
+        "iia": 0.46734606142280916,
+        "allen_density": 0.0026639053453782874
+      },
+      {
+        "source": "ACA",
+        "target": "MRN",
+        "iia": 0.39835759298826695,
+        "allen_density": 0.0053977331756732425
+      },
+      {
+        "source": "ACA",
+        "target": "VISam",
+        "iia": 0.4483311942190507,
+        "allen_density": 0.020928927047968653
+      },
+      {
+        "source": "ACA",
+        "target": "LP",
+        "iia": 0.41679615942220133,
+        "allen_density": 0.010914505175223507
+      },
+      {
+        "source": "ACA",
+        "target": "RSP",
+        "iia": 0.46979914230602354,
+        "allen_density": 0.011990284472620029
+      },
+      {
+        "source": "ACA",
+        "target": "SUB",
+        "iia": 0.39139660674874266,
+        "allen_density": 0.00014706022435929296
+      },
+      {
+        "source": "ACA",
+        "target": "CA3",
+        "iia": 0.44283636855730324,
+        "allen_density": 5.529537174926575e-05
+      },
+      {
+        "source": "ACA",
+        "target": "LGd",
+        "iia": 0.4359384794092241,
+        "allen_density": 0.0003569657751889347
+      },
+      {
+        "source": "ACA",
+        "target": "PL",
+        "iia": 0.4856960328958809,
+        "allen_density": 0.019532096464972434
+      },
+      {
+        "source": "ACA",
+        "target": "TH",
+        "iia": 0.44183579973758547,
+        "allen_density": 0.009086029522415948
+      },
+      {
+        "source": "ACA",
+        "target": "SCm",
+        "iia": 0.4565650442601112,
+        "allen_density": 0.009647834677432472
+      },
+      {
+        "source": "MRN",
+        "target": "CA1",
+        "iia": 0.44598455012265414,
+        "allen_density": 0.00034636740468968263
+      },
+      {
+        "source": "MRN",
+        "target": "MOs",
+        "iia": 0.4668528755375668,
+        "allen_density": 0.0001620349343440125
+      },
+      {
+        "source": "MRN",
+        "target": "DG",
+        "iia": 0.4442618903419586,
+        "allen_density": 0.00015402899009721698
+      },
+      {
+        "source": "MRN",
+        "target": "VISp",
+        "iia": 0.4574794977279449,
+        "allen_density": 0.0016761897816253296
+      },
+      {
+        "source": "MRN",
+        "target": "ACA",
+        "iia": 0.45548012593467135,
+        "allen_density": 0.00034433474306244546
+      },
+      {
+        "source": "MRN",
+        "target": "VISam",
+        "iia": 0.46107147680559424,
+        "allen_density": 0.0026798048532427417
+      },
+      {
+        "source": "MRN",
+        "target": "LP",
+        "iia": 0.4283456910332005,
+        "allen_density": 0.012161555968331805
+      },
+      {
+        "source": "MRN",
+        "target": "RSP",
+        "iia": 0.47088629858361725,
+        "allen_density": 0.0021574049100102823
+      },
+      {
+        "source": "MRN",
+        "target": "SUB",
+        "iia": 0.39813173139260094,
+        "allen_density": 0.0006051708262963024
+      },
+      {
+        "source": "MRN",
+        "target": "CA3",
+        "iia": 0.4550395256916996,
+        "allen_density": 9.500873596012444e-05
+      },
+      {
+        "source": "MRN",
+        "target": "LGd",
+        "iia": 0.41231225296442686,
+        "allen_density": 0.0046098939237193695
+      },
+      {
+        "source": "MRN",
+        "target": "PL",
+        "iia": 0.4750296442687747,
+        "allen_density": 0.0002478608540388445
+      },
+      {
+        "source": "MRN",
+        "target": "TH",
+        "iia": 0.4391600790513834,
+        "allen_density": 0.014491231141773482
+      },
+      {
+        "source": "MRN",
+        "target": "SCm",
+        "iia": 0.43567476002258615,
+        "allen_density": 0.06171574634847521
+      },
+      {
+        "source": "VISam",
+        "target": "CA1",
+        "iia": 0.4334649369397608,
+        "allen_density": 0.00012678083664506494
+      },
+      {
+        "source": "VISam",
+        "target": "MOs",
+        "iia": 0.4561495289865949,
+        "allen_density": 0.0044713628921492195
+      },
+      {
+        "source": "VISam",
+        "target": "DG",
+        "iia": 0.4325498192846338,
+        "allen_density": 0.00018780534562077748
+      },
+      {
+        "source": "VISam",
+        "target": "VISp",
+        "iia": 0.45809589165636,
+        "allen_density": 0.01973527752092753
+      },
+      {
+        "source": "VISam",
+        "target": "ACA",
+        "iia": 0.4573817658397555,
+        "allen_density": 0.017512679625841503
+      },
+      {
+        "source": "VISam",
+        "target": "MRN",
+        "iia": 0.4157278748575619,
+        "allen_density": 0.0013675127160471645
+      },
+      {
+        "source": "VISam",
+        "target": "LP",
+        "iia": 0.4179387547315048,
+        "allen_density": 0.03179587691881081
+      },
+      {
+        "source": "VISam",
+        "target": "RSP",
+        "iia": 0.4726686400442136,
+        "allen_density": 0.025756833242826255
+      },
+      {
+        "source": "VISam",
+        "target": "SUB",
+        "iia": 0.39253026015402886,
+        "allen_density": 0.00045078694735833935
+      },
+      {
+        "source": "VISam",
+        "target": "CA3",
+        "iia": 0.44960742385639657,
+        "allen_density": 0.00011697884480159418
+      },
+      {
+        "source": "VISam",
+        "target": "LGd",
+        "iia": 0.41990469403683284,
+        "allen_density": 0.006884069279548787
+      },
+      {
+        "source": "VISam",
+        "target": "PL",
+        "iia": 0.4674470325621284,
+        "allen_density": 0.003523403309988418
+      },
+      {
+        "source": "VISam",
+        "target": "TH",
+        "iia": 0.44101237030006685,
+        "allen_density": 0.008587944114840988
+      },
+      {
+        "source": "VISam",
+        "target": "SCm",
+        "iia": 0.44910575291703875,
+        "allen_density": 0.008275172018954445
+      },
+      {
+        "source": "LP",
+        "target": "CA1",
+        "iia": 0.44754505682200096,
+        "allen_density": 0.0013072065479143322
+      },
+      {
+        "source": "LP",
+        "target": "MOs",
+        "iia": 0.4613152480498197,
+        "allen_density": 0.004827895075981492
+      },
+      {
+        "source": "LP",
+        "target": "DG",
+        "iia": 0.44026874363425816,
+        "allen_density": 0.008704479783689758
+      },
+      {
+        "source": "LP",
+        "target": "VISp",
+        "iia": 0.47679058846080125,
+        "allen_density": 0.02845078780083794
+      },
+      {
+        "source": "LP",
+        "target": "ACA",
+        "iia": 0.4621597520606499,
+        "allen_density": 0.005905888202778092
+      },
+      {
+        "source": "LP",
+        "target": "MRN",
+        "iia": 0.40824349749127087,
+        "allen_density": 0.002017104440090117
+      },
+      {
+        "source": "LP",
+        "target": "VISam",
+        "iia": 0.44816371848316394,
+        "allen_density": 0.037875215396740707
+      },
+      {
+        "source": "LP",
+        "target": "RSP",
+        "iia": 0.44616239857181395,
+        "allen_density": 0.008104241820641516
+      },
+      {
+        "source": "LP",
+        "target": "SUB",
+        "iia": 0.40253837036402246,
+        "allen_density": 8.587906065266239e-05
+      },
+      {
+        "source": "LP",
+        "target": "CA3",
+        "iia": 0.45565324899367454,
+        "allen_density": 0.0023406178399495215
+      },
+      {
+        "source": "LP",
+        "target": "LGd",
+        "iia": 0.4367619321449109,
+        "allen_density": 0.010614459535526281
+      },
+      {
+        "source": "LP",
+        "target": "PL",
+        "iia": 0.47507073030477287,
+        "allen_density": 0.0014907255367053252
+      },
+      {
+        "source": "LP",
+        "target": "TH",
+        "iia": 0.45218171362852216,
+        "allen_density": 0.008000531061146636
+      },
+      {
+        "source": "LP",
+        "target": "SCm",
+        "iia": 0.4484294750677729,
+        "allen_density": 0.0010823660487601498
+      },
+      {
+        "source": "RSP",
+        "target": "CA1",
+        "iia": 0.4362858002174168,
+        "allen_density": 0.00012273833362543875
+      },
+      {
+        "source": "RSP",
+        "target": "MOs",
+        "iia": 0.46282199967073917,
+        "allen_density": 0.00210626169930155
+      },
+      {
+        "source": "RSP",
+        "target": "DG",
+        "iia": 0.4419846974158161,
+        "allen_density": 0.00024715925949909983
+      },
+      {
+        "source": "RSP",
+        "target": "VISp",
+        "iia": 0.4712829475335808,
+        "allen_density": 0.0072194638485621075
+      },
+      {
+        "source": "RSP",
+        "target": "ACA",
+        "iia": 0.46263030191601623,
+        "allen_density": 0.011146358659195357
+      },
+      {
+        "source": "RSP",
+        "target": "MRN",
+        "iia": 0.41684796339366725,
+        "allen_density": 0.0012880642261047979
+      },
+      {
+        "source": "RSP",
+        "target": "VISam",
+        "iia": 0.4489559597492309,
+        "allen_density": 0.02194300858421111
+      },
+      {
+        "source": "RSP",
+        "target": "LP",
+        "iia": 0.4236503770989874,
+        "allen_density": 0.012286361076369217
+      },
+      {
+        "source": "RSP",
+        "target": "SUB",
+        "iia": 0.389589084549402,
+        "allen_density": 0.0020521995227531817
+      },
+      {
+        "source": "RSP",
+        "target": "CA3",
+        "iia": 0.45716330488651913,
+        "allen_density": 0.000125443598096593
+      },
+      {
+        "source": "RSP",
+        "target": "LGd",
+        "iia": 0.44698596555739406,
+        "allen_density": 0.006470489240833231
+      },
+      {
+        "source": "RSP",
+        "target": "PL",
+        "iia": 0.45649767114052825,
+        "allen_density": 0.0012356758152599983
+      },
+      {
+        "source": "RSP",
+        "target": "TH",
+        "iia": 0.43158270515413366,
+        "allen_density": 0.004890579242847681
+      },
+      {
+        "source": "RSP",
+        "target": "SCm",
+        "iia": 0.44236520047744543,
+        "allen_density": 0.006913908297844932
+      },
+      {
+        "source": "SUB",
+        "target": "CA1",
+        "iia": 0.42561489351490533,
+        "allen_density": 0.018135083948040365
+      },
+      {
+        "source": "SUB",
+        "target": "MOs",
+        "iia": 0.46056830088228695,
+        "allen_density": 6.506861960256636e-05
+      },
+      {
+        "source": "SUB",
+        "target": "DG",
+        "iia": 0.43215679430400944,
+        "allen_density": 0.012835202044697541
+      },
+      {
+        "source": "SUB",
+        "target": "VISp",
+        "iia": 0.4732225082225083,
+        "allen_density": 0.002209894697640049
+      },
+      {
+        "source": "SUB",
+        "target": "ACA",
+        "iia": 0.4542666988514165,
+        "allen_density": 0.0008212026885971451
+      },
+      {
+        "source": "SUB",
+        "target": "MRN",
+        "iia": 0.4156284432067927,
+        "allen_density": 0.0008655458037798981
+      },
+      {
+        "source": "SUB",
+        "target": "VISam",
+        "iia": 0.4523325072730144,
+        "allen_density": 0.001052253068623577
+      },
+      {
+        "source": "SUB",
+        "target": "LP",
+        "iia": 0.4027748334647305,
+        "allen_density": 0.005713063994164129
+      },
+      {
+        "source": "SUB",
+        "target": "RSP",
+        "iia": 0.4618439637590931,
+        "allen_density": 0.008629823940023065
+      },
+      {
+        "source": "SUB",
+        "target": "CA3",
+        "iia": 0.45936186186186184,
+        "allen_density": 0.0083878395155188
+      },
+      {
+        "source": "SUB",
+        "target": "LGd",
+        "iia": 0.4301351351351351,
+        "allen_density": 0.002271989294790416
+      },
+      {
+        "source": "SUB",
+        "target": "PL",
+        "iia": 0.48048798798798803,
+        "allen_density": 0.0008418719288002043
+      },
+      {
+        "source": "SUB",
+        "target": "TH",
+        "iia": 0.44559309309309314,
+        "allen_density": 0.007891584419201157
+      },
+      {
+        "source": "SUB",
+        "target": "SCm",
+        "iia": 0.4561132561132562,
+        "allen_density": 0.0026137969838229413
+      },
+      {
+        "source": "CA3",
+        "target": "CA1",
+        "iia": 0.4413329377063032,
+        "allen_density": 0.11863853887084387
+      },
+      {
+        "source": "CA3",
+        "target": "MOs",
+        "iia": 0.47157855354319916,
+        "allen_density": 3.027175732438162e-05
+      },
+      {
+        "source": "CA3",
+        "target": "DG",
+        "iia": 0.4232388775765781,
+        "allen_density": 0.031891201691862665
+      },
+      {
+        "source": "CA3",
+        "target": "VISp",
+        "iia": 0.4489926698987053,
+        "allen_density": 0.00016207049165814798
+      },
+      {
+        "source": "CA3",
+        "target": "ACA",
+        "iia": 0.450926272099483,
+        "allen_density": 0.00017006717840922856
+      },
+      {
+        "source": "CA3",
+        "target": "MRN",
+        "iia": 0.4057265248549836,
+        "allen_density": 3.3235202107534933e-06
+      },
+      {
+        "source": "CA3",
+        "target": "VISam",
+        "iia": 0.44008254716796563,
+        "allen_density": 4.5102039923137505e-05
+      },
+      {
+        "source": "CA3",
+        "target": "LP",
+        "iia": 0.411563455395253,
+        "allen_density": 9.886403464833851e-05
+      },
+      {
+        "source": "CA3",
+        "target": "RSP",
+        "iia": 0.4488408997437178,
+        "allen_density": 5.229518565832029e-05
+      },
+      {
+        "source": "CA3",
+        "target": "SUB",
+        "iia": 0.3901332727993595,
+        "allen_density": 0.006352301023219157
+      },
+      {
+        "source": "CA3",
+        "target": "LGd",
+        "iia": 0.4364520676691729,
+        "allen_density": 0.005214319388980715
+      },
+      {
+        "source": "CA3",
+        "target": "PL",
+        "iia": 0.46037181749936107,
+        "allen_density": 0.00015609456973118802
+      },
+      {
+        "source": "CA3",
+        "target": "TH",
+        "iia": 0.4346054964539007,
+        "allen_density": 0.001470218759631543
+      },
+      {
+        "source": "CA3",
+        "target": "SCm",
+        "iia": 0.4528424775707384,
+        "allen_density": 9.941152921274581e-06
+      },
+      {
+        "source": "LGd",
+        "target": "CA1",
+        "iia": 0.4442740436754412,
+        "allen_density": 0.0002771773063241985
+      },
+      {
+        "source": "LGd",
+        "target": "MOs",
+        "iia": 0.4666624040920716,
+        "allen_density": 0.0003442055583838241
+      },
+      {
+        "source": "LGd",
+        "target": "DG",
+        "iia": 0.424823662254757,
+        "allen_density": 0.0002831091427676526
+      },
+      {
+        "source": "LGd",
+        "target": "VISp",
+        "iia": 0.46645833333333336,
+        "allen_density": 0.05786191995559317
+      },
+      {
+        "source": "LGd",
+        "target": "ACA",
+        "iia": 0.45566205533596843,
+        "allen_density": 0.001548857796461072
+      },
+      {
+        "source": "LGd",
+        "target": "MRN",
+        "iia": 0.4053982818423813,
+        "allen_density": 9.015177085937972e-05
+      },
+      {
+        "source": "LGd",
+        "target": "VISam",
+        "iia": 0.45988509764907276,
+        "allen_density": 0.008975893265439662
+      },
+      {
+        "source": "LGd",
+        "target": "LP",
+        "iia": 0.41847320812382927,
+        "allen_density": 0.007371524421268088
+      },
+      {
+        "source": "LGd",
+        "target": "RSP",
+        "iia": 0.45647195109928035,
+        "allen_density": 0.005014789677965536
+      },
+      {
+        "source": "LGd",
+        "target": "SUB",
+        "iia": 0.4076570048309179,
+        "allen_density": 7.375684332073055e-05
+      },
+      {
+        "source": "LGd",
+        "target": "CA3",
+        "iia": 0.458125,
+        "allen_density": 0.0005704540113926226
+      },
+      {
+        "source": "LGd",
+        "target": "PL",
+        "iia": 0.47187499999999993,
+        "allen_density": 3.207970830496496e-05
+      },
+      {
+        "source": "LGd",
+        "target": "TH",
+        "iia": 0.464375,
+        "allen_density": 0.0037109202676999923
+      },
+      {
+        "source": "LGd",
+        "target": "SCm",
+        "iia": 0.45678571428571424,
+        "allen_density": 0.0002853594088001257
+      },
+      {
+        "source": "PL",
+        "target": "CA1",
+        "iia": 0.4363226908228999,
+        "allen_density": 6.457711134281783e-06
+      },
+      {
+        "source": "PL",
+        "target": "MOs",
+        "iia": 0.45609516941463635,
+        "allen_density": 0.003765841352811673
+      },
+      {
+        "source": "PL",
+        "target": "DG",
+        "iia": 0.4254123684501605,
+        "allen_density": 9.733857439531097e-05
+      },
+      {
+        "source": "PL",
+        "target": "VISp",
+        "iia": 0.4503670920075607,
+        "allen_density": 0.00033180564292837743
+      },
+      {
+        "source": "PL",
+        "target": "ACA",
+        "iia": 0.4476699839085777,
+        "allen_density": 0.02208239684049965
+      },
+      {
+        "source": "PL",
+        "target": "MRN",
+        "iia": 0.4211648573616035,
+        "allen_density": 0.004533129127851083
+      },
+      {
+        "source": "PL",
+        "target": "VISam",
+        "iia": 0.43240594809959615,
+        "allen_density": 0.002923842513901181
+      },
+      {
+        "source": "PL",
+        "target": "LP",
+        "iia": 0.4144147748745963,
+        "allen_density": 0.0011705655131660137
+      },
+      {
+        "source": "PL",
+        "target": "RSP",
+        "iia": 0.4695568419867736,
+        "allen_density": 0.0012381191232840871
+      },
+      {
+        "source": "PL",
+        "target": "SUB",
+        "iia": 0.41966598965564683,
+        "allen_density": 4.4138808378227106e-05
+      },
+      {
+        "source": "PL",
+        "target": "CA3",
+        "iia": 0.45690481344690276,
+        "allen_density": 7.867860342017556e-06
+      },
+      {
+        "source": "PL",
+        "target": "LGd",
+        "iia": 0.4337116228070176,
+        "allen_density": 9.867105953026037e-06
+      },
+      {
+        "source": "PL",
+        "target": "TH",
+        "iia": 0.4259200861195542,
+        "allen_density": 0.008961761262129919
+      },
+      {
+        "source": "PL",
+        "target": "SCm",
+        "iia": 0.4453778467908903,
+        "allen_density": 0.0008257916702177526
+      },
+      {
+        "source": "TH",
+        "target": "CA1",
+        "iia": 0.44984100293553875,
+        "allen_density": 0.001457611717121518
+      },
+      {
+        "source": "TH",
+        "target": "MOs",
+        "iia": 0.4656547287714723,
+        "allen_density": 0.006556756775126488
+      },
+      {
+        "source": "TH",
+        "target": "DG",
+        "iia": 0.42592183857782073,
+        "allen_density": 0.0011314562229394827
+      },
+      {
+        "source": "TH",
+        "target": "VISp",
+        "iia": 0.471190883246702,
+        "allen_density": 0.009085070406559132
+      },
+      {
+        "source": "TH",
+        "target": "ACA",
+        "iia": 0.4479594293541597,
+        "allen_density": 0.01630007658594479
+      },
+      {
+        "source": "TH",
+        "target": "MRN",
+        "iia": 0.40546637418195053,
+        "allen_density": 0.002728088646912586
+      },
+      {
+        "source": "TH",
+        "target": "VISam",
+        "iia": 0.4555976024993793,
+        "allen_density": 0.008906558089509953
+      },
+      {
+        "source": "TH",
+        "target": "LP",
+        "iia": 0.41874788610536023,
+        "allen_density": 0.009739375254598762
+      },
+      {
+        "source": "TH",
+        "target": "RSP",
+        "iia": 0.46598837348488037,
+        "allen_density": 0.006962658983928378
+      },
+      {
+        "source": "TH",
+        "target": "SUB",
+        "iia": 0.37928619056278623,
+        "allen_density": 0.0035422779843002966
+      },
+      {
+        "source": "TH",
+        "target": "CA3",
+        "iia": 0.4524117083127165,
+        "allen_density": 0.0007618281301038885
+      },
+      {
+        "source": "TH",
+        "target": "LGd",
+        "iia": 0.41906563283208015,
+        "allen_density": 0.007237257984264706
+      },
+      {
+        "source": "TH",
+        "target": "PL",
+        "iia": 0.46500278851477983,
+        "allen_density": 0.01966761343798761
+      },
+      {
+        "source": "TH",
+        "target": "SCm",
+        "iia": 0.4411507936507936,
+        "allen_density": 0.0024180871064998534
+      },
+      {
+        "source": "SCm",
+        "target": "CA1",
+        "iia": 0.4389861089563055,
+        "allen_density": 9.437763184977851e-05
+      },
+      {
+        "source": "SCm",
+        "target": "MOs",
+        "iia": 0.46281331580251156,
+        "allen_density": 0.0001784417385183391
+      },
+      {
+        "source": "SCm",
+        "target": "DG",
+        "iia": 0.43342376614488043,
+        "allen_density": 0.00024200692557456384
+      },
+      {
+        "source": "SCm",
+        "target": "VISp",
+        "iia": 0.45298347910592796,
+        "allen_density": 0.0003306006102736842
+      },
+      {
+        "source": "SCm",
+        "target": "ACA",
+        "iia": 0.43299938157081014,
+        "allen_density": 8.861464870517388e-05
+      },
+      {
+        "source": "SCm",
+        "target": "MRN",
+        "iia": 0.4026344378278855,
+        "allen_density": 0.03744547513864572
+      },
+      {
+        "source": "SCm",
+        "target": "VISam",
+        "iia": 0.45879368598880776,
+        "allen_density": 0.0011426379447825358
+      },
+      {
+        "source": "SCm",
+        "target": "LP",
+        "iia": 0.3926534668666326,
+        "allen_density": 0.028192679913551698
+      },
+      {
+        "source": "SCm",
+        "target": "RSP",
+        "iia": 0.46972573355765657,
+        "allen_density": 0.0004713897886864189
+      },
+      {
+        "source": "SCm",
+        "target": "SUB",
+        "iia": 0.3817535903250189,
+        "allen_density": 0.0002678373360200391
+      },
+      {
+        "source": "SCm",
+        "target": "CA3",
+        "iia": 0.4471428571428571,
+        "allen_density": 0.00023419266854480308
+      },
+      {
+        "source": "SCm",
+        "target": "LGd",
+        "iia": 0.4325,
+        "allen_density": 0.003971609281631085
+      },
+      {
+        "source": "SCm",
+        "target": "PL",
+        "iia": 0.4728571428571428,
+        "allen_density": 7.048144780906966e-05
+      },
+      {
+        "source": "SCm",
+        "target": "TH",
+        "iia": 0.4317857142857143,
+        "allen_density": 0.011265622578281592
+      }
+    ]
+  },
+  "permutation_null": {
+    "actual_rho": 0.03136514271460642,
+    "null_mean": 0.0003245360277038998,
+    "null_std": 0.0936399745491628,
+    "null_percentile_95": 0.1530143540669856,
+    "null_percentile_99": 0.20934603635327,
+    "p_value": 0.378,
+    "n_shuffles": 1000,
+    "n_requested": 1000
+  },
+  "directed_edge_concordance": {
+    "concordant": 42,
+    "discordant": 21,
+    "total": 63,
+    "concordance_rate": 0.6666666666666666,
+    "binomial_p": 0.005570703707652537,
+    "edge_details": [
+      {
+        "region_a": "LP",
+        "region_b": "VISp",
+        "iia_ab": 0.47679058846080125,
+        "iia_ba": 0.3941384609506281,
+        "iia_asymmetry": 0.08265212751017315,
+        "allen_ab": 0.02845078780083794,
+        "allen_ba": 0.02433610275367521,
+        "allen_asymmetry": 0.0041146850471627285,
+        "concordant": true
+      },
+      {
+        "region_a": "SCm",
+        "region_b": "SUB",
+        "iia_ab": 0.3817535903250189,
+        "iia_ba": 0.4561132561132562,
+        "iia_asymmetry": -0.07435966578823733,
+        "allen_ab": 0.0002678373360200391,
+        "allen_ba": 0.0026137969838229413,
+        "allen_asymmetry": -0.0023459596478029024,
+        "concordant": true
+      },
+      {
+        "region_a": "RSP",
+        "region_b": "SUB",
+        "iia_ab": 0.389589084549402,
+        "iia_ba": 0.4618439637590931,
+        "iia_asymmetry": -0.07225487920969109,
+        "allen_ab": 0.0020521995227531817,
+        "allen_ba": 0.008629823940023065,
+        "allen_asymmetry": -0.0065776244172698825,
+        "concordant": true
+      },
+      {
+        "region_a": "SUB",
+        "region_b": "VISp",
+        "iia_ab": 0.4732225082225083,
+        "iia_ba": 0.4017891617094744,
+        "iia_asymmetry": 0.0714333465130339,
+        "allen_ab": 0.002209894697640049,
+        "allen_ba": 0.001159996268159263,
+        "allen_asymmetry": 0.001049898429480786,
+        "concordant": true
+      },
+      {
+        "region_a": "CA3",
+        "region_b": "SUB",
+        "iia_ab": 0.3901332727993595,
+        "iia_ba": 0.45936186186186184,
+        "iia_asymmetry": -0.06922858906250234,
+        "allen_ab": 0.006352301023219157,
+        "allen_ba": 0.0083878395155188,
+        "allen_asymmetry": -0.0020355384922996437,
+        "concordant": true
+      },
+      {
+        "region_a": "MOs",
+        "region_b": "SUB",
+        "iia_ab": 0.3931051074766372,
+        "iia_ba": 0.46056830088228695,
+        "iia_asymmetry": -0.06746319340564977,
+        "allen_ab": 5.352056900262775e-05,
+        "allen_ba": 6.506861960256636e-05,
+        "allen_asymmetry": -1.1548050599938612e-05,
+        "concordant": true
+      },
+      {
+        "region_a": "SUB",
+        "region_b": "TH",
+        "iia_ab": 0.44559309309309314,
+        "iia_ba": 0.37928619056278623,
+        "iia_asymmetry": 0.06630690253030691,
+        "allen_ab": 0.007891584419201157,
+        "allen_ba": 0.0035422779843002966,
+        "allen_asymmetry": 0.00434930643490086,
+        "concordant": true
+      },
+      {
+        "region_a": "ACA",
+        "region_b": "SUB",
+        "iia_ab": 0.39139660674874266,
+        "iia_ba": 0.4542666988514165,
+        "iia_asymmetry": -0.06287009210267386,
+        "allen_ab": 0.00014706022435929296,
+        "allen_ba": 0.0008212026885971451,
+        "allen_asymmetry": -0.0006741424642378521,
+        "concordant": true
+      },
+      {
+        "region_a": "PL",
+        "region_b": "SUB",
+        "iia_ab": 0.41966598965564683,
+        "iia_ba": 0.48048798798798803,
+        "iia_asymmetry": -0.0608219983323412,
+        "allen_ab": 4.4138808378227106e-05,
+        "allen_ba": 0.0008418719288002043,
+        "allen_asymmetry": -0.0007977331204219772,
+        "concordant": true
+      },
+      {
+        "region_a": "LP",
+        "region_b": "PL",
+        "iia_ab": 0.47507073030477287,
+        "iia_ba": 0.4144147748745963,
+        "iia_asymmetry": 0.060655955430176545,
+        "allen_ab": 0.0014907255367053252,
+        "allen_ba": 0.0011705655131660137,
+        "allen_asymmetry": 0.00032016002353931145,
+        "concordant": true
+      },
+      {
+        "region_a": "SUB",
+        "region_b": "VISam",
+        "iia_ab": 0.4523325072730144,
+        "iia_ba": 0.39253026015402886,
+        "iia_asymmetry": 0.05980224711898552,
+        "allen_ab": 0.001052253068623577,
+        "allen_ba": 0.00045078694735833935,
+        "allen_asymmetry": 0.0006014661212652377,
+        "concordant": true
+      },
+      {
+        "region_a": "ACA",
+        "region_b": "MRN",
+        "iia_ab": 0.39835759298826695,
+        "iia_ba": 0.45548012593467135,
+        "iia_asymmetry": -0.0571225329464044,
+        "allen_ab": 0.0053977331756732425,
+        "allen_ba": 0.00034433474306244546,
+        "allen_asymmetry": 0.005053398432610797,
+        "concordant": false
+      },
+      {
+        "region_a": "MOs",
+        "region_b": "MRN",
+        "iia_ab": 0.4106267792105769,
+        "iia_ba": 0.4668528755375668,
+        "iia_asymmetry": -0.05622609632698994,
+        "allen_ab": 0.01105034032923241,
+        "allen_ba": 0.0001620349343440125,
+        "allen_asymmetry": 0.010888305394888397,
+        "concordant": false
+      },
+      {
+        "region_a": "LP",
+        "region_b": "SCm",
+        "iia_ab": 0.4484294750677729,
+        "iia_ba": 0.3926534668666326,
+        "iia_asymmetry": 0.055776008201140315,
+        "allen_ab": 0.0010823660487601498,
+        "allen_ba": 0.028192679913551698,
+        "allen_asymmetry": -0.027110313864791548,
+        "concordant": false
+      },
+      {
+        "region_a": "MRN",
+        "region_b": "RSP",
+        "iia_ab": 0.47088629858361725,
+        "iia_ba": 0.41684796339366725,
+        "iia_asymmetry": 0.05403833518994999,
+        "allen_ab": 0.0021574049100102823,
+        "allen_ba": 0.0012880642261047979,
+        "allen_asymmetry": 0.0008693406839054845,
+        "concordant": true
+      },
+      {
+        "region_a": "MRN",
+        "region_b": "PL",
+        "iia_ab": 0.4750296442687747,
+        "iia_ba": 0.4211648573616035,
+        "iia_asymmetry": 0.053864786907171225,
+        "allen_ab": 0.0002478608540388445,
+        "allen_ba": 0.004533129127851083,
+        "allen_asymmetry": -0.004285268273812239,
+        "concordant": false
+      },
+      {
+        "region_a": "LP",
+        "region_b": "MOs",
+        "iia_ab": 0.4613152480498197,
+        "iia_ba": 0.40774047659867096,
+        "iia_asymmetry": 0.05357477145114875,
+        "allen_ab": 0.004827895075981492,
+        "allen_ba": 0.0024949793973271447,
+        "allen_asymmetry": 0.0023329156786543476,
+        "concordant": true
+      },
+      {
+        "region_a": "CA3",
+        "region_b": "MRN",
+        "iia_ab": 0.4057265248549836,
+        "iia_ba": 0.4550395256916996,
+        "iia_asymmetry": -0.04931300083671597,
+        "allen_ab": 3.3235202107534933e-06,
+        "allen_ba": 9.500873596012444e-05,
+        "allen_asymmetry": -9.168521574937094e-05,
+        "concordant": true
+      },
+      {
+        "region_a": "ACA",
+        "region_b": "LP",
+        "iia_ab": 0.41679615942220133,
+        "iia_ba": 0.4621597520606499,
+        "iia_asymmetry": -0.04536359263844858,
+        "allen_ab": 0.010914505175223507,
+        "allen_ba": 0.005905888202778092,
+        "allen_asymmetry": 0.0050086169724454154,
+        "concordant": false
+      },
+      {
+        "region_a": "MRN",
+        "region_b": "VISam",
+        "iia_ab": 0.46107147680559424,
+        "iia_ba": 0.4157278748575619,
+        "iia_asymmetry": 0.04534360194803233,
+        "allen_ab": 0.0026798048532427417,
+        "allen_ba": 0.0013675127160471645,
+        "allen_asymmetry": 0.0013122921371955772,
+        "concordant": true
+      },
+      {
+        "region_a": "LGd",
+        "region_b": "TH",
+        "iia_ab": 0.464375,
+        "iia_ba": 0.41906563283208015,
+        "iia_asymmetry": 0.045309367167919834,
+        "allen_ab": 0.0037109202676999923,
+        "allen_ba": 0.007237257984264706,
+        "allen_asymmetry": -0.0035263377165647134,
+        "concordant": false
+      },
+      {
+        "region_a": "MRN",
+        "region_b": "VISp",
+        "iia_ab": 0.4574794977279449,
+        "iia_ba": 0.41277536117466074,
+        "iia_asymmetry": 0.044704136553284146,
+        "allen_ab": 0.0016761897816253296,
+        "allen_ba": 3.420436169035619e-05,
+        "allen_asymmetry": 0.0016419854199349734,
+        "concordant": true
+      },
+      {
+        "region_a": "DG",
+        "region_b": "PL",
+        "iia_ab": 0.470078043663516,
+        "iia_ba": 0.4254123684501605,
+        "iia_asymmetry": 0.044665675213355516,
+        "allen_ab": 3.1094542193918415e-05,
+        "allen_ba": 9.733857439531097e-05,
+        "allen_asymmetry": -6.624403220139256e-05,
+        "concordant": false
+      },
+      {
+        "region_a": "CA3",
+        "region_b": "LP",
+        "iia_ab": 0.411563455395253,
+        "iia_ba": 0.45565324899367454,
+        "iia_asymmetry": -0.04408979359842152,
+        "allen_ab": 9.886403464833851e-05,
+        "allen_ba": 0.0023406178399495215,
+        "allen_asymmetry": -0.002241753805301183,
+        "concordant": true
+      },
+      {
+        "region_a": "LGd",
+        "region_b": "MOs",
+        "iia_ab": 0.4666624040920716,
+        "iia_ba": 0.42274399553562536,
+        "iia_asymmetry": 0.04391840855644624,
+        "allen_ab": 0.0003442055583838241,
+        "allen_ba": 3.346648468991439e-05,
+        "allen_asymmetry": 0.0003107390736939097,
+        "concordant": true
+      },
+      {
+        "region_a": "CA1",
+        "region_b": "LP",
+        "iia_ab": 0.4046983713441239,
+        "iia_ba": 0.44754505682200096,
+        "iia_asymmetry": -0.04284668547787707,
+        "allen_ab": 0.0011403033884530799,
+        "allen_ba": 0.0013072065479143322,
+        "allen_asymmetry": -0.0001669031594612523,
+        "concordant": true
+      },
+      {
+        "region_a": "CA1",
+        "region_b": "MRN",
+        "iia_ab": 0.40479705011653033,
+        "iia_ba": 0.44598455012265414,
+        "iia_asymmetry": -0.04118750000612381,
+        "allen_ab": 4.9817065601702037e-05,
+        "allen_ba": 0.00034636740468968263,
+        "allen_asymmetry": -0.0002965503390879806,
+        "concordant": true
+      },
+      {
+        "region_a": "LGd",
+        "region_b": "VISam",
+        "iia_ab": 0.45988509764907276,
+        "iia_ba": 0.41990469403683284,
+        "iia_asymmetry": 0.03998040361223992,
+        "allen_ab": 0.008975893265439662,
+        "allen_ba": 0.006884069279548787,
+        "allen_asymmetry": 0.0020918239858908746,
+        "concordant": true
+      },
+      {
+        "region_a": "PL",
+        "region_b": "TH",
+        "iia_ab": 0.4259200861195542,
+        "iia_ba": 0.46500278851477983,
+        "iia_asymmetry": -0.039082702395225655,
+        "allen_ab": 0.008961761262129919,
+        "allen_ba": 0.01966761343798761,
+        "allen_asymmetry": -0.01070585217585769,
+        "concordant": true
+      },
+      {
+        "region_a": "LGd",
+        "region_b": "PL",
+        "iia_ab": 0.47187499999999993,
+        "iia_ba": 0.4337116228070176,
+        "iia_asymmetry": 0.03816337719298235,
+        "allen_ab": 3.207970830496496e-05,
+        "allen_ba": 9.867105953026037e-06,
+        "allen_asymmetry": 2.2212602351938927e-05,
+        "concordant": true
+      },
+      {
+        "region_a": "ACA",
+        "region_b": "PL",
+        "iia_ab": 0.4856960328958809,
+        "iia_ba": 0.4476699839085777,
+        "iia_asymmetry": 0.03802604898730322,
+        "allen_ab": 0.019532096464972434,
+        "allen_ba": 0.02208239684049965,
+        "allen_asymmetry": -0.0025503003755272154,
+        "concordant": false
+      },
+      {
+        "region_a": "DG",
+        "region_b": "SUB",
+        "iia_ab": 0.3952417336366132,
+        "iia_ba": 0.43215679430400944,
+        "iia_asymmetry": -0.03691506066739625,
+        "allen_ab": 0.002819385505861042,
+        "allen_ba": 0.012835202044697541,
+        "allen_asymmetry": -0.0100158165388365,
+        "concordant": true
+      },
+      {
+        "region_a": "DG",
+        "region_b": "MRN",
+        "iia_ab": 0.4075148457804593,
+        "iia_ba": 0.4442618903419586,
+        "iia_asymmetry": -0.0367470445614993,
+        "allen_ab": 3.772895815325633e-05,
+        "allen_ba": 0.00015402899009721698,
+        "allen_asymmetry": -0.00011630003194396064,
+        "concordant": true
+      },
+      {
+        "region_a": "CA1",
+        "region_b": "RSP",
+        "iia_ab": 0.4722861555010291,
+        "iia_ba": 0.4362858002174168,
+        "iia_asymmetry": 0.036000355283612284,
+        "allen_ab": 0.0017087951807012996,
+        "allen_ba": 0.00012273833362543875,
+        "allen_asymmetry": 0.0015860568470758608,
+        "concordant": true
+      },
+      {
+        "region_a": "PL",
+        "region_b": "VISam",
+        "iia_ab": 0.43240594809959615,
+        "iia_ba": 0.4674470325621284,
+        "iia_asymmetry": -0.035041084462532235,
+        "allen_ab": 0.002923842513901181,
+        "allen_ba": 0.003523403309988418,
+        "allen_asymmetry": -0.0005995607960872368,
+        "concordant": true
+      },
+      {
+        "region_a": "CA3",
+        "region_b": "DG",
+        "iia_ab": 0.4232388775765781,
+        "iia_ba": 0.4581071895921531,
+        "iia_asymmetry": -0.034868312015575,
+        "allen_ab": 0.031891201691862665,
+        "allen_ba": 0.02242204107354995,
+        "allen_asymmetry": 0.009469160618312714,
+        "concordant": false
+      },
+      {
+        "region_a": "RSP",
+        "region_b": "TH",
+        "iia_ab": 0.43158270515413366,
+        "iia_ba": 0.46598837348488037,
+        "iia_asymmetry": -0.03440566833074671,
+        "allen_ab": 0.004890579242847681,
+        "allen_ba": 0.006962658983928378,
+        "allen_asymmetry": -0.002072079741080697,
+        "concordant": true
+      },
+      {
+        "region_a": "DG",
+        "region_b": "LP",
+        "iia_ab": 0.4058972400263297,
+        "iia_ba": 0.44026874363425816,
+        "iia_asymmetry": -0.034371503607928455,
+        "allen_ab": 0.0011424924017852383,
+        "allen_ba": 0.008704479783689758,
+        "allen_asymmetry": -0.00756198738190452,
+        "concordant": true
+      },
+      {
+        "region_a": "CA1",
+        "region_b": "PL",
+        "iia_ab": 0.47022668451862143,
+        "iia_ba": 0.4363226908228999,
+        "iia_asymmetry": 0.03390399369572156,
+        "allen_ab": 0.0018907210594282004,
+        "allen_ba": 6.457711134281783e-06,
+        "allen_asymmetry": 0.0018842633482939186,
+        "concordant": true
+      },
+      {
+        "region_a": "MRN",
+        "region_b": "TH",
+        "iia_ab": 0.4391600790513834,
+        "iia_ba": 0.40546637418195053,
+        "iia_asymmetry": 0.03369370486943285,
+        "allen_ab": 0.014491231141773482,
+        "allen_ba": 0.002728088646912586,
+        "allen_asymmetry": 0.011763142494860896,
+        "concordant": true
+      },
+      {
+        "region_a": "LP",
+        "region_b": "TH",
+        "iia_ab": 0.45218171362852216,
+        "iia_ba": 0.41874788610536023,
+        "iia_asymmetry": 0.03343382752316193,
+        "allen_ab": 0.008000531061146636,
+        "allen_ba": 0.009739375254598762,
+        "allen_asymmetry": -0.0017388441934521257,
+        "concordant": false
+      },
+      {
+        "region_a": "CA1",
+        "region_b": "SUB",
+        "iia_ab": 0.3924847810716094,
+        "iia_ba": 0.42561489351490533,
+        "iia_asymmetry": -0.033130112443295945,
+        "allen_ab": 0.03297089693323041,
+        "allen_ba": 0.018135083948040365,
+        "allen_asymmetry": 0.014835812985190044,
+        "concordant": false
+      },
+      {
+        "region_a": "MRN",
+        "region_b": "SCm",
+        "iia_ab": 0.43567476002258615,
+        "iia_ba": 0.4026344378278855,
+        "iia_asymmetry": 0.033040322194700655,
+        "allen_ab": 0.06171574634847521,
+        "allen_ba": 0.03744547513864572,
+        "allen_asymmetry": 0.02427027120982949,
+        "concordant": true
+      },
+      {
+        "region_a": "LP",
+        "region_b": "VISam",
+        "iia_ab": 0.44816371848316394,
+        "iia_ba": 0.4179387547315048,
+        "iia_asymmetry": 0.030224963751659117,
+        "allen_ab": 0.037875215396740707,
+        "allen_ba": 0.03179587691881081,
+        "allen_asymmetry": 0.006079338477929894,
+        "concordant": true
+      },
+      {
+        "region_a": "LGd",
+        "region_b": "VISp",
+        "iia_ab": 0.46645833333333336,
+        "iia_ba": 0.43682897071872223,
+        "iia_asymmetry": 0.029629362614611132,
+        "allen_ab": 0.05786191995559317,
+        "allen_ba": 0.044048814057063075,
+        "allen_asymmetry": 0.013813105898530097,
+        "concordant": true
+      },
+      {
+        "region_a": "DG",
+        "region_b": "VISp",
+        "iia_ab": 0.46696813290395517,
+        "iia_ba": 0.43922297478816713,
+        "iia_asymmetry": 0.027745158115788038,
+        "allen_ab": 0.00022739908704307238,
+        "allen_ba": 0.00023757883949398714,
+        "allen_asymmetry": -1.0179752450914753e-05,
+        "concordant": false
+      },
+      {
+        "region_a": "PL",
+        "region_b": "SCm",
+        "iia_ab": 0.4453778467908903,
+        "iia_ba": 0.4728571428571428,
+        "iia_asymmetry": -0.02747929606625249,
+        "allen_ab": 0.0008257916702177526,
+        "allen_ba": 7.048144780906966e-05,
+        "allen_asymmetry": 0.000755310222408683,
+        "concordant": false
+      },
+      {
+        "region_a": "RSP",
+        "region_b": "SCm",
+        "iia_ab": 0.44236520047744543,
+        "iia_ba": 0.46972573355765657,
+        "iia_asymmetry": -0.027360533080211136,
+        "allen_ab": 0.006913908297844932,
+        "allen_ba": 0.0004713897886864189,
+        "allen_asymmetry": 0.006442518509158513,
+        "concordant": false
+      },
+      {
+        "region_a": "TH",
+        "region_b": "VISp",
+        "iia_ab": 0.471190883246702,
+        "iia_ba": 0.44505009612540664,
+        "iia_asymmetry": 0.02614078712129536,
+        "allen_ab": 0.009085070406559132,
+        "allen_ba": 0.006457635823426656,
+        "allen_asymmetry": 0.002627434583132477,
+        "concordant": true
+      },
+      {
+        "region_a": "ACA",
+        "region_b": "DG",
+        "iia_ab": 0.4218312737515662,
+        "iia_ba": 0.4478691084669903,
+        "iia_asymmetry": -0.02603783471542409,
+        "allen_ab": 0.00019005824762981856,
+        "allen_ba": 7.363004488941903e-05,
+        "allen_asymmetry": 0.00011642820274039953,
+        "concordant": false
+      },
+      {
+        "region_a": "RSP",
+        "region_b": "VISp",
+        "iia_ab": 0.4712829475335808,
+        "iia_ba": 0.4468205972220534,
+        "iia_asymmetry": 0.02446235031152738,
+        "allen_ab": 0.0072194638485621075,
+        "allen_ba": 0.00735552804133112,
+        "allen_asymmetry": -0.00013606419276901253,
+        "concordant": false
+      },
+      {
+        "region_a": "LGd",
+        "region_b": "SCm",
+        "iia_ab": 0.45678571428571424,
+        "iia_ba": 0.4325,
+        "iia_asymmetry": 0.024285714285714244,
+        "allen_ab": 0.0002853594088001257,
+        "allen_ba": 0.003971609281631085,
+        "allen_asymmetry": -0.0036862498728309594,
+        "concordant": false
+      },
+      {
+        "region_a": "CA1",
+        "region_b": "MOs",
+        "iia_ab": 0.4668367500306896,
+        "iia_ba": 0.44305535809003577,
+        "iia_asymmetry": 0.023781391940653818,
+        "allen_ab": 0.0002934723438362257,
+        "allen_ba": 1.5222577366577087e-05,
+        "allen_asymmetry": 0.0002782497664696486,
+        "concordant": true
+      },
+      {
+        "region_a": "RSP",
+        "region_b": "VISam",
+        "iia_ab": 0.4489559597492309,
+        "iia_ba": 0.4726686400442136,
+        "iia_asymmetry": -0.02371268029498269,
+        "allen_ab": 0.02194300858421111,
+        "allen_ba": 0.025756833242826255,
+        "allen_asymmetry": -0.0038138246586151454,
+        "concordant": true
+      },
+      {
+        "region_a": "ACA",
+        "region_b": "SCm",
+        "iia_ab": 0.4565650442601112,
+        "iia_ba": 0.43299938157081014,
+        "iia_asymmetry": 0.023565662689301048,
+        "allen_ab": 0.009647834677432472,
+        "allen_ba": 8.861464870517388e-05,
+        "allen_asymmetry": 0.009559220028727299,
+        "concordant": true
+      },
+      {
+        "region_a": "DG",
+        "region_b": "VISam",
+        "iia_ab": 0.45548585557557947,
+        "iia_ba": 0.4325498192846338,
+        "iia_asymmetry": 0.02293603629094565,
+        "allen_ab": 0.00026427263072321565,
+        "allen_ba": 0.00018780534562077748,
+        "allen_asymmetry": 7.646728510243817e-05,
+        "concordant": true
+      },
+      {
+        "region_a": "CA1",
+        "region_b": "CA3",
+        "iia_ab": 0.4639591295413048,
+        "iia_ba": 0.4413329377063032,
+        "iia_asymmetry": 0.022626191835001586,
+        "allen_ab": 0.009819334726800705,
+        "allen_ba": 0.11863853887084387,
+        "allen_asymmetry": -0.10881920414404317,
+        "concordant": false
+      },
+      {
+        "region_a": "LP",
+        "region_b": "RSP",
+        "iia_ab": 0.44616239857181395,
+        "iia_ba": 0.4236503770989874,
+        "iia_asymmetry": 0.02251202147282655,
+        "allen_ab": 0.008104241820641516,
+        "allen_ba": 0.012286361076369217,
+        "allen_asymmetry": -0.004182119255727701,
+        "concordant": false
+      },
+      {
+        "region_a": "LGd",
+        "region_b": "SUB",
+        "iia_ab": 0.4076570048309179,
+        "iia_ba": 0.4301351351351351,
+        "iia_asymmetry": -0.022478130304217248,
+        "allen_ab": 7.375684332073055e-05,
+        "allen_ba": 0.002271989294790416,
+        "allen_asymmetry": -0.0021982324514696855,
+        "concordant": true
+      },
+      {
+        "region_a": "CA3",
+        "region_b": "LGd",
+        "iia_ab": 0.4364520676691729,
+        "iia_ba": 0.458125,
+        "iia_asymmetry": -0.02167293233082712,
+        "allen_ab": 0.005214319388980715,
+        "allen_ba": 0.0005704540113926226,
+        "allen_asymmetry": 0.004643865377588092,
+        "concordant": false
+      },
+      {
+        "region_a": "CA1",
+        "region_b": "VISp",
+        "iia_ab": 0.4618898797966384,
+        "iia_ba": 0.4402820458992848,
+        "iia_asymmetry": 0.0216078338973536,
+        "allen_ab": 0.0006802724099933053,
+        "allen_ba": 0.0006004979609526684,
+        "allen_asymmetry": 7.977444904063683e-05,
+        "concordant": true
+      },
+      {
+        "region_a": "DG",
+        "region_b": "SCm",
+        "iia_ab": 0.454351007630237,
+        "iia_ba": 0.43342376614488043,
+        "iia_asymmetry": 0.020927241485356574,
+        "allen_ab": 0.0001419090581350893,
+        "allen_ba": 0.00024200692557456384,
+        "allen_asymmetry": -0.00010009786743947453,
+        "concordant": false
+      },
+      {
+        "region_a": "LP",
+        "region_b": "MRN",
+        "iia_ab": 0.40824349749127087,
+        "iia_ba": 0.4283456910332005,
+        "iia_asymmetry": -0.020102193541929658,
+        "allen_ab": 0.002017104440090117,
+        "allen_ba": 0.012161555968331805,
+        "allen_asymmetry": -0.010144451528241687,
+        "concordant": true
+      }
+    ]
+  },
+  "iia_matrix": {
+    "CA1": {
+      "MOs": 0.4668367500306896,
+      "DG": 0.42774595644913294,
+      "VISp": 0.4618898797966384,
+      "ACA": 0.4545197002076837,
+      "MRN": 0.40479705011653033,
+      "VISam": 0.4486192438424546,
+      "LP": 0.4046983713441239,
+      "RSP": 0.4722861555010291,
+      "SUB": 0.3924847810716094,
+      "CA3": 0.4639591295413048,
+      "LGd": 0.4321469621578135,
+      "PL": 0.47022668451862143,
+      "TH": 0.4361584627988256,
+      "SCm": 0.4573585721310051
+    },
+    "MOs": {
+      "CA1": 0.44305535809003577,
+      "DG": 0.43551123971725136,
+      "VISp": 0.46659596408837406,
+      "ACA": 0.4574370116405356,
+      "MRN": 0.4106267792105769,
+      "VISam": 0.4532228061288424,
+      "LP": 0.40774047659867096,
+      "RSP": 0.46879535286438556,
+      "SUB": 0.3931051074766372,
+      "CA3": 0.4591795054346844,
+      "LGd": 0.42274399553562536,
+      "PL": 0.4758432608185365,
+      "TH": 0.4514234353795434,
+      "SCm": 0.4565167826100025
+    },
+    "DG": {
+      "CA1": 0.4348096438696253,
+      "MOs": 0.45274016022818164,
+      "VISp": 0.46696813290395517,
+      "ACA": 0.4478691084669903,
+      "MRN": 0.4075148457804593,
+      "VISam": 0.45548585557557947,
+      "LP": 0.4058972400263297,
+      "RSP": 0.45662432392141067,
+      "SUB": 0.3952417336366132,
+      "CA3": 0.4581071895921531,
+      "LGd": 0.43583645670746735,
+      "PL": 0.470078043663516,
+      "TH": 0.44381233104600193,
+      "SCm": 0.454351007630237
+    },
+    "VISp": {
+      "CA1": 0.4402820458992848,
+      "MOs": 0.46111080519235925,
+      "DG": 0.43922297478816713,
+      "ACA": 0.463054888244831,
+      "MRN": 0.41277536117466074,
+      "VISam": 0.4396870699378298,
+      "LP": 0.3941384609506281,
+      "RSP": 0.4468205972220534,
+      "SUB": 0.4017891617094744,
+      "CA3": 0.44471291777580596,
+      "LGd": 0.43682897071872223,
+      "PL": 0.46125502963866705,
+      "TH": 0.44505009612540664,
+      "SCm": 0.451116645944753
+    },
+    "ACA": {
+      "CA1": 0.4393688852844067,
+      "MOs": 0.4626816400041201,
+      "DG": 0.4218312737515662,
+      "VISp": 0.46734606142280916,
+      "MRN": 0.39835759298826695,
+      "VISam": 0.4483311942190507,
+      "LP": 0.41679615942220133,
+      "RSP": 0.46979914230602354,
+      "SUB": 0.39139660674874266,
+      "CA3": 0.44283636855730324,
+      "LGd": 0.4359384794092241,
+      "PL": 0.4856960328958809,
+      "TH": 0.44183579973758547,
+      "SCm": 0.4565650442601112
+    },
+    "MRN": {
+      "CA1": 0.44598455012265414,
+      "MOs": 0.4668528755375668,
+      "DG": 0.4442618903419586,
+      "VISp": 0.4574794977279449,
+      "ACA": 0.45548012593467135,
+      "VISam": 0.46107147680559424,
+      "LP": 0.4283456910332005,
+      "RSP": 0.47088629858361725,
+      "SUB": 0.39813173139260094,
+      "CA3": 0.4550395256916996,
+      "LGd": 0.41231225296442686,
+      "PL": 0.4750296442687747,
+      "TH": 0.4391600790513834,
+      "SCm": 0.43567476002258615
+    },
+    "VISam": {
+      "CA1": 0.4334649369397608,
+      "MOs": 0.4561495289865949,
+      "DG": 0.4325498192846338,
+      "VISp": 0.45809589165636,
+      "ACA": 0.4573817658397555,
+      "MRN": 0.4157278748575619,
+      "LP": 0.4179387547315048,
+      "RSP": 0.4726686400442136,
+      "SUB": 0.39253026015402886,
+      "CA3": 0.44960742385639657,
+      "LGd": 0.41990469403683284,
+      "PL": 0.4674470325621284,
+      "TH": 0.44101237030006685,
+      "SCm": 0.44910575291703875
+    },
+    "LP": {
+      "CA1": 0.44754505682200096,
+      "MOs": 0.4613152480498197,
+      "DG": 0.44026874363425816,
+      "VISp": 0.47679058846080125,
+      "ACA": 0.4621597520606499,
+      "MRN": 0.40824349749127087,
+      "VISam": 0.44816371848316394,
+      "RSP": 0.44616239857181395,
+      "SUB": 0.40253837036402246,
+      "CA3": 0.45565324899367454,
+      "LGd": 0.4367619321449109,
+      "PL": 0.47507073030477287,
+      "TH": 0.45218171362852216,
+      "SCm": 0.4484294750677729
+    },
+    "RSP": {
+      "CA1": 0.4362858002174168,
+      "MOs": 0.46282199967073917,
+      "DG": 0.4419846974158161,
+      "VISp": 0.4712829475335808,
+      "ACA": 0.46263030191601623,
+      "MRN": 0.41684796339366725,
+      "VISam": 0.4489559597492309,
+      "LP": 0.4236503770989874,
+      "SUB": 0.389589084549402,
+      "CA3": 0.45716330488651913,
+      "LGd": 0.44698596555739406,
+      "PL": 0.45649767114052825,
+      "TH": 0.43158270515413366,
+      "SCm": 0.44236520047744543
+    },
+    "SUB": {
+      "CA1": 0.42561489351490533,
+      "MOs": 0.46056830088228695,
+      "DG": 0.43215679430400944,
+      "VISp": 0.4732225082225083,
+      "ACA": 0.4542666988514165,
+      "MRN": 0.4156284432067927,
+      "VISam": 0.4523325072730144,
+      "LP": 0.4027748334647305,
+      "RSP": 0.4618439637590931,
+      "CA3": 0.45936186186186184,
+      "LGd": 0.4301351351351351,
+      "PL": 0.48048798798798803,
+      "TH": 0.44559309309309314,
+      "SCm": 0.4561132561132562
+    },
+    "CA3": {
+      "CA1": 0.4413329377063032,
+      "MOs": 0.47157855354319916,
+      "DG": 0.4232388775765781,
+      "VISp": 0.4489926698987053,
+      "ACA": 0.450926272099483,
+      "MRN": 0.4057265248549836,
+      "VISam": 0.44008254716796563,
+      "LP": 0.411563455395253,
+      "RSP": 0.4488408997437178,
+      "SUB": 0.3901332727993595,
+      "LGd": 0.4364520676691729,
+      "PL": 0.46037181749936107,
+      "TH": 0.4346054964539007,
+      "SCm": 0.4528424775707384
+    },
+    "LGd": {
+      "CA1": 0.4442740436754412,
+      "MOs": 0.4666624040920716,
+      "DG": 0.424823662254757,
+      "VISp": 0.46645833333333336,
+      "ACA": 0.45566205533596843,
+      "MRN": 0.4053982818423813,
+      "VISam": 0.45988509764907276,
+      "LP": 0.41847320812382927,
+      "RSP": 0.45647195109928035,
+      "SUB": 0.4076570048309179,
+      "CA3": 0.458125,
+      "PL": 0.47187499999999993,
+      "TH": 0.464375,
+      "SCm": 0.45678571428571424
+    },
+    "PL": {
+      "CA1": 0.4363226908228999,
+      "MOs": 0.45609516941463635,
+      "DG": 0.4254123684501605,
+      "VISp": 0.4503670920075607,
+      "ACA": 0.4476699839085777,
+      "MRN": 0.4211648573616035,
+      "VISam": 0.43240594809959615,
+      "LP": 0.4144147748745963,
+      "RSP": 0.4695568419867736,
+      "SUB": 0.41966598965564683,
+      "CA3": 0.45690481344690276,
+      "LGd": 0.4337116228070176,
+      "TH": 0.4259200861195542,
+      "SCm": 0.4453778467908903
+    },
+    "TH": {
+      "CA1": 0.44984100293553875,
+      "MOs": 0.4656547287714723,
+      "DG": 0.42592183857782073,
+      "VISp": 0.471190883246702,
+      "ACA": 0.4479594293541597,
+      "MRN": 0.40546637418195053,
+      "VISam": 0.4555976024993793,
+      "LP": 0.41874788610536023,
+      "RSP": 0.46598837348488037,
+      "SUB": 0.37928619056278623,
+      "CA3": 0.4524117083127165,
+      "LGd": 0.41906563283208015,
+      "PL": 0.46500278851477983,
+      "SCm": 0.4411507936507936
+    },
+    "SCm": {
+      "CA1": 0.4389861089563055,
+      "MOs": 0.46281331580251156,
+      "DG": 0.43342376614488043,
+      "VISp": 0.45298347910592796,
+      "ACA": 0.43299938157081014,
+      "MRN": 0.4026344378278855,
+      "VISam": 0.45879368598880776,
+      "LP": 0.3926534668666326,
+      "RSP": 0.46972573355765657,
+      "SUB": 0.3817535903250189,
+      "CA3": 0.4471428571428571,
+      "LGd": 0.4325,
+      "PL": 0.4728571428571428,
+      "TH": 0.4317857142857143
+    }
+  },
+  "allen_densities": {
+    "CA1": {
+      "MOs": 0.0002934723438362257,
+      "DG": 0.002600530040135023,
+      "VISp": 0.0006802724099933053,
+      "ACA": 0.0009242348827225717,
+      "MRN": 4.9817065601702037e-05,
+      "VISam": 0.0026080329722032443,
+      "LP": 0.0011403033884530799,
+      "RSP": 0.0017087951807012996,
+      "SUB": 0.03297089693323041,
+      "CA3": 0.009819334726800705,
+      "LGd": 0.00014034813833848863,
+      "PL": 0.0018907210594282004,
+      "TH": 0.000931680923644866,
+      "SCm": 0.00037262349844870656
+    },
+    "MOs": {
+      "CA1": 1.5222577366577087e-05,
+      "DG": 0.00014684450297892948,
+      "VISp": 0.0006875234691123159,
+      "ACA": 0.009399513971127513,
+      "MRN": 0.01105034032923241,
+      "VISam": 0.002522812147791208,
+      "LP": 0.0024949793973271447,
+      "RSP": 0.001600284308665776,
+      "SUB": 5.352056900262775e-05,
+      "CA3": 7.194236334742166e-05,
+      "LGd": 3.346648468991439e-05,
+      "PL": 0.00695861528604053,
+      "TH": 0.008772085770490651,
+      "SCm": 0.007014655161095007
+    },
+    "DG": {
+      "CA1": 0.016537156664131816,
+      "MOs": 5.977253809258674e-05,
+      "VISp": 0.00022739908704307238,
+      "ACA": 7.363004488941903e-05,
+      "MRN": 3.772895815325633e-05,
+      "VISam": 0.00026427263072321565,
+      "LP": 0.0011424924017852383,
+      "RSP": 0.0003104024091557962,
+      "SUB": 0.002819385505861042,
+      "CA3": 0.02242204107354995,
+      "LGd": 0.0008139763965066373,
+      "PL": 3.1094542193918415e-05,
+      "TH": 0.00042614234100412323,
+      "SCm": 0.0001419090581350893
+    },
+    "VISp": {
+      "CA1": 0.0006004979609526684,
+      "MOs": 0.0007602851505706701,
+      "DG": 0.00023757883949398714,
+      "ACA": 0.0025106647683308166,
+      "MRN": 3.420436169035619e-05,
+      "VISam": 0.01438930308537713,
+      "LP": 0.02433610275367521,
+      "RSP": 0.00735552804133112,
+      "SUB": 0.001159996268159263,
+      "CA3": 0.00026770884846493055,
+      "LGd": 0.044048814057063075,
+      "PL": 0.00023477625114492372,
+      "TH": 0.006457635823426656,
+      "SCm": 0.0032403351927331753
+    },
+    "ACA": {
+      "CA1": 1.4966842913144753e-05,
+      "MOs": 0.007188795455370716,
+      "DG": 0.00019005824762981856,
+      "VISp": 0.0026639053453782874,
+      "MRN": 0.0053977331756732425,
+      "VISam": 0.020928927047968653,
+      "LP": 0.010914505175223507,
+      "RSP": 0.011990284472620029,
+      "SUB": 0.00014706022435929296,
+      "CA3": 5.529537174926575e-05,
+      "LGd": 0.0003569657751889347,
+      "PL": 0.019532096464972434,
+      "TH": 0.009086029522415948,
+      "SCm": 0.009647834677432472
+    },
+    "MRN": {
+      "CA1": 0.00034636740468968263,
+      "MOs": 0.0001620349343440125,
+      "DG": 0.00015402899009721698,
+      "VISp": 0.0016761897816253296,
+      "ACA": 0.00034433474306244546,
+      "VISam": 0.0026798048532427417,
+      "LP": 0.012161555968331805,
+      "RSP": 0.0021574049100102823,
+      "SUB": 0.0006051708262963024,
+      "CA3": 9.500873596012444e-05,
+      "LGd": 0.0046098939237193695,
+      "PL": 0.0002478608540388445,
+      "TH": 0.014491231141773482,
+      "SCm": 0.06171574634847521
+    },
+    "VISam": {
+      "CA1": 0.00012678083664506494,
+      "MOs": 0.0044713628921492195,
+      "DG": 0.00018780534562077748,
+      "VISp": 0.01973527752092753,
+      "ACA": 0.017512679625841503,
+      "MRN": 0.0013675127160471645,
+      "LP": 0.03179587691881081,
+      "RSP": 0.025756833242826255,
+      "SUB": 0.00045078694735833935,
+      "CA3": 0.00011697884480159418,
+      "LGd": 0.006884069279548787,
+      "PL": 0.003523403309988418,
+      "TH": 0.008587944114840988,
+      "SCm": 0.008275172018954445
+    },
+    "LP": {
+      "CA1": 0.0013072065479143322,
+      "MOs": 0.004827895075981492,
+      "DG": 0.008704479783689758,
+      "VISp": 0.02845078780083794,
+      "ACA": 0.005905888202778092,
+      "MRN": 0.002017104440090117,
+      "VISam": 0.037875215396740707,
+      "RSP": 0.008104241820641516,
+      "SUB": 8.587906065266239e-05,
+      "CA3": 0.0023406178399495215,
+      "LGd": 0.010614459535526281,
+      "PL": 0.0014907255367053252,
+      "TH": 0.008000531061146636,
+      "SCm": 0.0010823660487601498
+    },
+    "RSP": {
+      "CA1": 0.00012273833362543875,
+      "MOs": 0.00210626169930155,
+      "DG": 0.00024715925949909983,
+      "VISp": 0.0072194638485621075,
+      "ACA": 0.011146358659195357,
+      "MRN": 0.0012880642261047979,
+      "VISam": 0.02194300858421111,
+      "LP": 0.012286361076369217,
+      "SUB": 0.0020521995227531817,
+      "CA3": 0.000125443598096593,
+      "LGd": 0.006470489240833231,
+      "PL": 0.0012356758152599983,
+      "TH": 0.004890579242847681,
+      "SCm": 0.006913908297844932
+    },
+    "SUB": {
+      "CA1": 0.018135083948040365,
+      "MOs": 6.506861960256636e-05,
+      "DG": 0.012835202044697541,
+      "VISp": 0.002209894697640049,
+      "ACA": 0.0008212026885971451,
+      "MRN": 0.0008655458037798981,
+      "VISam": 0.001052253068623577,
+      "LP": 0.005713063994164129,
+      "RSP": 0.008629823940023065,
+      "CA3": 0.0083878395155188,
+      "LGd": 0.002271989294790416,
+      "PL": 0.0008418719288002043,
+      "TH": 0.007891584419201157,
+      "SCm": 0.0026137969838229413
+    },
+    "CA3": {
+      "CA1": 0.11863853887084387,
+      "MOs": 3.027175732438162e-05,
+      "DG": 0.031891201691862665,
+      "VISp": 0.00016207049165814798,
+      "ACA": 0.00017006717840922856,
+      "MRN": 3.3235202107534933e-06,
+      "VISam": 4.5102039923137505e-05,
+      "LP": 9.886403464833851e-05,
+      "RSP": 5.229518565832029e-05,
+      "SUB": 0.006352301023219157,
+      "LGd": 0.005214319388980715,
+      "PL": 0.00015609456973118802,
+      "TH": 0.001470218759631543,
+      "SCm": 9.941152921274581e-06
+    },
+    "LGd": {
+      "CA1": 0.0002771773063241985,
+      "MOs": 0.0003442055583838241,
+      "DG": 0.0002831091427676526,
+      "VISp": 0.05786191995559317,
+      "ACA": 0.001548857796461072,
+      "MRN": 9.015177085937972e-05,
+      "VISam": 0.008975893265439662,
+      "LP": 0.007371524421268088,
+      "RSP": 0.005014789677965536,
+      "SUB": 7.375684332073055e-05,
+      "CA3": 0.0005704540113926226,
+      "PL": 3.207970830496496e-05,
+      "TH": 0.0037109202676999923,
+      "SCm": 0.0002853594088001257
+    },
+    "PL": {
+      "CA1": 6.457711134281783e-06,
+      "MOs": 0.003765841352811673,
+      "DG": 9.733857439531097e-05,
+      "VISp": 0.00033180564292837743,
+      "ACA": 0.02208239684049965,
+      "MRN": 0.004533129127851083,
+      "VISam": 0.002923842513901181,
+      "LP": 0.0011705655131660137,
+      "RSP": 0.0012381191232840871,
+      "SUB": 4.4138808378227106e-05,
+      "CA3": 7.867860342017556e-06,
+      "LGd": 9.867105953026037e-06,
+      "TH": 0.008961761262129919,
+      "SCm": 0.0008257916702177526
+    },
+    "TH": {
+      "CA1": 0.001457611717121518,
+      "MOs": 0.006556756775126488,
+      "DG": 0.0011314562229394827,
+      "VISp": 0.009085070406559132,
+      "ACA": 0.01630007658594479,
+      "MRN": 0.002728088646912586,
+      "VISam": 0.008906558089509953,
+      "LP": 0.009739375254598762,
+      "RSP": 0.006962658983928378,
+      "SUB": 0.0035422779843002966,
+      "CA3": 0.0007618281301038885,
+      "LGd": 0.007237257984264706,
+      "PL": 0.01966761343798761,
+      "SCm": 0.0024180871064998534
+    },
+    "SCm": {
+      "CA1": 9.437763184977851e-05,
+      "MOs": 0.0001784417385183391,
+      "DG": 0.00024200692557456384,
+      "VISp": 0.0003306006102736842,
+      "ACA": 8.861464870517388e-05,
+      "MRN": 0.03744547513864572,
+      "VISam": 0.0011426379447825358,
+      "LP": 0.028192679913551698,
+      "RSP": 0.0004713897886864189,
+      "SUB": 0.0002678373360200391,
+      "CA3": 0.00023419266854480308,
+      "LGd": 0.003971609281631085,
+      "PL": 7.048144780906966e-05,
+      "TH": 0.011265622578281592
+    }
+  }
+}

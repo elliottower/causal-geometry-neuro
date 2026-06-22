@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T15:00:26.265593", "experiment": "exp47", "event": "started", "module": "experiments.exp47_silencing_validation", "max_sessions": null}
+{"ts": "2026-06-21T15:01:17.175523", "experiment": "exp47", "event": "run_complete", "n_keys": 10}
+{"ts": "2026-06-21T15:01:19.697355", "experiment": "exp47", "event": "saved_volume", "path": "/results/exp47/exp47_20260621_150118.json"}
+{"ts": "2026-06-21T15:01:21.797747", "experiment": "exp47", "event": "copied_artifacts"}
+{"ts": "2026-06-21T15:01:23.277989", "experiment": "exp47", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T15:01:24.392558", "experiment": "exp47", "event": "done"}

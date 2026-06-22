@@ -1,0 +1,12 @@
+{"ts": "2026-06-21T04:58:18.291670", "experiment": "exp11", "event": "started", "module": "experiments.exp11_linear_vs_nonlinear", "max_sessions": 5}
+{"ts": "2026-06-21T04:59:38.160289", "experiment": "exp11", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T04:59:41.001692", "experiment": "exp11", "event": "saved_volume", "path": "/results/exp11/exp11_20260621_045939.json"}
+{"ts": "2026-06-21T04:59:43.161856", "experiment": "exp11", "event": "copied_artifacts"}
+{"ts": "2026-06-21T04:59:45.343513", "experiment": "exp11", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T04:59:46.937783", "experiment": "exp11", "event": "done"}
+{"ts": "2026-06-21T05:28:56.234675", "experiment": "exp11", "event": "started", "module": "experiments.exp11_linear_vs_nonlinear", "max_sessions": null}
+{"ts": "2026-06-21T05:31:59.241362", "experiment": "exp11", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T05:32:00.741481", "experiment": "exp11", "event": "saved_volume", "path": "/results/exp11/exp11_20260621_053159.json"}
+{"ts": "2026-06-21T05:32:02.091019", "experiment": "exp11", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:32:03.125212", "experiment": "exp11", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:32:03.824794", "experiment": "exp11", "event": "done"}

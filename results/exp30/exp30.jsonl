@@ -1,0 +1,18 @@
+{"ts": "2026-06-21T06:46:22.929442", "experiment": "exp30", "event": "started", "module": "experiments.exp30_communication_subspace_grassmannian", "max_sessions": null}
+{"ts": "2026-06-21T06:47:29.342205", "experiment": "exp30", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T06:47:31.598480", "experiment": "exp30", "event": "saved_volume", "path": "/results/exp30/exp30_20260621_064730.json"}
+{"ts": "2026-06-21T06:47:33.354063", "experiment": "exp30", "event": "copied_artifacts"}
+{"ts": "2026-06-21T06:47:34.952552", "experiment": "exp30", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T06:47:36.281982", "experiment": "exp30", "event": "done"}
+{"ts": "2026-06-21T06:56:28.382656", "experiment": "exp30", "event": "started", "module": "experiments.exp30_communication_subspace_grassmannian", "max_sessions": null}
+{"ts": "2026-06-21T07:00:37.639811", "experiment": "exp30", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T07:00:40.652487", "experiment": "exp30", "event": "saved_volume", "path": "/results/exp30/exp30_20260621_070039.json"}
+{"ts": "2026-06-21T07:00:42.698039", "experiment": "exp30", "event": "copied_artifacts"}
+{"ts": "2026-06-21T07:00:44.827259", "experiment": "exp30", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T07:00:46.188617", "experiment": "exp30", "event": "done"}
+{"ts": "2026-06-21T07:09:33.993685", "experiment": "exp30", "event": "started", "module": "experiments.exp30_communication_subspace_grassmannian", "max_sessions": null}
+{"ts": "2026-06-21T08:03:21.715928", "experiment": "exp30", "event": "run_complete", "n_keys": 7}
+{"ts": "2026-06-21T08:03:23.455888", "experiment": "exp30", "event": "saved_volume", "path": "/results/exp30/exp30_20260621_080322.json"}
+{"ts": "2026-06-21T08:03:24.539652", "experiment": "exp30", "event": "copied_artifacts"}
+{"ts": "2026-06-21T08:03:25.784039", "experiment": "exp30", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T08:03:26.766267", "experiment": "exp30", "event": "done"}

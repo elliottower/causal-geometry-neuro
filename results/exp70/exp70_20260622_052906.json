@@ -1,0 +1,7811 @@
+{
+  "n_pairs": 1438,
+  "n_sessions": 39,
+  "top_20_pairs": {
+    "CA3->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->CA3": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->VISp": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VISp->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->NB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->NB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->VISp": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "MRN->SPF": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->CA1": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->DG": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->MG": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->VISam": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->NB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->LSr": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->LGd": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->MOs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->MOs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->VISa": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->SUB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    }
+  },
+  "region_hub_scores": {
+    "VISa": {
+      "mean_outgoing_iia": 0.49119744112729474,
+      "mean_incoming_iia": 0.580338349683177,
+      "n_outgoing": 27,
+      "n_incoming": 27,
+      "asymmetry": -0.08914090855588225
+    },
+    "MG": {
+      "mean_outgoing_iia": 0.6512119796532753,
+      "mean_incoming_iia": 0.5939349112426036,
+      "n_outgoing": 13,
+      "n_incoming": 13,
+      "asymmetry": 0.057277068410671705
+    },
+    "root": {
+      "mean_outgoing_iia": 0.42969026238421354,
+      "mean_incoming_iia": 0.387998176350063,
+      "n_outgoing": 59,
+      "n_incoming": 59,
+      "asymmetry": 0.04169208603415053
+    },
+    "POST": {
+      "mean_outgoing_iia": 0.32902269260106787,
+      "mean_incoming_iia": 0.4044517543859649,
+      "n_outgoing": 23,
+      "n_incoming": 23,
+      "asymmetry": -0.07542906178489706
+    },
+    "SUB": {
+      "mean_outgoing_iia": 0.536188336751895,
+      "mean_incoming_iia": 0.49496086255554494,
+      "n_outgoing": 32,
+      "n_incoming": 32,
+      "asymmetry": 0.04122747419635009
+    },
+    "ACB": {
+      "mean_outgoing_iia": 0.5729108235421517,
+      "mean_incoming_iia": 0.6664958849964806,
+      "n_outgoing": 22,
+      "n_incoming": 22,
+      "asymmetry": -0.09358506145432888
+    },
+    "MD": {
+      "mean_outgoing_iia": 0.6288294114591451,
+      "mean_incoming_iia": 0.5933072307932056,
+      "n_outgoing": 18,
+      "n_incoming": 18,
+      "asymmetry": 0.035522180665939485
+    },
+    "ZI": {
+      "mean_outgoing_iia": 0.40807278582930756,
+      "mean_incoming_iia": 0.40468840579710147,
+      "n_outgoing": 25,
+      "n_incoming": 25,
+      "asymmetry": 0.0033843800322060913
+    },
+    "RT": {
+      "mean_outgoing_iia": 0.17122040072859745,
+      "mean_incoming_iia": 0.2222222222222222,
+      "n_outgoing": 9,
+      "n_incoming": 9,
+      "asymmetry": -0.051001821493624755
+    },
+    "NB": {
+      "mean_outgoing_iia": 0.5,
+      "mean_incoming_iia": 0.48903508771929827,
+      "n_outgoing": 8,
+      "n_incoming": 8,
+      "asymmetry": 0.010964912280701733
+    },
+    "VISl": {
+      "mean_outgoing_iia": 0.3896969696969697,
+      "mean_incoming_iia": 0.31037878787878787,
+      "n_outgoing": 22,
+      "n_incoming": 22,
+      "asymmetry": 0.07931818181818184
+    },
+    "PL": {
+      "mean_outgoing_iia": 0.48311282073282125,
+      "mean_incoming_iia": 0.5607607572416302,
+      "n_outgoing": 37,
+      "n_incoming": 37,
+      "asymmetry": -0.07764793650880897
+    },
+    "LS": {
+      "mean_outgoing_iia": 0.6907718416762435,
+      "mean_incoming_iia": 0.6078311997220515,
+      "n_outgoing": 17,
+      "n_incoming": 17,
+      "asymmetry": 0.08294064195419204
+    },
+    "TT": {
+      "mean_outgoing_iia": 0.5986860911660109,
+      "mean_incoming_iia": 0.6674749249523346,
+      "n_outgoing": 24,
+      "n_incoming": 24,
+      "asymmetry": -0.06878883378632372
+    },
+    "RSP": {
+      "mean_outgoing_iia": 0.42031572696651714,
+      "mean_incoming_iia": 0.41609063457901607,
+      "n_outgoing": 35,
+      "n_incoming": 35,
+      "asymmetry": 0.004225092387501073
+    },
+    "PIR": {
+      "mean_outgoing_iia": 0.5540540540540541,
+      "mean_incoming_iia": 0.4536679536679537,
+      "n_outgoing": 7,
+      "n_incoming": 7,
+      "asymmetry": 0.10038610038610035
+    },
+    "DP": {
+      "mean_outgoing_iia": 0.32891566265060235,
+      "mean_incoming_iia": 0.36626506024096384,
+      "n_outgoing": 10,
+      "n_incoming": 10,
+      "asymmetry": -0.03734939759036149
+    },
+    "PT": {
+      "mean_outgoing_iia": 0.6666666666666666,
+      "mean_incoming_iia": 0.6666666666666666,
+      "n_outgoing": 3,
+      "n_incoming": 3,
+      "asymmetry": 0.0
+    },
+    "ILA": {
+      "mean_outgoing_iia": 0.6737421156095855,
+      "mean_incoming_iia": 0.5731598520755148,
+      "n_outgoing": 20,
+      "n_incoming": 20,
+      "asymmetry": 0.10058226353407074
+    },
+    "SCs": {
+      "mean_outgoing_iia": 0.3520908198082111,
+      "mean_incoming_iia": 0.44506621576669886,
+      "n_outgoing": 18,
+      "n_incoming": 18,
+      "asymmetry": -0.09297539595848775
+    },
+    "CA1": {
+      "mean_outgoing_iia": 0.4932038116884946,
+      "mean_incoming_iia": 0.49590597008146786,
+      "n_outgoing": 50,
+      "n_incoming": 50,
+      "asymmetry": -0.002702158392973275
+    },
+    "MS": {
+      "mean_outgoing_iia": 0.48071428571428576,
+      "mean_incoming_iia": 0.48285714285714276,
+      "n_outgoing": 14,
+      "n_incoming": 14,
+      "asymmetry": -0.002142857142857002
+    },
+    "COA": {
+      "mean_outgoing_iia": 0.16666666666666666,
+      "mean_incoming_iia": 0.16666666666666666,
+      "n_outgoing": 6,
+      "n_incoming": 6,
+      "asymmetry": 0.0
+    },
+    "VISpm": {
+      "mean_outgoing_iia": 0.39553507424475165,
+      "mean_incoming_iia": 0.40558531746031745,
+      "n_outgoing": 16,
+      "n_incoming": 16,
+      "asymmetry": -0.010050243215565802
+    },
+    "VPL": {
+      "mean_outgoing_iia": 0.42095622681505035,
+      "mean_incoming_iia": 0.40587546369899313,
+      "n_outgoing": 25,
+      "n_incoming": 25,
+      "asymmetry": 0.015080763116057216
+    },
+    "MB": {
+      "mean_outgoing_iia": 0.39928826256587235,
+      "mean_incoming_iia": 0.40847728330238414,
+      "n_outgoing": 35,
+      "n_incoming": 35,
+      "asymmetry": -0.009189020736511788
+    },
+    "SCsg": {
+      "mean_outgoing_iia": 0.3018228759192614,
+      "mean_incoming_iia": 0.4029079956188389,
+      "n_outgoing": 22,
+      "n_incoming": 22,
+      "asymmetry": -0.10108511969957751
+    },
+    "RN": {
+      "mean_outgoing_iia": 0.5264285714285714,
+      "mean_incoming_iia": 0.5164285714285715,
+      "n_outgoing": 14,
+      "n_incoming": 14,
+      "asymmetry": 0.009999999999999898
+    },
+    "OLF": {
+      "mean_outgoing_iia": 0.40050798258345427,
+      "mean_incoming_iia": 0.33131349782293174,
+      "n_outgoing": 13,
+      "n_incoming": 13,
+      "asymmetry": 0.06919448476052253
+    },
+    "OT": {
+      "mean_outgoing_iia": 0.5036231884057971,
+      "mean_incoming_iia": 0.4565217391304348,
+      "n_outgoing": 9,
+      "n_incoming": 9,
+      "asymmetry": 0.047101449275362306
+    },
+    "SSp": {
+      "mean_outgoing_iia": 0.20309893139518748,
+      "mean_incoming_iia": 0.32382995500195716,
+      "n_outgoing": 13,
+      "n_incoming": 13,
+      "asymmetry": -0.12073102360676968
+    },
+    "SCm": {
+      "mean_outgoing_iia": 0.5046533375697543,
+      "mean_incoming_iia": 0.48431212802689566,
+      "n_outgoing": 29,
+      "n_incoming": 29,
+      "asymmetry": 0.020341209542858618
+    },
+    "CP": {
+      "mean_outgoing_iia": 0.5578261327689246,
+      "mean_incoming_iia": 0.45121723554217835,
+      "n_outgoing": 19,
+      "n_incoming": 19,
+      "asymmetry": 0.10660889722674621
+    },
+    "TH": {
+      "mean_outgoing_iia": 0.3601076797150434,
+      "mean_incoming_iia": 0.41033968508520396,
+      "n_outgoing": 38,
+      "n_incoming": 38,
+      "asymmetry": -0.05023200537016054
+    },
+    "PO": {
+      "mean_outgoing_iia": 0.46675022429330876,
+      "mean_incoming_iia": 0.4380583063819157,
+      "n_outgoing": 25,
+      "n_incoming": 25,
+      "asymmetry": 0.028691917911393083
+    },
+    "SSs": {
+      "mean_outgoing_iia": 0.8041237113402062,
+      "mean_incoming_iia": 0.6804123711340206,
+      "n_outgoing": 5,
+      "n_incoming": 5,
+      "asymmetry": 0.12371134020618557
+    },
+    "ACA": {
+      "mean_outgoing_iia": 0.43044931964832966,
+      "mean_incoming_iia": 0.4800957461822274,
+      "n_outgoing": 39,
+      "n_incoming": 39,
+      "asymmetry": -0.049646426533897725
+    },
+    "MRN": {
+      "mean_outgoing_iia": 0.49981671792034976,
+      "mean_incoming_iia": 0.4958045008926352,
+      "n_outgoing": 38,
+      "n_incoming": 38,
+      "asymmetry": 0.0040122170277145375
+    },
+    "LH": {
+      "mean_outgoing_iia": 0.5591787439613527,
+      "mean_incoming_iia": 0.3345410628019324,
+      "n_outgoing": 9,
+      "n_incoming": 9,
+      "asymmetry": 0.2246376811594203
+    },
+    "EPd": {
+      "mean_outgoing_iia": 0.34555984555984554,
+      "mean_incoming_iia": 0.696911196911197,
+      "n_outgoing": 7,
+      "n_incoming": 7,
+      "asymmetry": -0.3513513513513514
+    },
+    "BLA": {
+      "mean_outgoing_iia": 0.55,
+      "mean_incoming_iia": 0.50015479876161,
+      "n_outgoing": 8,
+      "n_incoming": 8,
+      "asymmetry": 0.04984520123839009
+    },
+    "VPM": {
+      "mean_outgoing_iia": 0.5393518518518519,
+      "mean_incoming_iia": 0.3850319122178205,
+      "n_outgoing": 24,
+      "n_incoming": 24,
+      "asymmetry": 0.15431993963403134
+    },
+    "SI": {
+      "mean_outgoing_iia": 0.5446859903381642,
+      "mean_incoming_iia": 0.6521739130434783,
+      "n_outgoing": 9,
+      "n_incoming": 9,
+      "asymmetry": -0.10748792270531404
+    },
+    "MOp": {
+      "mean_outgoing_iia": 0.46616541353383456,
+      "mean_incoming_iia": 0.556390977443609,
+      "n_outgoing": 7,
+      "n_incoming": 7,
+      "asymmetry": -0.09022556390977443
+    },
+    "CA2": {
+      "mean_outgoing_iia": 0.39107142857142857,
+      "mean_incoming_iia": 0.5678571428571428,
+      "n_outgoing": 8,
+      "n_incoming": 8,
+      "asymmetry": -0.17678571428571427
+    },
+    "CL": {
+      "mean_outgoing_iia": 0.48655913978494625,
+      "mean_incoming_iia": 0.6129032258064516,
+      "n_outgoing": 12,
+      "n_incoming": 12,
+      "asymmetry": -0.12634408602150538
+    },
+    "PAG": {
+      "mean_outgoing_iia": 0.2901478553652466,
+      "mean_incoming_iia": 0.5186649099692578,
+      "n_outgoing": 9,
+      "n_incoming": 9,
+      "asymmetry": -0.22851705460401123
+    },
+    "BMA": {
+      "mean_outgoing_iia": 0.3333333333333333,
+      "mean_incoming_iia": 0.3169398907103825,
+      "n_outgoing": 6,
+      "n_incoming": 6,
+      "asymmetry": 0.016393442622950838
+    },
+    "LD": {
+      "mean_outgoing_iia": 0.5507691956131167,
+      "mean_incoming_iia": 0.5360854299202453,
+      "n_outgoing": 27,
+      "n_incoming": 27,
+      "asymmetry": 0.014683765692871331
+    },
+    "VAL": {
+      "mean_outgoing_iia": 0.6578947368421053,
+      "mean_incoming_iia": 0.6513157894736842,
+      "n_outgoing": 4,
+      "n_incoming": 4,
+      "asymmetry": 0.006578947368421129
+    },
+    "VISrl": {
+      "mean_outgoing_iia": 0.5256696428571428,
+      "mean_incoming_iia": 0.45566964285714284,
+      "n_outgoing": 16,
+      "n_incoming": 16,
+      "asymmetry": 0.06999999999999995
+    },
+    "CA": {
+      "mean_outgoing_iia": 0.6983333333333333,
+      "mean_incoming_iia": 0.7833333333333333,
+      "n_outgoing": 6,
+      "n_incoming": 6,
+      "asymmetry": -0.08500000000000008
+    },
+    "VISam": {
+      "mean_outgoing_iia": 0.4866879448595074,
+      "mean_incoming_iia": 0.4701289482027171,
+      "n_outgoing": 42,
+      "n_incoming": 42,
+      "asymmetry": 0.01655899665679028
+    },
+    "VISp": {
+      "mean_outgoing_iia": 0.4590829395662646,
+      "mean_incoming_iia": 0.47989771069685255,
+      "n_outgoing": 41,
+      "n_incoming": 41,
+      "asymmetry": -0.02081477113058794
+    },
+    "ORBm": {
+      "mean_outgoing_iia": 0.47400000000000003,
+      "mean_incoming_iia": 0.481,
+      "n_outgoing": 10,
+      "n_incoming": 10,
+      "asymmetry": -0.006999999999999951
+    },
+    "POL": {
+      "mean_outgoing_iia": 0.38752688172043015,
+      "mean_incoming_iia": 0.3934003018298434,
+      "n_outgoing": 19,
+      "n_incoming": 19,
+      "asymmetry": -0.005873420109413274
+    },
+    "LGd": {
+      "mean_outgoing_iia": 0.5253187763841697,
+      "mean_incoming_iia": 0.44163232964831645,
+      "n_outgoing": 35,
+      "n_incoming": 35,
+      "asymmetry": 0.08368644673585324
+    },
+    "MOs": {
+      "mean_outgoing_iia": 0.5162388150105697,
+      "mean_incoming_iia": 0.5249147663688148,
+      "n_outgoing": 42,
+      "n_incoming": 42,
+      "asymmetry": -0.00867595135824517
+    },
+    "ORB": {
+      "mean_outgoing_iia": 0.4772493821919581,
+      "mean_incoming_iia": 0.3406120942262246,
+      "n_outgoing": 20,
+      "n_incoming": 20,
+      "asymmetry": 0.1366372879657335
+    },
+    "SCig": {
+      "mean_outgoing_iia": 0.5285454210730869,
+      "mean_incoming_iia": 0.5011149375576524,
+      "n_outgoing": 19,
+      "n_incoming": 19,
+      "asymmetry": 0.027430483515434534
+    },
+    "SNr": {
+      "mean_outgoing_iia": 0.4372414608176425,
+      "mean_incoming_iia": 0.5657520111283018,
+      "n_outgoing": 18,
+      "n_incoming": 18,
+      "asymmetry": -0.12851055031065928
+    },
+    "EP": {
+      "mean_outgoing_iia": 0.2,
+      "mean_incoming_iia": 0.007407407407407407,
+      "n_outgoing": 5,
+      "n_incoming": 5,
+      "asymmetry": 0.1925925925925926
+    },
+    "LP": {
+      "mean_outgoing_iia": 0.37408820268602044,
+      "mean_incoming_iia": 0.40192044766882024,
+      "n_outgoing": 34,
+      "n_incoming": 34,
+      "asymmetry": -0.027832244982799792
+    },
+    "LSr": {
+      "mean_outgoing_iia": 0.30350634371395613,
+      "mean_incoming_iia": 0.29536332179930797,
+      "n_outgoing": 17,
+      "n_incoming": 17,
+      "asymmetry": 0.008143021914648163
+    },
+    "GPe": {
+      "mean_outgoing_iia": 0.49918300653594766,
+      "mean_incoming_iia": 0.4256627680311891,
+      "n_outgoing": 18,
+      "n_incoming": 18,
+      "asymmetry": 0.07352023850475858
+    },
+    "CA3": {
+      "mean_outgoing_iia": 0.4174513612569085,
+      "mean_incoming_iia": 0.3658507017772374,
+      "n_outgoing": 39,
+      "n_incoming": 39,
+      "asymmetry": 0.05160065947967113
+    },
+    "DG": {
+      "mean_outgoing_iia": 0.37180972837308873,
+      "mean_incoming_iia": 0.4168601358067388,
+      "n_outgoing": 47,
+      "n_incoming": 47,
+      "asymmetry": -0.045050407433650075
+    },
+    "MEA": {
+      "mean_outgoing_iia": 0.25,
+      "mean_incoming_iia": 0.25,
+      "n_outgoing": 4,
+      "n_incoming": 4,
+      "asymmetry": 0.0
+    },
+    "SPF": {
+      "mean_outgoing_iia": 0.26420896916848335,
+      "mean_incoming_iia": 0.16302034672480017,
+      "n_outgoing": 13,
+      "n_incoming": 13,
+      "asymmetry": 0.10118862244368318
+    },
+    "APN": {
+      "mean_outgoing_iia": 0.5415640273704789,
+      "mean_incoming_iia": 0.6235581622678397,
+      "n_outgoing": 11,
+      "n_incoming": 11,
+      "asymmetry": -0.08199413489736074
+    },
+    "LSc": {
+      "mean_outgoing_iia": 1.0,
+      "mean_incoming_iia": 1.0,
+      "n_outgoing": 3,
+      "n_incoming": 3,
+      "asymmetry": 0.0
+    },
+    "IC": {
+      "mean_outgoing_iia": 0.4428571428571429,
+      "mean_incoming_iia": 0.4328571428571429,
+      "n_outgoing": 7,
+      "n_incoming": 7,
+      "asymmetry": 0.010000000000000009
+    },
+    "AUD": {
+      "mean_outgoing_iia": 0.6666666666666666,
+      "mean_incoming_iia": 0.33771929824561403,
+      "n_outgoing": 3,
+      "n_incoming": 3,
+      "asymmetry": 0.3289473684210526
+    }
+  },
+  "all_pairs": {
+    "ACA->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->DG": {
+      "mean_iia": 0.653126636877772,
+      "std_iia": 0.37891918859706775,
+      "n_sessions": 9
+    },
+    "ACA->LS": {
+      "mean_iia": 0.6236559139784946,
+      "std_iia": 0.444126374797062,
+      "n_sessions": 3
+    },
+    "ACA->MOs": {
+      "mean_iia": 0.6270665706006111,
+      "std_iia": 0.38953132377351285,
+      "n_sessions": 10
+    },
+    "ACA->SUB": {
+      "mean_iia": 0.35980929194562794,
+      "std_iia": 0.4539247250156067,
+      "n_sessions": 6
+    },
+    "ACA->VISp": {
+      "mean_iia": 0.654342869045362,
+      "std_iia": 0.44649514727478595,
+      "n_sessions": 6
+    },
+    "ACA->root": {
+      "mean_iia": 0.24336965187350518,
+      "std_iia": 0.3847725077730755,
+      "n_sessions": 5
+    },
+    "CA3->ACA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->DG": {
+      "mean_iia": 0.5555555555555556,
+      "std_iia": 0.4444444444444444,
+      "n_sessions": 2
+    },
+    "CA3->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->MOs": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 3
+    },
+    "CA3->SUB": {
+      "mean_iia": 0.7222222222222222,
+      "std_iia": 0.2777777777777778,
+      "n_sessions": 2
+    },
+    "CA3->VISp": {
+      "mean_iia": 0.30808080808080807,
+      "std_iia": 0.30808080808080807,
+      "n_sessions": 2
+    },
+    "CA3->root": {
+      "mean_iia": 0.25704225352112675,
+      "std_iia": 0.4291009825710075,
+      "n_sessions": 4
+    },
+    "DG->ACA": {
+      "mean_iia": 0.5345505563122899,
+      "std_iia": 0.41286427460621966,
+      "n_sessions": 9
+    },
+    "DG->CA3": {
+      "mean_iia": 0.45803101436904253,
+      "std_iia": 0.3166168729549011,
+      "n_sessions": 2
+    },
+    "DG->LS": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "DG->MOs": {
+      "mean_iia": 0.43517953926556074,
+      "std_iia": 0.43076149125254515,
+      "n_sessions": 9
+    },
+    "DG->SUB": {
+      "mean_iia": 0.38477855477855477,
+      "std_iia": 0.4110938428570507,
+      "n_sessions": 9
+    },
+    "DG->VISp": {
+      "mean_iia": 0.6135836766442653,
+      "std_iia": 0.4636328936718117,
+      "n_sessions": 8
+    },
+    "DG->root": {
+      "mean_iia": 0.24602112676056337,
+      "std_iia": 0.32159414151500715,
+      "n_sessions": 8
+    },
+    "LS->ACA": {
+      "mean_iia": 0.3763440860215053,
+      "std_iia": 0.444126374797062,
+      "n_sessions": 3
+    },
+    "LS->CA3": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->DG": {
+      "mean_iia": 0.33666666666666667,
+      "std_iia": 0.46906526435265083,
+      "n_sessions": 3
+    },
+    "LS->MOs": {
+      "mean_iia": 0.5966666666666667,
+      "std_iia": 0.4305293898859352,
+      "n_sessions": 3
+    },
+    "LS->SUB": {
+      "mean_iia": 0.967741935483871,
+      "std_iia": 0.03225806451612906,
+      "n_sessions": 2
+    },
+    "LS->VISp": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->root": {
+      "mean_iia": 0.971830985915493,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->ACA": {
+      "mean_iia": 0.5964886659320463,
+      "std_iia": 0.4052925868032439,
+      "n_sessions": 10
+    },
+    "MOs->CA3": {
+      "mean_iia": 0.04713804713804714,
+      "std_iia": 0.06666326556640852,
+      "n_sessions": 3
+    },
+    "MOs->DG": {
+      "mean_iia": 0.52729573880848,
+      "std_iia": 0.42947154989941233,
+      "n_sessions": 9
+    },
+    "MOs->LS": {
+      "mean_iia": 0.3349462365591398,
+      "std_iia": 0.2657339306713529,
+      "n_sessions": 3
+    },
+    "MOs->SUB": {
+      "mean_iia": 0.46926394385311004,
+      "std_iia": 0.44870940874032667,
+      "n_sessions": 6
+    },
+    "MOs->VISp": {
+      "mean_iia": 0.4927218084801359,
+      "std_iia": 0.45494536316110606,
+      "n_sessions": 8
+    },
+    "MOs->root": {
+      "mean_iia": 0.611258677747502,
+      "std_iia": 0.4132789102788358,
+      "n_sessions": 8
+    },
+    "SUB->ACA": {
+      "mean_iia": 0.33556502333130456,
+      "std_iia": 0.46332807364143447,
+      "n_sessions": 6
+    },
+    "SUB->CA3": {
+      "mean_iia": 0.5707070707070707,
+      "std_iia": 0.4292929292929293,
+      "n_sessions": 2
+    },
+    "SUB->DG": {
+      "mean_iia": 0.3077259777259777,
+      "std_iia": 0.426448320317819,
+      "n_sessions": 9
+    },
+    "SUB->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "SUB->MOs": {
+      "mean_iia": 0.26485576485576484,
+      "std_iia": 0.3884670913352394,
+      "n_sessions": 6
+    },
+    "SUB->VISp": {
+      "mean_iia": 0.6528770691174784,
+      "std_iia": 0.4552084879654374,
+      "n_sessions": 6
+    },
+    "SUB->root": {
+      "mean_iia": 0.607699530516432,
+      "std_iia": 0.46955432330678515,
+      "n_sessions": 5
+    },
+    "VISp->ACA": {
+      "mean_iia": 0.4381826150249717,
+      "std_iia": 0.31010128273948956,
+      "n_sessions": 6
+    },
+    "VISp->CA3": {
+      "mean_iia": 0.0707070707070707,
+      "std_iia": 0.0707070707070707,
+      "n_sessions": 2
+    },
+    "VISp->DG": {
+      "mean_iia": 0.6516171825474895,
+      "std_iia": 0.4022141730365685,
+      "n_sessions": 8
+    },
+    "VISp->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->MOs": {
+      "mean_iia": 0.5713629295264661,
+      "std_iia": 0.4065819969949943,
+      "n_sessions": 8
+    },
+    "VISp->SUB": {
+      "mean_iia": 0.39559706183747106,
+      "std_iia": 0.4143538273290571,
+      "n_sessions": 6
+    },
+    "VISp->root": {
+      "mean_iia": 0.31226600023170753,
+      "std_iia": 0.3401858144000274,
+      "n_sessions": 5
+    },
+    "root->ACA": {
+      "mean_iia": 0.19904331650279034,
+      "std_iia": 0.3910824244672408,
+      "n_sessions": 5
+    },
+    "root->CA3": {
+      "mean_iia": 0.31338028169014087,
+      "std_iia": 0.4097084810890475,
+      "n_sessions": 4
+    },
+    "root->DG": {
+      "mean_iia": 0.33201291079812206,
+      "std_iia": 0.3970747865872961,
+      "n_sessions": 8
+    },
+    "root->LS": {
+      "mean_iia": 0.8873239436619719,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->MOs": {
+      "mean_iia": 0.5697186822462389,
+      "std_iia": 0.4196480905475375,
+      "n_sessions": 8
+    },
+    "root->SUB": {
+      "mean_iia": 0.7152300469483568,
+      "std_iia": 0.37007818669647824,
+      "n_sessions": 5
+    },
+    "root->VISp": {
+      "mean_iia": 0.42053703182668284,
+      "std_iia": 0.4385980232379417,
+      "n_sessions": 5
+    },
+    "CA1->POST": {
+      "mean_iia": 0.7200000000000001,
+      "std_iia": 0.3959797974644666,
+      "n_sessions": 3
+    },
+    "CA1->VISl": {
+      "mean_iia": 0.25333333333333335,
+      "std_iia": 0.3582674358011841,
+      "n_sessions": 3
+    },
+    "CA1->VISpm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 4
+    },
+    "CA1->root": {
+      "mean_iia": 0.3786511996462344,
+      "std_iia": 0.41082871296967854,
+      "n_sessions": 10
+    },
+    "POST->CA1": {
+      "mean_iia": 0.71,
+      "std_iia": 0.4101219330881976,
+      "n_sessions": 3
+    },
+    "POST->VISl": {
+      "mean_iia": 0.265,
+      "std_iia": 0.265,
+      "n_sessions": 2
+    },
+    "POST->VISpm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->root": {
+      "mean_iia": 0.29,
+      "std_iia": 0.29,
+      "n_sessions": 2
+    },
+    "VISl->CA1": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "VISl->POST": {
+      "mean_iia": 0.42,
+      "std_iia": 0.42,
+      "n_sessions": 2
+    },
+    "VISl->VISpm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->root": {
+      "mean_iia": 0.89,
+      "std_iia": 0.10999999999999999,
+      "n_sessions": 2
+    },
+    "VISpm->CA1": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 4
+    },
+    "VISpm->POST": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISpm->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISpm->root": {
+      "mean_iia": 0.9349206349206348,
+      "std_iia": 0.052501064789019766,
+      "n_sessions": 3
+    },
+    "root->CA1": {
+      "mean_iia": 0.3964528301886793,
+      "std_iia": 0.477975325235889,
+      "n_sessions": 10
+    },
+    "root->POST": {
+      "mean_iia": 0.34,
+      "std_iia": 0.34,
+      "n_sessions": 2
+    },
+    "root->VISl": {
+      "mean_iia": 0.75,
+      "std_iia": 0.25,
+      "n_sessions": 2
+    },
+    "root->VISpm": {
+      "mean_iia": 0.6622222222222223,
+      "std_iia": 0.4682934608043324,
+      "n_sessions": 3
+    },
+    "CA1->DG": {
+      "mean_iia": 0.5631652918328108,
+      "std_iia": 0.4275669866396271,
+      "n_sessions": 15
+    },
+    "CA1->MG": {
+      "mean_iia": 0.04807692307692308,
+      "std_iia": 0.04807692307692308,
+      "n_sessions": 2
+    },
+    "CA1->MRN": {
+      "mean_iia": 0.49357142857142855,
+      "std_iia": 0.49364240410367066,
+      "n_sessions": 6
+    },
+    "CA1->NB": {
+      "mean_iia": 0.9122807017543859,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->SPF": {
+      "mean_iia": 0.009615384615384616,
+      "std_iia": 0.009615384615384616,
+      "n_sessions": 2
+    },
+    "CA1->VISam": {
+      "mean_iia": 0.23966580636622328,
+      "std_iia": 0.376139453114031,
+      "n_sessions": 9
+    },
+    "CA1->VISp": {
+      "mean_iia": 0.6112876877658477,
+      "std_iia": 0.39241142809614615,
+      "n_sessions": 8
+    },
+    "DG->CA1": {
+      "mean_iia": 0.42970112235682223,
+      "std_iia": 0.42898208291464485,
+      "n_sessions": 15
+    },
+    "DG->MG": {
+      "mean_iia": 0.7980769230769231,
+      "std_iia": 0.20192307692307693,
+      "n_sessions": 2
+    },
+    "DG->MRN": {
+      "mean_iia": 0.5507258064516128,
+      "std_iia": 0.3572655555174738,
+      "n_sessions": 4
+    },
+    "DG->NB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->POST": {
+      "mean_iia": 0.08,
+      "std_iia": 0.08,
+      "n_sessions": 2
+    },
+    "DG->SPF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "DG->VISam": {
+      "mean_iia": 0.3403536345269755,
+      "std_iia": 0.36706185482857245,
+      "n_sessions": 8
+    },
+    "MG->CA1": {
+      "mean_iia": 0.5384615384615384,
+      "std_iia": 0.46153846153846156,
+      "n_sessions": 2
+    },
+    "MG->DG": {
+      "mean_iia": 0.9903846153846154,
+      "std_iia": 0.009615384615384637,
+      "n_sessions": 2
+    },
+    "MG->MRN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->NB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->POST": {
+      "mean_iia": 0.45614035087719296,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->SPF": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "MG->VISam": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->VISp": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "MRN->CA1": {
+      "mean_iia": 0.48619047619047623,
+      "std_iia": 0.4863872555467265,
+      "n_sessions": 6
+    },
+    "MRN->DG": {
+      "mean_iia": 0.6260483870967741,
+      "std_iia": 0.3756758304769932,
+      "n_sessions": 4
+    },
+    "MRN->MG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->NB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->POST": {
+      "mean_iia": 0.08,
+      "std_iia": 0.08,
+      "n_sessions": 2
+    },
+    "MRN->SPF": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->VISam": {
+      "mean_iia": 0.5088888888888888,
+      "std_iia": 0.36839324131546386,
+      "n_sessions": 3
+    },
+    "MRN->VISp": {
+      "mean_iia": 0.329870250231696,
+      "std_iia": 0.44737961966154877,
+      "n_sessions": 6
+    },
+    "NB->CA1": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->DG": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->MG": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->MRN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->POST": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->SPF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->VISam": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "NB->VISp": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->DG": {
+      "mean_iia": 0.56,
+      "std_iia": 0.44,
+      "n_sessions": 2
+    },
+    "POST->MG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->MRN": {
+      "mean_iia": 0.0987719298245614,
+      "std_iia": 0.0812280701754386,
+      "n_sessions": 2
+    },
+    "POST->NB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->SPF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->VISam": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->VISp": {
+      "mean_iia": 0.565,
+      "std_iia": 0.435,
+      "n_sessions": 2
+    },
+    "SPF->CA1": {
+      "mean_iia": 0.470310391363023,
+      "std_iia": 0.45276653171390013,
+      "n_sessions": 2
+    },
+    "SPF->DG": {
+      "mean_iia": 0.01838731443994602,
+      "std_iia": 0.0008434547908232129,
+      "n_sessions": 2
+    },
+    "SPF->MG": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "SPF->MRN": {
+      "mean_iia": 0.9649122807017544,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->NB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->POST": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->VISam": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->VISp": {
+      "mean_iia": 0.09649122807017543,
+      "std_iia": 0.09649122807017543,
+      "n_sessions": 2
+    },
+    "VISam->CA1": {
+      "mean_iia": 0.2013546423135464,
+      "std_iia": 0.3568943604989721,
+      "n_sessions": 9
+    },
+    "VISam->DG": {
+      "mean_iia": 0.5460216894977169,
+      "std_iia": 0.44850659204786697,
+      "n_sessions": 8
+    },
+    "VISam->MG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->MRN": {
+      "mean_iia": 0.6266666666666666,
+      "std_iia": 0.44582009326134636,
+      "n_sessions": 3
+    },
+    "VISam->NB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->POST": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->SPF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->VISp": {
+      "mean_iia": 0.32060321190755975,
+      "std_iia": 0.4344305572637348,
+      "n_sessions": 3
+    },
+    "VISp->CA1": {
+      "mean_iia": 0.6200926477461004,
+      "std_iia": 0.404522290955202,
+      "n_sessions": 8
+    },
+    "VISp->MG": {
+      "mean_iia": 0.9903846153846154,
+      "std_iia": 0.009615384615384637,
+      "n_sessions": 2
+    },
+    "VISp->MRN": {
+      "mean_iia": 0.33178825190873384,
+      "std_iia": 0.38227439473010155,
+      "n_sessions": 6
+    },
+    "VISp->NB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->POST": {
+      "mean_iia": 0.58,
+      "std_iia": 0.42,
+      "n_sessions": 2
+    },
+    "VISp->SPF": {
+      "mean_iia": 0.35964912280701755,
+      "std_iia": 0.35964912280701755,
+      "n_sessions": 2
+    },
+    "VISp->VISam": {
+      "mean_iia": 0.345867606737172,
+      "std_iia": 0.43306457369469026,
+      "n_sessions": 3
+    },
+    "ACA->CA1": {
+      "mean_iia": 0.39851195190888705,
+      "std_iia": 0.4062171054192396,
+      "n_sessions": 8
+    },
+    "ACA->LGd": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "ACA->LSr": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->TH": {
+      "mean_iia": 0.005,
+      "std_iia": 0.005,
+      "n_sessions": 2
+    },
+    "ACA->VISa": {
+      "mean_iia": 0.7279367011564212,
+      "std_iia": 0.2601846214293575,
+      "n_sessions": 3
+    },
+    "ACA->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->ACA": {
+      "mean_iia": 0.521608901191439,
+      "std_iia": 0.460815748456256,
+      "n_sessions": 8
+    },
+    "CA1->LGd": {
+      "mean_iia": 0.4230769230769231,
+      "std_iia": 0.4224937705970277,
+      "n_sessions": 3
+    },
+    "CA1->LSr": {
+      "mean_iia": 0.995,
+      "std_iia": 0.0050000000000000044,
+      "n_sessions": 2
+    },
+    "CA1->MOs": {
+      "mean_iia": 0.6008062798400109,
+      "std_iia": 0.4213089255812094,
+      "n_sessions": 9
+    },
+    "CA1->SUB": {
+      "mean_iia": 0.33654673600325774,
+      "std_iia": 0.4258614594957162,
+      "n_sessions": 8
+    },
+    "CA1->TH": {
+      "mean_iia": 0.5428763991426531,
+      "std_iia": 0.36611209663249067,
+      "n_sessions": 5
+    },
+    "CA1->VISa": {
+      "mean_iia": 0.23990118895779275,
+      "std_iia": 0.3838234820574272,
+      "n_sessions": 5
+    },
+    "CA1->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "DG->LGd": {
+      "mean_iia": 0.764102564102564,
+      "std_iia": 0.29376044751799,
+      "n_sessions": 3
+    },
+    "DG->LSr": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->TH": {
+      "mean_iia": 0.009743589743589744,
+      "std_iia": 0.007853021964673619,
+      "n_sessions": 3
+    },
+    "DG->VISa": {
+      "mean_iia": 0.22000777000777,
+      "std_iia": 0.3911221482069593,
+      "n_sessions": 5
+    },
+    "DG->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->ACA": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "LGd->CA1": {
+      "mean_iia": 0.3723076923076923,
+      "std_iia": 0.4441013797579992,
+      "n_sessions": 3
+    },
+    "LGd->DG": {
+      "mean_iia": 0.9035897435897436,
+      "std_iia": 0.12299730330639087,
+      "n_sessions": 3
+    },
+    "LGd->LSr": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->MOs": {
+      "mean_iia": 0.495,
+      "std_iia": 0.495,
+      "n_sessions": 2
+    },
+    "LGd->SUB": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "LGd->TH": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 4
+    },
+    "LGd->VISa": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "LGd->VISp": {
+      "mean_iia": 0.5098039215686274,
+      "std_iia": 0.4901960784313726,
+      "n_sessions": 2
+    },
+    "LGd->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->ACA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->CA1": {
+      "mean_iia": 0.9450000000000001,
+      "std_iia": 0.05499999999999999,
+      "n_sessions": 2
+    },
+    "LSr->DG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->LGd": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->MOs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->SUB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->TH": {
+      "mean_iia": 0.605,
+      "std_iia": 0.395,
+      "n_sessions": 2
+    },
+    "LSr->VISa": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->VISp": {
+      "mean_iia": 0.0196078431372549,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->VPL": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "MOs->CA1": {
+      "mean_iia": 0.43737190228856826,
+      "std_iia": 0.37701860111679003,
+      "n_sessions": 9
+    },
+    "MOs->LGd": {
+      "mean_iia": 0.045,
+      "std_iia": 0.045,
+      "n_sessions": 2
+    },
+    "MOs->LSr": {
+      "mean_iia": 0.9411764705882353,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->TH": {
+      "mean_iia": 0.6535947712418301,
+      "std_iia": 0.46243850853094715,
+      "n_sessions": 3
+    },
+    "MOs->VISa": {
+      "mean_iia": 0.890896632357733,
+      "std_iia": 0.16114406110880858,
+      "n_sessions": 4
+    },
+    "MOs->VPL": {
+      "mean_iia": 0.9803921568627451,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->CA1": {
+      "mean_iia": 0.45363716049960723,
+      "std_iia": 0.4421384394075699,
+      "n_sessions": 8
+    },
+    "SUB->LGd": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "SUB->LSr": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->TH": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "SUB->VISa": {
+      "mean_iia": 0.43434343434343436,
+      "std_iia": 0.46609348681917845,
+      "n_sessions": 5
+    },
+    "SUB->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->ACA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "TH->CA1": {
+      "mean_iia": 0.5173846153846154,
+      "std_iia": 0.4261415160671116,
+      "n_sessions": 5
+    },
+    "TH->DG": {
+      "mean_iia": 0.009743589743589744,
+      "std_iia": 0.007853021964673619,
+      "n_sessions": 3
+    },
+    "TH->LGd": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 4
+    },
+    "TH->LSr": {
+      "mean_iia": 0.56,
+      "std_iia": 0.44,
+      "n_sessions": 2
+    },
+    "TH->MOs": {
+      "mean_iia": 0.4033333333333333,
+      "std_iia": 0.4305293898859351,
+      "n_sessions": 3
+    },
+    "TH->SUB": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "TH->VISa": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "TH->VISp": {
+      "mean_iia": 0.00980392156862745,
+      "std_iia": 0.00980392156862745,
+      "n_sessions": 2
+    },
+    "TH->VPL": {
+      "mean_iia": 0.575,
+      "std_iia": 0.425,
+      "n_sessions": 2
+    },
+    "VISa->ACA": {
+      "mean_iia": 0.4678433759383242,
+      "std_iia": 0.3831757109301887,
+      "n_sessions": 3
+    },
+    "VISa->CA1": {
+      "mean_iia": 0.48059299866968763,
+      "std_iia": 0.41791895778714244,
+      "n_sessions": 5
+    },
+    "VISa->DG": {
+      "mean_iia": 0.17445547284256963,
+      "std_iia": 0.28670898266387723,
+      "n_sessions": 5
+    },
+    "VISa->LGd": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VISa->LSr": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->MOs": {
+      "mean_iia": 0.6511662578308957,
+      "std_iia": 0.3583516100980442,
+      "n_sessions": 4
+    },
+    "VISa->SUB": {
+      "mean_iia": 0.4068610634648371,
+      "std_iia": 0.4627269773863345,
+      "n_sessions": 5
+    },
+    "VISa->TH": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "VISa->VISp": {
+      "mean_iia": 0.656763715587245,
+      "std_iia": 0.46441829460991124,
+      "n_sessions": 3
+    },
+    "VISa->VPL": {
+      "mean_iia": 0.9803921568627451,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->LGd": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "VISp->LSr": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VISp->VISa": {
+      "mean_iia": 0.6306199247375718,
+      "std_iia": 0.4473584685740692,
+      "n_sessions": 3
+    },
+    "VISp->VPL": {
+      "mean_iia": 0.43137254901960786,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->ACA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->CA1": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VPL->DG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->LGd": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->LSr": {
+      "mean_iia": 0.505,
+      "std_iia": 0.495,
+      "n_sessions": 2
+    },
+    "VPL->MOs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->SUB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->TH": {
+      "mean_iia": 0.605,
+      "std_iia": 0.395,
+      "n_sessions": 2
+    },
+    "VPL->VISa": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->VISp": {
+      "mean_iia": 0.9803921568627451,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->OLF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->ORB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->OLF": {
+      "mean_iia": 0.018867924528301886,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->ORB": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "DG->OLF": {
+      "mean_iia": 0.1320754716981132,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->ORB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->OLF": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "MOs->ORB": {
+      "mean_iia": 0.4,
+      "std_iia": 0.48989794855663565,
+      "n_sessions": 5
+    },
+    "OLF->ACA": {
+      "mean_iia": 0.9811320754716981,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->CA1": {
+      "mean_iia": 0.07547169811320754,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->DG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->MOs": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "OLF->ORB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "OLF->SUB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->VISa": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->ACA": {
+      "mean_iia": 0.8113207547169812,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->CA1": {
+      "mean_iia": 0.5377358490566038,
+      "std_iia": 0.46226415094339623,
+      "n_sessions": 2
+    },
+    "ORB->DG": {
+      "mean_iia": 0.07547169811320754,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->MOs": {
+      "mean_iia": 0.569811320754717,
+      "std_iia": 0.46850238208793765,
+      "n_sessions": 5
+    },
+    "ORB->OLF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "ORB->SUB": {
+      "mean_iia": 0.32075471698113206,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->VISa": {
+      "mean_iia": 0.9245283018867925,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->root": {
+      "mean_iia": 0.14988827293995466,
+      "std_iia": 0.08522575984700989,
+      "n_sessions": 3
+    },
+    "SUB->OLF": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->ORB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->OLF": {
+      "mean_iia": 0.9811320754716981,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->ORB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->OLF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->ORB": {
+      "mean_iia": 0.05255453081540038,
+      "std_iia": 0.0377491297615453,
+      "n_sessions": 3
+    },
+    "root->VISa": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "AUD->CA1": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "AUD->TH": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "AUD->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->AUD": {
+      "mean_iia": 0.9605263157894737,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->AUD": {
+      "mean_iia": 0.05263157894736842,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "root->AUD": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "CA3->CP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "CA3->EPd": {
+      "mean_iia": 0.9459459459459459,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->LD": {
+      "mean_iia": 0.6262626262626263,
+      "std_iia": 0.4455908080830864,
+      "n_sessions": 3
+    },
+    "CA3->PIR": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->SSp": {
+      "mean_iia": 0.10594873223739203,
+      "std_iia": 0.038381164669824455,
+      "n_sessions": 2
+    },
+    "CA3->VPL": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "CP->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "CP->EPd": {
+      "mean_iia": 0.9459459459459459,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->LD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->PIR": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->SSp": {
+      "mean_iia": 0.033783783783783786,
+      "std_iia": 0.033783783783783786,
+      "n_sessions": 2
+    },
+    "CP->VPL": {
+      "mean_iia": 0.7027027027027027,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->root": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "EPd->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EPd->CP": {
+      "mean_iia": 0.47297297297297297,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EPd->LD": {
+      "mean_iia": 0.527027027027027,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EPd->PIR": {
+      "mean_iia": 0.8243243243243243,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EPd->SSp": {
+      "mean_iia": 0.0945945945945946,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EPd->VPL": {
+      "mean_iia": 0.5,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EPd->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->CA3": {
+      "mean_iia": 0.6161616161616162,
+      "std_iia": 0.4400610285008478,
+      "n_sessions": 3
+    },
+    "LD->CP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->EPd": {
+      "mean_iia": 0.9459459459459459,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->PIR": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->SSp": {
+      "mean_iia": 0.033783783783783786,
+      "std_iia": 0.033783783783783786,
+      "n_sessions": 2
+    },
+    "LD->VPL": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "LD->root": {
+      "mean_iia": 0.3684210526315789,
+      "std_iia": 0.3684210526315789,
+      "n_sessions": 2
+    },
+    "PIR->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PIR->CP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PIR->EPd": {
+      "mean_iia": 0.9459459459459459,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PIR->LD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PIR->SSp": {
+      "mean_iia": 0.9324324324324325,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PIR->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PIR->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->CA3": {
+      "mean_iia": 0.09278350515463918,
+      "std_iia": 0.09278350515463918,
+      "n_sessions": 2
+    },
+    "SSp->CP": {
+      "mean_iia": 0.006756756756756757,
+      "std_iia": 0.006756756756756757,
+      "n_sessions": 2
+    },
+    "SSp->EPd": {
+      "mean_iia": 0.0945945945945946,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->LD": {
+      "mean_iia": 0.013513513513513514,
+      "std_iia": 0.013513513513513514,
+      "n_sessions": 2
+    },
+    "SSp->PIR": {
+      "mean_iia": 0.35135135135135137,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->VPL": {
+      "mean_iia": 0.02702702702702703,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->root": {
+      "mean_iia": 0.13157894736842105,
+      "std_iia": 0.13157894736842105,
+      "n_sessions": 2
+    },
+    "VPL->CA3": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "VPL->CP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->EPd": {
+      "mean_iia": 0.9459459459459459,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->LD": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "VPL->PIR": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->SSp": {
+      "mean_iia": 0.06756756756756757,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->root": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "root->CP": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "root->EPd": {
+      "mean_iia": 0.05405405405405406,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->LD": {
+      "mean_iia": 0.17105263157894737,
+      "std_iia": 0.17105263157894737,
+      "n_sessions": 2
+    },
+    "root->PIR": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->SSp": {
+      "mean_iia": 0.441678520625889,
+      "std_iia": 0.3741109530583214,
+      "n_sessions": 2
+    },
+    "root->VPL": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "CA1->CA3": {
+      "mean_iia": 0.5707070707070707,
+      "std_iia": 0.4292929292929293,
+      "n_sessions": 2
+    },
+    "CA1->ILA": {
+      "mean_iia": 0.75,
+      "std_iia": 0.25,
+      "n_sessions": 2
+    },
+    "CA1->LD": {
+      "mean_iia": 0.5114155251141552,
+      "std_iia": 0.4085673691007769,
+      "n_sessions": 3
+    },
+    "CA1->LP": {
+      "mean_iia": 0.5411523012185849,
+      "std_iia": 0.37115486245877494,
+      "n_sessions": 9
+    },
+    "CA1->PL": {
+      "mean_iia": 0.10782608695652174,
+      "std_iia": 0.19163311670421002,
+      "n_sessions": 5
+    },
+    "CA1->PO": {
+      "mean_iia": 0.06164383561643835,
+      "std_iia": 0.10677025526109517,
+      "n_sessions": 4
+    },
+    "CA1->TT": {
+      "mean_iia": 0.47974747474747476,
+      "std_iia": 0.46974747474747475,
+      "n_sessions": 2
+    },
+    "CA3->CA1": {
+      "mean_iia": 0.6161616161616161,
+      "std_iia": 0.38383838383838387,
+      "n_sessions": 2
+    },
+    "CA3->ILA": {
+      "mean_iia": 0.7474747474747475,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->LP": {
+      "mean_iia": 0.6262626262626263,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->PL": {
+      "mean_iia": 0.494949494949495,
+      "std_iia": 0.494949494949495,
+      "n_sessions": 2
+    },
+    "CA3->PO": {
+      "mean_iia": 0.9191919191919192,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->TT": {
+      "mean_iia": 0.4948989898989899,
+      "std_iia": 0.4848989898989899,
+      "n_sessions": 2
+    },
+    "CA3->VISa": {
+      "mean_iia": 0.9090909090909091,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->ILA": {
+      "mean_iia": 0.494949494949495,
+      "std_iia": 0.494949494949495,
+      "n_sessions": 2
+    },
+    "DG->LD": {
+      "mean_iia": 0.025598450255984503,
+      "std_iia": 0.015497440154974399,
+      "n_sessions": 2
+    },
+    "DG->LP": {
+      "mean_iia": 0.3036695640952527,
+      "std_iia": 0.3569090273177713,
+      "n_sessions": 9
+    },
+    "DG->PL": {
+      "mean_iia": 0.7367380028249594,
+      "std_iia": 0.4192453344747319,
+      "n_sessions": 4
+    },
+    "DG->PO": {
+      "mean_iia": 0.015151515151515152,
+      "std_iia": 0.026243194054073896,
+      "n_sessions": 4
+    },
+    "DG->TT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->CA1": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "ILA->CA3": {
+      "mean_iia": 0.1414141414141414,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->DG": {
+      "mean_iia": 0.4444444444444444,
+      "std_iia": 0.4444444444444444,
+      "n_sessions": 2
+    },
+    "ILA->LD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->LP": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "ILA->MOs": {
+      "mean_iia": 0.6576576576576577,
+      "std_iia": 0.4651650682315526,
+      "n_sessions": 3
+    },
+    "ILA->PL": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "ILA->PO": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->SUB": {
+      "mean_iia": 0.9646464646464646,
+      "std_iia": 0.03535353535353536,
+      "n_sessions": 2
+    },
+    "ILA->TT": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "ILA->VISa": {
+      "mean_iia": 0.98989898989899,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->VISp": {
+      "mean_iia": 0.6663388470617386,
+      "std_iia": 0.4456682134988044,
+      "n_sessions": 3
+    },
+    "LD->CA1": {
+      "mean_iia": 0.3674646003413127,
+      "std_iia": 0.4479854584481209,
+      "n_sessions": 3
+    },
+    "LD->DG": {
+      "mean_iia": 0.5213089802130898,
+      "std_iia": 0.4101978691019787,
+      "n_sessions": 2
+    },
+    "LD->ILA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->LP": {
+      "mean_iia": 0.5342465753424658,
+      "std_iia": 0.4657534246575343,
+      "n_sessions": 2
+    },
+    "LD->MOs": {
+      "mean_iia": 0.994949494949495,
+      "std_iia": 0.0050505050505050275,
+      "n_sessions": 2
+    },
+    "LD->PL": {
+      "mean_iia": 0.005050505050505051,
+      "std_iia": 0.005050505050505051,
+      "n_sessions": 2
+    },
+    "LD->PO": {
+      "mean_iia": 0.48484848484848486,
+      "std_iia": 0.48484848484848486,
+      "n_sessions": 2
+    },
+    "LD->SUB": {
+      "mean_iia": 0.0707070707070707,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->TT": {
+      "mean_iia": 0.505,
+      "std_iia": 0.495,
+      "n_sessions": 2
+    },
+    "LD->VISa": {
+      "mean_iia": 0.98989898989899,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->VISp": {
+      "mean_iia": 0.98989898989899,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->CA1": {
+      "mean_iia": 0.5638934022230531,
+      "std_iia": 0.4206962843543456,
+      "n_sessions": 9
+    },
+    "LP->CA3": {
+      "mean_iia": 0.1414141414141414,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->DG": {
+      "mean_iia": 0.45185783605874935,
+      "std_iia": 0.46990825129688696,
+      "n_sessions": 9
+    },
+    "LP->ILA": {
+      "mean_iia": 0.4797297297297297,
+      "std_iia": 0.4797297297297297,
+      "n_sessions": 2
+    },
+    "LP->LD": {
+      "mean_iia": 0.9726027397260274,
+      "std_iia": 0.0273972602739726,
+      "n_sessions": 2
+    },
+    "LP->MOs": {
+      "mean_iia": 0.08576156978896704,
+      "std_iia": 0.09469436053118516,
+      "n_sessions": 5
+    },
+    "LP->PL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "LP->PO": {
+      "mean_iia": 0.37651021783067595,
+      "std_iia": 0.4574478172102143,
+      "n_sessions": 5
+    },
+    "LP->SUB": {
+      "mean_iia": 0.6026029526029526,
+      "std_iia": 0.46417489902002274,
+      "n_sessions": 5
+    },
+    "LP->TT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->VISa": {
+      "mean_iia": 0.32996632996632996,
+      "std_iia": 0.4666428589648597,
+      "n_sessions": 3
+    },
+    "LP->VISp": {
+      "mean_iia": 0.6610246610246611,
+      "std_iia": 0.46040476000023517,
+      "n_sessions": 3
+    },
+    "MOs->ILA": {
+      "mean_iia": 0.5,
+      "std_iia": 0.408248290463863,
+      "n_sessions": 3
+    },
+    "MOs->LD": {
+      "mean_iia": 0.9794520547945205,
+      "std_iia": 0.02054794520547948,
+      "n_sessions": 2
+    },
+    "MOs->LP": {
+      "mean_iia": 0.041444578471533836,
+      "std_iia": 0.028873182576324066,
+      "n_sessions": 5
+    },
+    "MOs->PL": {
+      "mean_iia": 0.6045945945945946,
+      "std_iia": 0.4330045483419669,
+      "n_sessions": 6
+    },
+    "MOs->PO": {
+      "mean_iia": 0.3672116659301812,
+      "std_iia": 0.4313050699748943,
+      "n_sessions": 3
+    },
+    "MOs->TT": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "PL->CA1": {
+      "mean_iia": 0.012347826086956521,
+      "std_iia": 0.016187932213175788,
+      "n_sessions": 5
+    },
+    "PL->CA3": {
+      "mean_iia": 0.4292929292929293,
+      "std_iia": 0.4292929292929293,
+      "n_sessions": 2
+    },
+    "PL->DG": {
+      "mean_iia": 0.6818961352657005,
+      "std_iia": 0.3445681516153378,
+      "n_sessions": 4
+    },
+    "PL->ILA": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "PL->LD": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "PL->LP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "PL->MOs": {
+      "mean_iia": 0.6961782264191902,
+      "std_iia": 0.41941870572874357,
+      "n_sessions": 6
+    },
+    "PL->PO": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->SUB": {
+      "mean_iia": 0.33874981701068657,
+      "std_iia": 0.4190833129313232,
+      "n_sessions": 3
+    },
+    "PL->TT": {
+      "mean_iia": 0.6633333333333333,
+      "std_iia": 0.46906526435265083,
+      "n_sessions": 3
+    },
+    "PL->VISa": {
+      "mean_iia": 0.010101010101010102,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->VISp": {
+      "mean_iia": 0.570243244244292,
+      "std_iia": 0.4119160566889324,
+      "n_sessions": 5
+    },
+    "PO->CA1": {
+      "mean_iia": 0.2340919133893062,
+      "std_iia": 0.38705898648181525,
+      "n_sessions": 4
+    },
+    "PO->CA3": {
+      "mean_iia": 0.8585858585858586,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->DG": {
+      "mean_iia": 0.2606544901065449,
+      "std_iia": 0.3899639843890778,
+      "n_sessions": 4
+    },
+    "PO->ILA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->LD": {
+      "mean_iia": 0.7976338729763387,
+      "std_iia": 0.16127023661270234,
+      "n_sessions": 2
+    },
+    "PO->LP": {
+      "mean_iia": 0.20547945205479454,
+      "std_iia": 0.39740195867328754,
+      "n_sessions": 5
+    },
+    "PO->MOs": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "PO->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->SUB": {
+      "mean_iia": 0.9646464646464646,
+      "std_iia": 0.03535353535353536,
+      "n_sessions": 2
+    },
+    "PO->TT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->VISa": {
+      "mean_iia": 0.494949494949495,
+      "std_iia": 0.494949494949495,
+      "n_sessions": 2
+    },
+    "PO->VISp": {
+      "mean_iia": 0.010101010101010102,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->ILA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "SUB->LD": {
+      "mean_iia": 0.12121212121212122,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->LP": {
+      "mean_iia": 0.6446386946386946,
+      "std_iia": 0.4342539727420431,
+      "n_sessions": 5
+    },
+    "SUB->PL": {
+      "mean_iia": 0.3201215049041136,
+      "std_iia": 0.4450563533075366,
+      "n_sessions": 3
+    },
+    "SUB->PO": {
+      "mean_iia": 0.8535353535353536,
+      "std_iia": 0.14646464646464646,
+      "n_sessions": 2
+    },
+    "SUB->TT": {
+      "mean_iia": 0.5656565656565656,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->CA1": {
+      "mean_iia": 0.3484848484848485,
+      "std_iia": 0.3484848484848485,
+      "n_sessions": 2
+    },
+    "TT->CA3": {
+      "mean_iia": 0.4342929292929293,
+      "std_iia": 0.4242929292929293,
+      "n_sessions": 2
+    },
+    "TT->DG": {
+      "mean_iia": 0.15151515151515152,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->ILA": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "TT->LD": {
+      "mean_iia": 0.505,
+      "std_iia": 0.495,
+      "n_sessions": 2
+    },
+    "TT->LP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->MOs": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "TT->PL": {
+      "mean_iia": 0.8283164983164983,
+      "std_iia": 0.23576141782237076,
+      "n_sessions": 3
+    },
+    "TT->PO": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->SUB": {
+      "mean_iia": 0.0707070707070707,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->VISa": {
+      "mean_iia": 0.98989898989899,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->VISp": {
+      "mean_iia": 0.9768772057928685,
+      "std_iia": 0.013021784106121481,
+      "n_sessions": 2
+    },
+    "VISa->CA3": {
+      "mean_iia": 0.8181818181818182,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->ILA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->LD": {
+      "mean_iia": 0.9595959595959596,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->LP": {
+      "mean_iia": 0.6710090984284532,
+      "std_iia": 0.4517334155703997,
+      "n_sessions": 3
+    },
+    "VISa->PL": {
+      "mean_iia": 0.1919191919191919,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->PO": {
+      "mean_iia": 0.4393939393939394,
+      "std_iia": 0.4393939393939394,
+      "n_sessions": 2
+    },
+    "VISa->TT": {
+      "mean_iia": 0.9797979797979798,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->ILA": {
+      "mean_iia": 0.3806013022880493,
+      "std_iia": 0.43089291824588793,
+      "n_sessions": 3
+    },
+    "VISp->LD": {
+      "mean_iia": 0.98989898989899,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->LP": {
+      "mean_iia": 0.6891034391034391,
+      "std_iia": 0.24388564804326668,
+      "n_sessions": 3
+    },
+    "VISp->PL": {
+      "mean_iia": 0.6187369926238444,
+      "std_iia": 0.4311972620945374,
+      "n_sessions": 5
+    },
+    "VISp->PO": {
+      "mean_iia": 0.030303030303030304,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->TT": {
+      "mean_iia": 0.963855421686747,
+      "std_iia": 0.03614457831325302,
+      "n_sessions": 2
+    },
+    "CA1->ORBm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->LSr": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->ORBm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->TH": {
+      "mean_iia": 0.8804896907216495,
+      "std_iia": 0.12125927665343285,
+      "n_sessions": 4
+    },
+    "CA3->VISam": {
+      "mean_iia": 0.93,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->LSr": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->ORBm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->TH": {
+      "mean_iia": 0.79,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->VISam": {
+      "mean_iia": 0.8417123287671233,
+      "std_iia": 0.08828767123287673,
+      "n_sessions": 2
+    },
+    "LD->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->LD": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->ORBm": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->PL": {
+      "mean_iia": 0.02,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->TT": {
+      "mean_iia": 0.97,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->VISam": {
+      "mean_iia": 0.07,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSr->VISl": {
+      "mean_iia": 0.02,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->CA1": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->CA3": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->LD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->LSr": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->PL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->TH": {
+      "mean_iia": 0.79,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->TT": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->VISam": {
+      "mean_iia": 0.93,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORBm->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->LSr": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->ORBm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->TH": {
+      "mean_iia": 0.21,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->VISam": {
+      "mean_iia": 0.3536592244418332,
+      "std_iia": 0.3337563500140093,
+      "n_sessions": 5
+    },
+    "PL->VISl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->VPL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->CA3": {
+      "mean_iia": 0.8862628865979382,
+      "std_iia": 0.12202814069674488,
+      "n_sessions": 4
+    },
+    "TH->LD": {
+      "mean_iia": 0.71,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->ORBm": {
+      "mean_iia": 0.79,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->PL": {
+      "mean_iia": 0.23,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->TT": {
+      "mean_iia": 0.12,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->VISam": {
+      "mean_iia": 0.12,
+      "std_iia": 0.12,
+      "n_sessions": 2
+    },
+    "TH->VISl": {
+      "mean_iia": 0.35,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->LSr": {
+      "mean_iia": 0.96,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->ORBm": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->TH": {
+      "mean_iia": 0.21,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->VISam": {
+      "mean_iia": 0.07,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->VISl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->VPL": {
+      "mean_iia": 0.97,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->CA3": {
+      "mean_iia": 0.95,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->LD": {
+      "mean_iia": 0.9544520547945206,
+      "std_iia": 0.0044520547945205435,
+      "n_sessions": 2
+    },
+    "VISam->LSr": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->ORBm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->PL": {
+      "mean_iia": 0.27217391304347827,
+      "std_iia": 0.3878723895151654,
+      "n_sessions": 5
+    },
+    "VISam->TH": {
+      "mean_iia": 0.395,
+      "std_iia": 0.395,
+      "n_sessions": 2
+    },
+    "VISam->TT": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->VISl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->VPL": {
+      "mean_iia": 0.98,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->LD": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->LSr": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->ORBm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->TH": {
+      "mean_iia": 0.21,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->TT": {
+      "mean_iia": 0.99,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->VISam": {
+      "mean_iia": 0.93,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->VPL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->ORBm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->TT": {
+      "mean_iia": 0.99,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->VISam": {
+      "mean_iia": 0.93,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->VISl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->GPe": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->MB": {
+      "mean_iia": 0.975,
+      "std_iia": 0.025000000000000022,
+      "n_sessions": 2
+    },
+    "CA1->POL": {
+      "mean_iia": 0.3422222222222222,
+      "std_iia": 0.4652465163627282,
+      "n_sessions": 3
+    },
+    "CA1->SCm": {
+      "mean_iia": 0.6433333333333334,
+      "std_iia": 0.4558021013066477,
+      "n_sessions": 3
+    },
+    "CA1->SCsg": {
+      "mean_iia": 0.36,
+      "std_iia": 0.36,
+      "n_sessions": 2
+    },
+    "CA1->VISrl": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "DG->GPe": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->MB": {
+      "mean_iia": 0.145,
+      "std_iia": 0.145,
+      "n_sessions": 2
+    },
+    "DG->POL": {
+      "mean_iia": 0.7706093189964157,
+      "std_iia": 0.16244113539246824,
+      "n_sessions": 3
+    },
+    "DG->SCm": {
+      "mean_iia": 0.13,
+      "std_iia": 0.06,
+      "n_sessions": 2
+    },
+    "DG->SCsg": {
+      "mean_iia": 0.28,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->VISrl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->CA1": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->DG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->MB": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "GPe->MRN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->POL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->POST": {
+      "mean_iia": 0.84,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->SCm": {
+      "mean_iia": 0.93,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->SCsg": {
+      "mean_iia": 0.72,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->VISp": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->VISrl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->root": {
+      "mean_iia": 0.26,
+      "std_iia": 0.36769552621700474,
+      "n_sessions": 3
+    },
+    "MB->CA1": {
+      "mean_iia": 0.52,
+      "std_iia": 0.44,
+      "n_sessions": 2
+    },
+    "MB->DG": {
+      "mean_iia": 0.135,
+      "std_iia": 0.135,
+      "n_sessions": 2
+    },
+    "MB->GPe": {
+      "mean_iia": 0.5052631578947369,
+      "std_iia": 0.4947368421052632,
+      "n_sessions": 2
+    },
+    "MB->MRN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "MB->POL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->POST": {
+      "mean_iia": 0.84,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->SCm": {
+      "mean_iia": 0.6433333333333334,
+      "std_iia": 0.4558021013066477,
+      "n_sessions": 3
+    },
+    "MB->SCsg": {
+      "mean_iia": 0.72,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->VISl": {
+      "mean_iia": 0.19,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->VISp": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->VISrl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->root": {
+      "mean_iia": 0.7299130434782609,
+      "std_iia": 0.37434700802819265,
+      "n_sessions": 5
+    },
+    "MRN->GPe": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "MRN->POL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "MRN->SCm": {
+      "mean_iia": 0.6425656565656566,
+      "std_iia": 0.4196281026288227,
+      "n_sessions": 5
+    },
+    "MRN->SCsg": {
+      "mean_iia": 0.24144578313253015,
+      "std_iia": 0.28391582668458204,
+      "n_sessions": 3
+    },
+    "MRN->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->VISrl": {
+      "mean_iia": 0.9285714285714286,
+      "std_iia": 0.07142857142857145,
+      "n_sessions": 2
+    },
+    "MRN->root": {
+      "mean_iia": 0.6483790283790284,
+      "std_iia": 0.35393738924210555,
+      "n_sessions": 6
+    },
+    "POL->CA1": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "POL->DG": {
+      "mean_iia": 0.7625806451612904,
+      "std_iia": 0.31322874100260945,
+      "n_sessions": 3
+    },
+    "POL->GPe": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->MRN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "POL->POST": {
+      "mean_iia": 0.16,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->SCm": {
+      "mean_iia": 0.07,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->SCsg": {
+      "mean_iia": 0.28,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->VISp": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->VISrl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->root": {
+      "mean_iia": 0.14333333333333334,
+      "std_iia": 0.07666666666666666,
+      "n_sessions": 2
+    },
+    "POST->GPe": {
+      "mean_iia": 0.2,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->MB": {
+      "mean_iia": 0.87,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->POL": {
+      "mean_iia": 0.19,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->SCm": {
+      "mean_iia": 0.77875,
+      "std_iia": 0.058750000000000024,
+      "n_sessions": 2
+    },
+    "POST->SCsg": {
+      "mean_iia": 0.63,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->VISrl": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->CA1": {
+      "mean_iia": 0.64,
+      "std_iia": 0.4270831300812524,
+      "n_sessions": 3
+    },
+    "SCm->DG": {
+      "mean_iia": 0.17500000000000002,
+      "std_iia": 0.09500000000000001,
+      "n_sessions": 2
+    },
+    "SCm->GPe": {
+      "mean_iia": 0.83,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->MB": {
+      "mean_iia": 0.9633333333333334,
+      "std_iia": 0.04496912521077346,
+      "n_sessions": 3
+    },
+    "SCm->MRN": {
+      "mean_iia": 0.5595959595959596,
+      "std_iia": 0.4628247115276506,
+      "n_sessions": 5
+    },
+    "SCm->POL": {
+      "mean_iia": 0.11,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->POST": {
+      "mean_iia": 0.51625,
+      "std_iia": 0.20375,
+      "n_sessions": 2
+    },
+    "SCm->SCsg": {
+      "mean_iia": 0.73,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->VISp": {
+      "mean_iia": 0.09346153846153846,
+      "std_iia": 0.016538461538461537,
+      "n_sessions": 2
+    },
+    "SCm->VISrl": {
+      "mean_iia": 0.86,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->root": {
+      "mean_iia": 0.5484382960035135,
+      "std_iia": 0.3723690101234629,
+      "n_sessions": 5
+    },
+    "SCsg->CA1": {
+      "mean_iia": 0.175,
+      "std_iia": 0.175,
+      "n_sessions": 2
+    },
+    "SCsg->DG": {
+      "mean_iia": 0.17,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->GPe": {
+      "mean_iia": 0.39,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->MB": {
+      "mean_iia": 0.74,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->MRN": {
+      "mean_iia": 0.042254733218588636,
+      "std_iia": 0.00970364669041648,
+      "n_sessions": 3
+    },
+    "SCsg->POL": {
+      "mean_iia": 0.35,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->POST": {
+      "mean_iia": 0.43,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->SCm": {
+      "mean_iia": 0.6,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->VISp": {
+      "mean_iia": 0.37879518072289153,
+      "std_iia": 0.018795180722891575,
+      "n_sessions": 2
+    },
+    "SCsg->VISrl": {
+      "mean_iia": 0.4992857142857143,
+      "std_iia": 0.029285714285714304,
+      "n_sessions": 2
+    },
+    "SCsg->root": {
+      "mean_iia": 0.24428571428571427,
+      "std_iia": 0.11571428571428571,
+      "n_sessions": 2
+    },
+    "VISl->DG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->GPe": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->MB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->MRN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->POL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->SCm": {
+      "mean_iia": 0.07,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->SCsg": {
+      "mean_iia": 0.72,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->VISp": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISl->VISrl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->GPe": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->POL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->SCm": {
+      "mean_iia": 0.035,
+      "std_iia": 0.035,
+      "n_sessions": 2
+    },
+    "VISp->SCsg": {
+      "mean_iia": 0.24240963855421688,
+      "std_iia": 0.03759036144578315,
+      "n_sessions": 2
+    },
+    "VISp->VISl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->VISrl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->CA1": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "VISrl->DG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->GPe": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->MB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->MRN": {
+      "mean_iia": 0.9857142857142858,
+      "std_iia": 0.01428571428571429,
+      "n_sessions": 2
+    },
+    "VISrl->POL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->POST": {
+      "mean_iia": 0.84,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->SCm": {
+      "mean_iia": 0.93,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->SCsg": {
+      "mean_iia": 0.8457142857142856,
+      "std_iia": 0.12571428571428572,
+      "n_sessions": 2
+    },
+    "VISrl->VISl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->VISp": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->root": {
+      "mean_iia": 0.3092857142857143,
+      "std_iia": 0.18071428571428572,
+      "n_sessions": 2
+    },
+    "root->GPe": {
+      "mean_iia": 0.23666666666666666,
+      "std_iia": 0.3346972097616325,
+      "n_sessions": 3
+    },
+    "root->MB": {
+      "mean_iia": 0.5775072463768116,
+      "std_iia": 0.4720911698748538,
+      "n_sessions": 5
+    },
+    "root->MRN": {
+      "mean_iia": 0.49730399230399236,
+      "std_iia": 0.4034427097087793,
+      "n_sessions": 6
+    },
+    "root->POL": {
+      "mean_iia": 0.10166666666666667,
+      "std_iia": 0.03166666666666666,
+      "n_sessions": 2
+    },
+    "root->SCm": {
+      "mean_iia": 0.5788107158541942,
+      "std_iia": 0.43431375980103476,
+      "n_sessions": 5
+    },
+    "root->SCsg": {
+      "mean_iia": 0.5642857142857143,
+      "std_iia": 0.1357142857142857,
+      "n_sessions": 2
+    },
+    "root->VISrl": {
+      "mean_iia": 0.4928571428571428,
+      "std_iia": 0.20714285714285713,
+      "n_sessions": 2
+    },
+    "CP->LSc": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->MOp": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "CP->PT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSc->CP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSc->MOp": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LSc->PT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOp->CP": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "MOp->LSc": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOp->PT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PT->CP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PT->LSc": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PT->MOp": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->LH": {
+      "mean_iia": 0.07608695652173914,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->MD": {
+      "mean_iia": 0.6195698924731183,
+      "std_iia": 0.42904287587583606,
+      "n_sessions": 3
+    },
+    "ACA->PL": {
+      "mean_iia": 0.7379329491880566,
+      "std_iia": 0.3810794312378036,
+      "n_sessions": 5
+    },
+    "ACA->VISam": {
+      "mean_iia": 0.23000000000000004,
+      "std_iia": 0.38863864964771583,
+      "n_sessions": 5
+    },
+    "CA1->LH": {
+      "mean_iia": 0.9130434782608695,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->MD": {
+      "mean_iia": 0.006666666666666667,
+      "std_iia": 0.009428090415820633,
+      "n_sessions": 3
+    },
+    "DG->LH": {
+      "mean_iia": 0.07608695652173914,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->MD": {
+      "mean_iia": 0.6666666666666666,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "LH->ACA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LH->CA1": {
+      "mean_iia": 0.8695652173913043,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LH->DG": {
+      "mean_iia": 0.17391304347826086,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LH->MD": {
+      "mean_iia": 0.08695652173913043,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LH->PL": {
+      "mean_iia": 0.8369565217391305,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LH->SUB": {
+      "mean_iia": 0.9130434782608695,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LH->VISam": {
+      "mean_iia": 0.358695652173913,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LH->VISp": {
+      "mean_iia": 0.782608695652174,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LH->root": {
+      "mean_iia": 0.010869565217391304,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->ACA": {
+      "mean_iia": 0.6559139784946236,
+      "std_iia": 0.4639881507611058,
+      "n_sessions": 3
+    },
+    "MD->CA1": {
+      "mean_iia": 0.329247311827957,
+      "std_iia": 0.45155770271961954,
+      "n_sessions": 3
+    },
+    "MD->DG": {
+      "mean_iia": 0.6633333333333333,
+      "std_iia": 0.46906526435265083,
+      "n_sessions": 3
+    },
+    "MD->LH": {
+      "mean_iia": 0.07608695652173914,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->PL": {
+      "mean_iia": 0.9891304347826086,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->SUB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "MD->VISam": {
+      "mean_iia": 0.98,
+      "std_iia": 0.020000000000000018,
+      "n_sessions": 2
+    },
+    "MD->VISp": {
+      "mean_iia": 0.06521739130434782,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->root": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->ACA": {
+      "mean_iia": 0.9499654269250917,
+      "std_iia": 0.05312847099457071,
+      "n_sessions": 5
+    },
+    "PL->LH": {
+      "mean_iia": 0.07608695652173914,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->MD": {
+      "mean_iia": 0.967391304347826,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->root": {
+      "mean_iia": 0.5271739130434783,
+      "std_iia": 0.47438523544352146,
+      "n_sessions": 4
+    },
+    "SUB->LH": {
+      "mean_iia": 0.9239130434782609,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->MD": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "SUB->VISam": {
+      "mean_iia": 0.6666666666666666,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "VISam->ACA": {
+      "mean_iia": 0.049609291244788564,
+      "std_iia": 0.05335902881229519,
+      "n_sessions": 5
+    },
+    "VISam->LH": {
+      "mean_iia": 0.07608695652173914,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->MD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VISam->SUB": {
+      "mean_iia": 0.6666666666666666,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "VISam->root": {
+      "mean_iia": 0.4391097308488613,
+      "std_iia": 0.46881352575901236,
+      "n_sessions": 7
+    },
+    "VISp->LH": {
+      "mean_iia": 0.717391304347826,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->MD": {
+      "mean_iia": 0.08695652173913043,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->LH": {
+      "mean_iia": 0.07608695652173914,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->MD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->PL": {
+      "mean_iia": 0.5027173913043479,
+      "std_iia": 0.4972974576067678,
+      "n_sessions": 4
+    },
+    "root->VISam": {
+      "mean_iia": 0.5151552795031057,
+      "std_iia": 0.4232400409318384,
+      "n_sessions": 7
+    },
+    "ACA->MB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->MRN": {
+      "mean_iia": 0.03333333333333333,
+      "std_iia": 0.047140452079103175,
+      "n_sessions": 3
+    },
+    "ACA->MS": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->RN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->SCm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->SCs": {
+      "mean_iia": 0.02,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->ZI": {
+      "mean_iia": 0.81,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->MS": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->RN": {
+      "mean_iia": 0.96,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->SCs": {
+      "mean_iia": 0.585,
+      "std_iia": 0.415,
+      "n_sessions": 2
+    },
+    "CA1->ZI": {
+      "mean_iia": 0.8,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->MS": {
+      "mean_iia": 0.57,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->RN": {
+      "mean_iia": 0.57,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->SCs": {
+      "mean_iia": 0.69,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->ZI": {
+      "mean_iia": 0.81,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->MB": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "LGd->MRN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->MS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->RN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->SCm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->SCs": {
+      "mean_iia": 0.02,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->VISam": {
+      "mean_iia": 0.14,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->ZI": {
+      "mean_iia": 0.2025,
+      "std_iia": 0.3507402885326977,
+      "n_sessions": 4
+    },
+    "LGd->root": {
+      "mean_iia": 0.06521739130434782,
+      "std_iia": 0.11295983527623112,
+      "n_sessions": 4
+    },
+    "MB->ACA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->LGd": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "MB->MOs": {
+      "mean_iia": 0.505,
+      "std_iia": 0.495,
+      "n_sessions": 2
+    },
+    "MB->MS": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->PL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->RN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->SCs": {
+      "mean_iia": 0.8885507246376811,
+      "std_iia": 0.09144927536231884,
+      "n_sessions": 2
+    },
+    "MB->VISam": {
+      "mean_iia": 0.43,
+      "std_iia": 0.43,
+      "n_sessions": 2
+    },
+    "MB->ZI": {
+      "mean_iia": 0.405,
+      "std_iia": 0.405,
+      "n_sessions": 2
+    },
+    "MOs->MB": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "MOs->MRN": {
+      "mean_iia": 0.2966477164067526,
+      "std_iia": 0.34086532160658395,
+      "n_sessions": 7
+    },
+    "MOs->MS": {
+      "mean_iia": 0.97,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->RN": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->SCm": {
+      "mean_iia": 0.7399999999999999,
+      "std_iia": 0.36170890690351176,
+      "n_sessions": 6
+    },
+    "MOs->SCs": {
+      "mean_iia": 0.6942753623188406,
+      "std_iia": 0.40856382779960265,
+      "n_sessions": 4
+    },
+    "MOs->VISam": {
+      "mean_iia": 0.4792434900654079,
+      "std_iia": 0.398657609113258,
+      "n_sessions": 6
+    },
+    "MOs->ZI": {
+      "mean_iia": 0.21,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->ACA": {
+      "mean_iia": 0.07614457831325301,
+      "std_iia": 0.054049003855996446,
+      "n_sessions": 3
+    },
+    "MRN->LGd": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->MOs": {
+      "mean_iia": 0.21183261183261184,
+      "std_iia": 0.3385009916670034,
+      "n_sessions": 7
+    },
+    "MRN->MS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->PL": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 4
+    },
+    "MRN->RN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->SCs": {
+      "mean_iia": 0.43104377104377106,
+      "std_iia": 0.408678774261822,
+      "n_sessions": 3
+    },
+    "MRN->ZI": {
+      "mean_iia": 0.19,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->ACA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->CA1": {
+      "mean_iia": 0.04,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->DG": {
+      "mean_iia": 0.73,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->LGd": {
+      "mean_iia": 0.95,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->MOs": {
+      "mean_iia": 0.99,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->MRN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->RN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->SCm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->SCs": {
+      "mean_iia": 0.07,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->VISam": {
+      "mean_iia": 0.14,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->ZI": {
+      "mean_iia": 0.81,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MS->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->LGd": {
+      "mean_iia": 0.02,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->MRN": {
+      "mean_iia": 0.45783132530120485,
+      "std_iia": 0.46169894593637884,
+      "n_sessions": 4
+    },
+    "PL->MS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->RN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->SCm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "PL->SCs": {
+      "mean_iia": 0.98,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->ZI": {
+      "mean_iia": 0.19,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->ACA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->CA1": {
+      "mean_iia": 0.96,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->DG": {
+      "mean_iia": 0.73,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->LGd": {
+      "mean_iia": 0.98,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->MOs": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->MRN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->MS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->PL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->SCm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->SCs": {
+      "mean_iia": 0.02,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->VISam": {
+      "mean_iia": 0.86,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->ZI": {
+      "mean_iia": 0.81,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RN->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->ACA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->LGd": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->MOs": {
+      "mean_iia": 0.6343771043771044,
+      "std_iia": 0.40698055107217845,
+      "n_sessions": 6
+    },
+    "SCm->MS": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "SCm->RN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->SCs": {
+      "mean_iia": 0.05572463768115942,
+      "std_iia": 0.08536228808345697,
+      "n_sessions": 4
+    },
+    "SCm->VISam": {
+      "mean_iia": 0.38000000000000006,
+      "std_iia": 0.4421161235090467,
+      "n_sessions": 3
+    },
+    "SCm->ZI": {
+      "mean_iia": 0.81,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCs->ACA": {
+      "mean_iia": 0.06,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCs->CA1": {
+      "mean_iia": 0.5145054945054945,
+      "std_iia": 0.47450549450549456,
+      "n_sessions": 2
+    },
+    "SCs->DG": {
+      "mean_iia": 0.28,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCs->LGd": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCs->MB": {
+      "mean_iia": 0.6936231884057971,
+      "std_iia": 0.18637681159420288,
+      "n_sessions": 2
+    },
+    "SCs->MOs": {
+      "mean_iia": 0.5719628921802835,
+      "std_iia": 0.42767857426151756,
+      "n_sessions": 4
+    },
+    "SCs->MRN": {
+      "mean_iia": 0.3906734006734007,
+      "std_iia": 0.4178656259465574,
+      "n_sessions": 3
+    },
+    "SCs->MS": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCs->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCs->RN": {
+      "mean_iia": 0.04,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCs->SCm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 4
+    },
+    "SCs->VISam": {
+      "mean_iia": 0.4160869565217391,
+      "std_iia": 0.23608695652173914,
+      "n_sessions": 2
+    },
+    "SCs->ZI": {
+      "mean_iia": 0.27,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCs->root": {
+      "mean_iia": 0.609269506660811,
+      "std_iia": 0.3505734663103522,
+      "n_sessions": 3
+    },
+    "VISam->LGd": {
+      "mean_iia": 0.01,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->MB": {
+      "mean_iia": 0.33,
+      "std_iia": 0.33,
+      "n_sessions": 2
+    },
+    "VISam->MOs": {
+      "mean_iia": 0.6471621621621622,
+      "std_iia": 0.3674378000263985,
+      "n_sessions": 6
+    },
+    "VISam->MS": {
+      "mean_iia": 0.22,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->RN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->SCm": {
+      "mean_iia": 0.33666666666666667,
+      "std_iia": 0.46906526435265083,
+      "n_sessions": 3
+    },
+    "VISam->SCs": {
+      "mean_iia": 0.5764492753623188,
+      "std_iia": 0.37355072463768113,
+      "n_sessions": 2
+    },
+    "VISam->ZI": {
+      "mean_iia": 0.74,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->ACA": {
+      "mean_iia": 0.4,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->CA1": {
+      "mean_iia": 0.4,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->DG": {
+      "mean_iia": 0.73,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->LGd": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 4
+    },
+    "ZI->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "ZI->MOs": {
+      "mean_iia": 0.54,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->MRN": {
+      "mean_iia": 0.69,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->MS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->PL": {
+      "mean_iia": 0.73,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->RN": {
+      "mean_iia": 0.65,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->SCm": {
+      "mean_iia": 0.29,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->SCs": {
+      "mean_iia": 0.49,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->VISam": {
+      "mean_iia": 0.38,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->root": {
+      "mean_iia": 0.43,
+      "std_iia": 0.42007935758219145,
+      "n_sessions": 3
+    },
+    "root->LGd": {
+      "mean_iia": 0.25,
+      "std_iia": 0.4330127018922193,
+      "n_sessions": 4
+    },
+    "root->MS": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->RN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->SCs": {
+      "mean_iia": 0.771111111111111,
+      "std_iia": 0.1477067498478566,
+      "n_sessions": 3
+    },
+    "root->ZI": {
+      "mean_iia": 0.39666666666666667,
+      "std_iia": 0.43361529288324485,
+      "n_sessions": 3
+    },
+    "CA1->RSP": {
+      "mean_iia": 0.4,
+      "std_iia": 0.48989794855663565,
+      "n_sessions": 5
+    },
+    "MOs->RSP": {
+      "mean_iia": 0.4520315926096693,
+      "std_iia": 0.3999570941133,
+      "n_sessions": 7
+    },
+    "MRN->ORB": {
+      "mean_iia": 0.08585858585858586,
+      "std_iia": 0.08585858585858586,
+      "n_sessions": 2
+    },
+    "MRN->RSP": {
+      "mean_iia": 0.6270693162259428,
+      "std_iia": 0.437679551675599,
+      "n_sessions": 6
+    },
+    "ORB->MRN": {
+      "mean_iia": 0.398989898989899,
+      "std_iia": 0.398989898989899,
+      "n_sessions": 2
+    },
+    "ORB->RSP": {
+      "mean_iia": 0.6836480749524227,
+      "std_iia": 0.412192731388888,
+      "n_sessions": 3
+    },
+    "ORB->SCm": {
+      "mean_iia": 0.75,
+      "std_iia": 0.4330127018922193,
+      "n_sessions": 4
+    },
+    "ORB->SCs": {
+      "mean_iia": 0.40096618357487923,
+      "std_iia": 0.43160405496023285,
+      "n_sessions": 3
+    },
+    "ORB->VISp": {
+      "mean_iia": 0.07692307692307693,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->CA1": {
+      "mean_iia": 0.4104516129032258,
+      "std_iia": 0.48147439185319685,
+      "n_sessions": 5
+    },
+    "RSP->MOs": {
+      "mean_iia": 0.5675100401606425,
+      "std_iia": 0.41418746435027376,
+      "n_sessions": 7
+    },
+    "RSP->MRN": {
+      "mean_iia": 0.6258868752844656,
+      "std_iia": 0.4375064919507404,
+      "n_sessions": 6
+    },
+    "RSP->ORB": {
+      "mean_iia": 0.1161012900143335,
+      "std_iia": 0.13431456165179917,
+      "n_sessions": 3
+    },
+    "RSP->SCm": {
+      "mean_iia": 0.04830917874396135,
+      "std_iia": 0.06831949576681619,
+      "n_sessions": 3
+    },
+    "RSP->SCs": {
+      "mean_iia": 0.5458937198067633,
+      "std_iia": 0.41337529401509965,
+      "n_sessions": 3
+    },
+    "RSP->VISp": {
+      "mean_iia": 0.09656472042014212,
+      "std_iia": 0.07188791050529163,
+      "n_sessions": 3
+    },
+    "SCm->ORB": {
+      "mean_iia": 0.75,
+      "std_iia": 0.4330127018922193,
+      "n_sessions": 4
+    },
+    "SCm->RSP": {
+      "mean_iia": 0.03381642512077295,
+      "std_iia": 0.047823647036771326,
+      "n_sessions": 3
+    },
+    "SCs->ORB": {
+      "mean_iia": 0.5084142910229867,
+      "std_iia": 0.4042408918436453,
+      "n_sessions": 3
+    },
+    "SCs->RSP": {
+      "mean_iia": 0.39013643361469447,
+      "std_iia": 0.43547532524021504,
+      "n_sessions": 3
+    },
+    "SCs->VISp": {
+      "mean_iia": 0.08791208791208792,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->ORB": {
+      "mean_iia": 0.18681318681318682,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->RSP": {
+      "mean_iia": 0.24000397193168277,
+      "std_iia": 0.11340358633275523,
+      "n_sessions": 3
+    },
+    "VISp->SCs": {
+      "mean_iia": 0.37362637362637363,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BLA->GPe": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "BLA->LGd": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "BLA->MB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BLA->VPM": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BLA->ZI": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BLA->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "GPe->BLA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "GPe->LGd": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "GPe->VPM": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->ZI": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->BLA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "LGd->GPe": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "LGd->VPM": {
+      "mean_iia": 0.5185185185185185,
+      "std_iia": 0.48148148148148145,
+      "n_sessions": 2
+    },
+    "MB->BLA": {
+      "mean_iia": 0.9894736842105263,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->VPM": {
+      "mean_iia": 0.22105263157894736,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->BLA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->GPe": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->LGd": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "VPM->MB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->ZI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VPM->root": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "ZI->BLA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->GPe": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->VPM": {
+      "mean_iia": 0.018518518518518517,
+      "std_iia": 0.018518518518518517,
+      "n_sessions": 2
+    },
+    "root->BLA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "root->VPM": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "CA3->LGd": {
+      "mean_iia": 0.6254295532646048,
+      "std_iia": 0.4451199976758889,
+      "n_sessions": 3
+    },
+    "CA3->MB": {
+      "mean_iia": 0.12371134020618557,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->SSs": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->CA3": {
+      "mean_iia": 0.6116838487972509,
+      "std_iia": 0.4377364856063532,
+      "n_sessions": 3
+    },
+    "LGd->SSp": {
+      "mean_iia": 0.14432989690721648,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->SSs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->CA3": {
+      "mean_iia": 0.16494845360824742,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->SSp": {
+      "mean_iia": 0.8556701030927835,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->SSs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->LGd": {
+      "mean_iia": 0.13402061855670103,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->MB": {
+      "mean_iia": 0.8350515463917526,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->SSs": {
+      "mean_iia": 0.4020618556701031,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->TH": {
+      "mean_iia": 0.05154639175257732,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSs->CA3": {
+      "mean_iia": 0.16494845360824742,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSs->LGd": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSs->MB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSs->SSp": {
+      "mean_iia": 0.8556701030927835,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSs->TH": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->SSp": {
+      "mean_iia": 0.14432989690721648,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->SSs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MEA->RT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MEA->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MEA->VPM": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MEA->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->MEA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->VPM": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VPL->MEA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->RT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPL->VPM": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->MEA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->RT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->VPL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->MEA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->RT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "ACB->CA3": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->CP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->LGd": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->OT": {
+      "mean_iia": 0.06521739130434782,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->SI": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->SNr": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->TH": {
+      "mean_iia": 0.043478260869565216,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->ZI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->root": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->OT": {
+      "mean_iia": 0.06521739130434782,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->SI": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->SNr": {
+      "mean_iia": 0.6666666666666666,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "CA3->ZI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->LGd": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "CP->OT": {
+      "mean_iia": 0.9347826086956522,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->SI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->SNr": {
+      "mean_iia": 0.018518518518518517,
+      "std_iia": 0.018518518518518517,
+      "n_sessions": 2
+    },
+    "CP->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->ZI": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "LGd->ACB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->CP": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "LGd->OT": {
+      "mean_iia": 0.9347826086956522,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->SI": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->SNr": {
+      "mean_iia": 0.6543209876543209,
+      "std_iia": 0.4629218088704364,
+      "n_sessions": 3
+    },
+    "OT->ACB": {
+      "mean_iia": 0.8043478260869565,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OT->CA3": {
+      "mean_iia": 0.7717391304347826,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OT->CP": {
+      "mean_iia": 0.13043478260869565,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OT->LGd": {
+      "mean_iia": 0.08695652173913043,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OT->SI": {
+      "mean_iia": 0.8695652173913043,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OT->SNr": {
+      "mean_iia": 0.8152173913043478,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OT->TH": {
+      "mean_iia": 0.8152173913043478,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OT->ZI": {
+      "mean_iia": 0.16304347826086957,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OT->root": {
+      "mean_iia": 0.07608695652173914,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->CA3": {
+      "mean_iia": 0.9891304347826086,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->CP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->LGd": {
+      "mean_iia": 0.8043478260869565,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->OT": {
+      "mean_iia": 0.10869565217391304,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->SNr": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->TH": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->ZI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SI->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->CA3": {
+      "mean_iia": 0.6666666666666666,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "SNr->CP": {
+      "mean_iia": 0.07407407407407407,
+      "std_iia": 0.07407407407407407,
+      "n_sessions": 2
+    },
+    "SNr->LGd": {
+      "mean_iia": 0.5308641975308642,
+      "std_iia": 0.4105750406991578,
+      "n_sessions": 3
+    },
+    "SNr->OT": {
+      "mean_iia": 0.06521739130434782,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->SI": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->TH": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "SNr->ZI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "SNr->root": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "TH->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->CP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->OT": {
+      "mean_iia": 0.06521739130434782,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->SI": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->SNr": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "TH->ZI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->ACB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->CP": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "ZI->OT": {
+      "mean_iia": 0.9347826086956522,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->SI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->SNr": {
+      "mean_iia": 0.018518518518518517,
+      "std_iia": 0.018518518518518517,
+      "n_sessions": 2
+    },
+    "ZI->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->OT": {
+      "mean_iia": 0.9347826086956522,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->SI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->SNr": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "APN->CA1": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "APN->DG": {
+      "mean_iia": 0.5266666666666666,
+      "std_iia": 0.47333333333333333,
+      "n_sessions": 2
+    },
+    "APN->LP": {
+      "mean_iia": 0.03225806451612903,
+      "std_iia": 0.03225806451612903,
+      "n_sessions": 2
+    },
+    "APN->POL": {
+      "mean_iia": 0.5133333333333333,
+      "std_iia": 0.48666666666666664,
+      "n_sessions": 2
+    },
+    "APN->SUB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "APN->VISam": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "APN->VISpm": {
+      "mean_iia": 0.9516129032258065,
+      "std_iia": 0.04838709677419356,
+      "n_sessions": 2
+    },
+    "APN->root": {
+      "mean_iia": 0.9333333333333333,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->APN": {
+      "mean_iia": 0.49333333333333335,
+      "std_iia": 0.49333333333333335,
+      "n_sessions": 2
+    },
+    "DG->APN": {
+      "mean_iia": 0.5909677419354838,
+      "std_iia": 0.15096774193548387,
+      "n_sessions": 2
+    },
+    "DG->VISpm": {
+      "mean_iia": 0.530752688172043,
+      "std_iia": 0.17591397849462365,
+      "n_sessions": 2
+    },
+    "LP->APN": {
+      "mean_iia": 0.3548387096774194,
+      "std_iia": 0.3548387096774194,
+      "n_sessions": 2
+    },
+    "LP->POL": {
+      "mean_iia": 0.5834408602150538,
+      "std_iia": 0.38989247311827957,
+      "n_sessions": 2
+    },
+    "LP->VISam": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 5
+    },
+    "LP->VISpm": {
+      "mean_iia": 0.14946236559139786,
+      "std_iia": 0.11720430107526882,
+      "n_sessions": 2
+    },
+    "LP->root": {
+      "mean_iia": 0.2748633879781421,
+      "std_iia": 0.41932084854121005,
+      "n_sessions": 4
+    },
+    "POL->APN": {
+      "mean_iia": 0.5533333333333333,
+      "std_iia": 0.44666666666666666,
+      "n_sessions": 2
+    },
+    "POL->LP": {
+      "mean_iia": 0.47892473118279566,
+      "std_iia": 0.41440860215053765,
+      "n_sessions": 2
+    },
+    "POL->SUB": {
+      "mean_iia": 0.8266666666666667,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->VISam": {
+      "mean_iia": 0.06666666666666667,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->VISpm": {
+      "mean_iia": 0.6881720430107527,
+      "std_iia": 0.021505376344086058,
+      "n_sessions": 2
+    },
+    "SUB->APN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->POL": {
+      "mean_iia": 0.9733333333333334,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->VISpm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->APN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->LP": {
+      "mean_iia": 0.005479452054794521,
+      "std_iia": 0.010958904109589041,
+      "n_sessions": 5
+    },
+    "VISam->POL": {
+      "mean_iia": 0.02666666666666667,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->VISpm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISpm->APN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VISpm->DG": {
+      "mean_iia": 0.41376344086021505,
+      "std_iia": 0.3604301075268817,
+      "n_sessions": 2
+    },
+    "VISpm->LP": {
+      "mean_iia": 0.03225806451612903,
+      "std_iia": 0.03225806451612903,
+      "n_sessions": 2
+    },
+    "VISpm->POL": {
+      "mean_iia": 0.5133333333333333,
+      "std_iia": 0.48666666666666664,
+      "n_sessions": 2
+    },
+    "VISpm->SUB": {
+      "mean_iia": 0.9866666666666667,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISpm->VISam": {
+      "mean_iia": 0.9333333333333333,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->APN": {
+      "mean_iia": 0.8666666666666667,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->LP": {
+      "mean_iia": 0.3,
+      "std_iia": 0.412310562561766,
+      "n_sessions": 4
+    },
+    "LGd->LP": {
+      "mean_iia": 0.9807692307692307,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->MG": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->SPF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->LGd": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->MG": {
+      "mean_iia": 0.9230769230769231,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->SPF": {
+      "mean_iia": 0.25,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->TH": {
+      "mean_iia": 0.8846153846153846,
+      "std_iia": 0.11538461538461536,
+      "n_sessions": 2
+    },
+    "MG->LGd": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->LP": {
+      "mean_iia": 0.9807692307692307,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->SUB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->TH": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MG->VISa": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->LGd": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->LP": {
+      "mean_iia": 0.9807692307692307,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->SUB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->TH": {
+      "mean_iia": 0.40384615384615385,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SPF->VISa": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->MG": {
+      "mean_iia": 0.46153846153846156,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->SPF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->LP": {
+      "mean_iia": 0.9903846153846154,
+      "std_iia": 0.009615384615384637,
+      "n_sessions": 2
+    },
+    "TH->MG": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->SPF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->MG": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->SPF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->MOp": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->VAL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOp->LD": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOp->SSp": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "MOp->VAL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOp->root": {
+      "mean_iia": 0.2631578947368421,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SSp->MOp": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "SSp->VAL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VAL->LD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VAL->MOp": {
+      "mean_iia": 0.8947368421052632,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VAL->SSp": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VAL->root": {
+      "mean_iia": 0.7368421052631579,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->MOp": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->VAL": {
+      "mean_iia": 0.6052631578947368,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->ACB": {
+      "mean_iia": 0.9613013698630137,
+      "std_iia": 0.011301369863013722,
+      "n_sessions": 2
+    },
+    "ACA->IC": {
+      "mean_iia": 0.04,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->RSP": {
+      "mean_iia": 0.3182617567042363,
+      "std_iia": 0.32198001816045335,
+      "n_sessions": 4
+    },
+    "ACB->ACA": {
+      "mean_iia": 0.9331506849315068,
+      "std_iia": 0.05315068493150682,
+      "n_sessions": 2
+    },
+    "ACB->IC": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->MOs": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "ACB->MRN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->PL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->RSP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->VISp": {
+      "mean_iia": 0.98,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "IC->ACA": {
+      "mean_iia": 0.12,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "IC->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "IC->MOs": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "IC->MRN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "IC->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "IC->RSP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "IC->VISp": {
+      "mean_iia": 0.98,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->ACB": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "MOs->IC": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->IC": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->ACB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->IC": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->RSP": {
+      "mean_iia": 0.3493975903614458,
+      "std_iia": 0.3493975903614458,
+      "n_sessions": 2
+    },
+    "RSP->ACA": {
+      "mean_iia": 0.2646482705013603,
+      "std_iia": 0.26939264644356176,
+      "n_sessions": 4
+    },
+    "RSP->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->IC": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->PL": {
+      "mean_iia": 0.5069277108433735,
+      "std_iia": 0.4569277108433735,
+      "n_sessions": 2
+    },
+    "VISp->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->IC": {
+      "mean_iia": 0.99,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->VISam": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "PO->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VISam->PO": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "root->PO": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "CA1->CA2": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->SCig": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "CA2->CA1": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA2->MRN": {
+      "mean_iia": 0.9714285714285714,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA2->RSP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA2->SCig": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA2->SCsg": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA2->VISpm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA2->VISrl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA2->root": {
+      "mean_iia": 0.15714285714285714,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->CA2": {
+      "mean_iia": 0.9857142857142858,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->SCig": {
+      "mean_iia": 0.0035714285714285713,
+      "std_iia": 0.006185895741317418,
+      "n_sessions": 4
+    },
+    "MRN->VISpm": {
+      "mean_iia": 0.5071428571428571,
+      "std_iia": 0.4928571428571429,
+      "n_sessions": 2
+    },
+    "RSP->CA2": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->SCig": {
+      "mean_iia": 0.39357429718875503,
+      "std_iia": 0.4351086382783058,
+      "n_sessions": 3
+    },
+    "RSP->SCsg": {
+      "mean_iia": 0.06626506024096386,
+      "std_iia": 0.06626506024096386,
+      "n_sessions": 2
+    },
+    "RSP->VISpm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "RSP->VISrl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->root": {
+      "mean_iia": 0.5904322730409687,
+      "std_iia": 0.28313220018056073,
+      "n_sessions": 3
+    },
+    "SCig->CA1": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "SCig->CA2": {
+      "mean_iia": 0.5571428571428572,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->MRN": {
+      "mean_iia": 0.007142857142857143,
+      "std_iia": 0.012371791482634837,
+      "n_sessions": 4
+    },
+    "SCig->RSP": {
+      "mean_iia": 0.3614457831325301,
+      "std_iia": 0.45283684555276904,
+      "n_sessions": 3
+    },
+    "SCig->SCsg": {
+      "mean_iia": 0.04216867469879518,
+      "std_iia": 0.04216867469879518,
+      "n_sessions": 2
+    },
+    "SCig->VISpm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "SCig->VISrl": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->root": {
+      "mean_iia": 0.9357142857142857,
+      "std_iia": 0.06428571428571428,
+      "n_sessions": 2
+    },
+    "SCsg->CA2": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->RSP": {
+      "mean_iia": 0.04819277108433735,
+      "std_iia": 0.04819277108433735,
+      "n_sessions": 2
+    },
+    "SCsg->SCig": {
+      "mean_iia": 0.18674698795180722,
+      "std_iia": 0.18674698795180722,
+      "n_sessions": 2
+    },
+    "SCsg->VISpm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISpm->CA2": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISpm->MRN": {
+      "mean_iia": 0.5142857142857142,
+      "std_iia": 0.4857142857142857,
+      "n_sessions": 2
+    },
+    "VISpm->RSP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VISpm->SCig": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "VISpm->SCsg": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISpm->VISrl": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->CA2": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->RSP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->SCig": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISrl->VISpm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->CA2": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->RSP": {
+      "mean_iia": 0.3841646276428885,
+      "std_iia": 0.35023649429862547,
+      "n_sessions": 3
+    },
+    "root->SCig": {
+      "mean_iia": 0.55,
+      "std_iia": 0.45,
+      "n_sessions": 2
+    },
+    "ACA->DP": {
+      "mean_iia": 0.4819277108433735,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->ILA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "ACA->SCig": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->SCsg": {
+      "mean_iia": 0.3373493975903614,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->TT": {
+      "mean_iia": 0.9759036144578314,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->ACA": {
+      "mean_iia": 0.891566265060241,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->ILA": {
+      "mean_iia": 0.1927710843373494,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->MOs": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->MRN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->RSP": {
+      "mean_iia": 0.08433734939759036,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->SCig": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->SCsg": {
+      "mean_iia": 0.08433734939759036,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->TT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DP->VISp": {
+      "mean_iia": 0.03614457831325301,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->ACA": {
+      "mean_iia": 0.4457831325301205,
+      "std_iia": 0.4457831325301205,
+      "n_sessions": 2
+    },
+    "ILA->DP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->MRN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->RSP": {
+      "mean_iia": 0.9156626506024096,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->SCig": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->SCsg": {
+      "mean_iia": 0.9156626506024096,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->DP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->SCig": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "MOs->SCsg": {
+      "mean_iia": 0.9156626506024096,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->DP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->ILA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->TT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->DP": {
+      "mean_iia": 0.963855421686747,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->SCig": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->SCsg": {
+      "mean_iia": 0.08433734939759036,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->DP": {
+      "mean_iia": 0.012048192771084338,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->ILA": {
+      "mean_iia": 0.7469879518072289,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->TT": {
+      "mean_iia": 0.9879518072289156,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->ACA": {
+      "mean_iia": 0.10843373493975904,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->DP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->ILA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->MOs": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "SCig->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->TT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->VISp": {
+      "mean_iia": 0.9819277108433735,
+      "std_iia": 0.01807228915662651,
+      "n_sessions": 2
+    },
+    "SCsg->ACA": {
+      "mean_iia": 0.5662650602409639,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->DP": {
+      "mean_iia": 0.10843373493975904,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->ILA": {
+      "mean_iia": 0.3373493975903614,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->MOs": {
+      "mean_iia": 0.8795180722891566,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->PL": {
+      "mean_iia": 0.18072289156626506,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCsg->TT": {
+      "mean_iia": 0.3132530120481928,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->ACA": {
+      "mean_iia": 0.891566265060241,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->DP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->MRN": {
+      "mean_iia": 0.9759036144578314,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->RSP": {
+      "mean_iia": 0.891566265060241,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->SCig": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TT->SCsg": {
+      "mean_iia": 0.08433734939759036,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->DP": {
+      "mean_iia": 0.0963855421686747,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISp->SCig": {
+      "mean_iia": 0.9518072289156627,
+      "std_iia": 0.04819277108433734,
+      "n_sessions": 2
+    },
+    "ACA->LD": {
+      "mean_iia": 0.0684931506849315,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->LP": {
+      "mean_iia": 0.1711986301369863,
+      "std_iia": 0.2658319749573763,
+      "n_sessions": 4
+    },
+    "ACA->PO": {
+      "mean_iia": 0.5004418912947415,
+      "std_iia": 0.40366769774635436,
+      "n_sessions": 2
+    },
+    "ACB->CA1": {
+      "mean_iia": 0.9178082191780822,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->DG": {
+      "mean_iia": 0.0958904109589041,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->LD": {
+      "mean_iia": 0.0410958904109589,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->LP": {
+      "mean_iia": 0.0273972602739726,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->PO": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACB->VISam": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->ACB": {
+      "mean_iia": 0.3013698630136986,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->ACA": {
+      "mean_iia": 0.2191780821917808,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LD->ACB": {
+      "mean_iia": 0.0821917808219178,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->ACA": {
+      "mean_iia": 0.27176314626601855,
+      "std_iia": 0.42089850069072005,
+      "n_sessions": 4
+    },
+    "LP->ACB": {
+      "mean_iia": 0.0136986301369863,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->ACA": {
+      "mean_iia": 0.5092797171895713,
+      "std_iia": 0.4770216526734423,
+      "n_sessions": 2
+    },
+    "PO->ACB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->ACB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "APN->MRN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "APN->RSP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "APN->SCig": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->RSP": {
+      "mean_iia": 0.351505376344086,
+      "std_iia": 0.45225149423335764,
+      "n_sessions": 3
+    },
+    "DG->SCig": {
+      "mean_iia": 0.3870967741935484,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->MRN": {
+      "mean_iia": 0.06451612903225806,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->RSP": {
+      "mean_iia": 0.3333333333333333,
+      "std_iia": 0.4714045207910317,
+      "n_sessions": 3
+    },
+    "LP->SCig": {
+      "mean_iia": 0.5483870967741935,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->APN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->LP": {
+      "mean_iia": 0.06451612903225806,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->RSP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POL->SCig": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->APN": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->DG": {
+      "mean_iia": 0.6633333333333333,
+      "std_iia": 0.46906526435265083,
+      "n_sessions": 3
+    },
+    "RSP->LP": {
+      "mean_iia": 0.3548387096774193,
+      "std_iia": 0.45695762066399526,
+      "n_sessions": 3
+    },
+    "RSP->POL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->APN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->DG": {
+      "mean_iia": 0.6129032258064516,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->LP": {
+      "mean_iia": 0.9354838709677419,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCig->POL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->CL": {
+      "mean_iia": 0.8709677419354839,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ACA->VPM": {
+      "mean_iia": 0.7419354838709677,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->CL": {
+      "mean_iia": 0.967741935483871,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA1->LS": {
+      "mean_iia": 0.021129032258064517,
+      "std_iia": 0.011129032258064515,
+      "n_sessions": 2
+    },
+    "CA1->VPM": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->ACA": {
+      "mean_iia": 0.5806451612903226,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->CA1": {
+      "mean_iia": 0.5806451612903226,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->DG": {
+      "mean_iia": 0.3870967741935484,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->LP": {
+      "mean_iia": 0.03225806451612903,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->LS": {
+      "mean_iia": 0.7419354838709677,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->MD": {
+      "mean_iia": 0.6451612903225806,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->MOs": {
+      "mean_iia": 0.8387096774193549,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->PO": {
+      "mean_iia": 0.0967741935483871,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->RSP": {
+      "mean_iia": 0.7741935483870968,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->SUB": {
+      "mean_iia": 0.0967741935483871,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->VISa": {
+      "mean_iia": 0.6129032258064516,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CL->VPM": {
+      "mean_iia": 0.45161290322580644,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->CL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "DG->VPM": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->CL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->LS": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "LP->MD": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "LP->VPM": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->CA1": {
+      "mean_iia": 0.026129032258064518,
+      "std_iia": 0.0061290322580645155,
+      "n_sessions": 2
+    },
+    "LS->CL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->LP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "LS->MD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "LS->PO": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->RSP": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "LS->VISa": {
+      "mean_iia": 0.967741935483871,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->VPM": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->CL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->LP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "MD->LS": {
+      "mean_iia": 0.665,
+      "std_iia": 0.33499999999999996,
+      "n_sessions": 2
+    },
+    "MD->MOs": {
+      "mean_iia": 0.895,
+      "std_iia": 0.10499999999999998,
+      "n_sessions": 2
+    },
+    "MD->PO": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->RSP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "MD->VISa": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->VPM": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->CL": {
+      "mean_iia": 0.8064516129032258,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->MD": {
+      "mean_iia": 0.7775806451612903,
+      "std_iia": 0.1324193548387097,
+      "n_sessions": 2
+    },
+    "MOs->VPM": {
+      "mean_iia": 0.3548387096774194,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->CL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->MD": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->RSP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->VPM": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->CL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->LS": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "RSP->MD": {
+      "mean_iia": 0.967741935483871,
+      "std_iia": 0.03225806451612906,
+      "n_sessions": 2
+    },
+    "RSP->PO": {
+      "mean_iia": 0.8064516129032258,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->SUB": {
+      "mean_iia": 0.25806451612903225,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->VISa": {
+      "mean_iia": 0.8064516129032258,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->VPM": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->CL": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->RSP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SUB->VPM": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->CL": {
+      "mean_iia": 0.7096774193548387,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->LS": {
+      "mean_iia": 0.22580645161290322,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->MD": {
+      "mean_iia": 0.3548387096774194,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->RSP": {
+      "mean_iia": 0.41935483870967744,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISa->VPM": {
+      "mean_iia": 0.1935483870967742,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->ACA": {
+      "mean_iia": 0.967741935483871,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->CA1": {
+      "mean_iia": 0.03225806451612903,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->CL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->DG": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->LP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->MD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->MOs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->PO": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->RSP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->SUB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->VISa": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->OLF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->ORB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->POST": {
+      "mean_iia": 0.15,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->SCm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->POST": {
+      "mean_iia": 0.85,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->SNr": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->POST": {
+      "mean_iia": 0.15,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->SCm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->SNr": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "OLF->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->POST": {
+      "mean_iia": 0.85,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->SNr": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->MOs": {
+      "mean_iia": 0.5125,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->OLF": {
+      "mean_iia": 0.3125,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->ORB": {
+      "mean_iia": 0.7125,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->SNr": {
+      "mean_iia": 0.375,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "POST->TH": {
+      "mean_iia": 0.4875,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->OLF": {
+      "mean_iia": 0.95,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->SNr": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->MOs": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->OLF": {
+      "mean_iia": 0.4125,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->ORB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->POST": {
+      "mean_iia": 0.85,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->SCm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->OLF": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->ORB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->POST": {
+      "mean_iia": 0.15,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->SCm": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->PAG": {
+      "mean_iia": 0.005050505050505051,
+      "std_iia": 0.005050505050505051,
+      "n_sessions": 2
+    },
+    "MRN->PAG": {
+      "mean_iia": 0.8181818181818182,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->PAG": {
+      "mean_iia": 0.994949494949495,
+      "std_iia": 0.0050505050505050275,
+      "n_sessions": 2
+    },
+    "PAG->MOs": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 2
+    },
+    "PAG->MRN": {
+      "mean_iia": 0.26262626262626265,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PAG->ORB": {
+      "mean_iia": 0.5,
+      "std_iia": 0.5,
+      "n_sessions": 2
+    },
+    "PAG->RSP": {
+      "mean_iia": 0.05577514273166447,
+      "std_iia": 0.045674132630654375,
+      "n_sessions": 2
+    },
+    "PAG->SCm": {
+      "mean_iia": 0.8282828282828283,
+      "std_iia": 0.1717171717171717,
+      "n_sessions": 2
+    },
+    "PAG->SCs": {
+      "mean_iia": 0.39855072463768115,
+      "std_iia": 0.39855072463768115,
+      "n_sessions": 2
+    },
+    "PAG->root": {
+      "mean_iia": 0.5660957400087835,
+      "std_iia": 0.30346947738252084,
+      "n_sessions": 2
+    },
+    "RSP->PAG": {
+      "mean_iia": 0.5050505050505051,
+      "std_iia": 0.494949494949495,
+      "n_sessions": 2
+    },
+    "SCm->PAG": {
+      "mean_iia": 0.994949494949495,
+      "std_iia": 0.0050505050505050275,
+      "n_sessions": 2
+    },
+    "SCs->PAG": {
+      "mean_iia": 0.5050505050505051,
+      "std_iia": 0.494949494949495,
+      "n_sessions": 2
+    },
+    "root->PAG": {
+      "mean_iia": 0.844751866490997,
+      "std_iia": 0.09727711901624941,
+      "n_sessions": 2
+    },
+    "CP->EP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CP->VPM": {
+      "mean_iia": 0.9629629629629629,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EP->CP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EP->LGd": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EP->SNr": {
+      "mean_iia": 0.9629629629629629,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EP->VPM": {
+      "mean_iia": 0.037037037037037035,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "EP->ZI": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LGd->EP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->EP": {
+      "mean_iia": 0.018518518518518517,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->VPM": {
+      "mean_iia": 0.24074074074074073,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->CP": {
+      "mean_iia": 0.8888888888888888,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->EP": {
+      "mean_iia": 0.018518518518518517,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VPM->SNr": {
+      "mean_iia": 0.037037037037037035,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ZI->EP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BMA->COA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BMA->LP": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BMA->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BMA->PO": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BMA->RT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BMA->root": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "COA->BMA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "COA->LP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "COA->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "COA->PO": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "COA->RT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "COA->root": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->BMA": {
+      "mean_iia": 0.9016393442622951,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->COA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LP->RT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->BMA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->COA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->LP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->PO": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->RT": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->BMA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->COA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PO->RT": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->BMA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->COA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->LP": {
+      "mean_iia": 0.5409836065573771,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RT->PO": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->BMA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->COA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "LS->VISam": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MD->TH": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->TH": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->VISam": {
+      "mean_iia": 0.15942028985507245,
+      "std_iia": 0.15942028985507245,
+      "n_sessions": 2
+    },
+    "TH->LS": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->MD": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "TH->RSP": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->LS": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->RSP": {
+      "mean_iia": 0.050724637681159424,
+      "std_iia": 0.050724637681159424,
+      "n_sessions": 2
+    },
+    "CA->MOs": {
+      "mean_iia": 0.19,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA->MRN": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA->PL": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA->SCm": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA->VISam": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA->root": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MOs->CA": {
+      "mean_iia": 0.7,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MRN->CA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PL->CA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SCm->CA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->CA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->CA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->ORB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->PAG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "MB->RSP": {
+      "mean_iia": 0.8985507246376812,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ORB->VISam": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PAG->MB": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "PAG->VISam": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "RSP->MB": {
+      "mean_iia": 0.7101449275362319,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->ORB": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->PAG": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BLA->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "BLA->SNr": {
+      "mean_iia": 0.4,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->BLA": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "CA3->GPe": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->CA3": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "GPe->SNr": {
+      "mean_iia": 0.23529411764705882,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->BLA": {
+      "mean_iia": 0.011764705882352941,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "SNr->GPe": {
+      "mean_iia": 0.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->VISam": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "ILA->root": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "VISam->ILA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    },
+    "root->ILA": {
+      "mean_iia": 1.0,
+      "std_iia": 0.0,
+      "n_sessions": 1
+    }
+  }
+}

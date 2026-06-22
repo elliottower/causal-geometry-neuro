@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-06-21T06:09:59.108889",
+  "n_pairs": 29,
+  "original": {
+    "spearman_rho": -0.8443349753694579,
+    "p_value": 8.57612458522954e-09
+  },
+  "bootstrap": {
+    "n_resamples": 10000,
+    "ci_95_lower": -0.9274152915291529,
+    "ci_95_upper": -0.667487250258012,
+    "mean_rho": -0.8275922496113582,
+    "std_rho": 0.06744670849534042
+  },
+  "leave_one_mouse_out": {
+    "Cori": {
+      "rho": -0.7714285714285715,
+      "p_value": 0.07239650145772594,
+      "n": 6
+    },
+    "Forssmann": {
+      "rho": -0.7,
+      "p_value": 0.1881204043741873,
+      "n": 5
+    }
+  },
+  "leave_one_region_out": {
+    "n_regions": 9,
+    "rho_min": -0.8794466403162056,
+    "rho_max": -0.8092307692307692,
+    "all_significant": true,
+    "details": {
+      "ACA": {
+        "rho": -0.8475213675213674,
+        "p_value": 4.681708129452389e-08,
+        "n": 26
+      },
+      "CA1": {
+        "rho": -0.8794466403162056,
+        "p_value": 3.279218792407229e-08,
+        "n": 23
+      },
+      "DG": {
+        "rho": -0.8774703557312253,
+        "p_value": 3.8547407420742e-08,
+        "n": 23
+      },
+      "MOs": {
+        "rho": -0.8092307692307692,
+        "p_value": 5.582643455242203e-07,
+        "n": 26
+      },
+      "POST": {
+        "rho": -0.8467432950191571,
+        "p_value": 1.349987269193094e-08,
+        "n": 28
+      },
+      "SUB": {
+        "rho": -0.8153846153846154,
+        "p_value": 3.8968465675378694e-07,
+        "n": 26
+      },
+      "VISa": {
+        "rho": -0.8407224958949097,
+        "p_value": 2.149089377877145e-08,
+        "n": 28
+      },
+      "VISp": {
+        "rho": -0.8317948717948718,
+        "p_value": 1.3954744304089757e-07,
+        "n": 26
+      },
+      "root": {
+        "rho": -0.8495726495726494,
+        "p_value": 4.023986565976345e-08,
+        "n": 26
+      }
+    }
+  },
+  "partial_correlations": {
+    "controlling_neuron_count": 0.5254654898573975,
+    "controlling_power_law_alpha": 0.75750435945243,
+    "controlling_both": 0.6093153791503866,
+    "interpretation": "If partial correlations remain strongly negative, the dissociation is not explained by neuron count or effective dimensionality differences."
+  },
+  "hsic_independence_test": {
+    "hsic_statistic": 0.052234874962107485,
+    "permutation_p_value": 0.0,
+    "interpretation": "HSIC tests nonlinear dependence. p < 0.05 means CKA and Procrustes are not independent even under nonlinear mappings."
+  }
+}

@@ -1,0 +1,6 @@
+{"ts": "2026-06-22T00:22:25.390011", "experiment": "exp59_sutter", "event": "started", "module": "experiments.exp59_sutter_dilemma", "max_sessions": null}
+{"ts": "2026-06-22T01:10:49.599963", "experiment": "exp59_sutter", "event": "run_complete", "n_keys": 8}
+{"ts": "2026-06-22T01:10:56.757542", "experiment": "exp59_sutter", "event": "saved_volume", "path": "/results/exp59_sutter/exp59_sutter_20260622_011053.json"}
+{"ts": "2026-06-22T01:11:04.192282", "experiment": "exp59_sutter", "event": "copied_artifacts"}
+{"ts": "2026-06-22T01:11:08.098925", "experiment": "exp59_sutter", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T01:11:11.687268", "experiment": "exp59_sutter", "event": "done"}

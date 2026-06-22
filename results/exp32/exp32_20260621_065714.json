@@ -1,0 +1,177 @@
+{
+  "timestamp": "2026-06-21T06:57:12.560199",
+  "n_sessions": 39,
+  "n_mice": 3,
+  "common_regions": [
+    "CA1",
+    "MOs",
+    "root"
+  ],
+  "n_common_regions": 3,
+  "n_variables": 9,
+  "pooled_results": {
+    "pc": {
+      "edges": [
+        [
+          "MOs_pc1",
+          "CA1_pc0",
+          "directed"
+        ],
+        [
+          "CA1_pc0",
+          "root_pc0",
+          "directed"
+        ],
+        [
+          "CA1_pc0",
+          "root_pc1",
+          "directed"
+        ],
+        [
+          "CA1_pc1",
+          "root_pc0",
+          "undirected"
+        ],
+        [
+          "MOs_pc1",
+          "root_pc1",
+          "directed"
+        ]
+      ],
+      "n_edges": 5,
+      "n_directed": 4,
+      "elapsed_s": 0.016851186752319336
+    },
+    "lingam": {
+      "edges": [
+        [
+          "MOs_pc1",
+          "CA1_pc0",
+          "directed"
+        ],
+        [
+          "root_pc0",
+          "CA1_pc0",
+          "directed"
+        ],
+        [
+          "root_pc1",
+          "CA1_pc0",
+          "directed"
+        ]
+      ],
+      "n_edges": 3,
+      "causal_order": [
+        "MOs_pc2",
+        "MOs_pc1",
+        "root_pc0",
+        "root_pc2",
+        "MOs_pc0",
+        "root_pc1",
+        "CA1_pc2",
+        "CA1_pc1",
+        "CA1_pc0"
+      ],
+      "elapsed_s": 0.1127157211303711
+    },
+    "cdnod": {
+      "edges": [
+        [
+          "MOs_pc1",
+          "CA1_pc0",
+          "directed"
+        ],
+        [
+          "CA1_pc0",
+          "root_pc0",
+          "directed"
+        ],
+        [
+          "CA1_pc0",
+          "root_pc1",
+          "directed"
+        ],
+        [
+          "CA1_pc1",
+          "root_pc0",
+          "undirected"
+        ],
+        [
+          "MOs_pc1",
+          "root_pc1",
+          "directed"
+        ]
+      ],
+      "n_edges": 5,
+      "n_directed": 4,
+      "elapsed_s": 0.029376506805419922
+    }
+  },
+  "region_edge_profile": {
+    "CA1": {
+      "in": 5,
+      "out": 4,
+      "undirected": 2
+    },
+    "MOs": {
+      "in": 0,
+      "out": 5,
+      "undirected": 0
+    },
+    "root": {
+      "in": 6,
+      "out": 2,
+      "undirected": 2
+    }
+  },
+  "region_alphas": {
+    "CA1": 0.7793275147198602,
+    "MOs": 2.053018578302266,
+    "root": 5.653194627493045
+  },
+  "alpha_vs_edges": {},
+  "consensus": {
+    "n_consensus_edges": 3,
+    "edges": [
+      {
+        "source": "MOs",
+        "target": "CA1",
+        "methods": [
+          "pc",
+          "lingam",
+          "cdnod"
+        ],
+        "n_methods": 3
+      },
+      {
+        "source": "CA1",
+        "target": "root",
+        "methods": [
+          "pc",
+          "cdnod"
+        ],
+        "n_methods": 2
+      },
+      {
+        "source": "MOs",
+        "target": "root",
+        "methods": [
+          "pc",
+          "cdnod"
+        ],
+        "n_methods": 2
+      }
+    ]
+  },
+  "method_comparison": {
+    "pc_vs_cdnod": {
+      "pc_total": 5,
+      "pc_directed": 4,
+      "cdnod_total": 5,
+      "cdnod_directed": 4,
+      "cdnod_orients_more": false,
+      "interpretation": "CD-NOD exploits cross-mouse distribution shifts to orient edges that PC leaves undirected. More directed edges = more power from heterogeneity."
+    }
+  },
+  "n_per_session_runs": 3
+}

@@ -1,0 +1,708 @@
+{
+  "timestamp": "2026-06-21T06:56:25.875480",
+  "n_regions": 73,
+  "n_pairs": 1316,
+  "region_profiles": {
+    "ACA": {
+      "n_sessions": 11,
+      "tier": "association",
+      "gradient_position": 3,
+      "alpha_mean": 12.345421196016769,
+      "effective_dim_mean": 12.664388566533551,
+      "n_neurons_mean": 76.27272727272727
+    },
+    "CA3": {
+      "n_sessions": 8,
+      "tier": "hippocampal",
+      "gradient_position": null,
+      "alpha_mean": 9.489562344470535,
+      "effective_dim_mean": 14.687729877319882,
+      "n_neurons_mean": 60.5
+    },
+    "DG": {
+      "n_sessions": 16,
+      "tier": "hippocampal",
+      "gradient_position": null,
+      "alpha_mean": 21.83982986354399,
+      "effective_dim_mean": 9.82504102065759,
+      "n_neurons_mean": 48.5
+    },
+    "LS": {
+      "n_sessions": 3,
+      "tier": "subcortical",
+      "gradient_position": null,
+      "alpha_mean": 1.3584925930819651,
+      "effective_dim_mean": 24.896750833294522,
+      "n_neurons_mean": 135.0
+    },
+    "MOs": {
+      "n_sessions": 17,
+      "tier": "secondary_sensory_motor",
+      "gradient_position": 2,
+      "alpha_mean": 19.350426323456364,
+      "effective_dim_mean": 13.200694318770445,
+      "n_neurons_mean": 102.11764705882354
+    },
+    "SUB": {
+      "n_sessions": 9,
+      "tier": "hippocampal",
+      "gradient_position": null,
+      "alpha_mean": 1.9143607599731023,
+      "effective_dim_mean": 14.086783183886697,
+      "n_neurons_mean": 76.11111111111111
+    },
+    "VISp": {
+      "n_sessions": 12,
+      "tier": "primary_sensory",
+      "gradient_position": 1,
+      "alpha_mean": 8.430970669742855,
+      "effective_dim_mean": 15.208158102150803,
+      "n_neurons_mean": 93.16666666666667
+    },
+    "root": {
+      "n_sessions": 22,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 14.36313598558263,
+      "effective_dim_mean": 18.374295894548993,
+      "n_neurons_mean": 191.13636363636363
+    },
+    "CA1": {
+      "n_sessions": 20,
+      "tier": "hippocampal",
+      "gradient_position": null,
+      "alpha_mean": 17.72716345535546,
+      "effective_dim_mean": 12.107381173889205,
+      "n_neurons_mean": 67.7
+    },
+    "POST": {
+      "n_sessions": 4,
+      "tier": "hippocampal",
+      "gradient_position": null,
+      "alpha_mean": 17.141502045399058,
+      "effective_dim_mean": 12.345062613618827,
+      "n_neurons_mean": 78.0
+    },
+    "VISl": {
+      "n_sessions": 3,
+      "tier": "primary_sensory",
+      "gradient_position": 1,
+      "alpha_mean": 1.3199328575089178,
+      "effective_dim_mean": 18.03684523695321,
+      "n_neurons_mean": 144.66666666666666
+    },
+    "VISpm": {
+      "n_sessions": 4,
+      "tier": "primary_sensory",
+      "gradient_position": 1,
+      "alpha_mean": 1.769457807491277,
+      "effective_dim_mean": 18.113167975585355,
+      "n_neurons_mean": 146.75
+    },
+    "MG": {
+      "n_sessions": 2,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 0.774757967562829,
+      "effective_dim_mean": 31.1631087066906,
+      "n_neurons_mean": 147.5
+    },
+    "MRN": {
+      "n_sessions": 11,
+      "tier": "midbrain_collicular",
+      "gradient_position": null,
+      "alpha_mean": 5.709913793555032,
+      "effective_dim_mean": 12.196528203336312,
+      "n_neurons_mean": 92.36363636363636
+    },
+    "NB": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 2.77699437566359,
+      "effective_dim_mean": 13.962311500376654,
+      "n_neurons_mean": 43.0
+    },
+    "SPF": {
+      "n_sessions": 2,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 9.307598375221799,
+      "effective_dim_mean": 9.034501746933712,
+      "n_neurons_mean": 26.5
+    },
+    "VISam": {
+      "n_sessions": 11,
+      "tier": "primary_sensory",
+      "gradient_position": 1.5,
+      "alpha_mean": 6.26366718909932,
+      "effective_dim_mean": 15.316903436018311,
+      "n_neurons_mean": 90.9090909090909
+    },
+    "LGd": {
+      "n_sessions": 8,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 1.6346269786283694,
+      "effective_dim_mean": 24.729539412280154,
+      "n_neurons_mean": 107.875
+    },
+    "LSr": {
+      "n_sessions": 2,
+      "tier": "subcortical",
+      "gradient_position": null,
+      "alpha_mean": 12.398311644459008,
+      "effective_dim_mean": 16.423016073080223,
+      "n_neurons_mean": 234.0
+    },
+    "TH": {
+      "n_sessions": 8,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 7.6687754567240445,
+      "effective_dim_mean": 19.652926284818424,
+      "n_neurons_mean": 157.125
+    },
+    "VISa": {
+      "n_sessions": 5,
+      "tier": "primary_sensory",
+      "gradient_position": 1.5,
+      "alpha_mean": 2.2065909208891448,
+      "effective_dim_mean": 12.186874659407925,
+      "n_neurons_mean": 68.0
+    },
+    "VPL": {
+      "n_sessions": 4,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 1.6805176098085304,
+      "effective_dim_mean": 13.394814682286437,
+      "n_neurons_mean": 75.25
+    },
+    "OLF": {
+      "n_sessions": 2,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 1.0603526781028356,
+      "effective_dim_mean": 24.44590296981398,
+      "n_neurons_mean": 129.5
+    },
+    "ORB": {
+      "n_sessions": 5,
+      "tier": "association",
+      "gradient_position": 3,
+      "alpha_mean": 11.773187512492314,
+      "effective_dim_mean": 19.413234029715632,
+      "n_neurons_mean": 162.4
+    },
+    "AUD": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 0.7067552126572575,
+      "effective_dim_mean": 7.312109196279639,
+      "n_neurons_mean": 246.0
+    },
+    "CP": {
+      "n_sessions": 5,
+      "tier": "subcortical",
+      "gradient_position": null,
+      "alpha_mean": 9.732991998880658,
+      "effective_dim_mean": 14.71228186440744,
+      "n_neurons_mean": 243.0
+    },
+    "EPd": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 16.33332292765153,
+      "effective_dim_mean": 7.375075191408927,
+      "n_neurons_mean": 52.0
+    },
+    "LD": {
+      "n_sessions": 5,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 5.1748287971399085,
+      "effective_dim_mean": 17.691324200382205,
+      "n_neurons_mean": 57.2
+    },
+    "PIR": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 1.9193763274974744,
+      "effective_dim_mean": 16.59946865477216,
+      "n_neurons_mean": 67.0
+    },
+    "SSp": {
+      "n_sessions": 4,
+      "tier": "primary_sensory",
+      "gradient_position": 1,
+      "alpha_mean": 21.632547730613304,
+      "effective_dim_mean": 7.0190632240303685,
+      "n_neurons_mean": 126.0
+    },
+    "ILA": {
+      "n_sessions": 3,
+      "tier": "association",
+      "gradient_position": 3,
+      "alpha_mean": 1.124561282390741,
+      "effective_dim_mean": 29.128910535270688,
+      "n_neurons_mean": 137.0
+    },
+    "LP": {
+      "n_sessions": 10,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 9.703570273171094,
+      "effective_dim_mean": 18.59831612810006,
+      "n_neurons_mean": 74.4
+    },
+    "PL": {
+      "n_sessions": 8,
+      "tier": "association",
+      "gradient_position": 3,
+      "alpha_mean": 4.570622641423007,
+      "effective_dim_mean": 18.32376324255499,
+      "n_neurons_mean": 104.5
+    },
+    "PO": {
+      "n_sessions": 5,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 2.5625747999131616,
+      "effective_dim_mean": 22.067696047110708,
+      "n_neurons_mean": 138.4
+    },
+    "TT": {
+      "n_sessions": 3,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 6.176917616999116,
+      "effective_dim_mean": 8.64233261405097,
+      "n_neurons_mean": 57.0
+    },
+    "ORBm": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 1.43464699693683,
+      "effective_dim_mean": 11.807637913920242,
+      "n_neurons_mean": 122.0
+    },
+    "GPe": {
+      "n_sessions": 3,
+      "tier": "subcortical",
+      "gradient_position": null,
+      "alpha_mean": 1.583022582611212,
+      "effective_dim_mean": 13.68174804725021,
+      "n_neurons_mean": 97.33333333333333
+    },
+    "MB": {
+      "n_sessions": 6,
+      "tier": "midbrain_collicular",
+      "gradient_position": null,
+      "alpha_mean": 8.224615704747627,
+      "effective_dim_mean": 16.911127533575257,
+      "n_neurons_mean": 145.66666666666666
+    },
+    "POL": {
+      "n_sessions": 3,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 12.76999718447584,
+      "effective_dim_mean": 12.864043647879164,
+      "n_neurons_mean": 71.66666666666667
+    },
+    "SCm": {
+      "n_sessions": 7,
+      "tier": "midbrain_collicular",
+      "gradient_position": null,
+      "alpha_mean": 6.705606071320049,
+      "effective_dim_mean": 13.06858210986664,
+      "n_neurons_mean": 50.857142857142854
+    },
+    "SCsg": {
+      "n_sessions": 3,
+      "tier": "midbrain_collicular",
+      "gradient_position": null,
+      "alpha_mean": 11.948564847198766,
+      "effective_dim_mean": 12.259657062678514,
+      "n_neurons_mean": 46.333333333333336
+    },
+    "VISrl": {
+      "n_sessions": 2,
+      "tier": "primary_sensory",
+      "gradient_position": 1,
+      "alpha_mean": 1.026151733201972,
+      "effective_dim_mean": 13.931647392256329,
+      "n_neurons_mean": 143.0
+    },
+    "LSc": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 2.230121913582271,
+      "effective_dim_mean": 18.18223841196955,
+      "n_neurons_mean": 72.0
+    },
+    "MOp": {
+      "n_sessions": 3,
+      "tier": "secondary_sensory_motor",
+      "gradient_position": 2,
+      "alpha_mean": 1.038875607504771,
+      "effective_dim_mean": 5.900757543346103,
+      "n_neurons_mean": 264.3333333333333
+    },
+    "PT": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 3.019158752211245,
+      "effective_dim_mean": 14.867940580595583,
+      "n_neurons_mean": 45.0
+    },
+    "LH": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 6.563220931271594,
+      "effective_dim_mean": 6.463679543817051,
+      "n_neurons_mean": 18.0
+    },
+    "MD": {
+      "n_sessions": 3,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 0.9120638389418433,
+      "effective_dim_mean": 28.49749001554189,
+      "n_neurons_mean": 132.33333333333334
+    },
+    "MS": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 5.027771474640509,
+      "effective_dim_mean": 9.87299895530481,
+      "n_neurons_mean": 23.0
+    },
+    "RN": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 2.2897744530897124,
+      "effective_dim_mean": 14.608392045919842,
+      "n_neurons_mean": 58.0
+    },
+    "SCs": {
+      "n_sessions": 4,
+      "tier": "midbrain_collicular",
+      "gradient_position": null,
+      "alpha_mean": 4.00171768002708,
+      "effective_dim_mean": 11.01394601902181,
+      "n_neurons_mean": 39.25
+    },
+    "ZI": {
+      "n_sessions": 4,
+      "tier": "subcortical",
+      "gradient_position": null,
+      "alpha_mean": 6.123464182253706,
+      "effective_dim_mean": 9.580141038063154,
+      "n_neurons_mean": 72.25
+    },
+    "RSP": {
+      "n_sessions": 9,
+      "tier": "secondary_sensory_motor",
+      "gradient_position": 2,
+      "alpha_mean": 3.0076767504791118,
+      "effective_dim_mean": 17.770306673890488,
+      "n_neurons_mean": 85.22222222222223
+    },
+    "BLA": {
+      "n_sessions": 2,
+      "tier": "subcortical",
+      "gradient_position": null,
+      "alpha_mean": 1.304002655270335,
+      "effective_dim_mean": 16.018402004167836,
+      "n_neurons_mean": 158.5
+    },
+    "VPM": {
+      "n_sessions": 4,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 2.4892768023720384,
+      "effective_dim_mean": 11.849669126164812,
+      "n_neurons_mean": 88.25
+    },
+    "SSs": {
+      "n_sessions": 1,
+      "tier": "secondary_sensory_motor",
+      "gradient_position": 2,
+      "alpha_mean": 1.409039613386177,
+      "effective_dim_mean": 22.43864598773505,
+      "n_neurons_mean": 120.0
+    },
+    "MEA": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 3.015372112824218,
+      "effective_dim_mean": 16.11996291975164,
+      "n_neurons_mean": 41.0
+    },
+    "RT": {
+      "n_sessions": 2,
+      "tier": "thalamic",
+      "gradient_position": null,
+      "alpha_mean": 11.49972208451463,
+      "effective_dim_mean": 19.94413993145114,
+      "n_neurons_mean": 86.5
+    },
+    "ACB": {
+      "n_sessions": 3,
+      "tier": "subcortical",
+      "gradient_position": null,
+      "alpha_mean": 2.0076974626573567,
+      "effective_dim_mean": 18.23651046705279,
+      "n_neurons_mean": 112.33333333333333
+    },
+    "OT": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 103.12560978616621,
+      "effective_dim_mean": 3.3621097661771744,
+      "n_neurons_mean": 26.0
+    },
+    "SI": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 44.37195011819053,
+      "effective_dim_mean": 12.722784229284201,
+      "n_neurons_mean": 48.0
+    },
+    "SNr": {
+      "n_sessions": 4,
+      "tier": "subcortical",
+      "gradient_position": null,
+      "alpha_mean": 8.03611345715683,
+      "effective_dim_mean": 14.296922015554724,
+      "n_neurons_mean": 76.5
+    },
+    "APN": {
+      "n_sessions": 2,
+      "tier": "midbrain_collicular",
+      "gradient_position": null,
+      "alpha_mean": 1.8617734413218816,
+      "effective_dim_mean": 18.330315355345725,
+      "n_neurons_mean": 123.5
+    },
+    "VAL": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 1.4827535051729466,
+      "effective_dim_mean": 15.201137231289325,
+      "n_neurons_mean": 83.0
+    },
+    "IC": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 3.4326453496691225,
+      "effective_dim_mean": 11.230963265702107,
+      "n_neurons_mean": 58.0
+    },
+    "CA2": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 1.0671279143565815,
+      "effective_dim_mean": 29.13538254210688,
+      "n_neurons_mean": 115.0
+    },
+    "SCig": {
+      "n_sessions": 4,
+      "tier": "midbrain_collicular",
+      "gradient_position": null,
+      "alpha_mean": 1.127411584581159,
+      "effective_dim_mean": 16.838692163932855,
+      "n_neurons_mean": 201.75
+    },
+    "DP": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 25.98511952650848,
+      "effective_dim_mean": 7.543236163196402,
+      "n_neurons_mean": 39.0
+    },
+    "CL": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 16.179496531192758,
+      "effective_dim_mean": 7.85720763402005,
+      "n_neurons_mean": 32.0
+    },
+    "PAG": {
+      "n_sessions": 2,
+      "tier": "midbrain_collicular",
+      "gradient_position": null,
+      "alpha_mean": 9.617204532061372,
+      "effective_dim_mean": 16.148209981394647,
+      "n_neurons_mean": 63.0
+    },
+    "EP": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 1.3596078692160056,
+      "effective_dim_mean": 31.403982449752515,
+      "n_neurons_mean": 91.0
+    },
+    "BMA": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 1.1115329793376538,
+      "effective_dim_mean": 31.831568212631932,
+      "n_neurons_mean": 104.0
+    },
+    "COA": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 0.61625575398211,
+      "effective_dim_mean": 37.571586358648474,
+      "n_neurons_mean": 316.0
+    },
+    "CA": {
+      "n_sessions": 1,
+      "tier": "other",
+      "gradient_position": null,
+      "alpha_mean": 0.8887542319555795,
+      "effective_dim_mean": 29.18202994882062,
+      "n_neurons_mean": 193.0
+    }
+  },
+  "hierarchy_test": {
+    "kruskal_alpha_by_tier": {
+      "statistic": 5.5714063574337445,
+      "p_value": 0.5905854697407622,
+      "tier_means": {
+        "association": 7.4534481580807075,
+        "hippocampal": 13.622483693748427,
+        "subcortical": 5.318012072046384,
+        "secondary_sensory_motor": 6.201504573706606,
+        "primary_sensory": 6.092759844078112,
+        "other": 10.661511012978353,
+        "thalamic": 5.514859180706174,
+        "midbrain_collicular": 6.1496009568516214
+      },
+      "tier_counts": {
+        "association": 4,
+        "hippocampal": 5,
+        "subcortical": 8,
+        "secondary_sensory_motor": 4,
+        "primary_sensory": 7,
+        "other": 25,
+        "thalamic": 12,
+        "midbrain_collicular": 8
+      }
+    }
+  },
+  "gradient_test": {
+    "n_regions": 15,
+    "gradient_vs_alpha_rho": 0.13540826320026483,
+    "gradient_vs_alpha_p": 0.6304003039392818,
+    "gradient_vs_eff_dim_rho": 0.33017357328283753,
+    "gradient_vs_eff_dim_p": 0.2294054774493221,
+    "regions": {
+      "ACA": {
+        "pos": 3,
+        "alpha": 12.345421196016769,
+        "eff_dim": 12.664388566533551
+      },
+      "MOs": {
+        "pos": 2,
+        "alpha": 19.350426323456364,
+        "eff_dim": 13.200694318770445
+      },
+      "VISp": {
+        "pos": 1,
+        "alpha": 8.430970669742855,
+        "eff_dim": 15.208158102150803
+      },
+      "VISl": {
+        "pos": 1,
+        "alpha": 1.3199328575089178,
+        "eff_dim": 18.03684523695321
+      },
+      "VISpm": {
+        "pos": 1,
+        "alpha": 1.769457807491277,
+        "eff_dim": 18.113167975585355
+      },
+      "VISam": {
+        "pos": 1.5,
+        "alpha": 6.26366718909932,
+        "eff_dim": 15.316903436018311
+      },
+      "VISa": {
+        "pos": 1.5,
+        "alpha": 2.2065909208891448,
+        "eff_dim": 12.186874659407925
+      },
+      "ORB": {
+        "pos": 3,
+        "alpha": 11.773187512492314,
+        "eff_dim": 19.413234029715632
+      },
+      "SSp": {
+        "pos": 1,
+        "alpha": 21.632547730613304,
+        "eff_dim": 7.0190632240303685
+      },
+      "ILA": {
+        "pos": 3,
+        "alpha": 1.124561282390741,
+        "eff_dim": 29.128910535270688
+      },
+      "PL": {
+        "pos": 3,
+        "alpha": 4.570622641423007,
+        "eff_dim": 18.32376324255499
+      },
+      "VISrl": {
+        "pos": 1,
+        "alpha": 1.026151733201972,
+        "eff_dim": 13.931647392256329
+      },
+      "MOp": {
+        "pos": 2,
+        "alpha": 1.038875607504771,
+        "eff_dim": 5.900757543346103
+      },
+      "RSP": {
+        "pos": 2,
+        "alpha": 3.0076767504791118,
+        "eff_dim": 17.770306673890488
+      },
+      "SSs": {
+        "pos": 2,
+        "alpha": 1.409039613386177,
+        "eff_dim": 22.43864598773505
+      }
+    }
+  },
+  "shuffle_test": {
+    "real_rho": -0.8465984243979515,
+    "real_p": 0.0,
+    "shuffled_rho": -0.39483420885939907,
+    "shuffled_p": 2.4388157561017607e-50,
+    "interpretation": "If shuffled rho is weaker, the anti-correlation depends on task structure, not just noise covariance."
+  }
+}

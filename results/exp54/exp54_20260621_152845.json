@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-06-21T15:28:43.838839",
+  "mechval_criterion": "M2 Baseline Separation",
+  "mechval_threshold": "delta >= 0.10 vs best baseline",
+  "tests": {
+    "iia": {
+      "n_real": 42,
+      "mean_real": 0.11307073139814931,
+      "mean_random_subspace": 0.26621539485359363,
+      "delta_vs_random_subspace": -0.1531446634554443,
+      "passes_random_subspace": false,
+      "mean_shuffled": 0.07571666964658205,
+      "delta_vs_shuffled": 0.03735406175156726,
+      "passes_shuffled": false
+    },
+    "alpha": {
+      "n_real": 42,
+      "mean_real": 11.66688372415421,
+      "mean_marchenko_pastur": 0.7445137700060298,
+      "delta_vs_marchenko_pastur": 10.92236995414818,
+      "passes_marchenko_pastur": true
+    },
+    "cka_self": {
+      "n_real": 0,
+      "mean_real": null
+    }
+  },
+  "n_random_reps": 20
+}

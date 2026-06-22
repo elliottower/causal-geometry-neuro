@@ -1,0 +1,2656 @@
+{
+  "timestamp": "2026-06-21T15:24:46.396986",
+  "n_regions": 20,
+  "regions": [
+    "root",
+    "CA1",
+    "MOs",
+    "DG",
+    "VISp",
+    "ACA",
+    "MRN",
+    "VISam",
+    "LP",
+    "RSP",
+    "SUB",
+    "CA3",
+    "LGd",
+    "PL",
+    "TH",
+    "SCm",
+    "MB",
+    "CP",
+    "LD",
+    "ORB"
+  ],
+  "n_pairs": 190,
+  "n_directed_edges": 108,
+  "prediction_tests": {
+    "alpha_vs_out_in_ratio": {
+      "rho": -0.18885815072817813,
+      "p": 0.42520056125211025,
+      "n": 20
+    },
+    "alpha_vs_causal_position": {
+      "rho": -0.07918588065155094,
+      "p": 0.7400029671938271,
+      "n": 20
+    },
+    "asymmetry_stats": {
+      "mean": 0.029047960972856234,
+      "median": 0.023826817220946178,
+      "max": 0.10294104606453303,
+      "n_pairs": 190,
+      "n_directed": 108
+    },
+    "hierarchy_consistency": {
+      "consistent": 49,
+      "total": 86,
+      "fraction": 0.5697674418604651
+    }
+  },
+  "top_causal_hubs": [
+    {
+      "region": "SUB",
+      "out": 18,
+      "in": 0,
+      "net": 18,
+      "alpha": 1.3216813245706869
+    },
+    {
+      "region": "MRN",
+      "out": 14,
+      "in": 1,
+      "net": 13,
+      "alpha": 3.0900650198597446
+    },
+    {
+      "region": "MB",
+      "out": 14,
+      "in": 1,
+      "net": 13,
+      "alpha": 1.2318936666352247
+    },
+    {
+      "region": "CP",
+      "out": 14,
+      "in": 2,
+      "net": 12,
+      "alpha": 44.82318371482288
+    },
+    {
+      "region": "LP",
+      "out": 11,
+      "in": 0,
+      "net": 11,
+      "alpha": 0.9293238784070129
+    },
+    {
+      "region": "LGd",
+      "out": 9,
+      "in": 1,
+      "net": 8,
+      "alpha": 0.8942060000914109
+    },
+    {
+      "region": "CA1",
+      "out": 7,
+      "in": 4,
+      "net": 3,
+      "alpha": 0.7793275147198602
+    },
+    {
+      "region": "DG",
+      "out": 4,
+      "in": 4,
+      "net": 0,
+      "alpha": 3.6561532223398903
+    },
+    {
+      "region": "TH",
+      "out": 5,
+      "in": 5,
+      "net": 0,
+      "alpha": 0.7676359605470745
+    },
+    {
+      "region": "LD",
+      "out": 4,
+      "in": 5,
+      "net": -1,
+      "alpha": 2.177056893355092
+    }
+  ],
+  "top_causal_sinks": [
+    {
+      "region": "PL",
+      "out": 0,
+      "in": 14,
+      "net": 14,
+      "alpha": 1.130700200033965
+    },
+    {
+      "region": "VISp",
+      "out": 0,
+      "in": 12,
+      "net": 12,
+      "alpha": 1.073187017483878
+    },
+    {
+      "region": "MOs",
+      "out": 0,
+      "in": 9,
+      "net": 9,
+      "alpha": 2.053018578302266
+    },
+    {
+      "region": "CA3",
+      "out": 0,
+      "in": 9,
+      "net": 9,
+      "alpha": 1.3515941005025518
+    },
+    {
+      "region": "ACA",
+      "out": 1,
+      "in": 8,
+      "net": 7,
+      "alpha": 2.1205139073528225
+    },
+    {
+      "region": "RSP",
+      "out": 1,
+      "in": 7,
+      "net": 6,
+      "alpha": 2.0081489625731392
+    },
+    {
+      "region": "SCm",
+      "out": 0,
+      "in": 6,
+      "net": 6,
+      "alpha": 37.76748508951897
+    },
+    {
+      "region": "ORB",
+      "out": 1,
+      "in": 7,
+      "net": 6,
+      "alpha": 55.18998989193372
+    },
+    {
+      "region": "root",
+      "out": 2,
+      "in": 6,
+      "net": 4,
+      "alpha": 5.653194627493045
+    },
+    {
+      "region": "VISam",
+      "out": 3,
+      "in": 7,
+      "net": 4,
+      "alpha": 1.073827707989669
+    }
+  ],
+  "directed_edges": [
+    {
+      "source": "CP",
+      "target": "ORB",
+      "asymmetry": 0.10294104606453303,
+      "strength": 0.49546666666666667
+    },
+    {
+      "source": "LP",
+      "target": "VISp",
+      "asymmetry": 0.0883043056044136,
+      "strength": 0.47607140118842245
+    },
+    {
+      "source": "SUB",
+      "target": "RSP",
+      "asymmetry": 0.08822359946120001,
+      "strength": 0.4648015666791537
+    },
+    {
+      "source": "CP",
+      "target": "PL",
+      "asymmetry": 0.08580202806492848,
+      "strength": 0.49300000000000005
+    },
+    {
+      "source": "CP",
+      "target": "LD",
+      "asymmetry": 0.0812064866798724,
+      "strength": 0.4621870253777231
+    },
+    {
+      "source": "SUB",
+      "target": "SCm",
+      "asymmetry": 0.08101693530264964,
+      "strength": 0.46511368511368517
+    },
+    {
+      "source": "MRN",
+      "target": "ORB",
+      "asymmetry": 0.07725178712800423,
+      "strength": 0.485201581027668
+    },
+    {
+      "source": "LP",
+      "target": "PL",
+      "asymmetry": 0.07688165450019546,
+      "strength": 0.48924511213340993
+    },
+    {
+      "source": "MB",
+      "target": "RSP",
+      "asymmetry": 0.07133074219827007,
+      "strength": 0.4697729343904623
+    },
+    {
+      "source": "MB",
+      "target": "ORB",
+      "asymmetry": 0.06918525091195887,
+      "strength": 0.484
+    },
+    {
+      "source": "LP",
+      "target": "ORB",
+      "asymmetry": 0.06911345128442448,
+      "strength": 0.47614997124784364
+    },
+    {
+      "source": "SUB",
+      "target": "VISp",
+      "asymmetry": 0.06595192995868282,
+      "strength": 0.4558013115155972
+    },
+    {
+      "source": "SUB",
+      "target": "MOs",
+      "asymmetry": 0.06510956467731094,
+      "strength": 0.45552756363387586
+    },
+    {
+      "source": "SUB",
+      "target": "CA3",
+      "asymmetry": 0.06418356313732315,
+      "strength": 0.4550675675675675
+    },
+    {
+      "source": "SUB",
+      "target": "ORB",
+      "asymmetry": 0.06255667706941243,
+      "strength": 0.4456456456456457
+    },
+    {
+      "source": "CP",
+      "target": "CA1",
+      "asymmetry": 0.06169106740972169,
+      "strength": 0.4552303854875283
+    },
+    {
+      "source": "MB",
+      "target": "VISp",
+      "asymmetry": 0.05997584541062806,
+      "strength": 0.4722222222222222
+    },
+    {
+      "source": "CP",
+      "target": "VISp",
+      "asymmetry": 0.05766011159455192,
+      "strength": 0.4643333333333333
+    },
+    {
+      "source": "CP",
+      "target": "RSP",
+      "asymmetry": 0.057037685581887876,
+      "strength": 0.465644746787604
+    },
+    {
+      "source": "SUB",
+      "target": "PL",
+      "asymmetry": 0.056769911405591955,
+      "strength": 0.4788888888888889
+    },
+    {
+      "source": "SUB",
+      "target": "ACA",
+      "asymmetry": 0.055968764882609934,
+      "strength": 0.4503128098255451
+    },
+    {
+      "source": "MB",
+      "target": "MOs",
+      "asymmetry": 0.055890569217564745,
+      "strength": 0.4691748366013072
+    },
+    {
+      "source": "MRN",
+      "target": "MOs",
+      "asymmetry": 0.05522796054087853,
+      "strength": 0.46901525036892217
+    },
+    {
+      "source": "MRN",
+      "target": "RSP",
+      "asymmetry": 0.054080194512140745,
+      "strength": 0.45729324812607647
+    },
+    {
+      "source": "CP",
+      "target": "root",
+      "asymmetry": 0.053761790071639004,
+      "strength": 0.4580002908598499
+    },
+    {
+      "source": "MRN",
+      "target": "PL",
+      "asymmetry": 0.05371305857969033,
+      "strength": 0.47050395256917005
+    },
+    {
+      "source": "MB",
+      "target": "LD",
+      "asymmetry": 0.0530366212430875,
+      "strength": 0.45109049329695955
+    },
+    {
+      "source": "CP",
+      "target": "ACA",
+      "asymmetry": 0.05299694609487032,
+      "strength": 0.4692121212121212
+    },
+    {
+      "source": "TH",
+      "target": "RSP",
+      "asymmetry": 0.05267192874726895,
+      "strength": 0.48321507393327123
+    },
+    {
+      "source": "LP",
+      "target": "MOs",
+      "asymmetry": 0.05185678129856508,
+      "strength": 0.4602341805692683
+    },
+    {
+      "source": "MRN",
+      "target": "LD",
+      "asymmetry": 0.051614939828890094,
+      "strength": 0.4578047752414254
+    },
+    {
+      "source": "TH",
+      "target": "PL",
+      "asymmetry": 0.05138564321743622,
+      "strength": 0.47628907533496406
+    },
+    {
+      "source": "LGd",
+      "target": "PL",
+      "asymmetry": 0.05113408521303264,
+      "strength": 0.4821875
+    },
+    {
+      "source": "CP",
+      "target": "SCm",
+      "asymmetry": 0.05025930879751467,
+      "strength": 0.475047619047619
+    },
+    {
+      "source": "MRN",
+      "target": "VISp",
+      "asymmetry": 0.04928863444713516,
+      "strength": 0.46586593530692905
+    },
+    {
+      "source": "CP",
+      "target": "MOs",
+      "asymmetry": 0.04927911033301169,
+      "strength": 0.4610980392156863
+    },
+    {
+      "source": "LD",
+      "target": "ORB",
+      "asymmetry": 0.048603001725378514,
+      "strength": 0.47123746250665766
+    },
+    {
+      "source": "LP",
+      "target": "CA3",
+      "asymmetry": 0.048331183089246166,
+      "strength": 0.45957101782633697
+    },
+    {
+      "source": "LP",
+      "target": "SCm",
+      "asymmetry": 0.04763045720595793,
+      "strength": 0.44890528218187803
+    },
+    {
+      "source": "LP",
+      "target": "ACA",
+      "asymmetry": 0.04753532404422256,
+      "strength": 0.4598292237404064
+    },
+    {
+      "source": "SUB",
+      "target": "VISam",
+      "asymmetry": 0.04721602882521819,
+      "strength": 0.4468427150075159
+    },
+    {
+      "source": "SUB",
+      "target": "TH",
+      "asymmetry": 0.047171275991459205,
+      "strength": 0.44385885885885884
+    },
+    {
+      "source": "MB",
+      "target": "PL",
+      "asymmetry": 0.04590277777777779,
+      "strength": 0.45041666666666663
+    },
+    {
+      "source": "MRN",
+      "target": "ACA",
+      "asymmetry": 0.04448397410970045,
+      "strength": 0.4486335403726708
+    },
+    {
+      "source": "root",
+      "target": "PL",
+      "asymmetry": 0.044168211409924774,
+      "strength": 0.47549653015769344
+    },
+    {
+      "source": "MRN",
+      "target": "root",
+      "asymmetry": 0.043576663392888515,
+      "strength": 0.44983965455931735
+    },
+    {
+      "source": "SUB",
+      "target": "root",
+      "asymmetry": 0.04349691950171786,
+      "strength": 0.43721557985826626
+    },
+    {
+      "source": "LGd",
+      "target": "MOs",
+      "asymmetry": 0.04339890235464422,
+      "strength": 0.4681585677749361
+    },
+    {
+      "source": "SUB",
+      "target": "DG",
+      "asymmetry": 0.04320796082292888,
+      "strength": 0.4369733719970472
+    },
+    {
+      "source": "LP",
+      "target": "VISam",
+      "asymmetry": 0.0427034381959186,
+      "strength": 0.44943043553950596
+    }
+  ],
+  "pair_results": [
+    {
+      "region_a": "root",
+      "region_b": "CA1",
+      "iia_ab": 0.44394570417762313,
+      "iia_ba": 0.4514384080440628,
+      "asymmetry": -0.007492703866439687,
+      "abs_asymmetry": 0.007492703866439687,
+      "directed_source": "CA1",
+      "directed_target": "root",
+      "strength": 0.4514384080440628
+    },
+    {
+      "region_a": "root",
+      "region_b": "MOs",
+      "iia_ab": 0.46447786410708986,
+      "iia_ba": 0.45218764543800377,
+      "asymmetry": 0.012290218669086084,
+      "abs_asymmetry": 0.012290218669086084,
+      "directed_source": "root",
+      "directed_target": "MOs",
+      "strength": 0.46447786410708986
+    },
+    {
+      "region_a": "root",
+      "region_b": "DG",
+      "iia_ab": 0.43249266781334994,
+      "iia_ba": 0.44208616913402354,
+      "asymmetry": -0.009593501320673603,
+      "abs_asymmetry": 0.009593501320673603,
+      "directed_source": "DG",
+      "directed_target": "root",
+      "strength": 0.44208616913402354
+    },
+    {
+      "region_a": "root",
+      "region_b": "VISp",
+      "iia_ab": 0.4606445639037515,
+      "iia_ba": 0.4328159605369642,
+      "asymmetry": 0.02782860336678733,
+      "abs_asymmetry": 0.02782860336678733,
+      "directed_source": "root",
+      "directed_target": "VISp",
+      "strength": 0.4606445639037515
+    },
+    {
+      "region_a": "root",
+      "region_b": "ACA",
+      "iia_ab": 0.4514075250240718,
+      "iia_ba": 0.4417243517683171,
+      "asymmetry": 0.009683173255754685,
+      "abs_asymmetry": 0.009683173255754685,
+      "directed_source": "root",
+      "directed_target": "ACA",
+      "strength": 0.4514075250240718
+    },
+    {
+      "region_a": "root",
+      "region_b": "MRN",
+      "iia_ab": 0.40626299116642883,
+      "iia_ba": 0.44983965455931735,
+      "asymmetry": -0.043576663392888515,
+      "abs_asymmetry": 0.043576663392888515,
+      "directed_source": "MRN",
+      "directed_target": "root",
+      "strength": 0.44983965455931735
+    },
+    {
+      "region_a": "root",
+      "region_b": "VISam",
+      "iia_ab": 0.45123900072680845,
+      "iia_ba": 0.43905927544823,
+      "asymmetry": 0.012179725278578468,
+      "abs_asymmetry": 0.012179725278578468,
+      "directed_source": "root",
+      "directed_target": "VISam",
+      "strength": 0.45123900072680845
+    },
+    {
+      "region_a": "root",
+      "region_b": "LP",
+      "iia_ab": 0.4083677644926778,
+      "iia_ba": 0.4385664891412048,
+      "asymmetry": -0.030198724648526964,
+      "abs_asymmetry": 0.030198724648526964,
+      "directed_source": "LP",
+      "directed_target": "root",
+      "strength": 0.4385664891412048
+    },
+    {
+      "region_a": "root",
+      "region_b": "RSP",
+      "iia_ab": 0.4581353304087662,
+      "iia_ba": 0.4420357288650804,
+      "asymmetry": 0.016099601543685782,
+      "abs_asymmetry": 0.016099601543685782,
+      "directed_source": "root",
+      "directed_target": "RSP",
+      "strength": 0.4581353304087662
+    },
+    {
+      "region_a": "root",
+      "region_b": "SUB",
+      "iia_ab": 0.3937186603565484,
+      "iia_ba": 0.43721557985826626,
+      "asymmetry": -0.04349691950171786,
+      "abs_asymmetry": 0.04349691950171786,
+      "directed_source": "SUB",
+      "directed_target": "root",
+      "strength": 0.43721557985826626
+    },
+    {
+      "region_a": "root",
+      "region_b": "CA3",
+      "iia_ab": 0.4521388170179273,
+      "iia_ba": 0.44507121693331375,
+      "asymmetry": 0.007067600084613546,
+      "abs_asymmetry": 0.007067600084613546,
+      "directed_source": "root",
+      "directed_target": "CA3",
+      "strength": 0.4521388170179273
+    },
+    {
+      "region_a": "root",
+      "region_b": "LGd",
+      "iia_ab": 0.4244210293137829,
+      "iia_ba": 0.453967381000129,
+      "asymmetry": -0.029546351686346117,
+      "abs_asymmetry": 0.029546351686346117,
+      "directed_source": "LGd",
+      "directed_target": "root",
+      "strength": 0.453967381000129
+    },
+    {
+      "region_a": "root",
+      "region_b": "PL",
+      "iia_ab": 0.47549653015769344,
+      "iia_ba": 0.43132831874776867,
+      "asymmetry": 0.044168211409924774,
+      "abs_asymmetry": 0.044168211409924774,
+      "directed_source": "root",
+      "directed_target": "PL",
+      "strength": 0.47549653015769344
+    },
+    {
+      "region_a": "root",
+      "region_b": "TH",
+      "iia_ab": 0.42771512095254843,
+      "iia_ba": 0.4418122510416305,
+      "asymmetry": -0.014097130089082088,
+      "abs_asymmetry": 0.014097130089082088,
+      "directed_source": "TH",
+      "directed_target": "root",
+      "strength": 0.4418122510416305
+    },
+    {
+      "region_a": "root",
+      "region_b": "SCm",
+      "iia_ab": 0.45014862293984387,
+      "iia_ba": 0.4392709720693453,
+      "asymmetry": 0.010877650870498579,
+      "abs_asymmetry": 0.010877650870498579,
+      "directed_source": "root",
+      "directed_target": "SCm",
+      "strength": 0.45014862293984387
+    },
+    {
+      "region_a": "root",
+      "region_b": "MB",
+      "iia_ab": 0.41310317878983255,
+      "iia_ba": 0.44251733482148614,
+      "asymmetry": -0.029414156031653593,
+      "abs_asymmetry": 0.029414156031653593,
+      "directed_source": "MB",
+      "directed_target": "root",
+      "strength": 0.44251733482148614
+    },
+    {
+      "region_a": "root",
+      "region_b": "CP",
+      "iia_ab": 0.4042385007882109,
+      "iia_ba": 0.4580002908598499,
+      "asymmetry": -0.053761790071639004,
+      "abs_asymmetry": 0.053761790071639004,
+      "directed_source": "CP",
+      "directed_target": "root",
+      "strength": 0.4580002908598499
+    },
+    {
+      "region_a": "root",
+      "region_b": "LD",
+      "iia_ab": 0.4407074787652672,
+      "iia_ba": 0.44048377339004374,
+      "asymmetry": 0.00022370537522348188,
+      "abs_asymmetry": 0.00022370537522348188,
+      "directed_source": "root",
+      "directed_target": "LD",
+      "strength": 0.4407074787652672
+    },
+    {
+      "region_a": "root",
+      "region_b": "ORB",
+      "iia_ab": 0.46740495867768594,
+      "iia_ba": 0.4531030726424535,
+      "asymmetry": 0.01430188603523247,
+      "abs_asymmetry": 0.01430188603523247,
+      "directed_source": "root",
+      "directed_target": "ORB",
+      "strength": 0.46740495867768594
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "MOs",
+      "iia_ab": 0.46494636858023436,
+      "iia_ba": 0.44834878184112165,
+      "asymmetry": 0.016597586739112713,
+      "abs_asymmetry": 0.016597586739112713,
+      "directed_source": "CA1",
+      "directed_target": "MOs",
+      "strength": 0.46494636858023436
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "DG",
+      "iia_ab": 0.4340366450902039,
+      "iia_ba": 0.4366262979725593,
+      "asymmetry": -0.002589652882355409,
+      "abs_asymmetry": 0.002589652882355409,
+      "directed_source": "DG",
+      "directed_target": "CA1",
+      "strength": 0.4366262979725593
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "VISp",
+      "iia_ab": 0.46153709677446814,
+      "iia_ba": 0.43327953736429187,
+      "asymmetry": 0.02825755941017627,
+      "abs_asymmetry": 0.02825755941017627,
+      "directed_source": "CA1",
+      "directed_target": "VISp",
+      "strength": 0.46153709677446814
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "ACA",
+      "iia_ab": 0.46090478897855397,
+      "iia_ba": 0.43288006938304946,
+      "asymmetry": 0.02802471959550451,
+      "abs_asymmetry": 0.02802471959550451,
+      "directed_source": "CA1",
+      "directed_target": "ACA",
+      "strength": 0.46090478897855397
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "MRN",
+      "iia_ab": 0.4088435858247653,
+      "iia_ba": 0.4476778303123933,
+      "asymmetry": -0.038834244487627956,
+      "abs_asymmetry": 0.038834244487627956,
+      "directed_source": "MRN",
+      "directed_target": "CA1",
+      "strength": 0.4476778303123933
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "VISam",
+      "iia_ab": 0.4536058572584024,
+      "iia_ba": 0.438452847930739,
+      "asymmetry": 0.015153009327663391,
+      "abs_asymmetry": 0.015153009327663391,
+      "directed_source": "CA1",
+      "directed_target": "VISam",
+      "strength": 0.4536058572584024
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "LP",
+      "iia_ab": 0.4192422737548773,
+      "iia_ba": 0.4386113605672328,
+      "asymmetry": -0.019369086812355496,
+      "abs_asymmetry": 0.019369086812355496,
+      "directed_source": "LP",
+      "directed_target": "CA1",
+      "strength": 0.4386113605672328
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "RSP",
+      "iia_ab": 0.4668006223479924,
+      "iia_ba": 0.4366834487711249,
+      "asymmetry": 0.030117173576867495,
+      "abs_asymmetry": 0.030117173576867495,
+      "directed_source": "CA1",
+      "directed_target": "RSP",
+      "strength": 0.4668006223479924
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "SUB",
+      "iia_ab": 0.3936996601944274,
+      "iia_ba": 0.4349445909809085,
+      "asymmetry": -0.04124493078648106,
+      "abs_asymmetry": 0.04124493078648106,
+      "directed_source": "SUB",
+      "directed_target": "CA1",
+      "strength": 0.4349445909809085
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "CA3",
+      "iia_ab": 0.46202111888388864,
+      "iia_ba": 0.4387727296829894,
+      "asymmetry": 0.023248389200899222,
+      "abs_asymmetry": 0.023248389200899222,
+      "directed_source": "CA1",
+      "directed_target": "CA3",
+      "strength": 0.46202111888388864
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "LGd",
+      "iia_ab": 0.432652298193981,
+      "iia_ba": 0.4461198240165631,
+      "asymmetry": -0.013467525822582094,
+      "abs_asymmetry": 0.013467525822582094,
+      "directed_source": "LGd",
+      "directed_target": "CA1",
+      "strength": 0.4461198240165631
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "PL",
+      "iia_ab": 0.4759098631063369,
+      "iia_ba": 0.44176554502618937,
+      "asymmetry": 0.03414431808014751,
+      "abs_asymmetry": 0.03414431808014751,
+      "directed_source": "CA1",
+      "directed_target": "PL",
+      "strength": 0.4759098631063369
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "TH",
+      "iia_ab": 0.4424323470093591,
+      "iia_ba": 0.4402382529658214,
+      "asymmetry": 0.0021940940435376532,
+      "abs_asymmetry": 0.0021940940435376532,
+      "directed_source": "CA1",
+      "directed_target": "TH",
+      "strength": 0.4424323470093591
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "SCm",
+      "iia_ab": 0.4556383637624457,
+      "iia_ba": 0.4334231960865858,
+      "asymmetry": 0.022215167675859904,
+      "abs_asymmetry": 0.022215167675859904,
+      "directed_source": "CA1",
+      "directed_target": "SCm",
+      "strength": 0.4556383637624457
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "MB",
+      "iia_ab": 0.41212631526068155,
+      "iia_ba": 0.4490516928402567,
+      "asymmetry": -0.03692537757957515,
+      "abs_asymmetry": 0.03692537757957515,
+      "directed_source": "MB",
+      "directed_target": "CA1",
+      "strength": 0.4490516928402567
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "CP",
+      "iia_ab": 0.3935393180778066,
+      "iia_ba": 0.4552303854875283,
+      "asymmetry": -0.06169106740972169,
+      "abs_asymmetry": 0.06169106740972169,
+      "directed_source": "CP",
+      "directed_target": "CA1",
+      "strength": 0.4552303854875283
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "LD",
+      "iia_ab": 0.45244401842250104,
+      "iia_ba": 0.43082082132659644,
+      "asymmetry": 0.0216231970959046,
+      "abs_asymmetry": 0.0216231970959046,
+      "directed_source": "CA1",
+      "directed_target": "LD",
+      "strength": 0.45244401842250104
+    },
+    {
+      "region_a": "CA1",
+      "region_b": "ORB",
+      "iia_ab": 0.4668743505762933,
+      "iia_ba": 0.44958462319471537,
+      "asymmetry": 0.017289727381577913,
+      "abs_asymmetry": 0.017289727381577913,
+      "directed_source": "CA1",
+      "directed_target": "ORB",
+      "strength": 0.4668743505762933
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "DG",
+      "iia_ab": 0.43360071449510307,
+      "iia_ba": 0.4567391567539231,
+      "asymmetry": -0.023138442258820058,
+      "abs_asymmetry": 0.023138442258820058,
+      "directed_source": "DG",
+      "directed_target": "MOs",
+      "strength": 0.4567391567539231
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "VISp",
+      "iia_ab": 0.4633755666568162,
+      "iia_ba": 0.45994787997774095,
+      "asymmetry": 0.003427686679075226,
+      "abs_asymmetry": 0.003427686679075226,
+      "directed_source": "MOs",
+      "directed_target": "VISp",
+      "strength": 0.4633755666568162
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "ACA",
+      "iia_ab": 0.4588890166851835,
+      "iia_ba": 0.4598311218827104,
+      "asymmetry": -0.0009421051975269101,
+      "abs_asymmetry": 0.0009421051975269101,
+      "directed_source": "ACA",
+      "directed_target": "MOs",
+      "strength": 0.4598311218827104
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "MRN",
+      "iia_ab": 0.41378728982804364,
+      "iia_ba": 0.46901525036892217,
+      "asymmetry": -0.05522796054087853,
+      "abs_asymmetry": 0.05522796054087853,
+      "directed_source": "MRN",
+      "directed_target": "MOs",
+      "strength": 0.46901525036892217
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "VISam",
+      "iia_ab": 0.4498735321469484,
+      "iia_ba": 0.47686006266772407,
+      "asymmetry": -0.026986530520775653,
+      "abs_asymmetry": 0.026986530520775653,
+      "directed_source": "VISam",
+      "directed_target": "MOs",
+      "strength": 0.47686006266772407
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "LP",
+      "iia_ab": 0.4083773992707032,
+      "iia_ba": 0.4602341805692683,
+      "asymmetry": -0.05185678129856508,
+      "abs_asymmetry": 0.05185678129856508,
+      "directed_source": "LP",
+      "directed_target": "MOs",
+      "strength": 0.4602341805692683
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "RSP",
+      "iia_ab": 0.4659989577127774,
+      "iia_ba": 0.46533978155826894,
+      "asymmetry": 0.0006591761545084451,
+      "abs_asymmetry": 0.0006591761545084451,
+      "directed_source": "MOs",
+      "directed_target": "RSP",
+      "strength": 0.4659989577127774
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "SUB",
+      "iia_ab": 0.3904179989565649,
+      "iia_ba": 0.45552756363387586,
+      "asymmetry": -0.06510956467731094,
+      "abs_asymmetry": 0.06510956467731094,
+      "directed_source": "SUB",
+      "directed_target": "MOs",
+      "strength": 0.45552756363387586
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "CA3",
+      "iia_ab": 0.4562676226517255,
+      "iia_ba": 0.46950622887842125,
+      "asymmetry": -0.01323860622669576,
+      "abs_asymmetry": 0.01323860622669576,
+      "directed_source": "CA3",
+      "directed_target": "MOs",
+      "strength": 0.46950622887842125
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "LGd",
+      "iia_ab": 0.42475966542029187,
+      "iia_ba": 0.4681585677749361,
+      "asymmetry": -0.04339890235464422,
+      "abs_asymmetry": 0.04339890235464422,
+      "directed_source": "LGd",
+      "directed_target": "MOs",
+      "strength": 0.4681585677749361
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "PL",
+      "iia_ab": 0.4764540312547279,
+      "iia_ba": 0.4662438297118526,
+      "asymmetry": 0.01021020154287533,
+      "abs_asymmetry": 0.01021020154287533,
+      "directed_source": "MOs",
+      "directed_target": "PL",
+      "strength": 0.4764540312547279
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "TH",
+      "iia_ab": 0.4517086582610687,
+      "iia_ba": 0.46474531030198907,
+      "asymmetry": -0.01303665204092036,
+      "abs_asymmetry": 0.01303665204092036,
+      "directed_source": "TH",
+      "directed_target": "MOs",
+      "strength": 0.46474531030198907
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "SCm",
+      "iia_ab": 0.45878655966891274,
+      "iia_ba": 0.4646189904533243,
+      "asymmetry": -0.005832430784411535,
+      "abs_asymmetry": 0.005832430784411535,
+      "directed_source": "SCm",
+      "directed_target": "MOs",
+      "strength": 0.4646189904533243
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "MB",
+      "iia_ab": 0.41328426738374247,
+      "iia_ba": 0.4691748366013072,
+      "asymmetry": -0.055890569217564745,
+      "abs_asymmetry": 0.055890569217564745,
+      "directed_source": "MB",
+      "directed_target": "MOs",
+      "strength": 0.4691748366013072
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "CP",
+      "iia_ab": 0.41181892888267463,
+      "iia_ba": 0.4610980392156863,
+      "asymmetry": -0.04927911033301169,
+      "abs_asymmetry": 0.04927911033301169,
+      "directed_source": "CP",
+      "directed_target": "MOs",
+      "strength": 0.4610980392156863
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "LD",
+      "iia_ab": 0.43074719499170155,
+      "iia_ba": 0.45045939925961487,
+      "asymmetry": -0.019712204267913314,
+      "abs_asymmetry": 0.019712204267913314,
+      "directed_source": "LD",
+      "directed_target": "MOs",
+      "strength": 0.45045939925961487
+    },
+    {
+      "region_a": "MOs",
+      "region_b": "ORB",
+      "iia_ab": 0.4482077710049943,
+      "iia_ba": 0.4695009365448307,
+      "asymmetry": -0.0212931655398364,
+      "abs_asymmetry": 0.0212931655398364,
+      "directed_source": "ORB",
+      "directed_target": "MOs",
+      "strength": 0.4695009365448307
+    },
+    {
+      "region_a": "DG",
+      "region_b": "VISp",
+      "iia_ab": 0.45804227392947333,
+      "iia_ba": 0.43256174811549064,
+      "asymmetry": 0.02548052581398269,
+      "abs_asymmetry": 0.02548052581398269,
+      "directed_source": "DG",
+      "directed_target": "VISp",
+      "strength": 0.45804227392947333
+    },
+    {
+      "region_a": "DG",
+      "region_b": "ACA",
+      "iia_ab": 0.44715179111506226,
+      "iia_ba": 0.43587222794226926,
+      "asymmetry": 0.011279563172792995,
+      "abs_asymmetry": 0.011279563172792995,
+      "directed_source": "DG",
+      "directed_target": "ACA",
+      "strength": 0.44715179111506226
+    },
+    {
+      "region_a": "DG",
+      "region_b": "MRN",
+      "iia_ab": 0.4042102275805768,
+      "iia_ba": 0.4368656689533262,
+      "asymmetry": -0.032655441372749394,
+      "abs_asymmetry": 0.032655441372749394,
+      "directed_source": "MRN",
+      "directed_target": "DG",
+      "strength": 0.4368656689533262
+    },
+    {
+      "region_a": "DG",
+      "region_b": "VISam",
+      "iia_ab": 0.44290088494322843,
+      "iia_ba": 0.42690736884892205,
+      "asymmetry": 0.01599351609430638,
+      "abs_asymmetry": 0.01599351609430638,
+      "directed_source": "DG",
+      "directed_target": "VISam",
+      "strength": 0.44290088494322843
+    },
+    {
+      "region_a": "DG",
+      "region_b": "LP",
+      "iia_ab": 0.40198340077079775,
+      "iia_ba": 0.4400573066324913,
+      "asymmetry": -0.03807390586169357,
+      "abs_asymmetry": 0.03807390586169357,
+      "directed_source": "LP",
+      "directed_target": "DG",
+      "strength": 0.4400573066324913
+    },
+    {
+      "region_a": "DG",
+      "region_b": "RSP",
+      "iia_ab": 0.44910254699818786,
+      "iia_ba": 0.4396516662753005,
+      "asymmetry": 0.009450880722887356,
+      "abs_asymmetry": 0.009450880722887356,
+      "directed_source": "DG",
+      "directed_target": "RSP",
+      "strength": 0.44910254699818786
+    },
+    {
+      "region_a": "DG",
+      "region_b": "SUB",
+      "iia_ab": 0.39376541117411834,
+      "iia_ba": 0.4369733719970472,
+      "asymmetry": -0.04320796082292888,
+      "abs_asymmetry": 0.04320796082292888,
+      "directed_source": "SUB",
+      "directed_target": "DG",
+      "strength": 0.4369733719970472
+    },
+    {
+      "region_a": "DG",
+      "region_b": "CA3",
+      "iia_ab": 0.46050858795542743,
+      "iia_ba": 0.4238121590713452,
+      "asymmetry": 0.036696428884082255,
+      "abs_asymmetry": 0.036696428884082255,
+      "directed_source": "DG",
+      "directed_target": "CA3",
+      "strength": 0.46050858795542743
+    },
+    {
+      "region_a": "DG",
+      "region_b": "LGd",
+      "iia_ab": 0.44481284201983196,
+      "iia_ba": 0.43239225944000786,
+      "asymmetry": 0.012420582579824091,
+      "abs_asymmetry": 0.012420582579824091,
+      "directed_source": "DG",
+      "directed_target": "LGd",
+      "strength": 0.44481284201983196
+    },
+    {
+      "region_a": "DG",
+      "region_b": "PL",
+      "iia_ab": 0.462184894674658,
+      "iia_ba": 0.42295912559293547,
+      "asymmetry": 0.03922576908172254,
+      "abs_asymmetry": 0.03922576908172254,
+      "directed_source": "DG",
+      "directed_target": "PL",
+      "strength": 0.462184894674658
+    },
+    {
+      "region_a": "DG",
+      "region_b": "TH",
+      "iia_ab": 0.44216802213609896,
+      "iia_ba": 0.4273261531480459,
+      "asymmetry": 0.014841868988053064,
+      "abs_asymmetry": 0.014841868988053064,
+      "directed_source": "DG",
+      "directed_target": "TH",
+      "strength": 0.44216802213609896
+    },
+    {
+      "region_a": "DG",
+      "region_b": "SCm",
+      "iia_ab": 0.4509938378395872,
+      "iia_ba": 0.43238888644228674,
+      "asymmetry": 0.01860495139730045,
+      "abs_asymmetry": 0.01860495139730045,
+      "directed_source": "DG",
+      "directed_target": "SCm",
+      "strength": 0.4509938378395872
+    },
+    {
+      "region_a": "DG",
+      "region_b": "MB",
+      "iia_ab": 0.41566520550265756,
+      "iia_ba": 0.42789944878660685,
+      "asymmetry": -0.012234243283949287,
+      "abs_asymmetry": 0.012234243283949287,
+      "directed_source": "MB",
+      "directed_target": "DG",
+      "strength": 0.42789944878660685
+    },
+    {
+      "region_a": "DG",
+      "region_b": "CP",
+      "iia_ab": 0.4033967216707527,
+      "iia_ba": 0.4310124716553288,
+      "asymmetry": -0.02761574998457611,
+      "abs_asymmetry": 0.02761574998457611,
+      "directed_source": "CP",
+      "directed_target": "DG",
+      "strength": 0.4310124716553288
+    },
+    {
+      "region_a": "DG",
+      "region_b": "LD",
+      "iia_ab": 0.42117850805021073,
+      "iia_ba": 0.4298175091576498,
+      "asymmetry": -0.008639001107439093,
+      "abs_asymmetry": 0.008639001107439093,
+      "directed_source": "LD",
+      "directed_target": "DG",
+      "strength": 0.4298175091576498
+    },
+    {
+      "region_a": "DG",
+      "region_b": "ORB",
+      "iia_ab": 0.43879946812337456,
+      "iia_ba": 0.42725805507836634,
+      "asymmetry": 0.01154141304500822,
+      "abs_asymmetry": 0.01154141304500822,
+      "directed_source": "DG",
+      "directed_target": "ORB",
+      "strength": 0.43879946812337456
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "ACA",
+      "iia_ab": 0.4620840284669188,
+      "iia_ba": 0.45045790263982743,
+      "asymmetry": 0.011626125827091383,
+      "abs_asymmetry": 0.011626125827091383,
+      "directed_source": "VISp",
+      "directed_target": "ACA",
+      "strength": 0.4620840284669188
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "MRN",
+      "iia_ab": 0.4165773008597939,
+      "iia_ba": 0.46586593530692905,
+      "asymmetry": -0.04928863444713516,
+      "abs_asymmetry": 0.04928863444713516,
+      "directed_source": "MRN",
+      "directed_target": "VISp",
+      "strength": 0.46586593530692905
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "VISam",
+      "iia_ab": 0.4418355530531756,
+      "iia_ba": 0.46281718643098074,
+      "asymmetry": -0.02098163337780512,
+      "abs_asymmetry": 0.02098163337780512,
+      "directed_source": "VISam",
+      "directed_target": "VISp",
+      "strength": 0.46281718643098074
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "LP",
+      "iia_ab": 0.38776709558400885,
+      "iia_ba": 0.47607140118842245,
+      "asymmetry": -0.0883043056044136,
+      "abs_asymmetry": 0.0883043056044136,
+      "directed_source": "LP",
+      "directed_target": "VISp",
+      "strength": 0.47607140118842245
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "RSP",
+      "iia_ab": 0.4479823055601778,
+      "iia_ba": 0.4652675124103696,
+      "asymmetry": -0.017285206850191803,
+      "abs_asymmetry": 0.017285206850191803,
+      "directed_source": "RSP",
+      "directed_target": "VISp",
+      "strength": 0.4652675124103696
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "SUB",
+      "iia_ab": 0.3898493815569144,
+      "iia_ba": 0.4558013115155972,
+      "asymmetry": -0.06595192995868282,
+      "abs_asymmetry": 0.06595192995868282,
+      "directed_source": "SUB",
+      "directed_target": "VISp",
+      "strength": 0.4558013115155972
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "CA3",
+      "iia_ab": 0.4487853941298998,
+      "iia_ba": 0.4556258309204533,
+      "asymmetry": -0.006840436790553461,
+      "abs_asymmetry": 0.006840436790553461,
+      "directed_source": "CA3",
+      "directed_target": "VISp",
+      "strength": 0.4556258309204533
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "LGd",
+      "iia_ab": 0.43058349200187324,
+      "iia_ba": 0.455,
+      "asymmetry": -0.02441650799812678,
+      "abs_asymmetry": 0.02441650799812678,
+      "directed_source": "LGd",
+      "directed_target": "VISp",
+      "strength": 0.455
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "PL",
+      "iia_ab": 0.4628388420585625,
+      "iia_ba": 0.45288278458653924,
+      "asymmetry": 0.009956057472023272,
+      "abs_asymmetry": 0.009956057472023272,
+      "directed_source": "VISp",
+      "directed_target": "PL",
+      "strength": 0.4628388420585625
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "TH",
+      "iia_ab": 0.4456294750690131,
+      "iia_ba": 0.4666270634225855,
+      "asymmetry": -0.02099758835357235,
+      "abs_asymmetry": 0.02099758835357235,
+      "directed_source": "TH",
+      "directed_target": "VISp",
+      "strength": 0.4666270634225855
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "SCm",
+      "iia_ab": 0.4541405754848523,
+      "iia_ba": 0.455374149659864,
+      "asymmetry": -0.0012335741750116869,
+      "abs_asymmetry": 0.0012335741750116869,
+      "directed_source": "SCm",
+      "directed_target": "VISp",
+      "strength": 0.455374149659864
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "MB",
+      "iia_ab": 0.41224637681159415,
+      "iia_ba": 0.4722222222222222,
+      "asymmetry": -0.05997584541062806,
+      "abs_asymmetry": 0.05997584541062806,
+      "directed_source": "MB",
+      "directed_target": "VISp",
+      "strength": 0.4722222222222222
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "CP",
+      "iia_ab": 0.4066732217387814,
+      "iia_ba": 0.4643333333333333,
+      "asymmetry": -0.05766011159455192,
+      "abs_asymmetry": 0.05766011159455192,
+      "directed_source": "CP",
+      "directed_target": "VISp",
+      "strength": 0.4643333333333333
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "LD",
+      "iia_ab": 0.43829405954818423,
+      "iia_ba": 0.46101141995300615,
+      "asymmetry": -0.022717360404821918,
+      "abs_asymmetry": 0.022717360404821918,
+      "directed_source": "LD",
+      "directed_target": "VISp",
+      "strength": 0.46101141995300615
+    },
+    {
+      "region_a": "VISp",
+      "region_b": "ORB",
+      "iia_ab": 0.46148683821354625,
+      "iia_ba": 0.4635035356109759,
+      "asymmetry": -0.0020166973974296565,
+      "abs_asymmetry": 0.0020166973974296565,
+      "directed_source": "ORB",
+      "directed_target": "VISp",
+      "strength": 0.4635035356109759
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "MRN",
+      "iia_ab": 0.40414956626297033,
+      "iia_ba": 0.4486335403726708,
+      "asymmetry": -0.04448397410970045,
+      "abs_asymmetry": 0.04448397410970045,
+      "directed_source": "MRN",
+      "directed_target": "ACA",
+      "strength": 0.4486335403726708
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "VISam",
+      "iia_ab": 0.45945631022724137,
+      "iia_ba": 0.44931370034426715,
+      "asymmetry": 0.010142609882974218,
+      "abs_asymmetry": 0.010142609882974218,
+      "directed_source": "ACA",
+      "directed_target": "VISam",
+      "strength": 0.45945631022724137
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "LP",
+      "iia_ab": 0.41229389969618385,
+      "iia_ba": 0.4598292237404064,
+      "asymmetry": -0.04753532404422256,
+      "abs_asymmetry": 0.04753532404422256,
+      "directed_source": "LP",
+      "directed_target": "ACA",
+      "strength": 0.4598292237404064
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "RSP",
+      "iia_ab": 0.47484286273820836,
+      "iia_ba": 0.460610861325147,
+      "asymmetry": 0.014232001413061357,
+      "abs_asymmetry": 0.014232001413061357,
+      "directed_source": "ACA",
+      "directed_target": "RSP",
+      "strength": 0.47484286273820836
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "SUB",
+      "iia_ab": 0.3943440449429352,
+      "iia_ba": 0.4503128098255451,
+      "asymmetry": -0.055968764882609934,
+      "abs_asymmetry": 0.055968764882609934,
+      "directed_source": "SUB",
+      "directed_target": "ACA",
+      "strength": 0.4503128098255451
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "CA3",
+      "iia_ab": 0.4531468666968204,
+      "iia_ba": 0.4500304103699537,
+      "asymmetry": 0.00311645632686669,
+      "abs_asymmetry": 0.00311645632686669,
+      "directed_source": "ACA",
+      "directed_target": "CA3",
+      "strength": 0.4531468666968204
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "LGd",
+      "iia_ab": 0.4399240046010563,
+      "iia_ba": 0.4628557312252965,
+      "asymmetry": -0.0229317266242402,
+      "abs_asymmetry": 0.0229317266242402,
+      "directed_source": "LGd",
+      "directed_target": "ACA",
+      "strength": 0.4628557312252965
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "PL",
+      "iia_ab": 0.4846136538954862,
+      "iia_ba": 0.4568182750526662,
+      "asymmetry": 0.027795378842820018,
+      "abs_asymmetry": 0.027795378842820018,
+      "directed_source": "ACA",
+      "directed_target": "PL",
+      "strength": 0.4846136538954862
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "TH",
+      "iia_ab": 0.43993933571185123,
+      "iia_ba": 0.4544941974235528,
+      "asymmetry": -0.014554861711701561,
+      "abs_asymmetry": 0.014554861711701561,
+      "directed_source": "TH",
+      "directed_target": "ACA",
+      "strength": 0.4544941974235528
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "SCm",
+      "iia_ab": 0.4419530031156172,
+      "iia_ba": 0.4448278705421562,
+      "asymmetry": -0.0028748674265390295,
+      "abs_asymmetry": 0.0028748674265390295,
+      "directed_source": "SCm",
+      "directed_target": "ACA",
+      "strength": 0.4448278705421562
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "MB",
+      "iia_ab": 0.4194843707343708,
+      "iia_ba": 0.44151515151515147,
+      "asymmetry": -0.02203078078078069,
+      "abs_asymmetry": 0.02203078078078069,
+      "directed_source": "MB",
+      "directed_target": "ACA",
+      "strength": 0.44151515151515147
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "CP",
+      "iia_ab": 0.41621517511725087,
+      "iia_ba": 0.4692121212121212,
+      "asymmetry": -0.05299694609487032,
+      "abs_asymmetry": 0.05299694609487032,
+      "directed_source": "CP",
+      "directed_target": "ACA",
+      "strength": 0.4692121212121212
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "LD",
+      "iia_ab": 0.4297517058321688,
+      "iia_ba": 0.45415695107316195,
+      "asymmetry": -0.024405245240993134,
+      "abs_asymmetry": 0.024405245240993134,
+      "directed_source": "LD",
+      "directed_target": "ACA",
+      "strength": 0.45415695107316195
+    },
+    {
+      "region_a": "ACA",
+      "region_b": "ORB",
+      "iia_ab": 0.47757961710300817,
+      "iia_ba": 0.4627691181371113,
+      "asymmetry": 0.014810498965896868,
+      "abs_asymmetry": 0.014810498965896868,
+      "directed_source": "ACA",
+      "directed_target": "ORB",
+      "strength": 0.47757961710300817
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "VISam",
+      "iia_ab": 0.4598044429736253,
+      "iia_ba": 0.4205013413357727,
+      "asymmetry": 0.03930310163785261,
+      "abs_asymmetry": 0.03930310163785261,
+      "directed_source": "MRN",
+      "directed_target": "VISam",
+      "strength": 0.4598044429736253
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "LP",
+      "iia_ab": 0.42864842970239875,
+      "iia_ba": 0.4108545111133116,
+      "asymmetry": 0.017793918589087132,
+      "abs_asymmetry": 0.017793918589087132,
+      "directed_source": "MRN",
+      "directed_target": "LP",
+      "strength": 0.42864842970239875
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "RSP",
+      "iia_ab": 0.45729324812607647,
+      "iia_ba": 0.4032130536139357,
+      "asymmetry": 0.054080194512140745,
+      "abs_asymmetry": 0.054080194512140745,
+      "directed_source": "MRN",
+      "directed_target": "RSP",
+      "strength": 0.45729324812607647
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "SUB",
+      "iia_ab": 0.38690518016604974,
+      "iia_ba": 0.4120843664669853,
+      "asymmetry": -0.025179186300935574,
+      "abs_asymmetry": 0.025179186300935574,
+      "directed_source": "SUB",
+      "directed_target": "MRN",
+      "strength": 0.4120843664669853
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "CA3",
+      "iia_ab": 0.45335968379446645,
+      "iia_ba": 0.4130672558482734,
+      "asymmetry": 0.04029242794619303,
+      "abs_asymmetry": 0.04029242794619303,
+      "directed_source": "MRN",
+      "directed_target": "CA3",
+      "strength": 0.45335968379446645
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "LGd",
+      "iia_ab": 0.4111363636363637,
+      "iia_ba": 0.40399390981689115,
+      "asymmetry": 0.0071424538194725384,
+      "abs_asymmetry": 0.0071424538194725384,
+      "directed_source": "MRN",
+      "directed_target": "LGd",
+      "strength": 0.4111363636363637
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "PL",
+      "iia_ab": 0.47050395256917005,
+      "iia_ba": 0.4167908939894797,
+      "asymmetry": 0.05371305857969033,
+      "abs_asymmetry": 0.05371305857969033,
+      "directed_source": "MRN",
+      "directed_target": "PL",
+      "strength": 0.47050395256917005
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "TH",
+      "iia_ab": 0.43913043478260877,
+      "iia_ba": 0.4088557305820306,
+      "asymmetry": 0.03027470420057815,
+      "abs_asymmetry": 0.03027470420057815,
+      "directed_source": "MRN",
+      "directed_target": "TH",
+      "strength": 0.43913043478260877
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "SCm",
+      "iia_ab": 0.4453529079616036,
+      "iia_ba": 0.40706911382055055,
+      "asymmetry": 0.03828379414105304,
+      "abs_asymmetry": 0.03828379414105304,
+      "directed_source": "MRN",
+      "directed_target": "SCm",
+      "strength": 0.4453529079616036
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "MB",
+      "iia_ab": 0.38968379446640317,
+      "iia_ba": 0.4030862248187477,
+      "asymmetry": -0.013402430352344508,
+      "abs_asymmetry": 0.013402430352344508,
+      "directed_source": "MB",
+      "directed_target": "MRN",
+      "strength": 0.4030862248187477
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "CP",
+      "iia_ab": 0.3935108382653732,
+      "iia_ba": 0.4102486085343229,
+      "asymmetry": -0.01673777026894968,
+      "abs_asymmetry": 0.01673777026894968,
+      "directed_source": "CP",
+      "directed_target": "MRN",
+      "strength": 0.4102486085343229
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "LD",
+      "iia_ab": 0.4578047752414254,
+      "iia_ba": 0.4061898354125353,
+      "asymmetry": 0.051614939828890094,
+      "abs_asymmetry": 0.051614939828890094,
+      "directed_source": "MRN",
+      "directed_target": "LD",
+      "strength": 0.4578047752414254
+    },
+    {
+      "region_a": "MRN",
+      "region_b": "ORB",
+      "iia_ab": 0.485201581027668,
+      "iia_ba": 0.4079497938996638,
+      "asymmetry": 0.07725178712800423,
+      "abs_asymmetry": 0.07725178712800423,
+      "directed_source": "MRN",
+      "directed_target": "ORB",
+      "strength": 0.485201581027668
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "LP",
+      "iia_ab": 0.40672699734358736,
+      "iia_ba": 0.44943043553950596,
+      "asymmetry": -0.0427034381959186,
+      "abs_asymmetry": 0.0427034381959186,
+      "directed_source": "LP",
+      "directed_target": "VISam",
+      "strength": 0.44943043553950596
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "RSP",
+      "iia_ab": 0.4573396849769729,
+      "iia_ba": 0.44798734825587627,
+      "asymmetry": 0.009352336721096643,
+      "abs_asymmetry": 0.009352336721096643,
+      "directed_source": "VISam",
+      "directed_target": "RSP",
+      "strength": 0.4573396849769729
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "SUB",
+      "iia_ab": 0.3996266861822977,
+      "iia_ba": 0.4468427150075159,
+      "asymmetry": -0.04721602882521819,
+      "abs_asymmetry": 0.04721602882521819,
+      "directed_source": "SUB",
+      "directed_target": "VISam",
+      "strength": 0.4468427150075159
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "CA3",
+      "iia_ab": 0.45272467158081253,
+      "iia_ba": 0.4488363486768183,
+      "asymmetry": 0.0038883229039942124,
+      "abs_asymmetry": 0.0038883229039942124,
+      "directed_source": "VISam",
+      "directed_target": "CA3",
+      "strength": 0.45272467158081253
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "LGd",
+      "iia_ab": 0.41854116727357876,
+      "iia_ba": 0.4482537889991306,
+      "asymmetry": -0.029712621725551835,
+      "abs_asymmetry": 0.029712621725551835,
+      "directed_source": "LGd",
+      "directed_target": "VISam",
+      "strength": 0.4482537889991306
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "PL",
+      "iia_ab": 0.4755347901180921,
+      "iia_ba": 0.4479859647026855,
+      "asymmetry": 0.027548825415406597,
+      "abs_asymmetry": 0.027548825415406597,
+      "directed_source": "VISam",
+      "directed_target": "PL",
+      "strength": 0.4755347901180921
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "TH",
+      "iia_ab": 0.4418351814697791,
+      "iia_ba": 0.4650547128119426,
+      "asymmetry": -0.02321953134216348,
+      "abs_asymmetry": 0.02321953134216348,
+      "directed_source": "TH",
+      "directed_target": "VISam",
+      "strength": 0.4650547128119426
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "SCm",
+      "iia_ab": 0.45572823517319355,
+      "iia_ba": 0.4522006651884701,
+      "asymmetry": 0.0035275699847234776,
+      "abs_asymmetry": 0.0035275699847234776,
+      "directed_source": "VISam",
+      "directed_target": "SCm",
+      "strength": 0.45572823517319355
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "MB",
+      "iia_ab": 0.415000264750496,
+      "iia_ba": 0.45667942999249994,
+      "asymmetry": -0.041679165242003935,
+      "abs_asymmetry": 0.041679165242003935,
+      "directed_source": "MB",
+      "directed_target": "VISam",
+      "strength": 0.45667942999249994
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "CP",
+      "iia_ab": 0.4202081430076585,
+      "iia_ba": 0.4489095031952176,
+      "asymmetry": -0.02870136018755909,
+      "abs_asymmetry": 0.02870136018755909,
+      "directed_source": "CP",
+      "directed_target": "VISam",
+      "strength": 0.4489095031952176
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "LD",
+      "iia_ab": 0.45074988475287137,
+      "iia_ba": 0.45296980941136783,
+      "asymmetry": -0.002219924658496464,
+      "abs_asymmetry": 0.002219924658496464,
+      "directed_source": "LD",
+      "directed_target": "VISam",
+      "strength": 0.45296980941136783
+    },
+    {
+      "region_a": "VISam",
+      "region_b": "ORB",
+      "iia_ab": 0.47715785047514925,
+      "iia_ba": 0.4732290482641138,
+      "asymmetry": 0.00392880221103542,
+      "abs_asymmetry": 0.00392880221103542,
+      "directed_source": "VISam",
+      "directed_target": "ORB",
+      "strength": 0.47715785047514925
+    },
+    {
+      "region_a": "LP",
+      "region_b": "RSP",
+      "iia_ab": 0.45163067377225863,
+      "iia_ba": 0.42114025163143526,
+      "asymmetry": 0.03049042214082337,
+      "abs_asymmetry": 0.03049042214082337,
+      "directed_source": "LP",
+      "directed_target": "RSP",
+      "strength": 0.45163067377225863
+    },
+    {
+      "region_a": "LP",
+      "region_b": "SUB",
+      "iia_ab": 0.3986798404727117,
+      "iia_ba": 0.39902931102149414,
+      "asymmetry": -0.0003494705487824268,
+      "abs_asymmetry": 0.0003494705487824268,
+      "directed_source": "SUB",
+      "directed_target": "LP",
+      "strength": 0.39902931102149414
+    },
+    {
+      "region_a": "LP",
+      "region_b": "CA3",
+      "iia_ab": 0.45957101782633697,
+      "iia_ba": 0.4112398347370908,
+      "asymmetry": 0.048331183089246166,
+      "abs_asymmetry": 0.048331183089246166,
+      "directed_source": "LP",
+      "directed_target": "CA3",
+      "strength": 0.45957101782633697
+    },
+    {
+      "region_a": "LP",
+      "region_b": "LGd",
+      "iia_ab": 0.4322988786659,
+      "iia_ba": 0.4177338312136449,
+      "asymmetry": 0.01456504745225512,
+      "abs_asymmetry": 0.01456504745225512,
+      "directed_source": "LP",
+      "directed_target": "LGd",
+      "strength": 0.4322988786659
+    },
+    {
+      "region_a": "LP",
+      "region_b": "PL",
+      "iia_ab": 0.48924511213340993,
+      "iia_ba": 0.41236345763321447,
+      "asymmetry": 0.07688165450019546,
+      "abs_asymmetry": 0.07688165450019546,
+      "directed_source": "LP",
+      "directed_target": "PL",
+      "strength": 0.48924511213340993
+    },
+    {
+      "region_a": "LP",
+      "region_b": "TH",
+      "iia_ab": 0.4385116446233467,
+      "iia_ba": 0.42268224556606987,
+      "asymmetry": 0.015829399057276816,
+      "abs_asymmetry": 0.015829399057276816,
+      "directed_source": "LP",
+      "directed_target": "TH",
+      "strength": 0.4385116446233467
+    },
+    {
+      "region_a": "LP",
+      "region_b": "SCm",
+      "iia_ab": 0.44890528218187803,
+      "iia_ba": 0.4012748249759201,
+      "asymmetry": 0.04763045720595793,
+      "abs_asymmetry": 0.04763045720595793,
+      "directed_source": "LP",
+      "directed_target": "SCm",
+      "strength": 0.44890528218187803
+    },
+    {
+      "region_a": "LP",
+      "region_b": "MB",
+      "iia_ab": 0.4297013609354035,
+      "iia_ba": 0.4102931502388189,
+      "asymmetry": 0.019408210696584605,
+      "abs_asymmetry": 0.019408210696584605,
+      "directed_source": "LP",
+      "directed_target": "MB",
+      "strength": 0.4297013609354035
+    },
+    {
+      "region_a": "LP",
+      "region_b": "CP",
+      "iia_ab": 0.41759317147041175,
+      "iia_ba": 0.413297052154195,
+      "asymmetry": 0.004296119316216762,
+      "abs_asymmetry": 0.004296119316216762,
+      "directed_source": "LP",
+      "directed_target": "CP",
+      "strength": 0.41759317147041175
+    },
+    {
+      "region_a": "LP",
+      "region_b": "LD",
+      "iia_ab": 0.4461115993147298,
+      "iia_ba": 0.43357289796210774,
+      "asymmetry": 0.012538701352622084,
+      "abs_asymmetry": 0.012538701352622084,
+      "directed_source": "LP",
+      "directed_target": "LD",
+      "strength": 0.4461115993147298
+    },
+    {
+      "region_a": "LP",
+      "region_b": "ORB",
+      "iia_ab": 0.47614997124784364,
+      "iia_ba": 0.40703651996341916,
+      "asymmetry": 0.06911345128442448,
+      "abs_asymmetry": 0.06911345128442448,
+      "directed_source": "LP",
+      "directed_target": "ORB",
+      "strength": 0.47614997124784364
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "SUB",
+      "iia_ab": 0.37657796721795367,
+      "iia_ba": 0.4648015666791537,
+      "asymmetry": -0.08822359946120001,
+      "abs_asymmetry": 0.08822359946120001,
+      "directed_source": "SUB",
+      "directed_target": "RSP",
+      "strength": 0.4648015666791537
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "CA3",
+      "iia_ab": 0.45212048783477354,
+      "iia_ba": 0.4707701963702788,
+      "asymmetry": -0.01864970853550524,
+      "abs_asymmetry": 0.01864970853550524,
+      "directed_source": "CA3",
+      "directed_target": "RSP",
+      "strength": 0.4707701963702788
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "LGd",
+      "iia_ab": 0.4508861923147638,
+      "iia_ba": 0.46228827762989255,
+      "asymmetry": -0.011402085315128763,
+      "abs_asymmetry": 0.011402085315128763,
+      "directed_source": "LGd",
+      "directed_target": "RSP",
+      "strength": 0.46228827762989255
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "PL",
+      "iia_ab": 0.48371790157504446,
+      "iia_ba": 0.46280957637670206,
+      "asymmetry": 0.020908325198342403,
+      "abs_asymmetry": 0.020908325198342403,
+      "directed_source": "RSP",
+      "directed_target": "PL",
+      "strength": 0.48371790157504446
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "TH",
+      "iia_ab": 0.4305431451860023,
+      "iia_ba": 0.48321507393327123,
+      "asymmetry": -0.05267192874726895,
+      "abs_asymmetry": 0.05267192874726895,
+      "directed_source": "TH",
+      "directed_target": "RSP",
+      "strength": 0.48321507393327123
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "SCm",
+      "iia_ab": 0.4481188112310561,
+      "iia_ba": 0.46102135787385495,
+      "asymmetry": -0.012902546642798829,
+      "abs_asymmetry": 0.012902546642798829,
+      "directed_source": "SCm",
+      "directed_target": "RSP",
+      "strength": 0.46102135787385495
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "MB",
+      "iia_ab": 0.39844219219219223,
+      "iia_ba": 0.4697729343904623,
+      "asymmetry": -0.07133074219827007,
+      "abs_asymmetry": 0.07133074219827007,
+      "directed_source": "MB",
+      "directed_target": "RSP",
+      "strength": 0.4697729343904623
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "CP",
+      "iia_ab": 0.4086070612057161,
+      "iia_ba": 0.465644746787604,
+      "asymmetry": -0.057037685581887876,
+      "abs_asymmetry": 0.057037685581887876,
+      "directed_source": "CP",
+      "directed_target": "RSP",
+      "strength": 0.465644746787604
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "LD",
+      "iia_ab": 0.45339604385018045,
+      "iia_ba": 0.46956822816438515,
+      "asymmetry": -0.016172184314204696,
+      "abs_asymmetry": 0.016172184314204696,
+      "directed_source": "LD",
+      "directed_target": "RSP",
+      "strength": 0.46956822816438515
+    },
+    {
+      "region_a": "RSP",
+      "region_b": "ORB",
+      "iia_ab": 0.45998968356111214,
+      "iia_ba": 0.46007962603541025,
+      "asymmetry": -8.994247429811031e-05,
+      "abs_asymmetry": 8.994247429811031e-05,
+      "directed_source": "ORB",
+      "directed_target": "RSP",
+      "strength": 0.46007962603541025
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "CA3",
+      "iia_ab": 0.4550675675675675,
+      "iia_ba": 0.39088400443024435,
+      "asymmetry": 0.06418356313732315,
+      "abs_asymmetry": 0.06418356313732315,
+      "directed_source": "SUB",
+      "directed_target": "CA3",
+      "strength": 0.4550675675675675
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "LGd",
+      "iia_ab": 0.44122372372372376,
+      "iia_ba": 0.40288647342995165,
+      "asymmetry": 0.03833725029377211,
+      "abs_asymmetry": 0.03833725029377211,
+      "directed_source": "SUB",
+      "directed_target": "LGd",
+      "strength": 0.44122372372372376
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "PL",
+      "iia_ab": 0.4788888888888889,
+      "iia_ba": 0.42211897748329696,
+      "asymmetry": 0.056769911405591955,
+      "abs_asymmetry": 0.056769911405591955,
+      "directed_source": "SUB",
+      "directed_target": "PL",
+      "strength": 0.4788888888888889
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "TH",
+      "iia_ab": 0.44385885885885884,
+      "iia_ba": 0.39668758286739964,
+      "asymmetry": 0.047171275991459205,
+      "abs_asymmetry": 0.047171275991459205,
+      "directed_source": "SUB",
+      "directed_target": "TH",
+      "strength": 0.44385885885885884
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "SCm",
+      "iia_ab": 0.46511368511368517,
+      "iia_ba": 0.38409674981103553,
+      "asymmetry": 0.08101693530264964,
+      "abs_asymmetry": 0.08101693530264964,
+      "directed_source": "SUB",
+      "directed_target": "SCm",
+      "strength": 0.46511368511368517
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "MB",
+      "iia_ab": 0.4226526526526528,
+      "iia_ba": 0.3838117283950617,
+      "asymmetry": 0.03884092425759106,
+      "abs_asymmetry": 0.03884092425759106,
+      "directed_source": "SUB",
+      "directed_target": "MB",
+      "strength": 0.4226526526526528
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "CP",
+      "iia_ab": 0.41296482767214476,
+      "iia_ba": 0.3875555555555555,
+      "asymmetry": 0.025409272116589277,
+      "abs_asymmetry": 0.025409272116589277,
+      "directed_source": "SUB",
+      "directed_target": "CP",
+      "strength": 0.41296482767214476
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "LD",
+      "iia_ab": 0.44766211708488135,
+      "iia_ba": 0.4061435957815559,
+      "asymmetry": 0.04151852130332545,
+      "abs_asymmetry": 0.04151852130332545,
+      "directed_source": "SUB",
+      "directed_target": "LD",
+      "strength": 0.44766211708488135
+    },
+    {
+      "region_a": "SUB",
+      "region_b": "ORB",
+      "iia_ab": 0.4456456456456457,
+      "iia_ba": 0.38308896857623326,
+      "asymmetry": 0.06255667706941243,
+      "abs_asymmetry": 0.06255667706941243,
+      "directed_source": "SUB",
+      "directed_target": "ORB",
+      "strength": 0.4456456456456457
+    },
+    {
+      "region_a": "CA3",
+      "region_b": "LGd",
+      "iia_ab": 0.4234014724310777,
+      "iia_ba": 0.4509375,
+      "asymmetry": -0.027536027568922317,
+      "abs_asymmetry": 0.027536027568922317,
+      "directed_source": "LGd",
+      "directed_target": "CA3",
+      "strength": 0.4509375
+    },
+    {
+      "region_a": "CA3",
+      "region_b": "PL",
+      "iia_ab": 0.46684778036885594,
+      "iia_ba": 0.46686092163238374,
+      "asymmetry": -1.314126352780498e-05,
+      "abs_asymmetry": 1.314126352780498e-05,
+      "directed_source": "PL",
+      "directed_target": "CA3",
+      "strength": 0.46686092163238374
+    },
+    {
+      "region_a": "CA3",
+      "region_b": "TH",
+      "iia_ab": 0.42595459726443763,
+      "iia_ba": 0.4654865725359911,
+      "asymmetry": -0.0395319752715535,
+      "abs_asymmetry": 0.0395319752715535,
+      "directed_source": "TH",
+      "directed_target": "CA3",
+      "strength": 0.4654865725359911
+    },
+    {
+      "region_a": "CA3",
+      "region_b": "SCm",
+      "iia_ab": 0.4416778812974465,
+      "iia_ba": 0.4610714285714286,
+      "asymmetry": -0.01939354727398207,
+      "abs_asymmetry": 0.01939354727398207,
+      "directed_source": "SCm",
+      "directed_target": "CA3",
+      "strength": 0.4610714285714286
+    },
+    {
+      "region_a": "CA3",
+      "region_b": "MB",
+      "iia_ab": 0.41002314814814805,
+      "iia_ba": 0.4433333333333333,
+      "asymmetry": -0.03331018518518525,
+      "abs_asymmetry": 0.03331018518518525,
+      "directed_source": "MB",
+      "directed_target": "CA3",
+      "strength": 0.4433333333333333
+    },
+    {
+      "region_a": "CA3",
+      "region_b": "CP",
+      "iia_ab": 0.4164379864777363,
+      "iia_ba": 0.458,
+      "asymmetry": -0.04156201352226374,
+      "abs_asymmetry": 0.04156201352226374,
+      "directed_source": "CP",
+      "directed_target": "CA3",
+      "strength": 0.458
+    },
+    {
+      "region_a": "CA3",
+      "region_b": "LD",
+      "iia_ab": 0.4413624139457945,
+      "iia_ba": 0.4555324386153183,
+      "asymmetry": -0.014170024669523773,
+      "abs_asymmetry": 0.014170024669523773,
+      "directed_source": "LD",
+      "directed_target": "CA3",
+      "strength": 0.4555324386153183
+    },
+    {
+      "region_a": "CA3",
+      "region_b": "ORB",
+      "iia_ab": 0.4702138709014287,
+      "iia_ba": 0.46211692176870756,
+      "asymmetry": 0.008096949132721132,
+      "abs_asymmetry": 0.008096949132721132,
+      "directed_source": "CA3",
+      "directed_target": "ORB",
+      "strength": 0.4702138709014287
+    },
+    {
+      "region_a": "LGd",
+      "region_b": "PL",
+      "iia_ab": 0.4821875,
+      "iia_ba": 0.43105341478696735,
+      "asymmetry": 0.05113408521303264,
+      "abs_asymmetry": 0.05113408521303264,
+      "directed_source": "LGd",
+      "directed_target": "PL",
+      "strength": 0.4821875
+    },
+    {
+      "region_a": "LGd",
+      "region_b": "TH",
+      "iia_ab": 0.45125000000000004,
+      "iia_ba": 0.42398887844611527,
+      "asymmetry": 0.02726112155388477,
+      "abs_asymmetry": 0.02726112155388477,
+      "directed_source": "LGd",
+      "directed_target": "TH",
+      "strength": 0.45125000000000004
+    },
+    {
+      "region_a": "LGd",
+      "region_b": "SCm",
+      "iia_ab": 0.4407142857142857,
+      "iia_ba": 0.42107142857142854,
+      "asymmetry": 0.019642857142857184,
+      "abs_asymmetry": 0.019642857142857184,
+      "directed_source": "LGd",
+      "directed_target": "SCm",
+      "strength": 0.4407142857142857
+    },
+    {
+      "region_a": "LGd",
+      "region_b": "MB",
+      "iia_ab": 0.4020833333333333,
+      "iia_ba": 0.4183333333333333,
+      "asymmetry": -0.016249999999999987,
+      "abs_asymmetry": 0.016249999999999987,
+      "directed_source": "MB",
+      "directed_target": "LGd",
+      "strength": 0.4183333333333333
+    },
+    {
+      "region_a": "LGd",
+      "region_b": "CP",
+      "iia_ab": 0.41711132729531764,
+      "iia_ba": 0.41066666666666674,
+      "asymmetry": 0.0064446606286509,
+      "abs_asymmetry": 0.0064446606286509,
+      "directed_source": "LGd",
+      "directed_target": "CP",
+      "strength": 0.41711132729531764
+    },
+    {
+      "region_a": "LGd",
+      "region_b": "LD",
+      "iia_ab": 0.44441513317463405,
+      "iia_ba": 0.4297220323536113,
+      "asymmetry": 0.014693100821022764,
+      "abs_asymmetry": 0.014693100821022764,
+      "directed_source": "LGd",
+      "directed_target": "LD",
+      "strength": 0.44441513317463405
+    },
+    {
+      "region_a": "LGd",
+      "region_b": "ORB",
+      "iia_ab": 0.476,
+      "iia_ba": 0.44685416666666666,
+      "asymmetry": 0.029145833333333315,
+      "abs_asymmetry": 0.029145833333333315,
+      "directed_source": "LGd",
+      "directed_target": "ORB",
+      "strength": 0.476
+    },
+    {
+      "region_a": "PL",
+      "region_b": "TH",
+      "iia_ab": 0.42490343211752785,
+      "iia_ba": 0.47628907533496406,
+      "asymmetry": -0.05138564321743622,
+      "abs_asymmetry": 0.05138564321743622,
+      "directed_source": "TH",
+      "directed_target": "PL",
+      "strength": 0.47628907533496406
+    },
+    {
+      "region_a": "PL",
+      "region_b": "SCm",
+      "iia_ab": 0.4668797446514838,
+      "iia_ba": 0.46749999999999997,
+      "asymmetry": -0.0006202553485161744,
+      "abs_asymmetry": 0.0006202553485161744,
+      "directed_source": "SCm",
+      "directed_target": "PL",
+      "strength": 0.46749999999999997
+    },
+    {
+      "region_a": "PL",
+      "region_b": "MB",
+      "iia_ab": 0.40451388888888884,
+      "iia_ba": 0.45041666666666663,
+      "asymmetry": -0.04590277777777779,
+      "abs_asymmetry": 0.04590277777777779,
+      "directed_source": "MB",
+      "directed_target": "PL",
+      "strength": 0.45041666666666663
+    },
+    {
+      "region_a": "PL",
+      "region_b": "CP",
+      "iia_ab": 0.40719797193507157,
+      "iia_ba": 0.49300000000000005,
+      "asymmetry": -0.08580202806492848,
+      "abs_asymmetry": 0.08580202806492848,
+      "directed_source": "CP",
+      "directed_target": "PL",
+      "strength": 0.49300000000000005
+    },
+    {
+      "region_a": "PL",
+      "region_b": "LD",
+      "iia_ab": 0.42711421646986025,
+      "iia_ba": 0.4650768979082933,
+      "asymmetry": -0.037962681438433066,
+      "abs_asymmetry": 0.037962681438433066,
+      "directed_source": "LD",
+      "directed_target": "PL",
+      "strength": 0.4650768979082933
+    },
+    {
+      "region_a": "PL",
+      "region_b": "ORB",
+      "iia_ab": 0.46938899167437553,
+      "iia_ba": 0.4677977496271405,
+      "asymmetry": 0.001591242047235042,
+      "abs_asymmetry": 0.001591242047235042,
+      "directed_source": "PL",
+      "directed_target": "ORB",
+      "strength": 0.46938899167437553
+    },
+    {
+      "region_a": "TH",
+      "region_b": "SCm",
+      "iia_ab": 0.45275239081139695,
+      "iia_ba": 0.43785714285714283,
+      "asymmetry": 0.01489524795425412,
+      "abs_asymmetry": 0.01489524795425412,
+      "directed_source": "TH",
+      "directed_target": "SCm",
+      "strength": 0.45275239081139695
+    },
+    {
+      "region_a": "TH",
+      "region_b": "MB",
+      "iia_ab": 0.41150462962962964,
+      "iia_ba": 0.4383333333333334,
+      "asymmetry": -0.02682870370370377,
+      "abs_asymmetry": 0.02682870370370377,
+      "directed_source": "MB",
+      "directed_target": "TH",
+      "strength": 0.4383333333333334
+    },
+    {
+      "region_a": "TH",
+      "region_b": "CP",
+      "iia_ab": 0.3957374540895976,
+      "iia_ba": 0.43150000000000005,
+      "asymmetry": -0.035762545910402455,
+      "abs_asymmetry": 0.035762545910402455,
+      "directed_source": "CP",
+      "directed_target": "TH",
+      "strength": 0.43150000000000005
+    },
+    {
+      "region_a": "TH",
+      "region_b": "LD",
+      "iia_ab": 0.45423253378939704,
+      "iia_ba": 0.45455116514690985,
+      "asymmetry": -0.0003186313575128108,
+      "abs_asymmetry": 0.0003186313575128108,
+      "directed_source": "LD",
+      "directed_target": "TH",
+      "strength": 0.45455116514690985
+    },
+    {
+      "region_a": "TH",
+      "region_b": "ORB",
+      "iia_ab": 0.4728579247610238,
+      "iia_ba": 0.45782945554108173,
+      "asymmetry": 0.015028469219942053,
+      "abs_asymmetry": 0.015028469219942053,
+      "directed_source": "TH",
+      "directed_target": "ORB",
+      "strength": 0.4728579247610238
+    },
+    {
+      "region_a": "SCm",
+      "region_b": "MB",
+      "iia_ab": 0.4304761904761905,
+      "iia_ba": 0.4576190476190477,
+      "asymmetry": -0.02714285714285719,
+      "abs_asymmetry": 0.02714285714285719,
+      "directed_source": "MB",
+      "directed_target": "SCm",
+      "strength": 0.4576190476190477
+    },
+    {
+      "region_a": "SCm",
+      "region_b": "CP",
+      "iia_ab": 0.42478831025010433,
+      "iia_ba": 0.475047619047619,
+      "asymmetry": -0.05025930879751467,
+      "abs_asymmetry": 0.05025930879751467,
+      "directed_source": "CP",
+      "directed_target": "SCm",
+      "strength": 0.475047619047619
+    },
+    {
+      "region_a": "SCm",
+      "region_b": "LD",
+      "iia_ab": 0.42777189071541233,
+      "iia_ba": 0.4200096618357488,
+      "asymmetry": 0.007762228879663546,
+      "abs_asymmetry": 0.007762228879663546,
+      "directed_source": "SCm",
+      "directed_target": "LD",
+      "strength": 0.42777189071541233
+    },
+    {
+      "region_a": "SCm",
+      "region_b": "ORB",
+      "iia_ab": 0.4822857142857144,
+      "iia_ba": 0.46703087070694543,
+      "asymmetry": 0.01525484357876894,
+      "abs_asymmetry": 0.01525484357876894,
+      "directed_source": "SCm",
+      "directed_target": "ORB",
+      "strength": 0.4822857142857144
+    },
+    {
+      "region_a": "MB",
+      "region_b": "CP",
+      "iia_ab": 0.4272682566692777,
+      "iia_ba": 0.4044444444444445,
+      "asymmetry": 0.022823812224833206,
+      "abs_asymmetry": 0.022823812224833206,
+      "directed_source": "MB",
+      "directed_target": "CP",
+      "strength": 0.4272682566692777
+    },
+    {
+      "region_a": "MB",
+      "region_b": "LD",
+      "iia_ab": 0.45109049329695955,
+      "iia_ba": 0.39805387205387205,
+      "asymmetry": 0.0530366212430875,
+      "abs_asymmetry": 0.0530366212430875,
+      "directed_source": "MB",
+      "directed_target": "LD",
+      "strength": 0.45109049329695955
+    },
+    {
+      "region_a": "MB",
+      "region_b": "ORB",
+      "iia_ab": 0.484,
+      "iia_ba": 0.4148147490880411,
+      "asymmetry": 0.06918525091195887,
+      "abs_asymmetry": 0.06918525091195887,
+      "directed_source": "MB",
+      "directed_target": "ORB",
+      "strength": 0.484
+    },
+    {
+      "region_a": "CP",
+      "region_b": "LD",
+      "iia_ab": 0.4621870253777231,
+      "iia_ba": 0.3809805386978507,
+      "asymmetry": 0.0812064866798724,
+      "abs_asymmetry": 0.0812064866798724,
+      "directed_source": "CP",
+      "directed_target": "LD",
+      "strength": 0.4621870253777231
+    },
+    {
+      "region_a": "CP",
+      "region_b": "ORB",
+      "iia_ab": 0.49546666666666667,
+      "iia_ba": 0.39252562060213364,
+      "asymmetry": 0.10294104606453303,
+      "abs_asymmetry": 0.10294104606453303,
+      "directed_source": "CP",
+      "directed_target": "ORB",
+      "strength": 0.49546666666666667
+    },
+    {
+      "region_a": "LD",
+      "region_b": "ORB",
+      "iia_ab": 0.47123746250665766,
+      "iia_ba": 0.42263446078127914,
+      "asymmetry": 0.048603001725378514,
+      "abs_asymmetry": 0.048603001725378514,
+      "directed_source": "LD",
+      "directed_target": "ORB",
+      "strength": 0.47123746250665766
+    }
+  ],
+  "region_alphas": {
+    "root": 5.653194627493045,
+    "CA1": 0.7793275147198602,
+    "MOs": 2.053018578302266,
+    "DG": 3.6561532223398903,
+    "VISp": 1.073187017483878,
+    "ACA": 2.1205139073528225,
+    "MRN": 3.0900650198597446,
+    "VISam": 1.073827707989669,
+    "LP": 0.9293238784070129,
+    "RSP": 2.0081489625731392,
+    "SUB": 1.3216813245706869,
+    "CA3": 1.3515941005025518,
+    "LGd": 0.8942060000914109,
+    "PL": 1.130700200033965,
+    "TH": 0.7676359605470745,
+    "SCm": 37.76748508951897,
+    "MB": 1.2318936666352247,
+    "CP": 44.82318371482288,
+    "LD": 2.177056893355092,
+    "ORB": 55.18998989193372
+  },
+  "in_degree": {
+    "root": 6,
+    "CA1": 4,
+    "MOs": 9,
+    "DG": 4,
+    "VISp": 12,
+    "ACA": 8,
+    "MRN": 1,
+    "VISam": 7,
+    "LP": 0,
+    "RSP": 7,
+    "SUB": 0,
+    "CA3": 9,
+    "LGd": 1,
+    "PL": 14,
+    "TH": 5,
+    "SCm": 6,
+    "MB": 1,
+    "CP": 2,
+    "LD": 5,
+    "ORB": 7
+  },
+  "out_degree": {
+    "root": 2,
+    "CA1": 7,
+    "MOs": 0,
+    "DG": 4,
+    "VISp": 0,
+    "ACA": 1,
+    "MRN": 14,
+    "VISam": 3,
+    "LP": 11,
+    "RSP": 1,
+    "SUB": 18,
+    "CA3": 0,
+    "LGd": 9,
+    "PL": 0,
+    "TH": 5,
+    "SCm": 0,
+    "MB": 14,
+    "CP": 14,
+    "LD": 4,
+    "ORB": 1
+  }
+}

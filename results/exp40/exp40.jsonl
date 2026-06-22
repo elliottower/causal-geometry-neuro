@@ -1,0 +1,16 @@
+{"ts": "2026-06-21T07:22:32.620826", "experiment": "exp40", "event": "started", "module": "experiments.exp40_das_biological", "max_sessions": null}
+{"ts": "2026-06-21T07:51:49.943619", "experiment": "exp40", "event": "run_failed", "error": "matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is different from 1)", "traceback": "Traceback (most recent call last):\n  File \"/root/modal_run.py\", line 183, in run_experiment\n    results = mod.run(**kwargs)\n              ^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp40_das_biological.py\", line 629, in run\n    iia = _cross_region_iia(\n          ^^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp40_das_biological.py\", line 355, in _cross_region_iia\n    t_l_recon = pca_t.inverse_transform(cca.y_loadings_ @ t_l_shifted.reshape(-1, 1)).flatten() if hasattr(cca, 'y_loadings_') else orig_t_l_full\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/decomposition/_base.py\", line 205, in inverse_transform\n    return X @ self.components_ + self.mean_\n           ~~^~~~~~~~~~~~~~~~~~\nValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is different from 1)\n"}
+{"ts": "2026-06-21T07:57:07.268210", "experiment": "exp40", "event": "started", "module": "experiments.exp40_das_biological", "max_sessions": null}
+{"ts": "2026-06-21T08:13:21.066181", "experiment": "exp40", "event": "started", "module": "experiments.exp40_das_biological", "max_sessions": null}
+{"ts": "2026-06-21T08:20:19.759228", "experiment": "exp40", "event": "started", "module": "experiments.exp40_das_biological", "max_sessions": null}
+{"ts": "2026-06-21T08:44:29.831084", "experiment": "exp40", "event": "run_complete", "n_keys": 12}
+{"ts": "2026-06-21T08:44:37.484357", "experiment": "exp40", "event": "saved_volume", "path": "/results/exp40/exp40_20260621_084433.json"}
+{"ts": "2026-06-21T08:44:42.104692", "experiment": "exp40", "event": "copied_artifacts"}
+{"ts": "2026-06-21T08:44:46.044379", "experiment": "exp40", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T08:44:48.631202", "experiment": "exp40", "event": "done"}
+{"ts": "2026-06-21T08:45:17.861883", "experiment": "exp40", "event": "started", "module": "experiments.exp40_das_biological", "max_sessions": null}
+{"ts": "2026-06-21T09:13:13.136531", "experiment": "exp40", "event": "run_complete", "n_keys": 12}
+{"ts": "2026-06-21T09:13:16.156182", "experiment": "exp40", "event": "saved_volume", "path": "/results/exp40/exp40_20260621_091314.json"}
+{"ts": "2026-06-21T09:13:17.982017", "experiment": "exp40", "event": "copied_artifacts"}
+{"ts": "2026-06-21T09:13:20.297452", "experiment": "exp40", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T09:13:22.065599", "experiment": "exp40", "event": "done"}

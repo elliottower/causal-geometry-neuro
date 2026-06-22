@@ -1,0 +1,20 @@
+{"ts": "2026-06-22T02:02:57.658360", "experiment": "exp68", "event": "started", "module": "experiments.exp68_subspace_dissimilarity_matrix", "max_sessions": null}
+{"ts": "2026-06-22T02:03:29.711358", "experiment": "exp68", "event": "run_failed", "error": "all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 109 and the array at index 1 has size 304", "traceback": "Traceback (most recent call last):\n  File \"/root/modal_run.py\", line 243, in run_experiment\n    results = mod.run(**kwargs)\n              ^^^^^^^^^^^^^^^^^\n  File \"/root/repo/experiments/exp68_subspace_dissimilarity_matrix.py\", line 245, in run\n    all_act = np.concatenate([s[\"activity\"] for s in sessions_data])\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<__array_function__ internals>\", line 180, in concatenate\nValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 109 and the array at index 1 has size 304\n"}
+{"ts": "2026-06-22T02:33:46.545137", "experiment": "exp68", "event": "started", "module": "experiments.exp68_subspace_dissimilarity_matrix", "max_sessions": null}
+{"ts": "2026-06-22T02:37:43.740088", "experiment": "exp68", "event": "run_complete", "n_keys": 9}
+{"ts": "2026-06-22T02:37:47.876955", "experiment": "exp68", "event": "saved_volume", "path": "/results/exp68/exp68_20260622_023745.json"}
+{"ts": "2026-06-22T02:37:50.419310", "experiment": "exp68", "event": "copied_artifacts"}
+{"ts": "2026-06-22T02:37:59.655353", "experiment": "exp68", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T02:38:01.113136", "experiment": "exp68", "event": "done"}
+{"ts": "2026-06-22T04:34:55.299977", "experiment": "exp68", "event": "started", "module": "experiments.exp68_subspace_dissimilarity_matrix", "max_sessions": null}
+{"ts": "2026-06-22T04:48:10.165280", "experiment": "exp68", "event": "run_complete", "n_keys": 10}
+{"ts": "2026-06-22T04:48:17.592577", "experiment": "exp68", "event": "saved_volume", "path": "/results/exp68/exp68_20260622_044813.json"}
+{"ts": "2026-06-22T04:48:21.471269", "experiment": "exp68", "event": "copied_artifacts"}
+{"ts": "2026-06-22T04:48:25.456633", "experiment": "exp68", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T04:48:29.190520", "experiment": "exp68", "event": "done"}
+{"ts": "2026-06-22T04:55:20.872156", "experiment": "exp68", "event": "started", "module": "experiments.exp68_subspace_dissimilarity_matrix", "max_sessions": null}
+{"ts": "2026-06-22T05:11:18.836907", "experiment": "exp68", "event": "run_complete", "n_keys": 10}
+{"ts": "2026-06-22T05:11:20.167961", "experiment": "exp68", "event": "saved_volume", "path": "/results/exp68/exp68_20260622_051119.json"}
+{"ts": "2026-06-22T05:11:21.260777", "experiment": "exp68", "event": "copied_artifacts"}
+{"ts": "2026-06-22T05:11:26.800761", "experiment": "exp68", "event": "uploaded_gcs"}
+{"ts": "2026-06-22T05:11:27.446974", "experiment": "exp68", "event": "done"}

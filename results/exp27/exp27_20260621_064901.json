@@ -1,0 +1,396 @@
+{
+  "timestamp": "2026-06-21T06:49:00.715828",
+  "n_regions": 73,
+  "n_pairs": 1316,
+  "region_profiles": {
+    "ACA": {
+      "n_sessions": 11,
+      "tucker_r2_mean": 0.020767024717392748,
+      "alpha_mean": 13.451252027644427
+    },
+    "CA3": {
+      "n_sessions": 8,
+      "tucker_r2_mean": -0.0006351280588556274,
+      "alpha_mean": 9.64708796144409
+    },
+    "DG": {
+      "n_sessions": 16,
+      "tucker_r2_mean": 0.005350734062748684,
+      "alpha_mean": 24.456553881694894
+    },
+    "LS": {
+      "n_sessions": 3,
+      "tucker_r2_mean": -0.020243002525683673,
+      "alpha_mean": 1.3584925930819642
+    },
+    "MOs": {
+      "n_sessions": 17,
+      "tucker_r2_mean": 0.02187081264960614,
+      "alpha_mean": 19.328741573699205
+    },
+    "SUB": {
+      "n_sessions": 9,
+      "tucker_r2_mean": -0.017232797438022442,
+      "alpha_mean": 1.9143607599731014
+    },
+    "VISp": {
+      "n_sessions": 12,
+      "tucker_r2_mean": 0.0222698747183237,
+      "alpha_mean": 8.430971277774733
+    },
+    "root": {
+      "n_sessions": 22,
+      "tucker_r2_mean": -0.0014992320279200418,
+      "alpha_mean": 15.002730074147875
+    },
+    "CA1": {
+      "n_sessions": 20,
+      "tucker_r2_mean": 0.01967938841008714,
+      "alpha_mean": 17.62417341864879
+    },
+    "POST": {
+      "n_sessions": 4,
+      "tucker_r2_mean": 0.05046104047214994,
+      "alpha_mean": 25.338229823985692
+    },
+    "VISl": {
+      "n_sessions": 3,
+      "tucker_r2_mean": -0.0018364840916674046,
+      "alpha_mean": 1.3199328575089178
+    },
+    "VISpm": {
+      "n_sessions": 4,
+      "tucker_r2_mean": 0.009096476649969348,
+      "alpha_mean": 1.769457807491277
+    },
+    "MG": {
+      "n_sessions": 2,
+      "tucker_r2_mean": -0.04905770466610604,
+      "alpha_mean": 0.7747579675628294
+    },
+    "MRN": {
+      "n_sessions": 11,
+      "tucker_r2_mean": -0.06215436069978211,
+      "alpha_mean": 5.592189639712994
+    },
+    "NB": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.011131700506125775,
+      "alpha_mean": 2.7769943756635893
+    },
+    "SPF": {
+      "n_sessions": 2,
+      "tucker_r2_mean": -0.09906316997057207,
+      "alpha_mean": 9.307598375221797
+    },
+    "VISam": {
+      "n_sessions": 11,
+      "tucker_r2_mean": 0.0007813975651497521,
+      "alpha_mean": 6.23774835684517
+    },
+    "LGd": {
+      "n_sessions": 8,
+      "tucker_r2_mean": -0.020334106913209804,
+      "alpha_mean": 1.634626978628369
+    },
+    "LSr": {
+      "n_sessions": 2,
+      "tucker_r2_mean": -0.010895531048204288,
+      "alpha_mean": 12.398311644459005
+    },
+    "TH": {
+      "n_sessions": 8,
+      "tucker_r2_mean": -0.008132481415351014,
+      "alpha_mean": 7.668775456724045
+    },
+    "VISa": {
+      "n_sessions": 5,
+      "tucker_r2_mean": 0.036912020898469344,
+      "alpha_mean": 2.206590920889144
+    },
+    "VPL": {
+      "n_sessions": 4,
+      "tucker_r2_mean": -0.05344238794283612,
+      "alpha_mean": 1.6805176098085306
+    },
+    "OLF": {
+      "n_sessions": 2,
+      "tucker_r2_mean": 0.00505278753695676,
+      "alpha_mean": 1.0603526781028343
+    },
+    "ORB": {
+      "n_sessions": 5,
+      "tucker_r2_mean": 0.02430553901831789,
+      "alpha_mean": 11.860530879095968
+    },
+    "AUD": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.014963882266565087,
+      "alpha_mean": 0.7067552126572578
+    },
+    "CP": {
+      "n_sessions": 5,
+      "tucker_r2_mean": -0.00971324371008202,
+      "alpha_mean": 9.732991998880665
+    },
+    "EPd": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.09649640502077628,
+      "alpha_mean": 16.33332292765154
+    },
+    "LD": {
+      "n_sessions": 5,
+      "tucker_r2_mean": -0.03259929081926329,
+      "alpha_mean": 2.923338685118598
+    },
+    "PIR": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.0017181433209378927,
+      "alpha_mean": 1.9193763274974733
+    },
+    "SSp": {
+      "n_sessions": 4,
+      "tucker_r2_mean": 0.02215836713583577,
+      "alpha_mean": 19.54192006368781
+    },
+    "ILA": {
+      "n_sessions": 3,
+      "tucker_r2_mean": -0.01734458142714712,
+      "alpha_mean": 1.1245612823907407
+    },
+    "LP": {
+      "n_sessions": 10,
+      "tucker_r2_mean": -0.008803110277373516,
+      "alpha_mean": 9.703570273171096
+    },
+    "PL": {
+      "n_sessions": 8,
+      "tucker_r2_mean": -0.0029986630315468055,
+      "alpha_mean": 4.570622641423005
+    },
+    "PO": {
+      "n_sessions": 5,
+      "tucker_r2_mean": -0.032636042686477,
+      "alpha_mean": 2.562574799913161
+    },
+    "TT": {
+      "n_sessions": 3,
+      "tucker_r2_mean": 0.04640691700505225,
+      "alpha_mean": 6.176917616999117
+    },
+    "ORBm": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.00958056819414621,
+      "alpha_mean": 1.43464699693683
+    },
+    "GPe": {
+      "n_sessions": 3,
+      "tucker_r2_mean": -0.05256557835027172,
+      "alpha_mean": 1.5830225826112116
+    },
+    "MB": {
+      "n_sessions": 6,
+      "tucker_r2_mean": -0.043418423935895935,
+      "alpha_mean": 8.224615704747626
+    },
+    "POL": {
+      "n_sessions": 3,
+      "tucker_r2_mean": 0.00666253849426568,
+      "alpha_mean": 17.67805170861561
+    },
+    "SCm": {
+      "n_sessions": 7,
+      "tucker_r2_mean": -0.027275294526687484,
+      "alpha_mean": 8.477772618680929
+    },
+    "SCsg": {
+      "n_sessions": 3,
+      "tucker_r2_mean": 0.024541783306411213,
+      "alpha_mean": 19.539172775135444
+    },
+    "VISrl": {
+      "n_sessions": 2,
+      "tucker_r2_mean": 0.04322387684095802,
+      "alpha_mean": 1.0261517332019712
+    },
+    "LSc": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.006743399043083964,
+      "alpha_mean": 2.230121913582271
+    },
+    "MOp": {
+      "n_sessions": 3,
+      "tucker_r2_mean": -0.007049438616702597,
+      "alpha_mean": 1.0388756075047705
+    },
+    "PT": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.02942033266354871,
+      "alpha_mean": 3.019158752211245
+    },
+    "LH": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.09595724120905147,
+      "alpha_mean": 6.56322093127161
+    },
+    "MD": {
+      "n_sessions": 3,
+      "tucker_r2_mean": -0.05237242881005044,
+      "alpha_mean": 0.912063838941843
+    },
+    "MS": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.12423134658519763,
+      "alpha_mean": 5.027771474640493
+    },
+    "RN": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.2065601146156304,
+      "alpha_mean": 2.2897744530897124
+    },
+    "SCs": {
+      "n_sessions": 4,
+      "tucker_r2_mean": 0.018626137128286813,
+      "alpha_mean": 4.00171768002708
+    },
+    "ZI": {
+      "n_sessions": 4,
+      "tucker_r2_mean": -0.044462263996129986,
+      "alpha_mean": 6.123464182253721
+    },
+    "RSP": {
+      "n_sessions": 9,
+      "tucker_r2_mean": 0.014431702406475573,
+      "alpha_mean": 7.4693427258286045
+    },
+    "BLA": {
+      "n_sessions": 2,
+      "tucker_r2_mean": -0.001510669573572987,
+      "alpha_mean": 1.3040026552703354
+    },
+    "VPM": {
+      "n_sessions": 4,
+      "tucker_r2_mean": -0.014080734976105236,
+      "alpha_mean": 2.489276802372039
+    },
+    "SSs": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.0012423809754555926,
+      "alpha_mean": 1.409039613386177
+    },
+    "MEA": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.007677921377066799,
+      "alpha_mean": 3.015372112824218
+    },
+    "RT": {
+      "n_sessions": 2,
+      "tucker_r2_mean": -0.02887192458659571,
+      "alpha_mean": 11.499722084514628
+    },
+    "ACB": {
+      "n_sessions": 3,
+      "tucker_r2_mean": 0.003146264794652298,
+      "alpha_mean": 2.0076974626573567
+    },
+    "OT": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.17867342728936975,
+      "alpha_mean": 103.12560978616595
+    },
+    "SI": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.06645191022099683,
+      "alpha_mean": 44.37195011819051
+    },
+    "SNr": {
+      "n_sessions": 4,
+      "tucker_r2_mean": -0.11792029102294943,
+      "alpha_mean": 8.036113457156926
+    },
+    "APN": {
+      "n_sessions": 2,
+      "tucker_r2_mean": -0.06442755539952316,
+      "alpha_mean": 1.8617734413218823
+    },
+    "VAL": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.096902727696353,
+      "alpha_mean": 1.4827535051729457
+    },
+    "IC": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.04982677957258841,
+      "alpha_mean": 3.432645349669124
+    },
+    "CA2": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.007370843488283985,
+      "alpha_mean": 1.067127914356581
+    },
+    "SCig": {
+      "n_sessions": 4,
+      "tucker_r2_mean": -0.04446034578284647,
+      "alpha_mean": 1.1274115845811583
+    },
+    "DP": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.040974232385991516,
+      "alpha_mean": 25.985119526508477
+    },
+    "CL": {
+      "n_sessions": 1,
+      "tucker_r2_mean": 0.037828959341547175,
+      "alpha_mean": 16.179496531192765
+    },
+    "PAG": {
+      "n_sessions": 2,
+      "tucker_r2_mean": -0.029545669260846452,
+      "alpha_mean": 9.617204532061374
+    },
+    "EP": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.006922937917509087,
+      "alpha_mean": 1.3596078692160052
+    },
+    "BMA": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.008728170010544156,
+      "alpha_mean": 1.1115329793376552
+    },
+    "COA": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.007351696856515266,
+      "alpha_mean": 0.6162557539821089
+    },
+    "CA": {
+      "n_sessions": 1,
+      "tucker_r2_mean": -0.006087997806249801,
+      "alpha_mean": 0.8887542319555799
+    }
+  },
+  "tucker_vs_cka": {
+    "cka_vs_neuron_factors": {
+      "rho": -0.15863449261614077,
+      "p": 7.210645610030319e-09
+    },
+    "cka_vs_time_factors": {
+      "rho": 0.02352421471507715,
+      "p": 0.39383219589988694
+    },
+    "cka_vs_core": {
+      "rho": 0.006199357947259302,
+      "p": 0.8222276106781132
+    }
+  },
+  "r2_vs_alpha": {
+    "rho": 0.2751758607922992,
+    "p_value": 0.018462562965227688,
+    "interpretation": "Positive rho means steep-spectrum (low-dim) regions are better captured by Tucker \u2014 consistent with Tucker as a linear method that favors low-dimensional structure."
+  },
+  "pairs_summary": {
+    "neuron_sim_mean": 0.08780168110210944,
+    "time_sim_mean": 0.1736401560638331,
+    "trial_sim_mean": 0.13029989114576412
+  }
+}

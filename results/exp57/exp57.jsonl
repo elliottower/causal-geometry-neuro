@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T20:30:12.629008", "experiment": "exp57", "event": "started", "module": "experiments.exp57_structured_vae", "max_sessions": null}
+{"ts": "2026-06-21T21:03:13.566967", "experiment": "exp57", "event": "run_complete", "n_keys": 10}
+{"ts": "2026-06-21T21:03:21.721401", "experiment": "exp57", "event": "saved_volume", "path": "/results/exp57/exp57_20260621_210317.json"}
+{"ts": "2026-06-21T21:03:29.709491", "experiment": "exp57", "event": "copied_artifacts"}
+{"ts": "2026-06-21T21:03:34.012434", "experiment": "exp57", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T21:03:38.093268", "experiment": "exp57", "event": "done"}

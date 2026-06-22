@@ -1,0 +1,150 @@
+Good, I have the full picture now. Let me think through this carefully — the question is really: **what are all the geometric/mathematical types a mechanism can be, and how does that map to real neural data vs transformers?** The current neuro paper uses three invariants but the full causal geometry program has a much richer taxonomy that hasn't been fully transferred.
+
+***
+
+## The Complete Taxonomy of "What Kind of Thing Is a Mechanism"
+
+Your mechviews framework gives you five *view axes* (object, role, subspace, structural, process). The causal geometry program gives you six *mathematical frameworks*. But neither of these is quite the right organizing principle for the question you're asking. The right question is: **what is the geometric type of the causal variable itself?** Here's the full hierarchy, going from simplest to most expressive:
+
+***
+
+### Type 0 — Scalar (0-dimensional)
+
+The mechanism is a single number. A neuron fires rate r when X occurs. A single logit changes by δ when you ablate head H.
+
+**Math**: real line ℝ. No geometry, no invariants.
+
+**In transformers**: "Head L7H3 accounts for 40% of IOI effect" — this is scalar.
+
+**In neurons**: "MOs has 0.82 decoding accuracy for choice" — scalar.
+
+**Why it's not enough**: Two scalars can be equal while the underlying computations are entirely different. This is the CKA problem stated maximally simply. Your exp9 result (CKA same-region ≈ CKA cross-region) is a demonstration that the scalar version of similarity is useless for mechanism identity.
+
+***
+
+### Type 1 — Direction (1-dimensional subspace)
+
+The mechanism lives in a specific *direction* in the representation space. The sign and magnitude of the projection onto that direction determines the computation.
+
+**Math**: projective space ℝP^{d-1}, or equivalently a unit vector up to sign.
+
+**In transformers**: "The residual stream encodes token position along direction v." Linear probes. Steering vectors.
+
+**In neurons**: "There is a choice axis in MOs — projection onto w determines left vs right choice." Choice probability from neural population.
+
+**Why it's often wrong**: A direction is rigid — it doesn't account for the fact that the same *computation* might be implemented using different *directions* in different animals. Two mice might both have a "choice direction" in MOs, but the specific direction might differ by 45° just because of electrode placement or network initialization. The right invariant is not the direction but the *subspace that contains a choice-encoding direction* — which leads you to Type 2.
+
+**The key experiment you haven't run**: For your Steinmetz data, compute the choice *direction* (top eigenvector of the choice-variable covariance) per session per region. Then compute pairwise cosine similarities across animals. Compare to the Grassmannian distances from your subspace analysis. The prediction: **cosine similarity of choice directions is nearly uniform across animals (directions vary), but Grassmannian distance of choice subspaces is structured (subspaces are stable within animals)**. This would be a beautiful demonstration that Type 1 (direction) is the wrong level and Type 2 (subspace) is correct.
+
+***
+
+### Type 2 — Subspace (k-dimensional, flat)
+
+The mechanism lives in a k-dimensional linear subspace. Which specific basis within the subspace is used is a gauge choice — mechanistically irrelevant.
+
+**Math**: Grassmannian Gr(k, d). Metric given by principal angles. This is what your current experiments measure.
+
+**In transformers**: DAS rotation Q ∈ Gr(k, 768). Your factor bank DAS.
+
+**In neurons**: The k-dimensional neural subspace encoding choice — what your exp7 recovers before computing cohomology.
+
+**What you're currently doing**: Exp1 (cross-animal stability), Exp2 (CKA vs d_G), Exp4 (stimulus transportability), Exp6 (gauge correction), Exp9 (multiple realization) — all Type 2 experiments.
+
+**What the sheaf experiment (Exp7) revealed**: The mechanism is *not* a single flat subspace. H¹ >> 0 means the mechanism cannot be described as a single point on Gr(k, d). This pushes you to Type 3 or higher.
+
+***
+
+### Type 3 — Orbit (subspace with symmetry)
+
+The mechanism is not a single subspace but an *orbit* of subspaces under a symmetry group. The group action is the gauge symmetry.
+
+**Math**: Gr(k, d) / G where G is the relevant symmetry group (rotation within the subspace: O(k); permutation across sessions: S_n; scaling: ℝ₊).
+
+**In transformers**: Your bank efficiency result says: any orthogonal transformation R ∈ O(k) of the factor bank gives the same causal structure. The mechanism is the O(k)-orbit of the bank column span. The Grassmannian IS this orbit space — Gr(k,d) = St(k,d)/O(k) where St(k,d) is the Stiefel manifold. So for transformers, Type 2 and Type 3 coincide — the Grassmannian already quotients out the gauge.
+
+**In neurons**: The gauge is bigger. Different animals have different neuron labeling (permutation symmetry), different electrode placements (rotation symmetry within the subspace), different overall activity scales (scaling symmetry). Your Exp6 (gauge correction) is measuring whether accounting for the orbit structure improves cross-animal comparison. The prediction: gauge-normalized d_G should be smaller than raw d_G for same-animal cross-session, because within an animal the gauge is stable.
+
+**The thing you're not measuring**: The *isotropy group* — the subgroup of G that fixes the subspace. A subspace with large isotropy group (many symmetries that leave it unchanged) is more *canonical* — it's singled out by the geometry. In transformers, invariant subspaces of W_O W_V have large isotropy (they're eigenspaces, fixed by any function of W_O W_V). In neurons, you'd need to identify whether the choice subspace is fixed by some natural symmetry of the circuit — which would mean it's not just a convenient projection but a geometrically privileged object.
+
+***
+
+### Type 4 — Fiber Bundle (subspace varying over a base)
+
+The mechanism is not a single subspace but a *field of subspaces* — a different k-dimensional subspace at each point of some base space (task conditions, behavioral states, time within a trial).
+
+**Math**: A fiber bundle E → B where B is the base (e.g., task condition space, time, stimulus contrast) and each fiber E_b is a point on Gr(k, d). The connection on this bundle determines how the subspace "moves" as you change the base variable.
+
+**In transformers**: The JumpReLU vs L1 checkpoint result is a fiber bundle statement: the *selector* determines which subspace within the bank column span is active, and the selector varies across tasks. The base space B is the task space {IOI, SVA, GT, GenPron} and the fiber over each task is the task-specific DAS subspace. The total space is the bank column span.
+
+**In neurons**: **This is where your Exp5 (behavioral state modulation) lives.** The question is: does the choice subspace change continuously as behavioral state changes (arousal, prior probability, engagement), and if so, what is the structure of the change? A trivial fiber bundle (constant fiber) means the subspace is state-independent — the same circuit implements choice regardless of state. A nontrivial fiber bundle means the circuit *modulates* — different states use different subspaces within a common ambient space.
+
+**Holonomy lives here**: If you parallel-transport the choice subspace around a closed loop in behavioral state space (e.g.: engaged → fatigued → engaged), the holonomy measures how much the subspace rotates. Holonomy = 0 means the bundle is flat (no twist). Holonomy ≠ 0 means the circuit has a curved state-dependence — going through a sequence of states and returning changes the circuit's geometric orientation. **This is why Exp8 gives holonomy = 0 when you use PCA: PCA doesn't track the causal subspace, it tracks the variance subspace, which is state-independent by construction.** With DAS you'd track the *causal* subspace and potentially see nontrivial holonomy.
+
+**The specific prediction**: In the IBL dataset, there's a "prior probability" variable (the animal learns that left trials are more frequent in blocks). The choice subspace during high-prior-left blocks vs high-prior-right blocks might differ. The loop: high-prior-left → neutral → high-prior-right → neutral → high-prior-left is a natural closed loop in "context space." The holonomy of this loop in the choice subspace is a measurement of how much top-down context modulates the circuit geometry.
+
+***
+
+### Type 5 — Sheaf (local subspaces with consistency constraints)
+
+The mechanism is a collection of subspaces — one per brain region — together with compatibility conditions specifying how they should agree on overlapping domains (connected regions).
+
+**Math**: A sheaf F over the region graph G = (V, E). Each vertex r ∈ V gets a stalks F(r) = Gr(k_r, N_r). Each edge (r,s) ∈ E gets a restriction map ρ_{r→s}: F(r) → F(s) induced by effective connectivity W_{rs}. Sections of F (globally consistent assignments of subspaces) form a vector space. H⁰(F) = dimension of the section space; H¹(F) = dimension of the obstruction space.
+
+**In transformers**: Your OASR (cross-site DAS) result — geodesic 67–79% of null, all 24 comparisons below Marchenko-Pastur p=5% threshold — is a sheaf result. It says the causal subspace is geometrically coherent across sites (restriction maps are approximately identity), i.e., the sheaf has approximately trivial H¹. The transformer's sheaf is approximately constant — the causal subspace is similar across layers and sites. **This is a strong contrast with your neural result.**
+
+**In neurons**: **H¹ >> 0 (5/5 sessions, 75–495).** The neural sheaf is highly nontrivial. The choice circuit cannot be described as a single globally consistent subspace. Different regions have genuinely different local causal subspaces that cannot be glued. **This is the headline result from Exp7.**
+
+**What you're missing**: The *stalks* of the sheaf. Right now you computed H¹ of the whole sheaf, which tells you there's obstruction, but not *where* the obstruction is. The obstruction classes in H¹ are specific elements of the cohomology group — each element corresponds to a "defect" at a specific edge (r,s) in the region graph. Computing the representative cocycles would tell you: **between which pair of regions does the choice subspace fail to be consistent?** That's a specific anatomical prediction. It's the sheaf-theoretic version of "the bottleneck in the circuit is between MOs and ACA" — but computed from topology rather than lesion studies.
+
+***
+
+### Type 6 — Flag (nested subspaces, hierarchy)
+
+The mechanism is not one subspace but a nested sequence of subspaces: V₁ ⊂ V₂ ⊂ ... ⊂ V_m ⊂ ℝ^d, each encoding a different aspect of the computation at increasing granularity.
+
+**Math**: The flag manifold Fl(k₁, k₂, ..., k_m; d). Not currently in your program.
+
+**In transformers**: The most natural version: the IOI circuit has a hierarchy. There's a 2-dimensional subspace for "which name to suppress" (the S-inhibition direction), a 5-dimensional subspace that includes this plus the broader "name binding" computation, and a 15-dimensional subspace that includes the full IOI circuit. These are nested. The flag manifold is the natural home for this hierarchy.
+
+**In neurons**: In motor cortex, there's a known hierarchy: a 2-d "output-null subspace" (activity that drives muscle output) is contained within a larger "preparation subspace" which is contained within the full motor manifold. The rotational dynamics literature (Churchland et al.) is implicitly about the flag structure of motor computations.
+
+**Why you should care**: Your attribution PCA result (k=8 beats k=8192) is a statement about the *optimal point* in a flag. The flag is: V₁ ⊂ V₂ ⊂ ... ⊂ V₈ ⊂ V₉ ⊂ ... ⊂ V_{8192}, and the optimal level is k=8. The "elbow" in the variance-explained curve is the optimal level in the flag. Computing the full flag (the nested sequence of optimal subspaces) would give you not just "8 dimensions" but "here is the 2-d core, here is the 4-d extension, here is the full 8-d circuit" — a hierarchy of mechanistic descriptions at different granularities.
+
+***
+
+### Type 7 — Stratified Space (the most general)
+
+The "mechanism space" is a stratified space — a union of manifolds of different dimensions glued together along boundaries. Different circuits live on different strata. The original stratified view in your program.
+
+**Math**: A Whitney stratification of the space of all possible mechanisms. The strata are Gr(1,d) (directions) ⊂ Gr(2,d) ∪ ... ⊂ FL(k₁,...,k_m;d) ∪ sheaves ∪ fiber bundles, with adjacency relations specifying how you move between strata.
+
+**In transformers**: The strata correspond to circuit complexity. The IOI name mover heads live on a high-dimensional stratum (8-d active subspace). The universal hub factor f285 lives on a lower-dimensional stratum (1-d direction used across all tasks). The grokking modular arithmetic circuit lives on a very clean low-dimensional stratum. The NNMs (which don't exist at factor level) are an artifact of misidentifying a point on a higher stratum as a point on a lower stratum.
+
+**In neurons**: The H¹ >> 0 result says the choice mechanism is NOT on the flat subspace stratum (Type 2). The holonomy = 0 result (using PCA) suggests it might not be on the fiber bundle stratum. **You don't yet know which stratum it's on.** The stratified view says: run all the tests, see which strata are compatible with the data, and the answer is whichever stratum is consistent with all the invariants simultaneously.
+
+***
+
+## The Decision Procedure for Real Neural Data
+
+Given your Steinmetz results, here is the diagnostic tree:
+
+```
+H¹ = 0?
+├── YES → Mechanism is Type 2 (subspace) or lower
+│         → Test holonomy: ≠ 0?
+│           ├── NO  → Type 2 (flat subspace), done
+│           └── YES → Type 4 (fiber bundle), test flag structure
+└── NO  → Mechanism is Type 5 (sheaf) or higher (you are here)
+          → Compute obstruction cocycles: which edges have defects?
+          ├── Defects at specific edges → Type 5 with known obstruction loci
+          └── Defects everywhere → possibly Type 6 (flag) or Type 7 (fully stratified)
+              → Compute nested subspace structure per region
+              → If nested subspaces are consistent → Type 6 (flag)
+              → If not → Type 7 (fully stratified, no global description)
+```
+
+You are currently at the second level: H¹ >> 0, mechanism is sheaf or higher, obstruction cocycles not yet computed.
+
+The single most useful next computation is: **decompose H¹ into its representative cocycles and map them onto the anatomical region graph.** The cocycle at edge (MOs, ACA) is a vector in Gr(k_{MOs}, N_{MOs}) × Gr(k_{ACA}, N_{ACA}) measuring how much the choice subspace at MOs and ACA fail to agree. The magnitude of this vector is the "inconsistency" at that edge. The anatomical map of inconsistencies is a direct result — it tells you which connections in the choice circuit are geometrically incoherent.
+
+**In plain language**: your current result says "the choice circuit cannot be localized." The cocycle decomposition would say "the choice circuit cannot be localized *because the MOs-ACA connection is geometrically incoherent while the ACA-MOs is fine*" — a specific anatomical claim arising from pure topology.

@@ -1,0 +1,6 @@
+{"ts": "2026-06-21T05:28:56.797703", "experiment": "exp12", "event": "started", "module": "experiments.exp12_topology_vs_geometry", "max_sessions": null}
+{"ts": "2026-06-21T05:29:55.786622", "experiment": "exp12", "event": "run_complete", "n_keys": 6}
+{"ts": "2026-06-21T05:29:58.518403", "experiment": "exp12", "event": "saved_volume", "path": "/results/exp12/exp12_20260621_052956.json"}
+{"ts": "2026-06-21T05:30:00.152759", "experiment": "exp12", "event": "copied_artifacts"}
+{"ts": "2026-06-21T05:30:01.872488", "experiment": "exp12", "event": "uploaded_gcs"}
+{"ts": "2026-06-21T05:30:03.060510", "experiment": "exp12", "event": "done"}
