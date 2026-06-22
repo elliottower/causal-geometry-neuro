@@ -1,41 +1,43 @@
 # Causal Geometric Structure in Neural Populations
 
-This project explores applying differential geometry, mechanistic interpretability, and causal inference methods to biological neural data (Neuropixels recordings from mouse visual decision-making). The core question: when standard analysis tools disagree about neural population structure, can geometry tell you why?
+This project applies differential geometry and causal inference to Neuropixels recordings from mouse visual decision-making. The core question: when standard analysis tools disagree about neural population structure, can geometry tell you why?
 
-We find that standard similarity metrics (CKA, Procrustes) give opposite answers about which brain regions are "similar" ($\rho = -0.85$). The disagreement is not noise --- dimensionality mediates it. CKA measures kernel alignment (sensitive to variance), Procrustes measures subspace orientation (sensitive to geometry), and they diverge predictably in high-dimensional regions. Grassmannian dissimilarity matrices reveal structure that neither metric captures alone. Our conclusion: the choice of metric determines what you find, and the geometry of the data tells you which metric to trust where.
-
-Separately, we test whether causal tools from mechanistic interpretability --- interchange intervention analysis, distributed alignment search --- can work on biological recordings. In MI you intervene on a model's internals directly; here, you simulate interventions by swapping learned subspace components between trials and measuring whether a decoder's prediction flips. A structured VAE recovers 3.4x stronger signal than linear methods, but IIA turns out to be vacuous for nonlinear models (matching Sutter et al. 2025). We validate against optogenetic silencing ground truth and engagement controls. The honest conclusion: every nonlinear method that outperformed linear baselines also fit to noise, and we found no reliable way to distinguish the two without external ground truth.
+Standard similarity metrics (CKA, Procrustes) give opposite answers about which brain regions are "similar" --- the anti-correlation is strong and replicates across datasets. Dimensionality mediates it: CKA measures kernel alignment (sensitive to variance), Procrustes measures subspace orientation (sensitive to geometry), and they diverge predictably in high-dimensional regions. Linear subspace methods systematically fail in the highest-dimensional brain regions where causal signals are strongest.
 
 ## Slides
 
-**[Slides](docs/slides/causal_geometric_structure_slides_v5.pdf)** ([LaTeX source](docs/slides/causal_geometric_structure_slides_v5.tex)) --- 94 pages across 4 parts: core results (geometric dissociation, causal interventions, learned subspaces), stress-testing (validity checks, IIA vacuity, external validation, engagement separation), deeper analysis (potent/null decomposition, activation patching, choice information flow), and additional testing (per-variable subspaces, optogenetic ground truth, Grassmannian dissimilarity, encoder specialization).
+**[Differential geometry of neural population codes](docs/slides/causal_geometric_structure_slides_diffgeo.pdf)** ([source](docs/slides/causal_geometric_structure_slides_diffgeo.tex)) --- 47 pages covering geometric dissociation, spectral universality, evidence-choice alignment, dimensionality as computational strategy, optogenetic validation, and IBL cross-dataset replication.
+
+**[IIA vacuity investigation](docs/slides/causal_geometric_structure_slides_iia.pdf)** ([source](docs/slides/causal_geometric_structure_slides_iia.tex)) --- IIA interchange interventions, structured VAE subspaces, Sutter et al. vacuity replication, engagement separation, and external validation.
+
+**[Full slide deck](docs/slides/causal_geometric_structure_slides_v5.pdf)** ([source](docs/slides/causal_geometric_structure_slides_v5.tex)) --- 94 pages, all results combined across 4 parts.
 
 To compile:
 ```bash
 cd docs/slides
-pdflatex causal_geometric_structure_slides_v5.tex
+pdflatex causal_geometric_structure_slides_diffgeo.tex
 ```
 
 ## Paper
 
-Draft paper in progress (TBD). Current working version in `paper/`.
+Draft paper in `paper/main_v5_3.tex` (working draft, not yet submitted).
 
 ## Key findings
 
-1. CKA and Procrustes anti-correlate across brain regions ($\rho = -0.85$); dimensionality explains the disagreement
-2. A structured VAE finds causal subspaces 3.4x stronger than LDA (73/73 regions, $p = 5.7 \times 10^{-14}$)
-3. LDA is anti-correlated with optogenetic causal importance ($\rho = -0.82$, $p = 0.023$)
-4. Cross-region activation patching reveals directed choice information flow with sender/receiver hub structure
+1. CKA and Procrustes anti-correlate across brain regions (Steinmetz: rho = -0.90, n = 50 regions; IBL replication: rho = -0.94, n = 11 regions, p < 0.0001)
+2. Dimensionality mediates the dissociation: partial correlation controlling for power-law exponent reverses the sign (partial r = +0.44)
+3. A structured VAE finds causal subspaces 3.4x stronger than LDA (73/73 regions, p = 5.7e-14)
+4. LDA is anti-correlated with optogenetic causal importance (rho = -0.73, p = 0.01)
 5. IIA is vacuous for nonlinear methods (Sutter et al. 2025) --- external validation is essential
 
 ## Data
 
-| Directory | Description | Source |
-|-----------|-------------|--------|
-| `data/steinmetz.py` | Loader for Steinmetz et al. 2019 Neuropixels data (73 regions, 39 sessions, 10 mice) | [Steinmetz et al., Nature 2019](https://doi.org/10.1038/s41586-019-1787-x) |
-| `data/ibl.py` | Loader for IBL repeated-site data (cross-dataset replication) | [IBL, 2022](https://int-brain-lab.github.io/) |
-| `data/allen.py` | Allen Mouse Brain Atlas structural connectivity | [Allen Institute](https://connectivity.brain-map.org/) |
-| `results/exp*/` | All experiment results (JSON, JSONL) — downloaded from Modal volume | Computed via Modal GPU |
+| Source | Loader | Description |
+|--------|--------|-------------|
+| [Steinmetz et al. 2019](https://doi.org/10.1038/s41586-019-1787-x) | `data/steinmetz.py` | Neuropixels recordings (73 regions, 39 sessions, 10 mice) |
+| [IBL Brain-Wide Map](https://int-brain-lab.github.io/) | `data/ibl.py` | Cross-dataset replication (139 mice, 12 labs) |
+| [Allen Institute](https://connectivity.brain-map.org/) | `data/allen.py` | Mouse Brain Atlas structural connectivity |
+| Modal GPU | `results/exp*/` | All experiment results (JSON, JSONL) |
 
 ## Experiments
 
@@ -43,16 +45,16 @@ Draft paper in progress (TBD). Current working version in `paper/`.
 
 | Experiment | What it tests |
 |-----------|---------------|
-| `exp42_real_iia.py` | Core IIA interchange interventions across 73 regions |
-| `exp47b_silencing_real_data.py` | Optogenetic silencing validation (n=16 regions) |
-| `exp51_confound_control.py` | Confound control (neuron count, firing rate, temporal shuffle) |
-| `exp53_graded_response.py` | Dose-response: progressive dimension ablation |
-| `exp57_structured_vae.py` | Structured VAE for nonlinear causal subspaces |
-| `exp59_sutter_dilemma.py` | IIA vacuity test (Sutter et al. 2025 replication) |
-| `exp61_engagement_subspace.py` | Engagement vs choice disentanglement |
-| `exp67_potent_null_space.py` | Potent/null space decomposition |
-| `exp70_cross_region_patching.py` | Cross-region activation patching (1,438 directed pairs) |
-| `exp72_sutter_continuous.py` | Continuous metrics for IIA vacuity diagnosis |
+| `exp22` | Geometric type predicts optimal decoder |
+| `exp42` | Core CKA-Procrustes anti-correlation across 73 regions |
+| `exp46` | IBL cross-dataset replication (11 matched regions) |
+| `exp47b` | Optogenetic silencing validation (n=16 regions) |
+| `exp51` | Confound control (neuron count, firing rate, temporal shuffle) |
+| `exp53` | Dose-response: progressive dimension ablation |
+| `exp57` | Structured VAE for nonlinear causal subspaces |
+| `exp59` | IIA vacuity test (Sutter et al. 2025) |
+| `exp67` | Potent/null space decomposition |
+| `exp70` | Cross-region activation patching (1,438 directed pairs) |
 
 ## Library
 
@@ -68,22 +70,19 @@ Draft paper in progress (TBD). Current working version in `paper/`.
 | Script | What it does |
 |--------|-------------|
 | `modal_run.py` | Run experiments on Modal GPUs |
-| `modal_download_opto.py` | Download optogenetic silencing data |
-| `docs/slides/generate_figures.py` | Generate slide figures |
+| `docs/slides/generate_figures.py` | Generate slide figures from exp42 results |
+| `docs/slides/generate_exp46_figures_v2.py` | Generate IBL cross-dataset figures |
 | `paper/generate_figures.py` | Generate paper figures |
 
 ## Setup
 
 ```bash
-# Install
 uv sync
 
 # Configure GCS credentials (for data caching)
 cp .env.example .env
 # Edit .env with your GCS_BUCKET and GCS_SA_KEY_PATH
 ```
-
-The `.env` file must set `GCS_BUCKET` and `GCS_SA_KEY_PATH`. Local data cache goes to `cache/` in the repo root.
 
 ## Reproducing
 
@@ -92,17 +91,18 @@ The `.env` file must set `GCS_BUCKET` and `GCS_SA_KEY_PATH`. Local data cache go
 uv run python -m experiments.exp42_real_iia
 
 # Run on Modal GPU
-uv run modal run modal_run.py --detach
+uv run modal run --detach modal_run.py --experiment exp42
 ```
 
-Pre-computed results for all experiments are in `results/`. Most experiments were run on Modal A10G GPUs.
-
-## Mechanistic Validity
-
-All findings are self-audited using the [Mechanistic Validity](https://mechanistic-validity.github.io/mechanistic-validity/) framework (Tower 2026). This was designed for mechanistic interpretability research in machine learning, but we are testing it out on biological neural networks. Many of the criteria are not possible or do not apply, but we believe it still serves as a useful frame of reference.
-
-The full audit is in [`experiments/VALIDITY_AUDIT_MECHVAL_V1.md`](experiments/VALIDITY_AUDIT_MECHVAL_V1.md) --- 9 findings scored across 27 criteria and 5 validity types. Current verdicts: 2 Causally Suggestive (IIA interventions), 2 Proposed-strong (CKA anti-correlation, parcellation), 5 Proposed, 1 Disconfirmed (IIA does not predict silencing effects). Bottleneck is internal validity --- only one causal method (IIA swap) tested so far.
+Pre-computed results for all experiments are in `results/`.
 
 ## License
 
 MIT
+
+## Citation
+
+<!-- TODO: replace with actual DOI after Zenodo upload -->
+<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+
+Tower, E. (2026). *Causal Geometric Structure in Neural Populations.* Zenodo.

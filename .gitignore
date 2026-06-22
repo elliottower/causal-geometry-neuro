@@ -19,11 +19,43 @@ cache/
 results/allen_cache/
 .idea/
 .ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# LaTeX build artifacts
 *.log
 *.aux
 *.out
 *.bbl
 *.blg
+*.nav
+*.snm
+*.toc
+*.vrb
+*.fls
+*.fdb_latexmk
+*.synctex.gz
 *.tex.bak
+
+# Debug/scratch files
+debug_*.py
+experiments/debug_*.py
+test_allen_cache.py
+results/allen_cache_test.json
+
+# Old slide/paper versions (kept locally, not in repo)
+docs/slides/main*.tex
+docs/slides/main*.pdf
+docs/slides/slides.*
+docs/slides/*_pre_*.tex
+paper/main.tex
+paper/main.pdf
+paper/main_v[0-4]*.tex
+paper/main_v[0-4]*.pdf
+paper/main_v5.tex
+paper/main_v5.pdf
+paper/main_v5_1.*
+paper/main_v5_2.*
+
 wandb/
 .DS_Store

@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{What we found: the tools disagree}{6}{0}{1}
-\beamer@sectionintoc {2}{Is the geometry causal?}{12}{0}{2}
-\beamer@sectionintoc {3}{Did we fool ourselves?}{18}{0}{3}
-\beamer@sectionintoc {4}{What this means}{24}{0}{4}
