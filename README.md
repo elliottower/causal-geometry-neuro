@@ -4,7 +4,7 @@ This project explores applying differential geometry, mechanistic interpretabili
 
 The key bridge: in MI, you intervene on a model's internals directly; in neuroscience, you can't rerun a trial. But you *can* record many trials with different stimuli, then simulate interventions by swapping learned subspace components between trials and measuring whether a downstream decoder's prediction flips --- interchange intervention analysis applied to observational recordings. It's not true causal manipulation of the brain, but a causal test of whether a learned subspace mediates a variable's contribution to the decision.
 
-We find that standard similarity metrics (CKA, Procrustes) give opposite answers about which brain regions are "similar" ($\rho = -0.85$), and that dimensionality explains the disagreement. A structured VAE recovers 3.4x stronger causal signal than linear methods --- but IIA turns out to be vacuous for nonlinear models without external checks (Sutter et al. 2025), so we validate against optogenetic ground truth and engagement controls. The honest takeaway: dimensionality predicts where linear methods fail, but you can't trust the metric alone.
+We find that standard similarity metrics (CKA, Procrustes) give opposite answers about which brain regions are "similar" ($\rho = -0.85$), and that dimensionality explains the disagreement. A structured VAE recovers 3.4x stronger causal signal than linear methods --- but IIA turns out to be vacuous for nonlinear models (matching Sutter et al. 2025). We validate against optogenetic silencing ground truth and engagement controls to check what the metric misses. The honest takeaway: dimensionality predicts where linear methods fail, but you can't trust the metric alone.
 
 ## Slides
 
