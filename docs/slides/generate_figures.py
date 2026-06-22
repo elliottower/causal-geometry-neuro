@@ -218,7 +218,7 @@ def fig_iia_bars():
                 ha="center", fontsize=12, fontweight="bold")
 
     ax.axhline(y=4.5, color=FAIL, linestyle="--", alpha=0.5, linewidth=1.5)
-    ax.text(3.35, 5.2, "random\nbaseline", fontsize=8, color=FAIL, ha="center")
+    ax.text(3.55, 5.8, "random\nbaseline", fontsize=9, color=FAIL, ha="center")
 
     # Bracket for specificity ratio — above all bars
     ax.annotate("", xy=(0, 13.5), xytext=(3, 13.5),

@@ -169,7 +169,8 @@ def compute_ibl_alphas(
 
         for sess in tqdm(sessions_meta, desc=f"  {region}", leave=False):
             try:
-                data = load_session(sess["eid"])
+                probe = sess.get("probe", "probe00")
+                data = load_session(sess["eid"], probe=probe)
                 counts = bin_spikes(
                     data["spike_times"],
                     data["spike_clusters"],
@@ -203,7 +204,16 @@ def compute_ibl_alphas(
                         f"{activity.shape[0]} trials, alpha={alpha:.3f}"
                     )
             except Exception as e:
+                import traceback
                 logger.warning(f"    Failed loading {sess['eid']}: {e}")
+                logger.warning(f"    Traceback: {traceback.format_exc()}")
+                entry = {
+                    "ts": datetime.now().isoformat(), "region": region,
+                    "event": "load_failed", "eid": sess["eid"],
+                    "error": str(e), "probe": sess.get("probe", "probe00"),
+                }
+                with open(jsonl_path, "a") as f:
+                    f.write(json.dumps(entry) + "\n")
 
     return region_alphas
 
@@ -228,7 +238,8 @@ def compute_ibl_cka_procrustes(
 
         for sess in sessions_meta:
             try:
-                data = load_session(sess["eid"])
+                probe = sess.get("probe", "probe00")
+                data = load_session(sess["eid"], probe=probe)
                 counts = bin_spikes(
                     data["spike_times"],
                     data["spike_clusters"],
@@ -315,6 +326,15 @@ def compute_ibl_cka_procrustes(
     }
 
 
+def _save_incremental(results_dir, event, data):
+    """Append a JSONL line for incremental progress tracking."""
+    log_path = results_dir / "exp46_incremental.jsonl"
+    entry = {"ts": datetime.now().isoformat(), "event": event, **data}
+    with open(log_path, "a") as f:
+        f.write(json.dumps(entry, default=str) + "\n")
+    logger.info(f"  [incremental] {event}")
+
+
 def run(max_sessions: int | None = None):
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().isoformat()
@@ -326,6 +346,10 @@ def run(max_sessions: int | None = None):
     steinmetz_raw = compute_steinmetz_alphas(sessions, max_sessions=max_sessions)
     steinmetz_alphas = {r: float(np.mean(vs)) for r, vs in steinmetz_raw.items() if vs}
     logger.info(f"  Steinmetz: alpha computed for {len(steinmetz_alphas)} regions")
+    _save_incremental(RESULTS_DIR, "steinmetz_done", {
+        "n_regions": len(steinmetz_alphas),
+        "regions": list(steinmetz_alphas.keys()),
+    })
 
     # --- Step 2: IBL alphas for overlapping regions ---
     # Focus on regions present in Steinmetz that are also likely in IBL.
@@ -341,6 +365,11 @@ def run(max_sessions: int | None = None):
     )
     ibl_alphas = {r: float(np.mean(vs)) for r, vs in ibl_raw.items() if vs}
     logger.info(f"  IBL: alpha computed for {len(ibl_alphas)} regions")
+    _save_incremental(RESULTS_DIR, "ibl_done", {
+        "n_regions": len(ibl_alphas),
+        "regions": list(ibl_alphas.keys()),
+        "alphas": {r: round(v, 4) for r, v in ibl_alphas.items()},
+    })
 
     # --- Step 3: Match regions and test correlation ---
     matched_regions = sorted(set(steinmetz_alphas) & set(ibl_alphas))
@@ -445,6 +474,10 @@ def run(max_sessions: int | None = None):
     with open(out_path, "w") as f:
         json.dump(results, f, indent=2, default=str)
     logger.info(f"Results saved to {out_path}")
+    _save_incremental(RESULTS_DIR, "complete", {
+        "n_matched": len(matched_regions),
+        "alpha_rho": alpha_correlation["rho"] if alpha_correlation else None,
+    })
 
     # Print summary
     logger.info("=" * 60)
@@ -469,7 +502,7 @@ def run(max_sessions: int | None = None):
         logger.info(f"  CKA-Procrustes anti-correlation: rho={ac['spearman_rho']:.3f} (p={ac['p_value']:.4f})")
     logger.info("=" * 60)
 
-    return results
+    return json.loads(json.dumps(results, default=str))
 
 
 if __name__ == "__main__":

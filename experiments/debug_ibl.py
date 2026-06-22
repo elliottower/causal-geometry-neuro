@@ -147,6 +147,126 @@ def run(**kwargs):
         except Exception as e:
             step("load_data", {"ok": False, "error": str(e), "type": type(e).__name__})
 
+    # Step 10: Region mapping — the actual bug we're debugging
+    # The clusters object has no 'acronym', so we need to map atlas IDs → region names
+    import numpy as np
+    try:
+        insertion = rest_result[0]
+        eid = insertion.get("session") or insertion.get("session_info", {}).get("id")
+        probe = insertion.get("name", "probe00")
+        collection = f"alf/{probe}/pykilosort"
+
+        clusters = one.load_object(eid, "clusters", collection=collection)
+        channels = one.load_object(eid, "channels", collection=collection)
+
+        cl_keys = list(clusters.keys()) if hasattr(clusters, "keys") else []
+        ch_keys = list(channels.keys()) if hasattr(channels, "keys") else []
+        step("loaded_objects", {"cluster_keys": cl_keys, "channel_keys": ch_keys})
+
+        # Check if channels has brainLocationIds
+        atlas_ids = getattr(channels, "brainLocationIds_ccf_2017", None)
+        if atlas_ids is not None:
+            atlas_ids = np.asarray(atlas_ids).astype(int)
+            step("channel_atlas_ids", {
+                "shape": list(atlas_ids.shape),
+                "dtype": str(atlas_ids.dtype),
+                "sample": atlas_ids[:10].tolist(),
+                "unique_count": int(len(np.unique(atlas_ids))),
+            })
+
+        # Check if clusters has a 'channels' field for the mapping
+        cl_channels = getattr(clusters, "channels", None)
+        if cl_channels is not None:
+            cl_channels = np.asarray(cl_channels).astype(int)
+            step("cluster_channels", {
+                "shape": list(cl_channels.shape),
+                "sample": cl_channels[:10].tolist(),
+                "max": int(cl_channels.max()),
+                "n_channels_available": len(atlas_ids) if atlas_ids is not None else "N/A",
+            })
+
+        # 10a: Try iblatlas.regions.BrainRegions
+        try:
+            from iblatlas.regions import BrainRegions
+            br = BrainRegions()
+            step("brain_regions_import", {"ok": True, "n_regions": len(br.id)})
+
+            # Test single ID
+            test_ids = atlas_ids[:5] if atlas_ids is not None else np.array([385, 312, 997])
+            for method_name in ["id2acronym", "id2index", "get"]:
+                try:
+                    method = getattr(br, method_name, None)
+                    if method is None:
+                        continue
+                    result = method(test_ids[0])
+                    step(f"br_{method_name}_single", {"ok": True, "input": int(test_ids[0]), "result": str(result)})
+                except Exception as e:
+                    step(f"br_{method_name}_single", {"ok": False, "error": str(e)})
+
+            # Test array of IDs
+            try:
+                idx_result = br.id2index(test_ids)
+                step("br_id2index_array", {"ok": True, "result_type": str(type(idx_result)), "result": str(idx_result)})
+                if isinstance(idx_result, tuple):
+                    mapped_acronyms = br.acronym[idx_result[1]]
+                else:
+                    mapped_acronyms = br.acronym[idx_result]
+                step("br_mapped_acronyms", {"ok": True, "sample": list(mapped_acronyms[:5])})
+            except Exception as e:
+                step("br_id2index_array", {"ok": False, "error": str(e), "traceback": __import__("traceback").format_exc()})
+
+            # Full mapping: map all channel atlas IDs → acronyms, then cluster → channel → region
+            if atlas_ids is not None and cl_channels is not None:
+                try:
+                    all_idx = br.id2index(atlas_ids)
+                    if isinstance(all_idx, tuple):
+                        ch_acronyms = br.acronym[all_idx[1]]
+                    else:
+                        ch_acronyms = br.acronym[all_idx]
+                    cluster_regions = ch_acronyms[cl_channels]
+                    unique_regions = np.unique(cluster_regions)
+                    step("full_mapping", {
+                        "ok": True,
+                        "n_clusters": len(cluster_regions),
+                        "n_unique_regions": int(len(unique_regions)),
+                        "sample_regions": list(unique_regions[:20]),
+                        "has_VISp": bool("VISp" in unique_regions),
+                        "n_VISp": int(np.sum(cluster_regions == "VISp")),
+                    })
+                except Exception as e:
+                    step("full_mapping", {"ok": False, "error": str(e), "traceback": __import__("traceback").format_exc()})
+
+        except ImportError as e:
+            step("brain_regions_import", {"ok": False, "error": str(e)})
+
+        # 10b: Try one.load_dataset for direct acronyms
+        try:
+            acr = one.load_dataset(eid, "clusters.brainLocationAcronyms_ccf_2017", collection=collection)
+            step("direct_load_acronyms", {
+                "ok": True if acr is not None else False,
+                "type": str(type(acr).__name__) if acr is not None else "None",
+                "len": len(acr) if acr is not None else 0,
+                "sample": list(acr[:5]) if acr is not None and len(acr) > 0 else [],
+            })
+        except Exception as e:
+            step("direct_load_acronyms", {"ok": False, "error": str(e)})
+
+        # 10c: List ALL available datasets for this session
+        try:
+            all_ds = one.list_datasets(eid)
+            cluster_ds = sorted([str(d) for d in all_ds if "cluster" in str(d).lower()])
+            channel_ds = sorted([str(d) for d in all_ds if "channel" in str(d).lower()])
+            step("available_datasets", {
+                "n_total": len(all_ds),
+                "cluster_datasets": cluster_ds,
+                "channel_datasets": channel_ds,
+            })
+        except Exception as e:
+            step("available_datasets", {"ok": False, "error": str(e)})
+
+    except Exception as e:
+        step("region_mapping_error", {"error": str(e), "traceback": __import__("traceback").format_exc()})
+
     # Summary
     ok_steps = sum(1 for s in results["steps"] if s.get("ok", False))
     fail_steps = sum(1 for s in results["steps"] if s.get("ok") is False)

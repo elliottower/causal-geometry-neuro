@@ -1,0 +1,1014 @@
+{
+  "timestamp": "2026-06-22T19:41:19.606958",
+  "n_regions": 73,
+  "n_pairs": 1316,
+  "region_profiles": {
+    "ACA": {
+      "n_sessions": 11,
+      "lda_accuracy_mean": 0.610861974242201,
+      "knn_accuracy_mean": 0.614527245847672,
+      "lda_advantage": -0.003665271605471032,
+      "cka_mean": 0.13529718516398243,
+      "proc_mean": 0.9304764566120385,
+      "cka_std": 0.09063433128946732,
+      "proc_std": 0.07497480616755844,
+      "n_pairs": 55
+    },
+    "CA3": {
+      "n_sessions": 8,
+      "lda_accuracy_mean": 0.5578697835955073,
+      "knn_accuracy_mean": 0.5704988795531534,
+      "lda_advantage": -0.012629095957646053,
+      "cka_mean": 0.11392311969558237,
+      "proc_mean": 0.9559688742376663,
+      "cka_std": 0.040739607136403275,
+      "proc_std": 0.022307634516464607,
+      "n_pairs": 28
+    },
+    "DG": {
+      "n_sessions": 16,
+      "lda_accuracy_mean": 0.6141958356445414,
+      "knn_accuracy_mean": 0.6330807027910973,
+      "lda_advantage": -0.018884867146555906,
+      "cka_mean": 0.10214155919013822,
+      "proc_mean": 0.9533307117618676,
+      "cka_std": 0.0688789322559433,
+      "proc_std": 0.046715526350967554,
+      "n_pairs": 120
+    },
+    "LS": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.5570689018724303,
+      "knn_accuracy_mean": 0.6092735072109571,
+      "lda_advantage": -0.05220460533852678,
+      "cka_mean": 0.20058672934112573,
+      "proc_mean": 0.9619305659371215,
+      "cka_std": 0.013508610585359352,
+      "proc_std": 0.0075912831640997346,
+      "n_pairs": 3
+    },
+    "MOs": {
+      "n_sessions": 17,
+      "lda_accuracy_mean": 0.5761080894411759,
+      "knn_accuracy_mean": 0.6104818208260044,
+      "lda_advantage": -0.034373731384828576,
+      "cka_mean": 0.17473863756857763,
+      "proc_mean": 0.8944751036577892,
+      "cka_std": 0.13619766091270763,
+      "proc_std": 0.15048118325029838,
+      "n_pairs": 136
+    },
+    "SUB": {
+      "n_sessions": 9,
+      "lda_accuracy_mean": 0.6046503849698581,
+      "knn_accuracy_mean": 0.6882944604884823,
+      "lda_advantage": -0.08364407551862418,
+      "cka_mean": 0.2971106255060256,
+      "proc_mean": 0.8078760725249152,
+      "cka_std": 0.10728955456088288,
+      "proc_std": 0.09697610569764756,
+      "n_pairs": 36
+    },
+    "VISp": {
+      "n_sessions": 12,
+      "lda_accuracy_mean": 0.5920946384644495,
+      "knn_accuracy_mean": 0.6210254559859977,
+      "lda_advantage": -0.028930817521548136,
+      "cka_mean": 0.15355650655728564,
+      "proc_mean": 0.962209611762956,
+      "cka_std": 0.0869176861911855,
+      "proc_std": 0.032981684622761735,
+      "n_pairs": 66
+    },
+    "root": {
+      "n_sessions": 22,
+      "lda_accuracy_mean": 0.5726022220332514,
+      "knn_accuracy_mean": 0.5994008501770387,
+      "lda_advantage": -0.026798628143787306,
+      "cka_mean": 0.2128955648269352,
+      "proc_mean": 0.9019136880209586,
+      "cka_std": 0.134825812657202,
+      "proc_std": 0.11209614859248639,
+      "n_pairs": 231
+    },
+    "CA1": {
+      "n_sessions": 20,
+      "lda_accuracy_mean": 0.5980143888999739,
+      "knn_accuracy_mean": 0.627869649234327,
+      "lda_advantage": -0.02985526033435304,
+      "cka_mean": 0.11775604846167262,
+      "proc_mean": 0.9478116322431906,
+      "cka_std": 0.05942327211183822,
+      "proc_std": 0.04633788432918277,
+      "n_pairs": 190
+    },
+    "POST": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.5659894259430569,
+      "knn_accuracy_mean": 0.595612293144208,
+      "lda_advantage": -0.02962286720115115,
+      "cka_mean": 0.06929718184465858,
+      "proc_mean": 0.981864235336511,
+      "cka_std": 0.060672863928852946,
+      "proc_std": 0.021029610472506167,
+      "n_pairs": 6
+    },
+    "VISl": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.48533333333333334,
+      "knn_accuracy_mean": 0.5453333333333333,
+      "lda_advantage": -0.06,
+      "cka_mean": 0.24564193666617698,
+      "proc_mean": 0.8489492237648362,
+      "cka_std": 0.06742658628568601,
+      "proc_std": 0.10834789985437682,
+      "n_pairs": 3
+    },
+    "VISpm": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.559460867920033,
+      "knn_accuracy_mean": 0.6341531172826221,
+      "lda_advantage": -0.07469224936258911,
+      "cka_mean": 0.2465935646105637,
+      "proc_mean": 0.8444931498666567,
+      "cka_std": 0.09085081770581338,
+      "proc_std": 0.07867303319827913,
+      "n_pairs": 6
+    },
+    "MG": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.5378394490697913,
+      "knn_accuracy_mean": 0.7036828039880769,
+      "lda_advantage": -0.1658433549182856,
+      "cka_mean": 0.3603044397916206,
+      "proc_mean": 0.7732851784314342,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "MRN": {
+      "n_sessions": 11,
+      "lda_accuracy_mean": 0.5624259322987327,
+      "knn_accuracy_mean": 0.599436391464167,
+      "lda_advantage": -0.03701045916543433,
+      "cka_mean": 0.34914819398492924,
+      "proc_mean": 0.7014770983843648,
+      "cka_std": 0.1940510587444343,
+      "proc_std": 0.23659902154169443,
+      "n_pairs": 55
+    },
+    "NB": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.6931400966183574,
+      "knn_accuracy_mean": 0.7105314009661835,
+      "lda_advantage": -0.017391304347826098
+    },
+    "SPF": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.7124709631000102,
+      "knn_accuracy_mean": 0.7145081714461918,
+      "lda_advantage": -0.002037208346181596,
+      "cka_mean": 0.14656286440927058,
+      "proc_mean": 0.9247876513624302,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "VISam": {
+      "n_sessions": 11,
+      "lda_accuracy_mean": 0.5313646998668037,
+      "knn_accuracy_mean": 0.582842608352927,
+      "lda_advantage": -0.051477908486123325,
+      "cka_mean": 0.21123992351214604,
+      "proc_mean": 0.8736950256922497,
+      "cka_std": 0.1090303574716744,
+      "proc_std": 0.13292095484438723,
+      "n_pairs": 55
+    },
+    "LGd": {
+      "n_sessions": 8,
+      "lda_accuracy_mean": 0.5417374440602324,
+      "knn_accuracy_mean": 0.5976940688757199,
+      "lda_advantage": -0.055956624815487466,
+      "cka_mean": 0.1953307608611977,
+      "proc_mean": 0.9311780908553604,
+      "cka_std": 0.05807543467491159,
+      "proc_std": 0.04322824765253447,
+      "n_pairs": 28
+    },
+    "LSr": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.6193877551020408,
+      "knn_accuracy_mean": 0.623591836734694,
+      "lda_advantage": -0.004204081632653178,
+      "cka_mean": 0.1434999017825701,
+      "proc_mean": 0.9535028809862898,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "TH": {
+      "n_sessions": 8,
+      "lda_accuracy_mean": 0.510817611086988,
+      "knn_accuracy_mean": 0.6175012121870025,
+      "lda_advantage": -0.10668360110001451,
+      "cka_mean": 0.22574828315178067,
+      "proc_mean": 0.8642330829038042,
+      "cka_std": 0.11674952165562061,
+      "proc_std": 0.15080818374345903,
+      "n_pairs": 28
+    },
+    "VISa": {
+      "n_sessions": 5,
+      "lda_accuracy_mean": 0.6619746238040337,
+      "knn_accuracy_mean": 0.712383092518005,
+      "lda_advantage": -0.05040846871397131,
+      "cka_mean": 0.21448403017504097,
+      "proc_mean": 0.8676704744968315,
+      "cka_std": 0.10546473703748901,
+      "proc_std": 0.11798051102744166,
+      "n_pairs": 10
+    },
+    "VPL": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.5685678210678211,
+      "knn_accuracy_mean": 0.6413714698000412,
+      "lda_advantage": -0.07280364873222012,
+      "cka_mean": 0.37172210279896944,
+      "proc_mean": 0.6419824340189343,
+      "cka_std": 0.11697257520216249,
+      "proc_std": 0.14536110499437213,
+      "n_pairs": 6
+    },
+    "OLF": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.5522570921985815,
+      "knn_accuracy_mean": 0.6572234042553191,
+      "lda_advantage": -0.10496631205673757,
+      "cka_mean": 0.13964830722649582,
+      "proc_mean": 0.9859489983972217,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "ORB": {
+      "n_sessions": 5,
+      "lda_accuracy_mean": 0.582139799373842,
+      "knn_accuracy_mean": 0.5825001086192575,
+      "lda_advantage": -0.00036030924541552434,
+      "cka_mean": 0.1610052363449443,
+      "proc_mean": 0.9393398436308666,
+      "cka_std": 0.09617153594100007,
+      "proc_std": 0.0564173645107687,
+      "n_pairs": 10
+    },
+    "AUD": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.5880000000000001,
+      "knn_accuracy_mean": 0.616,
+      "lda_advantage": -0.027999999999999914
+    },
+    "CP": {
+      "n_sessions": 5,
+      "lda_accuracy_mean": 0.6033705802968962,
+      "knn_accuracy_mean": 0.6376151147098515,
+      "lda_advantage": -0.034244534412955385,
+      "cka_mean": 0.3729780409791779,
+      "proc_mean": 0.7499587471295006,
+      "cka_std": 0.2040634091302512,
+      "proc_std": 0.22250442256857322,
+      "n_pairs": 10
+    },
+    "EPd": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.644,
+      "knn_accuracy_mean": 0.656,
+      "lda_advantage": -0.01200000000000001
+    },
+    "LD": {
+      "n_sessions": 5,
+      "lda_accuracy_mean": 0.5940666666666667,
+      "knn_accuracy_mean": 0.5993333333333334,
+      "lda_advantage": -0.005266666666666642,
+      "cka_mean": 0.17659811371543233,
+      "proc_mean": 0.9185904578087799,
+      "cka_std": 0.08826345326470612,
+      "proc_std": 0.05195009387897068,
+      "n_pairs": 10
+    },
+    "PIR": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.552,
+      "knn_accuracy_mean": 0.636,
+      "lda_advantage": -0.08399999999999996
+    },
+    "SSp": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.5965512820512822,
+      "knn_accuracy_mean": 0.6273397435897436,
+      "lda_advantage": -0.030788461538461487,
+      "cka_mean": 0.2898984007063187,
+      "proc_mean": 0.7578828643794058,
+      "cka_std": 0.28245591837585815,
+      "proc_std": 0.30494083801155963,
+      "n_pairs": 6
+    },
+    "ILA": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.528,
+      "knn_accuracy_mean": 0.5733333333333334,
+      "lda_advantage": -0.04533333333333334,
+      "cka_mean": 0.17481836881404303,
+      "proc_mean": 0.9584873716338125,
+      "cka_std": 0.00865742926503355,
+      "proc_std": 0.011351719014199358,
+      "n_pairs": 3
+    },
+    "LP": {
+      "n_sessions": 10,
+      "lda_accuracy_mean": 0.6393353819581462,
+      "knn_accuracy_mean": 0.6683731224494626,
+      "lda_advantage": -0.029037740491316355,
+      "cka_mean": 0.17981265334085797,
+      "proc_mean": 0.9385050232251578,
+      "cka_std": 0.10025636294308837,
+      "proc_std": 0.04660032382607917,
+      "n_pairs": 45
+    },
+    "PL": {
+      "n_sessions": 8,
+      "lda_accuracy_mean": 0.53,
+      "knn_accuracy_mean": 0.5595000000000001,
+      "lda_advantage": -0.02950000000000008,
+      "cka_mean": 0.14472611883421257,
+      "proc_mean": 0.9296143566238895,
+      "cka_std": 0.0920079882477208,
+      "proc_std": 0.09288162290631184,
+      "n_pairs": 28
+    },
+    "PO": {
+      "n_sessions": 5,
+      "lda_accuracy_mean": 0.5790974098204353,
+      "knn_accuracy_mean": 0.6472317177816622,
+      "lda_advantage": -0.06813430796122688,
+      "cka_mean": 0.35043005909604613,
+      "proc_mean": 0.7956433991932942,
+      "cka_std": 0.15524571317108987,
+      "proc_std": 0.14917016899481567,
+      "n_pairs": 10
+    },
+    "TT": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.528,
+      "knn_accuracy_mean": 0.5680000000000001,
+      "lda_advantage": -0.040000000000000036,
+      "cka_mean": 0.1595447153060617,
+      "proc_mean": 0.8869948847886144,
+      "cka_std": 0.13089929476608878,
+      "proc_std": 0.11301432181794195,
+      "n_pairs": 3
+    },
+    "ORBm": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.496,
+      "knn_accuracy_mean": 0.56,
+      "lda_advantage": -0.06400000000000006
+    },
+    "GPe": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.5147777777777778,
+      "knn_accuracy_mean": 0.5829487179487179,
+      "lda_advantage": -0.06817094017094016,
+      "cka_mean": 0.1852563533749602,
+      "proc_mean": 0.858156018356563,
+      "cka_std": 0.1524657615953902,
+      "proc_std": 0.17429060872982585,
+      "n_pairs": 3
+    },
+    "MB": {
+      "n_sessions": 6,
+      "lda_accuracy_mean": 0.5515015015015016,
+      "knn_accuracy_mean": 0.5609439439439439,
+      "lda_advantage": -0.0094424424424423,
+      "cka_mean": 0.2855311029753402,
+      "proc_mean": 0.7800206766686405,
+      "cka_std": 0.06455665255655996,
+      "proc_std": 0.06031680416782776,
+      "n_pairs": 15
+    },
+    "POL": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.6155857377433732,
+      "knn_accuracy_mean": 0.6301834388927985,
+      "lda_advantage": -0.014597701149425268,
+      "cka_mean": 0.196759536960501,
+      "proc_mean": 0.8858042873448708,
+      "cka_std": 0.049421076088698564,
+      "proc_std": 0.01915363705228692,
+      "n_pairs": 3
+    },
+    "SCm": {
+      "n_sessions": 7,
+      "lda_accuracy_mean": 0.5161152733280393,
+      "knn_accuracy_mean": 0.5505671385671386,
+      "lda_advantage": -0.034451865239099266,
+      "cka_mean": 0.12376220854959084,
+      "proc_mean": 0.9492368418979853,
+      "cka_std": 0.04314333779566591,
+      "proc_std": 0.02293791048152377,
+      "n_pairs": 21
+    },
+    "SCsg": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.5592432432432433,
+      "knn_accuracy_mean": 0.5750554765291608,
+      "lda_advantage": -0.01581223328591752,
+      "cka_mean": 0.07844728836007281,
+      "proc_mean": 0.9784227520966322,
+      "cka_std": 0.04271652451964272,
+      "proc_std": 0.013798285214464549,
+      "n_pairs": 3
+    },
+    "VISrl": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.5066856330014224,
+      "knn_accuracy_mean": 0.5181621621621622,
+      "lda_advantage": -0.011476529160739712,
+      "cka_mean": 0.08584322187634284,
+      "proc_mean": 0.9957028974882357,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "LSc": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.56,
+      "knn_accuracy_mean": 0.544,
+      "lda_advantage": 0.016000000000000014
+    },
+    "MOp": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.5882564102564104,
+      "knn_accuracy_mean": 0.631017094017094,
+      "lda_advantage": -0.04276068376068365,
+      "cka_mean": 0.8401863212985962,
+      "proc_mean": 0.13211612005127846,
+      "cka_std": 0.04486034688489279,
+      "proc_std": 0.050479174622406135,
+      "n_pairs": 3
+    },
+    "PT": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.46399999999999997,
+      "knn_accuracy_mean": 0.5880000000000001,
+      "lda_advantage": -0.12400000000000011
+    },
+    "LH": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.592,
+      "knn_accuracy_mean": 0.54,
+      "lda_advantage": 0.051999999999999935
+    },
+    "MD": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.5434187192118226,
+      "knn_accuracy_mean": 0.5998062397372742,
+      "lda_advantage": -0.056387520525451595,
+      "cka_mean": 0.3038237749100716,
+      "proc_mean": 0.9139275371213792,
+      "cka_std": 0.06811025155184075,
+      "proc_std": 0.04968244230037751,
+      "n_pairs": 3
+    },
+    "MS": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.488,
+      "knn_accuracy_mean": 0.48,
+      "lda_advantage": 0.008000000000000007
+    },
+    "RN": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.552,
+      "knn_accuracy_mean": 0.5359999999999999,
+      "lda_advantage": 0.016000000000000125
+    },
+    "SCs": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.5525810810810812,
+      "knn_accuracy_mean": 0.5516201201201202,
+      "lda_advantage": 0.0009609609609609882,
+      "cka_mean": 0.0821317316315487,
+      "proc_mean": 0.9639377263454696,
+      "cka_std": 0.022749854323544066,
+      "proc_std": 0.01598589622040207,
+      "n_pairs": 6
+    },
+    "ZI": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.5486639676113361,
+      "knn_accuracy_mean": 0.5825775978407558,
+      "lda_advantage": -0.03391363022941973,
+      "cka_mean": 0.23082194332449088,
+      "proc_mean": 0.837559320772213,
+      "cka_std": 0.14623726287385833,
+      "proc_std": 0.17051824027538676,
+      "n_pairs": 6
+    },
+    "RSP": {
+      "n_sessions": 9,
+      "lda_accuracy_mean": 0.5683035752025467,
+      "knn_accuracy_mean": 0.5883383551211742,
+      "lda_advantage": -0.020034779918627454,
+      "cka_mean": 0.14377343611360224,
+      "proc_mean": 0.9535368286178811,
+      "cka_std": 0.06623012538799529,
+      "proc_std": 0.048046129254081395,
+      "n_pairs": 36
+    },
+    "BLA": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.5167179487179487,
+      "knn_accuracy_mean": 0.530974358974359,
+      "lda_advantage": -0.014256410256410224,
+      "cka_mean": 0.2194188098418849,
+      "proc_mean": 0.8665963198301252,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "VPM": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.5905360996132321,
+      "knn_accuracy_mean": 0.5978128576404438,
+      "lda_advantage": -0.007276758027211727,
+      "cka_mean": 0.33676478799641485,
+      "proc_mean": 0.7109952041070047,
+      "cka_std": 0.08731958386123576,
+      "proc_std": 0.08473665644514296,
+      "n_pairs": 6
+    },
+    "SSs": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.43200000000000005,
+      "knn_accuracy_mean": 0.548,
+      "lda_advantage": -0.11599999999999999
+    },
+    "MEA": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.5892929292929293,
+      "knn_accuracy_mean": 0.5667676767676767,
+      "lda_advantage": 0.022525252525252615
+    },
+    "RT": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.5897575757575757,
+      "knn_accuracy_mean": 0.6685959595959596,
+      "lda_advantage": -0.07883838383838393,
+      "cka_mean": 0.18871864765515842,
+      "proc_mean": 0.9297617097592056,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "ACB": {
+      "n_sessions": 3,
+      "lda_accuracy_mean": 0.528,
+      "knn_accuracy_mean": 0.5413333333333333,
+      "lda_advantage": -0.013333333333333308,
+      "cka_mean": 0.10596491493139827,
+      "proc_mean": 0.9584750571232066,
+      "cka_std": 0.03196604998332739,
+      "proc_std": 0.039755078109769935,
+      "n_pairs": 3
+    },
+    "OT": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.604,
+      "knn_accuracy_mean": 0.596,
+      "lda_advantage": 0.008000000000000007
+    },
+    "SI": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.5760000000000001,
+      "knn_accuracy_mean": 0.544,
+      "lda_advantage": 0.03200000000000003
+    },
+    "SNr": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.5697956147529215,
+      "knn_accuracy_mean": 0.5815195860969936,
+      "lda_advantage": -0.011723971344072104,
+      "cka_mean": 0.28978006738681344,
+      "proc_mean": 0.7803481547022858,
+      "cka_std": 0.11843045778191193,
+      "proc_std": 0.15843334492104647,
+      "n_pairs": 6
+    },
+    "APN": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.5500752990851512,
+      "knn_accuracy_mean": 0.6881752287121745,
+      "lda_advantage": -0.13809992962702333,
+      "cka_mean": 0.2617225480440638,
+      "proc_mean": 0.8482050703135646,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "VAL": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.556,
+      "knn_accuracy_mean": 0.7263333333333333,
+      "lda_advantage": -0.17033333333333323
+    },
+    "IC": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.54,
+      "knn_accuracy_mean": 0.544,
+      "lda_advantage": -0.0040000000000000036
+    },
+    "CA2": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.496443812233286,
+      "knn_accuracy_mean": 0.5351351351351352,
+      "lda_advantage": -0.038691322901849234
+    },
+    "SCig": {
+      "n_sessions": 4,
+      "lda_accuracy_mean": 0.5670123436892947,
+      "knn_accuracy_mean": 0.6497663983662169,
+      "lda_advantage": -0.0827540546769222,
+      "cka_mean": 0.5168584187516257,
+      "proc_mean": 0.5196549053872423,
+      "cka_std": 0.12242428886956185,
+      "proc_std": 0.16974798131193297,
+      "n_pairs": 6
+    },
+    "DP": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.5760000000000001,
+      "knn_accuracy_mean": 0.6160000000000001,
+      "lda_advantage": -0.040000000000000036
+    },
+    "CL": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.7059113300492612,
+      "knn_accuracy_mean": 0.7620689655172415,
+      "lda_advantage": -0.05615763546798025
+    },
+    "PAG": {
+      "n_sessions": 2,
+      "lda_accuracy_mean": 0.4893153153153153,
+      "knn_accuracy_mean": 0.5393513513513513,
+      "lda_advantage": -0.05003603603603596,
+      "cka_mean": 0.1990688271610621,
+      "proc_mean": 0.9012397046330067,
+      "cka_std": 0.0,
+      "proc_std": 0.0,
+      "n_pairs": 1
+    },
+    "EP": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.5496626180836707,
+      "knn_accuracy_mean": 0.6912280701754385,
+      "lda_advantage": -0.14156545209176785
+    },
+    "BMA": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.652,
+      "knn_accuracy_mean": 0.672,
+      "lda_advantage": -0.020000000000000018
+    },
+    "COA": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.5760000000000001,
+      "knn_accuracy_mean": 0.716,
+      "lda_advantage": -0.1399999999999999
+    },
+    "CA": {
+      "n_sessions": 1,
+      "lda_accuracy_mean": 0.548,
+      "knn_accuracy_mean": 0.484,
+      "lda_advantage": 0.06400000000000006
+    }
+  },
+  "prediction_test": {
+    "n_regions": 50,
+    "spearman_rho": -0.49474189675870345,
+    "p_value": 0.00025997003729778855,
+    "interpretation": "Positive rho means high-CKA (linear-type) regions have larger LDA advantage over kNN, confirming geometric type predicts optimal decoder choice.",
+    "regions": {
+      "ACA": {
+        "cka_mean": 0.13529718516398243,
+        "lda_accuracy": 0.610861974242201,
+        "knn_accuracy": 0.614527245847672,
+        "lda_advantage": -0.003665271605471032
+      },
+      "CA3": {
+        "cka_mean": 0.11392311969558237,
+        "lda_accuracy": 0.5578697835955073,
+        "knn_accuracy": 0.5704988795531534,
+        "lda_advantage": -0.012629095957646053
+      },
+      "DG": {
+        "cka_mean": 0.10214155919013822,
+        "lda_accuracy": 0.6141958356445414,
+        "knn_accuracy": 0.6330807027910973,
+        "lda_advantage": -0.018884867146555906
+      },
+      "LS": {
+        "cka_mean": 0.20058672934112573,
+        "lda_accuracy": 0.5570689018724303,
+        "knn_accuracy": 0.6092735072109571,
+        "lda_advantage": -0.05220460533852678
+      },
+      "MOs": {
+        "cka_mean": 0.17473863756857763,
+        "lda_accuracy": 0.5761080894411759,
+        "knn_accuracy": 0.6104818208260044,
+        "lda_advantage": -0.034373731384828576
+      },
+      "SUB": {
+        "cka_mean": 0.2971106255060256,
+        "lda_accuracy": 0.6046503849698581,
+        "knn_accuracy": 0.6882944604884823,
+        "lda_advantage": -0.08364407551862418
+      },
+      "VISp": {
+        "cka_mean": 0.15355650655728564,
+        "lda_accuracy": 0.5920946384644495,
+        "knn_accuracy": 0.6210254559859977,
+        "lda_advantage": -0.028930817521548136
+      },
+      "root": {
+        "cka_mean": 0.2128955648269352,
+        "lda_accuracy": 0.5726022220332514,
+        "knn_accuracy": 0.5994008501770387,
+        "lda_advantage": -0.026798628143787306
+      },
+      "CA1": {
+        "cka_mean": 0.11775604846167262,
+        "lda_accuracy": 0.5980143888999739,
+        "knn_accuracy": 0.627869649234327,
+        "lda_advantage": -0.02985526033435304
+      },
+      "POST": {
+        "cka_mean": 0.06929718184465858,
+        "lda_accuracy": 0.5659894259430569,
+        "knn_accuracy": 0.595612293144208,
+        "lda_advantage": -0.02962286720115115
+      },
+      "VISl": {
+        "cka_mean": 0.24564193666617698,
+        "lda_accuracy": 0.48533333333333334,
+        "knn_accuracy": 0.5453333333333333,
+        "lda_advantage": -0.06
+      },
+      "VISpm": {
+        "cka_mean": 0.2465935646105637,
+        "lda_accuracy": 0.559460867920033,
+        "knn_accuracy": 0.6341531172826221,
+        "lda_advantage": -0.07469224936258911
+      },
+      "MG": {
+        "cka_mean": 0.3603044397916206,
+        "lda_accuracy": 0.5378394490697913,
+        "knn_accuracy": 0.7036828039880769,
+        "lda_advantage": -0.1658433549182856
+      },
+      "MRN": {
+        "cka_mean": 0.34914819398492924,
+        "lda_accuracy": 0.5624259322987327,
+        "knn_accuracy": 0.599436391464167,
+        "lda_advantage": -0.03701045916543433
+      },
+      "SPF": {
+        "cka_mean": 0.14656286440927058,
+        "lda_accuracy": 0.7124709631000102,
+        "knn_accuracy": 0.7145081714461918,
+        "lda_advantage": -0.002037208346181596
+      },
+      "VISam": {
+        "cka_mean": 0.21123992351214604,
+        "lda_accuracy": 0.5313646998668037,
+        "knn_accuracy": 0.582842608352927,
+        "lda_advantage": -0.051477908486123325
+      },
+      "LGd": {
+        "cka_mean": 0.1953307608611977,
+        "lda_accuracy": 0.5417374440602324,
+        "knn_accuracy": 0.5976940688757199,
+        "lda_advantage": -0.055956624815487466
+      },
+      "LSr": {
+        "cka_mean": 0.1434999017825701,
+        "lda_accuracy": 0.6193877551020408,
+        "knn_accuracy": 0.623591836734694,
+        "lda_advantage": -0.004204081632653178
+      },
+      "TH": {
+        "cka_mean": 0.22574828315178067,
+        "lda_accuracy": 0.510817611086988,
+        "knn_accuracy": 0.6175012121870025,
+        "lda_advantage": -0.10668360110001451
+      },
+      "VISa": {
+        "cka_mean": 0.21448403017504097,
+        "lda_accuracy": 0.6619746238040337,
+        "knn_accuracy": 0.712383092518005,
+        "lda_advantage": -0.05040846871397131
+      },
+      "VPL": {
+        "cka_mean": 0.37172210279896944,
+        "lda_accuracy": 0.5685678210678211,
+        "knn_accuracy": 0.6413714698000412,
+        "lda_advantage": -0.07280364873222012
+      },
+      "OLF": {
+        "cka_mean": 0.13964830722649582,
+        "lda_accuracy": 0.5522570921985815,
+        "knn_accuracy": 0.6572234042553191,
+        "lda_advantage": -0.10496631205673757
+      },
+      "ORB": {
+        "cka_mean": 0.1610052363449443,
+        "lda_accuracy": 0.582139799373842,
+        "knn_accuracy": 0.5825001086192575,
+        "lda_advantage": -0.00036030924541552434
+      },
+      "CP": {
+        "cka_mean": 0.3729780409791779,
+        "lda_accuracy": 0.6033705802968962,
+        "knn_accuracy": 0.6376151147098515,
+        "lda_advantage": -0.034244534412955385
+      },
+      "LD": {
+        "cka_mean": 0.17659811371543233,
+        "lda_accuracy": 0.5940666666666667,
+        "knn_accuracy": 0.5993333333333334,
+        "lda_advantage": -0.005266666666666642
+      },
+      "SSp": {
+        "cka_mean": 0.2898984007063187,
+        "lda_accuracy": 0.5965512820512822,
+        "knn_accuracy": 0.6273397435897436,
+        "lda_advantage": -0.030788461538461487
+      },
+      "ILA": {
+        "cka_mean": 0.17481836881404303,
+        "lda_accuracy": 0.528,
+        "knn_accuracy": 0.5733333333333334,
+        "lda_advantage": -0.04533333333333334
+      },
+      "LP": {
+        "cka_mean": 0.17981265334085797,
+        "lda_accuracy": 0.6393353819581462,
+        "knn_accuracy": 0.6683731224494626,
+        "lda_advantage": -0.029037740491316355
+      },
+      "PL": {
+        "cka_mean": 0.14472611883421257,
+        "lda_accuracy": 0.53,
+        "knn_accuracy": 0.5595000000000001,
+        "lda_advantage": -0.02950000000000008
+      },
+      "PO": {
+        "cka_mean": 0.35043005909604613,
+        "lda_accuracy": 0.5790974098204353,
+        "knn_accuracy": 0.6472317177816622,
+        "lda_advantage": -0.06813430796122688
+      },
+      "TT": {
+        "cka_mean": 0.1595447153060617,
+        "lda_accuracy": 0.528,
+        "knn_accuracy": 0.5680000000000001,
+        "lda_advantage": -0.040000000000000036
+      },
+      "GPe": {
+        "cka_mean": 0.1852563533749602,
+        "lda_accuracy": 0.5147777777777778,
+        "knn_accuracy": 0.5829487179487179,
+        "lda_advantage": -0.06817094017094016
+      },
+      "MB": {
+        "cka_mean": 0.2855311029753402,
+        "lda_accuracy": 0.5515015015015016,
+        "knn_accuracy": 0.5609439439439439,
+        "lda_advantage": -0.0094424424424423
+      },
+      "POL": {
+        "cka_mean": 0.196759536960501,
+        "lda_accuracy": 0.6155857377433732,
+        "knn_accuracy": 0.6301834388927985,
+        "lda_advantage": -0.014597701149425268
+      },
+      "SCm": {
+        "cka_mean": 0.12376220854959084,
+        "lda_accuracy": 0.5161152733280393,
+        "knn_accuracy": 0.5505671385671386,
+        "lda_advantage": -0.034451865239099266
+      },
+      "SCsg": {
+        "cka_mean": 0.07844728836007281,
+        "lda_accuracy": 0.5592432432432433,
+        "knn_accuracy": 0.5750554765291608,
+        "lda_advantage": -0.01581223328591752
+      },
+      "VISrl": {
+        "cka_mean": 0.08584322187634284,
+        "lda_accuracy": 0.5066856330014224,
+        "knn_accuracy": 0.5181621621621622,
+        "lda_advantage": -0.011476529160739712
+      },
+      "MOp": {
+        "cka_mean": 0.8401863212985962,
+        "lda_accuracy": 0.5882564102564104,
+        "knn_accuracy": 0.631017094017094,
+        "lda_advantage": -0.04276068376068365
+      },
+      "MD": {
+        "cka_mean": 0.3038237749100716,
+        "lda_accuracy": 0.5434187192118226,
+        "knn_accuracy": 0.5998062397372742,
+        "lda_advantage": -0.056387520525451595
+      },
+      "SCs": {
+        "cka_mean": 0.0821317316315487,
+        "lda_accuracy": 0.5525810810810812,
+        "knn_accuracy": 0.5516201201201202,
+        "lda_advantage": 0.0009609609609609882
+      },
+      "ZI": {
+        "cka_mean": 0.23082194332449088,
+        "lda_accuracy": 0.5486639676113361,
+        "knn_accuracy": 0.5825775978407558,
+        "lda_advantage": -0.03391363022941973
+      },
+      "RSP": {
+        "cka_mean": 0.14377343611360224,
+        "lda_accuracy": 0.5683035752025467,
+        "knn_accuracy": 0.5883383551211742,
+        "lda_advantage": -0.020034779918627454
+      },
+      "BLA": {
+        "cka_mean": 0.2194188098418849,
+        "lda_accuracy": 0.5167179487179487,
+        "knn_accuracy": 0.530974358974359,
+        "lda_advantage": -0.014256410256410224
+      },
+      "VPM": {
+        "cka_mean": 0.33676478799641485,
+        "lda_accuracy": 0.5905360996132321,
+        "knn_accuracy": 0.5978128576404438,
+        "lda_advantage": -0.007276758027211727
+      },
+      "RT": {
+        "cka_mean": 0.18871864765515842,
+        "lda_accuracy": 0.5897575757575757,
+        "knn_accuracy": 0.6685959595959596,
+        "lda_advantage": -0.07883838383838393
+      },
+      "ACB": {
+        "cka_mean": 0.10596491493139827,
+        "lda_accuracy": 0.528,
+        "knn_accuracy": 0.5413333333333333,
+        "lda_advantage": -0.013333333333333308
+      },
+      "SNr": {
+        "cka_mean": 0.28978006738681344,
+        "lda_accuracy": 0.5697956147529215,
+        "knn_accuracy": 0.5815195860969936,
+        "lda_advantage": -0.011723971344072104
+      },
+      "APN": {
+        "cka_mean": 0.2617225480440638,
+        "lda_accuracy": 0.5500752990851512,
+        "knn_accuracy": 0.6881752287121745,
+        "lda_advantage": -0.13809992962702333
+      },
+      "SCig": {
+        "cka_mean": 0.5168584187516257,
+        "lda_accuracy": 0.5670123436892947,
+        "knn_accuracy": 0.6497663983662169,
+        "lda_advantage": -0.0827540546769222
+      },
+      "PAG": {
+        "cka_mean": 0.1990688271610621,
+        "lda_accuracy": 0.4893153153153153,
+        "knn_accuracy": 0.5393513513513513,
+        "lda_advantage": -0.05003603603603596
+      }
+    }
+  },
+  "double_dissociation": {
+    "nonlinear_type_region": "POST",
+    "nonlinear_type_cka": 0.06929718184465858,
+    "nonlinear_type_lda_acc": 0.5659894259430569,
+    "nonlinear_type_knn_acc": 0.595612293144208,
+    "linear_type_region": "MOp",
+    "linear_type_cka": 0.8401863212985962,
+    "linear_type_lda_acc": 0.5882564102564104,
+    "linear_type_knn_acc": 0.631017094017094,
+    "is_double_dissociation": false
+  }
+}

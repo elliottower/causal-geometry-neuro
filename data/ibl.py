@@ -82,10 +82,12 @@ def find_sessions_for_region(region: str, min_neurons: int = 20) -> list[dict]:
             if eid is None:
                 logger.warning(f"  pid={pid}: no session ID in response")
                 continue
+            probe_name = info.get("name", "probe00")
             sessions.append(
                 {
                     "pid": pid,
                     "eid": eid,
+                    "probe": probe_name,
                     "lab": info.get("session_info", {}).get("lab", "unknown"),
                     "subject": info.get("session_info", {}).get("subject", "unknown"),
                 }
@@ -137,10 +139,31 @@ def load_session(eid: str, probe: str = "probe00") -> dict:
     trial_feedback_type.
     """
     one = get_one()
-    collection = f"alf/{probe}/pykilosort"
 
-    spikes = one.load_object(eid, "spikes", collection=collection)
-    clusters = one.load_object(eid, "clusters", collection=collection)
+    # Try multiple collection paths — IBL data lives under different paths
+    # depending on the processing pipeline version
+    collections_to_try = [
+        f"alf/{probe}/pykilosort",
+        f"alf/{probe}",
+    ]
+
+    spikes = None
+    clusters = None
+    for collection in collections_to_try:
+        try:
+            spikes = one.load_object(eid, "spikes", collection=collection)
+            clusters = one.load_object(eid, "clusters", collection=collection)
+            logger.info("load_session(%s): loaded from collection=%s", eid, collection)
+            break
+        except Exception as e:
+            logger.debug("load_session(%s): collection=%s failed: %s", eid, collection, e)
+            continue
+
+    if spikes is None or clusters is None:
+        raise RuntimeError(
+            f"Could not load spikes/clusters for {eid} probe={probe}. "
+            f"Tried collections: {collections_to_try}"
+        )
     trials = one.load_object(eid, "trials")
 
     # --- Debug logging for clusters object (diagnosing 0-region bug) ---
@@ -172,8 +195,48 @@ def load_session(eid: str, probe: str = "probe00") -> dict:
                 logger.info("  -> using '%s' as region labels", key)
 
     if raw_regions is None:
+        logger.info(
+            "  No region labels in clusters (keys: %s), trying channels fallback", clusters_keys
+        )
+        for collection in collections_to_try:
+            try:
+                channels = one.load_object(eid, "channels", collection=collection)
+                ch_keys = list(channels.keys()) if hasattr(channels, "keys") else dir(channels)
+                logger.info("  channels keys: %s", ch_keys)
+                ch_regions = None
+                for ch_key in ("acronym", "brainLocationAcronyms_ccf_2017", "brain_region"):
+                    val = channels.get(ch_key) if hasattr(channels, "get") else getattr(channels, ch_key, None)
+                    if val is not None:
+                        ch_regions = _to_str_array(val)
+                        logger.info("  -> using channels['%s'] (%d entries, sample=%s)", ch_key, len(ch_regions), list(ch_regions[:3]))
+                        break
+                if ch_regions is None:
+                    atlas_ids = channels.get("brainLocationIds_ccf_2017") if hasattr(channels, "get") else getattr(channels, "brainLocationIds_ccf_2017", None)
+                    if atlas_ids is None:
+                        atlas_ids = channels.get("atlas_id") if hasattr(channels, "get") else getattr(channels, "atlas_id", None)
+                    if atlas_ids is not None:
+                        try:
+                            from iblatlas.regions import BrainRegions
+                            br = BrainRegions()
+                            atlas_ids_int = np.asarray(atlas_ids).astype(int)
+                            ch_regions = np.array([br.id2acronym(int(aid))[0] for aid in atlas_ids_int])
+                            logger.info("  -> mapped %d atlas IDs to acronyms via BrainRegions (sample=%s)", len(ch_regions), list(ch_regions[:5]))
+                        except Exception as e:
+                            logger.warning("  iblatlas BrainRegions mapping failed: %s", e)
+                if ch_regions is not None and len(ch_regions) > 0:
+                    cluster_channels = clusters.get("channels") if hasattr(clusters, "get") else getattr(clusters, "channels", None)
+                    if cluster_channels is not None:
+                        cluster_channels = np.asarray(cluster_channels).astype(int)
+                        valid = cluster_channels < len(ch_regions)
+                        raw_regions = np.where(valid, ch_regions[np.clip(cluster_channels, 0, len(ch_regions) - 1)], "unknown")
+                        logger.info("  mapped %d/%d clusters to regions via channels", int(valid.sum()), len(cluster_channels))
+                    break
+            except Exception as e:
+                logger.debug("  channels fallback failed for collection=%s: %s", collection, e)
+
+    if raw_regions is None:
         logger.warning(
-            "  No region labels found in clusters! Available keys: %s", clusters_keys
+            "  No region labels found in clusters or channels!"
         )
         cluster_regions = np.array([], dtype=str)
     else:
@@ -255,8 +318,19 @@ def filter_by_region(
     regions = _to_str_array(cluster_regions)
     target = str(target_region).strip()
 
-    # Element-wise comparison on plain Python strings to avoid dtype mismatch
-    mask = np.array([str(r).strip() == target for r in regions], dtype=bool)
+    # Match exact region OR layer-specific sub-regions from Allen CCF
+    # Atlas IDs resolve to layer labels like VISp4/VISp5/VISp6a; "VISp" should match all
+    # A sub-region match requires the suffix to start with a digit (layer) or "-" (e.g. DG-mo)
+    def _matches(r: str) -> bool:
+        r = r.strip()
+        if r == target:
+            return True
+        if r.startswith(target) and len(r) > len(target):
+            suffix_char = r[len(target)]
+            return suffix_char.isdigit() or suffix_char == "-"
+        return False
+
+    mask = np.array([_matches(str(r)) for r in regions], dtype=bool)
 
     n_match = int(mask.sum())
     logger.debug(
