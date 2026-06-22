@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{What we found: the tools disagree}{8}{0}{1}
-\beamer@sectionintoc {2}{Is the geometry causal?}{14}{0}{2}
-\beamer@sectionintoc {3}{Validation}{26}{0}{3}
-\beamer@sectionintoc {4}{Beyond linear subspaces}{33}{0}{4}
