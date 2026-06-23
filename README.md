@@ -6,21 +6,21 @@ Standard similarity metrics (CKA, Procrustes) give opposite answers about which 
 
 ## Slides
 
-**[Differential geometry of neural population codes](docs/slides/causal_geometric_structure_slides_diffgeo.pdf)** ([source](docs/slides/causal_geometric_structure_slides_diffgeo.tex)) --- 47 pages covering geometric dissociation, spectral universality, evidence-choice alignment, dimensionality as computational strategy, optogenetic validation, and IBL cross-dataset replication.
+**[Main talk — Causal Geometric Structure in Neural Populations](docs/slides/main_v6.pdf)** ([source](docs/slides/main_v6.tex)) --- 69 slides covering geometric dissociation, causal subspace interventions, structured VAE, optogenetic validation, cross-region patching, and six independent lines of evidence.
 
-**[IIA vacuity investigation](docs/slides/causal_geometric_structure_slides_iia.pdf)** ([source](docs/slides/causal_geometric_structure_slides_iia.tex)) --- IIA interchange interventions, structured VAE subspaces, Sutter et al. vacuity replication, engagement separation, and external validation.
+**[Differential geometry of neural population codes](docs/slides/slides_diffgeo_v2.pdf)** ([source](docs/slides/slides_diffgeo_v2.tex)) --- 47 pages covering spectral universality, evidence-choice alignment, dimensionality as computational strategy, and IBL cross-dataset replication.
 
-**[Full slide deck](docs/slides/causal_geometric_structure_slides_v5.pdf)** ([source](docs/slides/causal_geometric_structure_slides_v5.tex)) --- 94 pages, all results combined across 4 parts.
+**[IIA vacuity investigation](docs/slides/slides_iia_v2.pdf)** ([source](docs/slides/slides_iia_v2.tex)) --- IIA interchange interventions, structured VAE subspaces, Sutter et al. vacuity replication, engagement separation, and external validation.
 
 To compile:
 ```bash
 cd docs/slides
-pdflatex causal_geometric_structure_slides_diffgeo.tex
+pdflatex main_v6.tex
 ```
 
 ## Paper
 
-Draft paper in `paper/main_v5_3.tex` (working draft, not yet submitted).
+**[Neural Geometry Is Not Metric-Neutral: Dimensionality, Dissociation, and Causal Subspaces in Brain-Wide Neuropixels Recordings](paper/combined/v2/main.tex)** --- working draft (TMLR format). Includes 16 appendix sections with full experimental details.
 
 ## Key findings
 
@@ -41,20 +41,25 @@ Draft paper in `paper/main_v5_3.tex` (working draft, not yet submitted).
 
 ## Experiments
 
-72 experiments in `experiments/`, run on Modal GPUs. Key ones:
+81 experiments in `experiments/` and `batch2_reviewer_fixes/`, run on Modal GPUs. Key ones:
 
 | Experiment | What it tests |
 |-----------|---------------|
-| `exp22` | Geometric type predicts optimal decoder |
 | `exp42` | Core CKA-Procrustes anti-correlation across 73 regions |
 | `exp46` | IBL cross-dataset replication (11 matched regions) |
 | `exp47b` | Optogenetic silencing validation (n=16 regions) |
 | `exp51` | Confound control (neuron count, firing rate, temporal shuffle) |
 | `exp53` | Dose-response: progressive dimension ablation |
 | `exp57` | Structured VAE for nonlinear causal subspaces |
-| `exp59` | IIA vacuity test (Sutter et al. 2025) |
+| `exp62` | Shuffled-label control (p = 6e-8) |
 | `exp67` | Potent/null space decomposition |
 | `exp70` | Cross-region activation patching (1,438 directed pairs) |
+| `exp71` | VAE causal circuits (2.73x choice effect size) |
+| `exp74` | Debiased CKA (reviewer fix) |
+| `exp76` | UMAP stochasticity robustness |
+| `exp78` | Optogenetic power analysis |
+| `exp80` | iVAE identifiability verification |
+| `exp81` | CD-NOD causal discovery over brain regions |
 
 ## Library
 
