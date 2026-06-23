@@ -44,6 +44,7 @@ image = (
     .add_local_dir("data", "/root/repo/data")
     .add_local_dir("experiments", "/root/repo/experiments")
     .add_local_dir("batch2_reviewer_fixes", "/root/repo/batch2_reviewer_fixes")
+    .add_local_dir("experiments_batch2", "/root/repo/experiments_batch2")
     .add_local_file("pyproject.toml", "/root/repo/pyproject.toml")
 )
 
@@ -129,13 +130,13 @@ EXPERIMENT_MAP = {
     "exp71": "experiments.exp71_vae_causal_circuits",
     "exp72": "experiments.exp72_sutter_continuous",
     "exp73": "experiments.exp73_structured_pi_sae",
-    "exp74": "batch2_reviewer_fixes.exp74_debiased_cka",
-    "exp75": "batch2_reviewer_fixes.exp75_ccf_coordinate_matching",
-    "exp76": "batch2_reviewer_fixes.exp76_umap_stochasticity",
-    "exp77": "batch2_reviewer_fixes.exp77_alpha_bias_robustness",
-    "exp78": "batch2_reviewer_fixes.exp78_optogenetic_power_analysis",
-    "exp80": "batch2_reviewer_fixes.exp80_ivae_verification",
-    "exp81": "batch2_reviewer_fixes.exp81_cdnod_region_graph",
+    "exp74": "experiments_batch2.exp74_debiased_cka",
+    "exp75": "experiments_batch2.exp75_ccf_coordinate_matching",
+    "exp76": "experiments_batch2.exp76_umap_stochasticity",
+    "exp77": "experiments_batch2.exp77_alpha_bias_robustness",
+    "exp78": "experiments_batch2.exp78_optogenetic_power_analysis",
+    "exp80": "experiments_batch2.exp80_ivae_verification",
+    "exp81": "experiments_batch2.exp81_cdnod_region_graph",
     "debug_ibl": "experiments.debug_ibl",
 }
 
