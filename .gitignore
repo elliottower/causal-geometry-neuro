@@ -37,6 +37,8 @@ results/allen_cache/
 *.synctex.gz
 *.tex.bak
 
+CLAUDE.md
+
 # Debug/scratch files
 debug_*.py
 experiments/debug_*.py
@@ -44,9 +46,12 @@ test_allen_cache.py
 results/allen_cache_test.json
 
 # Old slide/paper versions (kept locally, not in repo)
-docs/slides/main*.tex
-docs/slides/main*.pdf
-docs/slides/slides.*
+docs/slides/main.tex
+docs/slides/main.pdf
+docs/slides/main_v[0-5].tex
+docs/slides/main_v[0-5].pdf
+docs/slides/slides.tex
+docs/slides/slides.pdf
 docs/slides/*_pre_*.tex
 paper/main.tex
 paper/main.pdf
@@ -56,6 +61,20 @@ paper/main_v5.tex
 paper/main_v5.pdf
 paper/main_v5_1.*
 paper/main_v5_2.*
+
+# Scratch/generated slide artifacts
+docs/slides/NUMBER_AUDIT.md
+docs/slides/blog_companion.md
+docs/slides/exp73_sae_ablation.pdf
+docs/slides/figures/slide_p1.png
+docs/slides/generate_exp73_figure.py
+
+# Results (synced via Modal volume)
+results/
+batch2_reviewer_fixes/results/
+
+# Paper archive
+paper/_archive/
 
 wandb/
 .DS_Store
