@@ -5,6 +5,10 @@ authors:
   - family-names: Tower
     given-names: Elliot
     email: elliot@elliottower.ai
+    orcid: "https://orcid.org/0000-0001-7004-8884"
 type: software
+version: "0.1.0"
+date-released: "2026-06-23"
 license: MIT
 repository-code: "https://github.com/elliottower/causal-geometry-neuro"
+doi: "10.5281/zenodo.20819684"
