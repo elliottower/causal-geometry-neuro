@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-06-23T01:45:19.337056",
+  "n_regions": 73,
+  "n_pairs": 1316,
+  "biased_cka": {
+    "spearman_rho": 0.8498667789134406,
+    "p_value": 0.0,
+    "partial_rho_controlling_n_neurons": 0.8555528918396275
+  },
+  "debiased_cka": {
+    "spearman_rho": 0.44533761210538175,
+    "p_value": 4.161468460509115e-65,
+    "partial_rho_controlling_n_neurons": 0.3417718020807168
+  },
+  "comparison": {
+    "debiasing_strengthens": false,
+    "delta_rho": -0.4045291668080589
+  }
+}

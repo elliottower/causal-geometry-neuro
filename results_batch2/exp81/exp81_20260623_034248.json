@@ -1,0 +1,316 @@
+{
+  "n_regions": 3,
+  "n_sessions": 7,
+  "n_trials_total": 1648,
+  "regions": [
+    "CA1",
+    "DG",
+    "root"
+  ],
+  "sessions": [
+    4,
+    9,
+    11,
+    12,
+    18,
+    22,
+    38
+  ],
+  "cdnod": {
+    "directed_edges": [
+      [
+        "DG",
+        "CA1"
+      ],
+      [
+        "root",
+        "CA1"
+      ],
+      [
+        "DG",
+        "root"
+      ],
+      [
+        "root",
+        "C"
+      ]
+    ],
+    "undirected_edges": [],
+    "changing_modules": [
+      "root"
+    ],
+    "n_directed": 4,
+    "n_undirected": 0,
+    "n_changing_modules": 1,
+    "hub_scores": {
+      "CA1": {
+        "outgoing": 0,
+        "incoming": 2,
+        "total_degree": 2,
+        "is_changing_module": false
+      },
+      "DG": {
+        "outgoing": 2,
+        "incoming": 0,
+        "total_degree": 2,
+        "is_changing_module": false
+      },
+      "root": {
+        "outgoing": 1,
+        "incoming": 1,
+        "total_degree": 2,
+        "is_changing_module": true
+      }
+    },
+    "elapsed_seconds": 0.0,
+    "alpha": 0.05,
+    "indep_test": "fisherz",
+    "adjacency_matrix": [
+      [
+        0,
+        -1,
+        -1,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        -1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        -1,
+        0
+      ]
+    ],
+    "labels": [
+      "CA1",
+      "DG",
+      "root",
+      "C"
+    ]
+  },
+  "pc_baseline": {
+    "directed_edges": [],
+    "undirected_edges": [
+      [
+        "CA1",
+        "DG"
+      ],
+      [
+        "CA1",
+        "root"
+      ],
+      [
+        "DG",
+        "root"
+      ]
+    ],
+    "n_directed": 0,
+    "n_undirected": 3,
+    "hub_scores": {
+      "CA1": {
+        "outgoing": 0,
+        "incoming": 0,
+        "total_degree": 0
+      },
+      "DG": {
+        "outgoing": 0,
+        "incoming": 0,
+        "total_degree": 0
+      },
+      "root": {
+        "outgoing": 0,
+        "incoming": 0,
+        "total_degree": 0
+      }
+    },
+    "adjacency_matrix": [
+      [
+        0,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        0
+      ]
+    ],
+    "labels": [
+      "CA1",
+      "DG",
+      "root"
+    ],
+    "elapsed_seconds": 0.0
+  },
+  "score_baseline": {
+    "directed_edges": [
+      [
+        "CA1",
+        "DG",
+        -0.2693
+      ],
+      [
+        "root",
+        "DG",
+        -0.3393
+      ],
+      [
+        "CA1",
+        "root",
+        0.1593
+      ]
+    ],
+    "n_directed": 3,
+    "hub_scores": {
+      "CA1": {
+        "outgoing": 2,
+        "incoming": 0,
+        "total_degree": 2,
+        "outgoing_weight": 0.4286,
+        "incoming_weight": 0
+      },
+      "DG": {
+        "outgoing": 0,
+        "incoming": 2,
+        "total_degree": 2,
+        "outgoing_weight": 0,
+        "incoming_weight": 0.6086
+      },
+      "root": {
+        "outgoing": 1,
+        "incoming": 1,
+        "total_degree": 2,
+        "outgoing_weight": 0.3393,
+        "incoming_weight": 0.1593
+      }
+    },
+    "weighted_adjacency": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.26931235163013295,
+        0.0,
+        -0.339297311726871
+      ],
+      [
+        0.1593124119819937,
+        0.0,
+        0.0
+      ]
+    ],
+    "labels": [
+      "CA1",
+      "DG",
+      "root"
+    ],
+    "threshold": 0.1,
+    "elapsed_seconds": 0.0,
+    "method": "DirectLiNGAM"
+  },
+  "exp70_comparison": null,
+  "top_cdnod_hubs": [
+    [
+      "DG",
+      {
+        "outgoing": 2,
+        "incoming": 0,
+        "total_degree": 2,
+        "is_changing_module": false
+      }
+    ],
+    [
+      "root",
+      {
+        "outgoing": 1,
+        "incoming": 1,
+        "total_degree": 2,
+        "is_changing_module": true
+      }
+    ],
+    [
+      "CA1",
+      {
+        "outgoing": 0,
+        "incoming": 2,
+        "total_degree": 2,
+        "is_changing_module": false
+      }
+    ]
+  ],
+  "top_pc_hubs": [
+    [
+      "CA1",
+      {
+        "outgoing": 0,
+        "incoming": 0,
+        "total_degree": 0
+      }
+    ],
+    [
+      "DG",
+      {
+        "outgoing": 0,
+        "incoming": 0,
+        "total_degree": 0
+      }
+    ],
+    [
+      "root",
+      {
+        "outgoing": 0,
+        "incoming": 0,
+        "total_degree": 0
+      }
+    ]
+  ],
+  "top_score_hubs": [
+    [
+      "CA1",
+      {
+        "outgoing": 2,
+        "incoming": 0,
+        "total_degree": 2,
+        "outgoing_weight": 0.4286,
+        "incoming_weight": 0
+      }
+    ],
+    [
+      "root",
+      {
+        "outgoing": 1,
+        "incoming": 1,
+        "total_degree": 2,
+        "outgoing_weight": 0.3393,
+        "incoming_weight": 0.1593
+      }
+    ],
+    [
+      "DG",
+      {
+        "outgoing": 0,
+        "incoming": 2,
+        "total_degree": 2,
+        "outgoing_weight": 0,
+        "incoming_weight": 0.6086
+      }
+    ]
+  ]
+}

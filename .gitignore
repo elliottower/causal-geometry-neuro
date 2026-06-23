@@ -69,9 +69,8 @@ docs/slides/exp73_sae_ablation.pdf
 docs/slides/figures/slide_p1.png
 docs/slides/generate_exp73_figure.py
 
-# Results (synced via Modal volume)
-results/
-batch2_reviewer_fixes/results/
+# Large results (synced via Modal volume, too big for git)
+/results/
 
 # Paper archive
 paper/_archive/

@@ -1,0 +1,506 @@
+{
+  "timestamp": "2026-06-23T01:54:45.640859",
+  "n_steinmetz_regions": 24,
+  "n_zatka_haas_positions": 26,
+  "n_with_effect_data": 26,
+  "n_with_decoding": 73,
+  "string_matching_n": 12,
+  "string_matching_regions": [
+    "ACA",
+    "MOp",
+    "MOs",
+    "ORB",
+    "PL",
+    "RSP",
+    "SSp",
+    "SSs",
+    "VISam",
+    "VISl",
+    "VISp",
+    "VISpm"
+  ],
+  "results_by_cutoff": {
+    "0.5": {
+      "cutoff_mm": 0.5,
+      "n_matched": 10,
+      "correlation": {
+        "spearman_rho": -0.09146511499786561,
+        "p_value": 0.801585518004463,
+        "n_matched": 10
+      },
+      "matched_pairs": [
+        {
+          "steinmetz_region": "ACA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.282842712474619,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6769683599327315
+        },
+        {
+          "steinmetz_region": "MOs",
+          "zatka_haas_idx": 4,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.15678634497030908,
+          "decoding_accuracy": 0.6529891883841572
+        },
+        {
+          "steinmetz_region": "MOp",
+          "zatka_haas_idx": 5,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.11710014168097463,
+          "decoding_accuracy": 0.6822991452991453
+        },
+        {
+          "steinmetz_region": "SSp",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.689724358974359
+        },
+        {
+          "steinmetz_region": "SSs",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.608
+        },
+        {
+          "steinmetz_region": "VISrl",
+          "zatka_haas_idx": 23,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.5788022759601706
+        },
+        {
+          "steinmetz_region": "RSP",
+          "zatka_haas_idx": 13,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.15832923593544732,
+          "decoding_accuracy": 0.6508219945812201
+        },
+        {
+          "steinmetz_region": "ILA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.2,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6586666666666666
+        },
+        {
+          "steinmetz_region": "ORB",
+          "zatka_haas_idx": 14,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.07190322813551342,
+          "decoding_accuracy": 0.6570360232572998
+        },
+        {
+          "steinmetz_region": "ORBm",
+          "zatka_haas_idx": 2,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.3067745387881636,
+          "decoding_accuracy": 0.54
+        }
+      ]
+    },
+    "0.75": {
+      "cutoff_mm": 0.75,
+      "n_matched": 11,
+      "correlation": {
+        "spearman_rho": -0.1885182008473982,
+        "p_value": 0.5788094278419589,
+        "n_matched": 11
+      },
+      "matched_pairs": [
+        {
+          "steinmetz_region": "ACA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.282842712474619,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6769683599327315
+        },
+        {
+          "steinmetz_region": "MOs",
+          "zatka_haas_idx": 4,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.15678634497030908,
+          "decoding_accuracy": 0.6529891883841572
+        },
+        {
+          "steinmetz_region": "MOp",
+          "zatka_haas_idx": 5,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.11710014168097463,
+          "decoding_accuracy": 0.6822991452991453
+        },
+        {
+          "steinmetz_region": "SSp",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.689724358974359
+        },
+        {
+          "steinmetz_region": "SSs",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.608
+        },
+        {
+          "steinmetz_region": "VISrl",
+          "zatka_haas_idx": 23,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.5788022759601706
+        },
+        {
+          "steinmetz_region": "RSP",
+          "zatka_haas_idx": 13,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.15832923593544732,
+          "decoding_accuracy": 0.6508219945812201
+        },
+        {
+          "steinmetz_region": "PL",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.5385164807134505,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.5960000000000001
+        },
+        {
+          "steinmetz_region": "ILA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.2,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6586666666666666
+        },
+        {
+          "steinmetz_region": "ORB",
+          "zatka_haas_idx": 14,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.07190322813551342,
+          "decoding_accuracy": 0.6570360232572998
+        },
+        {
+          "steinmetz_region": "ORBm",
+          "zatka_haas_idx": 2,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.3067745387881636,
+          "decoding_accuracy": 0.54
+        }
+      ]
+    },
+    "1.0": {
+      "cutoff_mm": 1.0,
+      "n_matched": 11,
+      "correlation": {
+        "spearman_rho": -0.1885182008473982,
+        "p_value": 0.5788094278419589,
+        "n_matched": 11
+      },
+      "matched_pairs": [
+        {
+          "steinmetz_region": "ACA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.282842712474619,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6769683599327315
+        },
+        {
+          "steinmetz_region": "MOs",
+          "zatka_haas_idx": 4,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.15678634497030908,
+          "decoding_accuracy": 0.6529891883841572
+        },
+        {
+          "steinmetz_region": "MOp",
+          "zatka_haas_idx": 5,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.11710014168097463,
+          "decoding_accuracy": 0.6822991452991453
+        },
+        {
+          "steinmetz_region": "SSp",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.689724358974359
+        },
+        {
+          "steinmetz_region": "SSs",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.608
+        },
+        {
+          "steinmetz_region": "VISrl",
+          "zatka_haas_idx": 23,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.5788022759601706
+        },
+        {
+          "steinmetz_region": "RSP",
+          "zatka_haas_idx": 13,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.15832923593544732,
+          "decoding_accuracy": 0.6508219945812201
+        },
+        {
+          "steinmetz_region": "PL",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.5385164807134505,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.5960000000000001
+        },
+        {
+          "steinmetz_region": "ILA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.2,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6586666666666666
+        },
+        {
+          "steinmetz_region": "ORB",
+          "zatka_haas_idx": 14,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.07190322813551342,
+          "decoding_accuracy": 0.6570360232572998
+        },
+        {
+          "steinmetz_region": "ORBm",
+          "zatka_haas_idx": 2,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.3067745387881636,
+          "decoding_accuracy": 0.54
+        }
+      ]
+    },
+    "1.5": {
+      "cutoff_mm": 1.5,
+      "n_matched": 14,
+      "correlation": {
+        "spearman_rho": -0.07778257931976326,
+        "p_value": 0.7915479697203008,
+        "n_matched": 14
+      },
+      "matched_pairs": [
+        {
+          "steinmetz_region": "ACA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.282842712474619,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6769683599327315
+        },
+        {
+          "steinmetz_region": "MOs",
+          "zatka_haas_idx": 4,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.15678634497030908,
+          "decoding_accuracy": 0.6529891883841572
+        },
+        {
+          "steinmetz_region": "MOp",
+          "zatka_haas_idx": 5,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.11710014168097463,
+          "decoding_accuracy": 0.6822991452991453
+        },
+        {
+          "steinmetz_region": "SSp",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.689724358974359
+        },
+        {
+          "steinmetz_region": "SSs",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.608
+        },
+        {
+          "steinmetz_region": "VISp",
+          "zatka_haas_idx": 23,
+          "distance_mm": 1.5,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.6714111954940769
+        },
+        {
+          "steinmetz_region": "VISl",
+          "zatka_haas_idx": 23,
+          "distance_mm": 1.118033988749895,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.5733333333333334
+        },
+        {
+          "steinmetz_region": "VISam",
+          "zatka_haas_idx": 13,
+          "distance_mm": 1.118033988749895,
+          "silencing_effect": 0.15832923593544732,
+          "decoding_accuracy": 0.6366826545416007
+        },
+        {
+          "steinmetz_region": "VISrl",
+          "zatka_haas_idx": 23,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.5788022759601706
+        },
+        {
+          "steinmetz_region": "RSP",
+          "zatka_haas_idx": 13,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.15832923593544732,
+          "decoding_accuracy": 0.6508219945812201
+        },
+        {
+          "steinmetz_region": "PL",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.5385164807134505,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.5960000000000001
+        },
+        {
+          "steinmetz_region": "ILA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.2,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6586666666666666
+        },
+        {
+          "steinmetz_region": "ORB",
+          "zatka_haas_idx": 14,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.07190322813551342,
+          "decoding_accuracy": 0.6570360232572998
+        },
+        {
+          "steinmetz_region": "ORBm",
+          "zatka_haas_idx": 2,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.3067745387881636,
+          "decoding_accuracy": 0.54
+        }
+      ]
+    },
+    "2.0": {
+      "cutoff_mm": 2.0,
+      "n_matched": 15,
+      "correlation": {
+        "spearman_rho": -0.20110807799194302,
+        "p_value": 0.47231892279813836,
+        "n_matched": 15
+      },
+      "matched_pairs": [
+        {
+          "steinmetz_region": "ACA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.282842712474619,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6769683599327315
+        },
+        {
+          "steinmetz_region": "MOs",
+          "zatka_haas_idx": 4,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.15678634497030908,
+          "decoding_accuracy": 0.6529891883841572
+        },
+        {
+          "steinmetz_region": "MOp",
+          "zatka_haas_idx": 5,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.11710014168097463,
+          "decoding_accuracy": 0.6822991452991453
+        },
+        {
+          "steinmetz_region": "SSp",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.689724358974359
+        },
+        {
+          "steinmetz_region": "SSs",
+          "zatka_haas_idx": 11,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.13528566827915905,
+          "decoding_accuracy": 0.608
+        },
+        {
+          "steinmetz_region": "VISp",
+          "zatka_haas_idx": 23,
+          "distance_mm": 1.5,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.6714111954940769
+        },
+        {
+          "steinmetz_region": "VISl",
+          "zatka_haas_idx": 23,
+          "distance_mm": 1.118033988749895,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.5733333333333334
+        },
+        {
+          "steinmetz_region": "VISam",
+          "zatka_haas_idx": 13,
+          "distance_mm": 1.118033988749895,
+          "silencing_effect": 0.15832923593544732,
+          "decoding_accuracy": 0.6366826545416007
+        },
+        {
+          "steinmetz_region": "VISpm",
+          "zatka_haas_idx": 23,
+          "distance_mm": 1.5811388300841898,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.6939261203868411
+        },
+        {
+          "steinmetz_region": "VISrl",
+          "zatka_haas_idx": 23,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.03817181760343365,
+          "decoding_accuracy": 0.5788022759601706
+        },
+        {
+          "steinmetz_region": "RSP",
+          "zatka_haas_idx": 13,
+          "distance_mm": 0.5,
+          "silencing_effect": 0.15832923593544732,
+          "decoding_accuracy": 0.6508219945812201
+        },
+        {
+          "steinmetz_region": "PL",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.5385164807134505,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.5960000000000001
+        },
+        {
+          "steinmetz_region": "ILA",
+          "zatka_haas_idx": 1,
+          "distance_mm": 0.2,
+          "silencing_effect": 0.22897198428605123,
+          "decoding_accuracy": 0.6586666666666666
+        },
+        {
+          "steinmetz_region": "ORB",
+          "zatka_haas_idx": 14,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.07190322813551342,
+          "decoding_accuracy": 0.6570360232572998
+        },
+        {
+          "steinmetz_region": "ORBm",
+          "zatka_haas_idx": 2,
+          "distance_mm": 0.0,
+          "silencing_effect": 0.3067745387881636,
+          "decoding_accuracy": 0.54
+        }
+      ]
+    }
+  }
+}

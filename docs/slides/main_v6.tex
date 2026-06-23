@@ -924,7 +924,7 @@ If the same evidence subspaces transfer to IBL data, it's not an artifact of our
 \end{itemize}
 
 \vspace{0.5em}
-\textcolor{choice}{\textbf{Status:}} In progress.
+\textbf{Status:} IBL replication confirms the dissociation ($\rho = -0.94$, $n = 11$ matched regions).
 \end{column}
 \end{columns}
 \end{frame}
@@ -1343,7 +1343,7 @@ If you know whether a brain region has ``linear'' or ``manifold'' geometry, you 
 \begin{tabular}{ll}
 \textbf{Correlation:} & $r = -0.51$ \\[0.2em]
 \textbf{Significance:} & $p = 0.0002$ \\[0.2em]
-\textbf{Sample:} & 50 brain regions \\
+\textbf{Sample:} & 73 brain regions \\
 \end{tabular}
 }
 \end{center}
@@ -1463,7 +1463,7 @@ Does anatomical wiring (Allen Mouse Brain Atlas) predict which regions route evi
 \begin{enumerate}
   \item Linear and manifold tools anti-correlate ($-0.85$); dimensionality explains why
   \item Variance structure is universal ($0.94$); neural content is not ($0.09$)
-  \item Rotation everywhere (72/73), but 10$\times$ variation by region type
+  \item Rotation everywhere (72/73), but 50$\times$ variation by region type
 \end{enumerate}
 \end{column}
 \begin{column}{0.48\textwidth}
@@ -1649,10 +1649,10 @@ IIA above null & $0.68$ & $0.09$ \\
 
 \vspace{0.3em}
 \textbf{Result:}\\[0.2em]
-{\small Cross-IIA (swap engagement, measure choice flip): only $\sim$13\% vs.\ within-subspace $\sim$60\%.}
+{\small Cross-IIA (swap engagement, measure choice flip): only 17\% vs.\ within-subspace $\sim$60\%.}
 
 \vspace{0.2em}
-{\small Grassmannian distance $\approx 2.35$ (near-maximal), confirming near-orthogonality.}
+{\small Grassmannian distance $= 2.41$ (near-maximal out of $2.72$), confirming near-orthogonality.}
 \end{column}
 \begin{column}{0.48\textwidth}
 \textbf{Why this matters:}\\[0.3em]
@@ -1746,7 +1746,7 @@ IIA above null & $0.68$ & $0.09$ \\
 \includegraphics[width=\textwidth]{potent_null_diagram.pdf}
 
 \vspace{0.5em}
-{\small \textcolor{choice}{\textbf{Running:}} Exp67 decomposes each region into potent/null and tests whether null-space fraction predicts linear method failure.}
+{\small Exp67 confirms: null-space fraction predicts linear method failure. High-dimensional regions have large null spaces that dominate CKA.}
 \end{column}
 \end{columns}
 \end{frame}
@@ -1933,7 +1933,7 @@ LDA & $0.000$ & 0/73 wins \\
 \textbf{Surprise:} Adding identifiability constraints (label-conditioned prior) \emph{destroys} performance. The structured split alone is sufficient; the prior is unnecessary and actively harmful.
 
 \vspace{0.3em}
-\textbf{Why?} The binary choice label ($k = 2$) barely meets pi-VAE's identifiability condition. With so little supervision signal, the prior over-regularizes the latent space.
+\textbf{Why?} The binary choice label ($k = 2$) provably fails pi-VAE's identifiability condition: two classes produce at most rank~1 in the prior mean space, but $d_{\text{causal}} = 3$ requires rank~3. The prior over-regularizes because it cannot represent the causal subspace.
 \end{flushleft}
 \end{frame}
 
@@ -1953,7 +1953,7 @@ LDA & $0.000$ & 0/73 wins \\
 \textbf{Graded response} & IIA monotonic in 80\% of regions & \textcolor{pass}{\textbf{Pass}} \\
 \textbf{Double dissociation} & Evidence $\perp$ RT subspaces & \textcolor{pass}{\textbf{Pass}} \\
 \textbf{Learned subspaces} & VAE IIA 3.4$\times$ LDA; wins 73/73 regions & \textcolor{pass}{\textbf{Pass}} \\
-\textbf{Engagement separation} & $\mathbf{z}_{\text{engage}} \perp \mathbf{z}_{\text{choice}}$; cross-IIA only 13\% & \textcolor{pass}{\textbf{Pass}} \\
+\textbf{Engagement separation} & $\mathbf{z}_{\text{engage}} \perp \mathbf{z}_{\text{choice}}$; cross-IIA only 17\% & \textcolor{pass}{\textbf{Pass}} \\
 \textbf{Multi-task} & 4 task variables with distinct, structured subspaces & \textcolor{pass}{\textbf{Pass}} \\
 \textbf{Optogenetic} & LDA anti-corr.\ with silencing: $\rho = -0.82$, $p = 0.023$ & \textcolor{pass}{\textbf{Pass}} \\
 \textbf{Shuffled-label control} & Real IIA $>$ shuffled in 24/24 regions ($p = 6 \times 10^{-8}$) & \textcolor{pass}{\textbf{Pass (new)}} \\
@@ -2074,8 +2074,8 @@ LDA & $0.000$ & 0/73 wins \\
   \item Geiger, A.\ et al.\ (2021). Causal abstractions of neural networks. \emph{NeurIPS}.
   \item Kaufman, M.\ T.\ et al.\ (2014). Cortical activity in the null space. \emph{Nature Neuroscience}, 17, 440--448.
   \item Gallego, J.\ A.\ et al.\ (2017). Neural manifolds for the control of movement. \emph{Neuron}, 94(5), 978--984.
-  \item Deng, S.\ \& Gu, Y.\ (2023). On the optimal rate for the convergence problem in mean field control. \emph{JMLR}.
   \item Zhou, D.\ \& Wei, X.-X.\ (2020). Learning identifiable and interpretable latent models of high-dimensional neural activity using pi-VAE. \emph{NeurIPS}.
+  \item Sutter, T.\ et al.\ (2025). On the Vacuity of IIA for Nonlinear Causal Abstraction. \emph{NeurIPS} (Spotlight).
   \item Huang, B.\ et al.\ (2020). Causal discovery from heterogeneous/nonstationary data. \emph{JMLR}, 21(89), 1--53.
 \end{itemize}
 }
