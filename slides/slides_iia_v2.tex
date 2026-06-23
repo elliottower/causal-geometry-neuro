@@ -24,8 +24,8 @@
 \definecolor{dimhigh}{HTML}{D32F2F}
 \definecolor{dimlow}{HTML}{1565C0}
 \definecolor{bg}{HTML}{FAFAFA}
-\title{Causal Geometric Structure in Neural Populations}
-\subtitle{Interchange intervention analysis for biological neural recordings}
+\title{Geometric Causal Discovery in Neural Populations}
+\subtitle{Applying mechanistic interpretability methods to brain-wide Neuropixels recordings}
 \author{Elliot Tower}
 \date{2026}
 \institute{}
@@ -1727,6 +1727,37 @@ Structured vs random lift & 2.72$\times$ \\
 
 \vspace{0.2em}
 {\small VAE and LDA find completely different subspaces. Mean Grassmannian distance $= 2.3$ rad, well past orthogonal ($\pi/2 = 1.57$). The VAE is not rediscovering LDA --- it finds directions LDA cannot access because they require nonlinear separation.}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{13. SAE-style inductive bias ablation}\hypertarget{sec:13}{}
+
+%% --- SLIDE: SAE ablation ---
+\begin{frame}{Overcomplete sparse representations improve causal subspaces}
+\begin{columns}[T]
+\begin{column}{0.52\textwidth}
+\vspace{-0.3em}
+\includegraphics[width=\textwidth]{exp73_sae_ablation.pdf}
+\end{column}
+\begin{column}{0.45\textwidth}
+\vspace{0.3em}
+{\small \textbf{Question:} Which inductive biases matter for finding causal subspaces in neural populations?}
+
+\vspace{0.3em}
+{\small \textbf{Ablation:} 6 models $\times$ 73 regions. Three biases tested:
+\begin{enumerate}\setlength\itemsep{0.1em}
+  \item Structured split ($z_{\text{choice}}$ / $z_{\text{other}}$)
+  \item Label-conditional prior ($\pi$-VAE style)
+  \item Overcomplete $z_{\text{choice}}$ ($8\times$) + L1 sparsity
+\end{enumerate}
+}
+
+\vspace{0.3em}
+{\small \textbf{Result:} SAE-style sparsity is the winning ingredient. All three SAE variants beat all three VAE variants. The label-conditional prior that works on transformer representations \emph{hurts slightly} on neural data.}
+
+\vspace{0.3em}
+{\small Best: \textbf{SAE Structured} (split + overcomplete + L1) at IIA $= 0.962$, vs.\ structured VAE baseline $= 0.939$.}
 \end{column}
 \end{columns}
 \end{frame}
