@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Causal Geometric Structure in Neural Populations"
+authors:
+  - family-names: Tower
+    given-names: Elliot
+    email: elliot@elliottower.ai
+type: software
+license: MIT
+repository-code: "https://github.com/elliottower/causal-geometry-neuro"

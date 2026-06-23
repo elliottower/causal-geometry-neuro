@@ -43,6 +43,7 @@ image = (
     .add_local_dir("geometry", "/root/repo/geometry")
     .add_local_dir("data", "/root/repo/data")
     .add_local_dir("experiments", "/root/repo/experiments")
+    .add_local_dir("batch2_reviewer_fixes", "/root/repo/batch2_reviewer_fixes")
     .add_local_file("pyproject.toml", "/root/repo/pyproject.toml")
 )
 
@@ -127,6 +128,14 @@ EXPERIMENT_MAP = {
     "exp70": "experiments.exp70_cross_region_patching",
     "exp71": "experiments.exp71_vae_causal_circuits",
     "exp72": "experiments.exp72_sutter_continuous",
+    "exp73": "experiments.exp73_structured_pi_sae",
+    "exp74": "batch2_reviewer_fixes.exp74_debiased_cka",
+    "exp75": "batch2_reviewer_fixes.exp75_ccf_coordinate_matching",
+    "exp76": "batch2_reviewer_fixes.exp76_umap_stochasticity",
+    "exp77": "batch2_reviewer_fixes.exp77_alpha_bias_robustness",
+    "exp78": "batch2_reviewer_fixes.exp78_optogenetic_power_analysis",
+    "exp80": "batch2_reviewer_fixes.exp80_ivae_verification",
+    "exp81": "batch2_reviewer_fixes.exp81_cdnod_region_graph",
     "debug_ibl": "experiments.debug_ibl",
 }
 
@@ -191,6 +200,14 @@ SMALL_SESSIONS = {
     "exp70": 5,
     "exp71": 5,
     "exp72": 5,
+    "exp73": 5,
+    "exp74": 5,
+    "exp75": 5,
+    "exp76": 5,
+    "exp77": 5,
+    "exp78": 5,
+    "exp80": 5,
+    "exp81": 5,
 }
 
 IBL_EXPERIMENTS = {"exp1", "exp2", "exp3", "exp15b"}
@@ -204,7 +221,7 @@ IBL_EXPERIMENTS = {"exp1", "exp2", "exp3", "exp15b"}
     volumes={"/results": volume},
     secrets=[gcs_secret],
 )
-def run_experiment(experiment: str, max_sessions: int | None = None):
+def run_experiment(experiment: str, max_sessions: int | None = None, model_filter: str | None = None):
     import importlib
     import logging
     import traceback
@@ -247,6 +264,8 @@ def run_experiment(experiment: str, max_sessions: int | None = None):
         kwargs = {}
         if max_sessions is not None:
             kwargs["max_sessions"] = max_sessions
+        if model_filter is not None:
+            kwargs["model_filter"] = model_filter
 
         results = mod.run(**kwargs)
         _log("run_complete", n_keys=len(results) if isinstance(results, dict) else None)
@@ -287,6 +306,7 @@ def main(
     experiment: str = "exp7",
     max_sessions: int | None = None,
     small: bool = False,
+    model_filter: str | None = None,
 ):
     experiments = sorted(EXPERIMENT_MAP) if experiment == "all" else [e.strip() for e in experiment.split(",")]
 
@@ -298,8 +318,9 @@ def main(
     if len(experiments) == 1:
         ms = max_sessions or (SMALL_SESSIONS.get(experiments[0]) if small else None)
         tag = f" (small, max_sessions={ms})" if ms else ""
-        print(f"Running {experiments[0]}{tag}...")
-        result = run_experiment.remote(experiments[0], ms)
+        mf_tag = f" model={model_filter}" if model_filter else ""
+        print(f"Running {experiments[0]}{tag}{mf_tag}...")
+        result = run_experiment.remote(experiments[0], ms, model_filter)
         print(json.dumps(result, indent=2, default=str)[:3000])
     else:
         handles = []
@@ -307,6 +328,6 @@ def main(
             ms = max_sessions or (SMALL_SESSIONS.get(exp) if small else None)
             tag = f" (max_sessions={ms})" if ms else ""
             print(f"Spawning {exp}{tag}...")
-            handles.append(run_experiment.spawn(exp, ms))
+            handles.append(run_experiment.spawn(exp, ms, model_filter))
         print(f"\nLaunched {len(handles)} experiments. Results on Modal volume + GCS.")
         print("Check results: modal volume get neuro-causal-geometry-results <exp>/")
