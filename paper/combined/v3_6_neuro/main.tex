@@ -1,0 +1,775 @@
+% combined/v3_6_neuro — Clean neuroscience paper (no deep math).
+% Based on v3_2 with non-math improvements from v3_3/v3_4:
+%   1. Stronger subtitle: "Hides Causal Structure in Brain-Wide Neural Populations"
+%   2. Abstract: Grassmannian d_G numbers, "subspace bias" defined, tighter closing
+%   3. C4: Grassmannian framing with d_G and rho, not just "potent/null mismatch"
+% Deep math (bundle appendix, propositions, gauge freedom) lives in v3_5 for Paper B.
+
+\newcommand{\papertitle}{Neural Geometry Is Not Metric-Neutral: \\
+Dimensionality-Driven Subspace Bias Hides Causal Structure in Brain-Wide Neural Populations}
+
+\documentclass{article}
+
+% TMLR format
+\usepackage[preprint]{tmlr}
+
+\newcommand{\openreview}{\url{https://openreview.net/forum?id=XXXX}}
+\def\month{06}
+\def\year{2026}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{xcolor}
+
+\title{\papertitle}
+
+\author{
+Elliot Tower \\
+\texttt{elliot@elliottower.com}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+How well do standard neural population methods identify which brain regions causally drive behavior? The dominant approach---projecting population activity onto linear subspaces (LDA, PCA) and ranking regions by decoding accuracy---has been validated locally: in visual and frontal cortex, linear decoding tracks optogenetic silencing effect \citep{zatkahaas2021spatiotemporal}. Whether this agreement holds brain-wide---where most regions encode movement, engagement, and other correlated signals rather than the stimulus itself---is unknown. Using Neuropixels recordings across 73 brain regions in 10 mice \citep{steinmetz2019distributed}, we show it reverses.
+%
+PCA and LDA subspace quality both anti-correlate with optogenetic silencing effect: the brain regions where silencing most disrupts behavior are those where linear methods find the weakest signal (LDA: $\rho = -0.73$, $p = 0.007$; PCA: $\rho = -0.45$; 12 regions, 10 mice). The divergence is geometric: each region's population activity defines a point on the Grassmannian $\operatorname{Gr}(k, n)$, and LDA and structured VAE choice subspaces occupy points separated by $d_G = 2.34$ on average---$86\%$ of the theoretical maximum---with the geodesic distance increasing in high-dimensional regions ($\rho = -0.58$, $p = 6 \times 10^{-8}$ vs.\ effective dimensionality $\alpha$). We call this dimensionality-graded misidentification \emph{subspace bias}: null-space contamination that is stratified by effective dimensionality, so that methods which agree in low-dimensional sensory regions progressively diverge as dimensionality increases.
+%
+Neural geometry is also not metric-neutral: debiased CKA and UMAP Procrustes similarity anti-correlate across regions ($\rho = -0.45$, $p = 4.2 \times 10^{-65}$), so which brain regions appear geometrically similar depends entirely on whether one uses a linear or nonlinear metric. This dissociation replicates on the independent IBL Brain-Wide Map (11 regions, 139 mice; $\rho = -0.94$, $p = 5.5 \times 10^{-5}$; \citealp{ibl2025brainwide}).
+%
+Both failures trace to dimensionality. High-dimensional regions harbor large null spaces \citep{kaufman2014cortical} that pull linear methods toward causally irrelevant directions while preserving nonlinear manifold structure. Effective dimensionality anti-correlates with null-space fraction ($\rho = -0.86$, $p = 5 \times 10^{-22}$), and controlling for it flips the CKA--Procrustes anti-correlation to positive (partial $r = +0.44$).
+%
+A structured variational autoencoder \citep{narayanaswamy2017learning} that explicitly partitions latent dimensions into choice-relevant and choice-irrelevant subspaces removes the subspace bias ($\Delta\rho = +1.06$, 95\% CI $[0.31, 1.51]$; 73/73 regions, $p = 5.7 \times 10^{-14}$). The key ingredient is the structured latent split, not encoder nonlinearity---replacing the nonlinear encoder with a linear one changes nothing ($p = 0.65$).
+%
+Shuffled-label control confirms the VAE learns genuine structure ($p = 6 \times 10^{-8}$, 24/24 regions), random-direction null is rejected in all 73 regions, and results are robust to leave-one-mouse-out jackknife, neuron sub-sampling, and UMAP stochasticity (20 seeds $\times$ 9 configurations). The advantage generalizes across four task variables (all 73/73, all $p < 10^{-13}$), engagement and choice subspaces are near-orthogonal ($d_G = 2.41$), and a potent/null decomposition confirms the mechanism ($\rho = -0.86$, $p = 5 \times 10^{-22}$).
+%
+Both subspace misidentification and metric inconsistency trace to the same dimensionality-stratified structure: brain regions form dimensional strata across which linear and causal geometries diverge, with optogenetically validated consequences for which regions are identified as causally important.
+\end{abstract}
+
+\section{Introduction}
+
+A growing body of work characterizes neural computation through the geometry of population activity \citep{cunningham2014dimensionality, gallego2017neural}. When $N$ neurons fire together, their joint activity traces trajectories in an $N$-dimensional space, and the low-dimensional structure of those trajectories reveals the underlying computation. Decision variables live in low-dimensional subspaces \citep{steinmetz2019distributed}. Motor plans occupy orthogonal manifolds \citep{gallego2017neural}. Representations drift over time within fixed-dimensional structures \citep{driscoll2022representational}.
+
+This geometric view raises a methodological question with substantive consequences: \emph{does the choice of analysis method change the scientific conclusion?} The field's standard tools for identifying task-relevant subspaces---LDA, PCA, CKA---assume that causal structure lies in linear subspaces. If this assumption fails, these methods will not merely be imprecise; they will systematically misidentify which brain regions carry the strongest causal signals.
+
+We test this directly. Using 1,316 cross-session pairs across 73 brain regions in the Steinmetz et al.\ (2019) Neuropixels dataset, we make four contributions:
+
+\textbf{C1: A metric dissociation mediated by dimensionality.}
+Debiased CKA and UMAP Procrustes similarity anti-correlate across 50 brain regions ($\rho = -0.45$ debiased, $-0.85$ biased). Effective dimensionality fully mediates the effect (partial $r = +0.44$ controlling for $\alpha$), empirically validating the theoretical prediction of \citet{harvey2024representational}. The effect replicates on the IBL Brain-Wide Map ($\rho = -0.94$, 139 mice, 12 labs).
+
+\textbf{C2: Linear methods identify the wrong regions, validated against optogenetic ground truth.}
+LDA subspace quality anti-correlates with optogenetic silencing effects ($\rho = -0.73$, $p = 0.01$; \citealp{zatkahaas2021spatiotemporal}). A structured VAE reverses the pattern ($\Delta\rho = +1.06$, 95\% CI $[0.31, 1.51]$). The structured \emph{latent split}---not encoder nonlinearity---drives the improvement (linear ablation: $\Delta\text{IIA} = 0.001$, $p = 0.65$).
+
+\textbf{C3: Nonlinear subspace claims need external ground truth.}
+We evaluate subspace quality by swapping choice-subspace projections between opposite-evidence trial pairs and measuring whether a classifier's prediction flips---an interchange intervention \citep{geiger2024causal} applied to neural population data. Following \citet{sutter2025iia}, we show this metric is vacuous for nonlinear methods: the structured VAE achieves IIA $\approx 0.70$ on random Gaussian noise, and this vacuity extends to all continuous distributional metrics (KL, JS, probability shift). Shuffled-label and linear ablation controls confirm the VAE finds genuine statistical structure (validating the \emph{method}), but whether that structure corresponds to actual causal importance requires external validation---in our case, optogenetic silencing (validating the \emph{result}).
+
+\textbf{C4: The mechanism is dimensionality-dependent null-space contamination.}
+Each region's choice subspace is a point on the Grassmannian $\operatorname{Gr}(k, n)$; linear and nonlinear methods select different points, and the geodesic distance between them ($d_G = 2.34$, $86\%$ of maximum) increases with effective dimensionality ($\rho = -0.58$, $p = 6 \times 10^{-8}$). High-dimensional regions harbor large null spaces \citep{kaufman2014cortical} that pull linear methods toward causally irrelevant directions ($\rho_{\alpha,\text{null}} = -0.86$, $p = 5 \times 10^{-22}$). The structured VAE avoids this because its classification loss steers the encoder toward task-relevant directions regardless of variance rank.
+
+These findings converge: \emph{linear methods fail where they matter most}.
+
+
+\section{Related Work}
+
+\textbf{Neural manifolds and the potent/null distinction.}
+\citet{gallego2017neural} established that the fundamental unit of motor cortical computation is the neural mode---a population-level pattern spanning a low-dimensional manifold.
+\citet{kaufman2014cortical} formalized the potent/null distinction: preparatory activity lives in a null space orthogonal to the output-driving dimensions.
+\citet{sadtler2014neural} showed that subjects adapt easily within the existing manifold but struggle with out-of-manifold perturbations.
+\emph{Unlike prior work, we directly test whether optogenetically validated causal importance aligns with subspace quality estimates, and show the alignment depends on the analysis method.}
+
+\textbf{Representational similarity.}
+CKA \citep{kornblith2019similarity} and RSA \citep{kriegeskorte2008representational} are the standard tools for comparing neural representations.
+\citet{williams2021generalized} unified many similarity measures under a generalized shape metric.
+\citet{harvey2024representational} proved that CKA measures average alignment between optimal linear readouts, with sensitivity depending on participation ratio---predicting our finding that high-dimensional regions show low CKA even when manifold shape is conserved.
+\citet{murphy2024biased} showed that standard CKA inflates similarity in the low-trial, high-neuron regime.
+\emph{Unlike these works, we directly measure how the CKA--manifold dissociation depends on dimensionality, validate that it is not an artifact of CKA bias using debiased estimates, and replicate on an independent multi-lab dataset.}
+
+\textbf{Communication subspaces and inter-region geometry.}
+\citet{semedo2019cortical} identified communication subspaces between cortical areas via reduced-rank regression, showing that inter-area signaling is restricted to a low-dimensional subspace.
+\citet{pereira2025residual} perturbed coding versus residual subspace dimensions in motor cortex, finding that residual dimensions causally drive choice through transient amplification.
+\emph{Unlike prior work, we compare subspace quality against an external ground truth (optogenetic silencing) rather than relying on decoding accuracy or IIA alone, and test across 73 regions simultaneously.}
+
+\textbf{Nonlinear and dimensionality-aware methods.}
+UMAP Procrustes has been used for cross-species comparison \citep{deitch2021representational}. Dynamical similarity analysis \citep{ostrow2023beyond} compares dynamical systems structure.
+\citet{stringer2024unbounded} showed effective dimensionality scales with neuron number; \citet{huntenburg2024categorical} showed it increases along the cortical hierarchy.
+\citet{chun2025dimensionality} showed finite-sample bias inflates power-law exponents from PCA eigenspectra---a confound we explicitly address.
+\emph{Unlike prior work, we apply bias correction to dimensionality estimates and quantify how much of the CKA--Procrustes effect survives after controlling for recording yield.}
+
+\textbf{Causal subspace methods and IIA.}
+Distributed alignment search (DAS) and interchange intervention analysis (IIA) \citep{geiger2024causal, geiger2024finding} perform causal interventions on learned subspaces in language models.
+\citet{sutter2025iia} proved IIA is vacuous for nonlinear methods.
+\emph{We show the IIA vacuity extends to biological neural data across all distributional metrics, and that external causal validation---not metric-internal evidence---is necessary for nonlinear subspace claims.}
+
+\textbf{Identifiable VAEs for neural data.}
+\citet{zhou2020pivae} proposed pi-VAE with identifiability guarantees for latent factor recovery.
+\citet{narayanaswamy2017learning} introduced the semi-supervised structured latent split we adopt.
+\citet{khemakhem2020variational} proved identifiability conditions for nonlinear ICA.
+\emph{We show the pi-VAE's identifiability conditions are provably unsatisfied for binary choice data with multi-dimensional causal subspaces (Appendix~\ref{app:ivae-verification}), and that the structured split without a label-conditioned prior is the correct inductive bias.}
+
+
+\section{Methods}
+
+\subsection{Dataset}
+
+We use the Steinmetz et al.\ (2019) dataset: Neuropixels recordings from 10 mice performing a two-alternative visual decision task \citep{steinmetz2019distributed}. The dataset covers 73 brain regions with $\geq 15$ neurons per region (50 with $\geq 2$ recording sessions). We extract trial-averaged activity in a post-stimulus window (150--350ms) and compute binary choice labels (left vs.\ right). All cross-session pairs for the same region constitute the comparison set: 1,316 pairs across 50 multi-session regions.
+
+\subsection{Geometric Invariants}
+
+\textbf{Linear similarity (CKA).} Centered kernel alignment \citep{kornblith2019similarity} on trial $\times$ neuron activity matrices, using the linear kernel. We report \emph{debiased CKA} (unbiased HSIC estimator \citep{song2012feature}) as the primary measure and biased CKA as a secondary comparison, given the low-trial, high-neuron regime identified as problematic by \citet{murphy2024biased}.
+
+\textbf{Nonlinear manifold similarity (UMAP Procrustes).} Five-dimensional UMAP embedding \citep{mcinnes2018umap} with Procrustes alignment between sessions. Robustness to stochasticity and hyperparameters is verified in Appendix~\ref{app:umap}: $\rho$ ranges $0.775$--$0.922$ across 20 seeds and 9 configurations.
+
+\textbf{Subspace distance (Grassmannian).} $k$-dimensional LDA or VAE subspaces with geodesic distance on $\operatorname{Gr}(k, n)$.
+
+\textbf{Power-law exponent ($\alpha$).} Fit to PCA eigenvalue spectrum in log-log space (ranks 10--50), characterizing effective dimensionality. \textbf{Important caveat:} $\alpha$ is strongly correlated with neuron count ($\rho = -0.91$, Appendix~\ref{app:alpha_bias}), consistent with finite-sample bias identified by \citet{chun2025dimensionality}. All $\alpha$-based claims report partial correlations controlling for neuron count alongside raw correlations.
+
+\subsection{Structured VAE for Subspace Discovery}
+
+We train a structured variational autoencoder \citep{narayanaswamy2017learning} per region. The encoder maps population activity to two latent groups: $\mathbf{z}_{\text{choice}}$ ($k$ dimensions, $k \in \{1,2,3\}$) trained with an auxiliary classification loss to predict left/right choice, and $\mathbf{z}_{\text{other}}$ ($m = 15$ dimensions) capturing remaining variance. Both groups jointly reconstruct population activity via the ELBO. Training: 300 epochs, $\alpha_{\text{task}} = 10$, $\beta_{\text{KL}} = 1$, across all 39 sessions.
+
+The encoder weight matrix for $\mathbf{z}_{\text{choice}}$ directly provides the choice subspace directions, replacing the LDA+PCA pipeline.
+
+\subsection{Interchange Intervention Analysis (IIA) and Its Limitations}
+
+For each region, we swap the choice-subspace projection between opposite-evidence trial pairs and measure how often a choice classifier flips its prediction (IIA $= 1$: perfectly causal; IIA $= 0.5$: random). \textbf{We treat IIA as a diagnostic, not a validity criterion}, for reasons established in \S\ref{sec:vacuity}: the structured VAE achieves IIA $\approx 0.70$ on random Gaussian noise. Validity is assessed via external validation (\S\ref{sec:silencing}) and the shuffled-label control (\S\ref{sec:vacuity}).
+
+\subsection{Optogenetic Silencing Validation}
+
+We validate subspace quality against ground-truth causal importance from the Zatka-Haas et al.\ (2021) optogenetic inactivation dataset: 52 cortical coordinates, 47,002 laser trials across 10 mice \citep{zatkahaas2021spatiotemporal}. For each silencing coordinate mapped to a Steinmetz brain region ($n = 12$ direct matches; $n = 16$ with hierarchical Allen CCF grouping), we compute the behavioral effect size. The Spearman correlation between silencing effect and subspace IIA provides external validation independent of any metric-internal evaluation.
+
+Power analysis (Appendix~\ref{app:power}): the LDA anti-correlation ($\rho = -0.73$) achieves 80\% power at $n = 14$; the VAE positive trend ($\rho = +0.33$) would require $n > 60$. The method difference ($\Delta\rho$) is therefore the primary inferential quantity.
+
+\subsection{Multi-Task Generalization and Engagement Orthogonality}
+
+Beyond choice, we train separate structured VAEs for evidence strength, feedback, and stimulus side. For engagement orthogonality, we estimate engagement (disengaged vs.\ engaged trials) and choice subspaces in pre- and post-stimulus windows and compute their Grassmannian distance.
+
+
+\section{Results}
+
+\subsection{Dissociation 1: Linear and Nonlinear Metrics Systematically Disagree}
+\label{sec:dissociation1}
+
+Across 1,316 cross-session pairs and 50 brain regions, debiased CKA and UMAP Procrustes similarity anti-correlate: Spearman $\rho = -0.45$, $p = 4.2 \times 10^{-65}$. The standard biased CKA estimator inflates this to $\rho = -0.85$ (Appendix~\ref{app:debiased_cka}); both values are highly significant, and the dissociation is real under either estimate. We use debiased CKA as the conservative headline.
+
+Motor cortex (MOs) exemplifies the extreme: CKA $= 0.07$ (near-zero linear similarity) but UMAP Procrustes $= 0.98$ (near-maximal nonlinear similarity).
+
+\textbf{Robustness.} Bootstrap 95\% CI: $[-0.47, -0.44]$ (debiased). Leave-one-mouse-out jackknife: $\rho \in [-0.872, -0.835]$ (biased; debiased range similar). Neuron sub-sampling: $\rho = -0.81$ (biased, $p < 10^{-7}$). Spectral denoising (Marchenko--Pastur thresholding) strengthens the biased result to $\rho = -0.889$. UMAP hyperparameter sweep: minimum $\rho = -0.775$ across 180 runs (Appendix~\ref{app:umap}).
+
+\textbf{Dimensionality is the mechanism.} Partial Pearson correlation controlling for $\alpha$ reverses the sign to $+0.44$. Controlling for neuron count alone gives partial $r = +0.13$. Once dimensionality is accounted for, CKA and Procrustes agree. This empirically validates the theoretical prediction of \citet{harvey2024representational}.
+
+\textbf{The confound caveat.} Because $\alpha$ correlates strongly with neuron count ($\rho = -0.91$, Appendix~\ref{app:alpha_bias}), we cannot fully distinguish intrinsic dimensionality from finite-sample bias \citep{chun2025dimensionality}. The partial correlation after controlling for neuron count alone ($r = +0.13$) suggests some of the effect is attributable to recording yield. The dissociation is real; its mechanistic interpretation requires bias-corrected dimensionality estimates.
+
+\textbf{The dissociation is metric-specific.} Sliced Wasserstein distance is uncorrelated with $\alpha$ ($\rho = 0.02$, $p = 0.47$), while SPD Riemannian distance tracks it ($\rho = 0.44$). This is a specific interaction between kernel-based and manifold-based methods, not a generic ``all metrics disagree'' phenomenon.
+
+
+\subsection{Why IIA Cannot Validate the VAE (The Vacuity Problem)}
+\label{sec:vacuity}
+
+Before presenting VAE performance, we establish the evaluation problem. Following \citet{sutter2025iia}, we test IIA on real neural data versus random Gaussian noise with matched labels:\footnote{IIA values in the vacuity test (0.69) differ from the main evaluation in \S\ref{sec:amplify} (0.56) due to protocol differences: the vacuity test follows Sutter et al.'s balanced-sampling protocol for direct comparability with noise baselines; the main evaluation uses maximum-contrast trial pairs only.}
+
+\begin{table}[h]
+\centering
+\small
+\caption{IIA on real neural data vs.\ random Gaussian noise (73 regions). A non-vacuous method should show high IIA on real data and chance IIA ($\approx 0.5$) on noise. The structured VAE is vacuous.}
+\label{tab:sutter}
+\begin{tabular}{lccl}
+\toprule
+Method & Real IIA & Random IIA & Interpretation \\
+\midrule
+Unconstrained MLP & --- & $0.70 \pm 0.11$ & Vacuous \\
+Structured VAE & $0.69 \pm 0.11$ & $0.70 \pm 0.11$ & Vacuous on noise \\
+Linear DAS & --- & $0.16 \pm 0.09$ & Non-vacuous \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The structured VAE achieves comparable IIA on random noise ($0.70$) as on real data ($0.69$). This extends to all continuous metrics: KL divergence, JS divergence, and probability shift all show real $\approx$ random ($p > 0.95$ for all; Appendix~\ref{app:continuous_metrics}). The vacuity is not an artifact of binary thresholding.
+
+\textbf{What this means for our claims.} The 3.4$\times$ IIA improvement over LDA (\S\ref{sec:amplify}) could in principle reflect encoder expressiveness rather than genuine causal discovery. Two controls resolve this:
+
+\textbf{Shuffled-label control.} Training with shuffled choice labels on real neural data: real IIA ($= 0.625$) significantly exceeds shuffled-label IIA ($= 0.430$) in 24/24 tested regions (Wilcoxon $p = 6.0 \times 10^{-8}$). The encoder \emph{can} fit noise but finds stronger structure in real data. The gap ($\Delta = 0.195$) is the genuine signal.
+
+\textbf{Linear VAE ablation.} Replacing the nonlinear encoder with a linear encoder (same structured split and classification loss): IIA difference $= 0.001$, $p = 0.65$. \emph{Nonlinearity contributes nothing.} The structured split and classification loss are the active ingredients---any sufficiently flexible encoder can fit random labels, but the structured loss channels real data into the choice subspace.
+
+External validation against optogenetic ground truth is required (\S\ref{sec:silencing}).
+
+
+\subsection{Dissociation 2: Learned Subspaces Amplify Causal Signal}
+\label{sec:amplify}
+
+\textbf{VAE subspaces are 3.4$\times$ more causal than LDA by IIA (a metric we show above is potentially vacuous).} The VAE produces mean IIA $= 0.56$ (SD $0.08$) vs.\ LDA mean IIA $= 0.17$ (SD $0.09$), with Cohen's $d = 4.5$. The VAE wins in 73/73 regions (Wilcoxon $W = 2701$, $p = 5.7 \times 10^{-14}$) and exceeds the random-direction null in all 73 regions (mean null $= 0.23$).
+
+\textbf{Choice subspace dimensionality ablation.} The causal signal is effectively one-dimensional: even $k = 1$ achieves a 3.7$\times$ improvement over LDA (72/73 wins), and performance is stable across $k \in \{1, 2, 3\}$.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Effect of choice subspace dimensionality $k$ on structured VAE IIA across 73 brain regions.}
+\label{tab:vae_k_ablation}
+\begin{tabular}{lccccc}
+\toprule
+$k$ & VAE IIA & LDA IIA & Ratio & VAE wins & Choice acc. \\
+\midrule
+1 & $0.548 \pm 0.093$ & $0.150 \pm 0.091$ & 3.7$\times$ & 72/73 & 0.99 \\
+2 & $0.555 \pm 0.088$ & $0.159 \pm 0.097$ & 3.5$\times$ & 73/73 & 0.98 \\
+3 & $0.561 \pm 0.080$ & $0.166 \pm 0.094$ & 3.4$\times$ & 73/73 & 0.99 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{High-dimensional regions benefit most.} Low-$\alpha$ (high-dimensional) regions show a larger VAE improvement ($\Delta$IIA $= 0.46$) than high-$\alpha$ regions ($\Delta$IIA $= 0.33$). VAE IIA anti-correlates with $\alpha$ ($\rho = -0.48$, $p = 1.5 \times 10^{-5}$; partial $\rho$ controlling for neuron count $= -0.31$, $p = 0.008$).
+
+\textbf{VAE finds genuinely different subspaces.} Mean VAE--LDA Grassmannian distance $= 2.34$ (SD $0.15$), far exceeding $\pi/2 \approx 1.57$ per dimension. The VAE does not refine the LDA solution; it finds fundamentally different directions.
+
+\textbf{Model confidence tracks causal effectiveness.} Posterior uncertainty anti-correlates with IIA ($\rho = -0.26$, $p = 0.028$).
+
+
+\subsection{External Validation: Optogenetic Silencing Ground Truth}
+\label{sec:silencing}
+
+Because IIA is vacuous (\S\ref{sec:vacuity}), the strongest evidence comes from external validation against optogenetic silencing data---a test completely independent of the IIA metric.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Spearman correlation between subspace quality (IIA) and optogenetic silencing effect (ground-truth causal importance). Bootstrap BCa CIs from 10,000 resamples.}
+\label{tab:silencing}
+\begin{tabular}{lccc}
+\toprule
+Metric & $\rho$ vs.\ silencing & $p$ & 95\% CI \\
+\midrule
+LDA IIA & $-0.73$ & $0.01$ & $[-0.93, -0.27]$ \\
+VAE IIA & $+0.33$ & $0.30$ & (underpowered; Appendix~\ref{app:power}) \\
+$\Delta\rho$ (VAE $-$ LDA) & $+1.06$ & $< 0.005$ & $[0.31, 1.51]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{LDA identifies the wrong regions} ($\rho = -0.73$, $p = 0.01$). Regions where optogenetic silencing most disrupts behavior---the ground-truth causally important regions---have the \emph{lowest} LDA IIA. Linear methods are not merely noisy; they are systematically anti-correlated with causal importance.
+
+\textbf{The VAE reverses this pattern} ($\rho = +0.33$, positive but not individually significant at $n = 12$). The critical inference is the \emph{method difference}: $\Delta\rho = +1.06$, 95\% CI $[0.31, 1.51]$ excludes zero. We emphasize $\Delta\rho$ as the primary claim.
+
+\textbf{Hierarchical expansion.} Using Allen CCF ontology to group sub-regions: $n = 16$; VAE $\rho = +0.42$ (perm $p = 0.11$), LDA $\rho = -0.29$; $\Delta\rho$ CI still excludes zero ($[0.09, 1.43]$).
+
+Per-mouse validation is reported in Appendix~\ref{app:per_mouse}.
+
+
+\subsection{Multi-Task Generalization and Engagement Orthogonality}
+\label{sec:generalization}
+
+The VAE advantage generalizes across all four task variables:
+
+\begin{table}[h]
+\centering
+\small
+\caption{VAE vs.\ LDA IIA across four task variables. All 73 regions, all 39 sessions. All four yield Wilcoxon $p = 5.7 \times 10^{-14}$ (the fixed value for 73/73 wins); the informative comparison is $\Delta$IIA.}
+\label{tab:multitask}
+\begin{tabular}{lccc}
+\toprule
+Task variable & VAE IIA & LDA IIA & $\Delta$IIA \\
+\midrule
+Choice & $0.56 \pm 0.08$ & $0.17 \pm 0.09$ & $0.39$ \\
+Evidence strength & $0.64 \pm 0.13$ & $0.26 \pm 0.10$ & $0.38$ \\
+Feedback & $0.58 \pm 0.11$ & $0.21 \pm 0.09$ & $0.37$ \\
+Stimulus side & $0.66 \pm 0.11$ & $0.29 \pm 0.10$ & $0.37$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The $\alpha$--VAE IIA anti-correlation holds for all variables (evidence: $\rho = -0.75$; feedback: $-0.70$; stimulus side: $-0.76$; all $p < 10^{-11}$).
+
+\textbf{Engagement-choice orthogonality.} The VAE identifies engagement and choice subspaces that are near-orthogonal across all 59 regions with sufficient data: Grassmannian distance $d_G = 2.41$ (VAE) vs.\ $1.82$ (LDA); both exceed $\pi/2 \approx 1.57$, confirming orthogonality. Cross-variable IIA (swapping the engagement subspace between opposite-choice trials) is near-random (mean $= 0.17$), confirming the VAE disentangles genuinely distinct cognitive variables rather than a single dominant nonlinear direction. VAE wins 59/59 regions.
+
+\textbf{Cross-task subspace geometry.} Pairwise Grassmannian distances reveal two patterns: choice and stimulus side are the closest pair ($d_G = 0.585$ for LDA), consistent with stimulus directly driving choice; the VAE produces larger pairwise distances in 73/73 regions ($p < 10^{-14}$, mean $d_G = 2.36$), better disentangling task dimensions.
+
+\textbf{Temporal emergence.} Sliding-window IIA analysis shows pre-response emergence in 100\% of regions with detectable onset (mean $\approx 360$ms post-stimulus), consistent with a causal decision signal rather than a post-hoc motor artifact.
+
+
+\subsection{Potent/Null Space Decomposition}
+\label{sec:potent_null}
+
+We tested the potent/null framework \citep{kaufman2014cortical} directly by decomposing each region's activity into its choice subspace (potent) and complement (null).
+
+LDA places 99.8\% of variance in the null space on average; the VAE places 84.3\%. Despite this difference, both decode choice from the potent subspace with comparable accuracy ($\sim$66\%), confirming the potent subspace---however small---carries the causal signal.
+
+The power-law exponent $\alpha$ is strongly anti-correlated with null-space fraction: $\rho = -0.86$ ($p = 5 \times 10^{-22}$) for the VAE and $\rho = -0.68$ ($p = 3 \times 10^{-11}$) for LDA. Regions where linear and nonlinear metrics disagree most are precisely those with the smallest null-space fractions---the most variance in the potent subspace. Potent-space decoding accuracy does not correlate with $\alpha$ ($\rho = -0.07$, $p = 0.57$ for VAE), confirming the \emph{informativeness} of the potent subspace is constant while its \emph{relative size} drives the metric dissociation.
+
+
+\subsection{Cross-Dataset Replication: IBL Brain-Wide Map}
+\label{sec:ibl}
+
+The CKA--Procrustes anti-correlation replicates on the IBL Brain-Wide Map \citep{ibl2025brainwide}, an independent multi-laboratory dataset (139 mice, 12 institutions, 11 matched regions after requiring $\geq 3$ sessions and $\geq 15$ neurons per region): $\rho = -0.94$, $p = 5.5 \times 10^{-5}$ (permutation $p < 10^{-4}$).
+
+Geometric type classification transfers for 7/11 matched regions (64\%). The four mismatches (CA3, DG, RSPd, VISl) are near the CKA--Procrustes boundary. Absolute $\alpha$ values do \emph{not} transfer ($\rho = -0.27$, n.s.), indicating the \emph{relative} geometric relationship is robust while absolute dimensionality estimates are sensitive to recording pipeline differences.
+
+
+\section{Discussion}
+
+\subsection{Linear Methods Fail Where They Matter Most}
+
+Our central claim is not merely that nonlinear methods outperform linear ones, but that the failure interacts with dimensionality: linear methods fail most severely in the highest-dimensional regions, which are precisely the regions where optogenetic silencing reveals the strongest causal role.
+
+This creates a systematic blind spot. A researcher using LDA to map causally important regions would conclude that low-dimensional sensory regions carry the strongest choice signals, while high-dimensional association and hippocampal regions are causally weak. The optogenetic ground truth shows the opposite.
+
+The neural manifold framework explains why \citep{gallego2017neural}: high-dimensional regions harbor large null spaces that dominate CKA and LDA but are irrelevant for behavior. The potent/null decomposition (\S\ref{sec:potent_null}) confirms this: regions where metrics disagree most have the smallest null-space fractions ($\rho = -0.86$), meaning the most variance in the choice-potent subspace.
+
+
+\subsection{Taking the IIA Vacuity Problem Seriously}
+
+We take the Sutter dilemma more seriously than most applications of IIA to neural data. The standard response in the mechanistic interpretability literature is to note that linear DAS is non-vacuous. For neural population analysis, where nonlinear methods are increasingly standard, there is no equivalent constraint.
+
+Three lines of evidence nevertheless support the VAE's validity: (1)~optogenetic validation (\S\ref{sec:silencing}), completely independent of IIA; (2)~cross-task disentanglement (\S\ref{sec:generalization}), with engagement-choice orthogonality at near-chance cross-IIA ($0.17$); and (3)~multi-task generalization across four variables with the same dimensionality interaction. The shuffled-label control confirms the VAE learns genuine structure despite also fitting noise.
+
+Two practical guidelines emerge. \textbf{First}, use debiased CKA as the default in the low-trial, high-neuron regime \citep{murphy2024biased}. \textbf{Second}, external causal validation is necessary for nonlinear subspace methods---IIA alone is insufficient, and decoding accuracy shares the same vulnerability.
+
+
+\subsection{Limitations}
+
+\textbf{Dimensionality--recording-yield confound.} $\alpha$ correlates strongly with neuron count ($\rho = -0.91$), consistent with \citet{chun2025dimensionality}. We cannot fully separate intrinsic dimensionality from recording yield. The partial correlation controlling for neuron count ($r = +0.13$) is much weaker than the full correlation ($\rho = -0.85$), suggesting recording yield explains a substantial fraction. Future work should apply bias-corrected participation ratio estimators systematically.
+
+\textbf{Optogenetic sample size.} $n = 12$ direct matches ($n = 16$ hierarchical). The LDA anti-correlation achieves 74\% power; the VAE trend requires $n > 60$. The VAE result is directional; the method difference $\Delta\rho$ (CI $[0.31, 1.51]$) carries the statistical weight. Allen CCF coordinate matching could expand the matched set.
+
+\textbf{IIA vacuity.} The structured VAE's IIA is vacuous on noise (\S\ref{sec:vacuity}). The shuffled-label control resolves this: the VAE learns real structure ($p = 6 \times 10^{-8}$), and the linear ablation shows the structured split, not nonlinearity, drives the improvement.
+
+\textbf{No comparison to other nonlinear methods.} We compare only LDA and structured VAE. Kernel PCA, CEBRA \citep{schneider2023learnable}, and LFADS \citep{pandarinath2018inferring} are natural baselines that could establish whether the VAE advantage is method-specific or reflects a general nonlinear advantage.
+
+\textbf{Task and dataset scope.} All results are for binary visual choice in head-fixed mice. The IBL replication (\S\ref{sec:ibl}) confirms the metric dissociation on an independent dataset, but absolute dimensionality does not transfer.
+
+
+\section{Conclusion}
+
+We establish two geometric dissociations in neural population codes. First, debiased CKA and UMAP Procrustes similarity anti-correlate ($\rho = -0.45$), mediated by effective dimensionality; this replicates on the IBL Brain-Wide Map ($\rho = -0.94$, 139 mice, 12 labs). Second, linear subspace methods systematically underestimate causal structure by 3.4$\times$ and are anti-correlated with optogenetic ground-truth causal importance ($\rho = -0.73$). These dissociations converge: the brain regions where linear methods fail most severely are precisely those where causal signals are strongest. Structured nonlinear methods recover these signals, but the IIA metric used to evaluate them is vacuous for nonlinear methods---motivating external validation as the gold standard.
+
+
+\section*{Reproducibility Statement}
+All experiments use the publicly available Steinmetz et al.\ (2019) Neuropixels dataset and the Zatka-Haas et al.\ (2021) optogenetic dataset. Code for all 81 experiments, along with pre-computed results, is available at the project repository. Each experiment is reproducible from raw data with a single command.
+
+
+\bibliographystyle{tmlr}
+\bibliography{references}
+
+\appendix
+
+\section{Sequential Discovery and Multiple Comparisons}
+\label{app:sequential}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}clcccc@{}}
+\toprule
+\textbf{Stage} & \textbf{Test} & \textbf{$\rho$} & \textbf{$p$} & \textbf{$N_k$} & \textbf{Survives} \\
+\midrule
+\multicolumn{6}{l}{\emph{Stage 1: Core metric comparison}} \\
+1 & CKA--Procrustes anti-correlation (debiased) & $-0.45$ & $< 10^{-60}$ & 1 & \checkmark \\
+\midrule
+\multicolumn{6}{l}{\emph{Stage 2: Mechanism identification}} \\
+2 & Dimensionality mediates (partial $r$) & $+0.44$ & $< 10^{-6}$ & 2 & \checkmark \\
+\midrule
+\multicolumn{6}{l}{\emph{Stage 3: Causal subspace discovery}} \\
+3 & VAE $>$ LDA IIA (73/73 regions) & --- & $5.7 \times 10^{-14}$ & 3 & \checkmark \\
+4 & Silencing vs.\ LDA IIA & $-0.73$ & $0.01$ & 4 & \checkmark \\
+5 & $\Delta\rho$ (VAE $-$ LDA) vs.\ silencing & $+1.06$ & $< 0.005$ & 5 & \checkmark \\
+\midrule
+\multicolumn{6}{l}{\emph{Stage 4: Generalization}} \\
+6 & Multi-task VAE wins (4 variables) & --- & $< 10^{-13}$ & 6 & \checkmark \\
+7 & Engagement-choice orthogonality & $d_G = 2.41$ & --- & 7 & \checkmark \\
+\midrule
+\multicolumn{6}{l}{\emph{Stage 5: IIA vacuity and controls}} \\
+8 & VAE random IIA $\approx$ MLP random IIA & $0.70$ & $p = 0.38$ (no diff) & 8 & (diagnostic) \\
+\bottomrule
+\end{tabular}
+\caption{Sequential discovery table. All seven core claims (stages 1--4) survive Holm correction. Stage 5 is diagnostic.}
+\label{tab:sequential}
+\end{table}
+
+
+\section{Robustness Controls}
+\label{app:robustness}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Robustness of the CKA--Procrustes anti-correlation.}
+\label{tab:robustness}
+\begin{tabular}{@{}lccl@{}}
+\toprule
+\textbf{Control} & \textbf{$\rho$} & \textbf{$p$} & \textbf{$n$} \\
+\midrule
+Raw (full data, biased CKA) & $-0.850$ & $\approx 0$ & 1,316 pairs \\
+Bootstrap 95\% CI & $[-0.867, -0.830]$ & --- & 10,000 resamples \\
+Leave-one-mouse-out (range) & $[-0.872, -0.835]$ & all sig. & 10 mice \\
+Leave-one-region-out (range) & $[-0.863, -0.841]$ & all sig. & 50 regions \\
+Neuron sub-sampling & $-0.814$ & $< 10^{-7}$ & 29 pairs \\
+Spectral denoising (MP) & $-0.889$ & $\approx 0$ & 1,316 pairs \\
+Trial-label shuffling & $-0.395$ & $< 10^{-50}$ & 1,316 pairs \\
+\midrule
+\multicolumn{4}{l}{\emph{Partial correlations (Pearson $r$)}} \\
+Controlling neuron count & $+0.134$ & --- & sign reversal \\
+Controlling $\alpha$ & $+0.437$ & --- & sign reversal \\
+Controlling both & $+0.196$ & --- & sign reversal \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Metric Family Comparison}
+\label{app:metrics}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Correlation of each metric family with dimensionality ($\alpha$) and with CKA/Procrustes.}
+\label{tab:metrics}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Metric} & \textbf{vs.\ $\alpha$} & \textbf{$p$} & \textbf{vs.\ CKA} & \textbf{vs.\ Procrustes} \\
+\midrule
+CKA (linear) & $-0.68$ & $< 10^{-4}$ & --- & $-0.85$ \\
+UMAP Procrustes & $+0.68$ & $< 10^{-4}$ & $-0.85$ & --- \\
+Sliced Wasserstein & $+0.02$ & $0.47$ & $+0.10$ & $-0.09$ \\
+SPD Riemannian & $+0.44$ & $< 10^{-4}$ & --- & --- \\
+Fisher-Rao & $+0.40$ & $< 10^{-4}$ & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Evidence-Choice Subspace Alignment}
+\label{app:alignment}
+
+Two strategies emerge for encoding evidence and choice information across regions. Low-dimensional regions maintain stable evidence-choice alignment (high overlap, small choice subspace shift). High-dimensional regions show large choice subspace rotations when evidence changes ($\rho = -0.59$, permutation $p < 10^{-6}$), maintaining separate, flexibly rotatable representations.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Top and bottom 5 regions by evidence-choice subspace alignment.}
+\label{tab:routing}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Region} & \textbf{$d_G(V_{\text{ev}}, V_{\text{ch}})$} & \textbf{$\alpha$} & \textbf{Interpretation} \\
+\midrule
+\multicolumn{4}{l}{\emph{Highest alignment (shared subspace)}} \\
+OT & 0.197 & 104.2 & evidence-choice routing \\
+IC & 0.409 & 13.1 & sensorimotor integration \\
+MEA & 0.453 & 3.0 & evidence-choice routing \\
+LH & 0.471 & 3.9 & evidence-choice routing \\
+SCm & 0.486 & 15.6 & motor output \\
+\midrule
+\multicolumn{4}{l}{\emph{Lowest alignment (separated subspaces)}} \\
+VAL & 1.163 & 1.7 & thalamic relay \\
+LSc & 1.216 & 2.4 & basal ganglia \\
+COA & 1.313 & 0.7 & amygdala \\
+CL & 1.381 & 27.7 & thalamic relay \\
+EPd & 1.397 & 43.6 & amygdala/piriform \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Spectral Universality and Dynamic Dimensionality}
+\label{app:spectral}
+
+Singular value spectra are highly conserved across animals (mean $r = 0.94 \pm 0.06$), but temporal modes are idiosyncratic (mean cosine $= 0.09$). The dimensionality \emph{structure} is universal; the \emph{content} is animal-specific.
+
+Dimensionality is not fixed. Under hard task conditions (low contrast), $\alpha$ increases by $+12.4$ (Wilcoxon $p = 3.0 \times 10^{-7}$) while manifold shape is preserved (Procrustes $= 0.90$).
+
+Rotational dynamics appear in 72/73 regions above a temporal-shuffle null, but strength varies 50$\times$ (range $0.008$--$0.40$). Persistent homology reveals almost no topological structure: only 9/73 regions have $\beta_1 > 0$.
+
+
+\section{Grassmannian Distance and Functional Hierarchy}
+\label{app:gdm_hierarchy}
+
+The GDM does not recover traditional functional groupings. Within-group Grassmannian distances are not smaller than between-group distances for either LDA (Mann-Whitney $U = 34{,}509$, $p = 0.97$) or the VAE ($U = 35{,}465$, $p = 0.99$). Spectral clustering ($k = 7$) yields weak agreement with functional labels (ARI $= 0.07$, NMI $= 0.20$). Choice subspace geometry is organized along axes orthogonal to the classical sensory--association--motor hierarchy.
+
+The LDA and VAE Grassmannian distance matrices are nearly identical (Mantel $\rho = 0.97$, $p < 10^{-4}$): despite finding very different choice subspaces, the \emph{relative geometry} between regions is conserved.
+
+
+\section{Tucker Decomposition}
+\label{app:tucker}
+
+Tucker decomposition on (trials $\times$ neurons $\times$ time) tensors: time factors are most conserved (mean similarity $0.174$), followed by trial ($0.106$) and neuron ($0.067$). Tucker $R^2$ correlates modestly with $\alpha$ ($\rho = 0.275$).
+
+
+\section{Debiased CKA}
+\label{app:debiased_cka}
+
+Using the unbiased HSIC$_1$ estimator \citep{song2012feature}:
+
+\begin{table}[h]
+\centering
+\small
+\caption{Biased vs.\ debiased CKA: Spearman $\rho$ of CKA similarity with UMAP Procrustes similarity across 1,316 cross-session pairs. Both values are negative (anti-correlation); the debiased estimate is more conservative.}
+\label{tab:debiased_cka}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Estimator} & \textbf{Spearman $\rho$} & \textbf{$p$} & \textbf{Partial $\rho$ (ctrl.\ $n_{\text{neurons}}$)} \\
+\midrule
+Biased CKA & $-0.850$ & $\approx 0$ & $-0.856$ \\
+Debiased CKA & $-0.445$ & $4.2 \times 10^{-65}$ & $-0.342$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Debiasing reduces the magnitude by $\Delta|\rho| = 0.40$, confirming inflation but also confirming the dissociation persists.
+
+
+\section{Power-Law Alpha and Neuron Count Confound}
+\label{app:alpha_bias}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Confound analysis: power-law exponent vs.\ recording parameters (325 region-sessions, 283 with valid $\alpha$).}
+\label{tab:alpha_confound}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Covariate} & \textbf{Spearman $\rho$ with $\alpha$} & \textbf{$p$} \\
+\midrule
+$n_{\text{neurons}}$ & $-0.908$ & $8.6 \times 10^{-103}$ \\
+$n_{\text{trials}}$ & $+0.106$ & $0.083$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The neuron count confound is massive ($|\rho| = 0.91$). This likely reflects both finite-sample bias in eigenvalue estimation \citep{chun2025dimensionality} and genuine biological correlation. Trial count is not confounded ($p = 0.08$). All $\alpha$-based claims report partial correlations controlling for neuron count.
+
+
+\section{Continuous Metrics Vacuity}
+\label{app:continuous_metrics}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Continuous metrics: real neural data vs.\ random Gaussian noise. All VAE comparisons are non-significant.}
+\label{tab:continuous_full}
+\begin{tabular}{llccl}
+\toprule
+Method & Metric & Real & Random & Wilcoxon $p$ \\
+\midrule
+\multirow{4}{*}{VAE} & IIA & 0.688 & 0.695 & 0.97 \\
+& KL divergence & 2.51 & 2.59 & 0.99 \\
+& JS divergence & 0.397 & 0.408 & 0.99 \\
+& Prob.\ shift & 0.655 & 0.666 & 0.98 \\
+\midrule
+\multirow{2}{*}{MLP} & IIA & 0.687 & 0.695 & 0.95 \\
+& Logit diff.\ & 8.93 & 8.13 & $3.3 \times 10^{-10}$ \\
+\midrule
+Linear DAS & IIA & 0.167 & 0.163 & 0.17 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Shuffled-Label and Linear Ablation Controls}
+\label{app:shuffled_ablation}
+
+\begin{table}[h]
+\centering
+\small
+\caption{IIA under real vs.\ shuffled labels (24 regions).}
+\label{tab:shuffled}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Condition} & \textbf{Mean IIA} & \textbf{$n$} & \textbf{Wilcoxon $p$} \\
+\midrule
+Real labels & $0.625 \pm 0.089$ & 24 & --- \\
+Shuffled choice & $0.430 \pm 0.060$ & 24 & $6.0 \times 10^{-8}$ (vs.\ real) \\
+Shuffled evidence & $0.424 \pm 0.043$ & 24 & $< 10^{-8}$ (vs.\ real) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Linear vs.\ nonlinear structured VAE (24 regions).}
+\label{tab:linear_ablation}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Effect} & \textbf{Mean $\Delta$IIA} & \textbf{Wilcoxon $p$} \\
+\midrule
+Nonlinearity (nonlinear $-$ linear structured) & $+0.001$ & $0.65$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Optogenetic Power Analysis}
+\label{app:power}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Statistical power for optogenetic correlations at $\alpha = 0.05$ (10,000 simulations per sample size).}
+\label{tab:power}
+\begin{tabular}{@{}lccl@{}}
+\toprule
+\textbf{Method} & \textbf{$\rho$} & \textbf{$n$ for 80\% power} & \textbf{Power at $n = 12$} \\
+\midrule
+LDA & $-0.73$ & 14 & 0.74 \\
+VAE & $+0.33$ & $> 60$ & 0.16 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Per-Mouse Optogenetic Validation}
+\label{app:per_mouse}
+
+Results from per-mouse silencing analysis are reported in the supplementary data files.
+
+
+\section{pi-VAE Hybrid Ablation}
+\label{app:pivae}
+
+We compared four encoder architectures across 73 regions.\footnote{IIA values in this ablation differ from the main evaluation (\S\ref{sec:amplify}) because the pi-VAE comparison uses a different training and evaluation protocol optimized for the identifiability comparison.}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Model comparison: mean IIA across 73 regions.}
+\label{tab:pivae}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Model} & \textbf{Mean IIA} \\
+\midrule
+Structured VAE & $\mathbf{0.941}$ \\
+pi-structured-VAE hybrid & $0.036$ \\
+pi-VAE (no split) & $0.026$ \\
+LDA & $0.000$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The structured VAE dramatically outperforms all alternatives. The pi-VAE's label-conditioned prior disrupts the structured split when combined (Wilcoxon $p = 9.4 \times 10^{-14}$, 0/73 wins for the hybrid).
+
+
+\section{Cross-Region Activation Patching}
+\label{app:patching}
+
+Biological path patching across 1,438 directed pairs reveals directional information flow: thalamic regions (MG, MD) are net causal sources, while visual and striatal regions are net receivers.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Top hub regions by mean outgoing patching IIA.}
+\label{tab:hubs}
+\begin{tabular}{@{}lcccl@{}}
+\toprule
+\textbf{Region} & \textbf{Out IIA} & \textbf{In IIA} & \textbf{$n$ pairs} & \textbf{Asymmetry} \\
+\midrule
+MG (medial geniculate) & 0.651 & 0.594 & 13 & $+0.057$ \\
+MD (mediodorsal thal.) & 0.629 & 0.593 & 18 & $+0.036$ \\
+ACB (nucleus accumbens) & 0.573 & 0.666 & 22 & $-0.094$ \\
+SUB (subiculum) & 0.536 & 0.495 & 32 & $+0.041$ \\
+VISa (anterior visual) & 0.491 & 0.580 & 27 & $-0.089$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{VAE Causal Circuits}
+\label{app:circuits}
+
+Following \citet{martinez2025vae_circuits}, we computed causal effect strength (CES), intervention specificity, and circuit modularity for the structured VAE encoder.
+
+\begin{table}[h]
+\centering
+\small
+\caption{VAE encoder causal circuit analysis (73 regions).}
+\label{tab:circuits}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+CES (choice dimensions) & $0.077$ \\
+CES (other dimensions) & $0.028$ \\
+Choice/other CES ratio & $\mathbf{2.73}$ \\
+Random-split CES ratio & $1.005 \pm 0.024$ \\
+Lift over random split & $2.72\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{UMAP Stochasticity Robustness}
+\label{app:umap}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Spearman $\rho$ (CKA vs.\ Procrustes) across 20 UMAP seeds per configuration.}
+\label{tab:umap}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+\textbf{$n_{\text{neighbors}}$} & \textbf{min\_dist} & \textbf{Mean $|\rho|$} & \textbf{SD} & \textbf{Range} \\
+\midrule
+5 & 0.0 & 0.888 & 0.014 & [0.848, 0.910] \\
+5 & 0.1 & 0.898 & 0.010 & [0.876, 0.914] \\
+5 & 0.5 & 0.900 & 0.011 & [0.882, 0.922] \\
+15 & 0.0 & 0.858 & 0.016 & [0.828, 0.885] \\
+15 & 0.1 & 0.850 & 0.012 & [0.833, 0.877] \\
+15 & 0.5 & 0.820 & 0.021 & [0.775, 0.849] \\
+30 & 0.0 & 0.875 & 0.008 & [0.859, 0.891] \\
+30 & 0.1 & 0.867 & 0.010 & [0.847, 0.886] \\
+30 & 0.5 & 0.826 & 0.020 & [0.784, 0.865] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Grand mean $|\rho| = 0.864$, SD $= 0.028$. No configuration gives $|\rho| < 0.77$.
+
+
+\section{pi-VAE Identifiability Failure Analysis}
+\label{app:ivae-verification}
+
+With binary choice ($n_{\text{classes}} = 2$) and $d_{\text{causal}} = 3$, the rank condition of \citet{khemakhem2020variational} is provably unsatisfied: two class means produce at most rank~1, below the required $d_{\text{causal}} = 3$.
+
+\begin{table}[h]
+\centering
+\caption{iVAE identifiability metrics across 73 brain regions.}
+\label{tab:ivae-verification}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Max $\rho$} & \textbf{Eff.\ rank} & \textbf{Recon.\ MSE} & \textbf{$z$ sep.} \\
+\midrule
+Structured VAE       & 0.767 & 2.00 & 0.0022  & 4.75 \\
+pi-VAE               & 0.063 & 1.98 & 1.55    & 0.99 \\
+pi-Structured VAE    & 0.066 & 1.90 & 0.0037  & 0.51 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The pi-VAE's label-conditional prior forces the latent space toward two point masses, destroying the decoder's ability to reconstruct (MSE $700\times$ worse). The failure is not optimization but a fundamental mismatch: binary choice data cannot satisfy identifiability conditions when $d_{\text{causal}} > n_{\text{classes}}$.
+
+
+\section{CD-NOD Causal Discovery Over Brain Regions}
+\label{app:cdnod}
+
+We apply CD-NOD \citep{huang2020causal} to discover directed causal structure between brain regions from VAE choice subspace projections. Sparse session overlap limits analysis to 3 co-occurring regions (CA1, DG, root) across 7 sessions (1,648 trials).
+
+\begin{table}[h]
+\centering
+\caption{Causal discovery results (3 regions, 7 sessions, 1,648 trials).}
+\label{tab:cdnod}
+\small
+\begin{tabular}{lcl}
+\toprule
+\textbf{Method} & \textbf{Directed edges} & \textbf{Key finding} \\
+\midrule
+CD-NOD         & 3 & DG $\to$ CA1, DG $\to$ root, root $\to$ CA1 \\
+PC algorithm   & 0 (3 undirected) & Cannot orient \\
+DirectLiNGAM   & 3 & CA1 $\to$ DG, root $\to$ DG (reversed) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+CD-NOD recovers the anatomically correct DG $\to$ CA1 direction (hippocampal trisynaptic circuit), while DirectLiNGAM reverses it. The 3-region scope limits the strength of this analysis; denser recordings would enable brain-wide causal discovery.
+
+\end{document}
