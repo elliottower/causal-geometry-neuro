@@ -1,0 +1,26 @@
+{
+  "title": "Causal Geometric Structure in Neural Populations",
+  "upload_type": "software",
+  "description": "Differential geometry and causal inference applied to Neuropixels recordings from mouse visual decision-making.",
+  "creators": [
+    {
+      "name": "Tower, Elliot",
+      "orcid": "0000-0001-7004-8884"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "causal geometry",
+    "Neuropixels",
+    "neural populations",
+    "decision-making",
+    "differential geometry"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/elliottower/causal-geometry-neuro",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
