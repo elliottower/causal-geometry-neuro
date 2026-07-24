@@ -20,7 +20,6 @@ See PREREGISTRATION_exp128_vacuity_ablation.md for full design and predictions.
 """
 import json
 import logging
-import sys
 import time
 from datetime import datetime
 from pathlib import Path
@@ -32,7 +31,7 @@ import torch.nn.functional as F
 from scipy.stats import wilcoxon
 from tqdm import tqdm
 
-from data.steinmetz import get_choice_labels, get_region_activity, list_regions, load_all
+from data.steinmetz import get_region_activity, list_regions, load_all
 
 logger = logging.getLogger(__name__)
 
@@ -593,6 +592,18 @@ def _compute_iia_corrected(model, spec, activity, evidence_labels, splits,
         **{f"sparsity_{k}": v for k, v in sparsity.items()
            if k != "feature_activation_freq"},
     }
+
+    # PiVAE prior diagnostic: if priors barely separate, scorer is near-random
+    if not spec["has_classifier"] and hasattr(model, "prior_mu"):
+        mu0 = model.prior_mu.weight[0].detach().cpu().numpy()
+        mu1 = model.prior_mu.weight[1].detach().cpu().numpy()
+        lv0 = model.prior_logvar.weight[0].detach().cpu().numpy()
+        lv1 = model.prior_logvar.weight[1].detach().cpu().numpy()
+        z_dim = model.z_choice_dim
+        metrics["prior_mu_separation"] = float(np.linalg.norm(mu1[:z_dim] - mu0[:z_dim]))
+        metrics["prior_logvar_mean_0"] = float(lv0[:z_dim].mean())
+        metrics["prior_logvar_mean_1"] = float(lv1[:z_dim].mean())
+
     return iia, metrics
 
 
