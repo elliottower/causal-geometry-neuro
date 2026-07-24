@@ -44,6 +44,7 @@ image = (
     .add_local_dir("data", "/root/repo/data")
     .add_local_dir("experiments_batch1", "/root/repo/experiments_batch1")
     .add_local_dir("experiments_batch2", "/root/repo/experiments_batch2")
+    .add_local_dir("experiments_batch4", "/root/repo/experiments_batch4")
     .add_local_file("pyproject.toml", "/root/repo/pyproject.toml")
 )
 
@@ -136,6 +137,7 @@ EXPERIMENT_MAP = {
     "exp78": "experiments_batch2.exp78_optogenetic_power_analysis",
     "exp80": "experiments_batch2.exp80_ivae_verification",
     "exp81": "experiments_batch2.exp81_cdnod_region_graph",
+    "exp128": "experiments_batch4.exp128_vacuity_ablation",
     "debug_ibl": "experiments_batch1.debug_ibl",
 }
 
@@ -208,6 +210,7 @@ SMALL_SESSIONS = {
     "exp78": 5,
     "exp80": 5,
     "exp81": 5,
+    "exp128": 5,
 }
 
 IBL_EXPERIMENTS = {"exp1", "exp2", "exp3", "exp15b"}
