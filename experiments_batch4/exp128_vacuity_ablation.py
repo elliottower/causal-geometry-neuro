@@ -1126,9 +1126,11 @@ def run(max_sessions=None, model_filter=None, l1_sweep=False):
     for name, pc in preconditions.items():
         u = pc.get("untrained_mean_iia")
         r = pc.get("recon_only_mean_iia")
-        print(f"  {name}: untrained={u:.3f if u else 'N/A'} "
+        u_str = f"{u:.3f}" if u is not None else "N/A"
+        r_str = f"{r:.3f}" if r is not None else "N/A"
+        print(f"  {name}: untrained={u_str} "
               f"({'PASS' if pc.get('untrained_pass') else 'FAIL'}), "
-              f"recon_only={r:.3f if r else 'N/A'} "
+              f"recon_only={r_str} "
               f"({'PASS' if pc.get('recon_only_pass') else 'FAIL'})")
 
     print("\nVacuity tests:")
